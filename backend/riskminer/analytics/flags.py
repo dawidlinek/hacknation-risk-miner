@@ -57,3 +57,22 @@ def _covers_winter(start: date, end: date) -> bool:
             return True
         d += timedelta(days=15)
     return end.month in (12, 1, 2)
+
+
+def contractor_load_flag(ongoing: int, ongoing_value: float, hist_median: float | None, hist_value_median: float | None,
+                         n: int, *, min_n: int = 5) -> Flag | None:
+    """R12 "obciążenie wykonawcy": concurrent ongoing contracts versus the contractor's own 24-month history (W10).
+
+    Raised when the contractor holds at least 5 ongoing contracts and at least 1.5x its median concurrent load; neutral
+    fact, not a ranking. Needs n >= min_n contracts, otherwise None (insufficient data)."""
+    if n < min_n or hist_median is None or ongoing < 5:
+        return None
+    base = max(hist_median, 1.0)
+    if ongoing < 1.5 * base:
+        return None
+    from riskminer.api.prov import fmt_num
+    val = f" o wartości {fmt_num(ongoing_value / 1e6, 1)} mln zł brutto" if ongoing_value else ""
+    return Flag("R12", "ongoing >= 5 AND ongoing >= 1.5 x median concurrent (24 mies.)", "Obciążenie wykonawcy",
+                f"Wykonawca ma teraz {ongoing} umów w toku{val}; zwykle prowadził ich równolegle około {fmt_num(base, 1)}.",
+                ["R12"], {"ongoing": ongoing, "ongoing_value": ongoing_value, "history_median": hist_median,
+                          "history_median_value": hist_value_median}, n)

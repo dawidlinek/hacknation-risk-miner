@@ -27,6 +27,7 @@ from riskminer.api.routers import (
     geo,
     imports,
     jobs,
+    memory,
     monitoring,
     projects,
     review,
@@ -76,7 +77,7 @@ except ImportError:  # pragma: no cover - auth module not there yet
 
 # fixed-path routers first (see module docstring)
 for r in (auth, dashboard, analyses, documents, ask, settings, projects, review, catalogue_edit, audit,
-          monitoring, geo, imports):
+          monitoring, geo, imports, memory):
     app.include_router(r.router)
 # existing read side
 app.include_router(data.router)

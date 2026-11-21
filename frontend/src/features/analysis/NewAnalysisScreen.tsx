@@ -36,6 +36,7 @@ import {
   patchValue,
   readyToCreate,
 } from './logic'
+import { SovereignBanner } from './SovereignBanner'
 
 /** Enter inside a nested editor saves that editor only (it lives inside the main form, so no inner <form>). */
 const onEnter = (fn: () => void) => (e: ReactKeyboardEvent<HTMLElement>) => {
@@ -273,6 +274,9 @@ export function NewAnalysisScreen({ fromId }: { fromId?: string }) {
               >
                 {status.text}
               </p>
+            ) : null}
+            {d?.ai_features?.sovereign_unavailable ? (
+              <SovereignBanner id={id} documentIds={d.confidential_documents ?? []} />
             ) : null}
             {d ? (
               <ChipsEditor id={id} chips={d.features as Chip[]} onDraft={setDraft} />

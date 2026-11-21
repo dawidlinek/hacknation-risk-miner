@@ -1,9 +1,11 @@
 import { useQuery } from '@tanstack/react-query'
+import { useState } from 'react'
 import { Page, PageHeader } from '@/app/Page'
-import { DataState, EmptyState } from '@/components/common/DataState'
+import { DataState } from '@/components/common/DataState'
 import { ExportMenu } from '@/components/common/ExportMenu'
 import { FilterPills } from '@/components/common/FilterPills'
-import { auditExportUrl, globalAuditQuery } from './api'
+import { Button } from '@/components/ui/button'
+import { AUDIT_PAGE, auditExportUrl, globalAuditQuery } from './api'
 import { GLOBAL_OPTIONS } from './logic'
 import { AuditList } from './parts'
 import type { GlobalKind } from './types'
@@ -19,7 +21,8 @@ export function GlobalHistoryScreen({
   onKind: (k: GlobalKind) => void
   onDay: (d: string | null) => void
 }) {
-  const q = useQuery(globalAuditQuery(kind, day))
+  const [limit, setLimit] = useState(AUDIT_PAGE)
+  const q = useQuery(globalAuditQuery(kind, day, limit))
   return (
     <Page>
       <PageHeader
@@ -35,13 +38,24 @@ export function GlobalHistoryScreen({
         }
       />
       <div className="flex flex-wrap items-center gap-2">
-        <FilterPills options={GLOBAL_OPTIONS} value={kind} onChange={onKind} label="Rodzaj zmian" />
+        <FilterPills
+          options={GLOBAL_OPTIONS}
+          value={kind}
+          onChange={(k) => {
+            setLimit(AUDIT_PAGE)
+            onKind(k)
+          }}
+          label="Rodzaj zmian"
+        />
         <label className="ml-auto inline-flex min-h-10 items-center gap-2 rounded-pill border border-border px-3.5">
           <span className="text-[13px] text-muted">dzień</span>
           <input
             type="date"
             value={day ?? ''}
-            onChange={(e) => onDay(e.target.value || null)}
+            onChange={(e) => {
+              setLimit(AUDIT_PAGE)
+              onDay(e.target.value || null)
+            }}
             className="border-0 bg-transparent text-[14px] font-medium outline-none"
           />
         </label>
@@ -51,9 +65,15 @@ export function GlobalHistoryScreen({
           <>
             <AuditList entries={d.entries} variant="global" label="Dziennik zmian" />
             {d.total > d.entries.length ? (
-              <EmptyState>
-                Pokazano {d.entries.length} z {d.total} wpisów. Pełny dziennik jest w eksporcie.
-              </EmptyState>
+              <div className="flex flex-col items-center gap-2">
+                <span className="t-caption text-text-body-muted">
+                  Pokazano {d.entries.length} z {d.total} wpisów (bez logowań). Pełny dziennik jest w
+                  eksporcie.
+                </span>
+                <Button variant="outline" onClick={() => setLimit((n) => n + AUDIT_PAGE)}>
+                  Pokaż więcej
+                </Button>
+              </div>
             ) : null}
           </>
         )}

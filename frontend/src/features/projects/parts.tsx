@@ -110,6 +110,30 @@ export function visibleLessons(lessons: ProjectLesson[], isPublic: boolean): Pro
     : lessons
 }
 
+/** Unspecified model labels (N-UNSPEC) get a Polish phrase instead of the raw catalogue code. */
+export function lessonTitle(title: string): string {
+  return title.replace(/przyczyna według modelu N-UNSPEC \([^)]*\)/, 'przyczyna nieustalona')
+}
+
+export interface LessonGroup {
+  key: string
+  title: string
+  items: ProjectLesson[]
+}
+
+/** Near-duplicate lessons (same cleaned title, risk code and review status) collapse into one group with a count. */
+export function groupLessons(lessons: ProjectLesson[]): LessonGroup[] {
+  const groups = new Map<string, LessonGroup>()
+  for (const l of lessons) {
+    const title = lessonTitle(l.title)
+    const key = `${title}|${l.risk_code ?? ''}|${l.review_status}`
+    const g = groups.get(key)
+    if (g) g.items.push(l)
+    else groups.set(key, { key, title, items: [l] })
+  }
+  return [...groups.values()]
+}
+
 export function LessonList({ lessons }: { lessons: ProjectLesson[] }) {
   const { isPublic } = useSession()
   const shown = visibleLessons(lessons, isPublic)
@@ -123,20 +147,28 @@ export function LessonList({ lessons }: { lessons: ProjectLesson[] }) {
             : 'Nie ma jeszcze zdarzeń ryzyka dla tej umowy.'}
         </EmptyState>
       ) : (
-        shown.map((l) => (
-          <Item key={l.id} className="flex flex-col gap-1">
-            <div className="flex items-start justify-between gap-3">
-              <span className="t-item">{l.title}</span>
-              <ReviewStatusBadge
-                status={l.review_status}
-                reviewItemId={l.review_item_id}
-                className="shrink-0"
-              />
-            </div>
-            <span className="text-[14px] text-text-body-muted">{l.text}</span>
-            <span className="t-mono text-muted">{l.code_label}</span>
-          </Item>
-        ))
+        groupLessons(shown).map(({ key, title, items }) => {
+          const l = items[0]
+          return (
+            <Item key={key} className="flex flex-col gap-1">
+              <div className="flex items-start justify-between gap-3">
+                <span className="t-item">
+                  {title}
+                  {items.length > 1 ? (
+                    <span className="t-mono ml-2 font-normal text-muted">{items.length} zdarzeń</span>
+                  ) : null}
+                </span>
+                <ReviewStatusBadge
+                  status={l.review_status}
+                  reviewItemId={l.review_item_id}
+                  className="shrink-0"
+                />
+              </div>
+              {items.length === 1 ? <span className="text-[14px] text-text-body-muted">{l.text}</span> : null}
+              <span className="t-mono text-muted">{l.code_label}</span>
+            </Item>
+          )
+        })
       )}
     </Panel>
   )

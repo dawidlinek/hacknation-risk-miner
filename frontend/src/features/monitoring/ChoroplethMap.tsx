@@ -185,6 +185,8 @@ export function ChoroplethMap(p: ChoroplethMapProps) {
   }, [target.level, target.woj, target.pow, target.signalId, woj.data, pow.data, gmi.data, p.signals])
 
   const [ready, setReady] = useState(false)
+  // labels and pills wait until the style, the sources and the first frame are in (otherwise they pile up at the centre)
+  const [idle, setIdle] = useState(false)
   useEffect(() => {
     const map = ref.current?.getMap()
     if (!map || !ready) return
@@ -256,7 +258,11 @@ export function ChoroplethMap(p: ChoroplethMapProps) {
   )
   const stacks = useMemo(() => pillStacks(p.signals), [p.signals])
   const pillSignals =
-    target.level >= 2 ? (p.showPins ? p.signals : p.signals.filter((s) => s.id === target.signalId)) : []
+    idle && target.level >= 2
+      ? p.showPins
+        ? p.signals
+        : p.signals.filter((s) => s.id === target.signalId)
+      : []
 
   return (
     <div className="relative h-full w-full overflow-hidden rounded-card bg-surface">
@@ -273,6 +279,7 @@ export function ChoroplethMap(p: ChoroplethMapProps) {
         onMouseMove={onMove}
         onMouseLeave={() => setTip(null)}
         onLoad={() => setReady(true)}
+        onIdle={() => setIdle(true)}
         cursor={tip ? 'pointer' : 'grab'}
         style={{ width: '100%', height: '100%' }}
       >
@@ -322,7 +329,7 @@ export function ChoroplethMap(p: ChoroplethMapProps) {
           </Source>
         ) : null}
 
-        {wojLabelList.map(({ r, at }) => (
+        {(idle ? wojLabelList : []).map(({ r, at }) => (
           <Marker
             key={r.stat.teryt}
             longitude={at[0]}
@@ -343,7 +350,7 @@ export function ChoroplethMap(p: ChoroplethMapProps) {
             </div>
           </Marker>
         ))}
-        {powLabelList.map(({ c, n, at, name }) => (
+        {(idle ? powLabelList : []).map(({ c, n, at, name }) => (
           <Marker
             key={c}
             longitude={at[0]}
@@ -359,7 +366,7 @@ export function ChoroplethMap(p: ChoroplethMapProps) {
             </div>
           </Marker>
         ))}
-        {gmiLabelList.map(({ c, name, at }) => (
+        {(idle ? gmiLabelList : []).map(({ c, name, at }) => (
           <Marker
             key={c}
             longitude={at[0]}
@@ -399,6 +406,14 @@ export function ChoroplethMap(p: ChoroplethMapProps) {
             )
           })}
       </MapGL>
+      {idle ? null : (
+        <div
+          role="status"
+          className="pointer-events-none absolute inset-0 grid place-items-center bg-surface text-[14px] text-text-body-muted"
+        >
+          Wczytujemy mapę…
+        </div>
+      )}
       <div className="absolute top-3 right-3 flex flex-col gap-1">
         {(['+', '−'] as const).map((s) => (
           <button

@@ -105,3 +105,16 @@ async def test_import_mapping_only_registry_fields(cassettes):
                         sample={"headers": ["Kwota dotacji", "Kolor", "Nr BZP"], "rows": [["100 000", "zielony", "2024/BZP 1"]]},
                         fields=["project.subsidy", "procedure.bzp_number"])
     assert out == {"Kwota dotacji": "project.subsidy"}       # invented field dropped, low confidence dropped
+
+
+async def test_non_latin_note_is_dropped_and_logged(cassettes):
+    from riskminer.llm import calllog
+    doc = {**DOC, "id": 902}
+    cassettes("redpen_scan", "Program funkcjonalno", {"notes": [
+        {"code": "R08", "page": 2, "quote": "Wynagrodzenie ma charakter ryczałtowy.", "title": "Ryczałt",
+         "why": "Ryzyko моноpolu dostawcy.", "strength": "średni"},
+        {"code": "R01.2", "page": 2, "quote": "Długość sieci wyniesie ok. 6 km", "title": "Długość orientacyjna",
+         "why": "Długość ustali projekt wykonawcy.", "strength": "silny"}]})
+    res = await redpen_scan(doc)
+    assert [n["code"] for n in res.notes] == ["R01.2"]
+    assert "non-Latin" in (calllog.MEMORY[-1]["error"] or "")

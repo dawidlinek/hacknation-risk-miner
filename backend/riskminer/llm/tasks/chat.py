@@ -12,7 +12,7 @@ from typing import Any
 
 from riskminer.llm import gateway
 from riskminer.llm.backends.base import Json, Text
-from riskminer.llm.errors import LLMError
+from riskminer.llm.errors import InvalidOutput, LLMError
 from riskminer.llm.gateway import LLMRequest, LLMResult
 from riskminer.llm.sanitize import copy_rules
 from riskminer.llm.schemas import ChatAnswer
@@ -118,8 +118,10 @@ async def chat(question: str, facts: list[Fact], *, subject_label: str, sensitiv
     for attempt in range(2):
         try:
             res = await gateway.run(req)
-        except LLMError:
-            raise
+        except InvalidOutput:
+            # e.g. the answer kept non-Latin letters after the corrective retry: answer honestly instead of failing
+            ans = _answer(NO_DATA_TEXT, "no_data", [], [], None, missing=["odpowiedź modelu nie przeszła sprawdzenia"])
+            return ChatResult(ans, None, facts)
         data = res.data
         cited = [by_id[i] for i in data.fact_ids if i in by_id]
         ok, bad = _numbers_ok(data.answer, cited, question)

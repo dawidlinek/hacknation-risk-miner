@@ -30,3 +30,10 @@ export async function uploadDocument(
     await contractFetch<UploadResponse>('/api/documents/upload', { method: 'POST', body: fd }),
   )
 }
+
+/** Owner's explicit choice when the sovereign model is down: the document is public, so the cloud AI may read it. */
+export const makeDocumentPublic = (id: string, documentId: number) =>
+  contractFetch<{ document_id: number; sensitivity: 'public'; jobs: Record<string, number | null> }>(
+    `/api/analyses/${encodeURIComponent(id)}/documents/${documentId}/make-public`,
+    { method: 'POST' },
+  )

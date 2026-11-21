@@ -4,6 +4,32 @@ import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/cn'
 import { avatarOf, splitTime } from './logic'
 
+/** "Etykieta: wartość; Etykieta: wartość" -> label/value pairs (the backend formats the text; ";" separates pairs). */
+function Pairs({ text, struck }: { text: string; struck?: boolean }) {
+  const pairs = text.split('; ').filter(Boolean)
+  return (
+    <span className="flex flex-wrap items-center gap-1">
+      {pairs.map((p) => {
+        const i = p.indexOf(': ')
+        const label = i > 0 ? p.slice(0, i) : ''
+        const value = i > 0 ? p.slice(i + 2) : p
+        return (
+          <span
+            key={p}
+            className={cn(
+              'rounded-[8px] bg-soft px-2 py-0.5 text-[12.5px]',
+              struck && 'text-text-secondary line-through',
+            )}
+          >
+            {label ? <span className="text-muted">{label}: </span> : null}
+            <span className="font-medium">{value}</span>
+          </span>
+        )
+      })}
+    </span>
+  )
+}
+
 export function BeforeAfter({
   before,
   after,
@@ -13,15 +39,20 @@ export function BeforeAfter({
   after: string
   note?: string | null
 }) {
+  const noBefore = before === 'brak' || !before
+  const noAfter = after === 'brak' || !after
+  if (noBefore && noAfter && !note) return null
   return (
     <span className="flex flex-wrap items-center gap-1.5">
-      <span className="t-mono rounded-[8px] bg-soft px-2 py-0.5 text-[12px] text-text-secondary line-through">
-        {before}
-      </span>
-      <span aria-hidden className="text-prov-source">
-        →
-      </span>
-      <span className="t-mono rounded-[8px] bg-soft px-2 py-0.5 text-[12px]">{after}</span>
+      {noBefore ? null : (
+        <>
+          <Pairs text={before} struck />
+          <span aria-hidden className="text-prov-source">
+            →
+          </span>
+        </>
+      )}
+      {noAfter ? null : <Pairs text={after} />}
       {note ? <span className="text-[13px] text-text-secondary">{note}</span> : null}
     </span>
   )

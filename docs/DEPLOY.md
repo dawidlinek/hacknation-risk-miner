@@ -247,6 +247,15 @@ The last call runs the known-answer test; Ustawienia then shows `wcss_bielik` up
 
 **When WCSS is down.** All sovereign hops fail, so confidential input answers 503 `sovereign_unavailable`; Red Pen jobs end with status `sovereign_unavailable` per document. The WCSS job has a 12 h time limit; the relay waits for the next job's endpoint file. Cancel when not needed (shared GPU-hours): `ssh wcss scancel <jobid>`. The job (6385732 at the time of writing) was still pending, estimated start up to Mon 08:40.
 
+## Live state (rehearsal, 2026-11-21)
+
+- Coolify project "ex ante", app `exante` (uuid `sarsdrs9x8lfrozqlhstbvfd`) on server `mzk-prod-2` (212.127.90.86), GitHub app `linek-dev-coolify`, compose `/infra/docker-compose.prod.yml`, domain `https://exante.linek.dev` on `web`. DNS: A record `exante.linek.dev` to 212.127.90.86.
+- Deploy through the API: `POST /api/v1/deploy?uuid=<app uuid>&force=true` (the token is in `~/.config/coolify-token`).
+- **A push to `main` redeploys the app** (the GitHub webhook is on; it redeployed mid-test on the checkpoint 23 push). Containers are recreated, the DB and data survive in `/srv/exante`. Avoid pushing during judging, or switch off auto-deploy for the app in the Coolify UI (Advanced tab); the API field did not take effect.
+- Rehearsal restore: 1.3 GB dump copied over ssh (no rsync on the server), `pg_restore -j 8` took 278 s, 248,642 notices, alembic `0009_review` + `0013_alerts`. The server has no `rsync`, so both scripts fall back to ssh streams.
+- Smoke on the live URL passed: SPA and deep link, `/api/health`, 401 on a write without login, demo login (juror, expert, admin), 22 pilot projects, project card, `export/projects.csv`, search, Flow 1 (create analysis, run, report), pack, a `docs_22` PDF (16 MB) served, Zapytaj (Gemini) answers.
+- Test analyses `AN-2026-0005` and `0006` ("smoke") were created in the rehearsal DB; the final restore replaces the database, and the demo baseline is recorded only after that.
+
 ## 10. Notes
 
 - The repo goes public Sun ~10:15; nothing secret is in it. All secrets live in Coolify env and `/srv/exante/config`.

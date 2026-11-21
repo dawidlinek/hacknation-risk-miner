@@ -1,10 +1,12 @@
 import { useQuery, useSuspenseQuery } from '@tanstack/react-query'
+import { useState } from 'react'
 import { toast } from 'sonner'
 import { TwoCol } from '@/app/Page'
 import { useSession } from '@/auth/session'
 import { DataState, EmptyState } from '@/components/common/DataState'
 import { DetailPanel } from '@/components/common/DetailPanel'
 import { SummaryCard } from '@/components/common/SummaryCard'
+import { Button } from '@/components/ui/button'
 import { AnalysisPanel } from './AnalysisPanel'
 import { documentDetail, expectedDetail, noticeDetail } from './adapt'
 import { noticeFactsQuery, projectDocumentsQuery, uploadErrorMessage, useUploadDocument } from './api'
@@ -74,6 +76,7 @@ export function DocumentsScreen({
   const { isPublic, isExpert, readOnly } = useSession()
   const { data: view } = useSuspenseQuery(projectDocumentsQuery(id, isPublic))
   const upload = useUploadDocument(id)
+  const [showAll, setShowAll] = useState(false)
   const sel = findSelection(view, selected)
   const empty = view.expected.length === 0 && view.publicDocs.length === 0
 
@@ -154,7 +157,7 @@ export function DocumentsScreen({
               {view.publicDocs.length === 0 ? (
                 <EmptyState>Nie znaleźliśmy ogłoszeń dla tego projektu.</EmptyState>
               ) : (
-                view.publicDocs.map((d) => (
+                (showAll ? view.publicDocs : view.publicDocs.slice(0, 8)).map((d) => (
                   <PublicDocRow
                     key={d.key}
                     item={d}
@@ -163,6 +166,11 @@ export function DocumentsScreen({
                   />
                 ))
               )}
+              {view.publicDocs.length > 8 ? (
+                <Button variant="outline" className="self-start" onClick={() => setShowAll((v) => !v)}>
+                  {showAll ? 'Pokaż mniej' : `Pokaż wszystkie (${view.publicDocs.length})`}
+                </Button>
+              ) : null}
             </section>
           </>
         }

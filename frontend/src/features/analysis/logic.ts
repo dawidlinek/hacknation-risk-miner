@@ -3,7 +3,14 @@ import type { AnalysisDraft, DocType, FeatureChip, UploadedDocument } from '@/ap
 
 /** Server extras on top of the frontend contract. */
 export type Draft = AnalysisDraft & {
-  ai_features?: { job_id: number | null; status: string; errors?: unknown; note?: string }
+  ai_features?: {
+    job_id: number | null
+    status: string
+    errors?: unknown
+    note?: string
+    sovereign_unavailable?: boolean
+  }
+  confidential_documents?: number[]
   ai_pending?: boolean
   stale_sections?: string[]
   title?: string
@@ -106,6 +113,8 @@ export function aiStatusLine(
   d: Pick<Draft, 'ai_features' | 'ai_pending'>,
 ): { text: string; tone: 'busy' | 'note' } | null {
   if (d.ai_pending) return { text: 'Czytamy opis i dokumenty…', tone: 'busy' }
+  // the sovereign outage has its own banner with the make-public choice
+  if (d.ai_features?.sovereign_unavailable) return null
   if (d.ai_features?.note) return { text: d.ai_features.note, tone: 'note' }
   return null
 }

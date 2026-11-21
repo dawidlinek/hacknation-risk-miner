@@ -47,7 +47,10 @@ export function ChatPanel({
   }
   const chips = [...extraSuggestions.map((l) => ({ key: l, label: l })), ...(sugg.data ?? [])]
   return (
-    <section aria-label={title} className="flex flex-col gap-3 rounded-panel bg-soft p-5">
+    <section
+      aria-label={title}
+      className="flex flex-col gap-3 rounded-[22px] border border-divider bg-surface p-5 shadow-composer"
+    >
       <h2 className="t-h3 m-0">{title}</h2>
       <SuggestionChips items={chips} onPick={run} disabled={busy} />
       <Composer onSubmit={run} busy={busy} placeholder={placeholder} label={title} />
@@ -62,7 +65,7 @@ export function ChatPanel({
         </p>
       ) : null}
       {thread.map((a) => (
-        <ChatAnswer key={a.id} answer={a} compact={compact} className="bg-surface" />
+        <ChatAnswer key={a.id} answer={a} compact={compact} className="bg-soft" />
       ))}
     </section>
   )

@@ -94,6 +94,7 @@ async def run(conn, rid) -> dict:
                                     (SELECT count(*) FROM rc_contract WHERE NOT dq_ok) rc_flagged FROM contract""")
         stats.update(dict(dq))
         stats["date_review_items"] = await _date_items(conn)
+        stats["future_date_items"] = await _future_items(conn)
         await audit(conn, "system:quality", "derive.quality", "contract_change", None, None,
                     {"marked_duplicate": len(pairs), "review_items": len(items)},
                     "change notices repeating performance-notice change blocks marked is_duplicate")
@@ -142,3 +143,35 @@ async def _date_items(conn) -> int:
                           items, ("key",), update=["title", "detail", "severity"])
         n_items += len(items)
     return n_items
+
+
+async def _future_items(conn) -> int:
+    """Dates in the future copied from BZP fields (e.g. completion 2029-08-03 in field 5.2 of 2024/BZP 00496727): the
+    buyer's typo, kept as published. One review_item lists every affected risk event, performance notice and change."""
+    ev = await conn.fetch("""SELECT r.id, r.event_type, r.occurred_on, r.procedure_id, r.contract_id FROM risk_event r
+                             WHERE r.occurred_on > current_date ORDER BY r.id""")
+    pf = await conn.fetch("""SELECT pf.id, pf.completed_on, n.bzp_number, (rc.late IS NOT NULL) AS in_stats
+                             FROM contract_performance pf JOIN notice n ON n.id = pf.notice_id
+                             LEFT JOIN rc_contract rc ON rc.performance_id = pf.id
+                             WHERE NOT pf.is_duplicate AND pf.completed_on > current_date ORDER BY pf.id""")
+    ch = await conn.fetch("SELECT id, changed_on FROM contract_change WHERE changed_on > current_date ORDER BY id")
+    key = "dq|national|future_dates"
+    if not (ev or pf or ch):
+        await conn.execute("UPDATE review_item SET status = 'resolved', resolved_by = 'system:quality', resolved_at = now() "
+                           "WHERE key = $1 AND status = 'open'", key)
+        return 0
+    in_stats = sum(1 for r in pf if r["in_stats"])
+    title = (f"Daty z przyszłości w ogłoszeniach BZP: zdarzeń ryzyka {len(ev)}, ogłoszeń o wykonaniu {len(pf)} "
+             f"(w statystykach klasy referencyjnej {in_stats}), zmian umów {len(ch)}. Prawdopodobnie błąd zamawiającego "
+             "w ogłoszeniu; pozostawione tak, jak opublikowano. Do sprawdzenia.")
+    detail = {"risk_events": [{"id": r["id"], "event_type": r["event_type"], "occurred_on": r["occurred_on"],
+                               "contract_id": r["contract_id"]} for r in ev],
+              "performance": [{"id": r["id"], "completed_on": r["completed_on"], "bzp_number": r["bzp_number"],
+                               "in_rc_statistics": r["in_stats"]} for r in pf],
+              "changes": [{"id": r["id"], "changed_on": r["changed_on"]} for r in ch],
+              "rule": "date later than the load date; source value kept (invariant 10), flagged for the expert"}
+    await upsert_copy(conn, "review_item", ("key", "kind", "code", "target_table", "title", "detail", "severity",
+                                            "created_by"),
+                      [(key, "discrepancy", "future_date", "risk_event", title, detail, "low", "quality:dates")],
+                      ("key",), update=["title", "detail"])
+    return 1

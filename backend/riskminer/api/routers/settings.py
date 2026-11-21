@@ -28,6 +28,7 @@ TASK_LABELS: dict[str, tuple[str, str]] = {
     "import_mapping": ("Agent importu: mapowanie kolumn", "nagłówki i próbki wierszy"),
     "catalogue_proposals": ("Propozycje do katalogu ryzyk", "dane publiczne"),
     "review_phrasing": ("Pytania w przeglądzie", "dane publiczne"),
+    "document_facts": ("Fakty z dokumentów projektu", "dokumenty"),
     "rescore_gold": ("Przeliczenie po decyzji eksperta", "dane publiczne"),
 }
 

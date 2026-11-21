@@ -76,6 +76,7 @@ def main(argv: list[str] | None = None) -> int:
     dc = sub.add_parser("demo-cleanup", help="remove e2e/test uploads and [e2e] analyses (dry run unless --apply)")
     dc.add_argument("--apply", action="store_true")
     dc.add_argument("--include-raw-named", action="store_true", help="also uploads named like <16 hex>_file (script copies)")
+    dc.add_argument("--anon-analyses-since", help="also analyses by anonymous visitors created since this ISO time (tooling)")
     sub.add_parser("worker")
     eq = sub.add_parser("enqueue")
     eq.add_argument("kind")
@@ -143,7 +144,8 @@ def main(argv: list[str] | None = None) -> int:
 
         async def _dc():
             async with raw_conn() as conn:
-                return await demo_cleanup.run(conn, apply=a.apply, include_raw_named=a.include_raw_named, actor="cli")
+                return await demo_cleanup.run(conn, apply=a.apply, include_raw_named=a.include_raw_named, actor="cli",
+                                             anon_analyses_since=a.anon_analyses_since)
         res = asyncio.run(_dc())
     elif a.cmd == "ocr-pending":
         from riskminer.ingest import ocr_doc

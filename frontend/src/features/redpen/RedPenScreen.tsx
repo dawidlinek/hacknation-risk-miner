@@ -9,6 +9,7 @@ import { ProvenanceTag } from '@/components/common/ProvenanceTag'
 import { Button } from '@/components/ui/button'
 import { Checkbox } from '@/components/ui/checkbox'
 import { cn } from '@/lib/cn'
+import { SovereignBanner } from '../analysis/SovereignBanner'
 import { addClauseToPack, decideItem } from '../report/api'
 import { redpenQuery } from './api'
 import {
@@ -156,6 +157,12 @@ export function RedPenBody({
       </section>
       <aside className="flex min-w-0 max-w-full flex-[1_1_360px] flex-col gap-3">
         <PageHeader title="Uwagi do dokumentów" subtitle={countsLabel(r.counts.found, r.counts.missing)} />
+        {(r.status as string) === 'sovereign_unavailable' ? (
+          <SovereignBanner
+            id={id}
+            documentIds={(r.document as { sensitivity?: string }).sensitivity === 'public' ? [] : [doc]}
+          />
+        ) : null}
         {r.status === 'queued' || r.status === 'running' ? (
           <p className="t-small m-0 rounded-item bg-prov-ai-soft px-4 py-2.5 text-prov-ai" role="status">
             Model AI czyta dokument. Poniżej uwagi z reguł; uwagi AI dojdą same.

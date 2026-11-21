@@ -93,7 +93,8 @@ def _check_note(n: Note, pages: dict[int, str], cat: dict) -> tuple[QuoteCheck, 
     return verify_quote(n.quote, pages, n.page), None
 
 
-async def _scan_window(doc: dict, wp: list[int], sens: str, subject: str | None, extra: str | None = None) -> LLMResult:
+async def _scan_window(doc: dict, wp: list[int], sens: str, subject: str | None, extra: str | None = None,
+                       alias: str | None = None) -> LLMResult:
     cat = catalogue()
     parts = [Text(f"Dokument id={doc['id']} ({doc.get('doc_type') or 'dokument'}), strony {wp[0]} do {wp[-1]} z {len(doc['pages'])}.")]
     parts += [PageText(doc["id"], p, doc["pages"][p]) for p in wp]
@@ -101,7 +102,7 @@ async def _scan_window(doc: dict, wp: list[int], sens: str, subject: str | None,
         task="redpen_scan", sensitivity=sens, prompt="redpen_scan", parts=parts, output=RedPenWindow,  # type: ignore[arg-type]
         prompt_vars={"catalogue": cat["text"], "clauses": cat["clauses_text"], "doc_type": doc.get("doc_type") or "dokument"},
         input_refs=[f"document:{doc['id']}"], subject=subject, timeout_kind="document", extra_user=extra,
-        max_output_tokens=6000))
+        max_output_tokens=6000, alias=alias))
 
 
 def _overlaps(a: dict, b: dict) -> bool:
@@ -112,7 +113,8 @@ def _overlaps(a: dict, b: dict) -> bool:
     return a["char_start"] < b["char_end"] and b["char_start"] < a["char_end"]
 
 
-async def redpen_scan(doc: dict, *, sensitivity: str = "public", subject: str | None = None) -> RedPenResult:
+async def redpen_scan(doc: dict, *, sensitivity: str = "public", subject: str | None = None,
+                      alias: str | None = None) -> RedPenResult:
     """Scan one document ({id, doc_type, filename, sensitivity, pages: {page_no: text}}). Never raises for model
     failures: failed windows are listed in `failed_pages` (shown as 'strony X do Y nieprzeczytane')."""
     cat = catalogue()
@@ -120,7 +122,7 @@ async def redpen_scan(doc: dict, *, sensitivity: str = "public", subject: str | 
     pages_sorted = sorted(p for p, t in doc["pages"].items() if (t or "").strip())
     wins = windows(pages_sorted)
     res = RedPenResult(document_id=doc["id"])
-    results = await asyncio.gather(*(_scan_window(doc, w, sens, subject) for w in wins), return_exceptions=True)
+    results = await asyncio.gather(*(_scan_window(doc, w, sens, subject, alias=alias) for w in wins), return_exceptions=True)
     raw_notes: list[tuple[Note, QuoteCheck, LLMResult, list[int]]] = []
     retry: list[tuple[list[int], list[Note]]] = []
     for w, r in zip(wins, results):
@@ -153,7 +155,7 @@ async def redpen_scan(doc: dict, *, sensitivity: str = "public", subject: str | 
                    "skopiowanymi dosłownie z tekstu (bez zmian, bez skrótów), albo pomiń uwagę:\n" +
                    "\n".join(f"- {n.code} s. {n.page}: {n.quote}" for n in bad))
             try:
-                return await _scan_window(doc, w, sens, subject, extra=msg)
+                return await _scan_window(doc, w, sens, subject, extra=msg, alias=alias)
             except LLMError:
                 return None
         rr = await asyncio.gather(*(requote(w, bad) for w, bad in retry))

@@ -83,7 +83,18 @@ function ProjectLayout() {
             </Link>
             {' / '}
             {card.id}
-            {card.buyer.name ? `, ${card.buyer.name}` : ''}
+            {card.buyer.name ? (
+              <>
+                {', '}
+                {card.buyer.nip ? (
+                  <Link to="/organizacje/$nip" params={{ nip: card.buyer.nip }}>
+                    {card.buyer.name}
+                  </Link>
+                ) : (
+                  card.buyer.name
+                )}
+              </>
+            ) : null}
             {card.buyer.nip ? `, NIP ${fmtNip(card.buyer.nip)}` : ''}
           </>
         }

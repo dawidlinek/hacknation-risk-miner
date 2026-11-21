@@ -12,7 +12,8 @@ What counts as an artefact (dry run lists every row with its reason; nothing is 
   candidates, review items, alerts, jobs; risk_signal / document_page / chunk go by FK cascade.
 Kept: raw bytes and the `source` row (provenance; a re-upload reuses the source and creates a fresh document),
 audit_log (append-only; one `demo.cleanup` row records the counts and the backup file), `review` decision rows.
-Every deleted row is first written as JSON lines to data/snapshots/demo_cleanup_<ts>.jsonl (manual restore possible).
+Rows an expert approved or edited are kept by the rm_protect_approved trigger (this module never overrides it) and
+reported as kept_protected. Every deleted row is first written as JSON lines to data/snapshots/demo_cleanup_<ts>.jsonl (manual restore possible).
 """
 from __future__ import annotations
 
@@ -45,12 +46,13 @@ _ROWS: list[tuple[str, str, str]] = [
     ("contract_change", "document_id = ANY($1::bigint[])", "doc"),
     ("link_candidate", "left_table = 'document' AND left_id = ANY($1::bigint[])", "doc"),
     ("job", "(payload->>'document_id') = ANY($1::bigint[]::text[])", "doc"),
+    ("job", "(payload->>'analysis_code') = ANY($1::text[])", "an_code"),
     ("analysis", "id = ANY($1::bigint[])", "an"),
     ("document", "id = ANY($1::bigint[])", "doc"),
 ]
 
 
-async def find(conn, *, include_raw_named: bool = False) -> dict[str, Any]:
+async def find(conn, *, include_raw_named: bool = False, anon_analyses_since: str | None = None) -> dict[str, Any]:
     hashes = case_hashes()
     docs = await conn.fetch("""
         SELECT d.id, d.filename, d.sha256, d.project_id, d.created_at, d.data->>'uploaded_by' AS uploaded_by
@@ -67,22 +69,32 @@ async def find(conn, *, include_raw_named: bool = False) -> dict[str, Any]:
             picked.append(row)
         else:
             skipped.append(row)
-    analyses = [dict(r) for r in await conn.fetch(
-        "SELECT id, code, title FROM analysis WHERE title LIKE '[e2e]%' ORDER BY id")]
+    # "[e2e]" titles always; with anon_analyses_since also analyses created by anonymous visitors since that time
+    # (tooling: e2e specs, deck screenshots, headless checks), judged by the current owner, so analyses handed
+    # to a demo persona (owner user:juror) stay. Seeded system:* analyses are never selected.
+    analyses = [dict(r) for r in await conn.fetch("""
+        SELECT id, code, title, created_by,
+               CASE WHEN title LIKE '[e2e]%' THEN 'e2e_title' ELSE 'anonymous_tooling' END AS reason
+        FROM analysis WHERE title LIKE '[e2e]%'
+           OR ($1::timestamptz IS NOT NULL AND owner LIKE 'anon:%' AND created_at >= $1::timestamptz)
+        ORDER BY id""", anon_analyses_since)]
     return {"documents": picked, "documents_kept": skipped, "analyses": analyses}
 
 
 async def run(conn, *, apply: bool = False, include_raw_named: bool = False, actor: str = "system:demo-cleanup",
-              backup_dir: Path | None = None) -> dict:
-    sel = await find(conn, include_raw_named=include_raw_named)
+              backup_dir: Path | None = None, anon_analyses_since: str | None = None) -> dict:
+    from datetime import datetime as _dt
+    since = _dt.fromisoformat(anon_analyses_since) if anon_analyses_since else None
+    sel = await find(conn, include_raw_named=include_raw_named, anon_analyses_since=since)
     doc_ids = [d["id"] for d in sel["documents"]]
     an_ids = [a["id"] for a in sel["analyses"]]
+    an_codes = [a["code"] for a in sel["analyses"]]
     counts: dict[str, int] = {}
     backup_rows: list[dict] = []
     for table, where, which in _ROWS:
-        ids = doc_ids if which == "doc" else an_ids
+        ids = {"doc": doc_ids, "an": an_ids, "an_code": an_codes}[which]
         rows = await conn.fetch(f"SELECT to_jsonb(t) AS j FROM {table} t WHERE {where}", ids) if ids else []
-        counts[table] = len(rows)
+        counts[table] = counts.get(table, 0) + len(rows)
         backup_rows += [{"table": table, "row": r["j"]} for r in rows]
     out = {"apply": apply, "documents": sel["documents"], "documents_kept": sel["documents_kept"],
            "analyses": sel["analyses"], "rows": counts}
@@ -95,16 +107,23 @@ async def run(conn, *, apply: bool = False, include_raw_named: bool = False, act
         for b in backup_rows:
             fh.write(json.dumps(b, ensure_ascii=False, default=str) + "\n")
     async with conn.transaction():
-        await conn.execute("SET LOCAL riskminer.expert_write = 'on'")     # operator cleanup: approved rows too
         deleted = {}
         for table, where, which in _ROWS:
-            ids = doc_ids if which == "doc" else an_ids
+            ids = {"doc": doc_ids, "an": an_ids, "an_code": an_codes}[which]
             r = await conn.execute(f"DELETE FROM {table} WHERE {where}", ids) if ids else "DELETE 0"
-            deleted[table] = int(r.split()[-1])
+            deleted[table] = deleted.get(table, 0) + int(r.split()[-1])
+        # rm_protect_approved keeps approved/edited rows (only the review package may override it): report, never force
+        kept = {}
+        for table, where, which in _ROWS:
+            ids = {"doc": doc_ids, "an": an_ids, "an_code": an_codes}[which]
+            n = await conn.fetchval(f"SELECT count(*) FROM {table} WHERE {where}", ids) if ids else 0
+            if n:
+                kept[table] = kept.get(table, 0) + n
         await conn.execute("""INSERT INTO audit_log (actor, action, table_name, row_id, after)
                               VALUES ($1, 'demo.cleanup', 'document', NULL, $2)""", actor,
-                           {"deleted": deleted, "documents": sel["documents"], "analyses": sel["analyses"],
+                           {"deleted": deleted, "kept_protected": kept, "documents": sel["documents"],
+                            "analyses": sel["analyses"],
                             "backup": str(bfile.relative_to(REPO_ROOT)) if bfile.is_relative_to(REPO_ROOT) else str(bfile),
                             "rule": "e2e/test artefacts removed before the demo snapshot; raw files and sources kept"})
-    out.update(deleted=deleted, backup=str(bfile))
+    out.update(deleted=deleted, kept_protected=kept, backup=str(bfile))
     return out

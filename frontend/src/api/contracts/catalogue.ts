@@ -11,7 +11,12 @@ export interface CatalogueRisk {
   effect: string
   counts_label: string // '1 zatw., 3 do przeglądu' | 'brak zdarzeń'
   parts: RiskPart[]
-  quality: { badge: string; detail: string; review: { rodzaj: string; ryzyko: string } | null } | null
+  quality: {
+    badge: string
+    detail: string
+    attention?: boolean
+    review: { rodzaj: string; ryzyko: string } | null
+  } | null
 }
 
 export interface CatalogueProposal {

@@ -54,6 +54,9 @@ const adaptRisk = (r: RealRisk): CatalogueRisk => {
     q?.recall ? `pokrycie ${q.recall.display}` : null,
   ].filter(Boolean)
   const n = q?.precision?.prov?.n
+  // Orange means "needs attention": only when a measured precision or recall is below 0.6.
+  const measured = [q?.precision?.value, q?.recall?.value].filter((x): x is number => typeof x === 'number')
+  const attention = measured.length > 0 && Math.min(...measured) < 0.6
   return {
     code: r.code,
     title: r.name,
@@ -63,6 +66,7 @@ const adaptRisk = (r: RealRisk): CatalogueRisk => {
     quality: q
       ? {
           badge: q.note,
+          attention,
           detail: `W zbiorze wzorcowym${n ? ` (n = ${n})` : ''} reguły mają ${detailBits.join(', ')}. Pozostałe przypadki ocenia model, a zatwierdzasz Ty.`,
           review: reviewTarget(q.review_href),
         }

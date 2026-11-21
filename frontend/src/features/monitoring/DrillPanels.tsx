@@ -41,7 +41,7 @@ const KPI_LABEL_SHORT = new Set(['late_pct', 'median_delay', 'signals', 'over_pc
 
 /** 4.1a: voivodeship. KPIs, powiats with signals, biggest signals, CSV. */
 export function RegionPanel({ woj }: { woj: string }) {
-  const { asOf } = useMonitoring()
+  const { asOf, setSearch } = useMonitoring()
   const detail = useQuery(regionDetailQuery(woj, asOf))
   const sig = useQuery(signalsQuery(woj, 'woj', undefined, asOf))
   if (detail.isPending) return <SkeletonBlock className="h-[480px]" />
@@ -63,6 +63,18 @@ export function RegionPanel({ woj }: { woj: string }) {
           <KpiTile key={k.key} label={k.label} value={k.value} attention={k.attention} />
         ))}
       </div>
+      {d.signals_total > 0 ? (
+        <Button
+          size="lg"
+          className="self-start"
+          onClick={() => {
+            setSearch({ sygnaly: 1 })
+            document.getElementById('sygnaly-woj')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+          }}
+        >
+          Pokaż umowy: {d.name} →
+        </Button>
+      ) : null}
       {d.signals_total === 0 ? (
         <EmptyState>W tym województwie nie ma teraz sygnałów.</EmptyState>
       ) : (
@@ -87,7 +99,7 @@ export function RegionPanel({ woj }: { woj: string }) {
                           {c.buyers.slice(0, 3).join(', ')}
                         </span>
                       </span>
-                      <span className="t-item text-attention-text">{c.signals}</span>
+                      <span className="t-item">{c.signals}</span>
                       <ChevronRight aria-hidden className="size-4 text-muted" />
                     </Link>
                   </li>
@@ -95,7 +107,7 @@ export function RegionPanel({ woj }: { woj: string }) {
               </ul>
             </section>
           ) : null}
-          <section className="flex flex-col gap-2">
+          <section id="sygnaly-woj" className="flex scroll-mt-2 flex-col gap-2">
             <div className="flex items-baseline justify-between gap-2">
               <h2 className="t-h3 m-0">Sygnały</h2>
               <span className="t-caption text-muted">po terminie, bez ogłoszenia o wykonaniu</span>
@@ -287,21 +299,6 @@ export function ContractPanel({ woj, pow, id }: { woj: string; pow: string; id: 
       {late !== null && plan > 0 ? (
         <PlanOverdueBar plan={plan} late={late} signedOn={s.signed_on} plannedEnd={s.planned_end} />
       ) : null}
-      <p className="m-0 text-[15px]">{c.sentence}</p>
-      <section className="flex flex-col gap-1.5" aria-label="Źródła">
-        <h2 className="t-h3 m-0">Źródła</h2>
-        {c.sources.map((x) => (
-          <div
-            key={x.k}
-            className="flex items-baseline justify-between gap-3 rounded-item bg-surface px-3.5 py-2.5"
-          >
-            <span className="text-[14px] text-text-secondary">{x.k}</span>
-            <span className={x.missing ? 't-mono text-attention-text' : 't-mono'}>
-              {x.missing ? 'brak' : x.v}
-            </span>
-          </div>
-        ))}
-      </section>
       <div className="flex flex-wrap gap-2">
         <Button asChild size="lg">
           <Link to={c.card_href as never}>Otwórz kartę umowy</Link>
@@ -333,6 +330,21 @@ export function ContractPanel({ woj, pow, id }: { woj: string; pow: string; id: 
           </LoginRequired>
         ) : null}
       </div>
+      <p className="m-0 text-[15px]">{c.sentence}</p>
+      <section className="flex flex-col gap-1.5" aria-label="Źródła">
+        <h2 className="t-h3 m-0">Źródła</h2>
+        {c.sources.map((x) => (
+          <div
+            key={x.k}
+            className="flex items-baseline justify-between gap-3 rounded-item bg-surface px-3.5 py-2.5"
+          >
+            <span className="text-[14px] text-text-secondary">{x.k}</span>
+            <span className={x.missing ? 't-mono text-attention-text' : 't-mono'}>
+              {x.missing ? 'brak' : x.v}
+            </span>
+          </div>
+        ))}
+      </section>
       <p className="t-caption m-0 text-text-body-muted">
         Karta powstaje sama z ogłoszeń BZP i jest niezweryfikowana. Do bazy przypadków trafia dopiero po
         przeglądzie eksperta.

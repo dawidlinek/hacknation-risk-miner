@@ -349,3 +349,42 @@ async def test_road_analysis_end_to_end(client, db, monkeypatch):
     monkeypatch.setattr(FE, "feature", lambda name, default=False: default)
     d2 = (await client.post("/api/analyses", json={"text": ROAD})).json()
     assert "sektor" not in {c["key"] for c in d2["features"]}
+
+
+async def test_confidential_doc_sovereign_down_rules_only(client, db):
+    """Confidential PFU + sovereign model down: 1.1 and 1.3 answer with the rules-only banner (never an error); the
+    owner may mark the document public, which re-queues the AI jobs. Confidential data never goes to the cloud."""
+    import json as _json
+    me = (await client.get("/api/auth/me")).json()
+    anon = me.get("anon_id") or ""
+    did = (await db.execute(text(
+        "INSERT INTO document (doc_type, filename, sensitivity, data, pages) VALUES ('pfu', 'PFU_poufny.pdf', "
+        "'confidential', CAST(:d AS jsonb), 1) RETURNING id"), {"d": _json.dumps({"owner_anon": anon[:8]})})).scalar()
+    await db.execute(text("INSERT INTO document_page (document_id, page_no, text) VALUES (:d, 1, :t)"),
+                     {"d": did, "t": "Projektowane rurociągi zlokalizowane będą częściowo na działkach prywatnych. "
+                                     "Długość sieci ok. 6 km. Wynagrodzenie ryczałtowe."})
+    r = await client.post("/api/analyses", json={"text": DEMO, "document_ids": [did]})
+    assert r.status_code == 201, r.text
+    code = r.json()["id"]
+    assert r.json()["sensitivity"] == "confidential"
+    await client.post(f"/api/analyses/{code}/run")
+    sov = {"status": "sovereign_unavailable", "documents": {str(did): {"status": "sovereign_unavailable"}},
+           "errors": [{"code": "sovereign_unavailable", "detail": "Model w Polsce jest niedostępny.",
+                       "sovereign_unavailable": True}]}
+    jid = (await db.execute(text("INSERT INTO job (kind, payload, status, result) VALUES ('analysis_redpen', "
+                                 "'{}'::jsonb, 'done', CAST(:r AS jsonb)) RETURNING id"),
+                            {"r": _json.dumps(sov)})).scalar()
+    await db.execute(text("UPDATE analysis SET results = jsonb_set(jsonb_set(results, '{jobs,redpen}', to_jsonb(CAST(:j AS bigint))), "
+                          "'{jobs,features}', to_jsonb(CAST(:j AS bigint))) WHERE code = :c"), {"j": jid, "c": code})
+    rp = await client.get(f"/api/analyses/{code}/redpen/{did}")
+    assert rp.status_code == 200, rp.text
+    body = rp.json()
+    assert body["status"] == "sovereign_unavailable"
+    assert any(lim.startswith("Model suwerenny niedostępny") for lim in body["limitations"])
+    assert any(n["kind"] == "found" and n["origin"] == "CALC" for n in body["notes"])     # rule notes still there
+    dr = (await client.get(f"/api/analyses/{code}/draft")).json()
+    assert dr["ai_features"]["sovereign_unavailable"] is True and dr["confidential_documents"] == [did]
+    r = await client.post(f"/api/analyses/{code}/documents/{did}/make-public")
+    assert r.status_code == 200 and r.json()["jobs"]["features"] and r.json()["jobs"]["redpen"]
+    assert (await db.execute(text("SELECT sensitivity FROM document WHERE id = :d"), {"d": did})).scalar() == "public"
+    assert (await client.get(f"/api/analyses/{code}/draft")).json()["sensitivity"] == "public"

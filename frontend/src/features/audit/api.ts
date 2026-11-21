@@ -23,14 +23,22 @@ export const projectDiffQuery = (id: string, from: string | null, to: string) =>
       ),
   })
 
-export const globalAuditQuery = (kind: GlobalKind, day: string | null) =>
+export const AUDIT_PAGE = 25
+
+export const globalAuditQuery = (kind: GlobalKind, day: string | null, limit = AUDIT_PAGE) =>
   queryOptions({
-    queryKey: ['audit', 'global', kind, day],
+    queryKey: ['audit', 'global', kind, day, limit],
     placeholderData: keepPreviousData,
     queryFn: async () => {
       const range = day ? dayRange(day) : null
       const page = await contractFetch<RealAuditPage>('/api/audit', {
-        query: { category: GLOBAL_CATEGORY[kind], since: range?.since, until: range?.until, limit: 200 },
+        query: {
+          category: GLOBAL_CATEGORY[kind],
+          since: range?.since,
+          until: range?.until,
+          limit,
+          hide_login: true,
+        },
       })
       return { total: page.total, entries: page.items.map(adaptEntry) }
     },

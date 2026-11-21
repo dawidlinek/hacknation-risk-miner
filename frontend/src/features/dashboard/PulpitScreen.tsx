@@ -5,6 +5,7 @@ import { contractFetch } from '@/api/client'
 import { Page, PageHeader } from '@/app/Page'
 import { EmptyState } from '@/components/common/DataState'
 import { StatTile } from '@/components/common/StatCard'
+import { StepDot } from '@/components/common/StepList'
 import { SummaryCard } from '@/components/common/SummaryCard'
 import { Button } from '@/components/ui/button'
 import { useFeature } from '@/config/features'
@@ -48,6 +49,14 @@ const TILE_HREF: Record<string, string> = {
   monitoring_new: '/monitoring',
   my_analyses: '/analizy/nowa',
 }
+
+/** Short Polish title per discrepancy code; the API sentence stays as the description. */
+const ISSUE_TITLE: Record<string, string> = {
+  value_deviation: 'Wartość odbiega od BZP',
+  part_scope_wider: 'Zakres części szerszy niż w zestawie',
+  part_mismatch: 'Niezgodna część zamówienia',
+}
+const issueTitle = (code: string) => ISSUE_TITLE[code] ?? 'Rozbieżność w danych'
 
 export function PulpitScreen() {
   const { data } = useSuspenseQuery(dashboardQuery)
@@ -115,10 +124,18 @@ export function PulpitScreen() {
                     <Link
                       to="/przeglad"
                       search={{ sprawa: i.id } as never}
-                      className="flex flex-col gap-0.5 rounded-item bg-surface px-3.5 py-2.5 text-text no-underline hover:bg-soft-2"
+                      className="flex items-start gap-3 rounded-item bg-surface px-3.5 py-2.5 text-text no-underline hover:bg-soft-2"
                     >
-                      <span className="t-item">{i.title}</span>
-                      <span className="t-mono text-muted">{i.rm_id ?? i.code}</span>
+                      <span className="mt-px">
+                        <StepDot state="now" />
+                      </span>
+                      <span className="flex min-w-0 flex-col gap-0.5">
+                        <span className="t-item">{issueTitle(i.code)}</span>
+                        <span className="line-clamp-2 text-[14px] text-text-body-muted" title={i.title}>
+                          {i.title}
+                        </span>
+                        <span className="t-mono text-muted">{i.rm_id ?? i.code}</span>
+                      </span>
                     </Link>
                   </li>
                 ))}

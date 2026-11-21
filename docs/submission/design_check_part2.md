@@ -80,3 +80,25 @@ Counts: OK 0, minor 6, major 4. Every app screen also shows a floating "mocks: 0
 1. For this item type (data discrepancy) the source quote card with chips is absent and there is no "Wzorcowy przyklad" checkbox; mockup has both. Confirm they appear for risk-event items.
 2. Kind pills: app shows 5 kinds with counts; the first active is "Rozbieznosci w danych", not the first pill. Header count "1 z 152" vs mockup "z 37" is data.
 3. Right-hand "Co zmieni Twoja odpowiedz" panel, radio cards with number keys and "Zapisz i dalej" / "Pomin" match the mockup.
+
+## Po poprawkach
+
+Re-run: scratchpad `design_check2/run4.js`, screenshots `shots/b_*.png` (D4, D3, C2, D2, D2s-woj, D2s-inw). No mock badge, no banned characters, no page errors on any of them.
+
+| Item | Przed | Po poprawkach |
+|---|---|---|
+| D4 raw keys, English, empty-label row | `document_facts`, "global", "replay", empty row | Polish labels for every task, provider kind, location and health; one row per task with public and confidential model |
+| D4 Tryb suwerenny and config.yaml cards | missing | added as right column, YAML built from API values; H1 "Modele i miejsce przetwarzania" |
+| D3 garbled sentences | "zalogował się rekord", "analysis.run analizę analizę" | Polish predicates per action (backend `audit_read.py`), no duplicated object noun, unknown actions get a neutral phrase |
+| D3 key: value dumps | `role: expert; read_only: False` | label: value chips with Polish labels, technical fields (hashes, ids) hidden, no empty "brak" arrow for creations |
+| D3 height and login noise | about 20 000 px, login events dominate | 25 rows per page plus "Pokaż więcej", logins hidden by default (`hide_login` param); page about 2 900 px |
+| Mock badge | on every screen | rendered only in dev with mocks enabled |
+| Orange accent | Katalog risks, Wehikuł czasu rows, list values | Katalog pill orange only if measured precision or recall < 0.6; Wehikuł czasu, powiat counts and signal days neutral (only the top signal keeps orange) |
+| D2s Wojewodztwo map | labels piled up on first load | labels and pills wait for map idle, "Wczytujemy mapę…" overlay meanwhile |
+| D2s Wojewodztwo panel | no "Pokaż umowy" | black button added (turns on map pins and scrolls to Sygnały); signals list overlap was the dev badge |
+| D2s Inwestycja actions | cut off | actions moved directly under the KPI and plan bar |
+| D2s pill axe mismatch | label-content-name-mismatch | done by the lead (ChoroplethMap aria-label), not touched here |
+| C2 Katalog tabs | Propozycje and Wagi as tabs | side column "Propozycje modelu" and "Wagi podobieństwa"; version string in mono |
+| B7 long public list | about 24 rows | first 8 plus "Pokaż wszystkie (N)" |
+
+Not done: filter dropdowns Podsektor/Wartosc/Lata (D2), "+N d" pills on the powiat map, C1 quote card and gold checkbox for data-discrepancy items, B7 tile cards, B6 select styling, "Nowe ryzyko" button, Settings pre block scrolls horizontally on long alias lines.

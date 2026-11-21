@@ -76,6 +76,19 @@ describe('1.1 logic', () => {
     ).toBe('Odczyt AI niedostępny.')
     expect(aiStatusLine({ ai_pending: false })).toBeNull()
   })
+  it('sovereign outage: no plain status line (the banner with the make-public choice takes over)', () => {
+    expect(
+      aiStatusLine({
+        ai_pending: false,
+        ai_features: {
+          job_id: 1,
+          status: 'done',
+          note: 'Model suwerenny niedostępny',
+          sovereign_unavailable: true,
+        },
+      }),
+    ).toBeNull()
+  })
 })
 
 describe('ChipsEditor', () => {

@@ -20,11 +20,13 @@ DB = Depends(get_session)
 @router.get("", summary="Dziennik zmian (ekspert, import, katalog, model, system)")
 async def audit(category: Literal["expert", "import", "catalogue", "model", "system"] | None = None,
                 table: str | None = None, row_id: int | None = None, actor: str | None = None, since: str | None = None,
-                until: str | None = None,
+                until: str | None = None, hide_login: bool = False,
                 limit: int = Query(50, le=500), offset: int = 0, db: AsyncSession = DB):
     where, params = ["true"], {"limit": limit, "offset": offset}
     if category:
         where.append(AR.CATEGORY_SQL[category])
+    if hide_login:
+        where.append("a.action <> 'auth.login'")
     if table:
         where.append("a.table_name = :table")
         params["table"] = table

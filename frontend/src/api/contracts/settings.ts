@@ -6,7 +6,7 @@ export interface LlmTask {
   sensitivity: 'public' | 'confidential'
   alias: string
   provider: string
-  model: string
+  model: string | null
   data_location: string
   sovereign: boolean
   enforced: boolean
@@ -24,6 +24,7 @@ export interface LlmProvider {
 export interface LlmSettings {
   tasks: LlmTask[]
   providers: LlmProvider[]
+  models?: Record<string, { alias: string; provider: string | null; model: string | null }>
   usage_24h: {
     calls: { value: number | null; display: string }
     tokens_in: number

@@ -249,7 +249,7 @@ export function SignalList({
                   {s.parts > 1 ? `, ${s.parts} części` : ''}
                 </span>
               </span>
-              <span className="t-item whitespace-nowrap text-attention-text">
+              <span className={cn('t-item whitespace-nowrap', i === 0 && 'text-attention-text')}>
                 {s.days_late === null ? 'brak' : fmtDays(s.days_late, { short: true })}
               </span>
             </Link>

@@ -46,7 +46,7 @@ function StateChip({ row, isPublic }: { row: ProjectRow; isPublic: boolean }) {
   return (
     <span
       className={cn(
-        'inline-flex min-h-6.5 max-w-[150px] items-center whitespace-normal rounded-pill px-2.5 py-0.5 text-[12.5px] leading-tight',
+        'inline-flex min-h-6.5 max-w-[130px] items-center whitespace-normal rounded-pill px-2.5 py-0.5 text-[12.5px] leading-tight',
         cls,
       )}
     >
@@ -87,17 +87,17 @@ export function ProjectsScreen({
         id: 'title',
         header: 'Projekt',
         sortValue: (r) => sortValue(r, 'title'),
-        className: 'min-w-[220px] max-w-[300px] whitespace-normal',
+        className: 'w-[34%] min-w-[240px] whitespace-normal',
         cell: (r) => (
           <div className="flex flex-col gap-0.5">
             <Link
               to="/projekty/$id"
               params={{ id: r.rm_id }}
-              className="t-item text-text no-underline hover:underline"
+              className="t-item line-clamp-2 text-text no-underline hover:underline"
             >
               {r.title}
             </Link>
-            <span className="t-mono text-muted">
+            <span className="t-mono line-clamp-1 text-muted">
               {r.rm_id}, {r.buyer_name}
             </span>
           </div>
@@ -106,12 +106,14 @@ export function ProjectsScreen({
       {
         id: 'subsector',
         header: 'Podsektor',
+        className: 'max-w-[130px] whitespace-normal',
         sortValue: (r) => sortValue(r, 'subsector'),
         cell: (r) => r.subsector_label,
       },
       {
         id: 'value',
         header: 'Wartość umowy',
+        className: 'whitespace-nowrap',
         align: 'right',
         sortValue: (r) => sortValue(r, 'value'),
         cell: (r) =>
@@ -122,6 +124,7 @@ export function ProjectsScreen({
       {
         id: 'delay',
         header: 'Opóźnienie',
+        className: 'whitespace-nowrap',
         align: 'right',
         sortValue: (r) => sortValue(r, 'delay'),
         cell: (r) => (
@@ -130,7 +133,7 @@ export function ProjectsScreen({
               {r.delay_days === null ? 'brak' : fmtDays(r.delay_days, { short: true })}
             </span>
             {r.delay_days !== null && r.delay_days > 0 ? (
-              <span aria-hidden className="h-1 w-20 overflow-hidden rounded-pill bg-soft-2">
+              <span aria-hidden className="h-1 w-16 overflow-hidden rounded-pill bg-soft-2">
                 <span
                   className={cn('block h-full', r.delay_days > 90 ? 'bg-attention' : 'bg-text-secondary')}
                   style={{ width: `${delayBarPct(r.delay_days)}%` }}
@@ -143,6 +146,7 @@ export function ProjectsScreen({
       {
         id: 'cost',
         header: 'Koszt wobec umowy',
+        className: 'whitespace-nowrap',
         align: 'right',
         sortValue: (r) => sortValue(r, 'cost'),
         cell: (r) => (
@@ -151,7 +155,7 @@ export function ProjectsScreen({
               {r.cost_dev_pct === null ? 'brak' : fmtPct(r.cost_dev_pct, { signed: true })}
             </span>
             {r.cost_dev_pct !== null && r.cost_dev_pct !== 0 ? (
-              <span aria-hidden className="relative h-1 w-20 overflow-hidden rounded-pill bg-soft-2">
+              <span aria-hidden className="relative h-1 w-16 overflow-hidden rounded-pill bg-soft-2">
                 <span
                   className={cn(
                     'absolute top-0 h-full',
@@ -167,6 +171,7 @@ export function ProjectsScreen({
       {
         id: 'changes',
         header: 'Zmiany',
+        className: 'whitespace-nowrap',
         align: 'right',
         sortValue: (r) => sortValue(r, 'changes'),
         cell: (r) => (r.changes === null ? 'brak' : fmtInt(r.changes)),
@@ -174,6 +179,7 @@ export function ProjectsScreen({
       {
         id: 'performed',
         header: 'Wykonanie',
+        className: 'whitespace-nowrap',
         sortValue: (r) => sortValue(r, 'performed'),
         cell: (r) =>
           r.properly_performed === null ? (
@@ -187,6 +193,7 @@ export function ProjectsScreen({
       {
         id: 'state',
         header: 'Stan',
+        className: 'w-[132px]',
         sortValue: (r) => sortValue(r, 'state'),
         cell: (r) => <StateChip row={r} isPublic={isPublic} />,
       },

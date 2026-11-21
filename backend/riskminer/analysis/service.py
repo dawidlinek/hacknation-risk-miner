@@ -39,6 +39,11 @@ async def _casebase_for(s: AsyncSession, ft):
     return cb
 
 
+SOVEREIGN_NOTE = ("Model suwerenny niedostępny: dokument poufny przetworzono tylko regułami, bez AI. "
+                  "Jeśli dokument jest publiczny (np. pobrany z BZP), oznacz go jako publiczny, a AI przetworzy go "
+                  "ponownie.")
+
+
 class NotFound(Exception):
     pass
 
@@ -249,8 +254,15 @@ async def get_draft(s: AsyncSession, code: str) -> tuple[dict, dict]:
     errs = d["ai_features"].get("errors") or []
     if errs or (js and js["status"] in ("failed", "stale")):
         detail = next((e.get("detail") for e in errs if isinstance(e, dict) and e.get("detail")), None)
-        d["ai_features"]["note"] = ("Odczyt AI niedostępny" + (f": {detail}" if detail else ".")
-                                    + " Pokazujemy cechy odczytane regułami z opisu.")
+        sovereign = any(isinstance(e, dict) and (e.get("sovereign_unavailable") or e.get("code") ==
+                                                 "sovereign_unavailable") for e in errs)
+        if sovereign:
+            d["ai_features"]["sovereign_unavailable"] = True
+            d["ai_features"]["note"] = SOVEREIGN_NOTE
+        else:
+            d["ai_features"]["note"] = ("Odczyt AI niedostępny" + (f": {detail}" if detail else ".")
+                                        + " Pokazujemy cechy odczytane regułami z opisu.")
+    d["confidential_documents"] = [x["document_id"] for x in docs if x["sensitivity"] == "confidential"]
     d["ai_pending"] = bool(js and js["status"] in ("queued", "running"))
     return a, d
 
@@ -730,7 +742,9 @@ async def redpen(s: AsyncSession, code: str, document_id: int, only_noted: bool)
             dres = ((js.get("result") or {}).get("documents") or {}).get(str(document_id)) or {}
             if dres.get("status") == "sovereign_unavailable" or (js.get("result") or {}).get("status") == \
                     "sovereign_unavailable" and not dres:
-                raise SovereignUnavailable(str(document_id))
+                # the page text and the rule notes need no model: show them, say why the AI part is missing
+                status = "sovereign_unavailable"
+                limits.append(SOVEREIGN_NOTE)
             pnote = (dres.get("processing") or {}).get("note") if isinstance(dres.get("processing"), dict) else None
             if pnote:
                 limits.append(f"Uwagi AI: {pnote}.")
@@ -821,3 +835,30 @@ async def mark_affected(s: AsyncSession, *, rm_id: str | None = None, ocid: str 
         await audit(s, actor, "analysis.case_updated", "analysis", a["id"], None, entry, request_id)
         marked.append(r["code"])
     return marked
+
+
+async def make_document_public(s: AsyncSession, code: str, document_id: int, actor: str, doc_ok=None,
+                               request_id: str | None = None) -> dict:
+    """Owner's explicit choice: a document of this analysis is public after all (e.g. downloaded from BZP). Only then
+    may the AI pass use cloud models; the jobs are queued again. Confidential data never leaves PL without this."""
+    a = await _load(s, code)
+    if document_id not in [int(x) for x in (a.get("input_documents") or [])]:
+        raise NotFound(f"{code}/{document_id}")
+    await check_docs(s, [document_id], doc_ok)
+    before = (await s.execute(text("SELECT sensitivity FROM document WHERE id = :d"), {"d": document_id})).scalar()
+    await s.execute(text("UPDATE document SET sensitivity = 'public', updated_at = now() WHERE id = :d"),
+                    {"d": document_id})
+    docs = await _documents(s, list(a.get("input_documents") or []))
+    if all(x["sensitivity"] == "public" for x in docs):
+        await s.execute(text("UPDATE analysis SET sensitivity = 'public' WHERE id = :id"), {"id": a["id"]})
+    results = dict(a.get("results") or {})
+    jobs = dict(results.get("jobs") or {})
+    jobs["features"] = await enqueue(s, "analysis_features_ai", {"analysis_code": code}, actor, priority=20)
+    if results.get("report"):
+        jobs["redpen"] = await enqueue(s, "analysis_redpen", {"analysis_code": code}, actor, priority=30)
+    results["jobs"] = jobs
+    await s.execute(text("UPDATE analysis SET results = CAST(:r AS jsonb), updated_at = now() WHERE id = :id"),
+                    {"r": _j(results), "id": a["id"]})
+    await audit(s, actor, "document.make_public", "document", document_id, {"sensitivity": before},
+                {"sensitivity": "public", "analysis": code}, request_id)
+    return {"document_id": document_id, "sensitivity": "public", "jobs": jobs}

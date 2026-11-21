@@ -258,6 +258,22 @@ async def item_decision(code: str, item_id: int, body: ItemDecisionIn, request: 
     return out
 
 
+@router.post("/analyses/{code}/documents/{document_id}/make-public",
+             summary="Oznacz dokument analizy jako publiczny (wtedy AI może go przetworzyć)",
+             dependencies=[Depends(csrf_guard)])
+async def make_document_public(code: str, document_id: int, request: Request, sess: Session = Depends(session),
+                               db: AsyncSession = Depends(get_session)):
+    await _guard_write(db, code, sess)
+    try:
+        out = await SV.make_document_public(db, code, document_id, sess.actor, _doc_ok(sess), _rid(request))
+    except SV.NotFound:
+        raise ApiError(404, "Ten dokument nie należy do analizy.", "not_found") from None
+    except SV.Forbidden:
+        raise ApiError(403, "Nie masz dostępu do tego dokumentu.", "document_forbidden") from None
+    await db.commit()
+    return out
+
+
 # ---- 1.4 / 1.5 --------------------------------------------------------------------------------------------------------
 
 class AllocationIn(BaseModel):

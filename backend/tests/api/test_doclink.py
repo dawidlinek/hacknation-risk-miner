@@ -265,3 +265,10 @@ async def test_alert_via_monitoring_for_ongoing_contract(expert, db):
     did = await _doc(db, "alert", ZAGRODNO)
     j = (await expert.post(f"/api/documents/{did}/link")).json()
     assert "alert" in j and isinstance(j["alert"], dict) and "raised" in j["alert"]
+
+
+async def test_tender_scan_documents_are_not_linked_twice(expert, db):
+    did = await _doc(db, "swz-scan", {"kind": "tender_scan", "signals": [{"code": "R08.2", "quote": "x", "page": 1}]}, project_rm="RM-2026-003")
+    r = await expert.post(f"/api/documents/{did}/link")
+    assert r.status_code == 200 and r.json()["skipped"] == "tender_scan" and r.json()["review_items"] == []
+    assert await _scalar(db, "SELECT count(*) FROM risk_event WHERE key LIKE :k", k=f"doc:{did}:%") == 0

@@ -1,8 +1,8 @@
 // Jury path (a) on the real backend: Projekty -> Karta (pilot + OCID auto card) -> Graf powiązań -> Przegląd (no
 // decision) -> Dokumenty: upload of one organizer file -> "Co się zmieniło".
-// Uses the demo persona "expert" because the upload writes; no review decision is taken.
+// The upload runs only with E2E_UPLOAD=1 (it writes to the case base); no review decision is taken.
 // Run: npx playwright test e2e/demo-a-projects.spec.ts --project=live
-import { existsSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { expect, test } from '@playwright/test'
 import { expectNoA11yViolations } from './a11y'
@@ -62,6 +62,8 @@ test.describe('demo (a): od projektu do dowodu', () => {
   })
 
   test('Dokumenty: dokument organizatora i "Co się zmieniło"', async ({ page }) => {
+    // Writes proposals, review items and an alert into the shared case base: opt-in only (E2E_UPLOAD=1, rehearsal VM).
+    test.skip(process.env.E2E_UPLOAD !== '1', 'set E2E_UPLOAD=1 to upload an organizer file')
     test.skip(!existsSync(ORGANIZER_FILE), 'materials/organizer_cases/ not present')
     test.setTimeout(240_000)
     await loginAs(page.request, 'expert')
@@ -69,7 +71,13 @@ test.describe('demo (a): od projektu do dowodu', () => {
     await expect(page.getByText('Upuść PDF, DOCX albo ZIP')).toBeVisible()
     await expectNoA11yViolations(page, '2.5')
 
-    await page.getByLabel('Wybierz plik z dysku').setInputFiles(ORGANIZER_FILE)
+    // One appended byte: a different sha256, so the jury's own upload of the real file is never a duplicate.
+    const bytes = Buffer.concat([readFileSync(ORGANIZER_FILE), Buffer.from('\n')])
+    await page.getByLabel('Wybierz plik z dysku').setInputFiles({
+      name: 'e2e_protokol_zagrodno.pdf',
+      mimeType: 'application/pdf',
+      buffer: bytes,
+    })
     const panel = page.getByRole('region', { name: 'Analiza dokumentu' })
     await expect(panel).toBeVisible({ timeout: 60_000 })
 

@@ -10,7 +10,7 @@ import type {
   CatalogueRisk,
   SimilarityWeight,
 } from '@/api/contracts/catalogue'
-import { Page, PageHeader } from '@/app/Page'
+import { Page, PageHeader, TwoCol } from '@/app/Page'
 import { useSession } from '@/auth/session'
 import { EmptyState } from '@/components/common/DataState'
 import { FilterPills } from '@/components/common/FilterPills'
@@ -19,28 +19,12 @@ import { Input } from '@/components/ui/input'
 import { Slider } from '@/components/ui/slider'
 import { Textarea } from '@/components/ui/textarea'
 import { useFeature } from '@/config/features'
+import { cn } from '@/lib/cn'
 import { fmtDateTime } from '@/lib/dates'
 import { catalogueQuery, decideProposal, patchRisk, putWeights } from './api'
 
-export type CatalogueTab =
-  | 'ryzyka'
-  | 'propozycje'
-  | 'wagi'
-  | 'wersje'
-  | 'podsektory'
-  | 'dokumenty'
-  | 'listy'
-  | 'zapisy'
-export const TABS: CatalogueTab[] = [
-  'ryzyka',
-  'propozycje',
-  'wagi',
-  'wersje',
-  'podsektory',
-  'dokumenty',
-  'listy',
-  'zapisy',
-]
+export type CatalogueTab = 'ryzyka' | 'wersje' | 'podsektory' | 'dokumenty' | 'listy' | 'zapisy'
+export const TABS: CatalogueTab[] = ['ryzyka', 'wersje', 'podsektory', 'dokumenty', 'listy', 'zapisy']
 
 const errMsg = (e: unknown, fallback: string) => (e instanceof ApiError && e.detail ? e.detail : fallback)
 
@@ -91,7 +75,14 @@ function RiskRow({
         <span className="t-item min-w-0 flex-1">{risk.title}</span>
         <span className="t-mono text-muted">{risk.counts_label}</span>
         {risk.quality ? (
-          <span className="t-caption rounded-pill bg-attention-soft px-2.5 py-0.5 text-attention-text">
+          <span
+            className={cn(
+              't-caption rounded-pill px-2.5 py-0.5',
+              risk.quality.attention
+                ? 'bg-attention-soft text-attention-text'
+                : 'bg-soft-2 text-text-secondary',
+            )}
+          >
             {risk.quality.badge}
           </span>
         ) : null}
@@ -118,13 +109,18 @@ function RiskRow({
           </div>
         ))}
         {risk.quality ? (
-          <div className="flex flex-col gap-2 rounded-inner bg-attention-soft px-4 py-3 text-[14px]">
+          <div
+            className={cn(
+              'flex flex-col gap-2 rounded-inner px-4 py-3 text-[14px]',
+              risk.quality.attention ? 'bg-attention-soft' : 'bg-soft',
+            )}
+          >
             <span>{risk.quality.detail}</span>
             {risk.quality.review ? (
               <Link
                 to="/przeglad"
                 search={risk.quality.review as never}
-                className="font-medium text-attention-text"
+                className={cn('font-medium', risk.quality.attention && 'text-attention-text')}
               >
                 Przejrzyj propozycje {risk.code} →
               </Link>
@@ -315,8 +311,6 @@ export function CatalogueScreen({ tab, onTab }: { tab: CatalogueTab; onTab: (t: 
   const when = data.updated_at ? fmtDateTime(data.updated_at) : ''
   const labels: Record<CatalogueTab, string> = {
     ryzyka: `Ryzyka ${data.risks[0]?.code ?? ''}–${data.risks.at(-1)?.code ?? ''}`,
-    propozycje: `Propozycje AI, ${data.proposals.length}`,
-    wagi: 'Wagi podobieństwa',
     wersje: 'Wersje',
     podsektory: 'Podsektory',
     dokumenty: 'Dokumenty w fazach',
@@ -326,7 +320,9 @@ export function CatalogueScreen({ tab, onTab }: { tab: CatalogueTab; onTab: (t: 
   return (
     <Page>
       <PageHeader
-        eyebrow={`wersja ${data.version.replace(/^v/, '')}${when ? `, ${when}` : ''}`}
+        eyebrow={
+          <span className="t-mono">{`wersja ${data.version.replace(/^v/, '')}${when ? `, ${when}` : ''}`}</span>
+        }
         title="Katalog wiedzy"
       />
       <FilterPills
@@ -336,29 +332,43 @@ export function CatalogueScreen({ tab, onTab }: { tab: CatalogueTab; onTab: (t: 
         options={TABS.map((t) => ({ value: t, label: labels[t] }))}
       />
       {tab === 'ryzyka' ? (
-        <div className="flex flex-col gap-2">
-          {data.risks.map((r) => (
-            <RiskRow
-              key={r.code}
-              risk={r}
-              editable={editable}
-              onSave={(code, patch) => save.mutate({ code, patch })}
-            />
-          ))}
-        </div>
+        <TwoCol
+          main={
+            <div className="flex flex-col gap-2">
+              {data.risks.map((r) => (
+                <RiskRow
+                  key={r.code}
+                  risk={r}
+                  editable={editable}
+                  onSave={(code, patch) => save.mutate({ code, patch })}
+                />
+              ))}
+            </div>
+          }
+          aside={
+            <>
+              <section className="flex flex-col gap-2 rounded-panel bg-soft p-5" aria-labelledby="prop-h">
+                <h2 id="prop-h" className="t-h3 m-0">
+                  Propozycje modelu
+                </h2>
+                {data.proposals.length === 0 ? (
+                  <p className="t-caption m-0 text-muted">Brak propozycji do rozstrzygnięcia.</p>
+                ) : (
+                  data.proposals.map((p) => (
+                    <ProposalCard
+                      key={p.id}
+                      p={p}
+                      riskCodes={data.risks.map((r) => r.code)}
+                      editable={editable}
+                    />
+                  ))
+                )}
+              </section>
+              <WeightSliders weights={data.weights} editable={editable} />
+            </>
+          }
+        />
       ) : null}
-      {tab === 'propozycje' ? (
-        data.proposals.length === 0 ? (
-          <EmptyState>Brak propozycji do rozstrzygnięcia.</EmptyState>
-        ) : (
-          <div className="flex flex-col gap-2 rounded-panel bg-soft p-4">
-            {data.proposals.map((p) => (
-              <ProposalCard key={p.id} p={p} riskCodes={data.risks.map((r) => r.code)} editable={editable} />
-            ))}
-          </div>
-        )
-      ) : null}
-      {tab === 'wagi' ? <WeightSliders weights={data.weights} editable={editable} /> : null}
       {tab === 'wersje' ? (
         <ul className="m-0 flex list-none flex-col gap-1.5 p-0">
           {data.versions.map((v) => (

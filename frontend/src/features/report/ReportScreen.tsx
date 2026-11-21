@@ -5,7 +5,7 @@ import { useState } from 'react'
 import { toast } from 'sonner'
 import { ApiError } from '@/api/client'
 import type { ClauseHint, ReportFlag } from '@/api/contracts/analyses'
-import { PageHeader, Panel, TwoCol } from '@/app/Page'
+import { Panel, TwoCol } from '@/app/Page'
 import { EmptyState } from '@/components/common/DataState'
 import { ProvenanceTag } from '@/components/common/ProvenanceTag'
 import { SummaryCard, SummaryCardSkeleton } from '@/components/common/SummaryCard'
@@ -46,7 +46,6 @@ export function ReportBody({ id, r, chat }: { id: string; r: Report; chat?: Reac
   if (r.status === 'running') {
     return (
       <div className="flex flex-col gap-7">
-        <PageHeader title={r.title || id} />
         <SummaryCardSkeleton note="Liczymy: grupa porównawcza, podobne przypadki, zapisy w PFU…" />
       </div>
     )
@@ -56,20 +55,15 @@ export function ReportBody({ id, r, chat }: { id: string; r: Report; chat?: Reac
   }
   return (
     <div className="flex flex-col gap-7">
-      <PageHeader
-        title={r.title}
-        eyebrow={
-          r.reference_class?.sector && r.reference_class.sector !== 'wod-kan' ? (
-            <span
-              className="t-mono rounded-chip bg-prov-ai-soft px-2 py-0.5 text-prov-ai"
-              data-testid="sector-badge"
-            >
-              sektor: {r.reference_class.sector_label ?? r.reference_class.sector}
-              {r.reference_class.sector_status === 'proposed' ? ', pakiet do zatwierdzenia' : ''}
-            </span>
-          ) : undefined
-        }
-      />
+      {r.reference_class?.sector && r.reference_class.sector !== 'wod-kan' ? (
+        <span
+          className="t-mono rounded-chip bg-prov-ai-soft px-2 py-0.5 text-prov-ai"
+          data-testid="sector-badge"
+        >
+          sektor: {r.reference_class.sector_label ?? r.reference_class.sector}
+          {r.reference_class.sector_status === 'proposed' ? ', pakiet do zatwierdzenia' : ''}
+        </span>
+      ) : null}
       <SummaryCard eyebrow="W skrócie" sentence={r.summary.text} provenance={r.summary.provenance} />
       {r.stale_cases?.length ? <RerunBanner id={id} text={staleCasesText(r.stale_cases)} /> : null}
       {r.stale_sections?.length ? (
@@ -104,7 +98,6 @@ export function ReportBody({ id, r, chat }: { id: string; r: Report; chat?: Reac
 function NotRun({ id, r }: { id: string; r: Report }) {
   return (
     <div className="flex flex-col gap-5">
-      <PageHeader title={r.title || id} />
       <EmptyState>
         {r.status === 'error'
           ? `Nie udało się policzyć raportu${r.error ? `: ${r.error}` : '.'}`
@@ -147,7 +140,7 @@ export function QuestionCardView({ id, q }: { id: string; q: ReportQuestion }) {
   return (
     <a
       href={cardHref(id, q)}
-      className="flex flex-col gap-3 rounded-card border border-divider bg-surface p-5 text-text no-underline hover:border-border"
+      className="flex flex-col gap-3 rounded-card bg-soft p-5 text-text no-underline hover:bg-soft-2"
       data-testid={`q-${q.key}`}
     >
       <span className="t-small font-medium text-text-secondary">{q.question}</span>

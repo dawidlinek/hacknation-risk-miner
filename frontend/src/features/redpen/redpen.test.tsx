@@ -109,4 +109,39 @@ describe('RedPenBody', () => {
     wrap(<RedPenBody r={{ ...r, status: 'queued' }} {...props} />)
     expect(screen.getByRole('status')).toHaveTextContent('Model AI czyta dokument')
   })
+  it('sovereign outage on a confidential document: rules-only banner with the make-public choice, never an error', async () => {
+    const fetchMock = vi.fn(
+      async () =>
+        new Response(JSON.stringify({ document_id: r.document.id, sensitivity: 'public', jobs: {} }), {
+          status: 200,
+          headers: { 'content-type': 'application/json' },
+        }),
+    )
+    vi.stubGlobal('fetch', fetchMock)
+    const conf = {
+      ...r,
+      status: 'sovereign_unavailable',
+      document: { ...r.document, sensitivity: 'confidential' },
+    }
+    wrap(<RedPenBody r={conf as unknown as RedPen} {...props} />)
+    const banner = screen.getByTestId('sovereign-banner')
+    expect(banner).toHaveTextContent(
+      'Model suwerenny niedostępny: dokument poufny przetworzono tylko regułami, bez AI.',
+    )
+    expect(screen.queryByText(/Coś poszło nie tak|Nie udało się wczytać/)).toBeNull()
+    expect(screen.getByTestId('page-text').querySelectorAll('mark').length).toBeGreaterThan(0)
+    fireEvent.click(
+      within(banner).getByRole('button', { name: 'Oznacz jako publiczny i przetwórz ponownie' }),
+    )
+    await vi.waitFor(() => expect(fetchMock).toHaveBeenCalled())
+    expect(String((fetchMock.mock.calls[0] as unknown[])[0])).toContain(
+      `/api/analyses/AN-1/documents/${r.document.id}/make-public`,
+    )
+    vi.unstubAllGlobals()
+  })
+  it('a public document under the same outage gets the banner without the button', () => {
+    wrap(<RedPenBody r={{ ...r, status: 'sovereign_unavailable' } as unknown as RedPen} {...props} />)
+    expect(screen.getByTestId('sovereign-banner')).toBeInTheDocument()
+    expect(screen.queryByRole('button', { name: 'Oznacz jako publiczny i przetwórz ponownie' })).toBeNull()
+  })
 })

@@ -274,6 +274,9 @@ async def link_document(db: AsyncSession, document_id: int, *, actor: str = ACTO
     facts = (doc.get("data") or {}).get("facts")
     if not facts:
         raise ApiError(409, "Z dokumentu nie wyczytano jeszcze faktów. Uruchom odczyt.", "no_facts")
+    if facts.get("kind") == "tender_scan" or facts.get("doc_kind") == "tender_scan":
+        # Red Pen scan of a tender document: its signals are already risk_event rows written by the scanner, nothing to link or duplicate
+        return {"document_id": document_id, "skipped": "tender_scan", "created": {}, "review_items": [], "checks": [], "warnings": [], "project": None}
     ids = facts.get("identifiers") or {}
     change = facts.get("change") or {}
     level = facts.get("level") or "contract"

@@ -1,4 +1,6 @@
 """OpenRouter emergency fallback: used for public data only, and only after Gemini answers 402/429/5xx."""
+import json
+
 import pytest
 
 from riskminer.llm import calllog, gateway, routing
@@ -123,3 +125,21 @@ async def test_all_sovereign_down_is_503_never_cloud(sovereign):
     with pytest.raises(SovereignUnavailable):
         await gateway.run(_req("confidential"))
     assert not [r for r in calllog.MEMORY if r["provider"] in ("gemini", "openrouter")]
+
+
+async def test_non_latin_answer_is_retried_once(live, monkeypatch):
+    calls = []
+
+    class ScriptBackend:
+        async def generate(self, p):
+            calls.append(p.parts[-1].text if p.parts else "")
+            bad = len(calls) == 1
+            chip = {"key": "podsektor", "value_code": "SAN", "value_text": "kanalizacja" if not bad else "канализация",
+                    "source": "opis", "quote": "opis"}
+            return RawResult(text=json.dumps({"chips": [chip], "rows": [], "missing": []}), tokens_in=5, tokens_out=5)
+    monkeypatch.setattr(gateway, "backend_for", lambda p: ScriptBackend())
+    res = await gateway.run(_req())
+    assert len(calls) == 2 and "alfabetu łacińskiego" in calls[1]
+    assert res.data.chips[0].value_text == "kanalizacja"
+    assert [r["status"] for r in calllog.MEMORY] == ["invalid", "ok"]
+    assert calllog.MEMORY[0]["error"].startswith("non_latin_script")

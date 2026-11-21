@@ -173,7 +173,7 @@ export function TimeMachine({
           {total === null ? '…' : fmtInt(total)}
         </span>
         {delta ? (
-          <span className={cn('t-mono', delta.startsWith('+') ? 'text-attention-text' : 'text-muted')}>
+          <span className={cn('t-mono', 'text-muted')}>
             {delta} od {fmtDate(prevAsOf)}
           </span>
         ) : null}
@@ -190,7 +190,7 @@ export function TimeMachine({
             <li
               key={`${qAsOf}-${s.id}`}
               className={cn(
-                'flex items-start justify-between gap-3 rounded-item bg-attention-soft px-3 py-2',
+                'flex items-start justify-between gap-3 rounded-item bg-soft px-3 py-2',
                 !reduced.current && 'animate-in fade-in slide-in-from-left-2 duration-500',
               )}
             >
@@ -201,7 +201,7 @@ export function TimeMachine({
                 </span>
               </span>
               <span className="t-mono shrink-0 text-right">
-                <span className="block text-attention-text">koniec {fmtDate(s.planned_end)}</span>
+                <span className="block">koniec {fmtDate(s.planned_end)}</span>
                 <span className="block text-muted">{fmtPlnAuto(s.value.amount)}</span>
               </span>
             </li>

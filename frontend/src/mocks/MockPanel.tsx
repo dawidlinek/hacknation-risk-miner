@@ -12,7 +12,8 @@ export function MockPanel() {
       return 'public'
     }
   })
-  if (!import.meta.env.DEV) return null
+  // Hidden unless mocks are on (enable with ?mocks=all in dev); never rendered in production builds.
+  if (!import.meta.env.DEV || mockedGroups().size === 0) return null
   const toggle = (g: MockGroup) =>
     setSel((s) => {
       const n = new Set(s)

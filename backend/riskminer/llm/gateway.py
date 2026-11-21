@@ -28,6 +28,7 @@ from riskminer.llm.config import LLMConfig, ProviderCfg, Sensitivity, fake_mode,
 from riskminer.llm.errors import (BillingDepleted, BudgetExceeded, InvalidOutput, LLMError, ProviderDown, ReplayMiss,
                                   SovereignUnavailable, Transient)
 from riskminer.llm.routing import Target, max_sensitivity, route
+from riskminer.llm.sanitize import drop_script_violations, script_violations
 
 
 @dataclass
@@ -255,6 +256,7 @@ async def run(req: LLMRequest) -> LLMResult:
     max_attempts = int(retries.get("max_attempts", 3))
     backoff = list(retries.get("backoff_s", [1, 4, 15]))
     repairs_left = int(retries.get("repair_on_invalid_json", 1))
+    script_retry_left = True
     timeout = float(cfg.timeouts_s.get(req.timeout_kind, 60))
     attempt = 0
     first: tuple[Target, str, str] | None = None
@@ -287,13 +289,30 @@ async def run(req: LLMRequest) -> LLMResult:
             except LLMError as e:
                 status, err, last_err = "error", str(e), e
             latency = int((time.perf_counter() - t0) * 1000)
-            data, verr = None, None
+            data, verr, script_note = None, None, None
             if raw is not None:
                 try:
                     data = _parse(raw.text, req.output)
                 except (ValidationError, ValueError) as e:
                     verr = e
                     status, err = "invalid", f"{type(e).__name__}: {str(e)[:800]}"
+            if data is not None and isinstance(data, BaseModel):
+                viol = script_violations(data.model_dump())
+                if viol:
+                    letters = "".join(dict.fromkeys("".join(b for _, b in viol)))
+                    if script_retry_left and not fake_mode():
+                        script_retry_left = False
+                        status, err = "invalid", f"non_latin_script: {letters} in {', '.join(p for p, _ in viol[:5])}"
+                        verr = ValueError(err)
+                        data = None
+                    else:
+                        cleaned, n_drop, top_left = drop_script_violations(data.model_dump())
+                        if top_left:
+                            status, err, data = "invalid", f"non_latin_script after retry: {letters}", None
+                            verr = ValueError(err)
+                        else:
+                            data = req.output.model_validate(cleaned)
+                            script_note = f"dropped {n_drop} item(s) with non-Latin letters: {letters}"
             cost = 0.0
             if raw and not raw.replayed:
                 cost = raw.cost_usd if raw.cost_usd is not None else calllog.cost_usd(
@@ -304,7 +323,7 @@ async def run(req: LLMRequest) -> LLMResult:
                 "model": t.model, "alias": t.alias, "data_location": t.provider.data_location, "sensitivity": sens,
                 "request_hash": ph, "tokens_in": raw.tokens_in if raw else None, "tokens_out": raw.tokens_out if raw else None,
                 "tokens_cached": raw.tokens_cached if raw else None, "tokens_thought": raw.tokens_thought if raw else None,
-                "cost_usd": cost, "latency_ms": latency, "status": status, "error": err,
+                "cost_usd": cost, "latency_ms": latency, "status": status, "error": err or script_note,
                 "request": {"system_sha": hashlib.sha256(system.encode()).hexdigest()[:16],
                             "parts": rendered if sens == "public" else f"[poufne, {len(rendered)} znaków]",
                             "pdf_docs": [str(p.doc_id) for p in parts if isinstance(p, PdfFile)]},
@@ -318,6 +337,11 @@ async def run(req: LLMRequest) -> LLMResult:
                                  tokens_thought=raw.tokens_thought, cost_usd=cost, latency_ms=latency, attempts=attempt,
                                  fallback_from=t.fallback_from, replayed=raw.replayed, sensitivity=sens)
             if status == "invalid":
+                if err and err.startswith("non_latin_script:") and not fake_mode():
+                    extra_user = ((req.extra_user + "\n") if req.extra_user else "") + (
+                        "Poprzednia odpowiedź zawierała litery spoza alfabetu łacińskiego (" + err.split(":", 1)[1][:200] +
+                        "). Pisz wyłącznie po polsku, alfabetem łacińskim z polskimi znakami. Zwróć całą odpowiedź ponownie.")
+                    continue
                 if repairs_left > 0 and not fake_mode():
                     repairs_left -= 1
                     extra_user = ((req.extra_user + "\n") if req.extra_user else "") + (

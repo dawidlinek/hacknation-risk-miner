@@ -1,5 +1,5 @@
 import { type SankeyLink, type SankeyNode, sankey, sankeyLinkHorizontal } from 'd3-sankey'
-import { useMemo } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import type { EvidenceFlow as FlowData, FlowNode } from '@/api/contracts/graph'
 import { cn } from '@/lib/cn'
 import { bandColor, CSS_COLOR, feedsOf, flowOpacity, linkStage, nodeMap, spreadLabels } from './logic'
@@ -7,10 +7,19 @@ import { bandColor, CSS_COLOR, feedsOf, flowOpacity, linkStage, nodeMap, spreadL
 type N = FlowNode & SankeyNode<FlowNode, object>
 type L = SankeyLink<FlowNode, object> & { stage: 1 | 2 }
 
-const W = 1200
 const H = 640
-const COLX = [210, 590, 970]
 const NODE_W = 12
+const MIN_W = 520
+const DEFAULT_W = 1000
+
+/** Column geometry in pixels for a container of width `w`: label gutters left (sources) and right (conclusions). */
+function geometry(w: number) {
+  const left = Math.min(210, Math.max(120, w * 0.18))
+  const right = Math.min(240, Math.max(150, w * 0.24))
+  const x0 = left
+  const x2 = w - right - NODE_W
+  return { x: [x0, (x0 + x2) / 2, x2] as const, left, right }
+}
 
 const NODE_FILL = (n: FlowNode) => {
   if (n.column === 1) return 'var(--ink)'
@@ -33,6 +42,21 @@ export function EvidenceFlow({
   selected: string | null
   onSelect: (id: string | null) => void
 }) {
+  const ref = useRef<HTMLDivElement>(null)
+  const [width, setWidth] = useState(DEFAULT_W)
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const measure = () => setWidth(Math.max(MIN_W, Math.round(el.clientWidth)))
+    measure()
+    const ro = new ResizeObserver(measure)
+    ro.observe(el)
+    return () => ro.disconnect()
+  }, [])
+  const W = width
+  const geo = useMemo(() => geometry(W), [W])
+  const COLX = geo.x
+
   const layout = useMemo(() => {
     const gen = sankey<FlowNode, object>()
       .nodeId((d) => d.id)
@@ -50,7 +74,7 @@ export function EvidenceFlow({
       links: flow.links.map((l) => ({ ...l })),
     })
     return g as unknown as { nodes: N[]; links: L[] }
-  }, [flow])
+  }, [flow, COLX])
 
   const nodes = useMemo(() => nodeMap(flow), [flow])
   const feeds = useMemo(() => feedsOf(flow.links, selected), [flow.links, selected])
@@ -72,22 +96,21 @@ export function EvidenceFlow({
   }, [layout])
 
   return (
-    <div className="relative w-full" style={{ minWidth: 1000, height: H }}>
+    <div ref={ref} className="relative w-full" style={{ height: H }}>
       <div className="t-eyebrow absolute top-0 left-0 w-full text-muted" aria-hidden>
-        <span className="absolute" style={{ right: `${((W - COLX[0]) / W) * 100 + 1}%`, textAlign: 'right' }}>
+        <span className="absolute" style={{ right: W - COLX[0] + 8, textAlign: 'right' }}>
           Źródła
         </span>
-        <span className="absolute" style={{ left: `${((COLX[1] + 20) / W) * 100}%` }}>
+        <span className="absolute" style={{ left: COLX[1] + 20 }}>
           Fakty w bazie
         </span>
-        <span className="absolute" style={{ left: `${((COLX[2] + 20) / W) * 100}%` }}>
+        <span className="absolute" style={{ left: COLX[2] + 20 }}>
           Wnioski
         </span>
       </div>
       <svg
-        width="100%"
+        width={W}
         height={H}
-        preserveAspectRatio="none"
         viewBox={`0 0 ${W} ${H}`}
         role="img"
         aria-label="Przepływ od źródeł przez fakty w bazie do wniosków"
@@ -139,15 +162,15 @@ export function EvidenceFlow({
         const pos =
           n.column === 0
             ? {
-                right: `${((W - (n.x0 ?? 0)) / W) * 100 + 0.6}%`,
+                right: W - (n.x0 ?? 0) + 6,
                 alignItems: 'flex-end' as const,
                 textAlign: 'right' as const,
-                maxWidth: 190,
+                maxWidth: geo.left - 14,
               }
             : {
-                left: `${(((n.x1 ?? 0) + 8) / W) * 100}%`,
+                left: (n.x1 ?? 0) + 8,
                 alignItems: 'flex-start' as const,
-                maxWidth: n.column === 2 ? 220 : 200,
+                maxWidth: n.column === 2 ? geo.right - 20 : Math.min(200, (COLX[2] - COLX[0]) / 2 - 24),
               }
         const body = (
           <>

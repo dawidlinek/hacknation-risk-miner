@@ -11,7 +11,6 @@ import { Button } from '@/components/ui/button'
 import { Checkbox } from '@/components/ui/checkbox'
 import { cn } from '@/lib/cn'
 import { fmtInt } from '@/lib/format'
-import { AnalysisHeader } from './AnalysisHeader'
 import { askAnalysis, simulationQuery } from './api'
 import { ScenarioLines } from './ScenarioLines'
 import {
@@ -40,7 +39,6 @@ export function SimulationScreen(props: SimulationScreenProps) {
   const { data } = useSuspenseQuery(simulationQuery(props.id))
   return (
     <div className="flex flex-col gap-7">
-      <AnalysisHeader id={props.id} title="Symulacja: co jeśli" />
       <SimulationBody sim={data} {...props} />
     </div>
   )
@@ -81,10 +79,7 @@ export function SimulationBody({
             sentence={summarySentence(sim, metric, checked)}
             provenance={`obliczenie, ${fmtInt(sim.runs)} losowań, n = ${fmtInt(sim.n)}, szablon (bez AI)`}
           />
-          <section
-            aria-labelledby="sim-chart"
-            className="flex flex-col gap-4 rounded-panel border border-divider p-5"
-          >
+          <section aria-labelledby="sim-chart" className="flex flex-col gap-4 rounded-panel bg-soft p-5">
             <div className="flex flex-wrap items-center justify-between gap-3">
               <h2 id="sim-chart" className="t-h3 m-0">
                 {m.title}
@@ -143,7 +138,7 @@ export function metricBasis(metric: Metric, nMetric: number, nClass: number): st
 
 function MetricSwitch({ metric, onMetric }: { metric: Metric; onMetric: (m: Metric) => void }) {
   return (
-    <div role="tablist" aria-label="Co pokazać" className="flex gap-1 rounded-pill bg-soft p-1">
+    <div role="tablist" aria-label="Co pokazać" className="flex gap-1 rounded-pill bg-surface p-1">
       {(['time', 'cost', 'comp'] as Metric[]).map((k) => (
         <button
           key={k}
@@ -174,7 +169,7 @@ export function KpiRow({ items }: { items: Kpi[] }) {
   return (
     <div className="grid grid-cols-2 gap-2 sm:grid-cols-4" data-testid="kpi-row">
       {items.map((k) => (
-        <div key={k.label} className="flex flex-col gap-1 rounded-item bg-soft px-3.5 py-3">
+        <div key={k.label} className="flex flex-col gap-1 rounded-item bg-surface px-3.5 py-3">
           <span className="t-caption text-text-body-muted">{k.label}</span>
           <span className="flex flex-wrap items-baseline gap-2">
             <span className={cn('t-stat', k.attention && 'text-attention-text')}>{k.value}</span>
@@ -238,7 +233,7 @@ function ToggleRow({
   return (
     <label
       htmlFor={id}
-      className="flex cursor-pointer items-start gap-3 rounded-item border border-divider px-4 py-3 hover:bg-soft"
+      className="flex cursor-pointer items-start gap-3 rounded-item bg-surface px-4 py-3 hover:bg-soft-2"
     >
       <Checkbox id={id} checked={checked} onCheckedChange={() => onToggle(o.key)} className="mt-0.5" />
       <span
@@ -296,7 +291,10 @@ function WhatIfPanel({
     if (text.trim().length >= 3) chat.mutate(text.trim())
   }
   return (
-    <Panel aria-labelledby="sim-ask">
+    <Panel
+      aria-labelledby="sim-ask"
+      className="rounded-[22px] border border-divider bg-surface shadow-composer"
+    >
       <div className="flex items-center gap-2">
         <MessageSquare className="size-4" aria-hidden />
         <h2 id="sim-ask" className="t-h3 m-0">
@@ -304,7 +302,7 @@ function WhatIfPanel({
         </h2>
       </div>
       <div className="self-end rounded-item bg-ink px-4 py-2.5 text-on-ink t-small">{w.question}</div>
-      <div className="flex flex-col gap-2 rounded-item bg-surface px-4 py-3">
+      <div className="flex flex-col gap-2 rounded-item bg-soft px-4 py-3">
         <p className="t-small m-0">{answer}</p>
         <ProvenanceTag origin="CALC" text={w.provenance} />
         <Button
@@ -352,7 +350,7 @@ function WhatIfPanel({
       </form>
       {chat.isPending ? <p className="t-caption m-0 text-muted">Liczymy odpowiedź…</p> : null}
       {chat.data ? (
-        <div className="flex flex-col gap-1 rounded-item bg-surface px-4 py-3">
+        <div className="flex flex-col gap-1 rounded-item bg-soft px-4 py-3">
           <p className="t-small m-0">{chat.data.text}</p>
           <ProvenanceTag origin="AI" reviewStatus="proposed" label={chat.data.role_label ?? 'wniosek AI'} />
         </div>
