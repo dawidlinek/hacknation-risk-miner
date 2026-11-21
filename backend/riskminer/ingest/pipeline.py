@@ -161,6 +161,7 @@ async def quality(job_id: int | None = None) -> dict:
 async def refresh_rc(job_id: int | None = None) -> dict:
     async def fn(conn, rid):
         await conn.execute("REFRESH MATERIALIZED VIEW rc_contract")
+        await conn.execute("REFRESH MATERIALIZED VIEW procedure_national")
         return {"rc_contract": await conn.fetchval("SELECT count(*) FROM rc_contract"),
                 "dq_flagged": await conn.fetchval("SELECT count(*) FROM rc_contract WHERE NOT dq_ok")}
     return await _stage("rc_contract", "derive", {}, fn, job_id)

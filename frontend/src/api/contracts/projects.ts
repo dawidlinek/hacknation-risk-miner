@@ -123,3 +123,58 @@ export interface ProjectCard {
 }
 
 export type EnrichResult = JobOut
+
+/** National list (GET /api/projects/national): one row per BZP procedure, with its automatic card at /projekty/<ocid>. */
+export type NationalStatus = 'all' | 'completed' | 'ongoing'
+export type NationalSort = 'signed' | 'delay' | 'value'
+
+export interface NationalNum {
+  value: number | null
+  display: string
+  unit: string
+  prov: {
+    role: string
+    method?: string | null
+    n?: number | null
+    refs: { id: string; label: string; url?: string | null }[]
+  }
+}
+
+export interface NationalRow {
+  id: string
+  title: string | null
+  buyer: string | null
+  gmina: string | null
+  powiat: string | null
+  woj: string | null
+  status: 'completed' | 'ongoing' | 'none'
+  status_label: string
+  value: Money
+  signed_on: string | null
+  planned_end_on: string | null
+  actual_end_on: string | null
+  actual_end_label: string | null
+  delay_days: NationalNum
+  changes: NationalNum
+  n_contracts: number
+}
+
+export interface NationalPage {
+  total: number
+  page: number
+  page_size: number
+  as_of: string
+  items: NationalRow[]
+}
+
+export interface NationalQuery {
+  q?: string
+  woj?: string
+  status?: NationalStatus
+  year_from?: number
+  year_to?: number
+  relevance?: 'core' | 'all'
+  sort?: string
+  page?: number
+  page_size?: number
+}

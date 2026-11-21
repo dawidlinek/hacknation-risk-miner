@@ -1,7 +1,7 @@
-import { useSuspenseQuery } from '@tanstack/react-query'
+import { useQuery, useSuspenseQuery } from '@tanstack/react-query'
 import { Link } from '@tanstack/react-router'
 import { ChevronDown, Search } from 'lucide-react'
-import { useEffect, useMemo, useState } from 'react'
+import { type ReactNode, useEffect, useMemo, useState } from 'react'
 import type { ProjectFilter, ProjectRow, ProjectSortKey } from '@/api/contracts/projects'
 import { Page, PageHeader } from '@/app/Page'
 import { useSession } from '@/auth/session'
@@ -19,12 +19,24 @@ import {
 } from '@/components/ui/dropdown-menu'
 import { Input } from '@/components/ui/input'
 import { cn } from '@/lib/cn'
-import { fmtDays, fmtMoneyShort, fmtPct } from '@/lib/format'
+import { fmtDays, fmtInt, fmtMoneyShort, fmtPct } from '@/lib/format'
 import { plural } from '@/lib/plural'
-import { projectsTableQuery } from './api'
-import { costBarPct, delayBarPct, FILTER_SLUG, filterRows, SORT_KEYS, slugToFilter, sortValue } from './logic'
+import { nationalQuery, projectsTableQuery } from './api'
+import {
+  costBarPct,
+  delayBarPct,
+  FILTER_SLUG,
+  filterRows,
+  type NationalSearch,
+  SORT_KEYS,
+  slugToFilter,
+  sortValue,
+} from './logic'
+import { NationalList } from './NationalList'
 
-export interface ProjectsSearch {
+export interface ProjectsSearch extends NationalSearch {
+  /** 'polska' = national list; absent = pilot table */
+  tab?: 'polska'
   q?: string
   filtr?: string
   podsektor?: string
@@ -35,12 +47,69 @@ export interface ProjectsSearch {
 
 const PAGE_SIZE = 10
 
+const COUNT_QUERY = { page: 1, page_size: 1 }
+
 export function ProjectsScreen({
   search,
   onSearch,
 }: {
   search: ProjectsSearch
   onSearch: (patch: Partial<ProjectsSearch>) => void
+}) {
+  const { data } = useSuspenseQuery(projectsTableQuery)
+  const national = search.tab === 'polska'
+  const count = useQuery(nationalQuery(COUNT_QUERY))
+  const tabs = (
+    <div role="tablist" aria-label="Zakres listy projektów" className="flex flex-wrap gap-1.5">
+      {[
+        { id: 'pilot', label: `Pilotażowe (${data.facets.all})`, on: !national },
+        {
+          id: 'polska',
+          label: `Wszystkie w Polsce${count.data ? ` (${fmtInt(count.data.total)})` : ''}`,
+          on: national,
+        },
+      ].map((t) => (
+        <button
+          key={t.id}
+          type="button"
+          role="tab"
+          aria-selected={t.on}
+          onClick={() =>
+            !t.on &&
+            onSearch(
+              t.id === 'polska' ? { tab: 'polska', str: undefined } : { tab: undefined, str: undefined },
+            )
+          }
+          className={cn(
+            'inline-flex min-h-10 items-center rounded-pill px-4 text-[14px] font-medium',
+            t.on ? 'bg-ink text-on-ink' : 'bg-soft text-text-secondary hover:bg-soft-2 hover:text-text',
+          )}
+        >
+          {t.label}
+        </button>
+      ))}
+    </div>
+  )
+  if (national) {
+    return (
+      <Page>
+        <PageHeader title="Projekty" />
+        {tabs}
+        <NationalList search={search} onSearch={onSearch} />
+      </Page>
+    )
+  }
+  return <PilotTab search={search} onSearch={onSearch} tabs={tabs} />
+}
+
+function PilotTab({
+  search,
+  onSearch,
+  tabs,
+}: {
+  search: ProjectsSearch
+  onSearch: (patch: Partial<ProjectsSearch>) => void
+  tabs: ReactNode
 }) {
   const { data } = useSuspenseQuery(projectsTableQuery)
   const { isPublic } = useSession()
@@ -173,6 +242,8 @@ export function ProjectsScreen({
           />
         }
       />
+
+      {tabs}
 
       {data.stats.length > 0 ? (
         <div className="grid gap-3" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))' }}>

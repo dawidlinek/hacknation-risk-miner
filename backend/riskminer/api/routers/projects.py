@@ -35,6 +35,18 @@ async def projects_stats(q: str | None = None, province: str | None = None, subs
                           to_review=to_review, contractor_nip=contractor_nip, rm_ids=rm_ids)
 
 
+@router.get("/projects/national", summary="Wszystkie postępowania wod-kan w Polsce (strona po stronie, filtry, sortowanie)")
+async def projects_national(q: str | None = Query(None, max_length=120), woj: str | None = Query(None, pattern=r"^\d{2}$"),
+                            status: Literal["all", "completed", "ongoing", "none"] = "all",
+                            year_from: int | None = Query(None, ge=1990, le=2100), year_to: int | None = Query(None, ge=1990, le=2100),
+                            relevance: Literal["core", "component", "all"] = "core",
+                            sort: Literal["delay", "-delay", "delay_asc", "value", "-value", "value_asc", "signed", "-signed", "signed_asc"] = "-signed",
+                            page: int = Query(1, ge=1), page_size: int = Query(50, ge=1, le=100), db: AsyncSession = DB):
+    from riskminer.api import projects_national as PN
+    return await PN.list_national(db, q=q, woj=woj, status=status, year_from=year_from, year_to=year_to, relevance=relevance,
+                                  sort=sort, page=page, page_size=page_size)
+
+
 @router.get("/projects/{rm_id}/card", summary="Karta projektu: plan i wykonanie, zdarzenia, luki")
 async def project_card(rm_id: str, db: AsyncSession = DB, user: A.User | None = Depends(A.current_user)):
     out = await PV.card(db, rm_id, user)
