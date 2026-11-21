@@ -400,16 +400,6 @@ export function ImportScreen() {
         aside={
           <>
             <section className="flex flex-col gap-2 rounded-panel bg-soft p-5">
-              <h2 className="t-h3 m-0">Reguły, których agent nie obejdzie</h2>
-              <ul className="m-0 flex list-none flex-col gap-1.5 p-0">
-                {(session?.rules ?? DEFAULT_RULES).map((r) => (
-                  <li key={r} className="rounded-inner bg-surface px-3 py-2 text-[14px]">
-                    {r}
-                  </li>
-                ))}
-              </ul>
-            </section>
-            <section className="flex flex-col gap-2 rounded-panel bg-soft p-5">
               <h2 className="t-h3 m-0">Zapisane importery</h2>
               {(importers.data ?? []).length === 0 ? (
                 <p className="m-0 text-[14px] text-text-body-muted">
@@ -438,11 +428,3 @@ export function ImportScreen() {
     </Page>
   )
 }
-
-const DEFAULT_RULES = [
-  'Każdy NIP i REGON przechodzi sumę kontrolną.',
-  'Numery BZP, KPO i TED tylko w znanym formacie.',
-  'Kwota zawsze z rodzajem: netto albo brutto.',
-  'Ten sam plik po sha256 nie wchodzi dwa razy.',
-  'Import nigdy nie nadpisuje danych zatwierdzonych przez eksperta.',
-]

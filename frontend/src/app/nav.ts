@@ -16,7 +16,7 @@ export interface NavItem {
 // README §4: public = Monitoring, Nowa inwestycja, Projekty; logged in adds Pulpit, Przegląd, Katalog and counts.
 export const NAV: NavItem[] = [
   { label: 'Pulpit', to: '/', match: ['/'], exact: true, expertOnly: true },
-  { label: 'Monitoring', to: '/monitoring', match: ['/monitoring'], flag: 'radar', count: 'monitoring_new' },
+  { label: 'Monitoring', to: '/monitoring', match: ['/monitoring'], flag: 'radar' },
   { label: 'Nowa inwestycja', to: '/analizy/nowa', match: ['/analizy'] },
   { label: 'Projekty', to: '/projekty', match: ['/projekty'] },
   {

@@ -28,7 +28,7 @@ describe('AppHeader', () => {
       'Przegląd',
       'Katalog',
     ])
-    expect(within(nav).getByText('12')).toBeInTheDocument()
+    expect(within(nav).queryByText('12')).toBeNull() // no count next to Monitoring (user request)
     expect(within(nav).getByRole('button', { name: /Więcej/ })).toBeInTheDocument()
     expect(screen.getByRole('button', { name: /konto/i })).toBeInTheDocument()
   })
