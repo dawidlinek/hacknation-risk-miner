@@ -1,38 +1,44 @@
-// Jury path (b) on the real backend: Nowa inwestycja -> Raport -> Symulacja -> Podział ryzyk -> DOCX.
-// Public (anonymous) user, so it exercises the public mode. Creates one AN-… analysis record.
+// Jury path (b) on the real backend, public (anonymous) user:
+// 1.1 description + PFU upload -> Uruchom analizę -> 1.2 Raport -> 1.3 Czerwony długopis -> 1.4 Symulacja
+// -> 1.5 Podział ryzyk -> PDF (and DOCX) download. Creates one [e2e] AN-… analysis per run.
 // Run: npx playwright test e2e/demo-b-analysis.spec.ts --project=live
+import { existsSync } from 'node:fs'
+import { resolve } from 'node:path'
 import { expect, test } from '@playwright/test'
 import { expectNoA11yViolations } from './a11y'
+import { realBackend } from './helpers'
 
 const DESCRIPTION =
   'Budowa kanalizacji sanitarnej ok. 6 km z 3 przepompowniami w formule zaprojektuj i wybuduj, ' +
   'budżet 7 mln zł brutto, termin 14 miesięcy, finansowanie FEnIKS. [e2e]'
+// A real public PFU from the docs_22 download (local data, not in git). Without it the Red Pen step is skipped.
+const PFU = resolve(
+  import.meta.dirname,
+  '../../data/raw/docs_22/2026-11-21/RM-2026-013/files/9cdc085eedd413b1_PFU_Kaniów.pdf',
+)
 
 test.describe('demo (b): nowa inwestycja do pakietu', () => {
-  test.beforeEach(async ({ page }) => {
-    // Force the real backend even if the dev server was started with mocks on.
-    await page.addInitScript(() => {
-      try {
-        localStorage.setItem('rm.mocks', 'none')
-        localStorage.removeItem('rm.mockRole')
-      } catch {
-        /* ignore */
-      }
-    })
-  })
+  test.beforeEach(async ({ page }) => realBackend(page))
 
-  test('opis, raport, symulacja, podział ryzyk, pobranie DOCX', async ({ page }) => {
+  test('opis i PFU, raport, czerwony długopis, symulacja, podział ryzyk, PDF', async ({ page }) => {
+    test.setTimeout(240_000)
+    const withPfu = existsSync(PFU)
     await page.goto('/analizy/nowa')
     await expect(page.getByRole('heading', { level: 1, name: /Co planujesz zbudować/ })).toBeVisible()
     await expectNoA11yViolations(page, '1.1 empty')
 
     await page.getByLabel('Opis inwestycji').fill(DESCRIPTION)
-    // Draft is created ~800 ms after typing stops; chips appear from the regex/AI reading.
     await expect(page.getByText(/kanalizacja sanitarna/i).first()).toBeVisible({ timeout: 30_000 })
+    if (withPfu) {
+      // The PFU is a public tender document; confidential files need the sovereign model (503 while it is down).
+      await page.getByLabel(/Dokument jest publiczny/).check()
+      await page.getByTestId('file-drop').locator('input[type="file"]').setInputFiles(PFU)
+      await expect(page.getByRole('button', { name: /Usuń .*PFU_Kaniów/ })).toBeVisible({ timeout: 60_000 })
+    }
     await expectNoA11yViolations(page, '1.1 chips')
 
     const run = page.getByRole('button', { name: 'Uruchom analizę' })
-    await expect(run).toBeEnabled()
+    await expect(run).toBeEnabled({ timeout: 30_000 })
     await run.click()
 
     await expect(page).toHaveURL(/\/analizy\/AN-\d{4}-\d{4}$/, { timeout: 30_000 })
@@ -44,6 +50,17 @@ test.describe('demo (b): nowa inwestycja do pakietu', () => {
     await expect(page.getByTestId('funnel')).toBeAttached()
     await expectNoA11yViolations(page, '1.2 report')
 
+    if (withPfu) {
+      await page.getByRole('link', { name: 'Czerwony długopis' }).click()
+      await expect(page).toHaveURL(new RegExp(`/analizy/${code}/dokumenty/\\d+`))
+      await expect(page.getByTestId('page-text')).toBeVisible({ timeout: 60_000 })
+      const notes = page.getByRole('complementary')
+      await expect(notes.getByRole('heading', { name: 'Uwagi do dokumentów' })).toBeVisible()
+      await notes.getByRole('button').first().click({ timeout: 60_000 })
+      await expect(page.getByTestId('note-card').first()).toBeVisible()
+      await expectNoA11yViolations(page, '1.3 red pen')
+    }
+
     await page.getByRole('link', { name: 'Symulacja' }).click()
     await expect(page).toHaveURL(new RegExp(`/analizy/${code}/symulacja`))
     await expect(page.locator('svg[role="img"]').first()).toBeVisible({ timeout: 30_000 })
@@ -54,10 +71,16 @@ test.describe('demo (b): nowa inwestycja do pakietu', () => {
     await expect(page.getByText('Po stronie zamawiającego')).toBeVisible({ timeout: 30_000 })
     await expectNoA11yViolations(page, '1.5 allocation')
 
-    const [download] = await Promise.all([
-      page.waitForEvent('download', { timeout: 60_000 }),
-      page.getByRole('button', { name: 'Pobierz DOCX' }).click(),
+    const exportBox = page.getByTestId('export-buttons')
+    const [pdf] = await Promise.all([
+      page.waitForEvent('download', { timeout: 90_000 }),
+      exportBox.getByRole('button', { name: 'PDF', exact: true }).click(),
     ])
-    expect(download.suggestedFilename()).toMatch(/^AN-\d{4}-\d{4}.*\.docx$/)
+    expect(pdf.suggestedFilename()).toMatch(/^AN-\d{4}-\d{4}.*\.pdf$/)
+    const [docx] = await Promise.all([
+      page.waitForEvent('download', { timeout: 90_000 }),
+      exportBox.getByRole('button', { name: 'Pobierz DOCX' }).click(),
+    ])
+    expect(docx.suggestedFilename()).toMatch(/^AN-\d{4}-\d{4}.*\.docx$/)
   })
 })

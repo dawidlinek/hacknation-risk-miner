@@ -394,3 +394,49 @@ describe('G5 new document panel', () => {
     expect(screen.getByText(/Analizy do przeliczenia.*AN-2026-0014/)).toBeInTheDocument()
   })
 })
+
+describe('read-only account and the full chain', () => {
+  const juror = () =>
+    http.get('/api/auth/me', () =>
+      HttpResponse.json({ role: 'expert', name: 'juror', initials: 'J', read_only: true }),
+    )
+
+  it('the Juror sees the screen but cannot upload or link', async () => {
+    const steps = analysis().steps.map((s) => (s.key === 'linking' ? { ...s, state: 'pending' as const } : s))
+    server.use(
+      juror(),
+      ...base(),
+      http.get('/api/documents/:id/analysis', () =>
+        HttpResponse.json(analysis({ steps, link: null, review_items: [], project_rm_id: null })),
+      ),
+    )
+    await renderRoute('/projekty/RM-2026-002/dokumenty?dok=doc:77')
+    expect(await screen.findByRole('button', { name: 'Powiąż z projektem' })).toBeDisabled()
+    expect(screen.getByRole('button', { name: 'Wybierz plik' })).toBeDisabled()
+    expect(
+      screen.getByText('To konto jest tylko do odczytu, dodawanie dokumentów jest wyłączone.'),
+    ).toBeInTheDocument()
+  })
+
+  it('upload -> the new document opens with steps, facts, the diff and review links', async () => {
+    localStorage.setItem('rm.mockRole', 'expert')
+    server.use(
+      ...base(),
+      http.post('/api/documents/upload', () =>
+        HttpResponse.json({ document_id: 77, filename: 'zagrodno.pdf' }),
+      ),
+      http.get('/api/documents/:id/analysis', () => HttpResponse.json(analysis())),
+      http.get('/api/projects/:id/changes-since', () => HttpResponse.json(changes)),
+    )
+    const { router } = await renderRoute('/projekty/RM-2026-002/dokumenty')
+    await userEvent.upload(
+      await screen.findByLabelText('Wybierz plik z dysku'),
+      new File(['%PDF'], 'zagrodno.pdf', { type: 'application/pdf' }),
+    )
+    await waitFor(() => expect(router.state.location.search).toMatchObject({ dok: 'doc:77' }))
+    expect(await screen.findByRole('list', { name: 'Etapy przetwarzania' })).toBeInTheDocument()
+    expect(await screen.findByText(/nowy planowany koniec umowy: 05.06.2026/)).toBeInTheDocument()
+    expect(await screen.findByRole('heading', { name: 'Co się zmieniło' })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /Zmiana umowy z dokumentu/ })).toBeInTheDocument()
+  })
+})

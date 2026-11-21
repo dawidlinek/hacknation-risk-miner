@@ -46,7 +46,7 @@ function StateChip({ row, isPublic }: { row: ProjectRow; isPublic: boolean }) {
   return (
     <span
       className={cn(
-        'inline-flex min-h-6.5 items-center rounded-pill px-2.5 text-[12.5px] whitespace-nowrap',
+        'inline-flex min-h-6.5 max-w-[150px] items-center whitespace-normal rounded-pill px-2.5 py-0.5 text-[12.5px] leading-tight',
         cls,
       )}
     >
@@ -87,7 +87,7 @@ export function ProjectsScreen({
         id: 'title',
         header: 'Projekt',
         sortValue: (r) => sortValue(r, 'title'),
-        className: 'min-w-[260px] max-w-[360px] whitespace-normal',
+        className: 'min-w-[220px] max-w-[300px] whitespace-normal',
         cell: (r) => (
           <div className="flex flex-col gap-0.5">
             <Link

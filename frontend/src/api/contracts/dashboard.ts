@@ -11,7 +11,13 @@ export interface DashboardTile {
 export interface DashboardOut {
   headline: Sentence
   tiles: DashboardTile[]
-  sources: { name: string; what: string; count_label: string; when_label: string; state: 'ok' | 'not_started' | 'error' }[]
+  sources: {
+    name: string
+    what: string
+    count_label: string
+    when_label: string
+    state: 'ok' | 'not_started' | 'error'
+  }[]
   issues: { review_item_id: number; title: string; detail: string; ref: string }[]
   ask: { suggestions: AskSuggestion[]; initial: AskAnswer | null }
 }

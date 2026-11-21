@@ -5,7 +5,15 @@ import { ApiError } from '@/api/client'
 import { Button } from '@/components/ui/button'
 import { Page } from './Page'
 
-export function ErrorBox({ error, onRetry, title = 'Nie udało się wczytać danych.' }: { error: unknown; onRetry?: () => void; title?: string }) {
+export function ErrorBox({
+  error,
+  onRetry,
+  title = 'Nie udało się wczytać danych.',
+}: {
+  error: unknown
+  onRetry?: () => void
+  title?: string
+}) {
   const reqId = error instanceof ApiError ? error.requestId : null
   const detail = error instanceof ApiError ? error.detail : null
   return (

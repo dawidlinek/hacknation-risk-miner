@@ -215,3 +215,19 @@ async def test_documents_summary_polish_plural(client):
     s = (await client.get("/api/projects/RM-2026-003/documents")).json()["summary"]
     assert "dokumentów z budowy" not in s or "Brakuje 1 dokumentów" not in s
     assert "1 dokumentu" in s or "dokumentów" in s or "komplet" in s
+
+
+async def test_headline_empty_state_never_500(client, monkeypatch):
+    import riskminer.analytics.headline as H
+
+    def boom(_cb):
+        raise ZeroDivisionError("empty case base")
+    monkeypatch.setattr(H, "headline", boom)
+    r = await client.get("/api/national/headline")
+    assert r.status_code == 200
+    j = r.json()
+    assert j["empty"] is True and j["sentence"] == "" and j["completed"]["value"] is None and j["completed"]["prov"]["insufficient"] is True
+    monkeypatch.setattr(H, "headline", lambda _cb: {"completed": {"value": 0}, "sentence": "x"})
+    assert (await client.get("/api/national/headline")).json()["empty"] is True
+    ok = await client.get("/api/national/headline", params={"sector": "wod-kan"})
+    assert ok.status_code == 200

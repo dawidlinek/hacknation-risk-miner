@@ -3,10 +3,23 @@ import type { EvidenceKey, Origin, ReviewStatus } from '@/api/contracts/common'
 import { cn } from '@/lib/cn'
 import { EvidencePopover } from './EvidencePopover'
 
-export const ORIGIN_LABEL: Record<Origin, string> = { SOURCE: 'źródło', CALC: 'obliczenie', CASE: 'przypadek', AI: 'AI' }
+export const ORIGIN_LABEL: Record<Origin, string> = {
+  SOURCE: 'źródło',
+  CALC: 'obliczenie',
+  CASE: 'przypadek',
+  AI: 'AI',
+}
 
 /** Shape + colour per README pattern 3: source grey square, calc teal circle, case blue circle, AI violet square (dashed while proposed). */
-export function OriginMarker({ origin, reviewStatus, className }: { origin: Origin; reviewStatus?: ReviewStatus; className?: string }) {
+export function OriginMarker({
+  origin,
+  reviewStatus,
+  className,
+}: {
+  origin: Origin
+  reviewStatus?: ReviewStatus
+  className?: string
+}) {
   const dashed = origin === 'AI' && reviewStatus === 'proposed'
   return (
     <span
@@ -17,7 +30,10 @@ export function OriginMarker({ origin, reviewStatus, className }: { origin: Orig
         origin === 'SOURCE' && 'rounded-[2px] bg-prov-source',
         origin === 'CALC' && 'rounded-pill bg-prov-calc',
         origin === 'CASE' && 'rounded-pill bg-prov-case',
-        origin === 'AI' && (dashed ? 'rounded-[2px] border border-dashed border-prov-ai bg-transparent' : 'rounded-[2px] bg-prov-ai'),
+        origin === 'AI' &&
+          (dashed
+            ? 'rounded-[2px] border border-dashed border-prov-ai bg-transparent'
+            : 'rounded-[2px] bg-prov-ai'),
         className,
       )}
     />

@@ -82,18 +82,37 @@ async def dashboard(user: A.User = Depends(A.require_login), db: AsyncSession = 
     return {"tiles": tiles, "sources": sources, "issues": issues}
 
 
+def _empty_headline() -> dict:
+    """No completed contracts in the database (fresh or restoring): an honest empty state instead of numbers."""
+    refs = [q_ref("rc:wod-kan|core", "umowy z ogłoszeń o wykonaniu umowy (BZP)")]
+    ins = lambda unit: num_calc(None, "", unit, n=0, method="count", refs=refs).model_dump(mode="json")  # noqa: E731
+    return {"empty": True, "sentence": "", "completed": ins("count"), "late_share": ins("share"), "delay_days_total": ins("days"),
+            "overpaid": {"money": None, "prov": Prov(role="calc", review_status="auto", n=0, method="sum", refs=refs, insufficient=True).model_dump(mode="json")},
+            "ongoing_overdue_90": ins("count"), "as_of": None}
+
+
 @router.get("/national/headline", summary="Zdanie krajowe: ile umów skończyło się po terminie")
-async def national_headline(sector: str = Query("wod-kan"), db: AsyncSession = DB):
-    """Numbers come from the analytics engine (same case base as the reports, one source of truth); `ongoing_overdue_90` from the monitor view."""
-    from riskminer.analytics.base import get_casebase
-    from riskminer.analytics.headline import headline
-    h = headline(await get_casebase(db))
+async def national_headline(sector: str = Query("wod-kan", pattern="^[a-z0-9_-]{1,20}$"), db: AsyncSession = DB):
+    """Numbers come from the analytics engine (same case base as the reports, one source of truth); `ongoing_overdue_90` from the monitor view.
+    An empty database answers an empty state (`empty: true`), never a 500."""
+    try:
+        from riskminer.analytics.base import get_casebase
+        from riskminer.analytics.headline import headline
+        h = headline(await get_casebase(db))
+        if not h or not (h.get("completed") or {}).get("value"):
+            return _empty_headline()
+    except Exception:
+        return _empty_headline()
     od90 = 0
-    if (await db.execute(text("SELECT to_regclass('v_monitor_signal') IS NOT NULL"))).scalar():
-        od90 = (await db.execute(text("SELECT count(*) FROM v_monitor_signal WHERE days_overdue > 90"))).scalar() or 0
+    try:
+        if (await db.execute(text("SELECT to_regclass('v_monitor_signal') IS NOT NULL"))).scalar():
+            od90 = (await db.execute(text("SELECT count(*) FROM v_monitor_signal WHERE days_overdue > 90"))).scalar() or 0
+    except Exception:
+        od90 = 0
     h["ongoing_overdue_90"] = num_calc(od90, fmt_num(od90), "count", n=max(od90, 10), method="count(days_overdue > 90)",
                                        refs=[q_ref("v_monitor_signal", "umowy bez ogłoszenia o wykonaniu po terminie")]).model_dump(mode="json")
     h["as_of"] = str(h.get("data_as_of") or "")[:10] or None
+    h["empty"] = False
     return h
 
 

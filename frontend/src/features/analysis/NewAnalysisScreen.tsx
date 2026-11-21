@@ -13,7 +13,7 @@ import {
   useState,
 } from 'react'
 import { toast } from 'sonner'
-import { ApiError } from '@/api/client'
+import { ApiError, contractFetch } from '@/api/client'
 import type { FollowUp, UploadedDocument } from '@/api/contracts/analyses'
 import { Page, PageHeader } from '@/app/Page'
 import { OriginMarker } from '@/components/common/ProvenanceTag'
@@ -43,6 +43,13 @@ const onEnter = (fn: () => void) => (e: ReactKeyboardEvent<HTMLElement>) => {
     e.preventDefault()
     fn()
   }
+}
+
+/** National count for the lead sentence (API value only; the sentence works without it). */
+const headlineQuery = {
+  queryKey: ['analytics', 'headline'] as const,
+  queryFn: () => contractFetch<{ completed?: { value: number; display: string } }>('/api/analytics/headline'),
+  staleTime: 30 * 60_000,
 }
 
 const JellySite = lazy(() => import('../jelly/JellySite').then((m) => ({ default: m.JellySite })))
@@ -181,6 +188,7 @@ export function NewAnalysisScreen({ fromId }: { fromId?: string }) {
   const d = draft.data
   const status = d ? aiStatusLine(d) : null
   const jelly = useFeature('jelly')
+  const headline = useQuery(headlineQuery)
   return (
     <Page>
       {jelly ? (
@@ -191,7 +199,11 @@ export function NewAnalysisScreen({ fromId }: { fromId?: string }) {
       <PageHeader
         title="Co planujesz zbudować?"
         breadcrumb={fromId ? `Edycja założeń ${fromId}` : undefined}
-        lead="Opisz inwestycję własnymi słowami albo dołącz PFU lub projekt umowy. Porównamy ją z wykonanymi umowami wod-kan z BZP."
+        lead={
+          headline.data?.completed?.value
+            ? `Opisz inwestycję albo wrzuć PFU. Sprawdzimy, jak kończyło się ${headline.data.completed.display} wykonanych umów wod-kan w Polsce.`
+            : 'Opisz inwestycję albo wrzuć PFU. Sprawdzimy, jak kończyły się wykonane umowy wod-kan w Polsce.'
+        }
       />
       <form
         className="flex flex-col gap-4"
@@ -251,7 +263,8 @@ export function NewAnalysisScreen({ fromId }: { fromId?: string }) {
         {id ? (
           <section aria-labelledby="chips" className="flex flex-col gap-3 rounded-panel bg-soft p-5">
             <h2 id="chips" className="t-h3 m-0">
-              Rozumiemy to tak
+              Rozumiemy to tak{' '}
+              <span className="t-caption font-normal text-muted">kliknij, żeby poprawić</span>
             </h2>
             {status ? (
               <p
@@ -301,7 +314,7 @@ function FileDrop({ onFiles }: { onFiles: (f: FileList | File[]) => void }) {
     if (e.dataTransfer.files.length) onFiles(e.dataTransfer.files)
   }
   return (
-    // biome-ignore lint/a11y/noStaticElementInteractions: drop target only; the "Wybierz pliki" button is the keyboard path
+    // biome-ignore lint/a11y/noStaticElementInteractions: drop target only; the "Dodaj dokument" button is the keyboard path
     <div
       onDragOver={(e) => {
         e.preventDefault()
@@ -329,7 +342,7 @@ function FileDrop({ onFiles }: { onFiles: (f: FileList | File[]) => void }) {
       />
       <Button type="button" variant="outline" onClick={() => input.current?.click()}>
         <Upload aria-hidden />
-        Wybierz pliki
+        Dodaj dokument
       </Button>
     </div>
   )

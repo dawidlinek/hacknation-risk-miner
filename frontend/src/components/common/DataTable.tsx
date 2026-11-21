@@ -78,11 +78,16 @@ export function DataTable<T>({
       })),
     [columns],
   )
+  // stable state objects: a fresh array or object on every render makes TanStack recompute and re-render in a loop
+  const sorting = useMemo(() => [{ id: sort.id, desc: sort.desc }], [sort.id, sort.desc])
+  const pagination = useMemo(() => ({ pageIndex, pageSize }), [pageIndex, pageSize])
   const table = useReactTable({
     data,
     columns: defs,
     getRowId,
-    state: { sorting: [sort], pagination: { pageIndex, pageSize } },
+    state: { sorting, pagination },
+    // the route owns paging: never let the table reset the page on its own (that re-renders endlessly with controlled state)
+    autoResetPageIndex: false,
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(),
     getPaginationRowModel: getPaginationRowModel(),

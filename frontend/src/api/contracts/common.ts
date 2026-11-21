@@ -7,7 +7,11 @@ export interface Money {
 }
 export type Origin = 'SOURCE' | 'CALC' | 'AI' | 'CASE'
 export type ReviewStatus = 'auto' | 'proposed' | 'approved' | 'edited' | 'rejected'
-export type EvidenceState = 'nie_ma_w_paczce' | 'dokument_nie_wspomina' | 'brak_potwierdzenia' | 'potwierdzono_brak'
+export type EvidenceState =
+  | 'nie_ma_w_paczce'
+  | 'dokument_nie_wspomina'
+  | 'brak_potwierdzenia'
+  | 'potwierdzono_brak'
 export const EVIDENCE_STATE_LABEL: Record<EvidenceState, string> = {
   nie_ma_w_paczce: 'nie ma w paczce',
   dokument_nie_wspomina: 'dokument nie wspomina',

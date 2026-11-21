@@ -73,6 +73,9 @@ def main(argv: list[str] | None = None) -> int:
     od.add_argument("document_id", type=int)
     od.add_argument("--no-extract", action="store_true")
     sub.add_parser("ocr-pending", help="queue document_ocr for uploaded scans still marked needs_ocr")
+    dc = sub.add_parser("demo-cleanup", help="remove e2e/test uploads and [e2e] analyses (dry run unless --apply)")
+    dc.add_argument("--apply", action="store_true")
+    dc.add_argument("--include-raw-named", action="store_true", help="also uploads named like <16 hex>_file (script copies)")
     sub.add_parser("worker")
     eq = sub.add_parser("enqueue")
     eq.add_argument("kind")
@@ -134,6 +137,14 @@ def main(argv: list[str] | None = None) -> int:
     elif a.cmd == "ocr-doc":
         from riskminer.ingest import ocr_doc
         res = asyncio.run(ocr_doc.ocr_document(a.document_id, actor="cli", extract=not a.no_extract))
+    elif a.cmd == "demo-cleanup":
+        from riskminer.db.session import raw_conn
+        from riskminer.ingest import demo_cleanup
+
+        async def _dc():
+            async with raw_conn() as conn:
+                return await demo_cleanup.run(conn, apply=a.apply, include_raw_named=a.include_raw_named, actor="cli")
+        res = asyncio.run(_dc())
     elif a.cmd == "ocr-pending":
         from riskminer.ingest import ocr_doc
         res = asyncio.run(ocr_doc.enqueue_pending())

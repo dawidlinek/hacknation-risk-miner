@@ -63,7 +63,12 @@ export const $api = createQueryClient(http)
  */
 export async function contractFetch<T>(
   path: string,
-  init: Omit<RequestInit, 'body'> & { method?: string; json?: unknown; body?: BodyInit; query?: Record<string, unknown> } = {},
+  init: Omit<RequestInit, 'body'> & {
+    method?: string
+    json?: unknown
+    body?: BodyInit
+    query?: Record<string, unknown>
+  } = {},
 ): Promise<T> {
   const { json, query, method = 'GET', ...rest } = init
   let url = `${env.apiBase}${path}`

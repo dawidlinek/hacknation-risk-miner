@@ -67,6 +67,8 @@ def compose(cb: CaseBase, cat: dict, ft: RC.Features, *, code: str, version: int
     in_pack = in_pack or set()
     today = analysis_date or date.today()
     items: list[dict] = []
+    if cb.n == 0:
+        return _empty_report(cb, cat, ft, code, version, seed, documents), []
 
     rc = RC.build(cb, ft)
     ref = q_ref(rc)
@@ -359,6 +361,32 @@ def compose(cb: CaseBase, cat: dict, ft: RC.Features, *, code: str, version: int
         "features_used": {k: v for k, v in ft.as_dict().items() if k != "text"},
     }
     return report, items
+
+
+def _empty_report(cb: CaseBase, cat: dict, ft: RC.Features, code: str, version: int, seed: int,
+                  documents: list[dict]) -> dict:
+    """No completed contracts in the base (fresh install, data not loaded): a valid report that says so."""
+    msg = ("Brak danych: baza wykonanych umów jest jeszcze pusta, więc nie ma grupy porównawczej. "
+           "Uruchom wczytywanie danych i policz analizę ponownie.")
+    prov = prov_calc(0, "template:empty_base", [{"kind": "query", "id": "rc:all", "label": "brak wykonanych umów"}])
+    return {
+        "id": code, "code": code, "version": version, "status": "ready", "error": None,
+        "title": "Analiza bez grupy porównawczej", "subtitle": code,
+        "summary": {"text": msg, "provenance": "obliczenie, n = 0", "sentence": msg, "prov": prov},
+        "questions": [_q_unknown("time", T.q_time(ft.plan_days / DAYS_PER_MONTH) if ft.plan_days else "Czy zdążysz?",
+                                 "chance", msg, "time")],
+        "flags": [], "similar_cases": [], "clauses": [],
+        "reference_class": {"label": cb.pack["base_label"], "n": 0,
+                            "funnel": [{"key": "all", "label": cb.pack["base_label"], "n": 0, "n_time": 0, "n_cost": 0,
+                                        "filter": {}, "width_pct": 6.0, "prov": prov}],
+                            "final": {"n": 0, "widened": False}, "widened": False, "widen_note": None,
+                            "reweight_note": None, "sector": cb.sector, "sector_label": cb.pack["name"],
+                            "sector_status": cb.pack["status"], "data_version": cb.data_version},
+        "limitations": [msg], "shares": {}, "cost": None, "backtest_note": None, "pending_review": 0,
+        "unverified_hidden": 0, "documents": documents, "chat": {"suggestions": []}, "data_as_of": None,
+        "data_version": cb.data_version, "catalogue_version": cat.get("version"), "seed": seed,
+        "features_used": {k: v for k, v in ft.as_dict().items() if k != "text"}, "insufficient": True,
+    }
 
 
 def _q_unknown(key: str, question: str, kind: str, why: str, metric: str) -> dict:

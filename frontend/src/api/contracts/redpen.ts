@@ -32,7 +32,14 @@ export interface RedPenNote {
 }
 export interface RedPenOut {
   status?: 'queued' | 'running' | 'done'
-  document: { id: number; filename: string; pages: number; doc_type: string; demo: boolean; file_url?: string | null }
+  document: {
+    id: number
+    filename: string
+    pages: number
+    doc_type: string
+    demo: boolean
+    file_url?: string | null
+  }
   pages: RedPenPage[]
   notes: RedPenNote[]
   counts: { found: number; missing: number }

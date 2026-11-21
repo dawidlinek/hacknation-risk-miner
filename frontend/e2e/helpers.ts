@@ -22,7 +22,10 @@ export async function loginAs(request: APIRequestContext, persona: 'juror' | 'ex
 }
 
 /** Creates and runs an analysis in this browser context (analyses are owner-only). Returns its code. */
-export async function createAnalysis(request: APIRequestContext, documentIds: number[] = []): Promise<string> {
+export async function createAnalysis(
+  request: APIRequestContext,
+  documentIds: number[] = [],
+): Promise<string> {
   const created = await request.post('/api/analyses', {
     headers: CSRF,
     data: {

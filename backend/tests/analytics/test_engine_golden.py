@@ -152,3 +152,33 @@ async def test_cause_codes_source(cb):
     has = np.array([bool(c) for c in cb["cause_codes"]])
     changed = cb["changes_count"] > 0
     assert has[changed].mean() >= 0.80             # AI codes (or keyword fallback) cover most changed contracts
+
+
+async def test_empty_base_never_crashes():
+    """Fresh install / DB not restored: every engine entry point returns an empty state, not an exception (500)."""
+    from riskminer.analysis import features as FE
+    from riskminer.analysis import report as R
+    from riskminer.analysis import simulation as SM
+    from riskminer.analytics import base as B
+    from riskminer.analytics import catalogue
+    from riskminer.analytics.backtest import backtest
+    from riskminer.analytics.competition import tenders_by_year
+    B._PACKS["_pusty"] = {**B._WODKAN_PACK, "sector": "_pusty",
+                          "base_population": {**B._WODKAN_PACK["base_population"], "sector": "_pusty"}}
+    try:
+        async with sessionmaker()() as s:
+            cb = await load_casebase(s, "_pusty")
+            cat = await catalogue.load(s)
+        assert cb.n == 0
+        h = headline(cb)
+        assert h["sentence"].startswith("Brak danych") and h["late_share"]["value"] is None
+        assert backtest(cb)["note"] is None
+        assert tenders_by_year(cb) == []
+        assert U.unit_cost(cb, "SAN", 7e6, 6) is None
+        txt = "kanalizacja sanitarna 6 km, 7 mln zł, 14 miesięcy"
+        ft = FE.to_features(FE.extract(txt), txt)
+        rep, items = R.compose(cb, cat, ft, code="AN-X", version=1, seed=1)
+        assert rep["reference_class"]["n"] == 0 and rep["summary"]["text"].startswith("Brak danych") and items == []
+        assert SM.build(cb, cat, ft, "AN-X", 1)["insufficient"] is True
+    finally:
+        B._PACKS.pop("_pusty", None)

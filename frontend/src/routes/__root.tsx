@@ -2,14 +2,17 @@ import { createRootRouteWithContext, HeadContent, Outlet, useRouterState } from 
 import { useEffect, useRef } from 'react'
 import { AppShell } from '@/app/AppShell'
 import type { RouterContext } from '@/app/router'
+import { sessionQuery } from '@/auth/session'
 import { TooltipProvider } from '@/components/ui/tooltip'
 import { brand } from '@/config/brand'
 import { featuresQuery } from '@/config/features'
-import { sessionQuery } from '@/auth/session'
 
 export const Route = createRootRouteWithContext<RouterContext>()({
   beforeLoad: async ({ context }) => {
-    await Promise.all([context.queryClient.ensureQueryData(sessionQuery), context.queryClient.ensureQueryData(featuresQuery)])
+    await Promise.all([
+      context.queryClient.ensureQueryData(sessionQuery),
+      context.queryClient.ensureQueryData(featuresQuery),
+    ])
   },
   head: () => ({ meta: [{ title: brand.name }] }),
   component: Root,
@@ -20,6 +23,7 @@ function useFocusOnNavigate() {
   const pathname = useRouterState({ select: (s) => s.location.pathname })
   const status = useRouterState({ select: (s) => s.status })
   const first = useRef(true)
+  // biome-ignore lint/correctness/useExhaustiveDependencies: re-run on every path change (focus the new page's h1)
   useEffect(() => {
     if (status !== 'idle') return
     if (first.current) {

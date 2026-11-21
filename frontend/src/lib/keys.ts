@@ -14,5 +14,6 @@ export const keys = {
   redpen: (id: string, doc: number | string) => ['analysis', id, 'redpen', String(doc)] as const,
   project: (id: string) => ['project', id] as const,
   projectCard: (id: string) => ['project', id, 'card'] as const,
-  monitoringRegions: (level: string, parent: string | null, filters: unknown) => ['monitoring', 'regions', level, parent, filters] as const,
+  monitoringRegions: (level: string, parent: string | null, filters: unknown) =>
+    ['monitoring', 'regions', level, parent, filters] as const,
 }

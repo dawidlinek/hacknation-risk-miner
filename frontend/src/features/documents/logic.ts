@@ -19,3 +19,5 @@ export function validateUpload(file: { name: string; size: number }): string | n
   if (!/\.(pdf|docx?|odt|zip)$/i.test(file.name)) return 'Obsługujemy pliki PDF, DOCX i ZIP.'
   return null
 }
+
+export const READ_ONLY_REASON = 'To konto jest tylko do odczytu, dodawanie dokumentów jest wyłączone.'

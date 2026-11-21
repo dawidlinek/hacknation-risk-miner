@@ -28,7 +28,12 @@ export function DataState<T>({
 
 export function SkeletonLines({ lines = 3, className }: { lines?: number; className?: string }) {
   return (
-    <div className={cn('flex flex-col gap-2', className)} aria-busy="true" aria-label="Wczytywanie">
+    <div
+      className={cn('flex flex-col gap-2', className)}
+      role="status"
+      aria-busy="true"
+      aria-label="Wczytywanie"
+    >
       {Array.from({ length: lines }, (_, i) => (
         <Skeleton key={i} className="h-4 rounded-chip bg-soft-2" style={{ width: `${90 - i * 15}%` }} />
       ))}
@@ -41,14 +46,19 @@ export function SkeletonBlock({ className }: { className?: string }) {
 }
 
 export function EmptyState({ children, className }: { children: ReactNode; className?: string }) {
-  return <div className={cn('rounded-item bg-soft px-4 py-3 text-[14px] text-text-body-muted', className)}>{children}</div>
+  return (
+    <div className={cn('rounded-item bg-soft px-4 py-3 text-[14px] text-text-body-muted', className)}>
+      {children}
+    </div>
+  )
 }
 
 /** "za mało danych (n = 7)" */
 export function Insufficient({ n, className }: { n: number | null | undefined; className?: string }) {
   return (
     <span className={cn('text-text-secondary', className)}>
-      za mało danych{n !== null && n !== undefined ? <span className="t-mono text-muted"> ({fmtN(n)})</span> : null}
+      za mało danych
+      {n !== null && n !== undefined ? <span className="t-mono text-muted"> ({fmtN(n)})</span> : null}
     </span>
   )
 }

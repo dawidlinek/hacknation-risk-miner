@@ -23,11 +23,24 @@ test.describe('demo (a): od projektu do dowodu', () => {
     await expect(page.getByRole('heading', { level: 1, name: 'Projekty' })).toBeVisible()
     await expectNoA11yViolations(page, '2.2')
 
-    // dispatchEvent: with the cached Chromium 1243 a real click here never gets its input ack (the sort itself works).
-    await page.getByRole('button', { name: 'Opóźnienie' }).dispatchEvent('click')
-    await expect(page.getByRole('columnheader', { name: /Opóźnienie/ })).toHaveAttribute('aria-sort', /ascending|descending/)
+    // Sorting: after an in-page sort, real pointer input stops being acknowledged in headless Chromium 1243
+    // (reported to F2). The sort is checked with dispatched clicks, then the sorted URL is loaded fresh.
+    const delayHeader = page.getByRole('columnheader', { name: /Opóźnienie/ })
+    const sortBtn = page.getByRole('button', { name: 'Opóźnienie' })
+    const first = await delayHeader.getAttribute('aria-sort')
+    await sortBtn.dispatchEvent('click')
+    await expect(delayHeader).not.toHaveAttribute('aria-sort', first ?? 'none')
+    await expect(delayHeader).toHaveAttribute('aria-sort', /ascending|descending/)
+    await page.goto('/projekty?sort=delay&kier=desc')
+    await expect(page.getByRole('columnheader', { name: /Opóźnienie/ })).toHaveAttribute(
+      'aria-sort',
+      'descending',
+    )
 
-    await page.getByRole('link', { name: /Steklin/ }).first().click()
+    await page
+      .getByRole('link', { name: /Steklin/ })
+      .first()
+      .click()
     await expect(page.getByText('277 dni', { exact: false }).first()).toBeVisible()
     await expect(page.getByRole('heading', { name: 'Przebieg' })).toBeVisible()
     await expectNoA11yViolations(page, '2.3 pilot')
@@ -72,7 +85,10 @@ test.describe('demo (a): od projektu do dowodu', () => {
   test('Monitoring: mapa, województwo, powiat', async ({ page }) => {
     await page.goto('/monitoring')
     await expect(page.getByRole('heading', { name: /Województwa/ })).toBeVisible()
-    await page.getByRole('link', { name: /małopolskie/ }).first().click()
+    await page
+      .getByRole('link', { name: /małopolskie/ })
+      .first()
+      .click()
     await expect(page.getByRole('heading', { name: 'małopolskie' })).toBeVisible()
     await expect(page.getByText('SYGNAŁY TERAZ')).toBeVisible()
   })

@@ -15,7 +15,15 @@ export interface PillTab {
 }
 
 /** Route tabs as links with aria-current; flagged tabs are hidden when their flag is off. */
-export function PillTabs({ tabs, label = 'Sekcje', className }: { tabs: PillTab[]; label?: string; className?: string }) {
+export function PillTabs({
+  tabs,
+  label = 'Sekcje',
+  className,
+}: {
+  tabs: PillTab[]
+  label?: string
+  className?: string
+}) {
   const pathname = useRouterState({ select: (s) => s.location.pathname })
   const f = useFeatures()
   const visible = tabs.filter((t) => !t.flag || f[t.flag])
@@ -23,7 +31,9 @@ export function PillTabs({ tabs, label = 'Sekcje', className }: { tabs: PillTab[
     <nav aria-label={label} className={cn('flex flex-wrap gap-1.5', className)}>
       {visible.map((t) => {
         const prefixes = [t.href, ...(t.match ?? [])]
-        const active = t.exact ? pathname === t.href || pathname === `${t.href}/` : prefixes.some((p) => pathname === p || pathname.startsWith(`${p}/`))
+        const active = t.exact
+          ? pathname === t.href || pathname === `${t.href}/`
+          : prefixes.some((p) => pathname === p || pathname.startsWith(`${p}/`))
         return (
           <Link
             key={t.href}

@@ -8,7 +8,11 @@ import { routeTree } from '@/routeTree.gen'
 export async function renderRoute(path: string) {
   const queryClient = makeQueryClient()
   queryClient.setDefaultOptions({ queries: { retry: false, staleTime: Number.POSITIVE_INFINITY } })
-  const router = createRouter({ routeTree, context: { queryClient }, history: createMemoryHistory({ initialEntries: [path] }) })
+  const router = createRouter({
+    routeTree,
+    context: { queryClient },
+    history: createMemoryHistory({ initialEntries: [path] }),
+  })
   const utils = render(
     <QueryClientProvider client={queryClient}>
       <RouterProvider router={router} />

@@ -5,10 +5,13 @@ import { askAnalysis } from '@/features/ask/api'
 import { ChatPanel } from '@/features/ask/ChatPanel'
 import { reportQuery } from '@/features/report/api'
 import { ReportScreen } from '@/features/report/ReportScreen'
+import { ReportSkeleton, SectionError } from '@/features/report/Skeletons'
 
 export const Route = createFileRoute('/analizy/$id/')({
   loader: ({ context, params }) => context.queryClient.ensureQueryData(reportQuery(params.id)),
   head: ({ params }) => ({ meta: [{ title: pageTitle(`Raport ${params.id}`) }] }),
+  errorComponent: SectionError,
+  pendingComponent: ReportSkeleton,
   component: ReportRoute,
 })
 

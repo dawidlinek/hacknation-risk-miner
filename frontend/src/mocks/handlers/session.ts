@@ -22,14 +22,19 @@ function setRole(r: Role) {
   }
 }
 const sessionFor = (r: Role): Session =>
-  r === 'public' ? { role: 'public', name: null, initials: null } : { role: r, name: r === 'admin' ? 'Administrator' : 'Ekspert', initials: r === 'admin' ? 'A' : 'E' }
+  r === 'public'
+    ? { role: 'public', name: null, initials: null }
+    : { role: r, name: r === 'admin' ? 'Administrator' : 'Ekspert', initials: r === 'admin' ? 'A' : 'E' }
 
 export const handlers = [
   s.get('/api/auth/me', () => HttpResponse.json(sessionFor(role()))),
   s.post('/api/auth/login', async ({ request }) => {
     const body = (await request.json()) as { username?: string; password?: string }
     if (!body.username || !body.password || body.password.length < 3) {
-      return HttpResponse.json({ detail: 'Nieprawidłowy login lub hasło.', code: 'bad_credentials' }, { status: 401 })
+      return HttpResponse.json(
+        { detail: 'Nieprawidłowy login lub hasło.', code: 'bad_credentials' },
+        { status: 401 },
+      )
     }
     const r: Role = body.username === 'admin' ? 'admin' : 'expert'
     setRole(r)

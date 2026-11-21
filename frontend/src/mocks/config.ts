@@ -29,7 +29,12 @@ function parse(raw: string | null | undefined): Set<MockGroup> {
   const v = (raw ?? '').trim()
   if (v === 'all') return new Set(MOCK_GROUPS)
   if (v === '' || v === 'none') return new Set()
-  return new Set(v.split(',').map((s) => s.trim()).filter((s): s is MockGroup => (MOCK_GROUPS as readonly string[]).includes(s)))
+  return new Set(
+    v
+      .split(',')
+      .map((s) => s.trim())
+      .filter((s): s is MockGroup => (MOCK_GROUPS as readonly string[]).includes(s)),
+  )
 }
 
 function resolve(): Set<MockGroup> {
@@ -58,7 +63,10 @@ export const anyMocked = () => active.size > 0
 export function setMockedGroups(groups: MockGroup[]) {
   active = new Set(groups)
   try {
-    localStorage.setItem('rm.mocks', groups.length === MOCK_GROUPS.length ? 'all' : groups.length ? groups.join(',') : 'none')
+    localStorage.setItem(
+      'rm.mocks',
+      groups.length === MOCK_GROUPS.length ? 'all' : groups.length ? groups.join(',') : 'none',
+    )
   } catch {
     /* ignore */
   }

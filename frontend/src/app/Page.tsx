@@ -3,11 +3,24 @@ import { cn } from '@/lib/cn'
 
 /** max-width 1240, gutter 24, top 36, bottom 72 (README §5). */
 export function Page({ className, ...p }: ComponentProps<'div'>) {
-  return <div className={cn('mx-auto flex w-full max-w-[1240px] flex-col gap-7 px-6 pt-9 pb-18', className)} {...p} />
+  return (
+    <div
+      className={cn('mx-auto flex w-full max-w-[1240px] flex-col gap-7 px-6 pt-9 pb-18', className)}
+      {...p}
+    />
+  )
 }
 
 /** main (flex 999 1 560px) + aside (flex 1 1 360px), gap 36, stacks on phones. */
-export function TwoCol({ main, aside, className }: { main: ReactNode; aside: ReactNode; className?: string }) {
+export function TwoCol({
+  main,
+  aside,
+  className,
+}: {
+  main: ReactNode
+  aside: ReactNode
+  className?: string
+}) {
   return (
     <div className={cn('flex flex-wrap items-start gap-9', className)}>
       <div className="flex min-w-0 flex-[999_1_560px] flex-col gap-7">{main}</div>
@@ -28,7 +41,12 @@ export function Item({ className, ...p }: ComponentProps<'div'>) {
 
 /** Bordered panel (no fill), radius 28. */
 export function OutlinePanel({ className, ...p }: ComponentProps<'section'>) {
-  return <section className={cn('flex flex-col gap-1 rounded-panel border border-divider px-5.5 py-5', className)} {...p} />
+  return (
+    <section
+      className={cn('flex flex-col gap-1 rounded-panel border border-divider px-5.5 py-5', className)}
+      {...p}
+    />
+  )
 }
 
 export function PageHeader({
@@ -67,7 +85,15 @@ export function PageHeader({
   )
 }
 
-export function SectionTitle({ children, id, aside }: { children: ReactNode; id?: string; aside?: ReactNode }) {
+export function SectionTitle({
+  children,
+  id,
+  aside,
+}: {
+  children: ReactNode
+  id?: string
+  aside?: ReactNode
+}) {
   return (
     <div className="flex items-baseline justify-between gap-2">
       <h2 id={id} className="t-h3 m-0">

@@ -29,14 +29,19 @@ fi
 
 echo "== copying dump"
 "${SSH[@]}" "$TARGET" "mkdir -p '$REMOTE_DIR'"
-rsync -e "ssh -o BatchMode=yes" --partial --info=progress2 "$DUMP" "$TARGET:$REMOTE_DIR/$name"
+if "${SSH[@]}" "$TARGET" "command -v rsync >/dev/null"; then
+  rsync -e "ssh -o BatchMode=yes" --partial --info=progress2 "$DUMP" "$TARGET:$REMOTE_DIR/$name"
+else
+  echo "rsync not installed on the server: copying over ssh (no resume)"
+  "${SSH[@]}" "$TARGET" "cat > '$REMOTE_DIR/$name.part' && mv '$REMOTE_DIR/$name.part' '$REMOTE_DIR/$name'" < "$DUMP"
+fi
 "${SSH[@]}" "$TARGET" "cd '$REMOTE_DIR' && sha256sum '$name'"
 
 echo "== restoring"
-"${SSH[@]}" "$TARGET" bash -s -- "$name" "$JOBS" "$PGU" "$PGD" "${DB_CONTAINER:-}" <<'REMOTE'
+"${SSH[@]}" "$TARGET" bash -s -- "$name" "$JOBS" "$PGU" "$PGD" "${DB_CONTAINER:-auto}" <<'REMOTE'
 set -euo pipefail
 name="$1"; jobs="$2"; pgu="$3"; pgd="$4"; db="$5"
-if [ -z "$db" ]; then
+if [ "$db" = "auto" ]; then
   db="$(docker ps --filter label=exante.role=db --format '{{.Names}}' | head -n1)"
 fi
 [ -n "$db" ] || { echo "db container not found (is the Coolify resource deployed?)" >&2; exit 1; }

@@ -6,7 +6,10 @@ import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover
 export function EvidencePopover({ evidence, children }: { evidence: EvidenceKey; children: ReactNode }) {
   return (
     <Popover>
-      <PopoverTrigger className="cursor-pointer rounded-chip text-left hover:underline" aria-label="Pokaż źródło">
+      <PopoverTrigger
+        className="cursor-pointer rounded-chip text-left hover:underline"
+        aria-label="Pokaż źródło"
+      >
         {children}
       </PopoverTrigger>
       <PopoverContent className="t-caption">

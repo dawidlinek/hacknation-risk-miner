@@ -8,7 +8,7 @@ import { SummaryCard } from '@/components/common/SummaryCard'
 import { AnalysisPanel } from './AnalysisPanel'
 import { documentDetail, expectedDetail, noticeDetail } from './adapt'
 import { noticeFactsQuery, projectDocumentsQuery, uploadErrorMessage, useUploadDocument } from './api'
-import { docsHeading, findSelection } from './logic'
+import { docsHeading, findSelection, READ_ONLY_REASON } from './logic'
 import { CtaLink, ExpectedDocRow, FieldTag, FileDrop, MetaList, PublicDocRow } from './parts'
 import type { DetailView, PublicItem } from './types'
 
@@ -71,7 +71,7 @@ export function DocumentsScreen({
   selected: string | null
   onSelect: (key: string | null) => void
 }) {
-  const { isPublic, isExpert } = useSession()
+  const { isPublic, isExpert, readOnly } = useSession()
   const { data: view } = useSuspenseQuery(projectDocumentsQuery(id, isPublic))
   const upload = useUploadDocument(id)
   const sel = findSelection(view, selected)
@@ -135,7 +135,13 @@ export function DocumentsScreen({
                   onPick={() => onSelect(selected === e.key ? null : e.key)}
                 />
               ))}
-              {isExpert ? <FileDrop onFile={onFile} busy={upload.isPending} /> : null}
+              {isExpert ? (
+                <FileDrop
+                  onFile={onFile}
+                  busy={upload.isPending}
+                  disabledReason={readOnly ? READ_ONLY_REASON : null}
+                />
+              ) : null}
             </section>
             <section aria-labelledby="dok-publiczne" className="flex flex-col gap-1.5">
               <SectionHead

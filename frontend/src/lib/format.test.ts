@@ -76,6 +76,13 @@ describe('format', () => {
   })
   it('plural', () => {
     const f: [string, string, string] = ['umowa', 'umowy', 'umów']
-    expect([1, 2, 5, 12, 22, 25].map((n) => plural(n, f))).toEqual(['umowa', 'umowy', 'umów', 'umów', 'umowy', 'umów'])
+    expect([1, 2, 5, 12, 22, 25].map((n) => plural(n, f))).toEqual([
+      'umowa',
+      'umowy',
+      'umów',
+      'umów',
+      'umowy',
+      'umów',
+    ])
   })
 })

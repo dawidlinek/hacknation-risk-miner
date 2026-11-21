@@ -3,6 +3,7 @@ import { z } from 'zod'
 import type { Metric } from '@/api/contracts/simulation'
 import { pageTitle } from '@/config/brand'
 import { requireFeature } from '@/config/features'
+import { SectionError, SimulationSkeleton } from '@/features/report/Skeletons'
 import { simulationQuery } from '@/features/simulation/api'
 import { SimulationScreen } from '@/features/simulation/SimulationScreen'
 import { METRIC_FROM_PARAM, PARAM_FROM_METRIC } from '@/features/simulation/scenario'
@@ -15,6 +16,8 @@ export const Route = createFileRoute('/analizy/$id/symulacja')({
   beforeLoad: ({ context }) => requireFeature(context, 'monte_carlo'),
   loader: ({ context, params }) => context.queryClient.ensureQueryData(simulationQuery(params.id)),
   head: ({ params }) => ({ meta: [{ title: pageTitle(`Symulacja ${params.id}`) }] }),
+  errorComponent: SectionError,
+  pendingComponent: SimulationSkeleton,
   component: SimulationRoute,
 })
 

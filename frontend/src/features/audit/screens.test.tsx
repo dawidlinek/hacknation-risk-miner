@@ -210,3 +210,19 @@ describe('D3 Historia', () => {
     await waitFor(() => expect(router.state.location.pathname).toBe('/zaloguj'))
   })
 })
+
+describe('read-only account', () => {
+  it('Przywróć is disabled with the reason', async () => {
+    server.use(
+      http.get('/api/auth/me', () =>
+        HttpResponse.json({ role: 'expert', name: 'juror', initials: 'J', read_only: true }),
+      ),
+      cardHandler(),
+      http.get('/api/projects/:id/history', () => HttpResponse.json(history)),
+    )
+    await renderRoute('/projekty/RM-2026-003/historia')
+    const btn = await screen.findByRole('button', { name: /Przywróć wartość/ })
+    expect(btn).toBeDisabled()
+    expect(btn).toHaveAttribute('title', 'To konto jest tylko do odczytu.')
+  })
+})

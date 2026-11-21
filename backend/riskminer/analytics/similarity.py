@@ -227,10 +227,10 @@ def score_pool(cb: CaseBase, ft: Features, weights: dict | None = None) -> Score
     if ft.subsector_main:
         u = ft.subsector_main
         x = np.where(sub == u, 1.0, 0.0)
-        sec = np.array([u in (ss or []) for ss in cb["subsectors"]]) | (np.isin(sub, ft.subsectors or []))
+        sec = np.array([u in (ss or []) for ss in cb["subsectors"]], dtype=bool) | (np.isin(sub, ft.subsectors or []))
         x = np.where((x == 0) & sec, 0.6, x)
         fu = FAMILY.get(u)
-        fam = np.array([fu is not None and FAMILY.get(v) == fu for v in sub])
+        fam = np.array([fu is not None and FAMILY.get(v) == fu for v in sub], dtype=bool)
         x = np.where((x == 0) & fam, 0.3, x)
         s["subsector_main"] = x
         us = set(ft.subsectors or []) | {u}

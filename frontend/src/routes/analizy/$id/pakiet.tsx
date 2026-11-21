@@ -3,11 +3,14 @@ import { pageTitle } from '@/config/brand'
 import { requireFeature } from '@/config/features'
 import { AllocationScreen } from '@/features/allocation/AllocationScreen'
 import { allocationQuery } from '@/features/allocation/api'
+import { AllocationSkeleton, SectionError } from '@/features/report/Skeletons'
 
 export const Route = createFileRoute('/analizy/$id/pakiet')({
   beforeLoad: ({ context }) => requireFeature(context, 'allocation'),
   loader: ({ context, params }) => context.queryClient.ensureQueryData(allocationQuery(params.id)),
   head: ({ params }) => ({ meta: [{ title: pageTitle(`Podział ryzyk ${params.id}`) }] }),
+  errorComponent: SectionError,
+  pendingComponent: AllocationSkeleton,
   component: AllocationRoute,
 })
 

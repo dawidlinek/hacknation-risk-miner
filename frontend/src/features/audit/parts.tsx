@@ -53,10 +53,12 @@ export function AuditRow({
   entry,
   variant,
   onRestore,
+  restoreDisabled,
 }: {
   entry: AuditEntry
   variant: 'project' | 'global'
   onRestore?: (e: AuditEntry) => void
+  restoreDisabled?: string
 }) {
   const t = splitTime(entry.at)
   const global = variant === 'global'
@@ -103,6 +105,8 @@ export function AuditRow({
           <Button
             variant="outline"
             size="sm"
+            disabled={!!restoreDisabled}
+            title={restoreDisabled}
             onClick={() => onRestore(entry)}
             aria-label={`Przywróć wartość sprzed zmiany ${entry.version}, ${ACTOR_NAME[entry.actor]}`}
           >
@@ -118,17 +122,25 @@ export function AuditList({
   entries,
   variant,
   onRestore,
+  restoreDisabled,
   label,
 }: {
   entries: AuditEntry[]
   variant: 'project' | 'global'
   onRestore?: (e: AuditEntry) => void
+  restoreDisabled?: string
   label: string
 }) {
   return (
     <ul aria-label={label} className="m-0 flex list-none flex-col gap-2 p-0">
       {entries.map((e) => (
-        <AuditRow key={e.id} entry={e} variant={variant} onRestore={onRestore} />
+        <AuditRow
+          key={e.id}
+          entry={e}
+          variant={variant}
+          onRestore={onRestore}
+          restoreDisabled={restoreDisabled}
+        />
       ))}
     </ul>
   )

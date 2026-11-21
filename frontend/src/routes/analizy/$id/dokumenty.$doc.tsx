@@ -6,6 +6,7 @@ import { requireFeature } from '@/config/features'
 import { redpenQuery } from '@/features/redpen/api'
 import { noteFromHash } from '@/features/redpen/logic'
 import { RedPenScreen } from '@/features/redpen/RedPenScreen'
+import { RedPenSkeleton, SectionError } from '@/features/report/Skeletons'
 
 export const Route = createFileRoute('/analizy/$id/dokumenty/$doc')({
   validateSearch: z.object({
@@ -16,6 +17,8 @@ export const Route = createFileRoute('/analizy/$id/dokumenty/$doc')({
   loader: ({ context, params }) =>
     context.queryClient.ensureQueryData(redpenQuery(params.id, Number(params.doc))),
   head: ({ params }) => ({ meta: [{ title: pageTitle(`Czerwony długopis ${params.id}`) }] }),
+  errorComponent: SectionError,
+  pendingComponent: RedPenSkeleton,
   component: RedPenRoute,
 })
 

@@ -10,8 +10,35 @@ from riskminer.analytics import templates as T
 from riskminer.analytics.base import CaseBase
 
 
+def _empty(cb: CaseBase) -> dict:
+    """Empty base (fresh install, data not loaded yet): the same keys, null values, never a 500."""
+    def none(unit: str, method: str) -> dict:
+        return {"value": None, "display": "brak danych", "unit": unit,
+                "prov": {"role": "calc", "review_status": "auto", "n": 0, "method": method, "insufficient": True,
+                         "refs": [{"kind": "query", "id": "an_contract:all", "label": "brak wykonanych umów w bazie"}]}}
+    zero = {"amount": None, "currency": "PLN", "vat_basis": "gross"}
+    return {
+        "sentence": "Brak danych: baza wykonanych umów jest jeszcze pusta. Uruchom wczytywanie danych (load-all).",
+        "completed": {**none("count", "count"), "value": 0, "display": "0"},
+        "late_share": none("share", "share(late)"), "change_share": none("share", "share(changes_count>0)"),
+        "delay_days_total": none("days", "sum(delay_days | late, time_ok)"),
+        "delay_if_late_p50": none("days", "median(delay_days | late)"),
+        "delay_if_late_p90": none("days", "p90(delay_days | late)"),
+        "cost_p90_pct": none("pct", "p90(cost_dev_pct | cost_ok)"),
+        "paid_above_share": none("share", "share(cost_dev_pct > 0,5)"),
+        "overpaid": {"money": zero, "prov": none("pln", "sum(max(paid - value, 0) | cost_ok)")["prov"]},
+        "value_sum": zero, "paid_sum": zero, "data_as_of": None, "data_version": cb.data_version,
+        "chips": {"design_build": {"late_share": None, "n": 0}, "build_only": {"late_share": None, "n": 0}},
+        "insufficient": True,
+    }
+
+
 def headline(cb: CaseBase) -> dict:
     late = cb["late"]
+    t_ok0, d0 = cb["time_ok"], cb["delay_days"]
+    if cb.n == 0 or not (late >= 0).any() or not (t_ok0 & (late == 1) & np.isfinite(d0) & (d0 > 0)).any() \
+            or not cb["cost_ok"].any():
+        return _empty(cb)
     m_late = late >= 0
     n = cb.n
     late_share = float((late[m_late] == 1).mean())
@@ -66,5 +93,5 @@ def _chips(cb: CaseBase) -> dict:
     out = {}
     for k, val in (("design_build", 1), ("build_only", 0)):
         m = (db == val) & (late >= 0)
-        out[k] = {"late_share": round(float((late[m] == 1).mean()), 4), "n": int(m.sum())}
+        out[k] = {"late_share": round(float((late[m] == 1).mean()), 4) if m.any() else None, "n": int(m.sum())}
     return out

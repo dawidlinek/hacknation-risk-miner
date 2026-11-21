@@ -23,6 +23,7 @@ import {
   VERIFY_LABEL,
 } from './analysis'
 import { changesSinceQuery, documentAnalysisQuery, uploadErrorMessage, useLinkDocument } from './api'
+import { READ_ONLY_REASON } from './logic'
 import type { ChangeLine, RealAnalysis, RealStep } from './types'
 
 function StepIcon({ state }: { state: RealStep['state'] }) {
@@ -165,7 +166,7 @@ export function ChangesSince({ rmId, documentId }: { rmId: string; documentId: n
 /** The "new document" panel: sensitivity, processing steps, extracted facts with verified quotes, "Co się zmieniło", review links. */
 export function AnalysisPanel({ documentId }: { documentId: number }) {
   const q = useQuery(documentAnalysisQuery(documentId))
-  const { isExpert } = useSession()
+  const { isExpert, readOnly } = useSession()
   const link = useLinkDocument(documentId)
   return (
     <DataState query={q}>
@@ -197,7 +198,8 @@ export function AnalysisPanel({ documentId }: { documentId: number }) {
             {extracted && !linked && isExpert ? (
               <Button
                 size="lg"
-                disabled={link.isPending}
+                disabled={link.isPending || readOnly}
+                title={readOnly ? READ_ONLY_REASON : undefined}
                 onClick={() => link.mutate(undefined, { onError: (e) => toast.error(uploadErrorMessage(e)) })}
               >
                 {link.isPending ? 'Powiązujemy…' : 'Powiąż z projektem'}

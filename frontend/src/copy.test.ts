@@ -26,8 +26,8 @@ describe('copy rules', () => {
     for (const f of [...files(join(root, 'src')), ...files(join(root, 'e2e'))]) {
       readFileSync(f, 'utf8')
         .split('\n')
-        .forEach((l, i) => {
-          if (new RegExp('[\\u2014\\u00B7]').test(l)) bad.push(`${f.slice(root.length + 1)}:${i + 1}`)
+        .forEach((l: string, i: number) => {
+          if (/[\u2014\u00B7]/.test(l)) bad.push(`${f.slice(root.length + 1)}:${i + 1}`)
         })
     }
     expect(bad).toEqual([])

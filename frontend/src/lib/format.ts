@@ -49,7 +49,10 @@ export interface MoneyLike {
   vat_basis?: 'net' | 'gross' | 'unknown' | null
 }
 
-export function fmtMoney(m: MoneyLike | null | undefined, opts: { vat?: boolean; digits?: number } = {}): string {
+export function fmtMoney(
+  m: MoneyLike | null | undefined,
+  opts: { vat?: boolean; digits?: number } = {},
+): string {
   const v = toNum(m?.amount)
   if (!m || v === null) return EMPTY
   const digits = opts.digits ?? 2
@@ -78,7 +81,10 @@ export function fmtPlnAuto(x: Num): string {
   return `${fmtInt(v)}${NBSP}zł`
 }
 
-export function fmtPct(x: Num, opts: { signed?: boolean; digits?: number; fromShare?: boolean } = {}): string {
+export function fmtPct(
+  x: Num,
+  opts: { signed?: boolean; digits?: number; fromShare?: boolean } = {},
+): string {
   let v = toNum(x)
   if (v === null) return EMPTY
   if (opts.fromShare) v *= 100

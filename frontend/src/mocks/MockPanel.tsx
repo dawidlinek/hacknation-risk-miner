@@ -59,13 +59,21 @@ export function MockPanel() {
           </div>
           <label className="mt-2 flex items-center gap-2">
             rola (mock)
-            <select value={role} onChange={(e) => setRole(e.target.value)} className="rounded border border-border px-1">
+            <select
+              value={role}
+              onChange={(e) => setRole(e.target.value)}
+              className="rounded border border-border px-1"
+            >
               <option value="public">public</option>
               <option value="expert">expert</option>
               <option value="admin">admin</option>
             </select>
           </label>
-          <button type="button" onClick={apply} className="mt-2 w-full rounded-pill bg-ink py-1.5 text-on-ink">
+          <button
+            type="button"
+            onClick={apply}
+            className="mt-2 w-full rounded-pill bg-ink py-1.5 text-on-ink"
+          >
             przeładuj
           </button>
         </div>

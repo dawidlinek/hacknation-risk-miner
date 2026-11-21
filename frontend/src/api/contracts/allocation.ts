@@ -15,7 +15,12 @@ export interface AllocationRisk {
 }
 export interface AllocationOut {
   risks: AllocationRisk[]
-  premium: { shared: number; contractor: number; shared_if_contractor_controls: number; contractor_if_contractor_controls: number }
+  premium: {
+    shared: number
+    contractor: number
+    shared_if_contractor_controls: number
+    contractor_if_contractor_controls: number
+  }
   premium_attention_tpln: number
   pack: {
     items: { key: string; title: string; note: string; included: boolean }[]

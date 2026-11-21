@@ -4,6 +4,7 @@ import { ChevronRight, Download } from 'lucide-react'
 import { toast } from 'sonner'
 import { ApiError, contractFetch } from '@/api/client'
 import { LoginRequired } from '@/auth/LoginRequired'
+import { useSession } from '@/auth/session'
 import { EmptyState, SkeletonBlock } from '@/components/common/DataState'
 import { Button } from '@/components/ui/button'
 import { fmtDate } from '@/lib/dates'
@@ -227,6 +228,7 @@ export function PlanOverdueBar({
 
 /** 4.1c: one investment. */
 export function ContractPanel({ woj, pow, id }: { woj: string; pow: string; id: string }) {
+  const { readOnly } = useSession()
   const q = useQuery(contractQuery(id))
   const wojDetail = useQuery(regionDetailQuery(woj))
   const powDetail = useQuery(regionDetailQuery(pow))
@@ -306,14 +308,26 @@ export function ContractPanel({ woj, pow, id }: { woj: string; pow: string; id: 
         </Button>
         {c.can_watch ? (
           <LoginRequired>
-            <Button variant="outline" size="lg" onClick={() => watch.mutate()} disabled={watch.isPending}>
+            <Button
+              variant="outline"
+              size="lg"
+              onClick={() => watch.mutate()}
+              disabled={watch.isPending || readOnly}
+              title={readOnly ? 'Konto tylko do odczytu' : undefined}
+            >
               Obserwuj
             </Button>
           </LoginRequired>
         ) : null}
         {c.can_report ? (
           <LoginRequired>
-            <Button variant="outline" size="lg" onClick={() => report.mutate()} disabled={report.isPending}>
+            <Button
+              variant="outline"
+              size="lg"
+              onClick={() => report.mutate()}
+              disabled={report.isPending || readOnly}
+              title={readOnly ? 'Konto tylko do odczytu' : undefined}
+            >
               Zgłoś jako przypadek
             </Button>
           </LoginRequired>

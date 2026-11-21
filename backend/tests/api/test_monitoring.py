@@ -160,15 +160,17 @@ async def test_alert_for_document_on_ongoing_contract(client, admin, expert, db)
     assert r2["alert_id"] == r["alert_id"] and r2["inserted"] is False
     late = await AL.raise_for_document(db, document_id=doc, contract_id=cid, doc_date="2026-07-01", changes=ch, kind="late_doc")
     assert late["raised"] is False and "not ongoing" in late["reason"]
-    a = (await client.get("/api/monitoring/alerts", params={"contract_id": cid})).json()
+    # scoped to this test's document: the main DB may already hold real alerts for the same contract (e.g. an upload
+    # of the organizer's Zagrodno protocol linked by B's doclink)
+    a = (await client.get("/api/monitoring/alerts", params={"contract_id": cid, "document_id": doc})).json()
     assert a["total"] == 1 and a["items"][0]["severity"] == "high" and "w realizacji" in a["items"][0]["title"]
     assert a["items"][0]["detail"]["contracts"][0]["still_open"] is False and a["items"][0]["prov"]["origin"] == "CALC"
     d = (await client.get(f"/api/monitoring/contracts/{cid}")).json()
-    assert [x["id"] for x in d["alerts"]] == [r["alert_id"]]
+    assert r["alert_id"] in [x["id"] for x in d["alerts"]]
     # a confidential document's alert is visible only to those who may read the document
     await db.execute(text("UPDATE document SET sensitivity = 'confidential' WHERE id = :d"), {"d": doc})
-    assert (await client.get("/api/monitoring/alerts", params={"contract_id": cid})).json()["total"] == 0
-    assert (await admin.get("/api/monitoring/alerts", params={"contract_id": cid})).json()["total"] == 1
+    assert (await client.get("/api/monitoring/alerts", params={"document_id": doc})).json()["total"] == 0
+    assert (await admin.get("/api/monitoring/alerts", params={"document_id": doc})).json()["total"] == 1
     # status: writer only
     s = await expert.post(f"/api/monitoring/alerts/{r['alert_id']}/status", json={"status": "seen"})
     assert s.status_code == 200 and s.json()["status"] == "seen"

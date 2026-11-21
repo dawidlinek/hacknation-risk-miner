@@ -2,6 +2,7 @@ import { useQuery, useSuspenseQuery } from '@tanstack/react-query'
 import { useState } from 'react'
 import { toast } from 'sonner'
 import type { AuditEntry } from '@/api/contracts/audit'
+import { useSession } from '@/auth/session'
 import { DataState, EmptyState } from '@/components/common/DataState'
 import { FilterPills } from '@/components/common/FilterPills'
 import { Button } from '@/components/ui/button'
@@ -74,6 +75,7 @@ export function ProjectHistoryScreen({
   const [from, setFrom] = useState<string | null>(null)
   const [target, setTarget] = useState<AuditEntry | null>(null)
   const restore = useRestore(id)
+  const { readOnly } = useSession()
   const diff = useQuery(projectDiffQuery(id, from, data.current))
   const shown = filterByWho(data.entries, who)
   const stats = historyStats(data.entries, data.current)
@@ -150,7 +152,13 @@ export function ProjectHistoryScreen({
       {shown.length === 0 ? (
         <EmptyState>Brak wpisów tego rodzaju.</EmptyState>
       ) : (
-        <AuditList entries={shown} variant="project" label="Historia zmian projektu" onRestore={setTarget} />
+        <AuditList
+          entries={shown}
+          variant="project"
+          label="Historia zmian projektu"
+          onRestore={setTarget}
+          restoreDisabled={readOnly ? 'To konto jest tylko do odczytu.' : undefined}
+        />
       )}
       <span className="text-[12px] text-muted">
         Dziennik tylko do dopisywania. Przywrócenie też jest nowym wpisem.

@@ -20,7 +20,12 @@ export function SummaryCard({
   return (
     <section className={cn('flex flex-col gap-2.5 rounded-card bg-ink px-6.5 py-6 text-on-ink', className)}>
       {eyebrow ? <span className="t-eyebrow text-on-ink-muted">{eyebrow}</span> : null}
-      <p className={cn('m-0 max-w-[900px] font-medium', size === 'lg' ? 'text-[24px] leading-[1.4] tracking-[-0.015em]' : 't-summary')}>
+      <p
+        className={cn(
+          'm-0 max-w-[900px] font-medium',
+          size === 'lg' ? 'text-[24px] leading-[1.4] tracking-[-0.015em]' : 't-summary',
+        )}
+      >
         {sentence}
       </p>
       {provenance ? <span className="t-mono text-on-ink-muted">{provenance}</span> : null}

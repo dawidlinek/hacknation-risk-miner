@@ -85,9 +85,20 @@ export function StatTile({
   )
 }
 
-export function KpiGrid({ children, min = 220, className }: { children: ReactNode; min?: number; className?: string }) {
+export function KpiGrid({
+  children,
+  min = 220,
+  className,
+}: {
+  children: ReactNode
+  min?: number
+  className?: string
+}) {
   return (
-    <div className={cn('grid gap-3', className)} style={{ gridTemplateColumns: `repeat(auto-fit, minmax(${min}px, 1fr))` }}>
+    <div
+      className={cn('grid gap-3', className)}
+      style={{ gridTemplateColumns: `repeat(auto-fit, minmax(${min}px, 1fr))` }}
+    >
       {children}
     </div>
   )

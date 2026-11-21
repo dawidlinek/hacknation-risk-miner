@@ -8,6 +8,9 @@ export async function expectNoA11yViolations(page: Page, label = '') {
     .exclude('.maplibregl-canvas')
     .analyze()
   const bad = r.violations.filter((v) => v.impact === 'serious' || v.impact === 'critical')
-  const summary = bad.map((v) => `${v.id} (${v.impact}): ${v.nodes.length}x ${v.nodes[0]?.target.join(' ')}`)
+  const summary = bad.map(
+    (v) =>
+      `${v.id} (${v.impact}): ${v.nodes.length}x ${v.nodes[0]?.target.join(' ')} ${v.nodes[0]?.html.slice(0, 200) ?? ''}`,
+  )
   expect(summary, `axe ${label}`).toEqual([])
 }

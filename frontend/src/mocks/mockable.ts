@@ -1,4 +1,12 @@
-import { type DefaultBodyType, delay, HttpResponse, type HttpResponseResolver, http, passthrough, type PathParams } from 'msw'
+import {
+  type DefaultBodyType,
+  delay,
+  HttpResponse,
+  type HttpResponseResolver,
+  http,
+  type PathParams,
+  passthrough,
+} from 'msw'
 import { isMocked, type MockGroup } from './config'
 
 type Method = 'get' | 'post' | 'put' | 'patch' | 'delete'
@@ -29,7 +37,13 @@ export function mockable(group: MockGroup, opts: { latency?: number } = {}) {
           return new HttpResponse(res.body, { status: res.status, headers })
         }
       })
-  return { get: make('get'), post: make('post'), put: make('put'), patch: make('patch'), delete: make('delete') }
+  return {
+    get: make('get'),
+    post: make('post'),
+    put: make('put'),
+    patch: make('patch'),
+    delete: make('delete'),
+  }
 }
 
-export { HttpResponse, delay }
+export { delay, HttpResponse }

@@ -50,6 +50,17 @@ def _bands(values: np.ndarray, cut: np.ndarray, test: np.ndarray, keys: np.ndarr
 def backtest(cb: CaseBase) -> dict[str, Any]:
     if cb.data_version in _CACHE:
         return _CACHE[cb.data_version]
+    try:
+        return _backtest(cb)
+    except (IndexError, ValueError, ZeroDivisionError):
+        # too little data on one side of the 2024 split (fresh install, a new sector): no note instead of a 500
+        return {"note": None, "insufficient": True, "data_version": cb.data_version,
+                "split": "completed_on < 2024-01-01 (train) / >= 2024-01-01 (test)",
+                "prov": {"role": "calc", "review_status": "auto", "n": 0, "method": "backtest_w3", "insufficient": True,
+                         "refs": [{"kind": "query", "id": "an_contract:completed_on>=2024", "label": "za mało umów"}]}}
+
+
+def _backtest(cb: CaseBase) -> dict[str, Any]:
     comp = cb["completed_on"]
     has = ~np.isnat(comp)
     cut = has & (comp < np.datetime64("2024-01-01", "D"))

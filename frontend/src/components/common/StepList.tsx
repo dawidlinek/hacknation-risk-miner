@@ -27,18 +27,43 @@ export function StepDot({ state, label }: { state: StepState; label?: ReactNode 
       </span>
     )
   else if (typeof label === 'string' || typeof label === 'number')
-    dot = <span className={cn(base, 'border-2 border-dashed border-attention text-[11px] font-semibold text-attention-text')}>{label}</span>
+    dot = (
+      <span
+        className={cn(
+          base,
+          'border-2 border-dashed border-attention text-[11px] font-semibold text-attention-text',
+        )}
+      >
+        {label}
+      </span>
+    )
   else dot = <span className={cn(base, 'border-2 border-dashed border-border')} />
   if (label !== undefined && state !== 'missing')
     return (
-      <span className={cn(base, state === 'now' || state === 'ai_proposed' ? 'bg-attention text-white' : 'bg-ink text-on-ink', 'text-[11px] font-semibold')}>
+      <span
+        className={cn(
+          base,
+          state === 'now' || state === 'ai_proposed' ? 'bg-attention text-white' : 'bg-ink text-on-ink',
+          'text-[11px] font-semibold',
+        )}
+      >
         {label}
       </span>
     )
   return <span aria-hidden>{dot}</span>
 }
 
-export function StepList({ title, children, className, aside }: { title?: ReactNode; children: ReactNode; className?: string; aside?: ReactNode }) {
+export function StepList({
+  title,
+  children,
+  className,
+  aside,
+}: {
+  title?: ReactNode
+  children: ReactNode
+  className?: string
+  aside?: ReactNode
+}) {
   return (
     <section className={cn('flex flex-col gap-2 rounded-panel bg-soft p-5', className)}>
       {title ? (
