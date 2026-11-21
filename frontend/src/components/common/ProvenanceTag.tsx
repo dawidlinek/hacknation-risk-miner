@@ -57,6 +57,8 @@ export function ProvenanceTag({
   evidence?: EvidenceKey | null
   className?: string
 }) {
+  // A tag that says "n = 0" carries no information (the user asked to drop "obliczenie, n = 0").
+  if (typeof text === 'string' && /(^|,\s*)n = 0(\s|,|$)/.test(text)) return null
   const dashed = origin === 'AI' && reviewStatus === 'proposed'
   const body = (
     <span

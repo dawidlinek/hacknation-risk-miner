@@ -47,6 +47,8 @@ const ROLE_LABEL: Record<RealProv['role'], string> = {
 /** The mono line under a number: "obliczenie, n = 84". */
 export function provText(prov: RealProv | null | undefined, fallback = ''): string {
   if (!prov) return fallback
+  // "obliczenie, n = 0" says nothing: show no provenance line at all (user request)
+  if (prov.n === 0) return ''
   const n =
     prov.n !== null && prov.n !== undefined
       ? `, n = ${prov.n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')}`
