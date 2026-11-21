@@ -9,20 +9,20 @@ side-by-side comparison; the decks below stay the editable, presentable and expo
 
 | Version | Link | Look | PDF |
 |---|---|---|---|
-| **A, product design system (recommended)** | https://claude.ai/artifact/RUkSbfTocR6XFtK316WQYE | White page, black ink, black summary cards, soft grey stat cards, one orange accent meaning "needs attention", Geist + Geist Mono, `ex [ante]` wordmark. Same language as the app (`design/README.md` §1, §2, §6). | `ex-ante-pitch.pdf` |
+| A, product design system | https://claude.ai/artifact/RUkSbfTocR6XFtK316WQYE | White page, black ink, black summary cards, soft grey stat cards, one orange accent meaning "needs attention", Geist + Geist Mono, `ex [ante]` wordmark. Same language as the app (`design/README.md` §1, §2, §6). | `alternatives/ex-ante-pitch-A.pdf` |
 | B, in the style of Rogatka | https://claude.ai/artifact/S8B743dxr4VVrspdzZaPKw | Rogatka's system: white paper, ink `#111`, red `#e3322b`, red rules as chrome, Instrument Sans + IBM Plex Mono, cover with the name stacked three times next to a red number panel, a full-red Problem slide with the word bleeding off the bottom, numbers on black top rules. | `alternatives/ex-ante-pitch-B.pdf` |
 | C, in the style of Prawo dla Ciebie | https://claude.ai/artifact/5qm8Q3utQ1dWdFxyJokXc2 | Prawo dla Ciebie's system: white page, navy `#000234`, red `#e43838` rules top right and bottom left, heavy Onest, a giant pale title word behind the cover, "Zadanie" title centred, team names right-aligned in caps, navy statement cards. | `alternatives/ex-ante-pitch-C.pdf` |
-| D, in the style of Jak doczłapię | https://claude.ai/artifact/BfVLCCc7921WcFRb6mPhuS | Jak doczłapię's system: solid blue `#3056f5`, white Onest type, the name stacked three times across the cover, team names in a caps row, white "paper" cards held by tape strips, one yellow accent for "needs attention". | `alternatives/ex-ante-pitch-D.pdf` |
+| **D, in the style of Jak doczłapię (chosen)** | https://claude.ai/artifact/BfVLCCc7921WcFRb6mPhuS | Jak doczłapię's system: solid blue `#3056f5`, white Onest type, the name stacked three times across the cover, team names in a caps row, white "paper" cards held by tape strips, one yellow accent for "needs attention". | `ex-ante-pitch.pdf` |
 
-## Recommendation: A
+## Chosen version: D
 
-- **It matches the demo.** The jury sees the app in the live demo (path b) right after slide 3. With A, slides and
-  app look like one product, so the switch costs no attention.
-- **The design carries the trust story.** Every number has a mono provenance line with its `n`, and orange is used
-  only for "needs attention" (30% late, 3 397 overdue, items for review), exactly as in the app.
-- **It is the calmest read for a ministry jury.** B is the strongest alternative (it is the style that won Rogatka),
-  but its red reads as alarm on every slide. C is the closest sibling of A (white, navy, one red), D is the boldest
-  and most playful.
+The user picked D (Jak doczłapię style) on 21.11.2026: solid blue `#3056f5`, white Onest, taped paper cards,
+yellow for "needs attention". The title slide is a taped collage (report screen + the 30,3% note) over the
+name stacked three times; the closing slide carries the team card: **Solvro Dawid, Dawid Linek**, exante.linek.dev,
+the repo. `ex-ante-pitch.pdf` is D. A, B and C stay as alternatives.
+
+The screens were recaptured at 1280x800 from https://exante.linek.dev (the local API was down) and are shown
+whole, never cropped. Path b comes from analysis AN-2026-0009 on the live site.
 
 ## Style references
 
@@ -41,7 +41,7 @@ Symulacja, Podział ryzyk i pakiet), 6 Ścieżka a (Projekty, karta Steklin, gra
 3 z 3), 7 Zaufanie (98,8%, 43 z 43, 80–88%, 80% vs 37%), 8 Kontrola eksperta i suwerenność (Przegląd and Ustawienia
 screens), 9 Skala (Monitoring map, 3 397, roads), 10 Prośba i zespół.
 
-All screens are real captures of the running app (1600x1000, 21.11.2026), path b from analysis AN-2026-0018.
+All screens are real captures of the live app at exante.linek.dev (1280x800, shown whole), path b from analysis AN-2026-0009.
 Sources: `scratchpad/screens` capture script driven by the app's own demo-login personas.
 
 ## Verified numbers
@@ -67,7 +67,7 @@ live system differs.
 | Cause classification, gold set | AI 80%, keyword rules 37% | n = 150 | be-llm eval, `exports/eval/` |
 | Ongoing contracts > 90 days past planned end | 3 397 | of 3 803 with a signal, 21.11.2026 | `GET /api/monitoring/signals`; the brief's 3 321 is the research figure, and the live value moves daily |
 | Roads notices | 134 tys. (134 287) | | `GET /api/stats` |
-| Path b report (AN-2026-0018) | 82 similar contracts, P(on time) about 34%, cost per km above 68% of contracts | n = 82 | live report screen |
+| Path b report (AN-2026-0009) | 82 similar contracts, P(on time) about 34%, cost per km above 68% of contracts | n = 82 | live report screen |
 | Example road analysis | n = 893, 73% on time, 0,83 mln zł/km | one analysis | `overnight_log.md` 21:27 |
 
 Still `[do sprawdzenia]` or placeholders: team names on slide 10, and the ask

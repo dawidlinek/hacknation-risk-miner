@@ -128,4 +128,4 @@ Licence of this repository's own code: [do sprawdzenia]. Under the task rules, w
 
 ## Team
 
-[zespół: do uzupełnienia]
+Solvro Dawid: Dawid Linek.

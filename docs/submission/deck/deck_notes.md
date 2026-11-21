@@ -1,6 +1,7 @@
 # Pitch notes: 2 minutes live (Sun 15:15)
 
-Deck: version A, https://claude.ai/artifact/RUkSbfTocR6XFtK316WQYE (PDF: `ex-ante-pitch.pdf`).
+Deck: version D (Jak doczłapię style), https://claude.ai/artifact/BfVLCCc7921WcFRb6mPhuS (PDF: `ex-ante-pitch.pdf`).
+Team: Solvro Dawid, presenter Dawid Linek.
 Every slide also carries longer Polish speaker notes in the deck itself (presenter view).
 
 The script below is about 270 words, which is about 2 minutes at a calm pace. It assumes the live demo runs
@@ -8,8 +9,8 @@ inside the 2 minutes on slide 4. If the demo cannot run, stay on slide 4 and say
 
 ## Timing and mapping
 
-Slides 4 to 6 are a walkthrough of the real app (screens captured from the running system on 21.11.2026,
-analysis AN-2026-0018). Live, switch to the app on slide 4 and come back on slide 7; if the demo cannot run,
+Slides 4 to 6 are a walkthrough of the real app (screens captured from exante.linek.dev on 21.11.2026,
+analysis AN-2026-0009 on exante.linek.dev). Live, switch to the app on slide 4 and come back on slide 7; if the demo cannot run,
 the walkthrough slides carry the same story.
 
 | Time | Slide | What happens |
@@ -73,8 +74,7 @@ All numbers are on the slides with their `n`. Sources: `GET /api/analytics/headl
 
 ## Before Sunday 11:00
 
-- Fill the team names on slide 10 (`[Imię Nazwisko]` placeholders).
 - Slide 10 shows the live demo: exante.linek.dev.
-- The walkthrough screens come from analysis AN-2026-0018 (created for the screenshots as an anonymous visitor).
+- The walkthrough screens come from analysis AN-2026-0009 on exante.linek.dev (created for the screenshots as an anonymous visitor).
 - Re-check `3 397` on slide 9 against `GET /api/monitoring/signals` on the morning of the submission.
 - Export the final PDF from the deck (Share, Export, PDF) or use `ex-ante-pitch.pdf` in this folder.
