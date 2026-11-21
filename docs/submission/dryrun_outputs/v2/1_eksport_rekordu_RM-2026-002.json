@@ -1,0 +1,3628 @@
+{
+ "meta": {
+  "generator": "ex ante (Risk Miner)",
+  "export": "rekord projektu",
+  "format_version": 2,
+  "generated_at": "2026-11-21T23:51:25.548971+00:00",
+  "app_url": "https://exante.linek.dev",
+  "models": [
+   "gemini-3.5-flash-lite"
+  ],
+  "view": "ekspert",
+  "rm_id": "RM-2026-002",
+  "legend": {
+   "origin": {
+    "SOURCE": "źródło",
+    "CALC": "wyliczenie",
+    "AI": "model AI"
+   },
+   "review_status": {
+    "auto": "automatycznie",
+    "proposed": "propozycja do weryfikacji",
+    "approved": "zatwierdzone przez eksperta",
+    "edited": "poprawione przez eksperta",
+    "rejected": "odrzucone"
+   }
+  },
+  "unverified_ai_hidden": 0
+ },
+ "record": {
+  "rm_id": "RM-2026-002",
+  "kind": "pilot_project",
+  "title": "Budowa kanalizacji sanitarnej na terenie Gminy Zagrodno w miejscowości Modlikowice",
+  "description": "Przedmiot projektu: Planuje się budowę sieci kanalizacji sanitarnej o długości 2,38 kilometra. W ramach przedsięwzięcia realizowane będą także sięgacze sieciowe do granicy działek. Planowana jest także realizacja pompowni ścieków sanitarnych. Nowo powstała sieć kanalizacyjna zostanie wpięta do realizowanej obecnie oczyszczalni ścieków zlokalizowanej na działce oznaczonej geodezyjnie numerem 106 obręb Modlikowice.",
+  "beneficiary": {
+   "name": "Gmina Zagrodno",
+   "name_in_bzp": "GMINA ZAGRODNO",
+   "nip": "6941566139",
+   "nip_valid": true
+  },
+  "location": {
+   "teryt_woj": "02",
+   "province": "PL02",
+   "city": "Zagrodno"
+  },
+  "public_id_type": "Projekt KPO",
+  "public_id": "KPOD.03.15-IW.13-0004/25",
+  "external_ids": {
+   "kpo": "KPOD.03.15-IW.13-0004/25"
+  },
+  "scope": "całe postępowanie",
+  "scope_part": null,
+  "status": "Zakończone",
+  "subsector_main": "SAN",
+  "works_type": "build",
+  "delivery_model": "build",
+  "record_date": "2026-11-20",
+  "record_version": "2.0",
+  "is_pilot": true,
+  "funding": {
+   "programme": "KPO, inwestycja B3",
+   "value": {
+    "amount": "5350782.65",
+    "currency": "PLN",
+    "vat_basis": "unknown"
+   },
+   "subsidy": {
+    "amount": "4333677.17",
+    "currency": "PLN",
+    "vat_basis": "unknown"
+   },
+   "note": "Kwoty z rekordu (adnotacja instytucji); rekord nie podaje, czy są netto czy brutto."
+  },
+  "annotation": "KPO, inwestycja B3.1.1. Wartość przedsięwzięcia: 5 350 782,65 zł; dofinansowanie: 4 333 677,17 zł. Opis: „Przedmiot projektu: Planuje się budowę sieci kanalizacji sanitarnej o długości 2,38 kilometra. W ramach przedsięwzięcia realizowane będą także sięgacze sieciowe do granicy działek. Planowana jest także realizacja pompowni ścieków sanitarnych. Nowo powstała sieć kanalizacyjna zostanie wpięta do realizowanej obecnie oczyszczalni ścieków zlokalizowanej na działce oznaczonej geodezyjnie numerem 106 obręb Modlikowice.”",
+  "origin": "SOURCE",
+  "review_status": "auto",
+  "source": {
+   "id": 2,
+   "kind": "xlsx",
+   "url": null,
+   "retrieved_at": "2026-11-21T11:58:08.511419+00:00",
+   "sha256": "b10b57a14d6f188004f38bb73a99ee1e3226c43166a6e8edd500ea5fda21eabe",
+   "path": "materials/starter/Risk_Miner_dane_projekty.xlsx",
+   "licence": "organizer dataset (HackNation 2026, MFiPR)"
+  }
+ },
+ "links": [
+  {
+   "ocid": "ocds-148610-7ae14583-9ae6-40e4-bbf5-11c0fdbdaff8",
+   "title": "Budowa kanalizacji sanitarnej na terenie Gminy Zagrodno w miejscowości Modlikowice",
+   "contract_notice_no": "2026/BZP 00089794",
+   "buyer": "GMINA ZAGRODNO",
+   "buyer_nip": "6941566139",
+   "method": "fuzzy",
+   "method_label": "NIP zamawiającego + nazwa + CPV + data",
+   "score": 1.0,
+   "review_status": "auto",
+   "decision": "accept",
+   "explanation": "NIP zgodny; wspólne słowa tytułu: kanali, modlik, sanita, zagrod; CPV wod-kan: tak; pierwsze ogłoszenie 2026-02-02",
+   "features": {
+    "title": "Budowa kanalizacji sanitarnej na terenie  Gminy Zagrodno w  miejscowości Modlikowice",
+    "kpo_era": true,
+    "overlap": [
+     "kanali",
+     "modlik",
+     "sanita",
+     "zagrod"
+    ],
+    "nip_match": true,
+    "raw_score": 1.2,
+    "cpv_wodkan": true,
+    "title_jaccard": 1.0,
+    "first_published": "2026-02-02"
+   },
+   "lots": [],
+   "design_build": false,
+   "subsector": "SAN",
+   "first_published_on": "2026-02-02",
+   "estimate": {
+    "amount": "4350229.80",
+    "currency": "PLN",
+    "vat_basis": "net"
+   },
+   "chain": [
+    "2026/BZP 00089794/01",
+    "2026/BZP 00108931/01",
+    "2026/BZP 00143366/01",
+    "2026/BZP 00277648/01",
+    "2026/BZP 00285691/01"
+   ],
+   "title_similarity": 1.0,
+   "value_check": {
+    "value": 5350782.65,
+    "closest": "suma wartości umów",
+    "diff_pct": 0.0,
+    "project_value": 5350782.65
+   }
+  }
+ ],
+ "link_alternatives": [
+  {
+   "ocid": "ocds-148610-7ae14583-9ae6-40e4-bbf5-11c0fdbdaff8",
+   "method": "fuzzy",
+   "score": 1.0,
+   "rank": 1,
+   "decision": "accept",
+   "explanation": "NIP zgodny; wspólne słowa tytułu: kanali, modlik, sanita, zagrod; CPV wod-kan: tak; pierwsze ogłoszenie 2026-02-02"
+  },
+  {
+   "ocid": "ocds-148610-0b554813-cf8d-11ed-b70f-ae2d9e28ec7b",
+   "method": "fuzzy",
+   "score": 0.5,
+   "rank": 2,
+   "decision": "review",
+   "explanation": "NIP zgodny; wspólne słowa tytułu: modlik, oczysz, realiz, scieko; CPV wod-kan: tak; pierwsze ogłoszenie 2023-04-04"
+  },
+  {
+   "ocid": "ocds-148610-f7b005c8-7d73-45ef-a23d-c11063b17075",
+   "method": "fuzzy",
+   "score": 0.359,
+   "rank": 3,
+   "decision": "review",
+   "explanation": "NIP zgodny; wspólne słowa tytułu: dzialc, zagrod, zlokal; CPV wod-kan: tak; pierwsze ogłoszenie 2026-04-08"
+  },
+  {
+   "ocid": "ocds-148610-be095f56-98dc-4b1a-83c9-8e5c748e23c7",
+   "method": "fuzzy",
+   "score": 0.345,
+   "rank": 4,
+   "decision": "review",
+   "explanation": "NIP zgodny; wspólne słowa tytułu: modlik, oczysz, scieko; CPV wod-kan: tak; pierwsze ogłoszenie 2025-10-15"
+  },
+  {
+   "ocid": "ocds-148610-0facece0-7c24-43f4-aa5f-ec294acdc1b4",
+   "method": "fuzzy",
+   "score": 0.25,
+   "rank": 4,
+   "decision": "review",
+   "explanation": "NIP zgodny; wspólne słowa tytułu: zagrod; CPV wod-kan: tak; pierwsze ogłoszenie 2026-06-11"
+  },
+  {
+   "ocid": "ocds-148610-73938530-d223-11ee-a3b5-e25d731b0da9",
+   "method": "fuzzy",
+   "score": 0.286,
+   "rank": 5,
+   "decision": "review",
+   "explanation": "NIP zgodny; wspólne słowa tytułu: modlik; CPV wod-kan: tak; pierwsze ogłoszenie 2024-03-12"
+  }
+ ],
+ "contracts": [
+  {
+   "contract_id": 153400,
+   "lot_no": 0,
+   "contractor": "Przedsiębiorstwo Transportowo Budowlane Sp. z o.o.",
+   "contractor_nip": "8992507768",
+   "signed_on": "2026-03-05",
+   "planned_duration_days": 61.0,
+   "planned_end_on": "2026-05-05",
+   "value": {
+    "amount": "5350782.65",
+    "currency": "PLN",
+    "vat_basis": "gross"
+   },
+   "result_notice_no": "2026/BZP 00143366",
+   "origin": "SOURCE",
+   "review_status": "auto",
+   "source_id": 1
+  }
+ ],
+ "plan_vs_actual": {
+  "summary": "Skończono 27 dni po terminie i zapłacono tyle, ile w umowie.",
+  "dates": [
+   {
+    "contract_id": 153400,
+    "lot_no": 0,
+    "signed_on": "2026-03-05",
+    "planned_days": 61.0,
+    "planned_end_on": "2026-05-05",
+    "completed_on": "2026-06-01",
+    "actual_days": 88,
+    "delay_days": 27,
+    "on_time_declared": false,
+    "changes_count": 1,
+    "properly_performed": true,
+    "contract_value": {
+     "amount": "5350782.65",
+     "currency": "PLN",
+     "vat_basis": "gross"
+    },
+    "paid": {
+     "amount": "5350782.65",
+     "currency": "PLN",
+     "vat_basis": "gross"
+    },
+    "cost_dev_pct": 0.0,
+    "performance_notice": "2026/BZP 00285691/01",
+    "performance_url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dec7a5-add3-9ae4-5fad-950001d1b535",
+    "origin": "CALC",
+    "method": "completed_on - signed_on; paid / contract value - 1"
+   }
+  ],
+  "values": {
+   "estimate_bzp": {
+    "amount": "4350229.80",
+    "currency": "PLN",
+    "vat_basis": "net"
+   },
+   "contracts_total": {
+    "amount": "5350782.65",
+    "currency": "PLN",
+    "vat_basis": "gross"
+   },
+   "paid_total": {
+    "amount": "5350782.65",
+    "currency": "PLN",
+    "vat_basis": "gross"
+   },
+   "cost_dev_pct": 0.0,
+   "funding_value": {
+    "amount": "5350782.65",
+    "currency": "PLN",
+    "vat_basis": "unknown"
+   }
+  },
+  "delay_days_max": 27,
+  "vat_note": "Porównujemy tylko kwoty tej samej podstawy: szacunek zamawiającego w BZP jest netto, wartości umów i wypłaty brutto."
+ },
+ "changes": [
+  {
+   "change_id": 677691,
+   "contract_id": 153400,
+   "kind": "document_change",
+   "kind_label": "dokument (propozycja z dokumentu)",
+   "change_no": "dok-34503",
+   "changed_on": "2026-05-05",
+   "legal_basis": [],
+   "legal_basis_raw": null,
+   "change_types": [
+    "termin"
+   ],
+   "delta_days": 31.0,
+   "delta_value": null,
+   "delta_value_pct": null,
+   "cause": "Wystąpienie kolizji z siecią wodociągową uniemożliwiające posadowienie pompowni numer PM2 uciążliwe uwarunkowania terenowe, wysoki poziom wód gruntowych przy wykopie pod pompownię PM2",
+   "description": "protokół konieczności aneksowania umowy: zmiana terminu",
+   "notice": null,
+   "url": null,
+   "document": {
+    "id": 34503,
+    "title": "Risk_Miner_protokol_koniecznosci_aneksowania_zagrodno.pdf"
+   },
+   "origin": "CALC",
+   "review_status": "proposed",
+   "source_id": 139454
+  },
+  {
+   "change_id": 677719,
+   "contract_id": 153400,
+   "kind": "document_change",
+   "kind_label": "dokument (propozycja z dokumentu)",
+   "change_no": "dok-34574",
+   "changed_on": "2026-05-05",
+   "legal_basis": [],
+   "legal_basis_raw": null,
+   "change_types": [
+    "termin"
+   ],
+   "delta_days": 31.0,
+   "delta_value": null,
+   "delta_value_pct": null,
+   "cause": "Wystąpienie kolizji z siecią wodociągową uniemożliwiające posadowienie pompowni numer PM2 uciążliwe uwarunkowania terenowe, wysoki poziom wód gruntowych przy wykopie pod pompownię PM2",
+   "description": "protokół konieczności aneksowania umowy: zmiana terminu",
+   "notice": null,
+   "url": null,
+   "document": {
+    "id": 34574,
+    "title": "Risk_Miner_protokol_koniecznosci_aneksowania_zagrodno.pdf"
+   },
+   "origin": "CALC",
+   "review_status": "proposed",
+   "source_id": 139501
+  },
+  {
+   "change_id": 59472,
+   "contract_id": 153400,
+   "kind": "performance_block",
+   "kind_label": "ogłoszenie o wykonaniu umowy, sekcja zmian (BZP)",
+   "change_no": "1",
+   "changed_on": null,
+   "legal_basis": [
+    "455.1.1"
+   ],
+   "legal_basis_raw": "art. 455 ust. 1 pkt 1 ustawy",
+   "change_types": [
+    "time",
+    "price"
+   ],
+   "delta_days": null,
+   "delta_value": {
+    "amount": "0.00",
+    "currency": "PLN",
+    "vat_basis": "unknown"
+   },
+   "delta_value_pct": null,
+   "cause": "zmiana terminu wykonania umowy",
+   "description": "Zmiana zakończenia terminu wykonania umowy o miesiąc bez zwiększania wynagrodzenia.",
+   "notice": "2026/BZP 00277648/01",
+   "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dec528-4925-88ea-5fad-9500015c65f4",
+   "document": null,
+   "origin": "SOURCE",
+   "review_status": "auto",
+   "source_id": 1,
+   "ai_cause": {
+    "proposal": true,
+    "risk_code": "N-UNSPEC",
+    "secondary_code": null,
+    "quote": "zmiana terminu wykonania umowy",
+    "verification": "exact",
+    "confidence": 0.8999999761581421,
+    "model": "gemini-3.5-flash-lite",
+    "review_status": "proposed"
+   }
+  },
+  {
+   "change_id": 59630,
+   "contract_id": 153400,
+   "kind": "performance_block",
+   "kind_label": "ogłoszenie o wykonaniu umowy, sekcja zmian (BZP)",
+   "change_no": "1",
+   "changed_on": null,
+   "legal_basis": [
+    "455.1.1"
+   ],
+   "legal_basis_raw": "art. 455 ust. 1 pkt 1 ustawy",
+   "change_types": [
+    "time"
+   ],
+   "delta_days": null,
+   "delta_value": {
+    "amount": "5350782.65",
+    "currency": "PLN",
+    "vat_basis": "unknown"
+   },
+   "delta_value_pct": null,
+   "cause": "zmiana terminu wykonania umowy",
+   "description": "zmiana terminu ze względu na kolizję na budowie",
+   "notice": "2026/BZP 00285691/01",
+   "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dec7a5-add3-9ae4-5fad-950001d1b535",
+   "document": null,
+   "origin": "SOURCE",
+   "review_status": "auto",
+   "source_id": 1,
+   "ai_cause": {
+    "proposal": true,
+    "risk_code": "R03",
+    "secondary_code": null,
+    "quote": "zmiana terminu ze względu na kolizję na budowie",
+    "verification": "exact",
+    "confidence": 0.8999999761581421,
+    "model": "gemini-3.5-flash-lite",
+    "review_status": "proposed"
+   }
+  }
+ ],
+ "risk_events": [
+  {
+   "event_id": 872686,
+   "event_type": "EV_DOC_CAUSE",
+   "risk_code": "R03",
+   "risk_name": "Kolizje, dostęp do terenu i prawa do nieruchomości",
+   "summary": "kolizja z istniejącą siecią lub uzbrojeniem",
+   "cause": "Wystąpienie kolizji z siecią wodociągową uniemożliwiające posadowienie pompowni numer PM2",
+   "occurred_on": "2026-05-05",
+   "impact_days": null,
+   "impact_value": null,
+   "impact_pct": null,
+   "mitigation": null,
+   "evidence_state": null,
+   "origin": "CALC",
+   "review_status": "proposed",
+   "proposal": false,
+   "change_notice": null,
+   "evidence": [
+    {
+     "source_id": 139454,
+     "source_kind": "upload",
+     "notice_number": null,
+     "document_id": 34503,
+     "page_no": 1,
+     "field_code": null,
+     "url": null,
+     "retrieved_at": null,
+     "quote": "Wystąpienie kolizji z siecią wodociągową uniemożliwiające posadowienie pompowni numer PM2",
+     "verification": "exact",
+     "evidence_state": null,
+     "sha256": "e6f338264b1755f6f75e40d2b14504711c43bfcbc3f5463ae6cdb67c2819f935"
+    }
+   ]
+  },
+  {
+   "event_id": 872687,
+   "event_type": "EV_DOC_CAUSE",
+   "risk_code": "R02",
+   "risk_name": "Niedostateczne rozpoznanie stanu istniejącego",
+   "summary": "woda gruntowa",
+   "cause": "uciążliwe uwarunkowania terenowe, wysoki poziom wód gruntowych przy wykopie pod pompownię PM2",
+   "occurred_on": "2026-05-05",
+   "impact_days": null,
+   "impact_value": null,
+   "impact_pct": null,
+   "mitigation": null,
+   "evidence_state": null,
+   "origin": "CALC",
+   "review_status": "proposed",
+   "proposal": false,
+   "change_notice": null,
+   "evidence": [
+    {
+     "source_id": 139454,
+     "source_kind": "upload",
+     "notice_number": null,
+     "document_id": 34503,
+     "page_no": 1,
+     "field_code": null,
+     "url": null,
+     "retrieved_at": null,
+     "quote": "uciążliwe uwarunkowania terenowe, wysoki poziom wód gruntowych przy wykopie pod pompownię PM2",
+     "verification": "exact",
+     "evidence_state": null,
+     "sha256": "e6f338264b1755f6f75e40d2b14504711c43bfcbc3f5463ae6cdb67c2819f935"
+    }
+   ]
+  },
+  {
+   "event_id": 872688,
+   "event_type": "EV_LINKED_INVESTMENT_DELAY",
+   "risk_code": "R18",
+   "risk_name": "Zależność efektu od zadań powiązanych (sieć ↔ oczyszczalnia/SUW/kolektor innego podmiotu)",
+   "summary": "Efekt użytkowy opóźniony o ok. 4 mies. przez inwestycję powiązaną: oczyszczalnia ścieków w Modlikowicach",
+   "cause": "Opóźnienie osiągnięcia efektu użytkowego do czasu technicznej możliwości wykonania przyłącza do budowanej oczyszczalni ścieków w Modlikowicach ze względu na nieterminowy przebieg realizacji tej inwestycji – przewidywane opóźnienie 4 miesiące.",
+   "occurred_on": "2026-05-05",
+   "impact_days": 121.6,
+   "impact_value": null,
+   "impact_pct": null,
+   "mitigation": null,
+   "evidence_state": null,
+   "origin": "CALC",
+   "review_status": "proposed",
+   "proposal": false,
+   "change_notice": null,
+   "evidence": [
+    {
+     "source_id": 139454,
+     "source_kind": "upload",
+     "notice_number": null,
+     "document_id": 34503,
+     "page_no": 1,
+     "field_code": null,
+     "url": null,
+     "retrieved_at": null,
+     "quote": "Opóźnienie osiągnięcia efektu użytkowego do czasu technicznej możliwości wykonania przyłącza do budowanej oczyszczalni ścieków w Modlikowicach ze względu na nieterminowy przebieg realizacji tej inwestycji – przewidywane opóźnienie 4 miesiące.",
+     "verification": "exact",
+     "evidence_state": null,
+     "sha256": "e6f338264b1755f6f75e40d2b14504711c43bfcbc3f5463ae6cdb67c2819f935"
+    }
+   ]
+  },
+  {
+   "event_id": 872787,
+   "event_type": "EV_DOC_CAUSE",
+   "risk_code": "R03",
+   "risk_name": "Kolizje, dostęp do terenu i prawa do nieruchomości",
+   "summary": "kolizja z istniejącą siecią lub uzbrojeniem",
+   "cause": "Wystąpienie kolizji z siecią wodociągową uniemożliwiające posadowienie pompowni numer PM2",
+   "occurred_on": "2026-05-05",
+   "impact_days": null,
+   "impact_value": null,
+   "impact_pct": null,
+   "mitigation": null,
+   "evidence_state": null,
+   "origin": "CALC",
+   "review_status": "proposed",
+   "proposal": false,
+   "change_notice": null,
+   "evidence": [
+    {
+     "source_id": 139501,
+     "source_kind": "upload",
+     "notice_number": null,
+     "document_id": 34574,
+     "page_no": 1,
+     "field_code": null,
+     "url": null,
+     "retrieved_at": null,
+     "quote": "Wystąpienie kolizji z siecią wodociągową uniemożliwiające posadowienie pompowni numer PM2",
+     "verification": "exact",
+     "evidence_state": null,
+     "sha256": "4c1d489e72a544d2649a17b5aaa514f9dc74891d2b4a5b560cb4c14d752f7a32"
+    }
+   ]
+  },
+  {
+   "event_id": 872788,
+   "event_type": "EV_DOC_CAUSE",
+   "risk_code": "R02",
+   "risk_name": "Niedostateczne rozpoznanie stanu istniejącego",
+   "summary": "woda gruntowa",
+   "cause": "uciążliwe uwarunkowania terenowe, wysoki poziom wód gruntowych przy wykopie pod pompownię PM2",
+   "occurred_on": "2026-05-05",
+   "impact_days": null,
+   "impact_value": null,
+   "impact_pct": null,
+   "mitigation": null,
+   "evidence_state": null,
+   "origin": "CALC",
+   "review_status": "proposed",
+   "proposal": false,
+   "change_notice": null,
+   "evidence": [
+    {
+     "source_id": 139501,
+     "source_kind": "upload",
+     "notice_number": null,
+     "document_id": 34574,
+     "page_no": 1,
+     "field_code": null,
+     "url": null,
+     "retrieved_at": null,
+     "quote": "uciążliwe uwarunkowania terenowe, wysoki poziom wód gruntowych przy wykopie pod pompownię PM2",
+     "verification": "exact",
+     "evidence_state": null,
+     "sha256": "4c1d489e72a544d2649a17b5aaa514f9dc74891d2b4a5b560cb4c14d752f7a32"
+    }
+   ]
+  },
+  {
+   "event_id": 872789,
+   "event_type": "EV_LINKED_INVESTMENT_DELAY",
+   "risk_code": "R18",
+   "risk_name": "Zależność efektu od zadań powiązanych (sieć ↔ oczyszczalnia/SUW/kolektor innego podmiotu)",
+   "summary": "Efekt użytkowy opóźniony o ok. 4 mies. przez inwestycję powiązaną: oczyszczalnia ścieków w Modlikowicach",
+   "cause": "Opóźnienie osiągnięcia efektu użytkowego do czasu technicznej możliwości wykonania przyłącza do budowanej oczyszczalni ścieków w Modlikowicach ze względu na nieterminowy przebieg realizacji tej inwestycji – przewidywane opóźnienie 4 miesiące.",
+   "occurred_on": "2026-05-05",
+   "impact_days": 121.6,
+   "impact_value": null,
+   "impact_pct": null,
+   "mitigation": null,
+   "evidence_state": null,
+   "origin": "CALC",
+   "review_status": "proposed",
+   "proposal": false,
+   "change_notice": null,
+   "evidence": [
+    {
+     "source_id": 139501,
+     "source_kind": "upload",
+     "notice_number": null,
+     "document_id": 34574,
+     "page_no": 1,
+     "field_code": null,
+     "url": null,
+     "retrieved_at": null,
+     "quote": "Opóźnienie osiągnięcia efektu użytkowego do czasu technicznej możliwości wykonania przyłącza do budowanej oczyszczalni ścieków w Modlikowicach ze względu na nieterminowy przebieg realizacji tej inwestycji – przewidywane opóźnienie 4 miesiące.",
+     "verification": "exact",
+     "evidence_state": null,
+     "sha256": "4c1d489e72a544d2649a17b5aaa514f9dc74891d2b4a5b560cb4c14d752f7a32"
+    }
+   ]
+  },
+  {
+   "event_id": 16332,
+   "event_type": "EV_LATE_COMPLETION",
+   "risk_code": null,
+   "risk_name": null,
+   "summary": "Wykonanie po pierwotnym terminie (+27 dni)",
+   "cause": null,
+   "occurred_on": "2026-06-01",
+   "impact_days": 27.0,
+   "impact_value": null,
+   "impact_pct": null,
+   "mitigation": null,
+   "evidence_state": "POTWIERDZONO",
+   "origin": "CALC",
+   "review_status": "auto",
+   "proposal": false,
+   "change_notice": null,
+   "evidence": [
+    {
+     "source_id": 1,
+     "source_kind": "bzp_copy",
+     "notice_number": "2026/BZP 00285691/01",
+     "document_id": null,
+     "page_no": null,
+     "field_code": "5.3",
+     "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dec7a5-add3-9ae4-5fad-950001d1b535",
+     "retrieved_at": "2026-11-12T11:55:53+00:00",
+     "quote": null,
+     "verification": "structured_field",
+     "evidence_state": "POTWIERDZONO",
+     "sha256": "af0e37f5bbc6ee72c7431e3d6ef4572b550a95c4667a5abd3d868ac3dbfa8654"
+    }
+   ]
+  },
+  {
+   "event_id": 54973,
+   "event_type": "EV_TERM_EXTENSION",
+   "risk_code": "R06",
+   "risk_name": "Nierealistyczny harmonogram i nieuwzględnione zależności",
+   "summary": "Zmiana terminu wykonania",
+   "cause": "zmiana terminu wykonania umowy",
+   "occurred_on": null,
+   "impact_days": null,
+   "impact_value": null,
+   "impact_pct": null,
+   "mitigation": null,
+   "evidence_state": "POTWIERDZONO",
+   "origin": "CALC",
+   "review_status": "auto",
+   "proposal": false,
+   "change_notice": "2026/BZP 00277648/01",
+   "evidence": [
+    {
+     "source_id": 1,
+     "source_kind": "bzp_copy",
+     "notice_number": "2026/BZP 00277648/01",
+     "document_id": null,
+     "page_no": null,
+     "field_code": "5.4.4",
+     "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dec528-4925-88ea-5fad-9500015c65f4",
+     "retrieved_at": "2026-11-12T11:55:53+00:00",
+     "quote": "zmiana terminu wykonania umowy",
+     "verification": "structured_field",
+     "evidence_state": "POTWIERDZONO",
+     "sha256": "af0e37f5bbc6ee72c7431e3d6ef4572b550a95c4667a5abd3d868ac3dbfa8654"
+    }
+   ]
+  },
+  {
+   "event_id": 55075,
+   "event_type": "EV_TERM_EXTENSION",
+   "risk_code": "R06",
+   "risk_name": "Nierealistyczny harmonogram i nieuwzględnione zależności",
+   "summary": "Zmiana terminu wykonania",
+   "cause": "zmiana terminu wykonania umowy",
+   "occurred_on": null,
+   "impact_days": null,
+   "impact_value": null,
+   "impact_pct": null,
+   "mitigation": null,
+   "evidence_state": "POTWIERDZONO",
+   "origin": "CALC",
+   "review_status": "auto",
+   "proposal": false,
+   "change_notice": "2026/BZP 00285691/01",
+   "evidence": [
+    {
+     "source_id": 1,
+     "source_kind": "bzp_copy",
+     "notice_number": "2026/BZP 00285691/01",
+     "document_id": null,
+     "page_no": null,
+     "field_code": "5.4.4",
+     "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dec7a5-add3-9ae4-5fad-950001d1b535",
+     "retrieved_at": "2026-11-12T11:55:53+00:00",
+     "quote": "zmiana terminu wykonania umowy",
+     "verification": "structured_field",
+     "evidence_state": "POTWIERDZONO",
+     "sha256": "af0e37f5bbc6ee72c7431e3d6ef4572b550a95c4667a5abd3d868ac3dbfa8654"
+    }
+   ]
+  },
+  {
+   "event_id": 743136,
+   "event_type": "EV_CHANGE_CAUSE_AI",
+   "risk_code": "N-UNSPEC",
+   "risk_name": null,
+   "summary": "Zmiana umowy: przyczyna według modelu N-UNSPEC (Brak faktycznej przyczyny)",
+   "cause": "zmiana terminu wykonania umowy",
+   "occurred_on": null,
+   "impact_days": null,
+   "impact_value": {
+    "amount": "0.00",
+    "currency": "PLN",
+    "vat_basis": "unknown"
+   },
+   "impact_pct": null,
+   "mitigation": null,
+   "evidence_state": null,
+   "origin": "AI",
+   "review_status": "proposed",
+   "proposal": true,
+   "change_notice": "2026/BZP 00277648/01",
+   "evidence": [
+    {
+     "source_id": 1,
+     "source_kind": "bzp_copy",
+     "notice_number": "2026/BZP 00277648/01",
+     "document_id": null,
+     "page_no": null,
+     "field_code": null,
+     "url": null,
+     "retrieved_at": null,
+     "quote": "zmiana terminu wykonania umowy",
+     "verification": "exact",
+     "evidence_state": null,
+     "sha256": "af0e37f5bbc6ee72c7431e3d6ef4572b550a95c4667a5abd3d868ac3dbfa8654"
+    }
+   ]
+  },
+  {
+   "event_id": 743137,
+   "event_type": "EV_CHANGE_CAUSE_AI",
+   "risk_code": "R03",
+   "risk_name": "Kolizje, dostęp do terenu i prawa do nieruchomości",
+   "summary": "Zmiana umowy: przyczyna według modelu R03 (Kolizje z uzbrojeniem terenu, dostęp do terenu, prawa do nieruchomości, zgody właścicieli)",
+   "cause": "zmiana terminu wykonania umowy",
+   "occurred_on": null,
+   "impact_days": null,
+   "impact_value": {
+    "amount": "5350782.65",
+    "currency": "PLN",
+    "vat_basis": "unknown"
+   },
+   "impact_pct": null,
+   "mitigation": null,
+   "evidence_state": null,
+   "origin": "AI",
+   "review_status": "proposed",
+   "proposal": true,
+   "change_notice": "2026/BZP 00285691/01",
+   "evidence": [
+    {
+     "source_id": 1,
+     "source_kind": "bzp_copy",
+     "notice_number": "2026/BZP 00285691/01",
+     "document_id": null,
+     "page_no": null,
+     "field_code": null,
+     "url": null,
+     "retrieved_at": null,
+     "quote": "zmiana terminu ze względu na kolizję na budowie",
+     "verification": "exact",
+     "evidence_state": null,
+     "sha256": "af0e37f5bbc6ee72c7431e3d6ef4572b550a95c4667a5abd3d868ac3dbfa8654"
+    }
+   ]
+  },
+  {
+   "event_id": 870734,
+   "event_type": "EV_DOC_SIGNAL",
+   "risk_code": "R18",
+   "risk_name": "Zależność efektu od zadań powiązanych (sieć ↔ oczyszczalnia/SUW/kolektor innego podmiotu)",
+   "summary": "Wpięcie do realizowanej równolegle oczyszczalni",
+   "cause": "Zależność od równoległego zadania inwestycyjnego stwarza ryzyko opóźnień i problemów z koordynacją.",
+   "occurred_on": null,
+   "impact_days": null,
+   "impact_value": null,
+   "impact_pct": null,
+   "mitigation": null,
+   "evidence_state": null,
+   "origin": "AI",
+   "review_status": "proposed",
+   "proposal": true,
+   "change_notice": null,
+   "evidence": [
+    {
+     "source_id": 123721,
+     "source_kind": "docs_22",
+     "notice_number": null,
+     "document_id": 29963,
+     "page_no": 1,
+     "field_code": null,
+     "url": null,
+     "retrieved_at": null,
+     "quote": "Nowo powstała sieć kanalizacyjna zostanie wpięta do realizowanej obecnie oczyszczalni ścieków zlokalizowanej na działce oznaczonej geodezyjnie numerem 106 obręb Modlikowice.",
+     "verification": "exact",
+     "evidence_state": null,
+     "sha256": "1ecbcacb10fb42ba199fc72bf66e7d29576fa3b63b84e3aa07458ce798b61c77"
+    }
+   ]
+  },
+  {
+   "event_id": 870735,
+   "event_type": "EV_DOC_SIGNAL",
+   "risk_code": "R06.1",
+   "risk_name": "Presja terminu dofinansowania (KPO 15.06/31.08.2026, koniec perspektywy)",
+   "summary": "Bardzo krótki termin realizacji robót",
+   "cause": "Dwumiesięczny termin na realizację całej inwestycji kanalizacyjnej i odbiorowy jest nierealistyczny.",
+   "occurred_on": null,
+   "impact_days": null,
+   "impact_value": null,
+   "impact_pct": null,
+   "mitigation": null,
+   "evidence_state": null,
+   "origin": "AI",
+   "review_status": "proposed",
+   "proposal": true,
+   "change_notice": null,
+   "evidence": [
+    {
+     "source_id": 123721,
+     "source_kind": "docs_22",
+     "notice_number": null,
+     "document_id": 29963,
+     "page_no": 1,
+     "field_code": null,
+     "url": null,
+     "retrieved_at": null,
+     "quote": "Termin realizacji zamówienia wynosi: do 2 miesięcy od dnia zawarcia umowy. Termin jest zachowany, gdy do jego upływu zostanie podpisany protokół odbioru końcowego.",
+     "verification": "exact",
+     "evidence_state": null,
+     "sha256": "1ecbcacb10fb42ba199fc72bf66e7d29576fa3b63b84e3aa07458ce798b61c77"
+    }
+   ]
+  },
+  {
+   "event_id": 870925,
+   "event_type": "EV_DOC_SIGNAL",
+   "risk_code": "R06.1",
+   "risk_name": "Presja terminu dofinansowania (KPO 15.06/31.08.2026, koniec perspektywy)",
+   "summary": "Nierealistyczny termin realizacji przy funduszach z KPO",
+   "cause": "Dwumiesięczny termin na realizację robót kanalizacyjnych w formule Wykonaj i wybuduj grozi niedotrzymaniem warunków dofinansowania z KPO.",
+   "occurred_on": null,
+   "impact_days": null,
+   "impact_value": null,
+   "impact_pct": null,
+   "mitigation": null,
+   "evidence_state": null,
+   "origin": "AI",
+   "review_status": "proposed",
+   "proposal": true,
+   "change_notice": null,
+   "evidence": [
+    {
+     "source_id": 121938,
+     "source_kind": "docs_22",
+     "notice_number": null,
+     "document_id": 29973,
+     "page_no": 1,
+     "field_code": null,
+     "url": null,
+     "retrieved_at": null,
+     "quote": "Termin realizacji przedmiotu umowy ustala się do 2 miesięcy od dnia zawarcia umowy.",
+     "verification": "exact",
+     "evidence_state": null,
+     "sha256": "d0bf36437e102fa7e81e67842c4153c0fbd0198d54b4d4fff88f85a749b58719"
+    }
+   ]
+  },
+  {
+   "event_id": 871018,
+   "event_type": "EV_DOC_SIGNAL",
+   "risk_code": "R03.1",
+   "risk_name": "Kolizje z uzbrojeniem terenu (w tym niezinwentaryzowanym)",
+   "summary": "Kolizje z niezinwentaryzowaną siecią",
+   "cause": "Nieznane kolizje w terenie wydłużają czas realizacji inwestycji i generują roszczenia wykonawcy.",
+   "occurred_on": null,
+   "impact_days": null,
+   "impact_value": null,
+   "impact_pct": null,
+   "mitigation": null,
+   "evidence_state": null,
+   "origin": "AI",
+   "review_status": "proposed",
+   "proposal": true,
+   "change_notice": null,
+   "evidence": []
+  },
+  {
+   "event_id": 871019,
+   "event_type": "EV_DOC_SIGNAL",
+   "risk_code": "R02.1",
+   "risk_name": "Warunki gruntowo-wodne (woda gruntowa, grunty słabe, kurzawka, skała)",
+   "summary": "Wysoki poziom wód gruntowych",
+   "cause": "Trudne warunki gruntowo-wodne wymagają dodatkowych zabezpieczeń i wydłużają czas robót.",
+   "occurred_on": null,
+   "impact_days": null,
+   "impact_value": null,
+   "impact_pct": null,
+   "mitigation": null,
+   "evidence_state": null,
+   "origin": "AI",
+   "review_status": "proposed",
+   "proposal": true,
+   "change_notice": null,
+   "evidence": []
+  },
+  {
+   "event_id": 871020,
+   "event_type": "EV_DOC_SIGNAL",
+   "risk_code": "R18",
+   "risk_name": "Zależność efektu od zadań powiązanych (sieć ↔ oczyszczalnia/SUW/kolektor innego podmiotu)",
+   "summary": "Zależność od opóźnionej oczyszczalni",
+   "cause": "Zależność efektu od niezależnego zadania powiązanego grozi brakiem możliwości osiągnięcia celu projektu.",
+   "occurred_on": null,
+   "impact_days": null,
+   "impact_value": null,
+   "impact_pct": null,
+   "mitigation": null,
+   "evidence_state": null,
+   "origin": "AI",
+   "review_status": "proposed",
+   "proposal": true,
+   "change_notice": null,
+   "evidence": []
+  },
+  {
+   "event_id": 871226,
+   "event_type": "EV_DOC_SIGNAL",
+   "risk_code": "R01.3",
+   "risk_name": "Roboty towarzyszące poza zakresem (odtworzenie nawierzchni, zjazdy, przebudowy kolizji)",
+   "summary": "Odtworzenie nawierzchni zgodnie z warunkami zarządców",
+   "cause": "Koszty odtworzenia nawierzchni mogą przewyższyć założenia ze względu na rygorystyczne wymagania zarządców dróg.",
+   "occurred_on": null,
+   "impact_days": null,
+   "impact_value": null,
+   "impact_pct": null,
+   "mitigation": null,
+   "evidence_state": null,
+   "origin": "AI",
+   "review_status": "proposed",
+   "proposal": true,
+   "change_notice": null,
+   "evidence": [
+    {
+     "source_id": 123487,
+     "source_kind": "docs_22",
+     "notice_number": null,
+     "document_id": 29971,
+     "page_no": 5,
+     "field_code": null,
+     "url": null,
+     "retrieved_at": null,
+     "quote": "norę, którą po zakończeniu budowy należy odtworzyć zgodnie z uzgodnieniami Dolnośląskiej Służby Dróg i Kolei we Wrocławiu, Zarządu Dróg Powiatowych w Polkowicach i uzgodnienia z Gminą Chocianów oraz dokumentacją drogową.",
+     "verification": "fuzzy",
+     "evidence_state": null,
+     "sha256": "b1ae1879fae4eda9f9439baba3c20cdaf0008bd0d8043b0f5f25537df276f03e"
+    }
+   ]
+  },
+  {
+   "event_id": 871227,
+   "event_type": "EV_DOC_SIGNAL",
+   "risk_code": "R02.3",
+   "risk_name": "Archeologia, niewybuchy, zanieczyszczenia gruntu",
+   "summary": "Nadzór archeologiczny na koszt wykonawcy",
+   "cause": "Przenosi pełne ryzyko finansowe i organizacyjne związane z archeologia na wykonawcę bez limitu.",
+   "occurred_on": null,
+   "impact_days": null,
+   "impact_value": null,
+   "impact_pct": null,
+   "mitigation": null,
+   "evidence_state": null,
+   "origin": "AI",
+   "review_status": "proposed",
+   "proposal": true,
+   "change_notice": null,
+   "evidence": [
+    {
+     "source_id": 123487,
+     "source_kind": "docs_22",
+     "notice_number": null,
+     "document_id": 29971,
+     "page_no": 7,
+     "field_code": null,
+     "url": null,
+     "retrieved_at": null,
+     "quote": "Wykonawca przed przystąpieniem do realizacji inwestycji ma obowiązek zabezpieczenie na własny koszt nadzoru archeologicznego.",
+     "verification": "exact",
+     "evidence_state": null,
+     "sha256": "b1ae1879fae4eda9f9439baba3c20cdaf0008bd0d8043b0f5f25537df276f03e"
+    }
+   ]
+  },
+  {
+   "event_id": 871228,
+   "event_type": "EV_DOC_SIGNAL",
+   "risk_code": "R10.2",
+   "risk_name": "Odbiory sieci, inspekcja TV, próby szczelności, inwentaryzacja geodezyjna",
+   "summary": "Uzgodnienia i protokoły dla robót towarzyszących",
+   "cause": "Uzyskanie protokołów odbioru od zewnętrznych właścicieli urządzeń obciąża wykonawcę ryzykiem opóźnień niezależnych od niego.",
+   "occurred_on": null,
+   "impact_days": null,
+   "impact_value": null,
+   "impact_pct": null,
+   "mitigation": null,
+   "evidence_state": null,
+   "origin": "AI",
+   "review_status": "proposed",
+   "proposal": true,
+   "change_notice": null,
+   "evidence": [
+    {
+     "source_id": 123487,
+     "source_kind": "docs_22",
+     "notice_number": null,
+     "document_id": 29971,
+     "page_no": 19,
+     "field_code": null,
+     "url": null,
+     "retrieved_at": null,
+     "quote": "rysunki (dokumentacje) na wykonanie robót towarzyszących (np. na przełożenie linii telefonicznej, energetycznej, oświetlenia itp.) oraz protokoły odbioru i przekazania tych robót właścicielom urządzeń",
+     "verification": "exact",
+     "evidence_state": null,
+     "sha256": "b1ae1879fae4eda9f9439baba3c20cdaf0008bd0d8043b0f5f25537df276f03e"
+    }
+   ]
+  },
+  {
+   "event_id": 871229,
+   "event_type": "EV_DOC_SIGNAL",
+   "risk_code": "R02.1",
+   "risk_name": "Warunki gruntowo-wodne (woda gruntowa, grunty słabe, kurzawka, skała)",
+   "summary": "Obowiązek wykonania badań gruntowych przez wykonawcę",
+   "cause": "Przeniesienie ryzyka nieznanych warunków wodno-gruntowych na wykonawcę może prowadzić do sporów i wzrostu cen ofertowych.",
+   "occurred_on": null,
+   "impact_days": null,
+   "impact_value": null,
+   "impact_pct": null,
+   "mitigation": null,
+   "evidence_state": null,
+   "origin": "AI",
+   "review_status": "proposed",
+   "proposal": true,
+   "change_notice": null,
+   "evidence": [
+    {
+     "source_id": 123487,
+     "source_kind": "docs_22",
+     "notice_number": null,
+     "document_id": 29971,
+     "page_no": 24,
+     "field_code": null,
+     "url": null,
+     "retrieved_at": null,
+     "quote": "Przed przystąpieniem do robót ziemnych Wykonawca robót powinien wykonać terenowe badania gruntu, określenie ich rodzaju i grubości warstw zalegających w miejscu robót ziemnych oraz ustalenie rzeczywistych warunków wodno-gruntowych",
+     "verification": "exact",
+     "evidence_state": null,
+     "sha256": "b1ae1879fae4eda9f9439baba3c20cdaf0008bd0d8043b0f5f25537df276f03e"
+    }
+   ]
+  },
+  {
+   "event_id": 871230,
+   "event_type": "EV_DOC_SIGNAL",
+   "risk_code": "R02.3",
+   "risk_name": "Archeologia, niewybuchy, zanieczyszczenia gruntu",
+   "summary": "Koszty nadzoru i badań archeologicznych w ryczałcie",
+   "cause": "Nieprzewidziane prace archeologiczne mogą generować wysokie koszty, które wykonawca próbuje wkalkulować lub dochodzić aneksu.",
+   "occurred_on": null,
+   "impact_days": null,
+   "impact_value": null,
+   "impact_pct": null,
+   "mitigation": null,
+   "evidence_state": null,
+   "origin": "AI",
+   "review_status": "proposed",
+   "proposal": true,
+   "change_notice": null,
+   "evidence": [
+    {
+     "source_id": 123487,
+     "source_kind": "docs_22",
+     "notice_number": null,
+     "document_id": 29971,
+     "page_no": 26,
+     "field_code": null,
+     "url": null,
+     "retrieved_at": null,
+     "quote": "Wykonawca ma obowiązek w kwocie kontraktowej zabezpieczyć nadzór i ew. badania archeologiczne.",
+     "verification": "exact",
+     "evidence_state": null,
+     "sha256": "b1ae1879fae4eda9f9439baba3c20cdaf0008bd0d8043b0f5f25537df276f03e"
+    }
+   ]
+  },
+  {
+   "event_id": 871231,
+   "event_type": "EV_DOC_SIGNAL",
+   "risk_code": "R12.2",
+   "risk_name": "Długie terminy dostaw urządzeń i materiałów (pompy, technologia OŚ/SUW, automatyka, rury)",
+   "summary": "Długie terminy dostaw pomp zatapialnych",
+   "cause": "Wskazanie specjalistycznych urządzeń bez rezerwy czasowej na dostawy wydłuża realizację.",
+   "occurred_on": null,
+   "impact_days": null,
+   "impact_value": null,
+   "impact_pct": null,
+   "mitigation": null,
+   "evidence_state": null,
+   "origin": "AI",
+   "review_status": "proposed",
+   "proposal": true,
+   "change_notice": null,
+   "evidence": [
+    {
+     "source_id": 123487,
+     "source_kind": "docs_22",
+     "notice_number": null,
+     "document_id": 29971,
+     "page_no": 45,
+     "field_code": null,
+     "url": null,
+     "retrieved_at": null,
+     "quote": "Przepompownie wyposażyć w pompy zatapialny o pracy naprzemiennej. Pompy powinny być one zamontowane w zbiorniku przy pomocy żeliwnej stopy sprzęgającej.",
+     "verification": "exact",
+     "evidence_state": null,
+     "sha256": "b1ae1879fae4eda9f9439baba3c20cdaf0008bd0d8043b0f5f25537df276f03e"
+    }
+   ]
+  },
+  {
+   "event_id": 871232,
+   "event_type": "EV_DOC_SIGNAL",
+   "risk_code": "R05.2",
+   "risk_name": "Interfejs z operatorem / właścicielem innej sieci, przyszła eksploatacja",
+   "summary": "Wymóg niepublicznej sieci APN dostawcy monitoringu",
+   "cause": "Uzależnienie integracji systemu od zewnętrznego dostawcy oprogramowania i jego sieci APN rodzi ryzyko blokady lub dodatkowych kosztów.",
+   "occurred_on": null,
+   "impact_days": null,
+   "impact_value": null,
+   "impact_pct": null,
+   "mitigation": null,
+   "evidence_state": null,
+   "origin": "AI",
+   "review_status": "proposed",
+   "proposal": true,
+   "change_notice": null,
+   "evidence": [
+    {
+     "source_id": 123487,
+     "source_kind": "docs_22",
+     "notice_number": null,
+     "document_id": 29971,
+     "page_no": 56,
+     "field_code": null,
+     "url": null,
+     "retrieved_at": null,
+     "quote": "Dostawca przepompowni ścieków wraz z rozdzielnicami zasilająco-sterowniczymi zawierającymi oprogramowanie istniejącego systemu monitoringu musi posiadać niepubliczną sieć APN dla potrzeb systemu monitoringu.",
+     "verification": "exact",
+     "evidence_state": null,
+     "sha256": "b1ae1879fae4eda9f9439baba3c20cdaf0008bd0d8043b0f5f25537df276f03e"
+    }
+   ]
+  },
+  {
+   "event_id": 871233,
+   "event_type": "EV_DOC_SIGNAL",
+   "risk_code": "R02.3",
+   "risk_name": "Archeologia, niewybuchy, zanieczyszczenia gruntu",
+   "summary": "Nadzór archeologiczny po stronie wykonawcy",
+   "cause": "Wykonawca musi uwzględnić koszty i ryzyko przestojów związanych z nadzorem archeologicznym bez sprecyzowanego zakresu.",
+   "occurred_on": null,
+   "impact_days": null,
+   "impact_value": null,
+   "impact_pct": null,
+   "mitigation": null,
+   "evidence_state": null,
+   "origin": "AI",
+   "review_status": "proposed",
+   "proposal": true,
+   "change_notice": null,
+   "evidence": [
+    {
+     "source_id": 123487,
+     "source_kind": "docs_22",
+     "notice_number": null,
+     "document_id": 29971,
+     "page_no": 59,
+     "field_code": null,
+     "url": null,
+     "retrieved_at": null,
+     "quote": "Wykonawca zapewni odpowiedni system i środki techniczne do kontroli jakości robót (zgodnie z PZJ) na terenie i poza placem budowy włącznie z nadzorem archeologicznym.",
+     "verification": "exact",
+     "evidence_state": null,
+     "sha256": "b1ae1879fae4eda9f9439baba3c20cdaf0008bd0d8043b0f5f25537df276f03e"
+    }
+   ]
+  },
+  {
+   "event_id": 871234,
+   "event_type": "EV_DOC_SIGNAL",
+   "risk_code": "R10.2",
+   "risk_name": "Odbiory sieci, inspekcja TV, próby szczelności, inwentaryzacja geodezyjna",
+   "summary": "Wymogi próby szczelności i czas stabilizacji",
+   "cause": "Długi czas przygotowania i sztywne wymagania temperaturowe prób mogą wydłużyć harmonogram.",
+   "occurred_on": null,
+   "impact_days": null,
+   "impact_value": null,
+   "impact_pct": null,
+   "mitigation": null,
+   "evidence_state": null,
+   "origin": "AI",
+   "review_status": "proposed",
+   "proposal": true,
+   "change_notice": null,
+   "evidence": [
+    {
+     "source_id": 123487,
+     "source_kind": "docs_22",
+     "notice_number": null,
+     "document_id": 29971,
+     "page_no": 74,
+     "field_code": null,
+     "url": null,
+     "retrieved_at": null,
+     "quote": "Przewód wodociągowy powinien być poddany próbie szczelności. Przed rozpoczęciem próby należy przewód napełnić wodą i dokładnie odpowietrzyć i pozostawić go na 12 godzin w celu ustabilizowania. Próbę szczelności należy przeprowadzić w temperaturze zewnętrznej nie niższej niż +1ºC.",
+     "verification": "exact",
+     "evidence_state": null,
+     "sha256": "b1ae1879fae4eda9f9439baba3c20cdaf0008bd0d8043b0f5f25537df276f03e"
+    }
+   ]
+  },
+  {
+   "event_id": 871330,
+   "event_type": "EV_DOC_SIGNAL",
+   "risk_code": "R06.1",
+   "risk_name": "Presja terminu dofinansowania (KPO 15.06/31.08.2026, koniec perspektywy)",
+   "summary": "Nierealistyczny 2-miesięczny termin realizacji",
+   "cause": "Dwu miesięczny termin na budowę sieci kanalizacyjnej i pompowni jest niezwykle krótki i grozi opóźnieniem.",
+   "occurred_on": null,
+   "impact_days": null,
+   "impact_value": null,
+   "impact_pct": null,
+   "mitigation": null,
+   "evidence_state": null,
+   "origin": "AI",
+   "review_status": "proposed",
+   "proposal": true,
+   "change_notice": null,
+   "evidence": [
+    {
+     "source_id": 123681,
+     "source_kind": "docs_22",
+     "notice_number": null,
+     "document_id": 29968,
+     "page_no": 3,
+     "field_code": null,
+     "url": null,
+     "retrieved_at": null,
+     "quote": "Okres realizacji zamówienia albo umowy ramowej: 2 miesiące",
+     "verification": "exact",
+     "evidence_state": null,
+     "sha256": "3a3eb8b0a7e7e15afe9cf735b5f805abccfab854ae5ca99519fe012f1a7d47fa"
+    }
+   ]
+  },
+  {
+   "event_id": 871488,
+   "event_type": "EV_DOC_SIGNAL",
+   "risk_code": "R18",
+   "risk_name": "Zależność efektu od zadań powiązanych (sieć ↔ oczyszczalnia/SUW/kolektor innego podmiotu)",
+   "summary": "Wpięcie do niezależnie projektowanej oczyszczalni",
+   "cause": "Zależność realizacji sieci od postępów odrębnego zadania dotyczącego oczyszczalni niesie ryzyko przestojów.",
+   "occurred_on": null,
+   "impact_days": null,
+   "impact_value": null,
+   "impact_pct": null,
+   "mitigation": null,
+   "evidence_state": null,
+   "origin": "AI",
+   "review_status": "proposed",
+   "proposal": true,
+   "change_notice": null,
+   "evidence": [
+    {
+     "source_id": 122987,
+     "source_kind": "docs_22",
+     "notice_number": null,
+     "document_id": 29960,
+     "page_no": 10,
+     "field_code": null,
+     "url": null,
+     "retrieved_at": null,
+     "quote": "Sieć wpięta zostanie do zaprojektowanej wg odrębnego opracowania instalacji kanalizacji sanitarnej na terenie planowanej oczyszczalni ścieków na działce nr 106 obręb Modlikowice.",
+     "verification": "exact",
+     "evidence_state": null,
+     "sha256": "8a0a9538509c7ed88c2a5c1b320f3b0357d9b3e0c6c7453f91a19c12dda47f35"
+    }
+   ]
+  },
+  {
+   "event_id": 871489,
+   "event_type": "EV_DOC_SIGNAL",
+   "risk_code": "R03.3",
+   "risk_name": "Przekroczenia przeszkód (cieki, wały, drogi krajowe/wojewódzkie, kolej)",
+   "summary": "Przekroczenie cieku wodnego",
+   "cause": "Przekroczenie cieku wymaga często specjalnych uzgodnień wodnoprawnych oraz technologii bezwykopowej.",
+   "occurred_on": null,
+   "impact_days": null,
+   "impact_value": null,
+   "impact_pct": null,
+   "mitigation": null,
+   "evidence_state": null,
+   "origin": "AI",
+   "review_status": "proposed",
+   "proposal": true,
+   "change_notice": null,
+   "evidence": [
+    {
+     "source_id": 122987,
+     "source_kind": "docs_22",
+     "notice_number": null,
+     "document_id": 29960,
+     "page_no": 11,
+     "field_code": null,
+     "url": null,
+     "retrieved_at": null,
+     "quote": "Na trasie występuje przekroczenie pod ciekiem z korytem o skarpach nieumocnionych .",
+     "verification": "exact",
+     "evidence_state": null,
+     "sha256": "8a0a9538509c7ed88c2a5c1b320f3b0357d9b3e0c6c7453f91a19c12dda47f35"
+    }
+   ]
+  },
+  {
+   "event_id": 871490,
+   "event_type": "EV_DOC_SIGNAL",
+   "risk_code": "R02.3",
+   "risk_name": "Archeologia, niewybuchy, zanieczyszczenia gruntu",
+   "summary": "Obowiązek uzyskania pozwolenia na badania archeologiczne",
+   "cause": "Wykonawca obarczony jest ryzykiem i czasem oczekiwania na decyzję konserwatorską.",
+   "occurred_on": null,
+   "impact_days": null,
+   "impact_value": null,
+   "impact_pct": null,
+   "mitigation": null,
+   "evidence_state": null,
+   "origin": "AI",
+   "review_status": "proposed",
+   "proposal": true,
+   "change_notice": null,
+   "evidence": [
+    {
+     "source_id": 122987,
+     "source_kind": "docs_22",
+     "notice_number": null,
+     "document_id": 29960,
+     "page_no": 12,
+     "field_code": null,
+     "url": null,
+     "retrieved_at": null,
+     "quote": "Zgodnie z uzgodnieniem z Wojewódzkim Urzędem Ochrony Zabytków inwestor / wykonawca prac bezpośrednio przed rozpoczęciem robót ziemnych musi uzyskać pozwolenie na badań archeologicznych.",
+     "verification": "exact",
+     "evidence_state": null,
+     "sha256": "8a0a9538509c7ed88c2a5c1b320f3b0357d9b3e0c6c7453f91a19c12dda47f35"
+    }
+   ]
+  },
+  {
+   "event_id": 871491,
+   "event_type": "EV_DOC_SIGNAL",
+   "risk_code": "R12.2",
+   "risk_name": "Długie terminy dostaw urządzeń i materiałów (pompy, technologia OŚ/SUW, automatyka, rury)",
+   "summary": "Długie terminy dostaw specjalistycznych pomp zatapialnych",
+   "cause": "Specjalistyczne urządzenia technologiczne mogą generować długie terminy oczekiwania i opóźniać kontrakt.",
+   "occurred_on": null,
+   "impact_days": null,
+   "impact_value": null,
+   "impact_pct": null,
+   "mitigation": null,
+   "evidence_state": null,
+   "origin": "AI",
+   "review_status": "proposed",
+   "proposal": true,
+   "change_notice": null,
+   "evidence": [
+    {
+     "source_id": 122987,
+     "source_kind": "docs_22",
+     "notice_number": null,
+     "document_id": 29960,
+     "page_no": 15,
+     "field_code": null,
+     "url": null,
+     "retrieved_at": null,
+     "quote": "Przepompownię wyposażyć w dwie pompy zatapialne zamontowane w zbiorniku przy pomocy żeliwnej stopy sprzęgającej.",
+     "verification": "exact",
+     "evidence_state": null,
+     "sha256": "8a0a9538509c7ed88c2a5c1b320f3b0357d9b3e0c6c7453f91a19c12dda47f35"
+    }
+   ]
+  },
+  {
+   "event_id": 871492,
+   "event_type": "EV_DOC_SIGNAL",
+   "risk_code": "R03.3",
+   "risk_name": "Przekroczenia przeszkód (cieki, wały, drogi krajowe/wojewódzkie, kolej)",
+   "summary": "Wymóg przewiertów pod ciekami wodnymi",
+   "cause": "Przekroczenia cieków wodnych niosą ryzyko trudnych warunków gruntowych i konieczności uzgodnień.",
+   "occurred_on": null,
+   "impact_days": null,
+   "impact_value": null,
+   "impact_pct": null,
+   "mitigation": null,
+   "evidence_state": null,
+   "origin": "AI",
+   "review_status": "proposed",
+   "proposal": true,
+   "change_notice": null,
+   "evidence": [
+    {
+     "source_id": 122987,
+     "source_kind": "docs_22",
+     "notice_number": null,
+     "document_id": 29960,
+     "page_no": 21,
+     "field_code": null,
+     "url": null,
+     "retrieved_at": null,
+     "quote": "Odcinki pod ciekami wykonać metoda bezwykopowa z zastosowaniem rur ochronnych. Komory należy zlokalizować poza skarpami cieków.",
+     "verification": "exact",
+     "evidence_state": null,
+     "sha256": "8a0a9538509c7ed88c2a5c1b320f3b0357d9b3e0c6c7453f91a19c12dda47f35"
+    }
+   ]
+  },
+  {
+   "event_id": 871493,
+   "event_type": "EV_DOC_SIGNAL",
+   "risk_code": "R01.3",
+   "risk_name": "Roboty towarzyszące poza zakresem (odtworzenie nawierzchni, zjazdy, przebudowy kolizji)",
+   "summary": "Niejasny zakres odtworzenia linii brzegowej i odszkodowań",
+   "cause": "Wykonawca może ponieść nieprzewidziane koszty naprawy brzegu i roszczeń odszkodowawczych.",
+   "occurred_on": null,
+   "impact_days": null,
+   "impact_value": null,
+   "impact_pct": null,
+   "mitigation": null,
+   "evidence_state": null,
+   "origin": "AI",
+   "review_status": "proposed",
+   "proposal": true,
+   "change_notice": null,
+   "evidence": [
+    {
+     "source_id": 122987,
+     "source_kind": "docs_22",
+     "notice_number": null,
+     "document_id": 29960,
+     "page_no": 21,
+     "field_code": null,
+     "url": null,
+     "retrieved_at": null,
+     "quote": "W przypadku zniszczenia linii brzegowej należy ja przywrócić do stanu pierwotnego , a za ewentualne szkody na rzecz osób trzecich wypłacić odszkodowanie.",
+     "verification": "exact",
+     "evidence_state": null,
+     "sha256": "8a0a9538509c7ed88c2a5c1b320f3b0357d9b3e0c6c7453f91a19c12dda47f35"
+    }
+   ]
+  },
+  {
+   "event_id": 871500,
+   "event_type": "EV_DOC_SIGNAL",
+   "risk_code": "R02.1",
+   "risk_name": "Warunki gruntowo-wodne (woda gruntowa, grunty słabe, kurzawka, skała)",
+   "summary": "Wysoki poziom wód gruntowych od 1,1 m p.p.t.",
+   "cause": "Wysoko zawieszone zwierciadło wody gruntowej utrudni prowadzenie wykopów głębokich pod kanalizację i wymusi kosztowne odwodnienia.",
+   "occurred_on": null,
+   "impact_days": null,
+   "impact_value": null,
+   "impact_pct": null,
+   "mitigation": null,
+   "evidence_state": null,
+   "origin": "AI",
+   "review_status": "proposed",
+   "proposal": true,
+   "change_notice": null,
+   "evidence": [
+    {
+     "source_id": 123684,
+     "source_kind": "docs_22",
+     "notice_number": null,
+     "document_id": 29976,
+     "page_no": 6,
+     "field_code": null,
+     "url": null,
+     "retrieved_at": null,
+     "quote": "W trakcie prac terenowych stwierdzono występowanie zwierciadła wód gruntowych oraz horyzontu sączeń w otworach (od 1,10 m p.p.t. do 3,70 m p.p.t.):",
+     "verification": "exact",
+     "evidence_state": null,
+     "sha256": "76e6ec0c49bd90379db5ff8752fd9392396f965a4c1095499566dfe580cd7771"
+    }
+   ]
+  },
+  {
+   "event_id": 871501,
+   "event_type": "EV_DOC_SIGNAL",
+   "risk_code": "R02.1",
+   "risk_name": "Warunki gruntowo-wodne (woda gruntowa, grunty słabe, kurzawka, skała)",
+   "summary": "Trudne warunki gruntowe i skalne",
+   "cause": "Występowanie zwietrzeliny i fragmentów skał uniemożliwiających osiągnięcie zakładanej głębokości grozi nieprzewidzianymi kosztami i opóźnieniami w wykopach.",
+   "occurred_on": null,
+   "impact_days": null,
+   "impact_value": null,
+   "impact_pct": null,
+   "mitigation": null,
+   "evidence_state": null,
+   "origin": "AI",
+   "review_status": "proposed",
+   "proposal": true,
+   "change_notice": null,
+   "evidence": [
+    {
+     "source_id": 123684,
+     "source_kind": "docs_22",
+     "notice_number": null,
+     "document_id": 29976,
+     "page_no": 8,
+     "field_code": null,
+     "url": null,
+     "retrieved_at": null,
+     "quote": "Otwór nr 18 nie został dowiercony do zakładanej głębokości ze względu na zbyt twardą zwietrzelinę i fragmenty skał.",
+     "verification": "exact",
+     "evidence_state": null,
+     "sha256": "76e6ec0c49bd90379db5ff8752fd9392396f965a4c1095499566dfe580cd7771"
+    }
+   ]
+  },
+  {
+   "event_id": 871502,
+   "event_type": "EV_DOC_SIGNAL",
+   "risk_code": "R02.1",
+   "risk_name": "Warunki gruntowo-wodne (woda gruntowa, grunty słabe, kurzawka, skała)",
+   "summary": "Napotkanie trudnych gruntów lub skały",
+   "cause": "Wystąpienie zwietrzeliny bazaltowej uniemożliwiającej wiercenie sygnalizuje ryzyko trudnych warunków gruntowych i konieczności robót w skale.",
+   "occurred_on": null,
+   "impact_days": null,
+   "impact_value": null,
+   "impact_pct": null,
+   "mitigation": null,
+   "evidence_state": null,
+   "origin": "AI",
+   "review_status": "proposed",
+   "proposal": true,
+   "change_notice": null,
+   "evidence": [
+    {
+     "source_id": 123684,
+     "source_kind": "docs_22",
+     "notice_number": null,
+     "document_id": 29976,
+     "page_no": 16,
+     "field_code": null,
+     "url": null,
+     "retrieved_at": null,
+     "quote": "Brak możliwości kontynuowania wiercenia do 5m",
+     "verification": "exact",
+     "evidence_state": null,
+     "sha256": "76e6ec0c49bd90379db5ff8752fd9392396f965a4c1095499566dfe580cd7771"
+    }
+   ]
+  }
+ ],
+ "ai_proposals": [
+  {
+   "what": "zmiana umowy z dokumentu",
+   "change_id": 677691,
+   "proposal": true,
+   "review_status": "proposed",
+   "quote": "Wystąpienie kolizji z siecią wodociągową uniemożliwiające posadowienie pompowni numer PM2 uciążliwe uwarunkowania terenowe, wysoki poziom wód gruntowych przy wykopie pod pompownię PM2",
+   "on": "Risk_Miner_protokol_koniecznosci_aneksowania_zagrodno.pdf"
+  },
+  {
+   "what": "zmiana umowy z dokumentu",
+   "change_id": 677719,
+   "proposal": true,
+   "review_status": "proposed",
+   "quote": "Wystąpienie kolizji z siecią wodociągową uniemożliwiające posadowienie pompowni numer PM2 uciążliwe uwarunkowania terenowe, wysoki poziom wód gruntowych przy wykopie pod pompownię PM2",
+   "on": "Risk_Miner_protokol_koniecznosci_aneksowania_zagrodno.pdf"
+  },
+  {
+   "what": "przyczyna zmiany umowy",
+   "change_id": 59472,
+   "proposal": true,
+   "risk_code": "N-UNSPEC",
+   "secondary_code": null,
+   "quote": "zmiana terminu wykonania umowy",
+   "verification": "exact",
+   "confidence": 0.8999999761581421,
+   "model": "gemini-3.5-flash-lite",
+   "review_status": "proposed",
+   "on": "ogłoszenie o wykonaniu umowy, sekcja zmian (BZP) 2026/BZP 00277648/01"
+  },
+  {
+   "what": "przyczyna zmiany umowy",
+   "change_id": 59630,
+   "proposal": true,
+   "risk_code": "R03",
+   "secondary_code": null,
+   "quote": "zmiana terminu ze względu na kolizję na budowie",
+   "verification": "exact",
+   "confidence": 0.8999999761581421,
+   "model": "gemini-3.5-flash-lite",
+   "review_status": "proposed",
+   "on": "ogłoszenie o wykonaniu umowy, sekcja zmian (BZP) 2026/BZP 00285691/01"
+  },
+  {
+   "what": "zdarzenie ryzyka",
+   "event_id": 743136,
+   "proposal": true,
+   "risk_code": "N-UNSPEC",
+   "where": "2026/BZP 00277648/01",
+   "quote": "zmiana terminu wykonania umowy",
+   "review_status": "proposed",
+   "on": "Zmiana umowy: przyczyna według modelu N-UNSPEC (Brak faktycznej przyczyny)"
+  },
+  {
+   "what": "zdarzenie ryzyka",
+   "event_id": 743137,
+   "proposal": true,
+   "risk_code": "R03",
+   "where": "2026/BZP 00285691/01",
+   "quote": "zmiana terminu ze względu na kolizję na budowie",
+   "review_status": "proposed",
+   "on": "Zmiana umowy: przyczyna według modelu R03 (Kolizje z uzbrojeniem terenu, dostęp do terenu, prawa do nieruchomości, zgody właścicieli)"
+  },
+  {
+   "what": "zdarzenie ryzyka",
+   "event_id": 870734,
+   "proposal": true,
+   "risk_code": "R18",
+   "where": "dokument 29963, s. 1",
+   "quote": "Nowo powstała sieć kanalizacyjna zostanie wpięta do realizowanej obecnie oczyszczalni ścieków zlokalizowanej na działce oznaczonej geodezyjnie numerem 106 obręb Modlikowice.",
+   "review_status": "proposed",
+   "on": "Wpięcie do realizowanej równolegle oczyszczalni"
+  },
+  {
+   "what": "zdarzenie ryzyka",
+   "event_id": 870735,
+   "proposal": true,
+   "risk_code": "R06.1",
+   "where": "dokument 29963, s. 1",
+   "quote": "Termin realizacji zamówienia wynosi: do 2 miesięcy od dnia zawarcia umowy. Termin jest zachowany, gdy do jego upływu zostanie podpisany protokół odbioru końcowego.",
+   "review_status": "proposed",
+   "on": "Bardzo krótki termin realizacji robót"
+  },
+  {
+   "what": "zdarzenie ryzyka",
+   "event_id": 870925,
+   "proposal": true,
+   "risk_code": "R06.1",
+   "where": "dokument 29973, s. 1",
+   "quote": "Termin realizacji przedmiotu umowy ustala się do 2 miesięcy od dnia zawarcia umowy.",
+   "review_status": "proposed",
+   "on": "Nierealistyczny termin realizacji przy funduszach z KPO"
+  },
+  {
+   "what": "zdarzenie ryzyka",
+   "event_id": 871018,
+   "proposal": true,
+   "risk_code": "R03.1",
+   "where": "",
+   "quote": "Nieznane kolizje w terenie wydłużają czas realizacji inwestycji i generują roszczenia wykonawcy.",
+   "review_status": "proposed",
+   "on": "Kolizje z niezinwentaryzowaną siecią"
+  },
+  {
+   "what": "zdarzenie ryzyka",
+   "event_id": 871019,
+   "proposal": true,
+   "risk_code": "R02.1",
+   "where": "",
+   "quote": "Trudne warunki gruntowo-wodne wymagają dodatkowych zabezpieczeń i wydłużają czas robót.",
+   "review_status": "proposed",
+   "on": "Wysoki poziom wód gruntowych"
+  },
+  {
+   "what": "zdarzenie ryzyka",
+   "event_id": 871020,
+   "proposal": true,
+   "risk_code": "R18",
+   "where": "",
+   "quote": "Zależność efektu od niezależnego zadania powiązanego grozi brakiem możliwości osiągnięcia celu projektu.",
+   "review_status": "proposed",
+   "on": "Zależność od opóźnionej oczyszczalni"
+  },
+  {
+   "what": "zdarzenie ryzyka",
+   "event_id": 871226,
+   "proposal": true,
+   "risk_code": "R01.3",
+   "where": "dokument 29971, s. 5",
+   "quote": "norę, którą po zakończeniu budowy należy odtworzyć zgodnie z uzgodnieniami Dolnośląskiej Służby Dróg i Kolei we Wrocławiu, Zarządu Dróg Powiatowych w Polkowicach i uzgodnienia z Gminą Chocianów oraz dokumentacją drogową.",
+   "review_status": "proposed",
+   "on": "Odtworzenie nawierzchni zgodnie z warunkami zarządców"
+  },
+  {
+   "what": "zdarzenie ryzyka",
+   "event_id": 871227,
+   "proposal": true,
+   "risk_code": "R02.3",
+   "where": "dokument 29971, s. 7",
+   "quote": "Wykonawca przed przystąpieniem do realizacji inwestycji ma obowiązek zabezpieczenie na własny koszt nadzoru archeologicznego.",
+   "review_status": "proposed",
+   "on": "Nadzór archeologiczny na koszt wykonawcy"
+  },
+  {
+   "what": "zdarzenie ryzyka",
+   "event_id": 871228,
+   "proposal": true,
+   "risk_code": "R10.2",
+   "where": "dokument 29971, s. 19",
+   "quote": "rysunki (dokumentacje) na wykonanie robót towarzyszących (np. na przełożenie linii telefonicznej, energetycznej, oświetlenia itp.) oraz protokoły odbioru i przekazania tych robót właścicielom urządzeń",
+   "review_status": "proposed",
+   "on": "Uzgodnienia i protokoły dla robót towarzyszących"
+  },
+  {
+   "what": "zdarzenie ryzyka",
+   "event_id": 871229,
+   "proposal": true,
+   "risk_code": "R02.1",
+   "where": "dokument 29971, s. 24",
+   "quote": "Przed przystąpieniem do robót ziemnych Wykonawca robót powinien wykonać terenowe badania gruntu, określenie ich rodzaju i grubości warstw zalegających w miejscu robót ziemnych oraz ustalenie rzeczywistych warunków wodno-gruntowych",
+   "review_status": "proposed",
+   "on": "Obowiązek wykonania badań gruntowych przez wykonawcę"
+  },
+  {
+   "what": "zdarzenie ryzyka",
+   "event_id": 871230,
+   "proposal": true,
+   "risk_code": "R02.3",
+   "where": "dokument 29971, s. 26",
+   "quote": "Wykonawca ma obowiązek w kwocie kontraktowej zabezpieczyć nadzór i ew. badania archeologiczne.",
+   "review_status": "proposed",
+   "on": "Koszty nadzoru i badań archeologicznych w ryczałcie"
+  },
+  {
+   "what": "zdarzenie ryzyka",
+   "event_id": 871231,
+   "proposal": true,
+   "risk_code": "R12.2",
+   "where": "dokument 29971, s. 45",
+   "quote": "Przepompownie wyposażyć w pompy zatapialny o pracy naprzemiennej. Pompy powinny być one zamontowane w zbiorniku przy pomocy żeliwnej stopy sprzęgającej.",
+   "review_status": "proposed",
+   "on": "Długie terminy dostaw pomp zatapialnych"
+  },
+  {
+   "what": "zdarzenie ryzyka",
+   "event_id": 871232,
+   "proposal": true,
+   "risk_code": "R05.2",
+   "where": "dokument 29971, s. 56",
+   "quote": "Dostawca przepompowni ścieków wraz z rozdzielnicami zasilająco-sterowniczymi zawierającymi oprogramowanie istniejącego systemu monitoringu musi posiadać niepubliczną sieć APN dla potrzeb systemu monitoringu.",
+   "review_status": "proposed",
+   "on": "Wymóg niepublicznej sieci APN dostawcy monitoringu"
+  },
+  {
+   "what": "zdarzenie ryzyka",
+   "event_id": 871233,
+   "proposal": true,
+   "risk_code": "R02.3",
+   "where": "dokument 29971, s. 59",
+   "quote": "Wykonawca zapewni odpowiedni system i środki techniczne do kontroli jakości robót (zgodnie z PZJ) na terenie i poza placem budowy włącznie z nadzorem archeologicznym.",
+   "review_status": "proposed",
+   "on": "Nadzór archeologiczny po stronie wykonawcy"
+  },
+  {
+   "what": "zdarzenie ryzyka",
+   "event_id": 871234,
+   "proposal": true,
+   "risk_code": "R10.2",
+   "where": "dokument 29971, s. 74",
+   "quote": "Przewód wodociągowy powinien być poddany próbie szczelności. Przed rozpoczęciem próby należy przewód napełnić wodą i dokładnie odpowietrzyć i pozostawić go na 12 godzin w celu ustabilizowania. Próbę szczelności należy przeprowadzić w temperaturze zewnętrznej nie niższej niż +1ºC.",
+   "review_status": "proposed",
+   "on": "Wymogi próby szczelności i czas stabilizacji"
+  },
+  {
+   "what": "zdarzenie ryzyka",
+   "event_id": 871330,
+   "proposal": true,
+   "risk_code": "R06.1",
+   "where": "dokument 29968, s. 3",
+   "quote": "Okres realizacji zamówienia albo umowy ramowej: 2 miesiące",
+   "review_status": "proposed",
+   "on": "Nierealistyczny 2-miesięczny termin realizacji"
+  },
+  {
+   "what": "zdarzenie ryzyka",
+   "event_id": 871488,
+   "proposal": true,
+   "risk_code": "R18",
+   "where": "dokument 29960, s. 10",
+   "quote": "Sieć wpięta zostanie do zaprojektowanej wg odrębnego opracowania instalacji kanalizacji sanitarnej na terenie planowanej oczyszczalni ścieków na działce nr 106 obręb Modlikowice.",
+   "review_status": "proposed",
+   "on": "Wpięcie do niezależnie projektowanej oczyszczalni"
+  },
+  {
+   "what": "zdarzenie ryzyka",
+   "event_id": 871489,
+   "proposal": true,
+   "risk_code": "R03.3",
+   "where": "dokument 29960, s. 11",
+   "quote": "Na trasie występuje przekroczenie pod ciekiem z korytem o skarpach nieumocnionych .",
+   "review_status": "proposed",
+   "on": "Przekroczenie cieku wodnego"
+  },
+  {
+   "what": "zdarzenie ryzyka",
+   "event_id": 871490,
+   "proposal": true,
+   "risk_code": "R02.3",
+   "where": "dokument 29960, s. 12",
+   "quote": "Zgodnie z uzgodnieniem z Wojewódzkim Urzędem Ochrony Zabytków inwestor / wykonawca prac bezpośrednio przed rozpoczęciem robót ziemnych musi uzyskać pozwolenie na badań archeologicznych.",
+   "review_status": "proposed",
+   "on": "Obowiązek uzyskania pozwolenia na badania archeologiczne"
+  },
+  {
+   "what": "zdarzenie ryzyka",
+   "event_id": 871491,
+   "proposal": true,
+   "risk_code": "R12.2",
+   "where": "dokument 29960, s. 15",
+   "quote": "Przepompownię wyposażyć w dwie pompy zatapialne zamontowane w zbiorniku przy pomocy żeliwnej stopy sprzęgającej.",
+   "review_status": "proposed",
+   "on": "Długie terminy dostaw specjalistycznych pomp zatapialnych"
+  },
+  {
+   "what": "zdarzenie ryzyka",
+   "event_id": 871492,
+   "proposal": true,
+   "risk_code": "R03.3",
+   "where": "dokument 29960, s. 21",
+   "quote": "Odcinki pod ciekami wykonać metoda bezwykopowa z zastosowaniem rur ochronnych. Komory należy zlokalizować poza skarpami cieków.",
+   "review_status": "proposed",
+   "on": "Wymóg przewiertów pod ciekami wodnymi"
+  },
+  {
+   "what": "zdarzenie ryzyka",
+   "event_id": 871493,
+   "proposal": true,
+   "risk_code": "R01.3",
+   "where": "dokument 29960, s. 21",
+   "quote": "W przypadku zniszczenia linii brzegowej należy ja przywrócić do stanu pierwotnego , a za ewentualne szkody na rzecz osób trzecich wypłacić odszkodowanie.",
+   "review_status": "proposed",
+   "on": "Niejasny zakres odtworzenia linii brzegowej i odszkodowań"
+  },
+  {
+   "what": "zdarzenie ryzyka",
+   "event_id": 871500,
+   "proposal": true,
+   "risk_code": "R02.1",
+   "where": "dokument 29976, s. 6",
+   "quote": "W trakcie prac terenowych stwierdzono występowanie zwierciadła wód gruntowych oraz horyzontu sączeń w otworach (od 1,10 m p.p.t. do 3,70 m p.p.t.):",
+   "review_status": "proposed",
+   "on": "Wysoki poziom wód gruntowych od 1,1 m p.p.t."
+  },
+  {
+   "what": "zdarzenie ryzyka",
+   "event_id": 871501,
+   "proposal": true,
+   "risk_code": "R02.1",
+   "where": "dokument 29976, s. 8",
+   "quote": "Otwór nr 18 nie został dowiercony do zakładanej głębokości ze względu na zbyt twardą zwietrzelinę i fragmenty skał.",
+   "review_status": "proposed",
+   "on": "Trudne warunki gruntowe i skalne"
+  },
+  {
+   "what": "zdarzenie ryzyka",
+   "event_id": 871502,
+   "proposal": true,
+   "risk_code": "R02.1",
+   "where": "dokument 29976, s. 16",
+   "quote": "Brak możliwości kontynuowania wiercenia do 5m",
+   "review_status": "proposed",
+   "on": "Napotkanie trudnych gruntów lub skały"
+  }
+ ],
+ "review_items": [
+  {
+   "id": 111,
+   "kind": "discrepancy",
+   "code": "change_count_mismatch",
+   "title": "Umowa (Przedsiębiorstwo Transportowo Budowlane Sp. z o.o.): w ogłoszeniach jest 2 zmian, a w ogłoszeniu o wykonaniu zadeklarowano 1",
+   "severity": "low",
+   "status": "open",
+   "created_by": "quality:change_count",
+   "created_at": "2026-11-21T18:35:33.700080+00:00"
+  },
+  {
+   "id": 271,
+   "kind": "link",
+   "code": "link_candidate",
+   "title": "Powiązanie projektu z postępowaniem ocds-148610-73938530-d223-11ee-a3b5-e25d731b0da9 (fuzzy)",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:review_sync",
+   "created_at": "2026-11-21T18:49:54.390781+00:00"
+  },
+  {
+   "id": 272,
+   "kind": "link",
+   "code": "link_candidate",
+   "title": "Powiązanie projektu z postępowaniem ocds-148610-f7b005c8-7d73-45ef-a23d-c11063b17075 (fuzzy)",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:review_sync",
+   "created_at": "2026-11-21T18:49:54.390781+00:00"
+  },
+  {
+   "id": 285,
+   "kind": "link",
+   "code": "link_candidate",
+   "title": "Powiązanie projektu z postępowaniem ocds-148610-0b554813-cf8d-11ed-b70f-ae2d9e28ec7b (fuzzy)",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:review_sync",
+   "created_at": "2026-11-21T18:49:54.390781+00:00"
+  },
+  {
+   "id": 286,
+   "kind": "link",
+   "code": "link_candidate",
+   "title": "Powiązanie projektu z postępowaniem ocds-148610-0facece0-7c24-43f4-aa5f-ec294acdc1b4 (fuzzy)",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:review_sync",
+   "created_at": "2026-11-21T18:49:54.390781+00:00"
+  },
+  {
+   "id": 293,
+   "kind": "link",
+   "code": "link_candidate",
+   "title": "Powiązanie projektu z postępowaniem ocds-148610-be095f56-98dc-4b1a-83c9-8e5c748e23c7 (fuzzy)",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:review_sync",
+   "created_at": "2026-11-21T18:49:54.390781+00:00"
+  },
+  {
+   "id": 2844,
+   "kind": "event",
+   "code": "ai_event",
+   "title": "Zmiana umowy: przyczyna według modelu N-UNSPEC (Brak faktycznej przyczyny)",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:review_sync",
+   "created_at": "2026-11-21T19:15:10.749043+00:00"
+  },
+  {
+   "id": 2845,
+   "kind": "event",
+   "code": "ai_event",
+   "title": "Zmiana umowy: przyczyna według modelu R03 (Kolizje z uzbrojeniem terenu, dostęp do terenu, prawa do nieruchomości, zgody właścicieli)",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:review_sync",
+   "created_at": "2026-11-21T19:15:10.749043+00:00"
+  },
+  {
+   "id": 22412,
+   "kind": "event",
+   "code": "ai_event",
+   "title": "Wpięcie do realizowanej równolegle oczyszczalni",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:review_sync",
+   "created_at": "2026-11-21T21:13:52.256023+00:00"
+  },
+  {
+   "id": 22413,
+   "kind": "event",
+   "code": "ai_event",
+   "title": "Bardzo krótki termin realizacji robót",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:review_sync",
+   "created_at": "2026-11-21T21:13:52.256023+00:00"
+  },
+  {
+   "id": 22569,
+   "kind": "event",
+   "code": "ai_event",
+   "title": "Nierealistyczny termin realizacji przy funduszach z KPO",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:review_sync",
+   "created_at": "2026-11-21T21:13:52.256023+00:00"
+  },
+  {
+   "id": 22662,
+   "kind": "event",
+   "code": "ai_event",
+   "title": "Kolizje z niezinwentaryzowaną siecią",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:review_sync",
+   "created_at": "2026-11-21T21:13:52.256023+00:00"
+  },
+  {
+   "id": 22663,
+   "kind": "event",
+   "code": "ai_event",
+   "title": "Wysoki poziom wód gruntowych",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:review_sync",
+   "created_at": "2026-11-21T21:13:52.256023+00:00"
+  },
+  {
+   "id": 22664,
+   "kind": "event",
+   "code": "ai_event",
+   "title": "Zależność od opóźnionej oczyszczalni",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:review_sync",
+   "created_at": "2026-11-21T21:13:52.256023+00:00"
+  },
+  {
+   "id": 27726,
+   "kind": "event",
+   "code": "ai_event",
+   "title": "Odtworzenie nawierzchni zgodnie z warunkami zarządców",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:review_sync",
+   "created_at": "2026-11-21T21:40:56.238432+00:00"
+  },
+  {
+   "id": 27727,
+   "kind": "event",
+   "code": "ai_event",
+   "title": "Nadzór archeologiczny na koszt wykonawcy",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:review_sync",
+   "created_at": "2026-11-21T21:40:56.238432+00:00"
+  },
+  {
+   "id": 27728,
+   "kind": "event",
+   "code": "ai_event",
+   "title": "Uzgodnienia i protokoły dla robót towarzyszących",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:review_sync",
+   "created_at": "2026-11-21T21:40:56.238432+00:00"
+  },
+  {
+   "id": 27729,
+   "kind": "event",
+   "code": "ai_event",
+   "title": "Obowiązek wykonania badań gruntowych przez wykonawcę",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:review_sync",
+   "created_at": "2026-11-21T21:40:56.238432+00:00"
+  },
+  {
+   "id": 27730,
+   "kind": "event",
+   "code": "ai_event",
+   "title": "Koszty nadzoru i badań archeologicznych w ryczałcie",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:review_sync",
+   "created_at": "2026-11-21T21:40:56.238432+00:00"
+  },
+  {
+   "id": 27731,
+   "kind": "event",
+   "code": "ai_event",
+   "title": "Długie terminy dostaw pomp zatapialnych",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:review_sync",
+   "created_at": "2026-11-21T21:40:56.238432+00:00"
+  },
+  {
+   "id": 27732,
+   "kind": "event",
+   "code": "ai_event",
+   "title": "Wymóg niepublicznej sieci APN dostawcy monitoringu",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:review_sync",
+   "created_at": "2026-11-21T21:40:56.238432+00:00"
+  },
+  {
+   "id": 27733,
+   "kind": "event",
+   "code": "ai_event",
+   "title": "Nadzór archeologiczny po stronie wykonawcy",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:review_sync",
+   "created_at": "2026-11-21T21:40:56.238432+00:00"
+  },
+  {
+   "id": 27734,
+   "kind": "event",
+   "code": "ai_event",
+   "title": "Wymogi próby szczelności i czas stabilizacji",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:review_sync",
+   "created_at": "2026-11-21T21:40:56.238432+00:00"
+  },
+  {
+   "id": 27993,
+   "kind": "event",
+   "code": "ai_event",
+   "title": "Nierealistyczny 2-miesięczny termin realizacji",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:review_sync",
+   "created_at": "2026-11-21T21:40:56.238432+00:00"
+  },
+  {
+   "id": 28236,
+   "kind": "event",
+   "code": "ai_event",
+   "title": "Wpięcie do niezależnie projektowanej oczyszczalni",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:review_sync",
+   "created_at": "2026-11-21T21:40:56.238432+00:00"
+  },
+  {
+   "id": 28237,
+   "kind": "event",
+   "code": "ai_event",
+   "title": "Przekroczenie cieku wodnego",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:review_sync",
+   "created_at": "2026-11-21T21:40:56.238432+00:00"
+  },
+  {
+   "id": 28238,
+   "kind": "event",
+   "code": "ai_event",
+   "title": "Obowiązek uzyskania pozwolenia na badania archeologiczne",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:review_sync",
+   "created_at": "2026-11-21T21:40:56.238432+00:00"
+  },
+  {
+   "id": 28239,
+   "kind": "event",
+   "code": "ai_event",
+   "title": "Długie terminy dostaw specjalistycznych pomp zatapialnych",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:review_sync",
+   "created_at": "2026-11-21T21:40:56.238432+00:00"
+  },
+  {
+   "id": 28240,
+   "kind": "event",
+   "code": "ai_event",
+   "title": "Wymóg przewiertów pod ciekami wodnymi",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:review_sync",
+   "created_at": "2026-11-21T21:40:56.238432+00:00"
+  },
+  {
+   "id": 28241,
+   "kind": "event",
+   "code": "ai_event",
+   "title": "Niejasny zakres odtworzenia linii brzegowej i odszkodowań",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:review_sync",
+   "created_at": "2026-11-21T21:40:56.238432+00:00"
+  },
+  {
+   "id": 28248,
+   "kind": "event",
+   "code": "ai_event",
+   "title": "Wysoki poziom wód gruntowych od 1,1 m p.p.t.",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:review_sync",
+   "created_at": "2026-11-21T21:40:56.238432+00:00"
+  },
+  {
+   "id": 28249,
+   "kind": "event",
+   "code": "ai_event",
+   "title": "Trudne warunki gruntowe i skalne",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:review_sync",
+   "created_at": "2026-11-21T21:40:56.238432+00:00"
+  },
+  {
+   "id": 28250,
+   "kind": "event",
+   "code": "ai_event",
+   "title": "Napotkanie trudnych gruntów lub skały",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:review_sync",
+   "created_at": "2026-11-21T21:40:56.238432+00:00"
+  },
+  {
+   "id": 72122,
+   "kind": "link",
+   "code": "document_contract",
+   "title": "Dokument „protokół konieczności aneksowania umowy” dotyczy umowy IR.271.1.2026 z 05.03.2026?",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:doc_link",
+   "created_at": "2026-11-21T22:55:53.371326+00:00"
+  },
+  {
+   "id": 72123,
+   "kind": "fact",
+   "code": "document_change",
+   "title": "Zmiana umowy z dokumentu „protokół konieczności aneksowania umowy”: termin o 1 mies. do 05.06.2026",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:doc_link",
+   "created_at": "2026-11-21T22:55:53.371326+00:00"
+  },
+  {
+   "id": 72124,
+   "kind": "event",
+   "code": "document_cause",
+   "title": "Przyczyna R03 w dokumencie „protokół konieczności aneksowania umowy”: kolizja z istniejącą siecią lub uzbrojeniem",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:doc_link",
+   "created_at": "2026-11-21T22:55:53.371326+00:00"
+  },
+  {
+   "id": 72125,
+   "kind": "event",
+   "code": "document_cause",
+   "title": "Przyczyna R02 w dokumencie „protokół konieczności aneksowania umowy”: woda gruntowa",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:doc_link",
+   "created_at": "2026-11-21T22:55:53.371326+00:00"
+  },
+  {
+   "id": 72126,
+   "kind": "event",
+   "code": "document_effect",
+   "title": "Zależność od inwestycji powiązanej: oczyszczalnia ścieków w Modlikowicach",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:doc_link",
+   "created_at": "2026-11-21T22:55:53.371326+00:00"
+  },
+  {
+   "id": 72333,
+   "kind": "link",
+   "code": "document_contract",
+   "title": "Dokument „protokół konieczności aneksowania umowy” dotyczy umowy IR.271.1.2026 z 05.03.2026?",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:doc_link",
+   "created_at": "2026-11-21T23:09:29.963248+00:00"
+  },
+  {
+   "id": 72334,
+   "kind": "fact",
+   "code": "document_change",
+   "title": "Zmiana umowy z dokumentu „protokół konieczności aneksowania umowy”: termin o 1 mies. do 05.06.2026",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:doc_link",
+   "created_at": "2026-11-21T23:09:29.963248+00:00"
+  },
+  {
+   "id": 72335,
+   "kind": "event",
+   "code": "document_cause",
+   "title": "Przyczyna R03 w dokumencie „protokół konieczności aneksowania umowy”: kolizja z istniejącą siecią lub uzbrojeniem",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:doc_link",
+   "created_at": "2026-11-21T23:09:29.963248+00:00"
+  },
+  {
+   "id": 72336,
+   "kind": "event",
+   "code": "document_cause",
+   "title": "Przyczyna R02 w dokumencie „protokół konieczności aneksowania umowy”: woda gruntowa",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:doc_link",
+   "created_at": "2026-11-21T23:09:29.963248+00:00"
+  },
+  {
+   "id": 72337,
+   "kind": "event",
+   "code": "document_effect",
+   "title": "Zależność od inwestycji powiązanej: oczyszczalnia ścieków w Modlikowicach",
+   "severity": "medium",
+   "status": "open",
+   "created_by": "system:doc_link",
+   "created_at": "2026-11-21T23:09:29.963248+00:00"
+  }
+ ],
+ "documents": [
+  {
+   "id": 1870,
+   "doc_type": "kwota",
+   "title": "platformazakupowa page: Zamawiający informuje, że kwota jaką zamierza przeznaczyć na sfinansowanie zamówienia wynosi 5 000 000,00 zł brutto.",
+   "filename": null,
+   "kind_label": null,
+   "doc_date": null,
+   "url": "https://platformazakupowa.pl/transakcja/1255061",
+   "sha256": "19ea1dc5a5238ae5b2a5a6b13d6005e029ef408c551746b5069b3b5dc9a5c17c",
+   "pages": null,
+   "sensitivity": "public",
+   "fetch_state": "found"
+  },
+  {
+   "id": 29959,
+   "doc_type": "modyfikacja",
+   "title": "08de6a2b-05f9-45a6-bbe7-1e0001c4a846.pdf",
+   "filename": "08de6a2b-05f9-45a6-bbe7-1e0001c4a846.pdf",
+   "kind_label": null,
+   "doc_date": null,
+   "url": "https://platformazakupowa.pl/file/get_new/7c6872f355cf54cf159a60dfb5fb6cf1.pdf",
+   "sha256": "a7281bc9acd5ac0b853f69f9d797fc86dac0288e1a4cb9b2ca35109892dd9ea1",
+   "pages": 1,
+   "sensitivity": "public",
+   "fetch_state": "found"
+  },
+  {
+   "id": 29960,
+   "doc_type": "projekt",
+   "title": "załącznik nr 8 Projekt techniczny.pdf",
+   "filename": "załącznik nr 8 Projekt techniczny.pdf",
+   "kind_label": null,
+   "doc_date": null,
+   "url": "https://platformazakupowa.pl/file/get_new/44bab9ddb3978eb8c763ecac00ec11ce.pdf",
+   "sha256": "8a0a9538509c7ed88c2a5c1b320f3b0357d9b3e0c6c7453f91a19c12dda47f35",
+   "pages": 40,
+   "sensitivity": "public",
+   "fetch_state": "found"
+  },
+  {
+   "id": 29963,
+   "doc_type": "swz",
+   "title": "SWZ.docx",
+   "filename": "SWZ.docx",
+   "kind_label": null,
+   "doc_date": null,
+   "url": "https://platformazakupowa.pl/file/get_new/885a1b1d3407fb3fa31a8e5a2a414ec6.docx",
+   "sha256": "1ecbcacb10fb42ba199fc72bf66e7d29576fa3b63b84e3aa07458ce798b61c77",
+   "pages": null,
+   "sensitivity": "public",
+   "fetch_state": "found"
+  },
+  {
+   "id": 29964,
+   "doc_type": "inne",
+   "title": "Bud. sieci kan. sanitarnej w miejscowości Modlikowice w ramach zadania pn. Budowa sieci kan. san. na terenie gminy Zagrodno.pdf",
+   "filename": "Bud. sieci kan. sanitarnej w miejscowości Modlikowice w ramach zadania pn. Budowa sieci kan. san. na terenie gminy Zagrodno.pdf",
+   "kind_label": null,
+   "doc_date": null,
+   "url": "https://platformazakupowa.pl/file/get_new/e9a0517a65bf9880037af2dcacb761ed.pdf",
+   "sha256": "6685b30a016c460afc0a00b697ee18bba016ed4aa3a39fb62d5f069128125a86",
+   "pages": 68,
+   "sensitivity": "public",
+   "fetch_state": "found"
+  },
+  {
+   "id": 29965,
+   "doc_type": "wybor",
+   "title": "Informacja o wyborze najkorzystniejszej oferty - 253.2.pdf",
+   "filename": "Informacja o wyborze najkorzystniejszej oferty - 253.2.pdf",
+   "kind_label": null,
+   "doc_date": null,
+   "url": "https://platformazakupowa.pl/file/get_new/f5bbefb2deb452994f1058b443c91b79.pdf",
+   "sha256": "dcb79cc632f4658a759cedce92da25eaaa3f444ba085f0bedbe9ac825ae3e708",
+   "pages": 2,
+   "sensitivity": "public",
+   "fetch_state": "found"
+  },
+  {
+   "id": 29966,
+   "doc_type": "modyfikacja",
+   "title": "WYJAŚNIENIE I ZMIANA TREŚCI SPECYFIKACJI WARUNKÓW ZAMÓWIENIA.pdf",
+   "filename": "WYJAŚNIENIE I ZMIANA TREŚCI SPECYFIKACJI WARUNKÓW ZAMÓWIENIA.pdf",
+   "kind_label": null,
+   "doc_date": null,
+   "url": "https://platformazakupowa.pl/file/get_new/b67e3d47bfed2ec1414f8ac9efad4aad.pdf",
+   "sha256": "cf9be430c1b190db406d0e23017e5124f7b02575857d1d5c1cb2658c70a31c29",
+   "pages": 2,
+   "sensitivity": "public",
+   "fetch_state": "found"
+  },
+  {
+   "id": 29968,
+   "doc_type": "inne",
+   "title": "08de6243-ddb7-94cb-bbe7-1e0001c4372e.pdf",
+   "filename": "08de6243-ddb7-94cb-bbe7-1e0001c4372e.pdf",
+   "kind_label": null,
+   "doc_date": null,
+   "url": "https://platformazakupowa.pl/file/get_new/030d70b87b5b5e23336d330cc2f271e3.pdf",
+   "sha256": "3a3eb8b0a7e7e15afe9cf735b5f805abccfab854ae5ca99519fe012f1a7d47fa",
+   "pages": 6,
+   "sensitivity": "public",
+   "fetch_state": "found"
+  },
+  {
+   "id": 29969,
+   "doc_type": "inne",
+   "title": "Załączniki nr 1,2,3,4,5 do SWZ - edytowalne.docx",
+   "filename": "Załączniki nr 1,2,3,4,5 do SWZ - edytowalne.docx",
+   "kind_label": null,
+   "doc_date": null,
+   "url": "https://platformazakupowa.pl/file/get_new/3081af3ee766398763049c3d2155e6d2.docx",
+   "sha256": "0d05793135be1d83f6c7eb0c55311ab53ec29c8cca905c514dbda3ed715dd1f9",
+   "pages": null,
+   "sensitivity": "public",
+   "fetch_state": "found"
+  },
+  {
+   "id": 29970,
+   "doc_type": "otwarcie",
+   "title": "Informacja z otwarcia ofert.pdf",
+   "filename": "Informacja z otwarcia ofert.pdf",
+   "kind_label": null,
+   "doc_date": null,
+   "url": "https://platformazakupowa.pl/file/get_new/be5b04dd8893e249737b2f0e1e75cd4f.pdf",
+   "sha256": "8712876b4d940fd5c8f7543835573a919c7b0f2e48b63e5d5cb10b39b7994646",
+   "pages": 1,
+   "sensitivity": "public",
+   "fetch_state": "found"
+  },
+  {
+   "id": 29971,
+   "doc_type": "stwiorb",
+   "title": "STWIORB etap 1.pdf",
+   "filename": "STWIORB etap 1.pdf",
+   "kind_label": null,
+   "doc_date": null,
+   "url": "https://platformazakupowa.pl/file/get_new/e4cc79ad2a91efa24ae54463ef899fa0.pdf",
+   "sha256": "b1ae1879fae4eda9f9439baba3c20cdaf0008bd0d8043b0f5f25537df276f03e",
+   "pages": 76,
+   "sensitivity": "public",
+   "fetch_state": "found"
+  },
+  {
+   "id": 29972,
+   "doc_type": "wybor",
+   "title": "2026_BZP 00143366_01.pdf",
+   "filename": "2026_BZP 00143366_01.pdf",
+   "kind_label": null,
+   "doc_date": null,
+   "url": "https://platformazakupowa.pl/file/get_new/24c5f43efbb6924e5b2339a561c7ab05.pdf",
+   "sha256": "070ea56a3e93f590544f5fb11c27fda035d738a81fdc64284b60d499f61d36ac",
+   "pages": 3,
+   "sensitivity": "public",
+   "fetch_state": "found"
+  },
+  {
+   "id": 29973,
+   "doc_type": "ppu",
+   "title": "Załącznik nr 6 do SWZ - Projektowane postanowienia umowy.docx",
+   "filename": "Załącznik nr 6 do SWZ - Projektowane postanowienia umowy.docx",
+   "kind_label": null,
+   "doc_date": null,
+   "url": "https://platformazakupowa.pl/file/get_new/4ec5531bf9d6489b516af2181e5f3fd3.docx",
+   "sha256": "d0bf36437e102fa7e81e67842c4153c0fbd0198d54b4d4fff88f85a749b58719",
+   "pages": null,
+   "sensitivity": "public",
+   "fetch_state": "found"
+  },
+  {
+   "id": 29974,
+   "doc_type": "projekt",
+   "title": "załącznik nr 9a Mapa do opinii geotechnicznej.pdf",
+   "filename": "załącznik nr 9a Mapa do opinii geotechnicznej.pdf",
+   "kind_label": null,
+   "doc_date": null,
+   "url": "https://platformazakupowa.pl/file/get_new/8ce327d572ff1de5c5f2a00e166560cf.pdf",
+   "sha256": "0739af735b8309db1f0ad2bfb72cd206009ca2a6368014476b38ed5ee92c41be",
+   "pages": 1,
+   "sensitivity": "public",
+   "fetch_state": "found"
+  },
+  {
+   "id": 29976,
+   "doc_type": "projekt",
+   "title": "załącznik nr 9 Opinia Geotechniczna.pdf",
+   "filename": "załącznik nr 9 Opinia Geotechniczna.pdf",
+   "kind_label": null,
+   "doc_date": null,
+   "url": "https://platformazakupowa.pl/file/get_new/711e324abd02e2714db3eb64abbba82e.pdf",
+   "sha256": "76e6ec0c49bd90379db5ff8752fd9392396f965a4c1095499566dfe580cd7771",
+   "pages": 28,
+   "sensitivity": "public",
+   "fetch_state": "found"
+  },
+  {
+   "id": 34503,
+   "doc_type": "aneks",
+   "title": "Risk_Miner_protokol_koniecznosci_aneksowania_zagrodno.pdf",
+   "filename": "Risk_Miner_protokol_koniecznosci_aneksowania_zagrodno.pdf",
+   "kind_label": "protokół konieczności aneksowania umowy",
+   "doc_date": "2026-05-05",
+   "url": "upload:e6f338264b1755f6f75e40d2b14504711c43bfcbc3f5463ae6cdb67c2819f935",
+   "sha256": "e6f338264b1755f6f75e40d2b14504711c43bfcbc3f5463ae6cdb67c2819f935",
+   "pages": 1,
+   "sensitivity": "public",
+   "fetch_state": "found"
+  },
+  {
+   "id": 34574,
+   "doc_type": "aneks",
+   "title": "Risk_Miner_protokol_koniecznosci_aneksowania_zagrodno.pdf",
+   "filename": "Risk_Miner_protokol_koniecznosci_aneksowania_zagrodno.pdf",
+   "kind_label": "protokół konieczności aneksowania umowy",
+   "doc_date": "2026-05-05",
+   "url": "upload:4c1d489e72a544d2649a17b5aaa514f9dc74891d2b4a5b560cb4c14d752f7a32",
+   "sha256": "4c1d489e72a544d2649a17b5aaa514f9dc74891d2b4a5b560cb4c14d752f7a32",
+   "pages": 1,
+   "sensitivity": "public",
+   "fetch_state": "found"
+  }
+ ],
+ "whats_changed": [
+  {
+   "document_id": 34503,
+   "document": "protokół konieczności aneksowania umowy",
+   "date": "2026-05-05",
+   "potwierdzone": [
+    {
+     "key": "kpo",
+     "label": "Numer KPO z dokumentu",
+     "value": "KPOD.03.15-IW.13-0004/25",
+     "where": "zgodny z projektem w zestawie organizatora",
+     "refs": [
+      {
+       "kind": "document",
+       "id": "34503",
+       "label": "protokół konieczności aneksowania umowy, 05.05.2026"
+      }
+     ],
+     "from_document": false
+    },
+    {
+     "key": "signed_on",
+     "label": "Data zawarcia umowy",
+     "value": "05.03.2026",
+     "where": "zgodna z ogłoszeniem o wyniku w BZP",
+     "refs": [
+      {
+       "kind": "document",
+       "id": "34503",
+       "label": "protokół konieczności aneksowania umowy, 05.05.2026"
+      }
+     ],
+     "from_document": false
+    },
+    {
+     "key": "old_end",
+     "label": "Dotychczasowy termin umowy",
+     "value": "05.05.2026",
+     "where": "zgodny z BZP (ogłoszenie o wyniku)",
+     "refs": [
+      {
+       "kind": "document",
+       "id": "34503",
+       "label": "protokół konieczności aneksowania umowy, 05.05.2026"
+      }
+     ],
+     "from_document": false
+    }
+   ],
+   "zmienione": [
+    {
+     "key": "planned_end",
+     "label": "Planowany koniec umowy",
+     "before": "05.05.2026",
+     "after": "05.06.2026",
+     "why": "protokół konieczności aneksowania umowy z 05.05.2026",
+     "refs": [
+      {
+       "kind": "document",
+       "id": "34503",
+       "label": "protokół konieczności aneksowania umowy, 05.05.2026"
+      }
+     ],
+     "from_document": true
+    },
+    {
+     "key": "delay",
+     "label": "Opóźnienie względem terminu",
+     "before": "+27 dni",
+     "after": "-4 dni",
+     "why": "po uwzględnieniu nowego terminu z dokumentu",
+     "refs": [
+      {
+       "kind": "document",
+       "id": "34503",
+       "label": "protokół konieczności aneksowania umowy, 05.05.2026"
+      }
+     ],
+     "from_document": true
+    }
+   ],
+   "nowe": [
+    {
+     "key": "contract_change",
+     "label": "Proponowana zmiana umowy: terminu",
+     "value": "do zatwierdzenia",
+     "refs": [
+      {
+       "kind": "document",
+       "id": "34503",
+       "label": "protokół konieczności aneksowania umowy, 05.05.2026"
+      }
+     ],
+     "from_document": true,
+     "decision": null
+    },
+    {
+     "key": "event:872686",
+     "label": "kolizja z istniejącą siecią lub uzbrojeniem",
+     "value": "R03, do przeglądu",
+     "refs": [
+      {
+       "kind": "document",
+       "id": "34503",
+       "label": "protokół konieczności aneksowania umowy, 05.05.2026"
+      }
+     ],
+     "from_document": true,
+     "decision": null
+    },
+    {
+     "key": "event:872687",
+     "label": "woda gruntowa",
+     "value": "R02, do przeglądu",
+     "refs": [
+      {
+       "kind": "document",
+       "id": "34503",
+       "label": "protokół konieczności aneksowania umowy, 05.05.2026"
+      }
+     ],
+     "from_document": true,
+     "decision": null
+    },
+    {
+     "key": "event:872688",
+     "label": "Efekt użytkowy opóźniony o ok. 4 mies. przez inwestycję powiązaną: oczyszczalnia ścieków w Modlikowicach",
+     "value": "R18, do przeglądu",
+     "refs": [
+      {
+       "kind": "document",
+       "id": "34503",
+       "label": "protokół konieczności aneksowania umowy, 05.05.2026"
+      }
+     ],
+     "from_document": true,
+     "decision": null
+    }
+   ],
+   "zamkniete": [
+    {
+     "key": "gap:protokol",
+     "label": "Brakujący dokument z budowy: protokół konieczności lub odbioru",
+     "value": "mamy dokument",
+     "refs": [
+      {
+       "kind": "document",
+       "id": "34503",
+       "label": "protokół konieczności aneksowania umowy, 05.05.2026"
+      }
+     ],
+     "from_document": true
+    }
+   ],
+   "aggregates": {
+    "planned_end": {
+     "before": "05.05.2026",
+     "after": "05.06.2026"
+    },
+    "delay_days": {
+     "before": 27,
+     "after": -4,
+     "display_before": "+27 dni",
+     "display_after": "-4 dni"
+    }
+   },
+   "analyses_to_rerun": []
+  },
+  {
+   "document_id": 34574,
+   "document": "protokół konieczności aneksowania umowy",
+   "date": "2026-05-05",
+   "potwierdzone": [
+    {
+     "key": "kpo",
+     "label": "Numer KPO z dokumentu",
+     "value": "KPOD.03.15-IW.13-0004/25",
+     "where": "zgodny z projektem w zestawie organizatora",
+     "refs": [
+      {
+       "kind": "document",
+       "id": "34574",
+       "label": "protokół konieczności aneksowania umowy, 05.05.2026"
+      }
+     ],
+     "from_document": false
+    },
+    {
+     "key": "signed_on",
+     "label": "Data zawarcia umowy",
+     "value": "05.03.2026",
+     "where": "zgodna z ogłoszeniem o wyniku w BZP",
+     "refs": [
+      {
+       "kind": "document",
+       "id": "34574",
+       "label": "protokół konieczności aneksowania umowy, 05.05.2026"
+      }
+     ],
+     "from_document": false
+    },
+    {
+     "key": "old_end",
+     "label": "Dotychczasowy termin umowy",
+     "value": "05.05.2026",
+     "where": "zgodny z BZP (ogłoszenie o wyniku)",
+     "refs": [
+      {
+       "kind": "document",
+       "id": "34574",
+       "label": "protokół konieczności aneksowania umowy, 05.05.2026"
+      }
+     ],
+     "from_document": false
+    }
+   ],
+   "zmienione": [
+    {
+     "key": "planned_end",
+     "label": "Planowany koniec umowy",
+     "before": "05.05.2026",
+     "after": "05.06.2026",
+     "why": "protokół konieczności aneksowania umowy z 05.05.2026",
+     "refs": [
+      {
+       "kind": "document",
+       "id": "34574",
+       "label": "protokół konieczności aneksowania umowy, 05.05.2026"
+      }
+     ],
+     "from_document": true
+    },
+    {
+     "key": "delay",
+     "label": "Opóźnienie względem terminu",
+     "before": "+27 dni",
+     "after": "-4 dni",
+     "why": "po uwzględnieniu nowego terminu z dokumentu",
+     "refs": [
+      {
+       "kind": "document",
+       "id": "34574",
+       "label": "protokół konieczności aneksowania umowy, 05.05.2026"
+      }
+     ],
+     "from_document": true
+    }
+   ],
+   "nowe": [
+    {
+     "key": "contract_change",
+     "label": "Proponowana zmiana umowy: terminu",
+     "value": "do zatwierdzenia",
+     "refs": [
+      {
+       "kind": "document",
+       "id": "34574",
+       "label": "protokół konieczności aneksowania umowy, 05.05.2026"
+      }
+     ],
+     "from_document": true,
+     "decision": null
+    },
+    {
+     "key": "event:872787",
+     "label": "kolizja z istniejącą siecią lub uzbrojeniem",
+     "value": "R03, do przeglądu",
+     "refs": [
+      {
+       "kind": "document",
+       "id": "34574",
+       "label": "protokół konieczności aneksowania umowy, 05.05.2026"
+      }
+     ],
+     "from_document": true,
+     "decision": null
+    },
+    {
+     "key": "event:872788",
+     "label": "woda gruntowa",
+     "value": "R02, do przeglądu",
+     "refs": [
+      {
+       "kind": "document",
+       "id": "34574",
+       "label": "protokół konieczności aneksowania umowy, 05.05.2026"
+      }
+     ],
+     "from_document": true,
+     "decision": null
+    },
+    {
+     "key": "event:872789",
+     "label": "Efekt użytkowy opóźniony o ok. 4 mies. przez inwestycję powiązaną: oczyszczalnia ścieków w Modlikowicach",
+     "value": "R18, do przeglądu",
+     "refs": [
+      {
+       "kind": "document",
+       "id": "34574",
+       "label": "protokół konieczności aneksowania umowy, 05.05.2026"
+      }
+     ],
+     "from_document": true,
+     "decision": null
+    }
+   ],
+   "zamkniete": [
+    {
+     "key": "gap:protokol",
+     "label": "Brakujący dokument z budowy: protokół konieczności lub odbioru",
+     "value": "mamy dokument",
+     "refs": [
+      {
+       "kind": "document",
+       "id": "34574",
+       "label": "protokół konieczności aneksowania umowy, 05.05.2026"
+      }
+     ],
+     "from_document": true
+    }
+   ],
+   "aggregates": {
+    "planned_end": {
+     "before": "05.05.2026",
+     "after": "05.06.2026"
+    },
+    "delay_days": {
+     "before": 27,
+     "after": -4,
+     "display_before": "+27 dni",
+     "display_after": "-4 dni"
+    }
+   },
+   "analyses_to_rerun": []
+  }
+ ],
+ "notices": [
+  {
+   "notice_number": "2026/BZP 00089794/01",
+   "type": "ContractNotice",
+   "type_label": "ogłoszenie o zamówieniu",
+   "published_at": "2026-02-02T11:54:38.327289+00:00",
+   "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de6251-d7ab-b2c7-4c32-fc0001f13660"
+  },
+  {
+   "notice_number": "2026/BZP 00108931/01",
+   "type": "NoticeUpdateNotice",
+   "type_label": "ogłoszenie o zmianie ogłoszenia",
+   "published_at": "2026-02-12T12:15:33.595575+00:00",
+   "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de6a30-6bff-cbae-056e-e50001ab5f62"
+  },
+  {
+   "notice_number": "2026/BZP 00143366/01",
+   "type": "TenderResultNotice",
+   "type_label": "ogłoszenie o wyniku",
+   "published_at": "2026-03-06T10:28:25.830438+00:00",
+   "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de7b6b-19d6-a289-056e-e50001ac42fc"
+  },
+  {
+   "notice_number": "2026/BZP 00277648/01",
+   "type": "ContractPerformingNotice",
+   "type_label": "ogłoszenie o wykonaniu umowy",
+   "published_at": "2026-06-08T06:36:34.957633+00:00",
+   "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dec528-4925-88ea-5fad-9500015c65f4"
+  },
+  {
+   "notice_number": "2026/BZP 00285691/01",
+   "type": "ContractPerformingNotice",
+   "type_label": "ogłoszenie o wykonaniu umowy",
+   "published_at": "2026-06-11T10:39:13.209312+00:00",
+   "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dec7a5-add3-9ae4-5fad-950001d1b535"
+  }
+ ],
+ "sources": [
+  {
+   "id": 1,
+   "kind": "bzp_copy",
+   "url": "https://ezamowienia.gov.pl/mo-board/api/v1/notice",
+   "retrieved_at": "2026-11-12T11:55:53+00:00",
+   "sha256": "af0e37f5bbc6ee72c7431e3d6ef4572b550a95c4667a5abd3d868ac3dbfa8654",
+   "path": "materials/bzp_kopia/risk_miner_bzp_kopia/bzp_kopia/notices.jsonl",
+   "licence": "public information (organizer copy of the BZP API, records unchanged)",
+   "note": "Organizer national BZP copy: 113278 notices 2021-01-13..2026-11-12; sha256 is of notices.jsonl.xz per organizer manifest.json"
+  },
+  {
+   "id": 2,
+   "kind": "xlsx",
+   "url": null,
+   "retrieved_at": "2026-11-21T11:58:08.511419+00:00",
+   "sha256": "b10b57a14d6f188004f38bb73a99ee1e3226c43166a6e8edd500ea5fda21eabe",
+   "path": "materials/starter/Risk_Miner_dane_projekty.xlsx",
+   "licence": "organizer dataset (HackNation 2026, MFiPR)",
+   "note": "Organizer dataset Risk_Miner_dane_projekty.xlsx, sheet Projekty"
+  },
+  {
+   "id": 1389,
+   "kind": "docs_22",
+   "url": "https://platformazakupowa.pl/transakcja/1255061",
+   "retrieved_at": "2026-11-21T12:06:32+00:00",
+   "sha256": "19ea1dc5a5238ae5b2a5a6b13d6005e029ef408c551746b5069b3b5dc9a5c17c",
+   "path": "data/raw/docs_22/2026-11-21/RM-2026-002/page_platformazakupowa_e1d84e1c.html",
+   "licence": "public information",
+   "note": "docs_22 rm=RM-2026-002 role=page platform=platformazakupowa"
+  },
+  {
+   "id": 121938,
+   "kind": "docs_22",
+   "url": "https://platformazakupowa.pl/file/get_new/4ec5531bf9d6489b516af2181e5f3fd3.docx",
+   "retrieved_at": "2026-11-21T15:13:16+00:00",
+   "sha256": "d0bf36437e102fa7e81e67842c4153c0fbd0198d54b4d4fff88f85a749b58719",
+   "path": "data/raw/docs_22/2026-11-21/RM-2026-002/files/32590acc0d6c2996_Załącznik_nr_6_do_SWZ_-_Projektowane_postanowienia_umowy.docx",
+   "licence": "public information",
+   "note": "docs_22 rm=RM-2026-002 role=file key=32590acc0d6c2996 platform=platformazakupowa | robots.txt override: platform operator approved access (reported by the project team 2026-11-21); public attachment links only, 5 s/request"
+  },
+  {
+   "id": 122036,
+   "kind": "docs_22",
+   "url": "https://platformazakupowa.pl/file/get_new/e9a0517a65bf9880037af2dcacb761ed.pdf",
+   "retrieved_at": "2026-11-21T15:14:09+00:00",
+   "sha256": "6685b30a016c460afc0a00b697ee18bba016ed4aa3a39fb62d5f069128125a86",
+   "path": "data/raw/docs_22/2026-11-21/RM-2026-002/files/f5287f574e015ba1_Bud._sieci_kan._sanitarnej_w_miejscowości_Modlikowice_w_ramach_zadania_pn._Budowa_sieci_ka",
+   "licence": "public information",
+   "note": "docs_22 rm=RM-2026-002 role=file key=f5287f574e015ba1 platform=platformazakupowa | robots.txt override: platform operator approved access (reported by the project team 2026-11-21); public attachment links only, 5 s/request"
+  },
+  {
+   "id": 122581,
+   "kind": "docs_22",
+   "url": "https://platformazakupowa.pl/file/get_new/24c5f43efbb6924e5b2339a561c7ab05.pdf",
+   "retrieved_at": "2026-11-21T15:13:26+00:00",
+   "sha256": "070ea56a3e93f590544f5fb11c27fda035d738a81fdc64284b60d499f61d36ac",
+   "path": "data/raw/docs_22/2026-11-21/RM-2026-002/files/b548ecce6bde38da_2026_BZP_00143366_01.pdf",
+   "licence": "public information",
+   "note": "docs_22 rm=RM-2026-002 role=file key=b548ecce6bde38da platform=platformazakupowa | robots.txt override: platform operator approved access (reported by the project team 2026-11-21); public attachment links only, 5 s/request"
+  },
+  {
+   "id": 122987,
+   "kind": "docs_22",
+   "url": "https://platformazakupowa.pl/file/get_new/44bab9ddb3978eb8c763ecac00ec11ce.pdf",
+   "retrieved_at": "2026-11-21T15:14:21+00:00",
+   "sha256": "8a0a9538509c7ed88c2a5c1b320f3b0357d9b3e0c6c7453f91a19c12dda47f35",
+   "path": "data/raw/docs_22/2026-11-21/RM-2026-002/files/97ef2a5133b1c973_załącznik_nr_8_Projekt_techniczny.pdf",
+   "licence": "public information",
+   "note": "docs_22 rm=RM-2026-002 role=file key=97ef2a5133b1c973 platform=platformazakupowa | robots.txt override: platform operator approved access (reported by the project team 2026-11-21); public attachment links only, 5 s/request"
+  },
+  {
+   "id": 123083,
+   "kind": "docs_22",
+   "url": "https://platformazakupowa.pl/file/get_new/3081af3ee766398763049c3d2155e6d2.docx",
+   "retrieved_at": "2026-11-21T15:14:01+00:00",
+   "sha256": "0d05793135be1d83f6c7eb0c55311ab53ec29c8cca905c514dbda3ed715dd1f9",
+   "path": "data/raw/docs_22/2026-11-21/RM-2026-002/files/cdda578099e7960b_Załączniki_nr_1_2_3_4_5_do_SWZ_-_edytowalne.docx",
+   "licence": "public information",
+   "note": "docs_22 rm=RM-2026-002 role=file key=cdda578099e7960b platform=platformazakupowa | robots.txt override: platform operator approved access (reported by the project team 2026-11-21); public attachment links only, 5 s/request"
+  },
+  {
+   "id": 123197,
+   "kind": "docs_22",
+   "url": "https://platformazakupowa.pl/file/get_new/7c6872f355cf54cf159a60dfb5fb6cf1.pdf",
+   "retrieved_at": "2026-11-21T15:13:51+00:00",
+   "sha256": "a7281bc9acd5ac0b853f69f9d797fc86dac0288e1a4cb9b2ca35109892dd9ea1",
+   "path": "data/raw/docs_22/2026-11-21/RM-2026-002/files/b8ee4ee630db9980_08de6a2b-05f9-45a6-bbe7-1e0001c4a846.pdf",
+   "licence": "public information",
+   "note": "docs_22 rm=RM-2026-002 role=file key=b8ee4ee630db9980 platform=platformazakupowa | robots.txt override: platform operator approved access (reported by the project team 2026-11-21); public attachment links only, 5 s/request"
+  },
+  {
+   "id": 123295,
+   "kind": "docs_22",
+   "url": "https://platformazakupowa.pl/file/get_new/f5bbefb2deb452994f1058b443c91b79.pdf",
+   "retrieved_at": "2026-11-21T15:13:41+00:00",
+   "sha256": "dcb79cc632f4658a759cedce92da25eaaa3f444ba085f0bedbe9ac825ae3e708",
+   "path": "data/raw/docs_22/2026-11-21/RM-2026-002/files/78b1f5d22f3fc3c2_Informacja_o_wyborze_najkorzystniejszej_oferty_-_253.2.pdf",
+   "licence": "public information",
+   "note": "docs_22 rm=RM-2026-002 role=file key=78b1f5d22f3fc3c2 platform=platformazakupowa | robots.txt override: platform operator approved access (reported by the project team 2026-11-21); public attachment links only, 5 s/request"
+  },
+  {
+   "id": 123487,
+   "kind": "docs_22",
+   "url": "https://platformazakupowa.pl/file/get_new/e4cc79ad2a91efa24ae54463ef899fa0.pdf",
+   "retrieved_at": "2026-11-21T15:13:46+00:00",
+   "sha256": "b1ae1879fae4eda9f9439baba3c20cdaf0008bd0d8043b0f5f25537df276f03e",
+   "path": "data/raw/docs_22/2026-11-21/RM-2026-002/files/d25fa9bd7604aefa_STWIORB_etap_1.pdf",
+   "licence": "public information",
+   "note": "docs_22 rm=RM-2026-002 role=file key=d25fa9bd7604aefa platform=platformazakupowa | robots.txt override: platform operator approved access (reported by the project team 2026-11-21); public attachment links only, 5 s/request"
+  },
+  {
+   "id": 123603,
+   "kind": "docs_22",
+   "url": "https://platformazakupowa.pl/file/get_new/8ce327d572ff1de5c5f2a00e166560cf.pdf",
+   "retrieved_at": "2026-11-21T15:14:11+00:00",
+   "sha256": "0739af735b8309db1f0ad2bfb72cd206009ca2a6368014476b38ed5ee92c41be",
+   "path": "data/raw/docs_22/2026-11-21/RM-2026-002/files/5aa179f62c03f039_załącznik_nr_9a_Mapa_do_opinii_geotechnicznej.pdf",
+   "licence": "public information",
+   "note": "docs_22 rm=RM-2026-002 role=file key=5aa179f62c03f039 platform=platformazakupowa | robots.txt override: platform operator approved access (reported by the project team 2026-11-21); public attachment links only, 5 s/request"
+  },
+  {
+   "id": 123635,
+   "kind": "docs_22",
+   "url": "https://platformazakupowa.pl/file/get_new/b67e3d47bfed2ec1414f8ac9efad4aad.pdf",
+   "retrieved_at": "2026-11-21T15:13:31+00:00",
+   "sha256": "cf9be430c1b190db406d0e23017e5124f7b02575857d1d5c1cb2658c70a31c29",
+   "path": "data/raw/docs_22/2026-11-21/RM-2026-002/files/14066a0606b3b2b8_WYJAŚNIENIE_I_ZMIANA_TREŚCI_SPECYFIKACJI_WARUNKÓW_ZAMÓWIENIA.pdf",
+   "licence": "public information",
+   "note": "docs_22 rm=RM-2026-002 role=file key=14066a0606b3b2b8 platform=platformazakupowa | robots.txt override: platform operator approved access (reported by the project team 2026-11-21); public attachment links only, 5 s/request"
+  },
+  {
+   "id": 123681,
+   "kind": "docs_22",
+   "url": "https://platformazakupowa.pl/file/get_new/030d70b87b5b5e23336d330cc2f271e3.pdf",
+   "retrieved_at": "2026-11-21T15:13:56+00:00",
+   "sha256": "3a3eb8b0a7e7e15afe9cf735b5f805abccfab854ae5ca99519fe012f1a7d47fa",
+   "path": "data/raw/docs_22/2026-11-21/RM-2026-002/files/72235ab8bd526c33_08de6243-ddb7-94cb-bbe7-1e0001c4372e.pdf",
+   "licence": "public information",
+   "note": "docs_22 rm=RM-2026-002 role=file key=72235ab8bd526c33 platform=platformazakupowa | robots.txt override: platform operator approved access (reported by the project team 2026-11-21); public attachment links only, 5 s/request"
+  },
+  {
+   "id": 123684,
+   "kind": "docs_22",
+   "url": "https://platformazakupowa.pl/file/get_new/711e324abd02e2714db3eb64abbba82e.pdf",
+   "retrieved_at": "2026-11-21T15:14:16+00:00",
+   "sha256": "76e6ec0c49bd90379db5ff8752fd9392396f965a4c1095499566dfe580cd7771",
+   "path": "data/raw/docs_22/2026-11-21/RM-2026-002/files/ecb5b806edff4dd5_załącznik_nr_9_Opinia_Geotechniczna.pdf",
+   "licence": "public information",
+   "note": "docs_22 rm=RM-2026-002 role=file key=ecb5b806edff4dd5 platform=platformazakupowa | robots.txt override: platform operator approved access (reported by the project team 2026-11-21); public attachment links only, 5 s/request"
+  },
+  {
+   "id": 123721,
+   "kind": "docs_22",
+   "url": "https://platformazakupowa.pl/file/get_new/885a1b1d3407fb3fa31a8e5a2a414ec6.docx",
+   "retrieved_at": "2026-11-21T15:13:21+00:00",
+   "sha256": "1ecbcacb10fb42ba199fc72bf66e7d29576fa3b63b84e3aa07458ce798b61c77",
+   "path": "data/raw/docs_22/2026-11-21/RM-2026-002/files/8b71e00a2d5476ae_SWZ.docx",
+   "licence": "public information",
+   "note": "docs_22 rm=RM-2026-002 role=file key=8b71e00a2d5476ae platform=platformazakupowa | robots.txt override: platform operator approved access (reported by the project team 2026-11-21); public attachment links only, 5 s/request"
+  },
+  {
+   "id": 123732,
+   "kind": "docs_22",
+   "url": "https://platformazakupowa.pl/file/get_new/be5b04dd8893e249737b2f0e1e75cd4f.pdf",
+   "retrieved_at": "2026-11-21T15:13:36+00:00",
+   "sha256": "8712876b4d940fd5c8f7543835573a919c7b0f2e48b63e5d5cb10b39b7994646",
+   "path": "data/raw/docs_22/2026-11-21/RM-2026-002/files/8a9b6233b493cf4c_Informacja_z_otwarcia_ofert.pdf",
+   "licence": "public information",
+   "note": "docs_22 rm=RM-2026-002 role=file key=8a9b6233b493cf4c platform=platformazakupowa | robots.txt override: platform operator approved access (reported by the project team 2026-11-21); public attachment links only, 5 s/request"
+  },
+  {
+   "id": 139383,
+   "kind": "upload",
+   "url": "upload:a65f8d87d1f5830933a473b447ab76b0ae5b5f309c7ddf37846c1f72953d45b6",
+   "retrieved_at": "2026-11-21T20:38:02.049038+00:00",
+   "sha256": "a65f8d87d1f5830933a473b447ab76b0ae5b5f309c7ddf37846c1f72953d45b6",
+   "path": "data/raw/upload/a65f8d87d1f5830933a473b447ab76b0ae5b5f309c7ddf37846c1f72953d45b6.pdf",
+   "licence": "user-upload",
+   "note": "upload Risk_Miner_protokol_koniecznosci_aneksowania_zagrodno.pdf"
+  },
+  {
+   "id": 139454,
+   "kind": "upload",
+   "url": "upload:e6f338264b1755f6f75e40d2b14504711c43bfcbc3f5463ae6cdb67c2819f935",
+   "retrieved_at": "2026-11-21T22:55:50.049440+00:00",
+   "sha256": "e6f338264b1755f6f75e40d2b14504711c43bfcbc3f5463ae6cdb67c2819f935",
+   "path": "data/raw/upload/e6f338264b1755f6f75e40d2b14504711c43bfcbc3f5463ae6cdb67c2819f935.pdf",
+   "licence": "user-upload",
+   "note": "upload Risk_Miner_protokol_koniecznosci_aneksowania_zagrodno.pdf"
+  },
+  {
+   "id": 139501,
+   "kind": "upload",
+   "url": "upload:4c1d489e72a544d2649a17b5aaa514f9dc74891d2b4a5b560cb4c14d752f7a32",
+   "retrieved_at": "2026-11-21T23:09:15.715780+00:00",
+   "sha256": "4c1d489e72a544d2649a17b5aaa514f9dc74891d2b4a5b560cb4c14d752f7a32",
+   "path": "data/raw/upload/4c1d489e72a544d2649a17b5aaa514f9dc74891d2b4a5b560cb4c14d752f7a32.pdf",
+   "licence": "user-upload",
+   "note": "upload Risk_Miner_protokol_koniecznosci_aneksowania_zagrodno.pdf"
+  }
+ ],
+ "timeline": [
+  {
+   "date": "2026-02-02",
+   "state": "done",
+   "title": "Ogłoszenie o zamówieniu",
+   "text": "Budowa kanalizacji sanitarnej na terenie Gminy Zagrodno w miejscowości Modlikowice",
+   "ref": {
+    "kind": "notice",
+    "id": "2026/BZP 00089794/01",
+    "label": "ogł. o zamówieniu",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de6251-d7ab-b2c7-4c32-fc0001f13660"
+   },
+   "review_status": "auto",
+   "date_label": "02.02.2026"
+  },
+  {
+   "date": "2026-03-05",
+   "state": "done",
+   "title": "Podpisano umowę",
+   "text": "Przedsiębiorstwo Transportowo Budowlane Sp. z o.o., 5 350 782,65 zł brutto, termin 61 dni",
+   "ref": {
+    "kind": "notice",
+    "id": "2026/BZP 00143366",
+    "label": "ogł. o wyniku"
+   },
+   "review_status": "auto",
+   "date_label": "05.03.2026"
+  },
+  {
+   "date": "2026-05-05",
+   "state": "now",
+   "title": "Zmiana z dokumentu: termin +31 dni",
+   "text": "Wystąpienie kolizji z siecią wodociągową uniemożliwiające posadowienie pompowni numer PM2 uciążliwe uwarunkowania terenowe, wysoki poziom wód gruntowych przy wykopie pod pompownię PM2 Czeka na decyzję eksperta.",
+   "ref": {
+    "kind": "document",
+    "id": "34503",
+    "label": "Risk_Miner_protokol_koniecznosci_aneksowania_zagrodno.pdf"
+   },
+   "review_status": "proposed",
+   "date_label": "05.05.2026"
+  },
+  {
+   "date": "2026-05-05",
+   "state": "now",
+   "title": "Zmiana z dokumentu: termin +31 dni",
+   "text": "Wystąpienie kolizji z siecią wodociągową uniemożliwiające posadowienie pompowni numer PM2 uciążliwe uwarunkowania terenowe, wysoki poziom wód gruntowych przy wykopie pod pompownię PM2 Czeka na decyzję eksperta.",
+   "ref": {
+    "kind": "document",
+    "id": "34574",
+    "label": "Risk_Miner_protokol_koniecznosci_aneksowania_zagrodno.pdf"
+   },
+   "review_status": "proposed",
+   "date_label": "05.05.2026"
+  },
+  {
+   "date": "2026-06-01",
+   "state": "done",
+   "title": "Zakończono wykonanie umowy",
+   "text": "Zapłacono 5 350 782,65 zł brutto; wykonano należycie.",
+   "ref": {
+    "kind": "notice",
+    "id": "2026/BZP 00285691/01",
+    "label": "ogł. o wykonaniu",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dec7a5-add3-9ae4-5fad-950001d1b535"
+   },
+   "review_status": "auto",
+   "date_label": "01.06.2026"
+  }
+ ],
+ "similar_cases": [
+  {
+   "rank": 1,
+   "rm_id": null,
+   "ocid": "ocds-148610-8b6db501-09a5-11ed-9a86-f6f4c648a056",
+   "title": "„Budowa kanalizacji sanitarnej grawitacyjno – tłocznej dla miejscowości Bobrowniki – etap III Bobrowniki, ul. Lipnowska, Włocławska, Dobrzyńska, Kujawska, Wojska Polskiego, Broniewskiego”",
+   "buyer_name": "GMINA BOBROWNIKI",
+   "year": 2023,
+   "changes_count": 1,
+   "score": {
+    "value": 1.0,
+    "display": "1,00",
+    "unit": "score",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 4211,
+     "method": "similarity_simple",
+     "refs": [
+      {
+       "kind": "query",
+       "id": "similarity:simple",
+       "label": "podsektor, wartość, formuła"
+      }
+     ]
+    }
+   },
+   "why": "ten sam podsektor, podobna wartość, ta sama formuła",
+   "contributions": [
+    {
+     "feature": "subsector_main",
+     "label": "podsektor",
+     "value": 0.5
+    },
+    {
+     "feature": "value",
+     "label": "wartość",
+     "value": 0.35
+    },
+    {
+     "feature": "formula",
+     "label": "formuła",
+     "value": 0.15
+    }
+   ],
+   "outcome": {
+    "delay_days": {
+     "value": 0,
+     "display": "0 dni",
+     "unit": "days",
+     "prov": {
+      "role": "case",
+      "review_status": "auto",
+      "refs": [
+       {
+        "kind": "notice",
+        "id": "2024/BZP 00352193/01",
+        "label": "ogł. o wykonaniu",
+        "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dc853e-44f7-3da9-1a46-3000018a434a",
+        "field_code": "5.2"
+       }
+      ]
+     }
+    },
+    "cost_dev_pct": {
+     "value": 14.7,
+     "display": "+14,7%",
+     "unit": "pct",
+     "prov": {
+      "role": "case",
+      "review_status": "auto",
+      "refs": [
+       {
+        "kind": "notice",
+        "id": "2024/BZP 00352193/01",
+        "label": "ogł. o wykonaniu",
+        "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dc853e-44f7-3da9-1a46-3000018a434a",
+        "field_code": "5.2"
+       }
+      ]
+     }
+    }
+   },
+   "href": "/projekty/ocds-148610-8b6db501-09a5-11ed-9a86-f6f4c648a056"
+  },
+  {
+   "rank": 2,
+   "rm_id": null,
+   "ocid": "ocds-148610-47b37b4f-f6de-11ec-8000-d680d39e541a",
+   "title": "„Budowa kanalizacji sanitarnej w miejscowości Potycz” (II)",
+   "buyer_name": "GMINA GÓRA KALWARIA",
+   "year": 2023,
+   "changes_count": 0,
+   "score": {
+    "value": 1.0,
+    "display": "1,00",
+    "unit": "score",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 4211,
+     "method": "similarity_simple",
+     "refs": [
+      {
+       "kind": "query",
+       "id": "similarity:simple",
+       "label": "podsektor, wartość, formuła"
+      }
+     ]
+    }
+   },
+   "why": "ten sam podsektor, podobna wartość, ta sama formuła",
+   "contributions": [
+    {
+     "feature": "subsector_main",
+     "label": "podsektor",
+     "value": 0.5
+    },
+    {
+     "feature": "value",
+     "label": "wartość",
+     "value": 0.35
+    },
+    {
+     "feature": "formula",
+     "label": "formuła",
+     "value": 0.15
+    }
+   ],
+   "outcome": {
+    "delay_days": {
+     "value": 0,
+     "display": "0 dni",
+     "unit": "days",
+     "prov": {
+      "role": "case",
+      "review_status": "auto",
+      "refs": [
+       {
+        "kind": "notice",
+        "id": "2023/BZP 00270803/01",
+        "label": "ogł. o wykonaniu",
+        "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08db72f6-7aa2-320b-c22e-ef00102d73b4",
+        "field_code": "5.2"
+       }
+      ]
+     }
+    },
+    "cost_dev_pct": {
+     "value": 0.0,
+     "display": "0,0%",
+     "unit": "pct",
+     "prov": {
+      "role": "case",
+      "review_status": "auto",
+      "refs": [
+       {
+        "kind": "notice",
+        "id": "2023/BZP 00270803/01",
+        "label": "ogł. o wykonaniu",
+        "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08db72f6-7aa2-320b-c22e-ef00102d73b4",
+        "field_code": "5.2"
+       }
+      ]
+     }
+    }
+   },
+   "href": "/projekty/ocds-148610-47b37b4f-f6de-11ec-8000-d680d39e541a"
+  },
+  {
+   "rank": 3,
+   "rm_id": null,
+   "ocid": "ocds-148610-7483ef1d-fe8d-11ec-9a86-f6f4c648a056",
+   "title": "Uzbrojenie wodno – kanalizacyjne Sianowskiego Obszaru Gospodarczego w obrębie m. Skibno w formule „zaprojektuj i wybuduj.",
+   "buyer_name": "Gmina Sianów",
+   "year": 2023,
+   "changes_count": 2,
+   "score": {
+    "value": 0.85,
+    "display": "0,85",
+    "unit": "score",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 4211,
+     "method": "similarity_simple",
+     "refs": [
+      {
+       "kind": "query",
+       "id": "similarity:simple",
+       "label": "podsektor, wartość, formuła"
+      }
+     ]
+    }
+   },
+   "why": "ten sam podsektor, podobna wartość",
+   "contributions": [
+    {
+     "feature": "subsector_main",
+     "label": "podsektor",
+     "value": 0.5
+    },
+    {
+     "feature": "value",
+     "label": "wartość",
+     "value": 0.35
+    },
+    {
+     "feature": "formula",
+     "label": "formuła",
+     "value": 0.0
+    }
+   ],
+   "outcome": {
+    "delay_days": {
+     "value": 129,
+     "display": "+129 dni",
+     "unit": "days",
+     "prov": {
+      "role": "case",
+      "review_status": "auto",
+      "refs": [
+       {
+        "kind": "notice",
+        "id": "2023/BZP 00338394/01",
+        "label": "ogł. o wykonaniu",
+        "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08db93f7-1b09-d690-acc0-990011e6f9d6",
+        "field_code": "5.2"
+       }
+      ]
+     }
+    },
+    "cost_dev_pct": {
+     "value": 0.0,
+     "display": "0,0%",
+     "unit": "pct",
+     "prov": {
+      "role": "case",
+      "review_status": "auto",
+      "refs": [
+       {
+        "kind": "notice",
+        "id": "2023/BZP 00338394/01",
+        "label": "ogł. o wykonaniu",
+        "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08db93f7-1b09-d690-acc0-990011e6f9d6",
+        "field_code": "5.2"
+       }
+      ]
+     }
+    }
+   },
+   "href": "/projekty/ocds-148610-7483ef1d-fe8d-11ec-9a86-f6f4c648a056"
+  },
+  {
+   "rank": 4,
+   "rm_id": null,
+   "ocid": "ocds-148610-ac1ca163-00ed-11ed-9a86-f6f4c648a056",
+   "title": "Budowa sieci kanalizacji sanitarnej dla miejscowości Kłobuczyno w Gminie Kościerzyna wraz z uzyskaniem pozwolenia na użytkowanie",
+   "buyer_name": "GMINA KOŚCIERZYNA",
+   "year": 2024,
+   "changes_count": 2,
+   "score": {
+    "value": 1.0,
+    "display": "1,00",
+    "unit": "score",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 4211,
+     "method": "similarity_simple",
+     "refs": [
+      {
+       "kind": "query",
+       "id": "similarity:simple",
+       "label": "podsektor, wartość, formuła"
+      }
+     ]
+    }
+   },
+   "why": "ten sam podsektor, podobna wartość, ta sama formuła",
+   "contributions": [
+    {
+     "feature": "subsector_main",
+     "label": "podsektor",
+     "value": 0.5
+    },
+    {
+     "feature": "value",
+     "label": "wartość",
+     "value": 0.35
+    },
+    {
+     "feature": "formula",
+     "label": "formuła",
+     "value": 0.15
+    }
+   ],
+   "outcome": {
+    "delay_days": {
+     "value": 0,
+     "display": "0 dni",
+     "unit": "days",
+     "prov": {
+      "role": "case",
+      "review_status": "auto",
+      "refs": [
+       {
+        "kind": "notice",
+        "id": "2024/BZP 00396081/01",
+        "label": "ogł. o wykonaniu",
+        "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dc9bfe-41bf-3466-4366-700001d66cb0",
+        "field_code": "5.2"
+       }
+      ]
+     }
+    },
+    "cost_dev_pct": {
+     "value": 0.7,
+     "display": "+0,7%",
+     "unit": "pct",
+     "prov": {
+      "role": "case",
+      "review_status": "auto",
+      "refs": [
+       {
+        "kind": "notice",
+        "id": "2024/BZP 00396081/01",
+        "label": "ogł. o wykonaniu",
+        "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dc9bfe-41bf-3466-4366-700001d66cb0",
+        "field_code": "5.2"
+       }
+      ]
+     }
+    }
+   },
+   "href": "/projekty/ocds-148610-ac1ca163-00ed-11ed-9a86-f6f4c648a056"
+  },
+  {
+   "rank": 5,
+   "rm_id": null,
+   "ocid": "ocds-148610-9890a99f-ac3e-11ec-baa2-b6d934483bfb",
+   "title": "Poprawa gospodarki wodno-ściekowej w Gminie Zatory",
+   "buyer_name": "Gmina Zatory",
+   "year": 2023,
+   "changes_count": 0,
+   "score": {
+    "value": 1.0,
+    "display": "1,00",
+    "unit": "score",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 4211,
+     "method": "similarity_simple",
+     "refs": [
+      {
+       "kind": "query",
+       "id": "similarity:simple",
+       "label": "podsektor, wartość, formuła"
+      }
+     ]
+    }
+   },
+   "why": "ten sam podsektor, podobna wartość, ta sama formuła",
+   "contributions": [
+    {
+     "feature": "subsector_main",
+     "label": "podsektor",
+     "value": 0.5
+    },
+    {
+     "feature": "value",
+     "label": "wartość",
+     "value": 0.35
+    },
+    {
+     "feature": "formula",
+     "label": "formuła",
+     "value": 0.15
+    }
+   ],
+   "outcome": {
+    "delay_days": {
+     "value": 0,
+     "display": "0 dni",
+     "unit": "days",
+     "prov": {
+      "role": "case",
+      "review_status": "auto",
+      "refs": [
+       {
+        "kind": "notice",
+        "id": "2023/BZP 00404284/01",
+        "label": "ogł. o wykonaniu",
+        "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dbb9a9-a9c4-3fc9-fa1e-600010f783f4",
+        "field_code": "5.2"
+       }
+      ]
+     }
+    },
+    "cost_dev_pct": {
+     "value": 0.0,
+     "display": "0,0%",
+     "unit": "pct",
+     "prov": {
+      "role": "case",
+      "review_status": "auto",
+      "refs": [
+       {
+        "kind": "notice",
+        "id": "2023/BZP 00404284/01",
+        "label": "ogł. o wykonaniu",
+        "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dbb9a9-a9c4-3fc9-fa1e-600010f783f4",
+        "field_code": "5.2"
+       }
+      ]
+     }
+    }
+   },
+   "href": "/projekty/ocds-148610-9890a99f-ac3e-11ec-baa2-b6d934483bfb"
+  }
+ ]
+}
