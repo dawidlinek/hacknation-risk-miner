@@ -17,7 +17,7 @@ import {
   powGeoQuery,
   wojGeoQuery,
 } from './geo'
-import { type Box, placeBoxes, planPills, type ScaledRegion, tintFor, umowy } from './logic'
+import { type Box, colorAt, placeBoxes, planPills, type ScaledRegion, umowy } from './logic'
 import { maplibregl } from './maplibre-setup'
 
 const STYLE: StyleSpecification = {
@@ -130,12 +130,16 @@ export function ChoroplethMap(p: ChoroplethMapProps) {
       features: pow.data.features.map((f) => {
         const n = p.powCounts.get(f.properties.terc) ?? 0
         const on = f.properties.terc === target.pow
+        // relative yellow-to-red scale: the busiest powiat in this województwo is the darkest
+        const maxN = Math.max(1, ...p.powCounts.values())
         const fill =
           target.level >= 2
             ? on
               ? 'rgba(255,255,255,0.92)'
               : 'rgba(255,255,255,0.25)'
-            : (tintFor(n) ?? 'rgba(255,255,255,0.55)')
+            : n > 0
+              ? colorAt(0.15 + 0.85 * (n / maxN), 'open')
+              : 'rgba(255,255,255,0.55)'
         return {
           ...f,
           properties: {
@@ -152,6 +156,8 @@ export function ChoroplethMap(p: ChoroplethMapProps) {
   const gmiFC = useMemo<GeoFC>(() => {
     if (!gmi.data) return emptyFC()
     const sel = p.signals.find((s) => s.id === target.signalId)?.teryt.gmi
+    // gminas coloured by signal count (yellow to red, relative to the busiest gmina in this powiat)
+    const maxN = Math.max(1, ...gmi.data.features.map((f) => p.gmiCounts.get(f.properties.terc) ?? 0))
     return {
       ...gmi.data,
       features: gmi.data.features.map((f) => {
@@ -161,7 +167,7 @@ export function ChoroplethMap(p: ChoroplethMapProps) {
           ...f,
           properties: {
             ...f.properties,
-            fill: on ? '#FFF6D1' : n > 0 ? '#FFFFFF' : '#FAFAFA',
+            fill: n > 0 ? colorAt(0.15 + 0.85 * (n / maxN), 'open') : on ? '#FFF6D1' : '#F4F4F2',
             on: on ? 1 : 0,
             n,
             tip:
@@ -322,7 +328,9 @@ export function ChoroplethMap(p: ChoroplethMapProps) {
               <div
                 className={cn(
                   'flex flex-col items-center text-center leading-tight',
-                  r.lightText ? 'text-white' : 'text-ink',
+                  r.lightText
+                    ? 'text-white'
+                    : `text-text ${'[text-shadow:0_0_3px_#fff,0_0_2px_#fff,0_0_1px_#fff]'}`,
                 )}
               >
                 <span className="text-[10px] font-medium">{r.stat.name}</span>
@@ -343,9 +351,9 @@ export function ChoroplethMap(p: ChoroplethMapProps) {
             w: Math.max(name.length * 6, 62) + 6,
             h: 26,
             node: (
-              <div className="flex flex-col items-center text-center leading-tight text-ink">
-                <span className="text-[11px] font-medium">{name}</span>
-                <span className="text-[10px] text-text-secondary">
+              <div className="flex flex-col items-center text-center leading-tight text-text [text-shadow:0_0_3px_#fff,0_0_2px_#fff,0_0_1px_#fff]">
+                <span className="text-[11px] font-semibold">{name}</span>
+                <span className="text-[10px] text-text">
                   {n} {n === 1 ? 'sygnał' : n < 5 ? 'sygnały' : 'sygnałów'}
                 </span>
               </div>

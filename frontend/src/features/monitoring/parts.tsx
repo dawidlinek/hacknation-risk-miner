@@ -8,7 +8,7 @@ import { fmtDays, fmtMoneyShort } from '@/lib/format'
 import { type MonFilters, subsectorsQuery, VALUE_BUCKETS, YEARS } from './api'
 import type { GeoFeature } from './geo'
 import { outlinePath } from './geo'
-import { MENU_METRICS, METRICS, SEGMENT_METRICS } from './logic'
+import { colorAt, MENU_METRICS, METRICS, SEGMENT_METRICS } from './logic'
 
 /** Thumbnail of a region filled with its map colour. */
 export function RegionOutline({ feature, fill }: { feature: GeoFeature | undefined; fill: string }) {
@@ -130,13 +130,15 @@ export function MapToolbar({
       {level === 1 ? (
         <span className="flex items-center gap-2 text-[13px] text-text-secondary">
           Kolor powiatów: liczba sygnałów
-          <span className="flex items-center gap-1 text-[12px]" aria-hidden>
-            {legend.tints.map((c, i) => (
-              <span key={c} className="flex items-center gap-1">
-                <span className="size-3 rounded-[3px] border border-border" style={{ background: c }} />
-                {i === legend.tints.length - 1 ? `${i + 1}+` : i + 1}
-              </span>
-            ))}
+          <span className="flex items-center gap-1.5 text-[12px]" aria-hidden>
+            mniej
+            <span
+              className="h-2.5 w-24 rounded-pill"
+              style={{
+                background: `linear-gradient(90deg, ${colorAt(0.15, 'open')}, ${colorAt(0.55, 'open')}, ${colorAt(1, 'open')})`,
+              }}
+            />
+            więcej
           </span>
         </span>
       ) : level >= 2 ? (
