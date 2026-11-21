@@ -1,0 +1,128 @@
+{
+ "id": 812,
+ "kind": "event",
+ "kind_label": "Zdarzenie ryzyka",
+ "context": {
+  "label": "Steklin, RM-2026-003",
+  "href": "/projekty/RM-2026-003"
+ },
+ "question": "Dlaczego w Steklinie dopłacono 100 325,44 zł?",
+ "sub": "To druga zmiana umowy. Od przyczyny zależy, przy którym ryzyku ten przypadek będzie liczony w raportach.",
+ "target": {
+  "table": "risk_event",
+  "id": 9911,
+  "review_status": "proposed"
+ },
+ "evidence": {
+  "title": "Ogłoszenie o zmianie umowy, opis zmiany",
+  "ref": {
+   "kind": "notice",
+   "id": "2024/BZP 00618384/01",
+   "label": "pole 5.3",
+   "field_code": "5.3"
+  },
+  "pre": "…robót dodatkowych nieprzewidzianych w PFU, a niezbędnych do prawidłowej realizacji przedmiotu Umowy polegających w szczególności na ",
+  "hit": "wymianie odcinków sieci wodociągowej wykonanych z rur azbestowych na sieć wodociągową wykonaną z rur polimerowych",
+  "post": "”",
+  "verification": "exact"
+ },
+ "chips": [
+  {
+   "text": "kwota zgodna ze źródłem",
+   "tone": "ok"
+  },
+  {
+   "text": "art. 455 ust. 1 pkt 3",
+   "tone": "neutral"
+  },
+  {
+   "text": "brak PFU w paczce",
+   "tone": "warn"
+  }
+ ],
+ "options": [
+  {
+   "key": "R02",
+   "action": "approve",
+   "label": "R02 Nierozpoznany stan istniejący",
+   "sub": "w trasie były rury azbestowe, których nikt nie opisał",
+   "model_pick": true,
+   "confidence": 0.8,
+   "badge": "propozycja modelu, 0,80",
+   "needs_input": null,
+   "effects": [
+    {
+     "where": "Katalog, ryzyko R02",
+     "before": "2 zatwierdzone przypadki",
+     "after": "3 zatwierdzone przypadki"
+    },
+    {
+     "where": "Widok publiczny",
+     "before": "zdarzenie ukryte",
+     "after": "zdarzenie widoczne na karcie"
+    }
+   ]
+  },
+  {
+   "key": "R01",
+   "action": "edit",
+   "label": "R01 Niepełny zakres w PFU",
+   "sub": "roboty spoza PFU",
+   "model_pick": false,
+   "confidence": 0.15,
+   "badge": null,
+   "needs_input": null,
+   "effects": [
+    {
+     "where": "Katalog, ryzyko R01",
+     "before": "1 zatwierdzony przypadek",
+     "after": "2 zatwierdzone przypadki"
+    }
+   ]
+  },
+  {
+   "key": "other",
+   "action": "edit",
+   "label": "Inne ryzyko z katalogu",
+   "model_pick": false,
+   "confidence": null,
+   "badge": null,
+   "needs_input": "value",
+   "input_placeholder": "Kod ryzyka i krótkie uzasadnienie",
+   "effects": [
+    {
+     "where": "Katalog",
+     "before": "bez zmian",
+     "after": "przypadek przy wybranym ryzyku"
+    }
+   ]
+  },
+  {
+   "key": "not_risk",
+   "action": "reject",
+   "label": "To nie jest zdarzenie ryzyka",
+   "model_pick": false,
+   "confidence": null,
+   "badge": null,
+   "needs_input": "reason",
+   "effects": [
+    {
+     "where": "Widok publiczny",
+     "before": "zdarzenie ukryte",
+     "after": "zdarzenie ukryte na stałe"
+    }
+   ]
+  }
+ ],
+ "gold": {
+  "label": "Podobne propozycje w kolejce",
+  "before": "7 czeka na przegląd",
+  "after": "zostaną przeliczone według Twojej decyzji"
+ },
+ "llm": {
+  "provider": "wcss_bielik",
+  "model": "speakleash/Bielik-11B-v3.1-Instruct",
+  "data_location": "PL (WCSS Wrocław)",
+  "llm_call_id": 311
+ }
+}

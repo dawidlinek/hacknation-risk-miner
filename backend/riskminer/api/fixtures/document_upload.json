@@ -1,0 +1,17 @@
+{
+ "document_id": 11062,
+ "filename": "PFU_kanalizacja.pdf",
+ "sha256": "3f1c9a7e0b2d4c5f6a8e9d0c1b2a3f4e5d6c7b8a9f0e1d2c3b4a5f6e7d8c9b0a",
+ "pages": 38,
+ "doc_type": {
+  "code": "PFU",
+  "confidence": 0.9,
+  "method": "filename+keywords"
+ },
+ "sensitivity": "public",
+ "text_status": "ok",
+ "processing": {
+  "data_location": "PL (serwer ex ante)"
+ },
+ "jobs": []
+}

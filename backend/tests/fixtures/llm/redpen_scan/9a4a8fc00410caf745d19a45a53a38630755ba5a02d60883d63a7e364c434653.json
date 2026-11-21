@@ -1,0 +1,13 @@
+{
+ "task": "redpen_scan",
+ "provider": "gemini",
+ "model": "gemini-3.8-flash",
+ "prompt_version": "redpen_scan@v1+42f11dca",
+ "sensitivity": "public",
+ "text": "{\n  \"notes\": [\n    {\n      \"code\": \"R06.2\",\n      \"page\": 4,\n      \"pkt\": \"§ 5 ust. 1 pkt 2\",\n      \"quote\": \"zakończenie całości przedmiotu umowy: 12 miesięcy od daty podpisania umowy nie później jednak niż do 28.04.2023 r.\",\n      \"title\": \"Nierealny i sztywny termin realizacji ZiW\",\n      \"why\": \"Termin 12 miesięcy ze sztywną datą końcową na projektowanie, procedury administracyjne i przebudowę SUW niesie wysokie ryzyko opóźnienia.\",\n      \"strength\": \"silny\",\n      \"clause_hint\": null\n    },\n    {\n      \"code\": \"R04.3\",\n      \"page\": 4,\n      \"pkt\": \"§ 5 ust. 2\",\n      \"quote\": \"Przez zakończenie przedmiotu umowy rozumie się dokonanie odbioru końcowego bez uwag i usterek, przekazanie Zamawiającemu wszystkich znajdujących się w posiadaniu Wykonawcy dokumentów (...) i uzyskania stanowiska organu nadzoru budowlanego o braku sprzeciwu do możliwości przystąpienia do użytkowania\",\n      \"title\": \"Zależność terminu zakończenia od organu nadzoru\",\n      \"why\": \"Włączenie procedury pozwolenia na użytkowanie w termin zakończenia umowy uzależnia wykonawcę od tempa procedowania przez organy zewnętrzne.\",\n      \"strength\": \"średni\",\n      \"clause_hint\": null\n    },\n    {\n      \"code\": \"R08.2\",\n      \"page\": 6,\n      \"pkt\": \"§ 7 ust. 2\",\n      \"quote\": \"Niedoszacowanie, pominięcie oraz brak rozpoznania zakresu przedmiotu umowy nie może być podstawą do żądania zmiany wynagrodzenia ryczałtowego określonego w ust. 1 niniejszego paragrafu.\",\n      \"title\": \"Całkowite ryzyko niedoszacowania po stronie wykonawcy\",\n      \"why\": \"Przeniesienie pełnego ryzyka braków w rozpoznaniu stanu istniejącego na wykonawcę przy formule ZiW zwiększa ryzyko sporów i roszczeń.\",\n      \"strength\": \"silny\",\n      \"clause_hint\": null\n    },\n    {\n      \"code\": \"R13.2\",\n      \"page\": 6,\n      \"pkt\": \"§ 7 ust. 4\",\n      \"quote\": \"Rozliczenie wynagrodzenia za wykonanie przedmiotu umowy nastąpi na podstawie faktury końcowej wystawionej przez Wykonawcę, na podstawie podpisanego przez Zamawiającego protokołu odbioru końcowego\",\n      \"title\": \"Płatność wyłącznie jedną fakturą końcową\",\n      \"why\": \"Brak płatności częściowych za etap projektowy i roboty przy rocznym kontrakcie obciąża płynność finansową wykonawcy i grozi przerwaniem prac.\",\n      \"strength\": \"średni\",\n      \"clause_hint\": null\n    }\n  ]\n}",
+ "tokens_in": 10182,
+ "tokens_out": 732,
+ "tokens_cached": 0,
+ "tokens_thought": 0,
+ "finish_reason": "FinishReason.STOP"
+}

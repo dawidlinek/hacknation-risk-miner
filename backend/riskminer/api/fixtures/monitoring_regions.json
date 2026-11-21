@@ -1,0 +1,539 @@
+{
+ "level": "woj",
+ "parent": null,
+ "mode": "done",
+ "metric": {
+  "key": "late",
+  "label": "Po terminie",
+  "description": "odsetek umów zakończonych po terminie z umowy",
+  "unit": "pct"
+ },
+ "total": {
+  "label": "11 574 umów zakończonych, 30% po terminie",
+  "n": 11574
+ },
+ "legend": {
+  "min": {
+   "value": 23.0,
+   "display": "23,0%"
+  },
+  "max": {
+   "value": 42.6,
+   "display": "42,6%"
+  }
+ },
+ "regions": [
+  {
+   "terc": "02",
+   "name": "dolnośląskie",
+   "value": {
+    "value": 38.3,
+    "display": "38,3%",
+    "unit": "pct",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 629,
+     "method": "rc_share(late) by province",
+     "refs": [
+      {
+       "kind": "query",
+       "id": "rc:core|PL02",
+       "label": "ogłoszenia o wykonaniu umowy, BZP"
+      }
+     ]
+    }
+   },
+   "metrics": {
+    "n_completed": 629,
+    "late_pct": 38.3,
+    "median_delay_days_late": null,
+    "overpaid_pln": null,
+    "value_pln": null,
+    "changes_pct": null,
+    "improper_pct": null,
+    "signals": null
+   }
+  },
+  {
+   "terc": "04",
+   "name": "kujawsko-pomorskie",
+   "value": {
+    "value": 23.0,
+    "display": "23,0%",
+    "unit": "pct",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 651,
+     "method": "rc_share(late) by province",
+     "refs": [
+      {
+       "kind": "query",
+       "id": "rc:core|PL04",
+       "label": "ogłoszenia o wykonaniu umowy, BZP"
+      }
+     ]
+    }
+   },
+   "metrics": {
+    "n_completed": 651,
+    "late_pct": 23.0,
+    "median_delay_days_late": null,
+    "overpaid_pln": null,
+    "value_pln": null,
+    "changes_pct": null,
+    "improper_pct": null,
+    "signals": null
+   }
+  },
+  {
+   "terc": "06",
+   "name": "lubelskie",
+   "value": {
+    "value": 24.5,
+    "display": "24,5%",
+    "unit": "pct",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 840,
+     "method": "rc_share(late) by province",
+     "refs": [
+      {
+       "kind": "query",
+       "id": "rc:core|PL06",
+       "label": "ogłoszenia o wykonaniu umowy, BZP"
+      }
+     ]
+    }
+   },
+   "metrics": {
+    "n_completed": 840,
+    "late_pct": 24.5,
+    "median_delay_days_late": null,
+    "overpaid_pln": null,
+    "value_pln": null,
+    "changes_pct": null,
+    "improper_pct": null,
+    "signals": null
+   }
+  },
+  {
+   "terc": "08",
+   "name": "lubuskie",
+   "value": {
+    "value": 42.6,
+    "display": "42,6%",
+    "unit": "pct",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 230,
+     "method": "rc_share(late) by province",
+     "refs": [
+      {
+       "kind": "query",
+       "id": "rc:core|PL08",
+       "label": "ogłoszenia o wykonaniu umowy, BZP"
+      }
+     ]
+    }
+   },
+   "metrics": {
+    "n_completed": 230,
+    "late_pct": 42.6,
+    "median_delay_days_late": null,
+    "overpaid_pln": null,
+    "value_pln": null,
+    "changes_pct": null,
+    "improper_pct": null,
+    "signals": null
+   }
+  },
+  {
+   "terc": "10",
+   "name": "łódzkie",
+   "value": {
+    "value": 34.9,
+    "display": "34,9%",
+    "unit": "pct",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 931,
+     "method": "rc_share(late) by province",
+     "refs": [
+      {
+       "kind": "query",
+       "id": "rc:core|PL10",
+       "label": "ogłoszenia o wykonaniu umowy, BZP"
+      }
+     ]
+    }
+   },
+   "metrics": {
+    "n_completed": 931,
+    "late_pct": 34.9,
+    "median_delay_days_late": null,
+    "overpaid_pln": null,
+    "value_pln": null,
+    "changes_pct": null,
+    "improper_pct": null,
+    "signals": null
+   }
+  },
+  {
+   "terc": "12",
+   "name": "małopolskie",
+   "value": {
+    "value": 29.3,
+    "display": "29,3%",
+    "unit": "pct",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 1072,
+     "method": "rc_share(late) by province",
+     "refs": [
+      {
+       "kind": "query",
+       "id": "rc:core|PL12",
+       "label": "ogłoszenia o wykonaniu umowy, BZP"
+      }
+     ]
+    }
+   },
+   "metrics": {
+    "n_completed": 1072,
+    "late_pct": 29.3,
+    "median_delay_days_late": 62,
+    "overpaid_pln": "51162876.58",
+    "value_pln": null,
+    "changes_pct": 44.6,
+    "improper_pct": 0.5,
+    "signals": 217
+   }
+  },
+  {
+   "terc": "14",
+   "name": "mazowieckie",
+   "value": {
+    "value": 29.1,
+    "display": "29,1%",
+    "unit": "pct",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 1757,
+     "method": "rc_share(late) by province",
+     "refs": [
+      {
+       "kind": "query",
+       "id": "rc:core|PL14",
+       "label": "ogłoszenia o wykonaniu umowy, BZP"
+      }
+     ]
+    }
+   },
+   "metrics": {
+    "n_completed": 1757,
+    "late_pct": 29.1,
+    "median_delay_days_late": null,
+    "overpaid_pln": null,
+    "value_pln": null,
+    "changes_pct": null,
+    "improper_pct": null,
+    "signals": null
+   }
+  },
+  {
+   "terc": "16",
+   "name": "opolskie",
+   "value": {
+    "value": 29.5,
+    "display": "29,5%",
+    "unit": "pct",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 271,
+     "method": "rc_share(late) by province",
+     "refs": [
+      {
+       "kind": "query",
+       "id": "rc:core|PL16",
+       "label": "ogłoszenia o wykonaniu umowy, BZP"
+      }
+     ]
+    }
+   },
+   "metrics": {
+    "n_completed": 271,
+    "late_pct": 29.5,
+    "median_delay_days_late": null,
+    "overpaid_pln": null,
+    "value_pln": null,
+    "changes_pct": null,
+    "improper_pct": null,
+    "signals": null
+   }
+  },
+  {
+   "terc": "18",
+   "name": "podkarpackie",
+   "value": {
+    "value": 24.0,
+    "display": "24,0%",
+    "unit": "pct",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 890,
+     "method": "rc_share(late) by province",
+     "refs": [
+      {
+       "kind": "query",
+       "id": "rc:core|PL18",
+       "label": "ogłoszenia o wykonaniu umowy, BZP"
+      }
+     ]
+    }
+   },
+   "metrics": {
+    "n_completed": 890,
+    "late_pct": 24.0,
+    "median_delay_days_late": null,
+    "overpaid_pln": null,
+    "value_pln": null,
+    "changes_pct": null,
+    "improper_pct": null,
+    "signals": null
+   }
+  },
+  {
+   "terc": "20",
+   "name": "podlaskie",
+   "value": {
+    "value": 27.2,
+    "display": "27,2%",
+    "unit": "pct",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 356,
+     "method": "rc_share(late) by province",
+     "refs": [
+      {
+       "kind": "query",
+       "id": "rc:core|PL20",
+       "label": "ogłoszenia o wykonaniu umowy, BZP"
+      }
+     ]
+    }
+   },
+   "metrics": {
+    "n_completed": 356,
+    "late_pct": 27.2,
+    "median_delay_days_late": null,
+    "overpaid_pln": null,
+    "value_pln": null,
+    "changes_pct": null,
+    "improper_pct": null,
+    "signals": null
+   }
+  },
+  {
+   "terc": "22",
+   "name": "pomorskie",
+   "value": {
+    "value": 28.1,
+    "display": "28,1%",
+    "unit": "pct",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 669,
+     "method": "rc_share(late) by province",
+     "refs": [
+      {
+       "kind": "query",
+       "id": "rc:core|PL22",
+       "label": "ogłoszenia o wykonaniu umowy, BZP"
+      }
+     ]
+    }
+   },
+   "metrics": {
+    "n_completed": 669,
+    "late_pct": 28.1,
+    "median_delay_days_late": null,
+    "overpaid_pln": null,
+    "value_pln": null,
+    "changes_pct": null,
+    "improper_pct": null,
+    "signals": null
+   }
+  },
+  {
+   "terc": "24",
+   "name": "śląskie",
+   "value": {
+    "value": 30.4,
+    "display": "30,4%",
+    "unit": "pct",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 977,
+     "method": "rc_share(late) by province",
+     "refs": [
+      {
+       "kind": "query",
+       "id": "rc:core|PL24",
+       "label": "ogłoszenia o wykonaniu umowy, BZP"
+      }
+     ]
+    }
+   },
+   "metrics": {
+    "n_completed": 977,
+    "late_pct": 30.4,
+    "median_delay_days_late": null,
+    "overpaid_pln": null,
+    "value_pln": null,
+    "changes_pct": null,
+    "improper_pct": null,
+    "signals": null
+   }
+  },
+  {
+   "terc": "26",
+   "name": "świętokrzyskie",
+   "value": {
+    "value": 27.8,
+    "display": "27,8%",
+    "unit": "pct",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 514,
+     "method": "rc_share(late) by province",
+     "refs": [
+      {
+       "kind": "query",
+       "id": "rc:core|PL26",
+       "label": "ogłoszenia o wykonaniu umowy, BZP"
+      }
+     ]
+    }
+   },
+   "metrics": {
+    "n_completed": 514,
+    "late_pct": 27.8,
+    "median_delay_days_late": null,
+    "overpaid_pln": null,
+    "value_pln": null,
+    "changes_pct": null,
+    "improper_pct": null,
+    "signals": null
+   }
+  },
+  {
+   "terc": "28",
+   "name": "warmińsko-mazurskie",
+   "value": {
+    "value": 28.5,
+    "display": "28,5%",
+    "unit": "pct",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 425,
+     "method": "rc_share(late) by province",
+     "refs": [
+      {
+       "kind": "query",
+       "id": "rc:core|PL28",
+       "label": "ogłoszenia o wykonaniu umowy, BZP"
+      }
+     ]
+    }
+   },
+   "metrics": {
+    "n_completed": 425,
+    "late_pct": 28.5,
+    "median_delay_days_late": null,
+    "overpaid_pln": null,
+    "value_pln": null,
+    "changes_pct": null,
+    "improper_pct": null,
+    "signals": null
+   }
+  },
+  {
+   "terc": "30",
+   "name": "wielkopolskie",
+   "value": {
+    "value": 35.1,
+    "display": "35,1%",
+    "unit": "pct",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 1016,
+     "method": "rc_share(late) by province",
+     "refs": [
+      {
+       "kind": "query",
+       "id": "rc:core|PL30",
+       "label": "ogłoszenia o wykonaniu umowy, BZP"
+      }
+     ]
+    }
+   },
+   "metrics": {
+    "n_completed": 1016,
+    "late_pct": 35.1,
+    "median_delay_days_late": null,
+    "overpaid_pln": null,
+    "value_pln": null,
+    "changes_pct": null,
+    "improper_pct": null,
+    "signals": null
+   }
+  },
+  {
+   "terc": "32",
+   "name": "zachodniopomorskie",
+   "value": {
+    "value": 31.5,
+    "display": "31,5%",
+    "unit": "pct",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 346,
+     "method": "rc_share(late) by province",
+     "refs": [
+      {
+       "kind": "query",
+       "id": "rc:core|PL32",
+       "label": "ogłoszenia o wykonaniu umowy, BZP"
+      }
+     ]
+    }
+   },
+   "metrics": {
+    "n_completed": 346,
+    "late_pct": 31.5,
+    "median_delay_days_late": null,
+    "overpaid_pln": null,
+    "value_pln": null,
+    "changes_pct": null,
+    "improper_pct": null,
+    "signals": null
+   }
+  }
+ ]
+}

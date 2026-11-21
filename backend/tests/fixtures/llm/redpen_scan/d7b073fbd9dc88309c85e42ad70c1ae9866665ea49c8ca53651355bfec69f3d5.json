@@ -1,0 +1,13 @@
+{
+ "task": "redpen_scan",
+ "provider": "gemini",
+ "model": "gemini-3.8-flash",
+ "prompt_version": "redpen_scan@v1+42f11dca",
+ "sensitivity": "public",
+ "text": "{\n  \"notes\": [\n    {\n      \"code\": \"R05.2\",\n      \"page\": 6,\n      \"pkt\": \"1.3\",\n      \"quote\": \"zapewnienie ciągłości dostaw wody pitnej do sieci wodociągowej w trakcie prowadzonych robót.\",\n      \"title\": \"Ciągłość dostaw wody w trakcie robót\",\n      \"why\": \"Prace na czynnym ujęciu bez szczegółowych wytycznych zasilania zastępczego rodzą ryzyko sporów i kar przy przestojach.\",\n      \"strength\": \"średni\",\n      \"clause_hint\": null\n    }\n  ]\n}",
+ "tokens_in": 6552,
+ "tokens_out": 156,
+ "tokens_cached": 0,
+ "tokens_thought": 0,
+ "finish_reason": "FinishReason.STOP"
+}

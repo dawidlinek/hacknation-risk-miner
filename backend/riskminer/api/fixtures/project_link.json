@@ -1,0 +1,16 @@
+{
+ "project_procedure": {
+  "project_rm_id": "RM-2026-007",
+  "ocid": "ocds-148610-...",
+  "bzp_number": "2025/BZP 00307948/01",
+  "lots": [
+   1
+  ],
+  "method": "expert",
+  "review_status": "approved"
+ },
+ "review_id": 44,
+ "closed_review_items": [
+  12
+ ]
+}

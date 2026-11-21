@@ -36,3 +36,7 @@ materials/starter/*
 !materials/text/
 materials/text/*
 !materials/text/05_dane_projekty.txt
+
+# Local tool config and generated test packs (curated samples are committed separately)
+.claude/
+exports/packs/

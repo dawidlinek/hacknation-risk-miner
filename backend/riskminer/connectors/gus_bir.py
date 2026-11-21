@@ -28,6 +28,7 @@ from typing import Any
 from riskminer.config import settings
 from riskminer.connectors.base import RawStore, ScrapeContext
 from riskminer.connectors.records import ExternalRecord, SourceCheck
+from riskminer.validators import nip_valid as _nip_valid
 
 log = logging.getLogger("riskminer.connectors.gus_bir")
 
@@ -40,7 +41,6 @@ NS_ACT = "http://CIS/BIR/PUBL/2014/07/IUslugaBIRzewnPubl/"
 TEST_NOTE = ("GUS BIR1.1 TEST environment: identifiers, names and TERYT symbols are real, street names/numbers are "
              "anonymised (e.g. 'ul. Test-...'); do not use the street address")
 _DROP = re.compile(r"telefon|faks|fax|email|e_mail|imie|nazwisko", re.IGNORECASE)
-_WEIGHTS = (6, 5, 7, 2, 3, 4, 5, 6, 7)
 
 
 def _env(action: str, body: str) -> str:
@@ -67,10 +67,7 @@ def _dane(inner: str) -> list[dict]:
 
 
 def nip_valid(nip: str) -> bool:
-    if not re.fullmatch(r"\d{10}", nip or ""):
-        return False
-    s = sum(int(d) * w for d, w in zip(nip[:9], _WEIGHTS, strict=False)) % 11
-    return s != 10 and s == int(nip[9])
+    return bool(re.fullmatch(r"\d{10}", nip or "")) and _nip_valid(nip)    # shared rule: riskminer/validators.py
 
 
 def pilot_nips() -> list[tuple[str, str]]:

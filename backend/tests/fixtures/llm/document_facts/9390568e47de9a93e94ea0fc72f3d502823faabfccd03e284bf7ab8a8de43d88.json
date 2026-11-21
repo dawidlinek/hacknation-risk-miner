@@ -1,0 +1,13 @@
+{
+ "task": "document_facts",
+ "provider": "gemini",
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "document_facts@v1+84e0de26",
+ "sensitivity": "public",
+ "text": "{\n  \"doc_kind\": \"pismo do instytucji finansującej o wydłużenie terminu projektu\",\n  \"change\": {\n    \"level\": \"grant\",\n    \"kinds\": [\n      \"termin_projektu\"\n    ],\n    \"delta_days\": null,\n    \"delta_months\": null,\n    \"value_amount\": null,\n    \"vat_basis\": null,\n    \"legal_basis\": [],\n    \"quote\": \"wnioskuje o wydłużenie terminu realizacji projektu pn.: „Budowa sieci kanalizacji sanitarnej w miejscowościach Zmysłówka i Grodzisko Dolne w Gminie Grodzisko Dolne.\\\" do 31.12.2025r.\",\n    \"page\": 1\n  },\n  \"causes\": [\n    {\n      \"code\": \"R01.1\",\n      \"page\": 1,\n      \"quote\": \"Budowa sieci kanalizacyjnej na obszarze już zamieszkanym, na podstawie projektu sporządzonego kilkanaście lat wcześniej, powoduje wiele problemów w terenie\",\n      \"why\": \"Stara dokumentacja projektowa nie uwzględnia aktualnego stanu zagospodarowania terenu.\"\n    }\n  ],\n  \"linked_investment_delay\": null,\n  \"mitigations\": [\n    {\n      \"text\": \"Przeprowadzić aktualizację i weryfikację projektów budowlanych starszych niż kilka lat przed ogłoszeniem przetargu.\",\n      \"for_code\": \"R01.1\"\n    }\n  ],\n  \"summary\": \"Gmina wnosi o wydłużenie terminu realizacji projektu do 31.12.2025 r. z uwagi na opóźnienia wynikające z konieczności modyfikacji tras starego projektu budowlanego w terenie.\"\n}",
+ "tokens_in": 3658,
+ "tokens_out": 416,
+ "tokens_cached": 0,
+ "tokens_thought": 0,
+ "finish_reason": "FinishReason.STOP"
+}

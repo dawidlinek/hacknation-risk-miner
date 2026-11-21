@@ -1,0 +1,1687 @@
+{
+  "id": "AN-2026-0003",
+  "chat": {
+    "suggestions": ["Co zmienić w PFU?", "Najbliższy podobny przypadek", "Dlaczego taka szansa na termin?"]
+  },
+  "code": "AN-2026-0003",
+  "cost": {
+    "n": 81,
+    "prov": {
+      "n": 81,
+      "ci90": null,
+      "refs": [
+        {
+          "id": "rc:subsector_main=SAN|value_bucket=5-10m|design_build=True",
+          "kind": "query",
+          "label": "klasa: kanalizacja sanitarna, wartość 5–10 mln zł, zaprojektuj i wybuduj (82 umowy z BZP)"
+        }
+      ],
+      "role": "calc",
+      "method": "rc_quantiles(cost_dev_pct)",
+      "insufficient": null,
+      "review_status": "auto"
+    },
+    "q_pct": { "p50": 0.0, "p80": 4.14, "p90": 10.67 },
+    "p_no_overrun": 0.691,
+    "p_within_10pct": 0.877,
+    "paid_above_share": 0.309,
+    "paid_above_median_pct": 6.77
+  },
+  "seed": 2583259542,
+  "error": null,
+  "flags": [
+    {
+      "id": "calc-F6",
+      "doc": null,
+      "kind": "calc",
+      "meta": "R06, obliczenie, n = 77",
+      "prov": {
+        "n": 77,
+        "ci90": null,
+        "refs": [
+          {
+            "id": "rc:subsector_main=SAN|value_bucket=5-10m|design_build=True",
+            "kind": "query",
+            "label": "klasa: kanalizacja sanitarna, wartość 5–10 mln zł, zaprojektuj i wybuduj (82 umowy z BZP)"
+          },
+          { "id": "red_flag:F6", "kind": "catalogue", "label": "Katalog: czerwone flagi" }
+        ],
+        "role": "calc",
+        "method": "rule:F6",
+        "insufficient": null,
+        "review_status": "auto"
+      },
+      "rule": "F6",
+      "text": "14 mies. wobec mediany 17,8 mies. planowanych terminów w tej grupie; krócej planowała tylko co czwarta umowa (poniżej 14,9 mies.).",
+      "title": "Termin krótszy niż typowy",
+      "inputs": { "plan_days": 426.125, "planned_p25": 452.5, "planned_p50": 542.0 },
+      "origin": "CALC",
+      "rule_text": "plan_days < class planned P25",
+      "risk_codes": ["R06"],
+      "review_status": "auto",
+      "review_item_id": null
+    },
+    {
+      "id": "calc-F14",
+      "doc": null,
+      "kind": "calc",
+      "meta": "R16, obliczenie, n = 77",
+      "prov": {
+        "n": 77,
+        "ci90": null,
+        "refs": [
+          {
+            "id": "rc:subsector_main=SAN|value_bucket=5-10m|design_build=True",
+            "kind": "query",
+            "label": "klasa: kanalizacja sanitarna, wartość 5–10 mln zł, zaprojektuj i wybuduj (82 umowy z BZP)"
+          },
+          { "id": "red_flag:F14", "kind": "catalogue", "label": "Katalog: czerwone flagi" }
+        ],
+        "role": "calc",
+        "method": "rule:F14",
+        "insufficient": null,
+        "review_status": "auto"
+      },
+      "rule": "F14",
+      "text": "Okres robót obejmuje grudzień–luty, a termin (14 mies.) jest krótszy niż mediana 17,8 mies.",
+      "title": "Zimowe roboty ziemne bez rezerwy",
+      "inputs": { "end": "2028-03-08", "start": "2027-01-07" },
+      "origin": "CALC",
+      "rule_text": "works window covers Dec-Feb AND plan < class median",
+      "risk_codes": ["R16"],
+      "review_status": "auto",
+      "review_item_id": null
+    },
+    {
+      "id": "doc-2076-F4",
+      "doc": { "page": 2, "note_no": null, "document_id": 2076 },
+      "kind": "calc",
+      "meta": "R03.3, reguła, PPU s. 2",
+      "prov": {
+        "n": 1,
+        "refs": [
+          {
+            "id": "2076",
+            "kind": "document",
+            "label": "PPU s. 2",
+            "quote": "5) Wykonie komór przewiertowych;",
+            "page_no": 2,
+            "verification": "exact"
+          }
+        ],
+        "role": "calc",
+        "method": "rule:F4+regex",
+        "review_status": "auto"
+      },
+      "rule": "F4",
+      "text": "Trasa przecina przeszkodę wymagającą uzgodnień zarządcy; ich termin nie jest znany.",
+      "quote": "5) Wykonie komór przewiertowych;",
+      "title": "Przekroczenie cieku, drogi lub kolei",
+      "origin": "CALC",
+      "risk_codes": ["R03.3"],
+      "verification": "exact",
+      "review_status": "auto",
+      "review_item_id": null
+    },
+    {
+      "id": "doc-14422-F4",
+      "doc": { "page": 6, "note_no": null, "document_id": 14422 },
+      "kind": "calc",
+      "meta": "R03.3, reguła, PFU s. 6",
+      "prov": {
+        "n": 1,
+        "refs": [
+          {
+            "id": "14422",
+            "kind": "document",
+            "label": "PFU s. 6",
+            "quote": "o nie wniesieniu sprzeciwu do zgłoszenia budowy wydanych przez\nStarostę Malborskiego oraz Wojewodę Pomorskiego dla inwestycji realizowanej na terenach\nkolejowych zamkniętych oraz w pasie drogowym drogi krajowej.",
+            "page_no": 6,
+            "verification": "exact"
+          }
+        ],
+        "role": "calc",
+        "method": "rule:F4+regex",
+        "review_status": "auto"
+      },
+      "rule": "F4",
+      "text": "Trasa przecina przeszkodę wymagającą uzgodnień zarządcy; ich termin nie jest znany.",
+      "quote": "o nie wniesieniu sprzeciwu do zgłoszenia budowy wydanych przez\nStarostę Malborskiego oraz Wojewodę Pomorskiego dla inwestycji realizowanej na terenach\nkolejowych zamkniętych oraz w pasie drogowym drogi krajowej.",
+      "title": "Przekroczenie cieku, drogi lub kolei",
+      "origin": "CALC",
+      "risk_codes": ["R03.3"],
+      "verification": "exact",
+      "review_status": "auto",
+      "review_item_id": null
+    },
+    {
+      "id": "doc-14422-F2",
+      "doc": { "page": 3, "note_no": null, "document_id": 14422 },
+      "kind": "calc",
+      "meta": "R03.2, reguła, PFU s. 3",
+      "prov": {
+        "n": 1,
+        "refs": [
+          {
+            "id": "14422",
+            "kind": "document",
+            "label": "PFU s. 3",
+            "quote": "Projektowane rurociągi oraz przepompownia zlokalizowane będą w ciągach komunikacyjnych oraz\nczęściowo na działkach prywatnych.",
+            "page_no": 3,
+            "verification": "exact"
+          }
+        ],
+        "role": "calc",
+        "method": "rule:F2+regex",
+        "review_status": "auto"
+      },
+      "rule": "F2",
+      "text": "Trasa przebiega przez działki prywatne; bez zgód właścicieli przekazanie terenu się opóźni.",
+      "quote": "Projektowane rurociągi oraz przepompownia zlokalizowane będą w ciągach komunikacyjnych oraz\nczęściowo na działkach prywatnych.",
+      "title": "Grunty prywatne na trasie",
+      "origin": "CALC",
+      "risk_codes": ["R03.2"],
+      "verification": "exact",
+      "review_status": "auto",
+      "review_item_id": null
+    },
+    {
+      "id": "doc-14422-F1",
+      "doc": { "page": 11, "note_no": null, "document_id": 14422 },
+      "kind": "calc",
+      "meta": "R02.1, reguła, PFU s. 11",
+      "prov": {
+        "n": 1,
+        "refs": [
+          {
+            "id": "14422",
+            "kind": "document",
+            "label": "PFU s. 11",
+            "quote": "Wykonawca powinien przewidzieć w Cenie Kontraktowej możliwość wystąpienia warunków\ngruntowo-wodnych odmiennych od ujętych w Dokumentacji Projektowej.",
+            "page_no": 11,
+            "verification": "exact"
+          }
+        ],
+        "role": "calc",
+        "method": "rule:F1+regex",
+        "review_status": "auto"
+      },
+      "rule": "F1",
+      "text": "Ryzyko gruntu przeniesione na wykonawcę lub woda gruntowa bez badań: wykonawca wyceni je w ciemno.",
+      "quote": "Wykonawca powinien przewidzieć w Cenie Kontraktowej możliwość wystąpienia warunków\ngruntowo-wodnych odmiennych od ujętych w Dokumentacji Projektowej.",
+      "title": "Warunki gruntowo-wodne po stronie wykonawcy",
+      "origin": "CALC",
+      "risk_codes": ["R02.1"],
+      "verification": "exact",
+      "review_status": "auto",
+      "review_item_id": null
+    }
+  ],
+  "title": "Kanalizacja sanitarna, 6 km, 3 przepompownie",
+  "shares": {
+    "late": {
+      "k": 52,
+      "n": 82,
+      "prov": {
+        "n": 82,
+        "ci90": [0.5437, 0.7161],
+        "refs": [
+          {
+            "id": "rc:subsector_main=SAN|value_bucket=5-10m|design_build=True",
+            "kind": "query",
+            "label": "klasa: kanalizacja sanitarna, wartość 5–10 mln zł, zaprojektuj i wybuduj (82 umowy z BZP)"
+          }
+        ],
+        "role": "calc",
+        "method": "rc_share+wilson_ci90",
+        "insufficient": null,
+        "review_status": "auto"
+      },
+      "unit": "share",
+      "value": 0.6341,
+      "display": "63% (52 z 82)"
+    },
+    "changes": {
+      "k": 63,
+      "n": 82,
+      "prov": {
+        "n": 82,
+        "ci90": [0.6838, 0.8356],
+        "refs": [
+          {
+            "id": "rc:subsector_main=SAN|value_bucket=5-10m|design_build=True",
+            "kind": "query",
+            "label": "klasa: kanalizacja sanitarna, wartość 5–10 mln zł, zaprojektuj i wybuduj (82 umowy z BZP)"
+          }
+        ],
+        "role": "calc",
+        "method": "rc_share+wilson_ci90",
+        "insufficient": null,
+        "review_status": "auto"
+      },
+      "unit": "share",
+      "value": 0.7683,
+      "display": "77% (63 z 82)"
+    },
+    "paid_above": {
+      "k": 25,
+      "n": 81,
+      "prov": {
+        "n": 81,
+        "ci90": [0.2315, 0.3981],
+        "refs": [
+          {
+            "id": "rc:subsector_main=SAN|value_bucket=5-10m|design_build=True",
+            "kind": "query",
+            "label": "klasa: kanalizacja sanitarna, wartość 5–10 mln zł, zaprojektuj i wybuduj (82 umowy z BZP)"
+          }
+        ],
+        "role": "calc",
+        "method": "rc_share+wilson_ci90",
+        "insufficient": null,
+        "review_status": "auto"
+      },
+      "unit": "share",
+      "value": 0.3086,
+      "display": "31% (25 z 81)"
+    }
+  },
+  "status": "ready",
+  "clauses": [
+    {
+      "why": "Termin krótszy niż typowy",
+      "code": "R06.1-K1",
+      "text": "Termin wykonania: [X] miesięcy od dnia zawarcia umowy, nie później niż do [data]; wskazanie daty jest uzasadnione terminem kwalifikowalności wydatków wynikającym z umowy o dofinansowanie (obiektywna przyczyna w rozumieniu art. 436 pkt 1 Pzp).",
+      "title": "Harmonogram i kamienie milowe",
+      "number": {
+        "prov": {
+          "n": 82,
+          "ci90": null,
+          "refs": [
+            {
+              "id": "rc:subsector_main=SAN|value_bucket=5-10m|design_build=True",
+              "kind": "query",
+              "label": "klasa: kanalizacja sanitarna, wartość 5–10 mln zł, zaprojektuj i wybuduj (82 umowy z BZP)"
+            }
+          ],
+          "role": "calc",
+          "method": "rc_share(cause_codes~R06)",
+          "insufficient": null,
+          "review_status": "auto"
+        },
+        "unit": "share",
+        "value": 0.0244,
+        "display": "2%"
+      },
+      "status": "proposed",
+      "in_pack": false,
+      "risk_codes": ["R06"]
+    },
+    {
+      "why": "Zimowe roboty ziemne bez rezerwy",
+      "code": "R16-K1",
+      "text": "Okolicznością uzasadniającą zmianę terminu są warunki atmosferyczne uniemożliwiające prowadzenie robót zgodnie z technologią (np. temperatura powietrza poniżej [−5] °C lub opad powyżej [10] mm/dobę według najbliższej stacji IMGW), trwające łącznie dłużej niż [średnia wieloletnia dla danego miesiąca + 5] dni, potwierdzone wpisem do dziennika budowy i zaakceptowane przez inspektora nadzoru; termin przedłuża się o liczbę dni ponad ten próg.",
+      "title": "Warunki atmosferyczne",
+      "number": {
+        "prov": {
+          "n": 82,
+          "ci90": null,
+          "refs": [
+            {
+              "id": "rc:subsector_main=SAN|value_bucket=5-10m|design_build=True",
+              "kind": "query",
+              "label": "klasa: kanalizacja sanitarna, wartość 5–10 mln zł, zaprojektuj i wybuduj (82 umowy z BZP)"
+            }
+          ],
+          "role": "calc",
+          "method": "rc_share(cause_codes~R16)",
+          "insufficient": null,
+          "review_status": "auto"
+        },
+        "unit": "share",
+        "value": 0.1098,
+        "display": "11%"
+      },
+      "status": "proposed",
+      "in_pack": false,
+      "risk_codes": ["R16"]
+    },
+    {
+      "why": "31% podobnych umów rozliczono ponad wartość (25 z 81).",
+      "code": "R08.1-K1",
+      "text": "1. Strony przewidują zmianę wysokości wynagrodzenia w przypadku zmiany ceny materiałów lub kosztów związanych z realizacją zamówienia (art. 439 Pzp). 2. Miarą zmiany jest wskaźnik cen produkcji budowlano-montażowej, budowa obiektów inżynierii lądowej i wodnej, ogłaszany w komunikacie Prezesa GUS, liczony narastająco od miesiąca, w którym upłynął termin składania ofert (a gdy umowę zawarto po upływie 180 dni od tego terminu, od dnia otwarcia ofert). 3. Strona może żądać zmiany wynagrodzenia, jeżeli wskaźnik zmieni się o więcej niż 5% (próg); zmiana obejmuje część wynagrodzenia za roboty pozostałe do wykonania, o wartość zmiany wskaźnika ponad próg, nie częściej niż raz na kwartał. 4. Zmiana obejmuje zarówno wzrost, jak i obniżenie cen. 5. Maksymalna łączna wartość zmiany wynagrodzenia wynosi [10–15]% wynagrodzenia pierwotnego. 6. Wykonawca zmienia wynagrodzenie podwykonawców zgodnie z art. 439 ust. 5 Pzp.",
+      "title": "Waloryzacja i model wynagrodzenia (art. 439)",
+      "number": {
+        "prov": {
+          "n": 82,
+          "ci90": null,
+          "refs": [
+            {
+              "id": "rc:subsector_main=SAN|value_bucket=5-10m|design_build=True",
+              "kind": "query",
+              "label": "klasa: kanalizacja sanitarna, wartość 5–10 mln zł, zaprojektuj i wybuduj (82 umowy z BZP)"
+            }
+          ],
+          "role": "calc",
+          "method": "rc_share(cause_codes~R08)",
+          "insufficient": null,
+          "review_status": "auto"
+        },
+        "unit": "share",
+        "value": 0.0122,
+        "display": "1%"
+      },
+      "status": "proposed",
+      "in_pack": false,
+      "risk_codes": ["R08"]
+    }
+  ],
+  "missing": [
+    {
+      "no": "A",
+      "kind": "missing",
+      "rule": "F7",
+      "title": "Brak: klauzula waloryzacyjna w PPU",
+      "limits": "Roboty trwają dłużej niż 6 mies., a art. 439 Pzp wymaga waloryzacji.",
+      "origin": "CALC",
+      "risk_codes": ["R08.1"],
+      "state_label": "dokument nie wspomina",
+      "review_status": "auto",
+      "evidence_state": "DOKUMENT_NIE_WSPOMINA",
+      "suggested_clause": "R08.1-K1"
+    }
+  ],
+  "summary": {
+    "prov": {
+      "n": 82,
+      "ci90": null,
+      "refs": [
+        {
+          "id": "rc:subsector_main=SAN|value_bucket=5-10m|design_build=True",
+          "kind": "query",
+          "label": "klasa: kanalizacja sanitarna, wartość 5–10 mln zł, zaprojektuj i wybuduj (82 umowy z BZP)"
+        }
+      ],
+      "role": "calc",
+      "method": "template:summary_v1",
+      "insufficient": null,
+      "review_status": "auto"
+    },
+    "text": "Podobne inwestycje (82 umowy: kanalizacja sanitarna, wartość 5–10 mln zł, zaprojektuj i wybuduj) w 63% kończyły się po terminie. Przy planie 14 mies. szansa na termin to ok. 34%, a 8 na 10 umów skończyłoby się w 18 mies. Koszt kilometra (1,17 mln zł) jest wyższy niż w 68% umów.",
+    "sentence": "Podobne inwestycje (82 umowy: kanalizacja sanitarna, wartość 5–10 mln zł, zaprojektuj i wybuduj) w 63% kończyły się po terminie. Przy planie 14 mies. szansa na termin to ok. 34%, a 8 na 10 umów skończyłoby się w 18 mies. Koszt kilometra (1,17 mln zł) jest wyższy niż w 68% umów.",
+    "provenance": "obliczenie, n = 82, szablon (bez AI)"
+  },
+  "version": 1,
+  "backtest": {
+    "note": "Sprawdziliśmy prognozy na 6 143 umowach zakończonych później: 85% opóźnień mieściło się w przedziale 8 na 10.",
+    "prov": {
+      "n": 6143,
+      "refs": [
+        { "id": "an_contract:completed_on>=2024", "kind": "query", "label": "umowy zakończone od 2024 r." }
+      ],
+      "role": "calc",
+      "method": "backtest_w3",
+      "review_status": "auto"
+    },
+    "n_test": 6143,
+    "late_bias_pp": 5.9,
+    "inside_p10_p90": 0.85
+  },
+  "subtitle": "AN-2026-0003, 7 mln zł brutto, 14 miesięcy, FEnIKS 2021-2027",
+  "documents": [
+    {
+      "id": 2076,
+      "label": "PPU, 28 s.",
+      "pages": 28,
+      "doc_type": "PPU",
+      "filename": "Zał. Nr 2 do SWZ-Projekt umowy - wersja ujednolicona- 12.03.2026 r..pdf",
+      "document_id": 2076,
+      "sensitivity": "public"
+    },
+    {
+      "id": 14422,
+      "label": "PFU, 57 s.",
+      "pages": 57,
+      "doc_type": "PFU",
+      "filename": "załącznik_nr_10_do_SWZ_PFU.pdf",
+      "document_id": 14422,
+      "sensitivity": "public"
+    }
+  ],
+  "questions": [
+    {
+      "n": 77,
+      "key": "time",
+      "you": 14.0,
+      "aria": "Szansa na termin 34%; 8 na 10 podobnych umów trwało od 13,6 do 20,2 mies.; mediana 15,9 mies.",
+      "band": { "to": 20.2, "from": 13.6, "kind": "p10_p90", "caption": "8 na 10 podobnych umów" },
+      "tone": "bad",
+      "range": {
+        "n": 77,
+        "p10": 13.6,
+        "p50": 15.9,
+        "p80": 18.1,
+        "p90": 20.2,
+        "you": 14.0,
+        "axis": [11, 38],
+        "unit": "months",
+        "plain": "8 na 10 podobnych umów trwało do 18,1 mies.",
+        "marker": { "x": 35.8, "label": "koniec programu" }
+      },
+      "scale": { "max": 38, "min": 11, "hi_label": "38 mies.", "lo_label": "11 mies." },
+      "stats": {
+        "ci90": [0.2597, 0.4286],
+        "tier": "high",
+        "n_eff": 64.4,
+        "p_le_18": 0.794,
+        "q_months": { "p10": 13.58, "p50": 15.85, "p80": 18.05, "p90": 20.19 },
+        "n_unknown": 2,
+        "p_on_time": 0.3445,
+        "definition": "termin = data wykonania (5.2) wobec planowanego końca (4.2); w terminie wg 5.3",
+        "q_ci90_days": { "p50": [462.5, 510.1], "p80": [535.2, 586.8] },
+        "planned_p25_months": 14.9,
+        "planned_p50_months": 17.8
+      },
+      "answer": "Raczej nie",
+      "median": 15.9,
+      "metric": "time",
+      "key_kind": "chance",
+      "question": "Czy zdążysz w 14 miesięcy?",
+      "key_value": 0.344,
+      "key_number": {
+        "prov": {
+          "n": 77,
+          "ci90": [0.2597, 0.4286],
+          "refs": [
+            {
+              "id": "rc:subsector_main=SAN|value_bucket=5-10m|design_build=True",
+              "kind": "query",
+              "label": "klasa: kanalizacja sanitarna, wartość 5–10 mln zł, zaprojektuj i wybuduj (82 umowy z BZP)"
+            }
+          ],
+          "role": "calc",
+          "method": "rc_ratio_kernel+bootstrap_ci90",
+          "insufficient": null,
+          "review_status": "auto"
+        },
+        "unit": "share",
+        "value": 0.3445,
+        "display": "34% szans"
+      },
+      "provenance": {
+        "n": 77,
+        "text": "obliczenie, n = 77, przedział 90%: 26%–43%",
+        "origin": "CALC",
+        "review_status": "auto"
+      },
+      "answer_step": 1,
+      "key_display": "34% szans",
+      "insufficient": false,
+      "programme_end": 35.8
+    },
+    {
+      "n": 1962,
+      "key": "budget",
+      "you": 1.167,
+      "aria": "Koszt kilometra 1,17 mln zł; połowa podobnych umów między 0,44 a 1,39 mln zł/km; wyżej niż 68% umów.",
+      "band": { "to": 1.389, "from": 0.437, "kind": "p25_p75", "caption": "połowa podobnych umów" },
+      "tone": "good",
+      "range": {
+        "n": 1962,
+        "p25": 0.437,
+        "p50": 0.797,
+        "p75": 1.389,
+        "p90": 2.827,
+        "you": 1.167,
+        "axis": [0, 2.0],
+        "unit": "mln_pln_per_km",
+        "plain": "68. percentyl"
+      },
+      "scale": { "max": 2.0, "min": 0, "hi_label": "2,0 mln zł/km", "lo_label": "0" },
+      "stats": {
+        "sample": [
+          {
+            "ppk": 1167270.0,
+            "title": "Rozbudowa sieci kanalizacji sanitarnej w miejscowości Pilzno (ul. Dąbrowskiego, Lwowska, Kochanowskiego)",
+            "length_km": 1.0,
+            "bzp_number": "2025/BZP 00561557",
+            "value_gross": 1167270.0,
+            "performance_id": 101259
+          },
+          {
+            "ppk": 1165185.6607142854,
+            "title": "Budowa kanalizacji sanitarnej w miejscowości Kotówka – etap I",
+            "length_km": 0.56,
+            "bzp_number": "2026/BZP 00003896",
+            "value_gross": 652503.97,
+            "performance_id": 102509
+          },
+          {
+            "ppk": 1163895.207920792,
+            "title": "„Budowa sieci kanalizacji sanitarnej z przyłączami - etap IV - od studni A51 w m. Wyszyna do studni A69 w m. Mańkowo, gm. Stara Biała”.",
+            "length_km": 1.01,
+            "bzp_number": "2024/BZP 00589001",
+            "value_gross": 1175534.16,
+            "performance_id": 94852
+          },
+          {
+            "ppk": 1161929.7299412915,
+            "title": "ROZBUDOWA SIECI KANALIZACJI SANITARNEJ I WODOCIĄGOWEJ W GMINIE IZABELIN – MIEJSCOWOŚĆ MOŚCISKA WRAZ\nZ BUDOWĄ PRZEPOMPOWNI”",
+            "length_km": 2.555,
+            "bzp_number": "2024/BZP 00225209",
+            "value_gross": 2968730.46,
+            "performance_id": 91602
+          },
+          {
+            "ppk": 1171747.4142623844,
+            "title": "Budowa sieci kanalizacji sanitarnej w ul. Ściegiennego, Cmentarnej, Góreckiej, Kocha, Poprzecznej, Świętokrzyskiej w Tuszynie",
+            "length_km": 5.511,
+            "bzp_number": "2025/BZP 00021872",
+            "value_gross": 6457500.0,
+            "performance_id": 96494
+          }
+        ],
+        "nominal": true,
+        "coverage": 0.543,
+        "percentile": 0.684,
+        "length_source": "procedure.length_km"
+      },
+      "answer": "Raczej tak",
+      "median": 0.797,
+      "metric": "cost",
+      "key_kind": "mln_per_km",
+      "question": "Czy 7,0 mln zł wystarczy?",
+      "key_value": 1.167,
+      "key_number": {
+        "prov": {
+          "n": 1962,
+          "ci90": null,
+          "refs": [
+            { "id": "rc:SAN|length_km", "kind": "query", "label": "umowy z długością sieci w opisie" }
+          ],
+          "role": "calc",
+          "method": "unit_cost_percentile",
+          "insufficient": null,
+          "review_status": "auto"
+        },
+        "unit": "mln_pln_per_km",
+        "value": 1.1667,
+        "display": "1,17 mln zł/km"
+      },
+      "provenance": {
+        "n": 1962,
+        "text": "obliczenie, n = 1962, 68. percentyl",
+        "origin": "CALC",
+        "review_status": "auto"
+      },
+      "answer_step": 2,
+      "key_display": "1,17 mln zł/km",
+      "insufficient": false,
+      "programme_end": null
+    },
+    {
+      "n": 77,
+      "key": "programme",
+      "you": 14.0,
+      "aria": "Szansa na odbiór przed końcem programu 98%; od podpisania umowy do końca programu zostaje ok. 35,8 mies.",
+      "band": { "to": 20.2, "from": 13.6, "kind": "p10_p90", "caption": "8 na 10 podobnych umów" },
+      "tone": "good",
+      "scale": { "max": 38, "min": 11, "hi_label": "38 mies.", "lo_label": "11 mies." },
+      "stats": { "sign_p50": "2027-01-07", "tender_n": 3736, "buffer_days": 663, "months_available": 35.8 },
+      "answer": "Tak",
+      "median": 15.9,
+      "metric": "time",
+      "deadline": {
+        "date": "2029-12-31",
+        "prov": {
+          "refs": [
+            {
+              "id": "funding_programme:FENIKS",
+              "kind": "catalogue",
+              "label": "Katalog: programy finansowania"
+            }
+          ],
+          "role": "source",
+          "assumption": true,
+          "review_status": "proposed"
+        },
+        "programme": "FEnIKS 2021-2027"
+      },
+      "key_kind": "chance",
+      "question": "Czy zdążysz przed końcem programu?",
+      "key_value": 0.982,
+      "key_number": {
+        "prov": {
+          "n": 77,
+          "ci90": null,
+          "refs": [
+            {
+              "id": "rc:subsector_main=SAN|value_bucket=5-10m|design_build=True",
+              "kind": "query",
+              "label": "klasa: kanalizacja sanitarna, wartość 5–10 mln zł, zaprojektuj i wybuduj (82 umowy z BZP)"
+            },
+            { "id": "funding_programme:FENIKS", "kind": "catalogue", "label": "koniec programu" }
+          ],
+          "role": "calc",
+          "method": "monte_carlo(tender_days+plan_ratio)+programme_end",
+          "insufficient": null,
+          "review_status": "auto"
+        },
+        "unit": "share",
+        "value": 0.9823,
+        "display": "98% szans"
+      },
+      "provenance": {
+        "n": 77,
+        "text": "obliczenie, n = 77; termin programu: założenie eksperta",
+        "origin": "CALC",
+        "review_status": "auto"
+      },
+      "answer_step": 3,
+      "key_display": "98% szans",
+      "insufficient": false,
+      "programme_end": 35.8
+    }
+  ],
+  "data_as_of": "2026-11-20",
+  "limitations": [
+    "Koszt liczony względem wartości umowy z ogłoszenia o wykonaniu (pole 4.4), więc dopłaty są dolną granicą.",
+    "Przyczyny zmian sklasyfikował model AI (propozycje do przeglądu przez eksperta, ok. 8 na 10 trafień na próbie wzorcowej); gdzie go brak, użyto reguł słownikowych.",
+    "Koszt kilometra w cenach nominalnych (bez indeksacji GUS).",
+    "Długość sieci odczytana wyrażeniem regularnym z tytułu i opisu przedmiotu zamówienia (ogłoszenie o zamówieniu, a gdy brak opisu, opisy części); ma ją 54% umów podsektora, więc koszt kilometra liczony jest na tej części.",
+    "Termin programu „FEnIKS 2021-2027” to założenie eksperta z Katalogu (do zatwierdzenia); termin z umowy o dofinansowanie ma pierwszeństwo.",
+    "Efekty zmian w symulacji to założenia eksperta z Katalogu, liczone tylko na umowach z rozpoznaną przyczyną zmiany; danych jest mało.",
+    "Sprawdzian na umowach zakończonych od 2024 r.: odsetek opóźnionych był o ok. 6 pp wyższy niż prognoza, więc szanse na termin mogą być zawyżone."
+  ],
+  "data_version": "an_contract@2026-11-21T19:55:34Z/11222",
+  "backtest_note": "Sprawdziliśmy prognozy na 6 143 umowach zakończonych później: 85% opóźnień mieściło się w przedziale 8 na 10.",
+  "features_used": {
+    "woj": "24",
+    "deadline": null,
+    "length_km": 6.0,
+    "plan_days": 426.125,
+    "tech_tags": [],
+    "work_type": "build",
+    "subsectors": [],
+    "connections": null,
+    "value_gross": 7000000.0,
+    "design_build": true,
+    "planned_year": 2027,
+    "announce_date": null,
+    "subsector_main": "SAN",
+    "pumping_stations": 3,
+    "funding_programme": "FENIKS"
+  },
+  "similar_cases": [
+    {
+      "why": "ten sam podsektor, podobna wartość (6,0 wobec 7,0 mln zł), podobny opis",
+      "woj": "24",
+      "diff": "inny okres cenowy",
+      "href": "/projekty/RM-2026-013",
+      "late": true,
+      "ocid": "ocds-148610-d906b948-eb2f-11ed-9355-06954b8c6cb9",
+      "rank": 1,
+      "badge": "przypadek zweryfikowany",
+      "rm_id": "RM-2026-013",
+      "score": 0.866,
+      "title": "„Budowa sieci kanalizacji sanitarnej w Gminie Bestwina – sołectwo Kaniów”",
+      "changes": 2,
+      "outcome": {
+        "delay_days": {
+          "prov": {
+            "refs": [
+              {
+                "id": "2024/BZP 00637524",
+                "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd15d9-408f-821e-a8d2-3c00015817e0",
+                "kind": "notice",
+                "label": "ogł. o wykonaniu",
+                "field_code": "5.2"
+              }
+            ],
+            "role": "case",
+            "review_status": "auto"
+          },
+          "unit": "days",
+          "value": 31.0,
+          "display": "+31 dni"
+        },
+        "cost_dev_pct": {
+          "prov": {
+            "refs": [
+              {
+                "id": "2024/BZP 00637524",
+                "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd15d9-408f-821e-a8d2-3c00015817e0",
+                "kind": "notice",
+                "label": "ogł. o wykonaniu",
+                "field_code": "5.5"
+              }
+            ],
+            "role": "case",
+            "review_status": "auto"
+          },
+          "unit": "pct",
+          "value": 6.8,
+          "display": "+6,8%"
+        }
+      },
+      "coverage": 0.97,
+      "is_pilot": true,
+      "score_num": {
+        "prov": {
+          "n": 11222,
+          "refs": [{ "id": "similarity:default", "kind": "catalogue", "label": "wagi podobieństwa" }],
+          "role": "calc",
+          "method": "weighted_similarity_v1",
+          "review_status": "auto"
+        },
+        "unit": "score",
+        "value": 0.866,
+        "display": "0,87"
+      },
+      "buyer_name": "Gmina Bestwina",
+      "delay_days": 31.0,
+      "project_id": "RM-2026-013",
+      "cause_codes": ["R16"],
+      "value_gross": { "amount": "5991655.95", "currency": "PLN", "vat_basis": "gross" },
+      "cost_dev_pct": 6.8,
+      "risk_overlap": [
+        { "risk": "R16", "text": "sygnał R16 w Twojej analizie; w tym przypadku zmiany z tej przyczyny" }
+      ],
+      "contributions": [
+        { "label": "podsektor", "value": 0.2577, "feature": "podsektor" },
+        { "label": "formuła", "value": 0.0825, "feature": "formula" },
+        { "label": "zakres i ilości", "value": 0.1846, "feature": "zakres" },
+        { "label": "wartość", "value": 0.132, "feature": "wartosc" },
+        { "label": "opis (tekst)", "value": 0.1161, "feature": "tekst" },
+        { "label": "inne cechy", "value": 0.0928, "feature": "inne" }
+      ],
+      "matched_terms": ["planuj", "budowe", "kanali"],
+      "performance_id": 95420,
+      "contributions_detail": [
+        { "c": 0.2062, "s": 1.0, "w": 0.2062, "gap": 0.0, "label": "podsektor", "feature": "subsector_main" },
+        {
+          "c": 0.0515,
+          "s": 1.0,
+          "w": 0.0515,
+          "gap": 0.0,
+          "label": "podsektory",
+          "feature": "subsectors_all"
+        },
+        { "c": 0.0722, "s": 1.0, "w": 0.0722, "gap": 0.0, "label": "rodzaj robót", "feature": "works_type" },
+        { "c": 0.0825, "s": 1.0, "w": 0.0825, "gap": 0.0, "label": "formuła", "feature": "formula" },
+        { "c": 0.1206, "s": 0.9751, "w": 0.1237, "gap": 0.0031, "label": "wartość", "feature": "value" },
+        {
+          "c": 0.0884,
+          "s": 0.8574,
+          "w": 0.1031,
+          "gap": 0.0147,
+          "label": "długość sieci",
+          "feature": "physical_size"
+        },
+        { "c": 0.0241, "s": 0.3333, "w": 0.0722, "gap": 0.0481, "label": "elementy", "feature": "tech_tags" },
+        { "c": 0.0114, "s": 0.1845, "w": 0.0619, "gap": 0.0504, "label": "okres", "feature": "period" },
+        { "c": 0.0412, "s": 1.0, "w": 0.0412, "gap": 0.0, "label": "finansowanie", "feature": "funding" },
+        { "c": 0.0515, "s": 1.0, "w": 0.0515, "gap": 0.0, "label": "województwo", "feature": "region" },
+        { "c": 0.1161, "s": 0.8665, "w": 0.134, "gap": 0.0179, "label": "opis (tekst)", "feature": "text" }
+      ]
+    },
+    {
+      "why": "ten sam podsektor, podobny opis, podobna wartość (3,8 wobec 7,0 mln zł)",
+      "woj": "28",
+      "diff": "",
+      "href": "/projekty/ocds-148610-4f45d3ce-f076-444f-a9e5-c44c0a44e0bc",
+      "late": false,
+      "ocid": "ocds-148610-4f45d3ce-f076-444f-a9e5-c44c0a44e0bc",
+      "rank": 2,
+      "badge": null,
+      "rm_id": null,
+      "score": 0.865,
+      "title": "„Budowa sieci kanalizacji sanitarnej w miejscowości Leleszki-etap I oraz sieci kanalizacji sanitarnej w miejscowości Narajty”",
+      "changes": 1,
+      "outcome": {
+        "delay_days": {
+          "prov": {
+            "refs": [
+              {
+                "id": "2025/BZP 00556011",
+                "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de2cbf-2597-a24f-0560-490001412c33",
+                "kind": "notice",
+                "label": "ogł. o wykonaniu",
+                "field_code": "5.2"
+              }
+            ],
+            "role": "case",
+            "review_status": "auto"
+          },
+          "unit": "days",
+          "value": 0.0,
+          "display": "w terminie"
+        },
+        "cost_dev_pct": {
+          "prov": {
+            "refs": [
+              {
+                "id": "2025/BZP 00556011",
+                "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de2cbf-2597-a24f-0560-490001412c33",
+                "kind": "notice",
+                "label": "ogł. o wykonaniu",
+                "field_code": "5.5"
+              }
+            ],
+            "role": "case",
+            "review_status": "auto"
+          },
+          "unit": "pct",
+          "value": 0.0,
+          "display": "+0,0%"
+        }
+      },
+      "coverage": 0.8,
+      "is_pilot": false,
+      "score_num": {
+        "prov": {
+          "n": 11222,
+          "refs": [{ "id": "similarity:default", "kind": "catalogue", "label": "wagi podobieństwa" }],
+          "role": "calc",
+          "method": "weighted_similarity_v1",
+          "review_status": "auto"
+        },
+        "unit": "score",
+        "value": 0.865,
+        "display": "0,87"
+      },
+      "buyer_name": "GMINA PASYM",
+      "delay_days": 0.0,
+      "project_id": "ocds-148610-4f45d3ce-f076-444f-a9e5-c44c0a44e0bc",
+      "cause_codes": ["R13"],
+      "value_gross": { "amount": "3796829.00", "currency": "PLN", "vat_basis": "gross" },
+      "cost_dev_pct": 0.0,
+      "risk_overlap": [],
+      "contributions": [
+        { "label": "podsektor", "value": 0.3125, "feature": "podsektor" },
+        { "label": "formuła", "value": 0.1, "feature": "formula" },
+        { "label": "zakres i ilości", "value": 0.0875, "feature": "zakres" },
+        { "label": "wartość", "value": 0.1401, "feature": "wartosc" },
+        { "label": "opis (tekst)", "value": 0.1625, "feature": "tekst" },
+        { "label": "inne cechy", "value": 0.0625, "feature": "inne" }
+      ],
+      "matched_terms": ["planuj", "budowe", "kanali"],
+      "performance_id": 101193,
+      "contributions_detail": [
+        { "c": 0.25, "s": 1.0, "w": 0.25, "gap": 0.0, "label": "podsektor", "feature": "subsector_main" },
+        {
+          "c": 0.0625,
+          "s": 1.0,
+          "w": 0.0625,
+          "gap": 0.0,
+          "label": "podsektory",
+          "feature": "subsectors_all"
+        },
+        { "c": 0.0875, "s": 1.0, "w": 0.0875, "gap": 0.0, "label": "rodzaj robót", "feature": "works_type" },
+        { "c": 0.1, "s": 1.0, "w": 0.1, "gap": 0.0, "label": "formuła", "feature": "formula" },
+        { "c": 0.1016, "s": 0.6773, "w": 0.15, "gap": 0.0484, "label": "wartość", "feature": "value" },
+        { "c": 0.0385, "s": 0.5134, "w": 0.075, "gap": 0.0365, "label": "okres", "feature": "period" },
+        { "c": 0.05, "s": 1.0, "w": 0.05, "gap": 0.0, "label": "finansowanie", "feature": "funding" },
+        { "c": 0.0125, "s": 0.2, "w": 0.0625, "gap": 0.05, "label": "województwo", "feature": "region" },
+        { "c": 0.1625, "s": 1.0, "w": 0.1625, "gap": 0.0, "label": "opis (tekst)", "feature": "text" }
+      ]
+    },
+    {
+      "why": "ten sam podsektor, podobny opis, też „zaprojektuj i wybuduj”",
+      "woj": "24",
+      "diff": "inny okres cenowy",
+      "href": "/projekty/ocds-148610-5ded16a9-0b42-11ee-b70f-ae2d9e28ec7b",
+      "late": false,
+      "ocid": "ocds-148610-5ded16a9-0b42-11ee-b70f-ae2d9e28ec7b",
+      "rank": 3,
+      "badge": null,
+      "rm_id": null,
+      "score": 0.862,
+      "title": "Wykonanie sieci kanalizacji sanitarnej w systemie zaprojektuj i wybuduj w Brzezówce w rejonie ul. Jagodowej, Siewnej i Polnej",
+      "changes": 1,
+      "outcome": {
+        "delay_days": {
+          "prov": {
+            "refs": [
+              {
+                "id": "2025/BZP 00252669",
+                "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd9de4-ad9f-d8a4-eaaa-350001a4d693",
+                "kind": "notice",
+                "label": "ogł. o wykonaniu",
+                "field_code": "5.2"
+              }
+            ],
+            "role": "case",
+            "review_status": "auto"
+          },
+          "unit": "days",
+          "value": 0.0,
+          "display": "w terminie"
+        },
+        "cost_dev_pct": {
+          "prov": {
+            "refs": [
+              {
+                "id": "2025/BZP 00252669",
+                "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd9de4-ad9f-d8a4-eaaa-350001a4d693",
+                "kind": "notice",
+                "label": "ogł. o wykonaniu",
+                "field_code": "5.5"
+              }
+            ],
+            "role": "case",
+            "review_status": "auto"
+          },
+          "unit": "pct",
+          "value": 0.0,
+          "display": "+0,0%"
+        }
+      },
+      "coverage": 0.8,
+      "is_pilot": false,
+      "score_num": {
+        "prov": {
+          "n": 11222,
+          "refs": [{ "id": "similarity:default", "kind": "catalogue", "label": "wagi podobieństwa" }],
+          "role": "calc",
+          "method": "weighted_similarity_v1",
+          "review_status": "auto"
+        },
+        "unit": "score",
+        "value": 0.862,
+        "display": "0,86"
+      },
+      "buyer_name": "Gmina Hażlach",
+      "delay_days": 0.0,
+      "project_id": "ocds-148610-5ded16a9-0b42-11ee-b70f-ae2d9e28ec7b",
+      "cause_codes": ["R16"],
+      "value_gross": { "amount": "3208295.26", "currency": "PLN", "vat_basis": "gross" },
+      "cost_dev_pct": 0.0,
+      "risk_overlap": [
+        { "risk": "R16", "text": "sygnał R16 w Twojej analizie; w tym przypadku zmiany z tej przyczyny" }
+      ],
+      "contributions": [
+        { "label": "podsektor", "value": 0.3125, "feature": "podsektor" },
+        { "label": "formuła", "value": 0.1, "feature": "formula" },
+        { "label": "zakres i ilości", "value": 0.0875, "feature": "zakres" },
+        { "label": "wartość", "value": 0.0934, "feature": "wartosc" },
+        { "label": "opis (tekst)", "value": 0.1558, "feature": "tekst" },
+        { "label": "inne cechy", "value": 0.1125, "feature": "inne" }
+      ],
+      "matched_terms": ["planuj", "budowe", "kanali"],
+      "performance_id": 98175,
+      "contributions_detail": [
+        { "c": 0.25, "s": 1.0, "w": 0.25, "gap": 0.0, "label": "podsektor", "feature": "subsector_main" },
+        {
+          "c": 0.0625,
+          "s": 1.0,
+          "w": 0.0625,
+          "gap": 0.0,
+          "label": "podsektory",
+          "feature": "subsectors_all"
+        },
+        { "c": 0.0875, "s": 1.0, "w": 0.0875, "gap": 0.0, "label": "rodzaj robót", "feature": "works_type" },
+        { "c": 0.1, "s": 1.0, "w": 0.1, "gap": 0.0, "label": "formuła", "feature": "formula" },
+        { "c": 0.0796, "s": 0.5306, "w": 0.15, "gap": 0.0704, "label": "wartość", "feature": "value" },
+        { "c": 0.0138, "s": 0.1845, "w": 0.075, "gap": 0.0612, "label": "okres", "feature": "period" },
+        { "c": 0.05, "s": 1.0, "w": 0.05, "gap": 0.0, "label": "finansowanie", "feature": "funding" },
+        { "c": 0.0625, "s": 1.0, "w": 0.0625, "gap": 0.0, "label": "województwo", "feature": "region" },
+        { "c": 0.1558, "s": 0.9589, "w": 0.1625, "gap": 0.0067, "label": "opis (tekst)", "feature": "text" }
+      ]
+    },
+    {
+      "why": "ten sam podsektor, podobny opis, podobna wartość (6,0 wobec 7,0 mln zł)",
+      "woj": "26",
+      "diff": "inny okres cenowy",
+      "href": "/projekty/ocds-148610-2c3e5f34-9d46-11ed-94da-6ae0fe5e7159",
+      "late": false,
+      "ocid": "ocds-148610-2c3e5f34-9d46-11ed-94da-6ae0fe5e7159",
+      "rank": 4,
+      "badge": null,
+      "rm_id": null,
+      "score": 0.859,
+      "title": "Budowa sieci kanalizacji sanitarnej w miejscowości Koliszowy gm. Ruda Maleniecka w formule \"zaprojektuj i wybuduj\" - ETAP I",
+      "changes": 1,
+      "outcome": {
+        "delay_days": {
+          "prov": {
+            "refs": [
+              {
+                "id": "2024/BZP 00670869",
+                "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd234b-bbef-d22c-a8d2-3c0001c56804",
+                "kind": "notice",
+                "label": "ogł. o wykonaniu",
+                "field_code": "5.2"
+              }
+            ],
+            "role": "case",
+            "review_status": "auto"
+          },
+          "unit": "days",
+          "value": 0.0,
+          "display": "w terminie"
+        },
+        "cost_dev_pct": {
+          "prov": {
+            "refs": [
+              {
+                "id": "2024/BZP 00670869",
+                "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd234b-bbef-d22c-a8d2-3c0001c56804",
+                "kind": "notice",
+                "label": "ogł. o wykonaniu",
+                "field_code": "5.5"
+              }
+            ],
+            "role": "case",
+            "review_status": "auto"
+          },
+          "unit": "pct",
+          "value": 0.0,
+          "display": "+0,0%"
+        }
+      },
+      "coverage": 0.97,
+      "is_pilot": false,
+      "score_num": {
+        "prov": {
+          "n": 11222,
+          "refs": [{ "id": "similarity:default", "kind": "catalogue", "label": "wagi podobieństwa" }],
+          "role": "calc",
+          "method": "weighted_similarity_v1",
+          "review_status": "auto"
+        },
+        "unit": "score",
+        "value": 0.859,
+        "display": "0,86"
+      },
+      "buyer_name": "GMINA RUDA MALENIECKA",
+      "delay_days": 0.0,
+      "project_id": "ocds-148610-2c3e5f34-9d46-11ed-94da-6ae0fe5e7159",
+      "cause_codes": ["R10"],
+      "value_gross": { "amount": "5951448.48", "currency": "PLN", "vat_basis": "gross" },
+      "cost_dev_pct": 0.0,
+      "risk_overlap": [],
+      "contributions": [
+        { "label": "podsektor", "value": 0.2577, "feature": "podsektor" },
+        { "label": "formuła", "value": 0.0825, "feature": "formula" },
+        { "label": "zakres i ilości", "value": 0.1863, "feature": "zakres" },
+        { "label": "wartość", "value": 0.1318, "feature": "wartosc" },
+        { "label": "opis (tekst)", "value": 0.134, "feature": "tekst" },
+        { "label": "inne cechy", "value": 0.067, "feature": "inne" }
+      ],
+      "matched_terms": ["planuj", "budowe", "kanali"],
+      "performance_id": 95956,
+      "contributions_detail": [
+        { "c": 0.2062, "s": 1.0, "w": 0.2062, "gap": 0.0, "label": "podsektor", "feature": "subsector_main" },
+        {
+          "c": 0.0515,
+          "s": 1.0,
+          "w": 0.0515,
+          "gap": 0.0,
+          "label": "podsektory",
+          "feature": "subsectors_all"
+        },
+        { "c": 0.0722, "s": 1.0, "w": 0.0722, "gap": 0.0, "label": "rodzaj robót", "feature": "works_type" },
+        { "c": 0.0825, "s": 1.0, "w": 0.0825, "gap": 0.0, "label": "formuła", "feature": "formula" },
+        { "c": 0.1204, "s": 0.973, "w": 0.1237, "gap": 0.0033, "label": "wartość", "feature": "value" },
+        {
+          "c": 0.0901,
+          "s": 0.8738,
+          "w": 0.1031,
+          "gap": 0.013,
+          "label": "długość sieci",
+          "feature": "physical_size"
+        },
+        { "c": 0.0241, "s": 0.3333, "w": 0.0722, "gap": 0.0481, "label": "elementy", "feature": "tech_tags" },
+        { "c": 0.0114, "s": 0.1845, "w": 0.0619, "gap": 0.0504, "label": "okres", "feature": "period" },
+        { "c": 0.0412, "s": 1.0, "w": 0.0412, "gap": 0.0, "label": "finansowanie", "feature": "funding" },
+        { "c": 0.0258, "s": 0.5, "w": 0.0515, "gap": 0.0258, "label": "województwo", "feature": "region" },
+        { "c": 0.134, "s": 1.0, "w": 0.134, "gap": 0.0, "label": "opis (tekst)", "feature": "text" }
+      ]
+    }
+  ],
+  "pending_review": 0,
+  "reference_class": {
+    "n": 82,
+    "tier": "high",
+    "final": {
+      "n": 82,
+      "label": "zaprojektuj i wybuduj",
+      "min_n": { "tail": 50, "share": 30 },
+      "filter": { "design_build": true, "value_bucket": "5-10m", "subsector_main": "SAN" },
+      "n_cost": 81,
+      "n_time": 77,
+      "widened": false
+    },
+    "label": "kanalizacja sanitarna, wartość 5–10 mln zł, zaprojektuj i wybuduj",
+    "funnel": [
+      {
+        "n": 11222,
+        "key": "all",
+        "prov": {
+          "n": 11222,
+          "ci90": null,
+          "refs": [
+            { "id": "rc:all", "kind": "query", "label": "wszystkie wykonane umowy wod-kan, 2021–2026" }
+          ],
+          "role": "calc",
+          "method": "rc_count",
+          "insufficient": null,
+          "review_status": "auto"
+        },
+        "label": "wszystkie wykonane umowy wod-kan, 2021–2026",
+        "filter": {},
+        "n_cost": 11112,
+        "n_time": 10565,
+        "width_pct": 100.0
+      },
+      {
+        "n": 4287,
+        "key": "subsector",
+        "prov": {
+          "n": 4287,
+          "ci90": null,
+          "refs": [{ "id": "rc:subsector_main=SAN", "kind": "query", "label": "kanalizacja sanitarna" }],
+          "role": "calc",
+          "method": "rc_count",
+          "insufficient": null,
+          "review_status": "auto"
+        },
+        "label": "kanalizacja sanitarna",
+        "filter": { "subsector_main": "SAN" },
+        "n_cost": 4241,
+        "n_time": 4051,
+        "width_pct": 61.8
+      },
+      {
+        "n": 373,
+        "key": "value",
+        "prov": {
+          "n": 373,
+          "ci90": null,
+          "refs": [
+            {
+              "id": "rc:subsector_main=SAN|value_bucket=5-10m",
+              "kind": "query",
+              "label": "wartość 5–10 mln zł"
+            }
+          ],
+          "role": "calc",
+          "method": "rc_count",
+          "insufficient": null,
+          "review_status": "auto"
+        },
+        "label": "wartość 5–10 mln zł",
+        "filter": { "value_bucket": "5-10m", "subsector_main": "SAN" },
+        "n_cost": 372,
+        "n_time": 350,
+        "width_pct": 18.2
+      },
+      {
+        "n": 82,
+        "key": "formula",
+        "prov": {
+          "n": 82,
+          "ci90": null,
+          "refs": [
+            {
+              "id": "rc:subsector_main=SAN|value_bucket=5-10m|design_build=True",
+              "kind": "query",
+              "label": "zaprojektuj i wybuduj"
+            }
+          ],
+          "role": "calc",
+          "method": "rc_count",
+          "insufficient": null,
+          "review_status": "auto"
+        },
+        "label": "zaprojektuj i wybuduj",
+        "filter": { "design_build": true, "value_bucket": "5-10m", "subsector_main": "SAN" },
+        "n_cost": 81,
+        "n_time": 77,
+        "width_pct": 8.5
+      }
+    ],
+    "period": ["2021-01-01", "2026-11-20"],
+    "widened": false,
+    "widen_note": null,
+    "data_version": "an_contract@2026-11-21T19:55:34Z/11222",
+    "reweight_note": null
+  },
+  "catalogue_version": "v1.1",
+  "unverified_hidden": 0,
+  "similar_code_counts": {
+    "R01": {
+      "k": 2,
+      "n": 30,
+      "cases": [
+        {
+          "bzp": "2025/BZP 00076438",
+          "href": "/projekty/ocds-148610-6a5766d1-c184-11ed-8261-62cbbe4d0ca4",
+          "label": "GMINA BRENNA"
+        },
+        {
+          "bzp": "2026/BZP 00267846",
+          "href": "/projekty/ocds-148610-911fb2f3-95b4-4ab3-8fd0-7743072493f5",
+          "label": "Gmina Łaskarzew"
+        }
+      ]
+    },
+    "R02": {
+      "k": 2,
+      "n": 30,
+      "cases": [
+        {
+          "bzp": "2025/BZP 00434802",
+          "href": "/projekty/ocds-148610-fe61393a-ee0e-11ec-9a86-f6f4c648a056",
+          "label": "GMINA NIEDŹWIEDŹ"
+        },
+        {
+          "bzp": "2026/BZP 00206821",
+          "href": "/projekty/ocds-148610-650245de-fe3a-11ee-b81b-aebd110f5279",
+          "label": "Gmina Piława Górna"
+        }
+      ]
+    },
+    "R03": {
+      "k": 3,
+      "n": 30,
+      "cases": [
+        {
+          "bzp": "2025/BZP 00289256",
+          "href": "/projekty/ocds-148610-ba6edda3-571d-11ee-a60c-9ec5599dddc1",
+          "label": "Gmina Zbrosławice"
+        },
+        {
+          "bzp": "2025/BZP 00123092",
+          "href": "/projekty/ocds-148610-e34b71cd-bcb8-11ed-b8d9-2a18c1f2976f",
+          "label": "GMINA SUSIEC"
+        },
+        {
+          "bzp": "2025/BZP 00434802",
+          "href": "/projekty/ocds-148610-fe61393a-ee0e-11ec-9a86-f6f4c648a056",
+          "label": "GMINA NIEDŹWIEDŹ"
+        }
+      ]
+    },
+    "R04": {
+      "k": 10,
+      "n": 30,
+      "cases": [
+        {
+          "bzp": "2023/BZP 00162507",
+          "href": "/projekty/ocds-148610-7045f947-7da2-11eb-86b1-a64936a8669f",
+          "label": "GMINA WOLA KRZYSZTOPORSKA"
+        },
+        {
+          "bzp": "2026/BZP 00164701",
+          "href": "/projekty/ocds-148610-f73063f7-d5ec-4967-9044-48cefe45b49b",
+          "label": "GMINA ŻABIA WOLA"
+        },
+        {
+          "bzp": "2025/BZP 00289256",
+          "href": "/projekty/ocds-148610-ba6edda3-571d-11ee-a60c-9ec5599dddc1",
+          "label": "Gmina Zbrosławice"
+        }
+      ]
+    },
+    "R07": {
+      "k": 2,
+      "n": 30,
+      "cases": [
+        {
+          "bzp": "2025/BZP 00434802",
+          "href": "/projekty/ocds-148610-fe61393a-ee0e-11ec-9a86-f6f4c648a056",
+          "label": "GMINA NIEDŹWIEDŹ"
+        },
+        {
+          "bzp": "2024/BZP 00378173",
+          "href": "/projekty/ocds-148610-e6f7c20e-db61-11ec-9a86-f6f4c648a056",
+          "label": "Miasto i Gmina Prabuty"
+        }
+      ]
+    },
+    "R10": {
+      "k": 2,
+      "n": 30,
+      "cases": [
+        {
+          "bzp": "2024/BZP 00670869",
+          "href": "/projekty/ocds-148610-2c3e5f34-9d46-11ed-94da-6ae0fe5e7159",
+          "label": "GMINA RUDA MALENIECKA"
+        },
+        {
+          "bzp": "2026/BZP 00164701",
+          "href": "/projekty/ocds-148610-f73063f7-d5ec-4967-9044-48cefe45b49b",
+          "label": "GMINA ŻABIA WOLA"
+        }
+      ]
+    },
+    "R11": {
+      "k": 1,
+      "n": 30,
+      "cases": [
+        {
+          "bzp": "2025/BZP 00572330",
+          "href": "/projekty/ocds-148610-6a4e16d4-97fb-469a-9947-454e3ac25fcd",
+          "label": "GMINA WIERZBINEK"
+        }
+      ]
+    },
+    "R13": {
+      "k": 1,
+      "n": 30,
+      "cases": [
+        {
+          "bzp": "2025/BZP 00556011",
+          "href": "/projekty/ocds-148610-4f45d3ce-f076-444f-a9e5-c44c0a44e0bc",
+          "label": "GMINA PASYM"
+        }
+      ]
+    },
+    "R16": {
+      "k": 5,
+      "n": 30,
+      "cases": [
+        { "bzp": "2024/BZP 00637524", "href": "/projekty/RM-2026-013", "label": "Gmina Bestwina" },
+        {
+          "bzp": "2025/BZP 00252669",
+          "href": "/projekty/ocds-148610-5ded16a9-0b42-11ee-b70f-ae2d9e28ec7b",
+          "label": "Gmina Hażlach"
+        },
+        {
+          "bzp": "2025/BZP 00123092",
+          "href": "/projekty/ocds-148610-e34b71cd-bcb8-11ed-b8d9-2a18c1f2976f",
+          "label": "GMINA SUSIEC"
+        }
+      ]
+    },
+    "R17": {
+      "k": 1,
+      "n": 30,
+      "cases": [
+        {
+          "bzp": "2025/BZP 00303932",
+          "href": "/projekty/ocds-148610-9550d890-007d-11ef-885b-8267c0608453",
+          "label": "Gmina Łagiewniki"
+        }
+      ]
+    },
+    "N-CLIENT": {
+      "k": 4,
+      "n": 30,
+      "cases": [
+        {
+          "bzp": "2023/BZP 00162507",
+          "href": "/projekty/ocds-148610-7045f947-7da2-11eb-86b1-a64936a8669f",
+          "label": "GMINA WOLA KRZYSZTOPORSKA"
+        },
+        {
+          "bzp": "2026/BZP 00206821",
+          "href": "/projekty/ocds-148610-650245de-fe3a-11ee-b81b-aebd110f5279",
+          "label": "Gmina Piława Górna"
+        },
+        {
+          "bzp": "2026/BZP 00007865",
+          "href": "/projekty/ocds-148610-dee72819-c1ac-11ed-8261-62cbbe4d0ca4",
+          "label": "Gmina Gózd"
+        }
+      ]
+    },
+    "N-SCOPE-RED": {
+      "k": 2,
+      "n": 30,
+      "cases": [
+        {
+          "bzp": "2025/BZP 00289256",
+          "href": "/projekty/ocds-148610-ba6edda3-571d-11ee-a60c-9ec5599dddc1",
+          "label": "Gmina Zbrosławice"
+        },
+        {
+          "bzp": "2025/BZP 00298961",
+          "href": "/projekty/ocds-148610-605413b6-b68d-11ed-9236-36fed59ea7dd",
+          "label": "Gmina Bodzechów"
+        }
+      ]
+    }
+  },
+  "sensitivity": "public",
+  "features": [
+    {
+      "key": "podsektor",
+      "label": "podsektor",
+      "value": "SAN",
+      "display": "kanalizacja sanitarna",
+      "source_label": "opis",
+      "source": null,
+      "unsure": false,
+      "editor": "select",
+      "options": [
+        { "label": "kanalizacja sanitarna", "value": "SAN" },
+        { "label": "sieć wodociągowa", "value": "WOD" },
+        { "label": "kanalizacja deszczowa", "value": "DESZ" },
+        { "label": "oczyszczalnia ścieków", "value": "OCZ" },
+        { "label": "stacja uzdatniania wody", "value": "SUW" }
+      ],
+      "unit": null,
+      "item_id": 7474,
+      "origin": "CALC",
+      "review_status": "auto",
+      "prov": {
+        "role": "calc",
+        "review_status": "auto",
+        "method": "regex:subsector",
+        "refs": [{ "kind": "input_text", "id": "opis", "label": "opis" }],
+        "n": 1
+      }
+    },
+    {
+      "key": "formula",
+      "label": "formuła",
+      "value": "design_build",
+      "display": "zaprojektuj i wybuduj",
+      "source_label": "opis",
+      "source": null,
+      "unsure": false,
+      "editor": "select",
+      "options": [
+        { "label": "zaprojektuj i wybuduj", "value": "design_build" },
+        { "label": "samo wykonanie", "value": "build" }
+      ],
+      "unit": null,
+      "item_id": 7475,
+      "origin": "CALC",
+      "review_status": "auto",
+      "prov": {
+        "role": "calc",
+        "review_status": "auto",
+        "method": "regex:formula",
+        "refs": [{ "kind": "input_text", "id": "opis", "label": "opis" }],
+        "n": 1
+      }
+    },
+    {
+      "key": "dlugosc_km",
+      "label": "długość",
+      "value": 6.0,
+      "display": "ok. 6 km?",
+      "source_label": "opis",
+      "source": null,
+      "unsure": true,
+      "editor": "number",
+      "options": null,
+      "unit": "km",
+      "item_id": 7477,
+      "origin": "CALC",
+      "review_status": "auto",
+      "prov": {
+        "role": "calc",
+        "review_status": "auto",
+        "method": "regex:lengths",
+        "refs": [{ "kind": "input_text", "id": "opis", "label": "opis" }],
+        "n": 1
+      }
+    },
+    {
+      "key": "przepompownie",
+      "label": "przepompownie",
+      "value": 3,
+      "display": "3 szt.",
+      "source_label": "opis",
+      "source": null,
+      "unsure": false,
+      "editor": "number",
+      "options": null,
+      "unit": "szt.",
+      "item_id": 7478,
+      "origin": "CALC",
+      "review_status": "auto",
+      "prov": {
+        "role": "calc",
+        "review_status": "auto",
+        "method": "regex:count",
+        "refs": [{ "kind": "input_text", "id": "opis", "label": "opis" }],
+        "n": 1
+      }
+    },
+    {
+      "key": "budzet",
+      "label": "budżet",
+      "value": { "amount": "7000000.00", "currency": "PLN", "vat_basis": "gross" },
+      "display": "7 mln zł brutto",
+      "source_label": "opis",
+      "source": null,
+      "unsure": false,
+      "editor": "money",
+      "options": null,
+      "unit": "zł brutto",
+      "item_id": 7479,
+      "origin": "CALC",
+      "review_status": "auto",
+      "prov": {
+        "role": "calc",
+        "review_status": "auto",
+        "method": "regex:money",
+        "refs": [{ "kind": "input_text", "id": "opis", "label": "opis" }],
+        "n": 1
+      }
+    },
+    {
+      "key": "termin_mies",
+      "label": "termin",
+      "value": 14.0,
+      "display": "14 mies.",
+      "source_label": "opis",
+      "source": null,
+      "unsure": false,
+      "editor": "months",
+      "options": null,
+      "unit": "mies.",
+      "item_id": 7480,
+      "origin": "CALC",
+      "review_status": "auto",
+      "prov": {
+        "role": "calc",
+        "review_status": "auto",
+        "method": "regex:months",
+        "refs": [{ "kind": "input_text", "id": "opis", "label": "opis" }],
+        "n": 1
+      }
+    },
+    {
+      "key": "finansowanie",
+      "label": "finansowanie",
+      "value": "FENIKS",
+      "display": "FEnIKS 2021–2027",
+      "source_label": "opis",
+      "source": null,
+      "unsure": false,
+      "editor": "select",
+      "options": [
+        { "label": "KPO", "value": "KPO_B311" },
+        { "label": "FEnIKS 2021–2027", "value": "FENIKS" },
+        { "label": "Fundusze Europejskie dla województwa", "value": "FEP_RPO" },
+        { "label": "PROW 2014–2020", "value": "PROW" },
+        { "label": "Rządowe programy (RFIL, Polski Ład)", "value": "RFIL_PIS" },
+        { "label": "środki własne", "value": "OWN" }
+      ],
+      "unit": null,
+      "item_id": 7481,
+      "origin": "CALC",
+      "review_status": "auto",
+      "prov": {
+        "role": "calc",
+        "review_status": "auto",
+        "method": "regex:programme",
+        "refs": [{ "kind": "input_text", "id": "opis", "label": "opis" }],
+        "n": 1
+      }
+    },
+    {
+      "key": "rodzaj_robot",
+      "label": "rodzaj robót",
+      "value": "build",
+      "display": "budowa",
+      "source_label": "opis",
+      "source": null,
+      "unsure": false,
+      "editor": "select",
+      "options": [
+        { "label": "budowa", "value": "build" },
+        { "label": "przebudowa lub modernizacja", "value": "renovation" },
+        { "label": "budowa i przebudowa", "value": "mixed" }
+      ],
+      "unit": null,
+      "item_id": 7476,
+      "origin": "CALC",
+      "review_status": "auto",
+      "prov": {
+        "role": "calc",
+        "review_status": "auto",
+        "method": "regex:works_type",
+        "refs": [{ "kind": "input_text", "id": "opis", "label": "opis" }],
+        "n": 1
+      }
+    },
+    {
+      "key": "wojewodztwo",
+      "label": "województwo",
+      "value": "24",
+      "display": "śląskie",
+      "source_label": "opis",
+      "source": null,
+      "unsure": false,
+      "editor": "select",
+      "options": [
+        { "label": "dolnośląskie", "value": "02" },
+        { "label": "kujawsko-pomorskie", "value": "04" },
+        { "label": "lubelskie", "value": "06" },
+        { "label": "lubuskie", "value": "08" },
+        { "label": "łódzkie", "value": "10" },
+        { "label": "małopolskie", "value": "12" },
+        { "label": "mazowieckie", "value": "14" },
+        { "label": "opolskie", "value": "16" },
+        { "label": "podkarpackie", "value": "18" },
+        { "label": "podlaskie", "value": "20" },
+        { "label": "pomorskie", "value": "22" },
+        { "label": "śląskie", "value": "24" },
+        { "label": "świętokrzyskie", "value": "26" },
+        { "label": "warmińsko-mazurskie", "value": "28" },
+        { "label": "wielkopolskie", "value": "30" },
+        { "label": "zachodniopomorskie", "value": "32" }
+      ],
+      "unit": null,
+      "item_id": 7482,
+      "origin": "CALC",
+      "review_status": "auto",
+      "prov": {
+        "role": "calc",
+        "review_status": "auto",
+        "method": "regex:province",
+        "refs": [{ "kind": "input_text", "id": "opis", "label": "opis" }],
+        "n": 1
+      }
+    }
+  ],
+  "text": "Planujemy budowę kanalizacji sanitarnej ok. 6 km z 3 przepompowniami w formule zaprojektuj i wybuduj, budżet 7 mln zł brutto, 14 miesięcy, FEnIKS, województwo śląskie."
+}

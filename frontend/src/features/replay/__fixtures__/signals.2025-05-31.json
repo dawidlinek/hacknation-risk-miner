@@ -1,0 +1,56 @@
+{
+  "total": 2870,
+  "limit": 1,
+  "offset": 0,
+  "items": [
+    {
+      "contract_id": 123615,
+      "ocid": "ocds-148610-a4907c96-ecde-11ec-9a86-f6f4c648a056",
+      "bzp_number": "2022/BZP 00332038",
+      "lot_no": 0,
+      "n_parts": 1,
+      "buyer_name": "Gmina Kadzidło",
+      "title": "Budowa Stacji Uzdatniania Wody wraz z ujęciami wody w msc. Jazgarka oraz budowa sieci wodociągowej w części północnej gm. Kadzidło",
+      "value": { "amount": 11206530.0, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2022-08-17",
+      "planned_end_on": "2025-05-30",
+      "days_overdue": {
+        "value": 1.0,
+        "display": "1 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2022/BZP 00332038",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08da8ceb-16c8-012a-0298-ba0011c5aa4a",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "14",
+      "pow": "1415",
+      "gmi": "1415052",
+      "lon": 21.43628,
+      "lat": 53.24933,
+      "location_method": "name|gmina",
+      "watched": false
+    }
+  ]
+}

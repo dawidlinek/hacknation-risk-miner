@@ -1,0 +1,13 @@
+{
+ "task": "redpen_scan",
+ "provider": "gemini",
+ "model": "gemini-3.8-flash",
+ "prompt_version": "redpen_scan@v1+42f11dca",
+ "sensitivity": "public",
+ "text": "{\n  \"notes\": [\n    {\n      \"code\": \"R05.1\",\n      \"page\": 8,\n      \"pkt\": \"pkt 1.7\",\n      \"quote\": \"Przedstawione dane, dokumenty, badania, decyzje, uzgodnienia są wyłącznie materiałem wyjściowym dla Wykonawcy do sporządzenia własnych opracowań i wykonania zadania.\",\n      \"title\": \"Przerzucenie ryzyka danych wyjściowych na wykonawcę\",\n      \"why\": \"Zapis zdejmuje z zamawiającego odpowiedzialność za poprawność przekazanych materiałów, co może prowadzić do sporów i roszczeń o roboty dodatkowe.\",\n      \"strength\": \"silny\",\n      \"clause_hint\": null\n    },\n    {\n      \"code\": \"R08.2\",\n      \"page\": 8,\n      \"pkt\": \"pkt 1.7\",\n      \"quote\": \"W przypadku rozbieżności w zakresie koniecznym do wykonania robót w ramach wskazanych elementów w stosunku do założeń przyjętych w PFU, Wykonawca powiadomi o tym Inspektora Nadzoru oraz Zamawiającego, lecz nie będzie rościł praw do dodatkowego wynagrodzenia.\",\n      \"title\": \"Brak roszczeń przy rozbieżnościach zakresu robót\",\n      \"why\": \"Klauzula wymusza realizację nieprzewidzianego zakresu w ramach ryczałtu bez prawa do wynagrodzenia, generując ryzyko sporu i zawyżenia cen ofertowych.\",\n      \"strength\": \"silny\",\n      \"clause_hint\": null\n    },\n    {\n      \"code\": \"R02.2\",\n      \"page\": 9,\n      \"pkt\": \"pkt 1.9\",\n      \"quote\": \"Podczas prac ziemnych, Wykonawca usunie wszystkie rurociągi/kable/urządzenia, które nie będą użytkowane po zakończeniu robót.\",\n      \"title\": \"Obowiązek usunięcia nieużytkowanej infrastruktury\",\n      \"why\": \"Nieokreślony zakres i brak inwentaryzacji demontowanych instalacji podziemnych grozi niekontrolowanym wzrostem nakładów pracy i kosztów utylizacji.\",\n      \"strength\": \"średni\",\n      \"clause_hint\": \"R02.2-K2\"\n    },\n    {\n      \"code\": \"R04.3\",\n      \"page\": 11,\n      \"pkt\": \"pkt 2.1\",\n      \"quote\": \"Faza projektu budowlanego winna być zakończona uzyskaniem prawomocnej decyzji o pozwoleniu na budowę o ile okaże się to konieczne i wynika z przepisów ustawy z dnia 7 lipca 1994 r. – Prawo Budowlane\",\n      \"title\": \"Niepewność co do wymogu pozwolenia na budowę\",\n      \"why\": \"Niejasny status formalnoprawny zadania w PFU przerzuca ryzyko procedur administracyjnych na wykonawcę i może znacząco wydłużyć czas realizacji.\",\n      \"strength\": \"średni\",\n      \"clause_hint\": null\n    }\n  ]\n}",
+ "tokens_in": 7893,
+ "tokens_out": 741,
+ "tokens_cached": 0,
+ "tokens_thought": 0,
+ "finish_reason": "FinishReason.STOP"
+}

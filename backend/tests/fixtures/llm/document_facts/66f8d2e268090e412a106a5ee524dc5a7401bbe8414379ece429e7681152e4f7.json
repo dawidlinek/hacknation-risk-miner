@@ -1,0 +1,13 @@
+{
+ "task": "document_facts",
+ "provider": "gemini",
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "document_facts@v1+84e0de26",
+ "sensitivity": "public",
+ "text": "{\n  \"doc_kind\": \"protokół konieczności aneksowania umowy\",\n  \"change\": {\n    \"level\": \"contract\",\n    \"kinds\": [\n      \"termin\"\n    ],\n    \"delta_months\": 1,\n    \"quote\": \"przedłużenia terminu realizacji przedmiotu umowy o okres 1 miesiąca\",\n    \"page\": 1\n  },\n  \"causes\": [\n    {\n      \"code\": \"R03.1\",\n      \"page\": 1,\n      \"quote\": \"Wystąpienie kolizji z siecią wodociągową uniemożliwiające posadowienie pompowni numer PM2\",\n      \"why\": \"Kolizja z nieprzewidzianą siecią wodociągową wstrzymuje prace przy pompowni.\"\n    },\n    {\n      \"code\": \"R02.1\",\n      \"page\": 1,\n      \"quote\": \"uciążliwe uwarunkowania terenowe, wysoki poziom wód gruntowych przy wykopie pod pompownię PM2\",\n      \"why\": \"Trudne warunki gruntowo-wodne utrudniają wykonanie wykopu.\"\n    }\n  ],\n  \"linked_investment_delay\": {\n    \"code\": \"R18\",\n    \"page\": 1,\n    \"quote\": \"Opóźnienie osiągnięcia efektu użytkowego do czasu technicznej możliwości wykonania przyłącza do budowanej oczyszczalni ścieków w Modlikowicach ze względu na nieterminowy przebieg realizacji tej inwestycji – przewidywane opóźnienie 4 miesiące.\",\n    \"why\": \"Uzyskanie efektu użytkowego inwestycji zależy od terminu ukończenia powiązanej budowy oczyszczalni.\"\n  },\n  \"mitigations\": [\n    {\n      \"text\": \"Przeprowadzić dokładną inwentaryzację kolizji sieciowych na etapie przygotowania projektu.\",\n      \"for_code\": \"R03.1\"\n    },\n    {\n      \"text\": \"Rozpoznać szczegółowo warunki gruntowo-wodne w rejonie projektowanych wykopów i pompowni.\",\n      \"for_code\": \"R02.1\"\n    },\n    {\n      \"text\": \"Koordynować harmonogramy powiązanych inwestycji infrastrukturalnych, takich jak oczyszczalnia ścieków.\",\n      \"for_code\": \"R18\"\n    }\n  ],\n  \"summary\": \"Modyfikacja umowy polega na przedłużeniu terminu realizacji o 1 miesiąc z powodu kolizji sieciowych i trudnych warunków wodnych.\"\n}",
+ "tokens_in": 3524,
+ "tokens_out": 622,
+ "tokens_cached": 0,
+ "tokens_thought": 0,
+ "finish_reason": "FinishReason.STOP"
+}

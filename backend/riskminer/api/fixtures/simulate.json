@@ -1,0 +1,313 @@
+{
+ "metric": "time",
+ "axis": {
+  "x_label": "miesiące od podpisania umowy",
+  "y_label": "odsetek ukończonych umów",
+  "unit": "months",
+  "domain": [
+   6,
+   36
+  ]
+ },
+ "series": [
+  {
+   "key": "baseline",
+   "label": "Teraz",
+   "points": [
+    [
+     10.0,
+     0.1
+    ],
+    [
+     14,
+     0.15
+    ],
+    [
+     20.3,
+     0.5
+    ],
+    [
+     26.7,
+     0.8
+    ],
+    [
+     30.9,
+     0.9
+    ]
+   ],
+   "prov": {
+    "role": "calc",
+    "review_status": "auto",
+    "n": 82,
+    "method": "monte_carlo",
+    "refs": [
+     {
+      "kind": "query",
+      "id": "rc:SAN|5-10m|db",
+      "label": "82 umowy"
+     }
+    ]
+   },
+   "draws": 10000,
+   "seed": 1914
+  },
+  {
+   "key": "geo",
+   "label": "Badania gruntu",
+   "points": [
+    [
+     9.4,
+     0.1
+    ],
+    [
+     14,
+     0.19
+    ],
+    [
+     19.4,
+     0.5
+    ],
+    [
+     25.6,
+     0.8
+    ],
+    [
+     29.8,
+     0.9
+    ]
+   ],
+   "prov": {
+    "role": "calc",
+    "review_status": "auto",
+    "n": 82,
+    "method": "monte_carlo+mitigation:geo",
+    "refs": [
+     {
+      "kind": "catalogue",
+      "id": "mitigation:geo",
+      "label": "założenie eksperta"
+     }
+    ]
+   },
+   "draws": 10000,
+   "seed": 1914
+  },
+  {
+   "key": "combined",
+   "label": "Razem",
+   "points": [
+    [
+     9.4,
+     0.1
+    ],
+    [
+     14,
+     0.19
+    ],
+    [
+     19.4,
+     0.5
+    ],
+    [
+     25.6,
+     0.8
+    ],
+    [
+     29.8,
+     0.9
+    ]
+   ],
+   "prov": {
+    "role": "calc",
+    "review_status": "auto",
+    "n": 82,
+    "method": "monte_carlo+mitigation:geo",
+    "refs": [
+     {
+      "kind": "query",
+      "id": "rc:SAN|5-10m|db",
+      "label": "klasa: kanalizacja sanitarna, 5–10 mln zł, ZiW"
+     }
+    ]
+   },
+   "draws": 10000,
+   "seed": 1914
+  }
+ ],
+ "markers": [
+  {
+   "key": "plan",
+   "x": 14,
+   "label": "Twój plan"
+  },
+  {
+   "key": "programme_end",
+   "x": 38,
+   "label": "koniec programu",
+   "prov": {
+    "role": "source",
+    "review_status": "approved",
+    "assumption": true,
+    "refs": [
+     {
+      "kind": "catalogue",
+      "id": "funding_programme:FENIKS",
+      "label": "Katalog"
+     }
+    ]
+   }
+  }
+ ],
+ "kpis": [
+  {
+   "key": "p_on_time",
+   "label": "W terminie z planu",
+   "value": {
+    "value": 0.15,
+    "display": "15%",
+    "unit": "share",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 82,
+     "method": "monte_carlo",
+     "refs": [
+      {
+       "kind": "query",
+       "id": "rc:SAN|5-10m|db",
+       "label": "klasa: kanalizacja sanitarna, 5–10 mln zł, ZiW"
+      }
+     ]
+    }
+   },
+   "delta_pp": 4
+  },
+  {
+   "key": "p80",
+   "label": "8 na 10 umów do",
+   "value": {
+    "value": 26.7,
+    "display": "26,7 mies.",
+    "unit": "months",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 82,
+     "method": "monte_carlo",
+     "refs": [
+      {
+       "kind": "query",
+       "id": "rc:SAN|5-10m|db",
+       "label": "klasa: kanalizacja sanitarna, 5–10 mln zł, ZiW"
+      }
+     ]
+    }
+   },
+   "delta_pp": null
+  }
+ ],
+ "tornado": [
+  {
+   "risk_code": "R06",
+   "label": "R06 harmonogram",
+   "value": {
+    "value": 34,
+    "display": "+34 d",
+    "unit": "days",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 310,
+     "method": "mc_contribution(P80-P50)",
+     "refs": [
+      {
+       "kind": "query",
+       "id": "rc:SAN|5-10m|db:changes:R06",
+       "label": "zmiany R06 w klasie"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "risk_code": "R02",
+   "label": "R02 grunt",
+   "value": {
+    "value": 28,
+    "display": "+28 d",
+    "unit": "days",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 310,
+     "method": "mc_contribution(P80-P50)",
+     "refs": [
+      {
+       "kind": "query",
+       "id": "rc:SAN|5-10m|db:changes:R02",
+       "label": "zmiany R02 w klasie"
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "toggles": [
+  {
+   "key": "geo",
+   "label": "Badania gruntu przed przetargiem",
+   "description": "Dokumentacja geotechniczna jako załącznik do SWZ.",
+   "risk_codes": [
+    "R02"
+   ],
+   "checked": true,
+   "affects_metric": true,
+   "effect_text": "R02, krzywa w lewo",
+   "prov": {
+    "role": "source",
+    "review_status": "approved",
+    "assumption": true,
+    "refs": [
+     {
+      "kind": "catalogue",
+      "id": "mitigation:geo",
+      "label": "założenie eksperta"
+     }
+    ]
+   }
+  },
+  {
+   "key": "k07",
+   "label": "Klauzula K07: kary umowne z limitem",
+   "description": "Limit kar 20% wynagrodzenia.",
+   "risk_codes": [
+    "R07"
+   ],
+   "checked": false,
+   "affects_metric": false,
+   "effect_text": "bez wpływu na czas",
+   "prov": {
+    "role": "source",
+    "review_status": "approved",
+    "assumption": true,
+    "refs": [
+     {
+      "kind": "catalogue",
+      "id": "mitigation:k07",
+      "label": "założenie eksperta"
+     }
+    ]
+   }
+  }
+ ],
+ "summary": {
+  "sentence": "Teraz skończysz w terminie z planu w 15% przypadków. Z zaznaczonymi zmianami: 19%.",
+  "prov": {
+   "role": "calc",
+   "review_status": "auto",
+   "n": 82,
+   "method": "template:sim_summary_v1",
+   "refs": []
+  }
+ }
+}

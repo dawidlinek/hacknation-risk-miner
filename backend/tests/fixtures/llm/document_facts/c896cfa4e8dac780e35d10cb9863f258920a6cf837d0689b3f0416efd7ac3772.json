@@ -1,0 +1,13 @@
+{
+ "task": "document_facts",
+ "provider": "gemini",
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "document_facts@v2+cb6f1698",
+ "sensitivity": "public",
+ "text": "{\n  \"doc_kind\": \"protokół konieczności aneksowania umowy\",\n  \"change\": {\n    \"level\": \"contract\",\n    \"kinds\": [\n      \"termin\"\n    ],\n    \"delta_days\": null,\n    \"delta_months\": 1,\n    \"value_amount\": null,\n    \"vat_basis\": null,\n    \"legal_basis\": [],\n    \"quote\": \"przedłużenia terminu realizacji przedmiotu umowy o okres 1 miesiąca\",\n    \"page\": 1\n  },\n  \"causes\": [\n    {\n      \"code\": \"R03.1\",\n      \"page\": 1,\n      \"quote\": \"Wystąpienie kolizji z siecią wodociągową uniemożliwiające posadowienie pompowni numer PM2\",\n      \"why\": \"Kolizja z nieprzewidzianą lub niedostatecznie rozpoznaną siecią wodociągową w miejscu posadowienia pompowni.\"\n    },\n    {\n      \"code\": \"R02.1\",\n      \"page\": 1,\n      \"quote\": \"uciążliwe uwarunkowania terenowe, wysoki poziom wód gruntowych przy wykopie pod pompownię PM2\",\n      \"why\": \"Trudne warunki gruntowo-wodne utrudniające wykonanie wykopu pod pompownię.\"\n    }\n  ],\n  \"linked_investment_delay\": {\n    \"code\": \"R18\",\n    \"page\": 1,\n    \"quote\": \"Opóźnienie osiągnięcia efektu użytkowego do czasu technicznej możliwości wykonania przyłącza do budowanej oczyszczalni ścieków w Modlikowicach ze względu na nieterminowy przebieg realizacji tej inwestycji – przewidywane opóźnienie 4 miesiące.\",\n    \"why\": \"Efekt użytkowy inwestycji zależy od ukończenia powiązanej budowy oczyszczalni ścieków przez inny podmiot.\"\n  },\n  \"mitigations\": [\n    {\n      \"text\": \"Przeprowadzić szczegółową inwentaryzację kolizji uzbrojenia terenu przed ogłoszeniem przetargu.\",\n      \"for_code\": \"R03.1\"\n    },\n    {\n      \"text\": \"Zapewnić aktualne i rzetelne badania geotechniczne dla lokalizacji obiektów głębokich takich jak pompownie.\",\n      \"for_code\": \"R02.1\"\n    },\n    {\n      \"text\": \"Koordynować harmonogramy powiązanych inwestycji infrastrukturalnych, takich jak sieć i oczyszczalnia.\",\n      \"for_code\": \"R18\"\n    }\n  ],\n  \"summary\": \"Przedłuża się termin realizacji umowy o 1 miesiąc z powodu kolizji sieciowych i wysokiego poziomu wód gruntowych, a także zidentyfikowano opóźnienie powiązanej budowy oczyszczalni ścieków.\"\n}",
+ "tokens_in": 3525,
+ "tokens_out": 697,
+ "tokens_cached": 0,
+ "tokens_thought": 0,
+ "finish_reason": "FinishReason.STOP"
+}

@@ -1,0 +1,7 @@
+﻿kod;ryzyko;liczba;n;skutek;koszt_oczekiwany;wlasciciel;pochodzenie;status
+R02;Nierozpoznany grunt;;1294;P80 +84 dni;28335.23 PLN;Zamawiający;obliczenie;auto
+R03;Służebności na trasie;;1294;P80 +95 dni;16941.09 PLN;Zamawiający;obliczenie;auto
+R04;Decyzje organów;;1294;P80 +96 dni;15594.59 PLN;Wspólnie;obliczenie;auto
+R06;Zbyt krótki termin;;1294;P80 +80 dni;1303.72 PLN;Wspólnie;obliczenie;auto
+R08;Długość sieci „ok. 6 km”;;1294;koszt P80 +6,2%;30231.46 PLN;Wspólnie;obliczenie;auto
+R13;Wzrost cen materiałów;;1294;koszt P80 +5,1%;15960.55 PLN;Wspólnie;obliczenie;auto

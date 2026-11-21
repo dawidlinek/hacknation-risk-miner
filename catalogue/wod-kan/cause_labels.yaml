@@ -1,0 +1,130 @@
+# Change-cause labels for AI classification of contract changes (docs/impl/llm.md section 2.3).
+# Codes R01-R18 are the catalogue risks (risks.yaml); N-* are causes that are not project risks, taken from the
+# 150-cause gold set taxonomy. Definitions drafted by session L (riskminer/llm/labels.py) from the gold-set guide
+# and the live probe; the classifier reads this file when present. Edit here or in the catalogue panel.
+# `aliases`: gold-set codes the classifier stores under another code (not offered as labels).
+# Loaded into catalogue_entry (table_name cause_label) by `riskminer seed-catalogue`.
+schema_version: 1
+sector: wod-kan
+labels:
+- code: R01
+  name: Niepełny lub niespójny zakres
+  definition: 'Niepełny lub niespójny zakres: braki lub błędy dokumentacji projektowej, przedmiaru, PFU, pominięte roboty'
+  group: risk
+  risk_status: approved
+- code: R02
+  name: Niedostateczne rozpoznanie stanu istniejącego
+  definition: 'Niedostateczne rozpoznanie stanu istniejącego: grunt, woda gruntowa, stan techniczny obiektu, nieznane obiekty
+    i sieci w ziemi, odkrycia archeologiczne, niewybuchy, azbest'
+  group: risk
+  risk_status: approved
+- code: R03
+  name: Kolizje, dostęp do terenu i prawa do nieruchomości
+  definition: Kolizje z uzbrojeniem terenu, dostęp do terenu, prawa do nieruchomości, zgody właścicieli
+  group: risk
+  risk_status: approved
+- code: R04
+  name: Decyzje, pozwolenia i uzgodnienia zależne od podmiotów trzecich
+  definition: Decyzje, pozwolenia, uzgodnienia, warunki gestorów sieci, zarządców dróg i innych podmiotów trzecich
+  group: risk
+  risk_status: approved
+- code: R05
+  name: Niejasny lub nieadekwatny podział odpowiedzialności
+  definition: Niejasny podział odpowiedzialności między stronami lub uczestnikami procesu
+  group: risk
+  risk_status: approved
+- code: R06
+  name: Nierealistyczny harmonogram i nieuwzględnione zależności
+  definition: Nierealistyczny harmonogram, zależność od innych robót lub wykonawców na tym samym terenie
+  group: risk
+  risk_status: approved
+- code: R07
+  name: Nieprzewidziane zmiany i roboty dodatkowe
+  definition: Roboty dodatkowe lub zamienne, gdy tekst nie podaje ich przyczyny źródłowej
+  group: risk
+  risk_status: approved
+- code: R08
+  name: Model wynagrodzenia niedopasowany do niepewności zakresu
+  definition: 'Model wynagrodzenia: rozliczenie według obmiaru, zmiana ilości w kosztorysie, harmonogram płatności'
+  group: risk
+  risk_status: approved
+- code: R09
+  name: Niejednoznaczne lub niemierzalne wymagania techniczne
+  definition: Niejednoznaczne wymagania techniczne, zmiana rozwiązania technicznego, technologii lub materiału
+  group: risk
+  risk_status: approved
+- code: R10
+  name: Niedookreślone próby, rozruch i odbiór
+  definition: Próby, rozruch, odbiory, pomiary i dokumentacja powykonawcza
+  group: risk
+  risk_status: approved
+- code: R11
+  name: Postępowanie podatne na odwołanie lub ograniczenie konkurencji
+  definition: 'Postępowanie przetargowe: odwołania, unieważnienia, zawarcie umowy po terminie'
+  group: risk
+  risk_status: approved
+- code: R12
+  name: Niewystarczająca zdolność wykonawcy lub łańcucha dostaw
+  definition: 'Zdolność wykonawcy i łańcuch dostaw: brak materiałów i urządzeń, opóźnione dostawy, podwykonawcy, upadłość'
+  group: risk
+  risk_status: approved
+- code: R13
+  name: Ryzyko finansowania, budżetu i płatności
+  definition: Finansowanie, budżet zamawiającego, płatności, dofinansowanie, termin programu
+  group: risk
+  risk_status: approved
+- code: R14
+  name: Nadmierne koszty eksploatacji i utrzymania
+  definition: Koszty eksploatacji i utrzymania po oddaniu obiektu
+  group: risk
+  risk_status: approved
+- code: R15
+  name: Nieosiągnięcie efektu technologicznego, użytkowego lub środowiskowego
+  definition: 'Nieosiągnięcie efektu: przepustowość, jakość wody lub ścieków, liczba przyłączonych mieszkańców'
+  group: risk
+  risk_status: approved
+- code: R16
+  name: Warunki atmosferyczne i sezonowość robót
+  definition: 'Warunki atmosferyczne i sezonowość: opady, mróz, susza, okres zimowy'
+  group: risk
+  risk_status: proposed
+- code: R17
+  name: Koordynacja z infrastrukturą i inwestycjami innych podmiotów (drogi, kolej, inne sieci, odtworzenia)
+  definition: Koordynacja z inwestycjami innych podmiotów (drogi, gazociągi, inne sieci budowane w tym samym czasie)
+  group: risk
+  risk_status: proposed
+- code: R18
+  name: Zależność efektu od zadań powiązanych (sieć ↔ oczyszczalnia/SUW/kolektor innego podmiotu)
+  definition: Zależność od zadań powiązanych (inna część projektu, oczyszczalnia, przepompownia budowana osobno)
+  group: risk
+  risk_status: proposed
+- code: N-PRICE
+  name: Wzrost cen i waloryzacja
+  definition: Waloryzacja, wzrost cen materiałów i robocizny, inflacja, skutki wojny w Ukrainie dla cen
+  group: non_risk
+- code: N-COVID
+  name: Pandemia COVID-19
+  definition: Pandemia COVID-19 i jej skutki
+  group: non_risk
+- code: N-CLIENT
+  name: Zmiana zakresu na życzenie zamawiającego
+  definition: Zmiana lub rozszerzenie zakresu na życzenie zamawiającego (nowe potrzeby, dodatkowe odcinki)
+  group: non_risk
+- code: N-SCOPE-RED
+  name: Ograniczenie zakresu
+  definition: Ograniczenie zakresu, roboty zaniechane, rezygnacja z części zamówienia
+  group: non_risk
+- code: N-LAW
+  name: Zmiana przepisów prawa
+  definition: Zmiana przepisów prawa (stawka VAT, płaca minimalna, ustawy)
+  group: non_risk
+- code: N-FORMAL
+  name: Zmiana formalna bez wpływu na ryzyko
+  definition: Zmiany formalne, redakcyjne, personalne lub rachunkowe bez wpływu na ryzyko
+  group: non_risk
+- code: N-UNSPEC
+  name: Przyczyna niepodana
+  definition: 'Brak faktycznej przyczyny: tylko formuła ustawowa (art. 455) albo powtórzenie skutku bez powodu'
+  group: non_risk
+aliases:
+  N-WEATHER: R16

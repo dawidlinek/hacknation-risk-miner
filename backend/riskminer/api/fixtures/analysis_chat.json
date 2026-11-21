@@ -1,0 +1,70 @@
+{
+ "id": "qd_6b10",
+ "code": null,
+ "role": "calc",
+ "role_label": "obliczenie",
+ "text": "Badania gruntu przed przetargiem przesuwają krzywą w lewo: szansa na 14 miesięcy rośnie z 15% do 19%.",
+ "bars": [],
+ "numbers": [
+  {
+   "value": 0.19,
+   "display": "19%",
+   "unit": "share",
+   "prov": {
+    "role": "calc",
+    "review_status": "auto",
+    "n": 82,
+    "method": "monte_carlo+mitigation:geo",
+    "refs": [
+     {
+      "kind": "query",
+      "id": "rc:SAN|5-10m|db",
+      "label": "klasa: kanalizacja sanitarna, 5–10 mln zł, ZiW"
+     }
+    ]
+   }
+  }
+ ],
+ "method": {
+  "kind": "template",
+  "template": "whatif_v1"
+ },
+ "sources": [
+  {
+   "kind": "query",
+   "id": "v_ask_contract",
+   "label": "n = 11 574"
+  }
+ ],
+ "n": 11574,
+ "missing": [],
+ "actions": [
+  {
+   "kind": "save",
+   "label": "Zapisz jako rekord"
+  },
+  {
+   "kind": "export_csv",
+   "label": "Pobierz CSV",
+   "href": "/api/questions/qd_51a2/rows.csv"
+  },
+  {
+   "kind": "open_list",
+   "label": "Pokaż umowy",
+   "href": "/projekty?zakres=umowy&formula=zw"
+  }
+ ],
+ "apply": {
+  "metric": "time",
+  "whatif": {
+   "toggles": [
+    "geo"
+   ]
+  }
+ },
+ "processing": {
+  "provider": "gemini",
+  "model": "gemini-3.8-flash",
+  "data_location": "global (Gemini Developer API)"
+ }
+}

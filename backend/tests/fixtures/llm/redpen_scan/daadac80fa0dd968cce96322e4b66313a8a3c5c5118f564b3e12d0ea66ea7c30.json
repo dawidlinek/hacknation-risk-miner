@@ -1,0 +1,13 @@
+{
+ "task": "redpen_scan",
+ "provider": "gemini",
+ "model": "gemini-3.8-flash",
+ "prompt_version": "redpen_scan@v1+42f11dca",
+ "sensitivity": "public",
+ "text": "{\n  \"notes\": [\n    {\n      \"code\": \"R08.2\",\n      \"page\": 14,\n      \"pkt\": \"§ 15 ust. 2 pkt 2\",\n      \"quote\": \"Zgodnie z art. 632 Kodeksu cywilnego przyjmujący zamówienie nie może żądać podwyższenia wynagrodzenia, jedynie sąd może podwyższyć ryczałt lub rozwiązać umowę.\",\n      \"title\": \"Brak zmian wynagrodzenia przy wadach PFU\",\n      \"why\": \"Zablokowanie możliwości zmiany wynagrodzenia ryczałtowego nawet przy konieczności modyfikacji rozwiązań z powodu wad PFU zamawiającego rodzi ryzyko sporu i roszczeń sądowych.\",\n      \"strength\": \"silny\",\n      \"clause_hint\": null\n    }\n  ]\n}",
+ "tokens_in": 9300,
+ "tokens_out": 203,
+ "tokens_cached": 0,
+ "tokens_thought": 0,
+ "finish_reason": "FinishReason.STOP"
+}

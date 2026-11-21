@@ -31,6 +31,7 @@ from typing import Any, Iterable
 from riskminer.config import settings
 from riskminer.connectors.base import RawStore, ScrapeContext
 from riskminer.connectors.records import ExternalRecord, LinkHint, SourceCheck
+from riskminer.validators import nip_valid
 
 log = logging.getLogger("riskminer.connectors.ted")
 
@@ -82,11 +83,7 @@ JUSTIFICATION_PL = {"add-wss": "art. 455 ust. 1 pkt 3 (additional works/supplies
 # helpers
 # ---------------------------------------------------------------------------------------------
 def nip_ok(n: str) -> bool:
-    if not re.fullmatch(r"\d{10}", n or ""):
-        return False
-    w = [6, 5, 7, 2, 3, 4, 5, 6, 7]
-    s = sum(int(a) * b for a, b in zip(n[:9], w)) % 11
-    return s != 10 and s == int(n[9])
+    return bool(re.fullmatch(r"\d{10}", n or "")) and nip_valid(n)    # shared rule: riskminer/validators.py
 
 
 def nip_variants(nip: str) -> list[str]:

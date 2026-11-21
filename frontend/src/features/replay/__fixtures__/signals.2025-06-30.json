@@ -1,0 +1,2947 @@
+{
+  "total": 2929,
+  "limit": 60,
+  "offset": 0,
+  "items": [
+    {
+      "contract_id": 130751,
+      "ocid": "ocds-148610-9ac5e1e4-0138-11ee-9355-06954b8c6cb9",
+      "bzp_number": "2023/BZP 00383872",
+      "lot_no": 0,
+      "n_parts": 1,
+      "buyer_name": "GMINA IZBICA",
+      "title": "Budowa sieci kanalizacji sanitarnej w Tarnogórze",
+      "value": { "amount": 2569470.0, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2023-08-29",
+      "planned_end_on": "2025-06-29",
+      "days_overdue": {
+        "value": 1.0,
+        "display": "1 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2023/BZP 00383872",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dbaec4-3e43-ccab-4fa0-5700113ad0e4",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "06",
+      "pow": "0606",
+      "gmi": "0606043",
+      "lon": 23.1496,
+      "lat": 50.89399,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 132881,
+      "ocid": "ocds-148610-6c168363-6d75-11ee-a60c-9ec5599dddc1",
+      "bzp_number": "2024/BZP 00026511",
+      "lot_no": 0,
+      "n_parts": 1,
+      "buyer_name": "Gmina Janów",
+      "title": "Budowa infrastruktury wodno-kanalizacyjnej na terenie Gminy Janów",
+      "value": { "amount": 8147368.71, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2023-12-29",
+      "planned_end_on": "2025-06-29",
+      "days_overdue": {
+        "value": 1.0,
+        "display": "1 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2024/BZP 00026511",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dc1209-b1ed-434f-573c-bb0011bca83c",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "20",
+      "pow": "2011",
+      "gmi": "2011022",
+      "lon": 23.28038,
+      "lat": 53.45197,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 139505,
+      "ocid": "ocds-148610-aff0ef02-981d-11ee-9ee7-e2087ac16d09",
+      "bzp_number": "2024/BZP 00243273",
+      "lot_no": 1,
+      "n_parts": 2,
+      "buyer_name": "Gmina Puszcza Mariańska",
+      "title": "Rozbudowa i przebudowa Oczyszczalni ścieków aglomeracji Puszcza Mariańska Etap I i rozbudowa i przebudowa Oczyszczalni ścieków aglomeracji Puszcza Mariańska Etap II.",
+      "value": { "amount": 10452539.98, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2024-02-29",
+      "planned_end_on": "2025-06-29",
+      "days_overdue": {
+        "value": 1.0,
+        "display": "1 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2024/BZP 00243273",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dc4359-2fa8-1872-0cdb-100001c1b441",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "14",
+      "pow": "1438",
+      "gmi": "1438032",
+      "lon": 20.33484,
+      "lat": 51.98162,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 146225,
+      "ocid": "ocds-148610-736f3c24-7d09-4707-a080-60a03cd71bca",
+      "bzp_number": "2025/BZP 00083547",
+      "lot_no": 1,
+      "n_parts": 3,
+      "buyer_name": "GMINA BRZUZE",
+      "title": "Przebudowa stacji uzdatniania wody wraz z budową zbiornika wody czystej w miejscowościach Trąbin i Ugoszcz oraz przebudowa istniejących przepompowni ścieków surowych na terenie gminy Brzuze",
+      "value": { "amount": 1958001.65, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2025-01-29",
+      "planned_end_on": "2025-06-29",
+      "days_overdue": {
+        "value": 1.0,
+        "display": "1 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2025/BZP 00083547",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd422b-ee3f-3075-8f1b-b600017bcdeb",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "04",
+      "pow": "0412",
+      "gmi": "0412022",
+      "lon": 19.26581,
+      "lat": 53.05047,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 146226,
+      "ocid": "ocds-148610-736f3c24-7d09-4707-a080-60a03cd71bca",
+      "bzp_number": "2025/BZP 00083547",
+      "lot_no": 2,
+      "n_parts": 3,
+      "buyer_name": "GMINA BRZUZE",
+      "title": "Przebudowa stacji uzdatniania wody wraz z budową zbiornika wody czystej w miejscowościach Trąbin i Ugoszcz oraz przebudowa istniejących przepompowni ścieków surowych na terenie gminy Brzuze",
+      "value": { "amount": 845010.0, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2025-01-29",
+      "planned_end_on": "2025-06-29",
+      "days_overdue": {
+        "value": 1.0,
+        "display": "1 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2025/BZP 00083547",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd422b-ee3f-3075-8f1b-b600017bcdeb",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "04",
+      "pow": "0412",
+      "gmi": "0412022",
+      "lon": 19.26581,
+      "lat": 53.05047,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 130249,
+      "ocid": "ocds-148610-4da2edec-0049-11ee-b70f-ae2d9e28ec7b",
+      "bzp_number": "2023/BZP 00341011",
+      "lot_no": 0,
+      "n_parts": 1,
+      "buyer_name": "GMINA GROMNIK",
+      "title": "„Budowa kanalizacji sanitarnej wraz z oczyszczalnią ścieków w miejscowości Siemiechów - poprawa systemu zaopatrzenia w wodę poprzez budowę zbiornika wody użytkowej w Siemiechowie, gmina Gromnik”",
+      "value": { "amount": 6924900.0, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2023-08-04",
+      "planned_end_on": "2025-06-28",
+      "days_overdue": {
+        "value": 2.0,
+        "display": "2 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2023/BZP 00341011",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08db94d1-019c-5a7f-d583-5b00112c8d8a",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "12",
+      "pow": "1216",
+      "gmi": "1216022",
+      "lon": 20.93815,
+      "lat": 49.84225,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 142089,
+      "ocid": "ocds-148610-addd9bac-0222-11ef-b21f-3ab44b58c1d6",
+      "bzp_number": "2024/BZP 00397263",
+      "lot_no": 1,
+      "n_parts": 3,
+      "buyer_name": "Gmina Rybno",
+      "title": "„Budowa sieci wodno - kanalizacyjnej na terenie gminy Rybno” część I, II i III",
+      "value": { "amount": 1192497.47, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2024-06-28",
+      "planned_end_on": "2025-06-28",
+      "days_overdue": {
+        "value": 2.0,
+        "display": "2 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2024/BZP 00397263",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dc9c1d-acec-521d-4366-700001d67295",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "28",
+      "pow": "2803",
+      "gmi": "2803062",
+      "lon": 19.93763,
+      "lat": 53.36997,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 144968,
+      "ocid": "ocds-148610-83df721e-f8cb-4ede-a21e-a07ef811c87b",
+      "bzp_number": "2024/BZP 00567258",
+      "lot_no": 0,
+      "n_parts": 1,
+      "buyer_name": "Gmina Latowicz",
+      "title": "Budowa przydomowych oczyszczalni ścieków dla mieszkańców gminy Latowicz -IV etap",
+      "value": { "amount": 1478460.0, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2024-10-28",
+      "planned_end_on": "2025-06-28",
+      "days_overdue": {
+        "value": 2.0,
+        "display": "2 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2024/BZP 00567258",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dcf753-90bb-af07-985c-bb0001340e4a",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "14",
+      "pow": "1412",
+      "gmi": "1412103",
+      "lon": 21.77891,
+      "lat": 52.02683,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 146537,
+      "ocid": "ocds-148610-840cd448-6dbf-4d1f-86e4-c60442d2e823",
+      "bzp_number": "2025/BZP 00131713",
+      "lot_no": 0,
+      "n_parts": 1,
+      "buyer_name": "Gmina Łaszczów",
+      "title": "Zaprojektowanie i wykonanie przebudowy oczyszczalni ścieków i stacji uzdatniania wody na terenie Gminy Łaszczów",
+      "value": { "amount": 341940.0, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2025-02-28",
+      "planned_end_on": "2025-06-28",
+      "days_overdue": {
+        "value": 2.0,
+        "display": "2 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2025/BZP 00131713",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd5bc3-c70b-f366-8f1b-b600017cf52b",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "06",
+      "pow": "0618",
+      "gmi": "0618063",
+      "lon": 23.71849,
+      "lat": 50.52895,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 147421,
+      "ocid": "ocds-148610-b640e676-8fba-48b5-987e-6d5bda73d6b6",
+      "bzp_number": "2025/BZP 00207864",
+      "lot_no": 0,
+      "n_parts": 1,
+      "buyer_name": "GMINA PURDA",
+      "title": "Rozbudowa sieci kanalizacji deszczowej w Klebarku Wielkim - Etap 1.",
+      "value": { "amount": 327280.86, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2025-04-28",
+      "planned_end_on": "2025-06-28",
+      "days_overdue": {
+        "value": 2.0,
+        "display": "2 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2025/BZP 00207864",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd862d-f719-6f2d-eaaa-350001a3c10a",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "28",
+      "pow": "2814",
+      "gmi": "2814102",
+      "lon": 20.64046,
+      "lat": 53.68146,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 147873,
+      "ocid": "ocds-148610-f9ff4e49-c25d-4340-9c0c-e6850b383069",
+      "bzp_number": "2025/BZP 00236750",
+      "lot_no": 2,
+      "n_parts": 2,
+      "buyer_name": "Gmina Wiślica",
+      "title": "Budowa oczyszczalni ścieków i sieci kanalizacyjnej w m. Szczytniki oraz wodociągu w m. Skorocice.",
+      "value": { "amount": 262385.8, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2025-05-19",
+      "planned_end_on": "2025-06-28",
+      "days_overdue": {
+        "value": 2.0,
+        "display": "2 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2025/BZP 00236750",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd96c5-218c-c194-eaaa-350001a4749b",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "26",
+      "pow": "2601",
+      "gmi": "2601083",
+      "lon": 20.68428,
+      "lat": 50.36899,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 148217,
+      "ocid": "ocds-148610-dac3a299-1028-484b-86a9-47da7e121258",
+      "bzp_number": "2025/BZP 00256815",
+      "lot_no": 0,
+      "n_parts": 1,
+      "buyer_name": "Gmina Lelis",
+      "title": "Budowa sieci wodociągowej wraz z przyłączami na terenie gminy Lelis",
+      "value": { "amount": 394392.8, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2025-04-29",
+      "planned_end_on": "2025-06-28",
+      "days_overdue": {
+        "value": 2.0,
+        "display": "2 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2025/BZP 00256815",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd9f71-f1ca-755d-eaaa-350001a4ee71",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "14",
+      "pow": "1415",
+      "gmi": "1415062",
+      "lon": 21.56815,
+      "lat": 53.16791,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 129446,
+      "ocid": "ocds-148610-be82740f-e420-11ed-b70f-ae2d9e28ec7b",
+      "bzp_number": "2023/BZP 00279239",
+      "lot_no": 0,
+      "n_parts": 1,
+      "buyer_name": "Gmina Gaszowice",
+      "title": "Budowa sieci kanalizacji sanitarnej w Gminie Gaszowice - etap I",
+      "value": { "amount": 5017583.28, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2023-06-27",
+      "planned_end_on": "2025-06-27",
+      "days_overdue": {
+        "value": 3.0,
+        "display": "3 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2023/BZP 00279239",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08db77b6-2ede-afd5-97b2-e600114493f6",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "24",
+      "pow": "2412",
+      "gmi": "2412022",
+      "lon": 18.42121,
+      "lat": 50.09692,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 139915,
+      "ocid": "ocds-148610-cadac8d2-cca5-11ee-a3b5-e25d731b0da9",
+      "bzp_number": "2024/BZP 00265727",
+      "lot_no": 0,
+      "n_parts": 1,
+      "buyer_name": "Gmina Brańszczyk",
+      "title": "Budowa kanalizacji sanitarnej dla miejscowości Dalekie-Tartak",
+      "value": { "amount": 3632899.71, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2024-03-27",
+      "planned_end_on": "2025-06-27",
+      "days_overdue": {
+        "value": 3.0,
+        "display": "3 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2024/BZP 00265727",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dc4fd0-b66e-116b-b5ce-1d0001a04133",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "14",
+      "pow": "1435",
+      "gmi": "1435012",
+      "lon": 21.60094,
+      "lat": 52.66155,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 143582,
+      "ocid": "ocds-148610-ec0d2a63-7550-4fb5-80ea-5339c3b01291",
+      "bzp_number": "2024/BZP 00480056",
+      "lot_no": 0,
+      "n_parts": 1,
+      "buyer_name": "Gmina Haczów",
+      "title": "Kontynuacja budowy sieci wodociągowej na terenie gminy Haczów.",
+      "value": { "amount": 7197000.0, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2024-08-30",
+      "planned_end_on": "2025-06-27",
+      "days_overdue": {
+        "value": 3.0,
+        "display": "3 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2024/BZP 00480056",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dccb20-9d4f-aa44-82a9-43000145aa9d",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 1,
+      "has_performance": false,
+      "woj": "18",
+      "pow": "1802",
+      "gmi": "1802042",
+      "lon": 21.93003,
+      "lat": 49.66293,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 145749,
+      "ocid": "ocds-148610-2cf6102e-c1f4-4872-8328-78f8259cd102",
+      "bzp_number": "2024/BZP 00653848",
+      "lot_no": 1,
+      "n_parts": 2,
+      "buyer_name": "GMINA ANDRESPOL",
+      "title": "Budowa sieci kanalizacji sanitarnej na terenie Gminy Andrespol",
+      "value": { "amount": 2383016.76, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2024-11-29",
+      "planned_end_on": "2025-06-27",
+      "days_overdue": {
+        "value": 3.0,
+        "display": "3 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2024/BZP 00653848",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd1da1-3050-3471-a8d2-3c0001c50bfb",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "10",
+      "pow": "1006",
+      "gmi": "1006022",
+      "lon": 19.65037,
+      "lat": 51.71931,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 145750,
+      "ocid": "ocds-148610-2cf6102e-c1f4-4872-8328-78f8259cd102",
+      "bzp_number": "2024/BZP 00653848",
+      "lot_no": 2,
+      "n_parts": 2,
+      "buyer_name": "GMINA ANDRESPOL",
+      "title": "Budowa sieci kanalizacji sanitarnej na terenie Gminy Andrespol",
+      "value": { "amount": 2212489.56, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2024-11-29",
+      "planned_end_on": "2025-06-27",
+      "days_overdue": {
+        "value": 3.0,
+        "display": "3 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2024/BZP 00653848",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd1da1-3050-3471-a8d2-3c0001c50bfb",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "10",
+      "pow": "1006",
+      "gmi": "1006022",
+      "lon": 19.65037,
+      "lat": 51.71931,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 146154,
+      "ocid": "ocds-148610-0bf2430e-bd62-48bc-bab6-90995b6355ce",
+      "bzp_number": "2025/BZP 00060206",
+      "lot_no": 0,
+      "n_parts": 1,
+      "buyer_name": "Gmina Gromadka",
+      "title": "Sieć kanalizacji sanitarnej z przyłączami oraz wyposażenie hydroforni sieciowej w miejscowości Pasternik gmina Gromadka",
+      "value": { "amount": 4793047.21, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2025-01-23",
+      "planned_end_on": "2025-06-27",
+      "days_overdue": {
+        "value": 3.0,
+        "display": "3 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2025/BZP 00060206",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd3bb4-6242-7822-8f1b-b600017b55d5",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "02",
+      "pow": "0201",
+      "gmi": "0201032",
+      "lon": 15.73582,
+      "lat": 51.40784,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 146859,
+      "ocid": "ocds-148610-639e1014-48e6-413f-93b7-6356b72f294d",
+      "bzp_number": "2025/BZP 00166483",
+      "lot_no": 0,
+      "n_parts": 1,
+      "buyer_name": "GMINA GRÓDEK",
+      "title": "Budowa sieci wodociągowej na ul. Lawendowej w Gródku",
+      "value": { "amount": 97598.35, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2025-03-27",
+      "planned_end_on": "2025-06-27",
+      "days_overdue": {
+        "value": 3.0,
+        "display": "3 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2025/BZP 00166483",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd6dcb-eced-66cc-8f1b-b600017dcfbb",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "20",
+      "pow": "2002",
+      "gmi": "2002042",
+      "lon": 23.65667,
+      "lat": 53.12079,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 146895,
+      "ocid": "ocds-148610-db55b86c-4878-46ec-9600-ed120408abac",
+      "bzp_number": "2025/BZP 00169719",
+      "lot_no": 0,
+      "n_parts": 1,
+      "buyer_name": "Gmina Miasta Gdyni",
+      "title": "Roboty awaryjno-naprawcze na miejskiej sieci kanalizacji deszczowej – Rejon Północny",
+      "value": { "amount": 185193.83, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2025-03-27",
+      "planned_end_on": "2025-06-27",
+      "days_overdue": {
+        "value": 3.0,
+        "display": "3 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2025/BZP 00169719",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd704d-b96a-d7a3-8f1b-b600017de368",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "22",
+      "pow": "2262",
+      "gmi": "2262011",
+      "lon": 18.61734,
+      "lat": 54.52874,
+      "location_method": "city|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 147305,
+      "ocid": "ocds-148610-34c1eadf-70b1-4c41-baff-e8bad6260d45",
+      "bzp_number": "2025/BZP 00199674",
+      "lot_no": 2,
+      "n_parts": 2,
+      "buyer_name": "Gmina Jabłoń",
+      "title": "Poprawa gospodarki wodno-ściekowej na obszarze gminy Jabłoń",
+      "value": { "amount": 1837128.0, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2025-04-04",
+      "planned_end_on": "2025-06-27",
+      "days_overdue": {
+        "value": 3.0,
+        "display": "3 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2025/BZP 00199674",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd817f-63e2-4cb8-eaaa-350001a38cd3",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "06",
+      "pow": "0613",
+      "gmi": "0613022",
+      "lon": 23.06705,
+      "lat": 51.70663,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 145582,
+      "ocid": "ocds-148610-899c9b18-cbef-4889-9087-3ec22e1eacc8",
+      "bzp_number": "2024/BZP 00629869",
+      "lot_no": 0,
+      "n_parts": 1,
+      "buyer_name": "Gmina Strzelin",
+      "title": "Budowa kanalizacji deszczowej (od ul. Górzystej do Polnej w Strzelinie)",
+      "value": { "amount": 476748.0, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2024-11-26",
+      "planned_end_on": "2025-06-26",
+      "days_overdue": {
+        "value": 4.0,
+        "display": "4 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2024/BZP 00629869",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd1395-98b4-c7f9-985c-bb0001358e3f",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "02",
+      "pow": "0217",
+      "gmi": "0217043",
+      "lon": 17.07098,
+      "lat": 50.76893,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 140900,
+      "ocid": "ocds-148610-99a82e2a-d7cc-11ee-8305-7e4937eb936d",
+      "bzp_number": "2024/BZP 00316176",
+      "lot_no": 2,
+      "n_parts": 2,
+      "buyer_name": "Gmina Świętajno",
+      "title": "„Poprawa gospodarki wodno- ściekowej na terenie Gminy Świętajno poprzez rozbudowę sieci wodociągowych i kanalizacyjnych”",
+      "value": { "amount": 525886.5, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2024-04-25",
+      "planned_end_on": "2025-06-25",
+      "days_overdue": {
+        "value": 5.0,
+        "display": "5 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2024/BZP 00316176",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dc6ff9-dfb5-e571-fd54-ea0001bf4481",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "28",
+      "pow": null,
+      "gmi": null,
+      "lon": null,
+      "lat": null,
+      "location_method": null,
+      "watched": false
+    },
+    {
+      "contract_id": 147150,
+      "ocid": "ocds-148610-b1c4c0c7-9572-4d5b-80df-7b4d67ed0183",
+      "bzp_number": "2025/BZP 00188444",
+      "lot_no": 1,
+      "n_parts": 2,
+      "buyer_name": "GMINA GNIEZNO",
+      "title": "Budowa sieci kanalizacji sanitarnej wraz z przyłączami i przepompowniami\nw miejscowościach Obora-Braciszewo oraz budowa sieci wodociągowej w miejscowości Wierzbiczany",
+      "value": { "amount": 4830000.0, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2025-02-03",
+      "planned_end_on": "2025-06-25",
+      "days_overdue": {
+        "value": 5.0,
+        "display": "5 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2025/BZP 00188444",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd7928-98b5-c016-8f1b-b600017e5724",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "30",
+      "pow": "3003",
+      "gmi": "3003032",
+      "lon": 17.63231,
+      "lat": 52.56986,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 130609,
+      "ocid": "ocds-148610-35a1b6fd-2207-11ee-9aa3-96d3b4440790",
+      "bzp_number": "2023/BZP 00370972",
+      "lot_no": 0,
+      "n_parts": 1,
+      "buyer_name": "Gmina Kobiele Wielkie",
+      "title": "Przebudowa i rozbudowa oczyszczalni ścieków w miejscowości Kobiele Małe gm. Kobiele Wielkie",
+      "value": { "amount": 13393470.0, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2023-08-24",
+      "planned_end_on": "2025-06-24",
+      "days_overdue": {
+        "value": 6.0,
+        "display": "6 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2023/BZP 00370972",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dba862-495b-8806-2542-9700120f90b7",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 1,
+      "has_performance": false,
+      "woj": "10",
+      "pow": "1012",
+      "gmi": "1012062",
+      "lon": 19.61918,
+      "lat": 51.02329,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 141204,
+      "ocid": "ocds-148610-0c21d9c6-f8b8-11ee-b016-82aaee56c84c",
+      "bzp_number": "2024/BZP 00338020",
+      "lot_no": 0,
+      "n_parts": 1,
+      "buyer_name": "Gmina Golina",
+      "title": "Uregulowanie gospodarki wodno-ściekowej na terenie gminy Golina – Rozbudowa stacji uzdatniania wody w Golinie wraz z przebudową sieci wodociągowej",
+      "value": { "amount": 6096600.0, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2024-05-24",
+      "planned_end_on": "2025-06-24",
+      "days_overdue": {
+        "value": 6.0,
+        "display": "6 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2024/BZP 00338020",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dc7bc2-395d-c4cf-7a89-1700010a1fa4",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "30",
+      "pow": "3010",
+      "gmi": "3010013",
+      "lon": 18.10024,
+      "lat": 52.24306,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 141285,
+      "ocid": "ocds-148610-bcb05219-dabd-11ee-8305-7e4937eb936d",
+      "bzp_number": "2024/BZP 00343159",
+      "lot_no": 0,
+      "n_parts": 1,
+      "buyer_name": "Gmina Tereszpol",
+      "title": "Modernizacja infrastruktury wodno-kanalizacyjnej w miejscowości Lipowiec",
+      "value": { "amount": 1300285.47, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2024-05-24",
+      "planned_end_on": "2025-06-24",
+      "days_overdue": {
+        "value": 6.0,
+        "display": "6 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2024/BZP 00343159",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dc7f0d-ed36-b710-d00c-f90001a5b0f0",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "06",
+      "pow": "0602",
+      "gmi": "0602132",
+      "lon": 22.88612,
+      "lat": 50.55214,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 142022,
+      "ocid": "ocds-148610-ea122635-ec2f-11ee-b4e0-4ac387c144e3",
+      "bzp_number": "2024/BZP 00393475",
+      "lot_no": 0,
+      "n_parts": 1,
+      "buyer_name": "Gmina Stara Kiszewa",
+      "title": "Rozbudowa sieci wodno-kanalizacyjnej na obszarze Gminy Stara Kiszewa",
+      "value": { "amount": 3597688.74, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2024-06-24",
+      "planned_end_on": "2025-06-24",
+      "days_overdue": {
+        "value": 6.0,
+        "display": "6 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2024/BZP 00393475",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dc9b2c-6975-df75-4366-700001d65f2f",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "22",
+      "pow": "2206",
+      "gmi": "2206082",
+      "lon": 18.14282,
+      "lat": 53.98805,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 139125,
+      "ocid": "ocds-148610-648cd9a3-a56b-11ee-948d-82b0c04ef850",
+      "bzp_number": "2024/BZP 00218603",
+      "lot_no": 2,
+      "n_parts": 2,
+      "buyer_name": "Gmina Ornontowice",
+      "title": "Rozbudowa sieci wodociągowej w Ornontowicach przy ul. Solarnia/Myśliwska Budowa infrastruktury kanalizacyjnej w Ornontowicach-Północ",
+      "value": { "amount": 5258948.54, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2024-02-23",
+      "planned_end_on": "2025-06-23",
+      "days_overdue": {
+        "value": 7.0,
+        "display": "7 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2024/BZP 00218603",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dc36b6-52ac-4b33-a1e5-fc0001dfd760",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "24",
+      "pow": "2408",
+      "gmi": "2408042",
+      "lon": 18.75482,
+      "lat": 50.18326,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 140650,
+      "ocid": "ocds-148610-f92b7f3a-ccb8-11ee-875e-a22221c84ba7",
+      "bzp_number": "2024/BZP 00304296",
+      "lot_no": 0,
+      "n_parts": 1,
+      "buyer_name": "GMINA KOLNO",
+      "title": "Przebudowa i rozbudowa stacji uzdatniania wody w Janowie",
+      "value": { "amount": 3587988.72, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2024-04-23",
+      "planned_end_on": "2025-06-23",
+      "days_overdue": {
+        "value": 7.0,
+        "display": "7 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2024/BZP 00304296",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dc65e9-0b00-e540-97bc-ba0001271dbb",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "20",
+      "pow": "2006",
+      "gmi": "2006032",
+      "lon": 21.94296,
+      "lat": 53.42657,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 143646,
+      "ocid": "ocds-148610-6ff1cef8-2ed3-11ef-86d2-4e696a6d8c25",
+      "bzp_number": "2024/BZP 00483555",
+      "lot_no": 0,
+      "n_parts": 1,
+      "buyer_name": "Gmina Damasławek",
+      "title": "Uporządkowanie gospodarki wodno-ściekowej na terenie gminy Damasławek - etap II",
+      "value": { "amount": 3290250.0, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2024-08-27",
+      "planned_end_on": "2025-06-23",
+      "days_overdue": {
+        "value": 7.0,
+        "display": "7 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2024/BZP 00483555",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dcccb0-c1e3-60f5-82a9-43000145bfbb",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "30",
+      "pow": "3028",
+      "gmi": "3028022",
+      "lon": 17.44299,
+      "lat": 52.84041,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 146097,
+      "ocid": "ocds-148610-763da307-3cac-4cee-a8c8-07bbf33d9cb7",
+      "bzp_number": "2025/BZP 00040305",
+      "lot_no": 0,
+      "n_parts": 1,
+      "buyer_name": "Gmina Burzenin",
+      "title": "Budowa ujęcia w miejscowości Krępica oraz pompowni wody\nz rurociągiem tłocznym do SUW Prażmów",
+      "value": { "amount": 1766157.0, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2024-12-23",
+      "planned_end_on": "2025-06-23",
+      "days_overdue": {
+        "value": 7.0,
+        "display": "7 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2025/BZP 00040305",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd3627-5397-9955-aa0d-d80001d47970",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "10",
+      "pow": "1014",
+      "gmi": "1014052",
+      "lon": 18.77657,
+      "lat": 51.44721,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 142555,
+      "ocid": "ocds-148610-677ed656-2248-11ef-87ba-8eb060fd7bb8",
+      "bzp_number": "2024/BZP 00428704",
+      "lot_no": 0,
+      "n_parts": 1,
+      "buyer_name": "Gmina Nowy Targ",
+      "title": "Budowa kanalizacji sanitarnej w miejscowości Krauszów - etap II, Gmina Nowy Targ",
+      "value": { "amount": 1697343.7, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2024-07-22",
+      "planned_end_on": "2025-06-22",
+      "days_overdue": {
+        "value": 8.0,
+        "display": "8 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2024/BZP 00428704",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dcabe0-2941-7d82-ba4f-e10001de725d",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "12",
+      "pow": "1211",
+      "gmi": "1211092",
+      "lon": 20.07194,
+      "lat": 49.48358,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 143654,
+      "ocid": "ocds-148610-47ce6d6d-3912-11ef-b37c-4e696a6d8c25",
+      "bzp_number": "2024/BZP 00483868",
+      "lot_no": 1,
+      "n_parts": 3,
+      "buyer_name": "GMINA LGOTA WIELKA",
+      "title": "Budowa sieci kanalizacji sanitarnej na terenie Gminy Lgota Wielka.",
+      "value": { "amount": 873300.0, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2024-08-22",
+      "planned_end_on": "2025-06-22",
+      "days_overdue": {
+        "value": 8.0,
+        "display": "8 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2024/BZP 00483868",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dcccbb-2de1-9a6d-82a9-43000145c145",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "10",
+      "pow": "1012",
+      "gmi": "1012082",
+      "lon": 19.31663,
+      "lat": 51.1454,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 143655,
+      "ocid": "ocds-148610-47ce6d6d-3912-11ef-b37c-4e696a6d8c25",
+      "bzp_number": "2024/BZP 00483868",
+      "lot_no": 2,
+      "n_parts": 3,
+      "buyer_name": "GMINA LGOTA WIELKA",
+      "title": "Budowa sieci kanalizacji sanitarnej na terenie Gminy Lgota Wielka.",
+      "value": { "amount": 1011820.14, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2024-08-22",
+      "planned_end_on": "2025-06-22",
+      "days_overdue": {
+        "value": 8.0,
+        "display": "8 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2024/BZP 00483868",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dcccbb-2de1-9a6d-82a9-43000145c145",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "10",
+      "pow": "1012",
+      "gmi": "1012082",
+      "lon": 19.31663,
+      "lat": 51.1454,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 143656,
+      "ocid": "ocds-148610-47ce6d6d-3912-11ef-b37c-4e696a6d8c25",
+      "bzp_number": "2024/BZP 00483868",
+      "lot_no": 3,
+      "n_parts": 3,
+      "buyer_name": "GMINA LGOTA WIELKA",
+      "title": "Budowa sieci kanalizacji sanitarnej na terenie Gminy Lgota Wielka.",
+      "value": { "amount": 616066.41, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2024-08-22",
+      "planned_end_on": "2025-06-22",
+      "days_overdue": {
+        "value": 8.0,
+        "display": "8 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2024/BZP 00483868",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dcccbb-2de1-9a6d-82a9-43000145c145",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "10",
+      "pow": "1012",
+      "gmi": "1012082",
+      "lon": 19.31663,
+      "lat": 51.1454,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 146044,
+      "ocid": "ocds-148610-a8fbddf1-0b61-415b-b880-987612d8ac6b",
+      "bzp_number": "2025/BZP 00020071",
+      "lot_no": 0,
+      "n_parts": 1,
+      "buyer_name": "Gmina Jaktorów",
+      "title": "Rozbudowa systemu sieci wodociągowej w gminie Jaktorów",
+      "value": { "amount": 2612520.0, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2025-01-03",
+      "planned_end_on": "2025-06-22",
+      "days_overdue": {
+        "value": 8.0,
+        "display": "8 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2025/BZP 00020071",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd30bc-0bff-8272-aa0d-d80001d4125b",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "14",
+      "pow": "1405",
+      "gmi": "1405052",
+      "lon": 20.51827,
+      "lat": 52.07653,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 128896,
+      "ocid": "ocds-148610-e38a7f7e-da40-11ed-9355-06954b8c6cb9",
+      "bzp_number": "2023/BZP 00245905",
+      "lot_no": 0,
+      "n_parts": 1,
+      "buyer_name": "Miasto i Gmina Bircza",
+      "title": "Przebudowa infrastruktury wodno-kanalizacyjnej w miejscowości Łodzinka Górna",
+      "value": { "amount": 3346200.0, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2023-06-02",
+      "planned_end_on": "2025-06-21",
+      "days_overdue": {
+        "value": 9.0,
+        "display": "9 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2023/BZP 00245905",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08db636a-b06d-2e37-c22e-ef00102d564a",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "18",
+      "pow": "1813",
+      "gmi": "1813013",
+      "lon": 22.43468,
+      "lat": 49.68838,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 130499,
+      "ocid": "ocds-148610-ae6e1f9d-1029-11ee-9355-06954b8c6cb9",
+      "bzp_number": "2023/BZP 00361892",
+      "lot_no": 1,
+      "n_parts": 2,
+      "buyer_name": "Gmina Mircze",
+      "title": "Budowa oczyszczalni ścieków, stacji wodociągowej oraz sieci wodno-kanalizacyjnej z przyłączami na terenie Gminy Mircze",
+      "value": { "amount": 6752700.0, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2023-08-21",
+      "planned_end_on": "2025-06-21",
+      "days_overdue": {
+        "value": 9.0,
+        "display": "9 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2023/BZP 00361892",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dba2f2-73ca-2f9b-130d-b100133f7cfc",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "06",
+      "pow": "0604",
+      "gmi": "0604052",
+      "lon": 23.91098,
+      "lat": 50.64244,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 130500,
+      "ocid": "ocds-148610-ae6e1f9d-1029-11ee-9355-06954b8c6cb9",
+      "bzp_number": "2023/BZP 00361892",
+      "lot_no": 2,
+      "n_parts": 2,
+      "buyer_name": "Gmina Mircze",
+      "title": "Budowa oczyszczalni ścieków, stacji wodociągowej oraz sieci wodno-kanalizacyjnej z przyłączami na terenie Gminy Mircze",
+      "value": { "amount": 6875700.0, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2023-08-21",
+      "planned_end_on": "2025-06-21",
+      "days_overdue": {
+        "value": 9.0,
+        "display": "9 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2023/BZP 00361892",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dba2f2-73ca-2f9b-130d-b100133f7cfc",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "06",
+      "pow": "0604",
+      "gmi": "0604052",
+      "lon": 23.91098,
+      "lat": 50.64244,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 145544,
+      "ocid": "ocds-148610-19a71fa5-3bcb-4d2d-adce-b4e3598d3dd9",
+      "bzp_number": "2024/BZP 00625795",
+      "lot_no": 2,
+      "n_parts": 2,
+      "buyer_name": "Gmina Zawichost",
+      "title": "„Poprawa Gospodarki Wodno-ściekowej na terenie Miasta i Gminy Zawichost - etap II”",
+      "value": { "amount": 1999857.0, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2024-11-21",
+      "planned_end_on": "2025-06-21",
+      "days_overdue": {
+        "value": 9.0,
+        "display": "9 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2024/BZP 00625795",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd12a3-316d-ae48-985c-bb00013576ff",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "26",
+      "pow": "2609",
+      "gmi": "2609093",
+      "lon": 21.79553,
+      "lat": 50.82749,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 145858,
+      "ocid": "ocds-148610-b24352f9-9c75-47a7-913a-2a79603c0370",
+      "bzp_number": "2024/BZP 00666053",
+      "lot_no": 0,
+      "n_parts": 1,
+      "buyer_name": "GMINA CZEMPIŃ",
+      "title": "Zagospodarowanie wód opadowych w ramach projektu „Budowa zielono-niebieskiej infrastruktury na terenie Gminy Czempiń”",
+      "value": { "amount": 1393950.0, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2024-11-21",
+      "planned_end_on": "2025-06-21",
+      "days_overdue": {
+        "value": 9.0,
+        "display": "9 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2024/BZP 00666053",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd20d0-f810-3543-a8d2-3c0001c54f8f",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "30",
+      "pow": "3011",
+      "gmi": "3011023",
+      "lon": 16.74669,
+      "lat": 52.14191,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 146133,
+      "ocid": "ocds-148610-a08f35ab-64a8-46d6-bd8e-370004bda598",
+      "bzp_number": "2025/BZP 00053506",
+      "lot_no": 0,
+      "n_parts": 1,
+      "buyer_name": "Gmina Waganiec",
+      "title": "Budowa przydomowych oczyszczalni ścieków na terenie gminy Waganiec",
+      "value": { "amount": 1426800.0, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2025-01-21",
+      "planned_end_on": "2025-06-21",
+      "days_overdue": {
+        "value": 9.0,
+        "display": "9 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2025/BZP 00053506",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd3a41-a931-a2be-8f1b-b600017b332c",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "04",
+      "pow": "0401",
+      "gmi": "0401082",
+      "lon": 18.85502,
+      "lat": 52.79941,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 146871,
+      "ocid": "ocds-148610-f456a6c7-8b57-4273-b554-74df212cdccb",
+      "bzp_number": "2025/BZP 00168067",
+      "lot_no": 0,
+      "n_parts": 1,
+      "buyer_name": "Gmina Radomyśl Wielki",
+      "title": "Budowa sieci kanalizacji sanitarnej wraz z przepompowniami w miejscowości Ruda w gminie Radomyśl Wielki",
+      "value": { "amount": 1891060.12, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2025-03-28",
+      "planned_end_on": "2025-06-21",
+      "days_overdue": {
+        "value": 9.0,
+        "display": "9 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2025/BZP 00168067",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd6e02-a40b-f248-8f1b-b600017dd815",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "18",
+      "pow": "1811",
+      "gmi": "1811083",
+      "lon": 21.26697,
+      "lat": 50.19253,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 144650,
+      "ocid": "ocds-148610-e3854d4c-a6c6-458c-82b4-748fcd0b9036",
+      "bzp_number": "2024/BZP 00540512",
+      "lot_no": 1,
+      "n_parts": 3,
+      "buyer_name": "GMINA WODZISŁAW",
+      "title": "Rozbudowa infrastruktury wodociągowej na terenie Gminy Wodzisław",
+      "value": { "amount": 2739999.66, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2024-09-13",
+      "planned_end_on": "2025-06-20",
+      "days_overdue": {
+        "value": 10.0,
+        "display": "10 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2024/BZP 00540512",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dce91a-928c-74b8-1a9f-3e0001b76532",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "26",
+      "pow": "2602",
+      "gmi": "2602093",
+      "lon": 20.22811,
+      "lat": 50.52113,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 145782,
+      "ocid": "ocds-148610-c12e8f81-6bf5-4cf3-81bf-cf3452376de0",
+      "bzp_number": "2024/BZP 00656333",
+      "lot_no": 1,
+      "n_parts": 2,
+      "buyer_name": "Gmina Podedwórze",
+      "title": "Inwestycje w infrastrukturę zaopatrzenia w wodę i oczyszczania ścieków w Gminie Podedwórze",
+      "value": { "amount": 988000.0, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2024-12-13",
+      "planned_end_on": "2025-06-20",
+      "days_overdue": {
+        "value": 10.0,
+        "display": "10 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2024/BZP 00656333",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd1de0-f636-93a9-a8d2-3c0001c51804",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "06",
+      "pow": "0613",
+      "gmi": "0613052",
+      "lon": 23.22515,
+      "lat": 51.66373,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 146442,
+      "ocid": "ocds-148610-b428a426-de57-48c1-8034-94c9cbdd672a",
+      "bzp_number": "2025/BZP 00118650",
+      "lot_no": 1,
+      "n_parts": 4,
+      "buyer_name": "Gmina Drohiczyn",
+      "title": "Budowa zbiorników małej retencji na terenie Gminy Drohiczyn w formule zaprojektuj i wybuduj",
+      "value": { "amount": 334446.84, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2025-02-17",
+      "planned_end_on": "2025-06-20",
+      "days_overdue": {
+        "value": 10.0,
+        "display": "10 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2025/BZP 00118650",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd5574-ef30-5534-8f1b-b600017ca536",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "20",
+      "pow": "2010",
+      "gmi": "2010023",
+      "lon": 22.6411,
+      "lat": 52.45933,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 146443,
+      "ocid": "ocds-148610-b428a426-de57-48c1-8034-94c9cbdd672a",
+      "bzp_number": "2025/BZP 00118650",
+      "lot_no": 2,
+      "n_parts": 4,
+      "buyer_name": "Gmina Drohiczyn",
+      "title": "Budowa zbiorników małej retencji na terenie Gminy Drohiczyn w formule zaprojektuj i wybuduj",
+      "value": { "amount": 339000.0, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2025-02-17",
+      "planned_end_on": "2025-06-20",
+      "days_overdue": {
+        "value": 10.0,
+        "display": "10 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2025/BZP 00118650",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd5574-ef30-5534-8f1b-b600017ca536",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "20",
+      "pow": "2010",
+      "gmi": "2010023",
+      "lon": 22.6411,
+      "lat": 52.45933,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 146444,
+      "ocid": "ocds-148610-b428a426-de57-48c1-8034-94c9cbdd672a",
+      "bzp_number": "2025/BZP 00118650",
+      "lot_no": 3,
+      "n_parts": 4,
+      "buyer_name": "Gmina Drohiczyn",
+      "title": "Budowa zbiorników małej retencji na terenie Gminy Drohiczyn w formule zaprojektuj i wybuduj",
+      "value": { "amount": 339000.0, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2025-02-17",
+      "planned_end_on": "2025-06-20",
+      "days_overdue": {
+        "value": 10.0,
+        "display": "10 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2025/BZP 00118650",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd5574-ef30-5534-8f1b-b600017ca536",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "20",
+      "pow": "2010",
+      "gmi": "2010023",
+      "lon": 22.6411,
+      "lat": 52.45933,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 146445,
+      "ocid": "ocds-148610-b428a426-de57-48c1-8034-94c9cbdd672a",
+      "bzp_number": "2025/BZP 00118650",
+      "lot_no": 4,
+      "n_parts": 4,
+      "buyer_name": "Gmina Drohiczyn",
+      "title": "Budowa zbiorników małej retencji na terenie Gminy Drohiczyn w formule zaprojektuj i wybuduj",
+      "value": { "amount": 339000.0, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2025-02-17",
+      "planned_end_on": "2025-06-20",
+      "days_overdue": {
+        "value": 10.0,
+        "display": "10 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2025/BZP 00118650",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd5574-ef30-5534-8f1b-b600017ca536",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "20",
+      "pow": "2010",
+      "gmi": "2010023",
+      "lon": 22.6411,
+      "lat": 52.45933,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 146483,
+      "ocid": "ocds-148610-42df11fa-2bb7-426e-a4aa-e00bac1fc509",
+      "bzp_number": "2025/BZP 00125060",
+      "lot_no": 0,
+      "n_parts": 1,
+      "buyer_name": "Gmina Stanin",
+      "title": "Budowa sieci wodociągowej i kanalizacji sanitarnej z przepompownią ścieków w m. Stanin, gm. Stanin\nrealizacja zadania w formule zaprojektuj i wybuduj",
+      "value": { "amount": 4372000.01, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2025-02-19",
+      "planned_end_on": "2025-06-20",
+      "days_overdue": {
+        "value": 10.0,
+        "display": "10 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2025/BZP 00125060",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd57d5-dbe2-ab2a-8f1b-b600017cccc5",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "06",
+      "pow": "0611",
+      "gmi": "0611072",
+      "lon": 22.19259,
+      "lat": 51.88246,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 146679,
+      "ocid": "ocds-148610-0d42dc09-b212-42e1-811b-1a8b242f9759",
+      "bzp_number": "2025/BZP 00148403",
+      "lot_no": 0,
+      "n_parts": 1,
+      "buyer_name": "GMINA PORAJ",
+      "title": "Budowa kanalizacji sanitarnej w miejscowości Jastrząb, gmina Poraj, ul. Porajska i Krótka",
+      "value": { "amount": 1598080.0, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2025-03-17",
+      "planned_end_on": "2025-06-20",
+      "days_overdue": {
+        "value": 10.0,
+        "display": "10 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2025/BZP 00148403",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd6538-20ea-1215-8f1b-b600017d5f05",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "24",
+      "pow": "2409",
+      "gmi": "2409042",
+      "lon": 19.23407,
+      "lat": 50.65715,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 146708,
+      "ocid": "ocds-148610-0c126402-cbaf-44f8-bf7a-d63a254a75cc",
+      "bzp_number": "2025/BZP 00151325",
+      "lot_no": 0,
+      "n_parts": 1,
+      "buyer_name": "GMINA CZARNIA",
+      "title": "Budowa sieci wodociągowej Czarnia Dunaj-Czarnia Budy",
+      "value": { "amount": 1260000.0, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2025-03-13",
+      "planned_end_on": "2025-06-20",
+      "days_overdue": {
+        "value": 10.0,
+        "display": "10 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2025/BZP 00151325",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd6615-474d-a8be-8f1b-b600017d6f85",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "14",
+      "pow": "1415",
+      "gmi": "1415022",
+      "lon": 21.17299,
+      "lat": 53.33752,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 146760,
+      "ocid": "ocds-148610-8b1c1acc-4d9a-44e4-891c-b1e002b07696",
+      "bzp_number": "2025/BZP 00156632",
+      "lot_no": 0,
+      "n_parts": 1,
+      "buyer_name": "Gmina Pawłów",
+      "title": "Budowa kanalizacji sanitarnej w miejscowości Warszówek",
+      "value": { "amount": 5442926.63, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2025-03-10",
+      "planned_end_on": "2025-06-20",
+      "days_overdue": {
+        "value": 10.0,
+        "display": "10 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2025/BZP 00156632",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd6853-8424-1b45-8f1b-b600017d9161",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "26",
+      "pow": "2611",
+      "gmi": "2611042",
+      "lon": 21.08234,
+      "lat": 50.95582,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 146861,
+      "ocid": "ocds-148610-9f7fb9fe-a66e-4da5-a160-3f8f13e36e98",
+      "bzp_number": "2025/BZP 00166642",
+      "lot_no": 0,
+      "n_parts": 1,
+      "buyer_name": "GMINA CZARNIA",
+      "title": "Budowa sieci wodociągowej Surowe – Wyżęgi – Chrzonek - Cupel",
+      "value": { "amount": 1697999.0, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2025-03-25",
+      "planned_end_on": "2025-06-20",
+      "days_overdue": {
+        "value": 10.0,
+        "display": "10 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2025/BZP 00166642",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd6dd1-ae31-f0d4-8f1b-b600017dd0bd",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "14",
+      "pow": "1415",
+      "gmi": "1415022",
+      "lon": 21.17299,
+      "lat": 53.33752,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 147848,
+      "ocid": "ocds-148610-72310c2f-cd37-480a-b5ab-f4262ef03f8b",
+      "bzp_number": "2025/BZP 00234795",
+      "lot_no": 0,
+      "n_parts": 1,
+      "buyer_name": "Gmina Podedwórze",
+      "title": "Inwestycje w infrastrukturę zaopatrzenia w wodę i oczyszczania ścieków w Gminie Podedwórze - Montaż instalacji fotowoltaicznych dedykowanych urządzeniom do uzdatniania wody oraz oczyszczalni ścieków.",
+      "value": { "amount": 166050.0, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2025-05-15",
+      "planned_end_on": "2025-06-20",
+      "days_overdue": {
+        "value": 10.0,
+        "display": "10 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2025/BZP 00234795",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd9465-ebf2-3dba-eaaa-350001a4679f",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "06",
+      "pow": "0613",
+      "gmi": "0613052",
+      "lon": 23.22515,
+      "lat": 51.66373,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 148449,
+      "ocid": "ocds-148610-2339d4c6-6648-426e-87ee-192bd79b3f1d",
+      "bzp_number": "2025/BZP 00270419",
+      "lot_no": 0,
+      "n_parts": 1,
+      "buyer_name": "Gmina Gniewino",
+      "title": "„Wykonanie przyłączy kanalizacyjnych i wodociągowych w ramach realizacji zadania pn. Budowa i przebudowa sieci kanalizacji sanitarnej i wodociągowej w miejscowości Czymanowo i Opalino”",
+      "value": { "amount": 157578.64, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2025-06-04",
+      "planned_end_on": "2025-06-20",
+      "days_overdue": {
+        "value": 10.0,
+        "display": "10 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2025/BZP 00270419",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dda7f5-c5fe-59d7-e710-760001deaba9",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "22",
+      "pow": "2215",
+      "gmi": "2215052",
+      "lon": 18.00687,
+      "lat": 54.69148,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 142397,
+      "ocid": "ocds-148610-e8449313-0e08-11ef-9b7e-467806a93518",
+      "bzp_number": "2024/BZP 00416479",
+      "lot_no": 0,
+      "n_parts": 1,
+      "buyer_name": "Gmina Dynów",
+      "title": "Budowa przydomowych oczyszczalni ścieków na terenie Gminy Dynów",
+      "value": { "amount": 5597011.68, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2024-06-19",
+      "planned_end_on": "2025-06-19",
+      "days_overdue": {
+        "value": 11.0,
+        "display": "11 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2024/BZP 00416479",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dca63d-aacf-3aa6-9429-150001f24ab6",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "18",
+      "pow": "1816",
+      "gmi": "1816052",
+      "lon": 22.22938,
+      "lat": 49.8213,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 144564,
+      "ocid": "ocds-148610-180b1bdf-3ab4-11ef-880f-0e435a8a43bc",
+      "bzp_number": "2024/BZP 00534341",
+      "lot_no": 1,
+      "n_parts": 5,
+      "buyer_name": "Gmina Fabianki",
+      "title": "Budowa i modernizacja infrastruktury wodno – kanalizacyjnej w Gminie Fabianki",
+      "value": { "amount": 4613720.26, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2024-09-20",
+      "planned_end_on": "2025-06-19",
+      "days_overdue": {
+        "value": 11.0,
+        "display": "11 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2024/BZP 00534341",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dce6d2-4124-09a7-1a9f-3e0001b740db",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "04",
+      "pow": "0418",
+      "gmi": "0418072",
+      "lon": 19.10167,
+      "lat": 52.70849,
+      "location_method": "name|gmina",
+      "watched": false
+    },
+    {
+      "contract_id": 146739,
+      "ocid": "ocds-148610-58cde240-7c64-46f5-a986-9f546e53ceff",
+      "bzp_number": "2025/BZP 00154453",
+      "lot_no": 0,
+      "n_parts": 1,
+      "buyer_name": "GMINA BRZEZINY",
+      "title": "Budowa spinki wodociągowej łączącej SUW Gałkówek Kolonia z SUW Paprotnia",
+      "value": { "amount": 127920.0, "currency": "PLN", "vat_basis": "gross" },
+      "signed_on": "2025-03-19",
+      "planned_end_on": "2025-06-19",
+      "days_overdue": {
+        "value": 11.0,
+        "display": "11 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1,
+          "method": "as_of - planned_end_on",
+          "refs": [
+            {
+              "kind": "notice",
+              "id": "2025/BZP 00154453",
+              "label": "ogł. o wyniku",
+              "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd6782-4f0d-94ff-8f1b-b600017d83de",
+              "page_no": null,
+              "field_code": "8.3",
+              "quote": null,
+              "verification": null,
+              "retrieved_at": null
+            }
+          ],
+          "ci90": null,
+          "insufficient": null,
+          "assumption": null,
+          "llm": null
+        }
+      },
+      "n_change_notices": 0,
+      "has_performance": false,
+      "woj": "10",
+      "pow": "1021",
+      "gmi": "1021022",
+      "lon": 19.73615,
+      "lat": 51.81091,
+      "location_method": "name|gmina",
+      "watched": false
+    }
+  ]
+}

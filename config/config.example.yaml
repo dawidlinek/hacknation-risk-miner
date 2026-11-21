@@ -13,6 +13,9 @@ database:
 api:
   cors_origins: ["http://localhost:5173", "http://localhost:3000"]
   basic_auth_env: RISKMINER_BASIC_AUTH   # "user:password" for the public demo (Caddy also enforces it)
+  require_xrw: true                # writes need header X-Requested-With: ex-ante (CSRF guard, api/middleware.py)
+  serve_fixtures: true             # stubs serve api/fixtures/*.json (X-Fixture: true); false = remaining stubs answer 501
+  upload_max_mb: 50
 
 # Feature flags: unfinished features are hidden, not broken.
 features:
@@ -24,16 +27,31 @@ features:
   mapa_dotacji: true
   docs_22: true
   docs_sample: false
-  red_pen: false                   # W1 tender-document review
-  unit_cost: false                 # W2
-  backtest: false                  # W3
-  case_graph: false                # W4
-  monte_carlo: false               # W5
-  radar: false                     # W6
-  learning_loop: false             # W7
+  red_pen: true                    # W1 tender-document review (on: A wired 1.3 text mode to GET /redpen/{doc})
+  unit_cost: true                  # W2 (on: A wired the budget card on 1.2)
+  backtest: true                   # W3 (on: A shows report.backtest_note on 1.2)
+  case_graph: true                 # W4 (on: F2 wired /projekty/{id}/graf to GET /projects/{rm_id}/graph)
+  monte_carlo: true                # W5 (on: A wired /analizy/{id}/symulacja to GET /simulation)
+  radar: true                      # W6 (on: F2 wired /monitoring to /monitoring/regions + /signals)
+  learning_loop: true               # W7 (on: gold decision -> rescore_gold job, worker restarted with the kind)
   sovereign_switch: false          # W8
   sector_pack_wizard: false        # W9
-  ask_memory: false                # W12
+  ask_memory: true                 # W12 (on: F2 wired /zapytaj, ChatPanel, project/analysis chats)
+  # added for the ex ante build (docs/impl/frontend.md §1.6); off until the feature is real
+  allocation: true                 # 1.5 tab "Podział ryzyk i pakiet" (on: A wired GET/PUT /allocation)
+  pack_export: true                # export buttons, "Pakiet do akt" (on: pack.{docx,pdf,csv,json} verified)
+  radar_drill: true                # monitoring drill-down 4.1a–c (on: F2 wired /regions/{terc}, /contracts/{id}, watches)
+  monitoring_replay: true          # Wehikuł czasu (on: A + F2 TimeMachine; as_of verified, data settles correctly)
+  review_queue: true               # 3.1 Przegląd + nav count (on: F2 wired /review-items*, decision/undo/skip)
+  catalogue_edit: true             # 3.2 edit inputs (on: F2 wired; PATCH/weights/proposals verified by S0 flag smoke)
+  import_agent: true               # 2.1 agent thread (on: F2 wired /zrodla to /imports*; D's flow test green)
+  project_docs: true               # 2.5 project documents tab (on: B wired /projects/{id}/documents, facts, upload)
+  project_history: true            # 2.6 project history tab (on: B wired /history, /compare, /audit restore)
+  jelly: false                     # 3D builder bots on 1.1/1.2 (held: still animates under prefers-reduced-motion)
+  dashboard: true                  # Pulpit for experts (on: F2 wired / to /dashboard + /analytics/headline)
+  settings_view: true              # read-only Ustawienia: providers, data_location, routing (brief: where data is processed)
+  sector_roads: true               # second sector (drogi, pilot extension): road analyses on 30 335 completed road works (A)
+  new_document_reanalysis: true    # new project documents: OCR -> facts -> linking -> alert -> "Co się zmieniło" (on: G6 green on the 3 organizer files)
 
 connectors:
   user_agent: "RiskMiner-hackathon/0.1 (research prototype; HackNation 2026)"   # no personal data in headers
@@ -49,29 +67,71 @@ connectors:
 
 # LLM providers (PLAN §4a): one cloud provider (Gemini, Developer API) + two Polish models self-hosted on WCSS
 # (Bielik, PLLuM). Switching provider/model is a config change, not a code change.
-llm:
+llm:                           # owner: session L (backend/riskminer/llm); docs/impl/llm.md §1.2
   providers:
-    gemini:      {kind: google_genai,      base_url: https://generativelanguage.googleapis.com/v1beta, api_key_env: GEMINI_API_KEY, data_location: "global (Gemini Developer API)"}
-    # EU-only after enabling Vertex AI for the key: kind google_genai, vertexai: true, project: "114919147642", location: europe-west4 (or eu), data_location: "EU (Vertex AI)"
-    wcss_bielik: {kind: openai_compatible, base_url: http://127.0.0.1:8001/v1, api_key_env: WCSS_VLLM_KEY, data_location: "PL (WCSS Wrocław)"}
-    wcss_pllum:  {kind: openai_compatible, base_url: http://127.0.0.1:8002/v1, api_key_env: WCSS_VLLM_KEY, data_location: "PL (WCSS Wrocław)"}
-    # Supported by config, not used in the demo:
-    # claude:    {kind: anthropic,         api_key_env: ANTHROPIC_API_KEY, data_location: "global (EU via Bedrock/Vertex profile)"}
-    # openai:    {kind: openai_compatible, base_url: https://api.openai.com/v1, api_key_env: OPENAI_API_KEY, data_location: "US"}
-  models:            # alias -> provider:model, per task (verify exact ids before the demo; previews change)
-    fast:      gemini:gemini-3.8-flash
-    strong:    gemini:gemini-3.8-flash
-    best:      gemini:gemini-pro-latest
-    bulk:      gemini:gemini-3.5-flash-lite
-    sovereign: wcss_bielik:speakleash/Bielik-11B-v3.1-Instruct
-    sovereign_alt: wcss_pllum:CYFRAGOVPL/<PLLuM variant, licence-checked>
-  routing:
-    public:       {default: strong, triage: fast, bulk_classify: bulk}   # switch bulk_classify to sovereign once Bielik is served
-    confidential: {default: sovereign}   # enforced: never leaves PL
-  fallback: {wcss_bielik: wcss_pllum}    # sovereign → sovereign; cloud fallback only for public data
+    gemini:      {kind: google_genai, api_key_env: GEMINI_API_KEY, data_location: "global (Gemini Developer API)"}
+    # EU-only after enabling Vertex AI for the key: {kind: google_genai, vertexai: true, project: "114919147642", location: europe-west4, data_location: "EU (Vertex AI)"}
+    gemini_oai:  {kind: openai_compatible, base_url: "https://generativelanguage.googleapis.com/v1beta/openai", api_key_env: GEMINI_API_KEY, data_location: "global (Gemini Developer API)"}
+    wcss_bielik: {kind: openai_compatible, base_url: "http://127.0.0.1:8100/v1", api_key_env: WCSS_VLLM_KEY, data_location: "PL (WCSS Wrocław)", sovereign: true}
+    wcss_pllum:  {kind: openai_compatible, base_url: "http://127.0.0.1:8101/v1", api_key_env: WCSS_VLLM_KEY, data_location: "PL (WCSS Wrocław)", sovereign: true}
+    replay:      {kind: replay, dir: backend/tests/fixtures/llm, data_location: "lokalnie (nagrane odpowiedzi)"}
+    # sovereign chain, hops 3 and 4 (hop 1-2 = wcss_bielik / wcss_pllum above)
+    hn_bielik:   {kind: openai_compatible, base_url: "http://127.0.0.1:8202/v1", api_key_env: HN_VLLM_KEY, data_location: "PL (WCSS Wrocław)", sovereign: true}
+    hn_pllum:    {kind: openai_compatible, base_url: "http://127.0.0.1:8201/v1", api_key_env: HN_VLLM_KEY, data_location: "PL (WCSS Wrocław)", sovereign: true}
+    local_bielik: {kind: openai_compatible, base_url: "http://127.0.0.1:11434/v1", data_location: "PL (serwer lokalny)", sovereign: true, local: true}
+    # emergency fallback for PUBLIC data only: used only after Gemini answers 402/429/5xx/timeout; never for confidential
+    openrouter:  {kind: openai_compatible, base_url: "https://openrouter.ai/api/v1", api_key_env: OPENROUTER_API_KEY,
+                  data_location: "global (OpenRouter, routed to upstream providers)", emergency: true,
+                  extra_body: {provider: {data_collection: deny, zdr: true, require_parameters: true}, usage: {include: true}}}
+  models:                      # alias -> provider:model (verify ids before the demo; previews change)
+    fast:          gemini:gemini-3.5-flash-lite
+    strong:        gemini:gemini-3.8-flash
+    best:          gemini:gemini-3.1-pro-preview      # manual upgrade only
+    bulk:          gemini:gemini-3.5-flash-lite
+    sovereign:     wcss_bielik:bielik-11b              # weights speakleash/Bielik-11B-v3.1-Instruct (Apache-2.0)
+    sovereign_alt: wcss_pllum:pllum-12b                # weights CYFRAGOVPL/PLLuM-12B-instruct-2512 (Apache-2.0)
+    emergency:     openrouter:mistralai/mistral-medium-3-5  # public-only fallback via OpenRouter (Mistral, EU company)
+    sovereign_hn:     hn_bielik:bielik-11b             # other project's hn-serve job on the same grant, read-only reuse
+    sovereign_hn_alt: hn_pllum:pllum-12b
+    sovereign_local:  local_bielik:bielik-4.5b         # last resort: Bielik 4.5B on this machine (Ollama), CPU
+  model_params:
+    gemini-3.8-flash:       {thinking_level: low}      # without it a call takes 8 to 41 s
+    gemini-3.1-pro-preview: {thinking_level: low}
+    bielik-11b:             {temperature: 0.1}
+    pllum-12b:              {temperature: 0.1}
+  tasks:                       # task -> alias per sensitivity; no confidential entry = refuse
+    extract_features:    {public: strong, confidential: sovereign}
+    extract_features_text: {public: fast, confidential: sovereign}
+    redpen_scan:         {public: strong, confidential: sovereign}
+    classify_causes:     {public: bulk}
+    chat:                {public: strong, confidential: sovereign}
+    nl2sql:              {public: strong}
+    import_mapping:      {public: fast, confidential: sovereign}
+    catalogue_proposals: {public: strong}
+    review_phrasing:     {public: fast}
+    rescore_gold:        {public: bulk}
+    document_facts:      {public: fast, confidential: sovereign}
+    kat:                 {public: fast, confidential: sovereign}
+  fallback:                    # after retries; confidential keeps only sovereign targets
+    strong: [fast, emergency]
+    fast: [strong, emergency]
+    bulk: [fast, emergency]
+    sovereign: [sovereign_alt, sovereign_hn, sovereign_hn_alt, sovereign_local]   # data never leaves our infrastructure
+  demo_replay_fallback: true   # last resort when live calls fail (e.g. HTTP 402); answer labelled "odtworzenie nagranej odpowiedzi"; public input only
+  budget: {usd_per_day: 40, usd_per_run: {classify_causes: 15, eval: 5}, warn_at: 0.8}
+  retries: {max_attempts: 3, backoff_s: [1, 4, 15], repair_on_invalid_json: 1}
+  timeouts_s: {interactive: 30, document: 120, batch_call: 300}
+  concurrency: {gemini: 16, gemini_oai: 8, wcss_bielik: 64, wcss_pllum: 64, hn_bielik: 16, hn_pllum: 16, local_bielik: 1, openrouter: 8}
+  prices_usd_per_mtok:         # flash doubles on 2027-01-01
+    gemini-3.5-flash-lite:  {in: 0.30, out: 2.50, cached: 0.03, batch_in: 0.15, batch_out: 1.25}
+    gemini-3.1-flash-lite:  {in: 0.25, out: 1.50, cached: 0.025, batch_in: 0.125, batch_out: 0.75}
+    gemini-3.8-flash:       {in: 0.75, out: 3.75, cached: 0.075, batch_in: 0.375, batch_out: 1.875}
+    gemini-3.1-pro-preview: {in: 2.00, out: 12.00, cached: 0.20, batch_in: 1.00, batch_out: 6.00}
+    mistralai/mistral-medium-3-5: {in: 1.50, out: 7.50}  # estimate only; OpenRouter reported usage.cost wins
+    bielik-4.5b: {in: 0, out: 0}
   eval:
     gold_set: research/bzp_corpus/data/gold_change_reasons.csv
-    models: [strong, sovereign, sovereign_alt]
+    models: [fast, bulk, strong, sovereign, sovereign_alt]
 
 embeddings:
   model: BAAI/bge-m3                # MIT; 1024-dim (chunk.embedding)

@@ -1,0 +1,15 @@
+# Sector pack drogi: words that identify the sector in a description and technical components for similarity.
+sector_detect: ['drog', 'ulic', 'chodnik', 'ścieżk\w* rower', 'nawierzchni', 'most', 'wiadukt', 'przepust', 'jezdni', 'skrzyżowa', 'rond']
+tech_tags:
+- {name: nawierzchnia bitumiczna, pattern: 'bitum|asfalt'}
+- {name: kostka betonowa, pattern: 'kostk|polbruk|płyt\w* (betonow|yomb)'}
+- {name: chodnik, pattern: 'chodnik'}
+- {name: ścieżka rowerowa, pattern: 'ścieżk\w* rower|drog\w* dla rower'}
+- {name: odwodnienie, pattern: 'odwodnien|kanalizac\w* deszczow|przykanalik'}
+- {name: oświetlenie, pattern: 'oświetleni'}
+- {name: przepust, pattern: 'przepust'}
+- {name: most, pattern: 'most|wiadukt|kładk'}
+- {name: skrzyżowanie lub rondo, pattern: 'skrzyżowa|rond'}
+- {name: zjazdy, pattern: 'zjazd'}
+- {name: sygnalizacja, pattern: 'sygnalizac'}
+- {name: poszerzenie, pattern: 'poszerzeni'}

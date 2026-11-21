@@ -1,0 +1,59 @@
+# Sector pack wod-kan: mitigation toggles for the simulation (docs/impl/analytics.md §4.1).
+# Every number here is an expert assumption ("założenie eksperta"), status proposed until an expert approves it.
+# Loaded by `riskminer seed-catalogue` into catalogue_entry (table_name mitigation; defaults under code "defaults").
+schema_version: 1
+sector: wod-kan
+assumption: true
+defaults:
+  offers_decay: 0.85            # P'(>=N) = 1 - (1 - P(>=N)) * decay^shift
+  cancel_floor_pct: 4
+  materials_share: 0.5          # what-if "ceny +10%"
+mitigations:
+- code: M-GEO
+  short: Badania gruntu
+  label: Badania gruntu przed przetargiem
+  description: Dokumentacja geotechniczna jako załącznik do SWZ.
+  metrics: [time, cost, comp]
+  effects:                      # p_keep: probability the event still happens; time_cut/cost_cut: share of its impact removed if it does
+  - {risk: R02, p_keep: 0.5, time_cut: 0.4, cost_cut: 0.4}
+  competition: {offers_shift: 0.3, cancel_pp: -1}
+  clause_refs: [R02.1-K1]
+  rationale: Wykonawca nie wycenia ryzyka gruntu w ciemno; mniej robót dodatkowych z powodu warunków gruntowo-wodnych.
+  assumption: true
+  status: proposed
+- code: M-PLAN18
+  short: Plan 18 mies.
+  label: Termin 18 miesięcy zamiast 14
+  description: Tyle wynosi mediana planowanych terminów w tej grupie.
+  metrics: [time, cost, comp]
+  plan: {set: class_median}     # overrides D; programme deadline stays fixed
+  effects:
+  - {risk: R06, p_keep: 0.5, time_cut: 0.0, cost_cut: 0.0}
+  competition: {offers_shift: 0.6, cancel_pp: -1}
+  assumption: true
+  status: proposed
+- code: M-K07
+  short: Waloryzacja
+  label: Klauzula waloryzacyjna K-07
+  description: Art. 439 Pzp, próg 5%, limit 10%.
+  metrics: [cost, comp]
+  effects:
+  - {risk: N-PRICE, p_keep: 1.0, time_cut: 0.0, cost_cut: 0.5}
+  - {risk: R13, p_keep: 1.0, time_cut: 0.0, cost_cut: 0.5}
+  price_pass_through: {threshold_pct: 5, cap_pct: 10}
+  competition: {offers_shift: 1.0, cancel_pp: -2}
+  clause_refs: [R08.1-K1]
+  assumption: true
+  status: proposed
+- code: M-R08
+  short: Cena za metr
+  label: Cena za metr sieci ponad 6 km
+  description: Ryczałt do 6,0 km, dalej cena jednostkowa z oferty.
+  metrics: [cost, comp]
+  effects:
+  - {risk: R08, p_keep: 1.0, time_cut: 0.0, cost_cut: 0.6}
+  - {risk: R01, p_keep: 1.0, time_cut: 0.0, cost_cut: 0.3}
+  competition: {offers_shift: 0.4, cancel_pp: -1}
+  clause_refs: [R01.2-K1]
+  assumption: true
+  status: proposed

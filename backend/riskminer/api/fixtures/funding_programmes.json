@@ -1,0 +1,36 @@
+[
+ {
+  "code": "FENIKS",
+  "name": "FEnIKS 2021–2027",
+  "end_date": "2029-12-31",
+  "prov": {
+   "role": "source",
+   "review_status": "approved",
+   "assumption": true,
+   "refs": [
+    {
+     "kind": "catalogue",
+     "id": "funding_programme:FENIKS",
+     "label": "Katalog v1.3"
+    }
+   ]
+  }
+ },
+ {
+  "code": "KPO",
+  "name": "Krajowy Plan Odbudowy",
+  "end_date": "2026-08-31",
+  "prov": {
+   "role": "source",
+   "review_status": "approved",
+   "assumption": true,
+   "refs": [
+    {
+     "kind": "catalogue",
+     "id": "funding_programme:KPO",
+     "label": "Katalog v1.3"
+    }
+   ]
+  }
+ }
+]

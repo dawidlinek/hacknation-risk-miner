@@ -1,0 +1,14 @@
+{
+ "changes": [
+  {
+   "table": "catalogue_entry",
+   "code": "similarity:default",
+   "before": {
+    "scope": 0.18
+   },
+   "after": {
+    "scope": 0.22
+   }
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+{
+ "task": "document_facts",
+ "provider": "gemini",
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "document_facts@v2+cb6f1698",
+ "sensitivity": "public",
+ "text": "{\n  \"doc_kind\": \"pismo do instytucji finansującej o wydłużenie terminu projektu\",\n  \"change\": {\n    \"level\": \"grant\",\n    \"kinds\": [\n      \"termin_projektu\"\n    ],\n    \"delta_days\": null,\n    \"delta_months\": null,\n    \"value_amount\": null,\n    \"vat_basis\": null,\n    \"legal_basis\": [],\n    \"quote\": \"wnioskuje o wydłużenie terminu realizacji projektu pn.: „Budowa sieci kanalizacji sanitarnej w miejscowościach Zmysłówka i Grodzisko Dolne w Gminie Grodzisko Dolne.\\\" do 31.12.2025r.\",\n    \"page\": 1\n  },\n  \"causes\": [\n    {\n      \"code\": \"R01.1\",\n      \"page\": 1,\n      \"quote\": \"Budowa sieci kanalizacyjnej na obszarze już zamieszkanym, na podstawie projektu sporządzonego kilkanaście lat wcześniej, powoduje wiele problemów w terenie\",\n      \"why\": \"Dokumentacja projektowa jest nieaktualna ze względu na upływ czasu i wymaga modyfikacji.\"\n    },\n    {\n      \"code\": \"R03.1\",\n      \"page\": 1,\n      \"quote\": \"dodatkowymi uzgodnieniami z mieszkańcami i modyfikowaniu tras w zakresie nieistotnych odstępstw od zatwierdzonego projektu budowlanego, w związku z nową zabudową i roślinnością\",\n      \"why\": \"Rozwój nowej zabudowy powoduje kolizje i konieczność zmian tras.\"\n    }\n  ],\n  \"linked_investment_delay\": null,\n  \"mitigations\": [\n    {\n      \"text\": \"Zaktualizować dokumentację projektową przed ogłoszeniem przetargu, zwłaszcza przy projektach sporządzonych wiele lat wcześniej.\",\n      \"for_code\": \"R01.1\"\n    },\n    {\n      \"text\": \"Zweryfikować stan zagospodarowania terenu wzdłuż projektowanych tras pod kątem nowej zabudowy i przeszkód terenowych.\",\n      \"for_code\": \"R03.1\"\n    }\n  ],\n  \"summary\": \"Gmina wnioskuje do instytucji finansującej o wydłużenie terminu realizacji projektu do 31.12.2025 roku z powodu problemów terenowych i konieczności modyfikacji tras wynikających z oparcia inwestycji na przestarzałym projekcie i nowej zabudowie.\"\n}",
+ "tokens_in": 3659,
+ "tokens_out": 590,
+ "tokens_cached": 0,
+ "tokens_thought": 0,
+ "finish_reason": "FinishReason.STOP"
+}

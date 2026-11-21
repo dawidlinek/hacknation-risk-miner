@@ -1,0 +1,10 @@
+# Minimal OCR runtime for hosts without tesseract (dev machine; the worker runs on the host there).
+# Used by riskminer/ingest/ocr_doc.py as `docker run --rm -i --network none <image> tesseract stdin stdout ...`
+# when no `tesseract` binary is on PATH. Production does not need it: infra/Dockerfile.backend installs
+# tesseract-ocr + tesseract-ocr-pol directly.
+# Licences: tesseract Apache-2.0, Polish traineddata (tessdata) Apache-2.0, leptonica BSD-2-Clause.
+# Build: docker build -t riskminer-ocr:local -f infra/Dockerfile.ocr infra
+FROM alpine:3.20
+RUN apk add --no-cache tesseract-ocr tesseract-ocr-data-pol
+USER nobody
+ENTRYPOINT []

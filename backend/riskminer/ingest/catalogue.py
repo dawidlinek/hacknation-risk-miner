@@ -81,10 +81,22 @@ async def run(conn, rid) -> dict:
             entries = []
             for fname, key, table in (("event_types.yaml", "event_types", "event_type"), ("red_flags.yaml", "red_flags", "red_flag"),
                                       ("evidence_states.yaml", "evidence_states", "evidence_state"),
-                                      ("evidence_states.yaml", "document_fetch_states", "fetch_state")):
-                for e in (_y(pack / fname) or {}).get(key) or []:
-                    entries.append((sector, table, e["code"], e.get("name") or e.get("text") or e.get("label"),
-                                    e.get("status", "approved"), e))
+                                      ("evidence_states.yaml", "document_fetch_states", "fetch_state"),
+                                      # expert assumptions (docs/impl/api_contract.md §6): data.assumption = true
+                                      ("mitigations.yaml", "mitigations", "mitigation"),
+                                      ("funding_programmes.yaml", "programmes", "funding_programme"),
+                                      ("allocation.yaml", "risks", "allocation"),
+                                      # change-cause label set for the AI classifier (session L reads the YAML too)
+                                      ("cause_labels.yaml", "labels", "cause_label")):
+                doc = _y(pack / fname) or {}
+                assumption = bool(doc.get("assumption"))
+                for e in doc.get(key) or []:
+                    data = {**e, "assumption": True} if assumption else e
+                    entries.append((sector, table, e["code"], e.get("name") or e.get("text") or e.get("label") or e.get("short"),
+                                    e.get("status", "approved"), data))
+                if doc.get("defaults") is not None:
+                    entries.append((sector, table, "defaults", "domyślne parametry", "proposed",
+                                    {"defaults": doc["defaults"], "assumption": assumption}))
             for fname, table in (("similarity.yaml", "similarity"), ("lexicon.yaml", "lexicon")):
                 d = _y(pack / fname)
                 if d:

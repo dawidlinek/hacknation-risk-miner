@@ -1,0 +1,121 @@
+{
+ "tiles": [
+  {
+   "key": "review_open",
+   "label": "Czeka na Twoją decyzję",
+   "value": {
+    "value": 37,
+    "display": "37",
+    "unit": "count",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 37,
+     "method": "count",
+     "refs": [
+      {
+       "kind": "query",
+       "id": "review_item:open",
+       "label": "kolejka"
+      }
+     ]
+    }
+   },
+   "sub": "16 zdarzeń, 12 powiązań, 3 rozbieżności",
+   "href": "/przeglad",
+   "attention": true
+  },
+  {
+   "key": "monitoring_new",
+   "label": "Nowe sygnały w monitoringu",
+   "value": {
+    "value": 12,
+    "display": "12",
+    "unit": "count",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 12,
+     "method": "count",
+     "refs": [
+      {
+       "kind": "query",
+       "id": "v_monitor_signal:new",
+       "label": "sygnały"
+      }
+     ]
+    }
+   },
+   "sub": "od ostatniej wizyty",
+   "href": "/monitoring",
+   "attention": true
+  },
+  {
+   "key": "my_analyses",
+   "label": "Twoje analizy",
+   "value": {
+    "value": 2,
+    "display": "2",
+    "unit": "count",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 2,
+     "method": "count",
+     "refs": [
+      {
+       "kind": "query",
+       "id": "analysis:mine",
+       "label": "analizy"
+      }
+     ]
+    }
+   },
+   "sub": "AN-2026-0014 szkic, AN-2026-0011 gotowa",
+   "href": "/analizy",
+   "attention": false
+  }
+ ],
+ "sources": [
+  {
+   "kind": "bzp_copy",
+   "label": "BZP: kopia ogłoszeń",
+   "what": "ogłoszenia o zamówieniu, wyniku, zmianie i wykonaniu umowy",
+   "count_label": "248 435 ogłoszeń",
+   "last_retrieved_at": "2026-11-12T00:00:00Z",
+   "state": "ok"
+  },
+  {
+   "kind": "bzp_api",
+   "label": "BZP: nowe ogłoszenia",
+   "what": "przyrost od daty kopii",
+   "count_label": "1 077 ogłoszeń",
+   "last_retrieved_at": "2026-11-21T12:00:00Z",
+   "state": "ok"
+  },
+  {
+   "kind": "ted",
+   "label": "TED",
+   "what": "ogłoszenia unijne i modyfikacje umów",
+   "count_label": "18 325 rekordów",
+   "last_retrieved_at": "2026-11-21T10:00:00Z",
+   "state": "ok"
+  },
+  {
+   "kind": "docs_22",
+   "label": "Dokumenty przetargowe",
+   "what": "SWZ, PFU, PPU pilotażowych projektów",
+   "count_label": "907 plików",
+   "last_retrieved_at": "2026-11-21T16:30:00Z",
+   "state": "pending"
+  }
+ ],
+ "issues": [
+  {
+   "id": 7,
+   "rm_id": "RM-2026-007",
+   "code": "value_deviation",
+   "title": "Wartość przedsięwzięcia 3 096 863,90 zł odbiega od kwot z BZP (najbliższa: suma wartości umów 1 478 460,00 zł, -52,3%)"
+  }
+ ]
+}

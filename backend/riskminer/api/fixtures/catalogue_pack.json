@@ -1,0 +1,14 @@
+{
+ "sector": "wod-kan",
+ "version": "v1.3",
+ "risks": [
+  {
+   "code": "R01",
+   "name": "Niepełny lub niespójny zakres"
+  }
+ ],
+ "clauses": [],
+ "checklists": [],
+ "doc_types": [],
+ "entries": []
+}

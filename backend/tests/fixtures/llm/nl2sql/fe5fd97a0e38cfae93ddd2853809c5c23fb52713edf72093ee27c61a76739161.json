@@ -1,0 +1,13 @@
+{
+ "task": "nl2sql",
+ "provider": "gemini",
+ "model": "gemini-3.8-flash",
+ "prompt_version": "nl2sql@v1+0f475312",
+ "sensitivity": "public",
+ "text": "{\n  \"sql\": \"SELECT count(*) AS n, sum(CASE WHEN late THEN 1 ELSE 0 END) AS n_late, round(100.0 * avg(CASE WHEN late THEN 1 ELSE 0 END), 1) AS pct_late FROM v_ask_contract WHERE is_works AND subsector = 'WOD' AND value_bucket = '5-10m'\",\n  \"answer_template\": \"Po terminie zakończyło się {n_late} ({pct_late}%) z {n} umów wodociągowych o wartości 5-10 mln zł.\",\n  \"bars\": null,\n  \"title\": \"Opóźnienia umów wodociągowych 5-10 mln zł\",\n  \"cannot_answer\": null\n}",
+ "tokens_in": 1194,
+ "tokens_out": 176,
+ "tokens_cached": 0,
+ "tokens_thought": 0,
+ "finish_reason": "FinishReason.STOP"
+}

@@ -1,0 +1,12 @@
+{
+ "review_id": 45,
+ "restored": [
+  {
+   "table": "risk_event",
+   "id": 9911,
+   "field": "catalogue_code",
+   "before": "R02",
+   "after": null
+  }
+ ]
+}

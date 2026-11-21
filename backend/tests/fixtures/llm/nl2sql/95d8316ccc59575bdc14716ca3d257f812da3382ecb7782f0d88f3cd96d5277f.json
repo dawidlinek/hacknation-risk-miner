@@ -1,0 +1,13 @@
+{
+ "task": "nl2sql",
+ "provider": "gemini",
+ "model": "gemini-3.8-flash",
+ "prompt_version": "nl2sql@v1+0f475312",
+ "sensitivity": "public",
+ "text": "{\n  \"sql\": \"SELECT woj_name, round(avg(cost_dev_pct)::numeric, 1) AS avg_cost_dev_pct, count(*) AS n FROM v_ask_contract WHERE is_works AND design_build AND cost_dev_pct IS NOT NULL AND woj_name IS NOT NULL GROUP BY woj_name ORDER BY avg_cost_dev_pct DESC\",\n  \"answer_template\": \"W województwie {woj_name} średnie odchylenie kosztu umów w formule zaprojektuj i wybuduj wynosi {avg_cost_dev_pct}% (liczba umów: {n}).\",\n  \"bars\": {\n    \"label_col\": \"woj_name\",\n    \"value_col\": \"avg_cost_dev_pct\"\n  },\n  \"title\": \"Średnie odchylenie kosztu (ZiB) wg województw\",\n  \"cannot_answer\": null\n}",
+ "tokens_in": 1193,
+ "tokens_out": 214,
+ "tokens_cached": 0,
+ "tokens_thought": 0,
+ "finish_reason": "FinishReason.STOP"
+}

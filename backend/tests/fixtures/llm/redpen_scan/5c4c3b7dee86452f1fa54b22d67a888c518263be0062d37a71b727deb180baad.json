@@ -1,0 +1,13 @@
+{
+ "task": "redpen_scan",
+ "provider": "gemini",
+ "model": "gemini-3.8-flash",
+ "prompt_version": "redpen_scan@v1+42f11dca",
+ "sensitivity": "public",
+ "text": "{\n  \"notes\": [\n    {\n      \"code\": \"R08.2\",\n      \"page\": 6,\n      \"pkt\": \"§ 7 ust. 2\",\n      \"quote\": \"Wynagrodzenie ryczałtowe, o którym mowa w ust. 1 obejmuje wszelkie koszty związane z realizacją przedmiotu umowy, w tym ryzyko Wykonawcy z tytułu oszacowania wszelkich kosztów związanych z realizacją przedmiotu umowy. Niedoszacowanie, pominięcie oraz brak rozpoznania zakresu przedmiotu umowy nie może być podstawą do żądania zmiany wynagrodzenia ryczałtowego\",\n      \"title\": \"Pełne ryzyko zakresu po stronie wykonawcy\",\n      \"why\": \"Sztywny ryczałt przy formule ZiW i braku rozpoznania terenu prowadzi do wliczania wysokich rezerw w ceny ofertowe lub ryzyka sporu i upadłości wykonawcy.\",\n      \"strength\": \"silny\",\n      \"clause_hint\": null\n    },\n    {\n      \"code\": \"R12.1\",\n      \"page\": 6,\n      \"pkt\": \"§ 7 ust. 4\",\n      \"quote\": \"Rozliczenie wynagrodzenia za wykonanie przedmiotu umowy nastąpi na podstawie faktury końcowej wystawionej przez Wykonawcę, na podstawie podpisanego przez Zamawiającego protokołu odbioru końcowego, a zapłata następuje w terminie 30 dni od dnia doręczenia prawidłowo wystawionej faktury VAT.\",\n      \"title\": \"Płatność wyłącznie jedną fakturą końcową\",\n      \"why\": \"Brak fakturowania częściowego w formule ZiW drastycznie obciąża płynność wykonawcy, co rodzi ryzyko zatorów płatniczych i wstrzymania robót.\",\n      \"strength\": \"silny\",\n      \"clause_hint\": \"R12.1-K1\"\n    }\n  ]\n}",
+ "tokens_in": 10508,
+ "tokens_out": 461,
+ "tokens_cached": 0,
+ "tokens_thought": 0,
+ "finish_reason": "FinishReason.STOP"
+}

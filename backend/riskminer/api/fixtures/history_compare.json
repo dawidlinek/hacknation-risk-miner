@@ -1,0 +1,11 @@
+{
+ "changes": [
+  {
+   "table": "risk_event",
+   "row_id": 1187,
+   "field": "review_status",
+   "before": "proposed",
+   "after": "approved"
+  }
+ ]
+}

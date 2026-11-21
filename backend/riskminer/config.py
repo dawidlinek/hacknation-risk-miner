@@ -47,15 +47,43 @@ def settings() -> Settings:
     return Settings()
 
 
-@lru_cache
-def app_config() -> dict[str, Any]:
-    """config/config.yaml, falling back to config/config.example.yaml."""
+_CONFIG_CACHE: dict[str, Any] = {"key": None, "value": {}, "checked": 0.0}
+_CONFIG_RECHECK_S = 1.0
+
+
+def _config_path() -> Path | None:
     p = Path(settings().riskminer_config)
     if not p.exists():
         p = REPO_ROOT / "config" / "config.example.yaml"
-    if not p.exists():
+    return p if p.exists() else None
+
+
+def app_config() -> dict[str, Any]:
+    """config/config.yaml, falling back to config/config.example.yaml.
+
+    Re-read when the file's path, mtime or size changes (checked at most once per second), so feature-flag flips take effect within a second
+    without a restart, also in the prod container where no reloader runs. A file that fails to parse keeps the last good config."""
+    import time
+    now = time.monotonic()
+    if _CONFIG_CACHE["key"] is not None and now - _CONFIG_CACHE["checked"] < _CONFIG_RECHECK_S:
+        return _CONFIG_CACHE["value"]
+    _CONFIG_CACHE["checked"] = now
+    p = _config_path()
+    if p is None:
         return {}
-    return yaml.safe_load(p.read_text(encoding="utf-8")) or {}
+    st = p.stat()
+    key = (str(p), st.st_mtime_ns, st.st_size)
+    if _CONFIG_CACHE["key"] != key:
+        try:
+            _CONFIG_CACHE["value"] = yaml.safe_load(p.read_text(encoding="utf-8")) or {}
+            _CONFIG_CACHE["key"] = key
+        except yaml.YAMLError:
+            if _CONFIG_CACHE["key"] is None:
+                raise
+    return _CONFIG_CACHE["value"]
+
+
+app_config.cache_clear = lambda: _CONFIG_CACHE.update(key=None)  # type: ignore[attr-defined]  # old lru_cache API
 
 
 def feature(name: str, default: bool = False) -> bool:

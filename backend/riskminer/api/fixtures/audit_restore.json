@@ -1,0 +1,10 @@
+{
+ "review_id": 45,
+ "restored": {
+  "table": "risk_event",
+  "row_id": 1187,
+  "fields": {
+   "review_status": "proposed"
+  }
+ }
+}

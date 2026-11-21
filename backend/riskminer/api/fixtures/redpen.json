@@ -1,0 +1,138 @@
+{
+ "document": {
+  "id": 11062,
+  "filename": "PFU_kanalizacja.pdf",
+  "doc_type": "PFU",
+  "pages": 38,
+  "sensitivity": "public",
+  "file_url": "/api/documents/11062/file"
+ },
+ "pages": [
+  {
+   "page_no": 6,
+   "chars": 3120,
+   "text": "1.1. Przedmiot zamówienia obejmuje zaprojektowanie i wykonanie sieci kanalizacji sanitarnej o długości ok. 6 km, ostateczna długość wynikać będzie z dokumentacji projektowej..."
+  }
+ ],
+ "notes": [
+  {
+   "item_id": 901,
+   "n": "3",
+   "kind": "found",
+   "title": "Ryczałt przy „ok. 6 km” sieci",
+   "text": "Długość ustali dopiero projekt wykonawcy.",
+   "risk_codes": [
+    "R08"
+   ],
+   "page_no": 6,
+   "char_start": 1840,
+   "char_end": 1912,
+   "clause_ref": "pkt 1.1",
+   "quote": "ok. 6 km, ostateczna długość wynikać będzie z dokumentacji projektowej",
+   "verification": "exact",
+   "review_status": "proposed",
+   "suggested_clause": "R01.2-K1",
+   "prov": {
+    "role": "ai",
+    "review_status": "proposed",
+    "refs": [
+     {
+      "kind": "document",
+      "id": "11062",
+      "label": "PFU s. 6",
+      "page_no": 6,
+      "quote": "ok. 6 km, ostateczna długość wynikać będzie z dokumentacji projektowej",
+      "verification": "exact"
+     }
+    ],
+    "llm": {
+     "provider": "gemini",
+     "model": "gemini-3.8-flash",
+     "data_location": "global (Gemini Developer API)",
+     "llm_call_id": 23
+    }
+   }
+  }
+ ],
+ "missing": [
+  {
+   "item_id": 905,
+   "n": "A",
+   "kind": "missing",
+   "title": "Brak: klauzula waloryzacyjna w PPU",
+   "rule": "art_439_indexation",
+   "evidence_state": "DOKUMENT_NIE_WSPOMINA",
+   "state_label": "dokument nie wspomina",
+   "limits": "Nie ocenimy podziału ryzyka cen materiałów.",
+   "suggested_clause": "R08.1-K1",
+   "prov": {
+    "role": "calc",
+    "review_status": "auto",
+    "method": "rule:art_439",
+    "refs": [
+     {
+      "kind": "catalogue",
+      "id": "red_flag:F5",
+      "label": "Katalog"
+     }
+    ]
+   }
+  },
+  {
+   "item_id": 906,
+   "n": "B",
+   "kind": "missing",
+   "title": "Brak: dokumentacja geotechniczna",
+   "rule": "geo_docs",
+   "evidence_state": "BRAK_W_PACZCE",
+   "state_label": "nie ma w paczce",
+   "limits": "Ogranicza ocenę ryzyka R02.",
+   "suggested_clause": null,
+   "prov": {
+    "role": "calc",
+    "review_status": "auto",
+    "method": "rule:checklist",
+    "refs": [
+     {
+      "kind": "catalogue",
+      "id": "checklist:wod-kan",
+      "label": "Katalog"
+     }
+    ]
+   }
+  }
+ ],
+ "case_hints": [
+  {
+   "risk_code": "R02",
+   "text": "W 2 z 4 podobnych przypadków grunt zbadano dopiero po umowie.",
+   "cases": [
+    "RM-2026-020",
+    "RM-2026-003"
+   ],
+   "number": {
+    "value": 2,
+    "display": "2 z 4",
+    "unit": "count",
+    "prov": {
+     "role": "case",
+     "review_status": "approved",
+     "n": 4,
+     "refs": [
+      {
+       "kind": "project",
+       "id": "RM-2026-020",
+       "label": "Konarzewo"
+      },
+      {
+       "kind": "project",
+       "id": "RM-2026-003",
+       "label": "Steklin"
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "status": "done"
+}

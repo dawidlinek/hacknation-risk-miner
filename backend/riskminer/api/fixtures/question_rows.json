@@ -1,0 +1,19 @@
+{
+ "columns": [
+  "design_build",
+  "n",
+  "late_share"
+ ],
+ "rows": [
+  [
+   true,
+   1464,
+   0.45
+  ],
+  [
+   false,
+   10110,
+   0.276
+  ]
+ ]
+}

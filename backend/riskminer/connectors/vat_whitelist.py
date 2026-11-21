@@ -29,6 +29,7 @@ from typing import Any
 from riskminer.config import settings
 from riskminer.connectors.base import RawStore, ScrapeContext, utcnow
 from riskminer.connectors.records import ExternalRecord, SourceCheck
+from riskminer.validators import nip_valid as _nip_valid
 
 log = logging.getLogger("riskminer.connectors.vat_whitelist")
 
@@ -40,7 +41,6 @@ BATCH = 30
 DAILY_CAP = 90          # leave headroom under the 100/day/IP hard cap
 MAX_REQUESTS_PER_RUN = 10
 
-_WEIGHTS = (6, 5, 7, 2, 3, 4, 5, 6, 7)
 # 10 digits written plain or with the usual 3-3-2-2 / 3-2-2-3 separators, optionally after "PL"
 _NIP_TOKEN = re.compile(r"(?<!\d)(\d{3}[- ]?\d{3}[- ]?\d{2}[- ]?\d{2}|\d{3}[- ]?\d{2}[- ]?\d{2}[- ]?\d{3})(?!\d)")
 
@@ -49,10 +49,7 @@ _DROP = {"representatives", "authorizedClerks", "partners", "accountNumbers", "p
 
 
 def nip_valid(nip: str) -> bool:
-    if not re.fullmatch(r"\d{10}", nip or ""):
-        return False
-    s = sum(int(d) * w for d, w in zip(nip[:9], _WEIGHTS, strict=False)) % 11
-    return s != 10 and s == int(nip[9])
+    return bool(re.fullmatch(r"\d{10}", nip or "")) and _nip_valid(nip)    # shared rule: riskminer/validators.py
 
 
 def extract_nips(text: str | None) -> list[str]:

@@ -43,21 +43,31 @@ async def test_pilot_linked_22_and_discrepancies():
 
 
 async def test_audit_log_append_only():
+    """Runs inside a transaction that is rolled back: no permanent audit row (api_contract §8)."""
     async with raw_conn() as c:
-        await c.execute("INSERT INTO audit_log (actor, action, note) VALUES ('test', 'test', 'append-only check')")
-        with pytest.raises(asyncpg.RaiseError):
-            await c.execute("DELETE FROM audit_log WHERE actor='test'")
+        tr = c.transaction()
+        await tr.start()
+        try:
+            await c.execute("INSERT INTO audit_log (actor, action, note) VALUES ('test', 'test', 'append-only check')")
+            with pytest.raises(asyncpg.RaiseError):           # the DELETE must raise; savepoint rolls back
+                async with c.transaction():
+                    await c.execute("DELETE FROM audit_log WHERE actor='test'")
+        finally:
+            await tr.rollback()
 
 
 async def test_approved_rows_protected():
+    """Approved rows survive a non-expert UPDATE (trigger keeps OLD). Rolled back at the end."""
     async with raw_conn() as c:
-        pid = await c.fetchval("SELECT id FROM project WHERE rm_id='RM-2026-001'")
-        async with c.transaction():
+        tr = c.transaction()
+        await tr.start()
+        try:
+            pid = await c.fetchval("SELECT id FROM project WHERE rm_id='RM-2026-001'")
             await c.execute("SET LOCAL riskminer.expert_write = 'on'")
             await c.execute("UPDATE project SET review_status='approved' WHERE id=$1", pid)
-        await c.execute("UPDATE project SET title='AI overwrite' WHERE id=$1", pid)   # pipeline/AI write: ignored
-        title = await c.fetchval("SELECT title FROM project WHERE id=$1", pid)
-        async with c.transaction():
-            await c.execute("SET LOCAL riskminer.expert_write = 'on'")
-            await c.execute("UPDATE project SET review_status='auto' WHERE id=$1", pid)
-    assert title != "AI overwrite"
+            await c.execute("SET LOCAL riskminer.expert_write = 'off'")
+            await c.execute("UPDATE project SET title='AI overwrite' WHERE id=$1", pid)   # pipeline/AI write: ignored
+            title = await c.fetchval("SELECT title FROM project WHERE id=$1", pid)
+            assert title != "AI overwrite"
+        finally:
+            await tr.rollback()

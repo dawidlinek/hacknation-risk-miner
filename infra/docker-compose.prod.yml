@@ -1,0 +1,148 @@
+# ex ante (Risk Miner) production: a Coolify Docker Compose resource built from GitHub on push.
+# Same conventions as the Mieszkaniownik resource:
+#   - Coolify runs `docker compose --project-directory <repo root> -f infra/docker-compose.prod.yml`,
+#     so every build context is `.` (the repo root), never `..`.
+#   - Only `web` gets a public domain (assign it in Coolify, e.g. https://exante.linek.dev:80).
+#     db, api and worker have no ports and no domain.
+#   - `migrate` runs to completion first, from the same image as api and worker.
+#   - Volume specs use LITERAL host paths. Coolify mis-parses `${VAR:-default}` inside a volume spec.
+#   - Secrets come from the Coolify environment tab. Nothing secret is in this file or in the repo.
+#
+# Host layout (see docs/DEPLOY.md):
+#   /srv/exante/pg       Postgres data dir
+#   /srv/exante/dump     pg_dump files shipped by scripts/deploy/restore_db.sh
+#   /srv/exante/data     rsync of data/raw/docs_22 + data/ref (rw: uploads and imports are written here)
+#   /srv/exante/config   config.yaml (feature flags, LLM routing, sensitivity); read-only in containers
+#   /srv/exante/exports  generated "Pakiet do akt" files
+#   /srv/exante/hf       Hugging Face cache (bge-m3 weights are downloaded on first use)
+name: exante
+
+x-backend: &backend
+  image: ${EXANTE_BACKEND_IMAGE:-exante-backend:latest}
+  build:
+    context: .
+    dockerfile: infra/Dockerfile.backend
+  networks: [coolify]
+
+x-backend-env: &backend-env
+  DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER:-riskminer}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-riskminer}
+  RISKMINER_CONFIG: /app/config/config.yaml
+  RISKMINER_ROOT: /app
+  RISKMINER_USERS: ${RISKMINER_USERS:-}
+  RISKMINER_SESSION_SECRET: ${RISKMINER_SESSION_SECRET}
+  RISKMINER_COOKIE_SECURE: ${RISKMINER_COOKIE_SECURE:-true}
+  RISKMINER_BASIC_AUTH: ${RISKMINER_BASIC_AUTH:-}
+  GEMINI_API_KEY: ${GEMINI_API_KEY}
+  # Only needed when the WCSS tunnel is allowed on this server; empty otherwise.
+  WCSS_VLLM_KEY: ${WCSS_VLLM_KEY:-}
+  HF_HOME: /app/hf
+  HF_TOKEN: ${HF_TOKEN:-}
+  GIT_SHA: ${SOURCE_COMMIT:-unknown}
+
+x-backend-volumes: &backend-volumes
+  - /srv/exante/data:/app/data
+  - /srv/exante/exports:/app/exports
+  - /srv/exante/config:/app/config:ro
+  - /srv/exante/hf:/app/hf
+
+services:
+  db:
+    image: pgvector/pgvector:pg18
+    labels:
+      - exante.role=db
+    restart: unless-stopped
+    shm_size: 2gb
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-riskminer}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB:-riskminer}
+    # Sized for a shared host; raise on a bigger box.
+    command: >
+      postgres
+      -c shared_buffers=2GB
+      -c effective_cache_size=6GB
+      -c work_mem=32MB
+      -c maintenance_work_mem=1GB
+      -c max_wal_size=8GB
+      -c default_toast_compression=lz4
+      -c max_connections=100
+    volumes:
+      - /srv/exante/pg:/var/lib/postgresql
+      - /srv/exante/dump:/dump
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+    networks: [coolify]
+
+  migrate:
+    <<: *backend
+    command: ["uv", "run", "--no-sync", "alembic", "upgrade", "heads"]
+    restart: "no"
+    environment: *backend-env
+    volumes: *backend-volumes
+    depends_on:
+      db:
+        condition: service_healthy
+
+  api:
+    <<: *backend
+    labels:
+      - exante.role=api
+    command: ["uv", "run", "--no-sync", "uvicorn", "riskminer.api.main:app",
+              "--host", "0.0.0.0", "--port", "8000", "--proxy-headers", "--forwarded-allow-ips", "*"]
+    restart: unless-stopped
+    environment: *backend-env
+    volumes: *backend-volumes
+    # Host-side WCSS tunnel (Bielik / PLLuM), see docs/DEPLOY.md. Harmless when no tunnel exists.
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://127.0.0.1:8000/api/health"]
+      interval: 30s
+      timeout: 10s
+      start_period: 30s
+      retries: 3
+
+  worker:
+    <<: *backend
+    labels:
+      - exante.role=worker
+    command: ["uv", "run", "--no-sync", "riskminer", "worker"]
+    restart: unless-stopped
+    environment: *backend-env
+    volumes: *backend-volumes
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    stop_grace_period: 30s
+    deploy:
+      replicas: 1
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+
+  # The only routed service: Caddy serves the Vite build and proxies /api to api on the internal network.
+  # TLS is terminated by Coolify's Traefik, so Caddy listens on plain :80 (set the domain in Coolify
+  # as https://exante.linek.dev:80).
+  web:
+    image: ${EXANTE_WEB_IMAGE:-exante-web:latest}
+    build:
+      context: .
+      dockerfile: infra/Dockerfile.web
+    restart: unless-stopped
+    depends_on:
+      api:
+        condition: service_healthy
+    # Coolify generates a 302 for http -> https; this makes it permanent (same fix as Mieszkaniownik).
+    labels:
+      - traefik.http.middlewares.redirect-to-https.redirectscheme.permanent=true
+    networks: [coolify]
+
+networks:
+  coolify:
+    external: true
+    name: ${EXANTE_NETWORK:-coolify}

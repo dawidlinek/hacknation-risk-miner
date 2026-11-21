@@ -63,10 +63,16 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("derive-events")
     sub.add_parser("make-doc-sample")
     sub.add_parser("link-national")
+    for c in ("derive-lengths", "geo-buyers", "quality", "refresh-rc", "derive-geo", "anchor-evidence"):
+        sub.add_parser(c)
     dt = sub.add_parser("doc-text")
     dt.add_argument("--force", action="store_true", help="rebuild chunks even if the text is unchanged")
     io_ = sub.add_parser("import-ocr")
     io_.add_argument("job_dir", help="local copy of a WCSS OCR run dir (results.jsonl + text/)")
+    od = sub.add_parser("ocr-doc", help="OCR one document now (Tesseract pol), re-chunk, queue document_extract")
+    od.add_argument("document_id", type=int)
+    od.add_argument("--no-extract", action="store_true")
+    sub.add_parser("ocr-pending", help="queue document_ocr for uploaded scans still marked needs_ocr")
     sub.add_parser("worker")
     eq = sub.add_parser("enqueue")
     eq.add_argument("kind")
@@ -125,6 +131,14 @@ def main(argv: list[str] | None = None) -> int:
             res["doctext"] = await pipeline.doc_text()
             return res
         res = asyncio.run(_ocr())
+    elif a.cmd == "ocr-doc":
+        from riskminer.ingest import ocr_doc
+        res = asyncio.run(ocr_doc.ocr_document(a.document_id, actor="cli", extract=not a.no_extract))
+    elif a.cmd == "ocr-pending":
+        from riskminer.ingest import ocr_doc
+        res = asyncio.run(ocr_doc.enqueue_pending())
+    elif a.cmd in ("derive-lengths", "geo-buyers", "quality", "refresh-rc", "derive-geo", "anchor-evidence"):
+        res = asyncio.run(getattr(pipeline, a.cmd.replace("-", "_"))())
     elif a.cmd == "link-national":
         res = asyncio.run(pipeline.link_national())
     elif a.cmd == "doc-text":

@@ -10,7 +10,7 @@ from riskminer.api.routers import search
 from riskminer.ingest.doctext import CHUNK_SIZE, TAIL_SLACK, chunk_spans, split_pages, text_hash
 
 if not any(getattr(r, "path", None) == "/api/search" for r in app.routes):
-    app.include_router(search.router)   # until main.py includes it
+    pass   # main.py includes the search router now; including it again duplicates the routes
 
 
 @pytest.fixture

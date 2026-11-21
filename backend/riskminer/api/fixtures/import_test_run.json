@@ -1,0 +1,20 @@
+{
+ "ok": 47,
+ "failed": 3,
+ "failures": [
+  {
+   "row": 12,
+   "column": "NIP odbiorcy",
+   "rule": "nip_checksum",
+   "value_masked": "912***754"
+  }
+ ],
+ "would": {
+  "insert": {
+   "project": 47
+  },
+  "update": 0,
+  "protected_skipped": 0
+ },
+ "review_items_created": 3
+}

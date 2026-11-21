@@ -1,0 +1,13 @@
+{
+ "task": "redpen_scan",
+ "provider": "gemini",
+ "model": "gemini-3.8-flash",
+ "prompt_version": "redpen_scan@v1+42f11dca",
+ "sensitivity": "public",
+ "text": "{\n  \"notes\": [\n    {\n      \"code\": \"R01.2\",\n      \"page\": 10,\n      \"pkt\": \"7\",\n      \"quote\": \"Orientacyjna długość sieci i przyłączy wodociągowych wynoszą:\",\n      \"title\": \"Orientacyjna długość sieci i przyłączy\",\n      \"why\": \"Podanie orientacyjnych długości w formule zaprojektuj i wybuduj rodzi ryzyko roszczeń finansowych w razie zwiększenia obmiaru.\",\n      \"strength\": \"średni\",\n      \"clause_hint\": \"R01.2-K1\"\n    },\n    {\n      \"code\": \"R03.2\",\n      \"page\": 10,\n      \"pkt\": \"7\",\n      \"quote\": \"Ostateczna lokalizacja będzie zależała od ustaleń z właścicielami / użytkownikami nieruchomości.\",\n      \"title\": \"Brak ostatecznej trasy i zgód właścicieli\",\n      \"why\": \"Uzależnienie przebiegu trasy od negocjacji z właścicielami prywatnymi grozi brakiem zgód i paraliżem projektowania.\",\n      \"strength\": \"silny\",\n      \"clause_hint\": \"R03.2-K1\"\n    },\n    {\n      \"code\": \"R02.3\",\n      \"page\": 10,\n      \"pkt\": \"8\",\n      \"quote\": \"Wymagane jest uzyskanie Decyzji o ustaleniu lokalizacji inwestycji celu publicznego (teren inwestycji nie jest objęty miejscowym planem zagospodarowania przestrzennego) oraz uzgodnienie z Wojewódzkim Konserwatorem Zabytków w Toruniu (z uwagi na lokalizację przedsięwzięcia częściowo na obszarze\",\n      \"title\": \"Obszar wpisany do rejestru zabytków i brak MPZP\",\n      \"why\": \"Konieczność decyzji ULICP oraz uzgodnień konserwatorskich stwarza wysokie ryzyko wydłużenia procedur formalno-prawnych.\",\n      \"strength\": \"średni\",\n      \"clause_hint\": \"R02.3-K1\"\n    }\n  ]\n}",
+ "tokens_in": 8055,
+ "tokens_out": 509,
+ "tokens_cached": 0,
+ "tokens_thought": 0,
+ "finish_reason": "FinishReason.STOP"
+}

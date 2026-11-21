@@ -1,0 +1,13 @@
+{
+ "task": "redpen_scan",
+ "provider": "gemini",
+ "model": "gemini-3.8-flash",
+ "prompt_version": "redpen_scan@v1+42f11dca",
+ "sensitivity": "public",
+ "text": "{\n  \"notes\": [\n    {\n      \"code\": \"R01.3\",\n      \"page\": 23,\n      \"pkt\": \"2.3.10\",\n      \"quote\": \"Wykonawca, na własny koszt, wykona odtworzenie drogi dojazdowej, a w przypadku zniszczeń dróg publicznych uzgodni z administratorem drogi wszelkie prace związane z jej odtworzeniem i wykona je na własny koszt.\",\n      \"title\": \"Odtworzenie drogi dojazdowej i dróg publicznych\",\n      \"why\": \"Nieokreślony z góry zakres napraw i uzgodnień z zarządcami dróg tworzy ryzyko roszczeń o roboty dodatkowe lub opóźnień.\",\n      \"strength\": \"średni\",\n      \"clause_hint\": \"R01.3-K1\"\n    },\n    {\n      \"code\": \"R10.1\",\n      \"page\": 26,\n      \"pkt\": \"2.3.13\",\n      \"quote\": \"Szczegółowy zakres oraz przebieg etapowego rozruchu określony zostanie przez Wykonawcę, a zaakceptowany przez Zamawiającego. Program powinien zawierać wszystkie szczegółowo opisane czynności, które będą niezbędne do wykonania, aby po zakończeniu rozruchu instalacja mogła zostać uznana za działającą\",\n      \"title\": \"Brak zdefiniowanego programu i kryteriów rozruchu\",\n      \"why\": \"Uzależnienie odbioru od akceptacji niesprecyzowanego programu rozruchu może prowadzić do sporów o kryteria zakończenia prób.\",\n      \"strength\": \"średni\",\n      \"clause_hint\": \"R10.1-K1\"\n    }\n  ]\n}",
+ "tokens_in": 8156,
+ "tokens_out": 409,
+ "tokens_cached": 0,
+ "tokens_thought": 0,
+ "finish_reason": "FinishReason.STOP"
+}

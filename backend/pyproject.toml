@@ -22,10 +22,22 @@ dependencies = [
   "orjson>=3.10",
   "pypdfium2>=5.15.2",
   "python-dateutil>=4.0.0",
+  "python-multipart>=0.0.34",
+  "itsdangerous>=2.2.0",
+  "python-docx>=1.2.0",
+  "google-genai>=3.6.1",
+  "sqlglot>=30.33.0",
+  "numpy>=2.1",
+  "openai>=3.57.0",
 ]
 
 [dependency-groups]
-dev = ["pytest>=8.3", "pytest-asyncio>=0.24", "ruff>=0.7"]
+dev = [
+    "pytest>=8.3",
+    "pytest-asyncio>=0.24",
+    "ruff>=0.7",
+    "schemathesis>=4.33.4",
+]
 
 [project.scripts]
 riskminer = "riskminer.cli:main"
@@ -46,3 +58,13 @@ asyncio_mode = "auto"
 asyncio_default_fixture_loop_scope = "session"
 asyncio_default_test_loop_scope = "session"
 testpaths = ["tests"]
+markers = [
+  "unit: no database",
+  "fixturedb: small fixture database (riskminer_ci)",
+  "fulldb: the national DB, read-only",
+  "mutates: writes to a database; never the shared host DB",
+  "testdb: needs the riskminer_test copy (CREATE DATABASE ... TEMPLATE riskminer)",
+  "live: real network",
+  "live_llm: real model calls",
+]
+addopts = "-m 'not mutates and not live and not live_llm'"

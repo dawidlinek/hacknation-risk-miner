@@ -1,0 +1,31 @@
+# Production web tier. TLS is terminated upstream by Coolify's Traefik, so plain HTTP on :80.
+{
+	auto_https off
+	admin off
+}
+
+:80 {
+	encode zstd gzip
+	header {
+		X-Robots-Tag "noindex, nofollow"
+		X-Content-Type-Options nosniff
+		Referrer-Policy strict-origin-when-cross-origin
+	}
+
+	handle /api/* {
+		# Uploads and LLM calls can be slow (document calls are capped at 120 s in config).
+		reverse_proxy api:8000 {
+			transport http {
+				response_header_timeout 180s
+			}
+		}
+	}
+
+	handle {
+		root * /srv
+		@assets path /assets/*
+		header @assets Cache-Control "public, max-age=31536000, immutable"
+		try_files {path} /index.html
+		file_server
+	}
+}

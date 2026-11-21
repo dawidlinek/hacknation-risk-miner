@@ -130,6 +130,35 @@ async def link_pilot(job_id: int | None = None) -> dict:
     return await _stage("link_pilot", "link", {}, linking.run, job_id)
 
 
+async def derive_lengths(job_id: int | None = None) -> dict:
+    from riskminer.ingest import lengths
+    return await _stage("lengths", "derive", {}, lengths.run, job_id)
+
+
+async def geo_buyers(job_id: int | None = None) -> dict:
+    from riskminer.ingest import geo
+    return await _stage("geo_buyers", "derive", {}, geo.run, job_id)
+
+
+async def quality(job_id: int | None = None) -> dict:
+    from riskminer.ingest import quality as q
+    return await _stage("quality", "derive", {}, q.run, job_id)
+
+
+async def refresh_rc(job_id: int | None = None) -> dict:
+    async def fn(conn, rid):
+        await conn.execute("REFRESH MATERIALIZED VIEW rc_contract")
+        return {"rc_contract": await conn.fetchval("SELECT count(*) FROM rc_contract"),
+                "dq_flagged": await conn.fetchval("SELECT count(*) FROM rc_contract WHERE NOT dq_ok")}
+    return await _stage("rc_contract", "derive", {}, fn, job_id)
+
+
+async def derive_geo(job_id: int | None = None) -> dict:
+    """Order from docs/impl/api_contract.md §6: lengths -> buyer TERYT -> quality -> refresh rc_contract."""
+    return {"lengths": await derive_lengths(job_id), "geo_buyers": await geo_buyers(job_id),
+            "quality": await quality(job_id), "rc": await refresh_rc(job_id)}
+
+
 async def link_national(job_id: int | None = None) -> dict:
     from riskminer.ingest import link_national as ln
     return await _stage("link_national", "link", {}, ln.run, job_id)
@@ -142,8 +171,17 @@ async def doc_text(job_id: int | None = None, force: bool = False) -> dict:
 
 
 async def derive_events(job_id: int | None = None) -> dict:
+    """Risk events from notices, then anchor evidence (both recreate/annotate structured-field evidence rows)."""
     from riskminer.ingest import events
-    return await _stage("events", "derive", {}, events.run, job_id)
+    res = await _stage("events", "derive", {}, events.run, job_id)
+    res["anchors"] = await anchor_evidence(job_id)
+    return res
+
+
+async def anchor_evidence(job_id: int | None = None) -> dict:
+    """Point structured-field evidence at the exact occurrence of repeated fields (multi-part / multi-change notices)."""
+    from riskminer.ingest import anchors
+    return await _stage("anchors", "derive", {}, anchors.run, job_id)
 
 
 async def import_xlsx(path: str | None = None, job_id: int | None = None) -> dict:
@@ -233,6 +271,7 @@ async def load_all(limit: int | None = None, skip_bzp: bool = False, job_id: int
     res["derive"] = await derive_bzp(job_id)
     res["link"] = await link_pilot(job_id)
     res["events"] = await derive_events(job_id)
+    res["derive_geo"] = await derive_geo(job_id)
     res["scraped"] = await load_scraped(job_id)
     res["doctext"] = await doc_text(job_id)
     from riskminer.ingest import external

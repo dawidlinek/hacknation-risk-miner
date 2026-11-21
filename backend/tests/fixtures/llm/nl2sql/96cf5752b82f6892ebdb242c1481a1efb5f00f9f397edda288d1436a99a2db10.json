@@ -1,0 +1,13 @@
+{
+ "task": "nl2sql",
+ "provider": "gemini",
+ "model": "gemini-3.8-flash",
+ "prompt_version": "nl2sql@v1+0f475312",
+ "sensitivity": "public",
+ "text": "{\n  \"title\": \"Liczba przyłączy w powiecie poznańskim\",\n  \"cannot_answer\": \"Brak danych o liczbie wykonanych przyłączy wodociągowych lub kanalizacyjnych w bazie danych BZP (dostępne są jedynie dane o długości sieci w kilometrach oraz ogólne parametry umów). Ponadto brak bezpośredniego mapowania na nazwę powiatu bez kodu TERYT powiatu w zapytaniu tekstowym na liczbę jednostkowych przyłączy roboczych.\"\n}",
+ "tokens_in": 1182,
+ "tokens_out": 110,
+ "tokens_cached": 0,
+ "tokens_thought": 0,
+ "finish_reason": "FinishReason.STOP"
+}

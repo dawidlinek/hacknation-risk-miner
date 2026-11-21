@@ -8,10 +8,10 @@ geo,Granice administracyjne (GeoJSON),35,35,0,0,0,162199227,2875,,admin_boundary
 mapa_dotacji,Mapa Dotacji: KPO B3.1.1,695,695,0,0,0,53895627,631,found=24;not_found=6,kpo_project=631,2026-11-21 12:35:38 UTC,public; attribution (mapadotacji.gov.pl),data/raw/mapa_dotacji/
 ted,TED (UE),7380,7380,0,0,0,568566504,18325,found=2;not_found=40,ted_notice=18325,2026-11-21 14:00:39 UTC,EU reuse (Decision 2011/833/EU),data/raw/ted/
 kio,Orzeczenia KIO,6608,6608,0,0,0,456739255,2084,found=17;not_found=25,kio_ruling=2084,2026-11-21 13:17:02 UTC,public; natural persons pseudonymised by KIO,data/raw/kio/
-nik,Wyniki kontroli NIK,1067,1062,0,0,5,591473452,522,found=1;not_found=21,nik_audit=80,2026-11-21 12:39:12 UTC,public information,data/raw/nik/
-cru,Centralny Rejestr Umów,3095,3093,0,2,0,11926163,16982,found=25;not_found=9;partial=8,cru_agreement=16982,2026-11-21 17:31:42 UTC,public (art. 34a u.f.p.),data/raw/cru/
-docs_22,Dokumenty postępowań (22),2687,2259,0,417,11,3253911499,1138,found=6;partial=16,,2026-11-21 17:05:41 UTC,public information,data/raw/docs_22/
-docs_sample,Dokumenty: próba krajowa,19819,19761,14,37,7,18492230409,9403,found=31;not_found=1;partial=173,,2026-11-21 13:17:39 UTC,public information,data/raw/docs_sample/
+nik,Wyniki kontroli NIK,1140,1135,0,0,5,595592285,522,found=1;not_found=21,nik_audit=80,2026-11-21 19:17:45 UTC,public information,data/raw/nik/
+cru,Centralny Rejestr Umów,4884,4880,0,4,0,14676338,16982,found=25;not_found=9;partial=8,cru_agreement=16982,2026-11-21 19:00:59 UTC,public (art. 34a u.f.p.),data/raw/cru/
+docs_22,Dokumenty postępowań (22),3077,2649,0,417,11,3259416656,1138,found=6;partial=16,,2026-11-21 19:17:45 UTC,public information,data/raw/docs_22/
+docs_sample,Dokumenty: próba krajowa,22288,22230,14,37,7,18518721415,9403,found=31;not_found=1;partial=173,,2026-11-21 19:17:45 UTC,public information,data/raw/docs_sample/
 kposk,KPOŚK,6,6,0,0,0,20414773,15950,,kposk_agglomeration=7694;kposk_wwtp=8256,2026-11-21 12:38:54 UTC,CC BY 4.0,data/raw/kposk/
 gus_bdl,GUS BDL,455,449,0,0,6,19730508,289873,,bdl_value=289873,2026-11-21 14:42:11 UTC,"GUS open data, attribution",data/raw/gus_bdl/
 gus_price_index,GUS: wskaźnik cen,4,4,0,0,0,2098684,671,,price_index=671,2026-11-21 12:47:54 UTC,"GUS open data, attribution",data/raw/gus_price_index/

@@ -1,0 +1,501 @@
+{
+ "gold_sha256": "3ec113a625316525edd4b10803cff4e5fce9d05c5b2e39ba5ae1c07bad410f14",
+ "prompt_version": "classify_causes@v1+be62e5e4",
+ "results": [
+  {
+   "alias": "fast",
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "variant": "packed25",
+   "n": 150,
+   "metrics": {
+    "accuracy": 0.8,
+    "accuracy_ci95": [
+     0.733,
+     0.86
+    ],
+    "accuracy_primary_or_secondary": 0.893,
+    "accuracy_ps_ci95": [
+     0.84,
+     0.933
+    ],
+    "macro_f1_support3": 0.798,
+    "macro_f1_all": 0.763,
+    "kappa": 0.7754,
+    "quotes_verified": 0.993,
+    "json_missing": 0,
+    "latency_p50_ms": 4149,
+    "latency_p95_ms": 4360,
+    "wall_s": 5.3,
+    "cost_usd": 0.0364,
+    "cost_per_1000_usd": 0.242,
+    "calls": 6
+   },
+   "per_class": {
+    "N-CLIENT": {
+     "support": 6,
+     "tp": 3,
+     "precision": 1.0,
+     "recall": 0.5,
+     "f1": 0.667
+    },
+    "N-COVID": {
+     "support": 5,
+     "tp": 4,
+     "precision": 1.0,
+     "recall": 0.8,
+     "f1": 0.889
+    },
+    "N-FORMAL": {
+     "support": 5,
+     "tp": 4,
+     "precision": 0.8,
+     "recall": 0.8,
+     "f1": 0.8
+    },
+    "N-LAW": {
+     "support": 0,
+     "tp": 0,
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0
+    },
+    "N-PRICE": {
+     "support": 2,
+     "tp": 2,
+     "precision": 0.667,
+     "recall": 1.0,
+     "f1": 0.8
+    },
+    "N-SCOPE-RED": {
+     "support": 2,
+     "tp": 2,
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0
+    },
+    "N-UNSPEC": {
+     "support": 16,
+     "tp": 12,
+     "precision": 0.923,
+     "recall": 0.75,
+     "f1": 0.828
+    },
+    "R01": {
+     "support": 11,
+     "tp": 4,
+     "precision": 0.5,
+     "recall": 0.364,
+     "f1": 0.421
+    },
+    "R02": {
+     "support": 19,
+     "tp": 16,
+     "precision": 0.8,
+     "recall": 0.842,
+     "f1": 0.821
+    },
+    "R03": {
+     "support": 11,
+     "tp": 9,
+     "precision": 1.0,
+     "recall": 0.818,
+     "f1": 0.9
+    },
+    "R04": {
+     "support": 9,
+     "tp": 9,
+     "precision": 0.818,
+     "recall": 1.0,
+     "f1": 0.9
+    },
+    "R05": {
+     "support": 0,
+     "tp": 0,
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0
+    },
+    "R07": {
+     "support": 33,
+     "tp": 31,
+     "precision": 0.775,
+     "recall": 0.939,
+     "f1": 0.849
+    },
+    "R08": {
+     "support": 5,
+     "tp": 3,
+     "precision": 0.75,
+     "recall": 0.6,
+     "f1": 0.667
+    },
+    "R09": {
+     "support": 5,
+     "tp": 4,
+     "precision": 1.0,
+     "recall": 0.8,
+     "f1": 0.889
+    },
+    "R10": {
+     "support": 2,
+     "tp": 0,
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0
+    },
+    "R12": {
+     "support": 6,
+     "tp": 5,
+     "precision": 0.833,
+     "recall": 0.833,
+     "f1": 0.833
+    },
+    "R13": {
+     "support": 4,
+     "tp": 3,
+     "precision": 1.0,
+     "recall": 0.75,
+     "f1": 0.857
+    },
+    "R14": {
+     "support": 0,
+     "tp": 0,
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0
+    },
+    "R16": {
+     "support": 9,
+     "tp": 9,
+     "precision": 0.75,
+     "recall": 1.0,
+     "f1": 0.857
+    }
+   },
+   "confusion": {
+    "R16": {
+     "R16": 9
+    },
+    "R07": {
+     "R07": 31,
+     "R01": 1,
+     "R16": 1
+    },
+    "N-COVID": {
+     "R12": 1,
+     "N-COVID": 4
+    },
+    "R02": {
+     "R02": 16,
+     "R07": 2,
+     "R01": 1
+    },
+    "R12": {
+     "N-PRICE": 1,
+     "R12": 5
+    },
+    "R03": {
+     "R03": 9,
+     "R02": 2
+    },
+    "N-UNSPEC": {
+     "N-UNSPEC": 12,
+     "R04": 1,
+     "R08": 1,
+     "R07": 1,
+     "R16": 1
+    },
+    "R01": {
+     "R01": 4,
+     "R07": 5,
+     "R16": 1,
+     "R02": 1
+    },
+    "R04": {
+     "R04": 9
+    },
+    "R10": {
+     "R01": 1,
+     "R04": 1
+    },
+    "N-SCOPE-RED": {
+     "N-SCOPE-RED": 2
+    },
+    "R09": {
+     "R09": 4,
+     "R01": 1
+    },
+    "R13": {
+     "R13": 3,
+     "N-LAW": 1
+    },
+    "R08": {
+     "N-UNSPEC": 1,
+     "R08": 3,
+     "N-FORMAL": 1
+    },
+    "N-PRICE": {
+     "N-PRICE": 2
+    },
+    "N-CLIENT": {
+     "N-CLIENT": 3,
+     "R14": 1,
+     "R07": 1,
+     "R02": 1
+    },
+    "N-FORMAL": {
+     "R05": 1,
+     "N-FORMAL": 4
+    }
+   },
+   "run": "eval:fast:packed25:1795289248",
+   "data_location": "global (Gemini Developer API)"
+  },
+  {
+   "alias": "strong",
+   "provider": "gemini",
+   "model": "gemini-3.8-flash",
+   "variant": "packed25",
+   "n": 150,
+   "metrics": {
+    "accuracy": 0.827,
+    "accuracy_ci95": [
+     0.76,
+     0.887
+    ],
+    "accuracy_primary_or_secondary": 0.887,
+    "accuracy_ps_ci95": [
+     0.827,
+     0.933
+    ],
+    "macro_f1_support3": 0.839,
+    "macro_f1_all": 0.829,
+    "kappa": 0.8069,
+    "quotes_verified": 0.987,
+    "json_missing": 0,
+    "latency_p50_ms": 13547,
+    "latency_p95_ms": 14261,
+    "wall_s": 14.4,
+    "cost_usd": 0.0639,
+    "cost_per_1000_usd": 0.426,
+    "calls": 6
+   },
+   "per_class": {
+    "N-CLIENT": {
+     "support": 6,
+     "tp": 4,
+     "precision": 1.0,
+     "recall": 0.667,
+     "f1": 0.8
+    },
+    "N-COVID": {
+     "support": 5,
+     "tp": 5,
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0
+    },
+    "N-FORMAL": {
+     "support": 5,
+     "tp": 4,
+     "precision": 1.0,
+     "recall": 0.8,
+     "f1": 0.889
+    },
+    "N-LAW": {
+     "support": 0,
+     "tp": 0,
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0
+    },
+    "N-PRICE": {
+     "support": 2,
+     "tp": 1,
+     "precision": 1.0,
+     "recall": 0.5,
+     "f1": 0.667
+    },
+    "N-SCOPE-RED": {
+     "support": 2,
+     "tp": 2,
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0
+    },
+    "N-UNSPEC": {
+     "support": 16,
+     "tp": 14,
+     "precision": 0.778,
+     "recall": 0.875,
+     "f1": 0.824
+    },
+    "R01": {
+     "support": 11,
+     "tp": 4,
+     "precision": 0.667,
+     "recall": 0.364,
+     "f1": 0.471
+    },
+    "R02": {
+     "support": 19,
+     "tp": 19,
+     "precision": 0.731,
+     "recall": 1.0,
+     "f1": 0.844
+    },
+    "R03": {
+     "support": 11,
+     "tp": 7,
+     "precision": 1.0,
+     "recall": 0.636,
+     "f1": 0.778
+    },
+    "R04": {
+     "support": 9,
+     "tp": 9,
+     "precision": 0.818,
+     "recall": 1.0,
+     "f1": 0.9
+    },
+    "R07": {
+     "support": 33,
+     "tp": 27,
+     "precision": 0.9,
+     "recall": 0.818,
+     "f1": 0.857
+    },
+    "R08": {
+     "support": 5,
+     "tp": 5,
+     "precision": 0.833,
+     "recall": 1.0,
+     "f1": 0.909
+    },
+    "R09": {
+     "support": 5,
+     "tp": 4,
+     "precision": 0.8,
+     "recall": 0.8,
+     "f1": 0.8
+    },
+    "R10": {
+     "support": 2,
+     "tp": 1,
+     "precision": 1.0,
+     "recall": 0.5,
+     "f1": 0.667
+    },
+    "R12": {
+     "support": 6,
+     "tp": 6,
+     "precision": 0.857,
+     "recall": 1.0,
+     "f1": 0.923
+    },
+    "R13": {
+     "support": 4,
+     "tp": 3,
+     "precision": 1.0,
+     "recall": 0.75,
+     "f1": 0.857
+    },
+    "R14": {
+     "support": 0,
+     "tp": 0,
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0
+    },
+    "R16": {
+     "support": 9,
+     "tp": 9,
+     "precision": 0.818,
+     "recall": 1.0,
+     "f1": 0.9
+    },
+    "R17": {
+     "support": 0,
+     "tp": 0,
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0
+    }
+   },
+   "confusion": {
+    "R16": {
+     "R16": 9
+    },
+    "R07": {
+     "R07": 27,
+     "N-UNSPEC": 3,
+     "R01": 1,
+     "R02": 1,
+     "R16": 1
+    },
+    "N-COVID": {
+     "N-COVID": 5
+    },
+    "R02": {
+     "R02": 19
+    },
+    "R12": {
+     "R12": 6
+    },
+    "R03": {
+     "R03": 7,
+     "R02": 4
+    },
+    "N-UNSPEC": {
+     "N-UNSPEC": 14,
+     "R16": 1,
+     "R04": 1
+    },
+    "R01": {
+     "R17": 1,
+     "R07": 3,
+     "R01": 4,
+     "R02": 2,
+     "R08": 1
+    },
+    "R04": {
+     "R04": 9
+    },
+    "R10": {
+     "R10": 1,
+     "R04": 1
+    },
+    "N-SCOPE-RED": {
+     "N-SCOPE-RED": 2
+    },
+    "R09": {
+     "R09": 4,
+     "R01": 1
+    },
+    "R13": {
+     "R13": 3,
+     "N-LAW": 1
+    },
+    "R08": {
+     "R08": 5
+    },
+    "N-PRICE": {
+     "N-PRICE": 1,
+     "N-UNSPEC": 1
+    },
+    "N-CLIENT": {
+     "N-CLIENT": 4,
+     "R14": 1,
+     "R09": 1
+    },
+    "N-FORMAL": {
+     "N-FORMAL": 4,
+     "R12": 1
+    }
+   },
+   "run": "eval:strong:packed25:1795289254",
+   "data_location": "global (Gemini Developer API)"
+  }
+ ]
+}

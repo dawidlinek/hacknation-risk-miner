@@ -1,0 +1,28 @@
+# Sector pack drogi (roads): second sector, an extension of the pilot. Every entry is status: proposed until an expert
+# approves it in Katalog. Loaded by `riskminer seed-catalogue` like the wod-kan pack; the analytics engine reads the
+# `analytics` block below directly. A new sector is data, not code.
+sector: drogi
+name: Drogi lokalne i regionalne (rozszerzenie pilotażu)
+label_short: drogi
+schema_version: 1
+status: proposed
+files:
+- subsectors.yaml
+- cpv_map.yaml
+- risks.yaml
+- lexicon.yaml
+- similarity.yaml
+analytics:
+  # base population in rc_contract: completed road works; subsector from title patterns (subsectors.yaml)
+  base_population:
+    sector: drogi
+    relevance: [none, component, core]
+    scope_kind: works
+    require_subsector: true          # rows whose title matches no road subsector are not road works
+  base_label: wszystkie wykonane umowy drogowe, 2021–2026
+  unit_cost:
+    subsectors: [DG, DP, DW, DK, DL, CHOD]
+    unit: km
+    label: koszt kilometra drogi
+  # wod-kan expert assumptions (mitigations, allocation, funding programmes) are reused until road-specific ones exist
+  reuse_from: wod-kan

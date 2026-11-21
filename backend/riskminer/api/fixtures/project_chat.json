@@ -1,0 +1,35 @@
+{
+ "id": "qd_7c22",
+ "code": null,
+ "role": "ai",
+ "role_label": "wniosek AI",
+ "text": "Najwięcej kosztowały roboty spoza PFU (758 tys. zł). To zatwierdzone zdarzenie R01.",
+ "bars": [],
+ "numbers": [],
+ "method": {
+  "kind": "llm"
+ },
+ "sources": [
+  {
+   "kind": "notice",
+   "id": "2024/BZP 00554831/01",
+   "label": "pole 5.3",
+   "field_code": "5.3"
+  }
+ ],
+ "n": null,
+ "missing": [],
+ "actions": [
+  {
+   "kind": "open_project",
+   "label": "Pokaż na karcie",
+   "href": "/projekty/RM-2026-003"
+  }
+ ],
+ "apply": null,
+ "processing": {
+  "provider": "gemini",
+  "model": "gemini-3.8-flash",
+  "data_location": "global (Gemini Developer API)"
+ }
+}

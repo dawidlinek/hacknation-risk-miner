@@ -1,0 +1,370 @@
+{
+ "rm_id": "RM-2026-003",
+ "title": "Budowa oczyszczalni ścieków w miejscowości Steklin w formule zaprojektuj i wybuduj",
+ "verified": true,
+ "summary": {
+  "sentence": "Skończono 277 dni po terminie i zapłacono o 40,3% więcej niż w umowie.",
+  "prov": {
+   "role": "calc",
+   "review_status": "auto",
+   "n": 1,
+   "method": "template:card_v1",
+   "refs": []
+  }
+ },
+ "plan_vs_actual": [
+  {
+   "key": "time",
+   "label": "Termin",
+   "planned": {
+    "value": 396,
+    "display": "396 dni",
+    "unit": "days",
+    "prov": {
+     "role": "source",
+     "review_status": "auto",
+     "refs": [
+      {
+       "kind": "notice",
+       "id": "2024/BZP 00418711/01",
+       "label": "ogł. o wyniku",
+       "field_code": "4.2"
+      }
+     ]
+    }
+   },
+   "actual": {
+    "value": 673,
+    "display": "673 dni",
+    "unit": "days",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 1,
+     "method": "completed_on - signed_on",
+     "refs": [
+      {
+       "kind": "notice",
+       "id": "2026/BZP 00276065/01",
+       "label": "ogł. o wykonaniu",
+       "field_code": "5.2"
+      }
+     ]
+    }
+   },
+   "delta": {
+    "value": 277,
+    "display": "+277 dni",
+    "unit": "days",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 1,
+     "method": "actual - planned",
+     "refs": []
+    }
+   }
+  },
+  {
+   "key": "cost",
+   "label": "Koszt",
+   "planned_money": {
+    "amount": "2131590.00",
+    "currency": "PLN",
+    "vat_basis": "gross"
+   },
+   "actual_money": {
+    "amount": "2990000.00",
+    "currency": "PLN",
+    "vat_basis": "gross"
+   },
+   "delta": {
+    "value": 40.3,
+    "display": "+40,3%",
+    "unit": "pct",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 1,
+     "method": "paid/contract - 1",
+     "refs": [
+      {
+       "kind": "notice",
+       "id": "2024/BZP 00418711/01",
+       "label": "ogł. o wyniku",
+       "field_code": "4.4"
+      },
+      {
+       "kind": "notice",
+       "id": "2026/BZP 00276065/01",
+       "label": "ogł. o wykonaniu",
+       "field_code": "5.5"
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "steps": [
+  {
+   "state": "done",
+   "title": "Umowa podpisana",
+   "text": "Wartość 2 131 590,00 zł brutto, 396 dni.",
+   "date": "2024-07-01",
+   "ref": {
+    "kind": "notice",
+    "id": "2024/BZP 00418711/01",
+    "label": "ogł. o wyniku"
+   },
+   "review_status": "auto"
+  },
+  {
+   "state": "done",
+   "title": "Dopłata +758 084,56 zł",
+   "text": "Roboty nieprzewidziane w PFU. Art. 455 ust. 1 pkt 3.",
+   "date": "2024-10-09",
+   "ref": {
+    "kind": "notice",
+    "id": "2024/BZP 00554831/01",
+    "label": "ogł. o zmianie"
+   },
+   "review_status": "auto"
+  },
+  {
+   "state": "now",
+   "title": "Nowy termin: 26.05.2026",
+   "text": "Pozwolenie wodnoprawne trwało dłużej.",
+   "date": "2025-06-12",
+   "ref": null,
+   "review_status": "proposed",
+   "href": "/przeglad?item=812"
+  }
+ ],
+ "events": [
+  {
+   "id": 1187,
+   "title": "PFU nie opisał całego zakresu",
+   "text": "Dopłata 758 tys. zł za roboty spoza PFU.",
+   "risk_code": "R01",
+   "prov": {
+    "role": "source",
+    "review_status": "approved",
+    "refs": [
+     {
+      "kind": "notice",
+      "id": "2024/BZP 00554831/01",
+      "label": "pole 5.3",
+      "field_code": "5.3"
+     }
+    ]
+   }
+  }
+ ],
+ "gaps": [
+  {
+   "doc_type": "PFU",
+   "evidence_state": "BRAK_W_PACZCE",
+   "state_label": "nie ma w paczce",
+   "limits": "Nie potwierdzimy, czego w nim brakowało."
+  }
+ ],
+ "identifiers": [
+  {
+   "k": "BZP",
+   "v": "2024/BZP 00349631/01"
+  },
+  {
+   "k": "OCID",
+   "v": "ocds-148610-6b092479-223f-11ef-87ba-8eb060fd7bb8"
+  },
+  {
+   "k": "NIP",
+   "v": "8792466869",
+   "verified": true
+  }
+ ],
+ "similar": [
+  {
+   "rank": 1,
+   "score": {
+    "value": 0.82,
+    "display": "0,82",
+    "unit": "score",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "method": "similarity_v1",
+     "refs": [
+      {
+       "kind": "catalogue",
+       "id": "similarity:default",
+       "label": "wagi v1.3"
+      }
+     ]
+    }
+   },
+   "rm_id": "RM-2026-017",
+   "ocid": "ocds-148610-17a0c0de-0000-0000-0000-000000000017",
+   "title": "Budowa sieci kanalizacji sanitarnej wraz z przyłączami w miejscowości Tanibórz, Gmina Kleszczewo",
+   "why": "ten sam podsektor, przepompownie, podobna wartość",
+   "contributions": [
+    {
+     "feature": "subsector_main",
+     "label": "podsektor",
+     "value": 0.26
+    },
+    {
+     "feature": "design_build",
+     "label": "formuła ZiW",
+     "value": 0.0
+    },
+    {
+     "feature": "length_km",
+     "label": "zakres i ilości",
+     "value": 0.22
+    },
+    {
+     "feature": "budget",
+     "label": "wartość",
+     "value": 0.16
+    },
+    {
+     "feature": "text",
+     "label": "opis (tekst)",
+     "value": 0.18
+    }
+   ],
+   "outcome": {
+    "delay_days": {
+     "value": 53,
+     "display": "+53 dni",
+     "unit": "days",
+     "prov": {
+      "role": "case",
+      "review_status": "auto",
+      "refs": [
+       {
+        "kind": "project",
+        "id": "RM-2026-017",
+        "label": "Tanibórz"
+       },
+       {
+        "kind": "notice",
+        "id": "2025/BZP 00412233/01",
+        "label": "ogł. o wykonaniu",
+        "field_code": "5.2"
+       }
+      ]
+     }
+    },
+    "cost_dev_pct": {
+     "value": 26.8,
+     "display": "+26,8%",
+     "unit": "pct",
+     "prov": {
+      "role": "case",
+      "review_status": "auto",
+      "refs": [
+       {
+        "kind": "notice",
+        "id": "2025/BZP 00412233/01",
+        "label": "ogł. o wykonaniu",
+        "field_code": "5.5"
+       }
+      ]
+     }
+    }
+   },
+   "href": "/projekty/RM-2026-017"
+  },
+  {
+   "rank": 2,
+   "score": {
+    "value": 0.74,
+    "display": "0,74",
+    "unit": "score",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "method": "similarity_v1",
+     "refs": [
+      {
+       "kind": "catalogue",
+       "id": "similarity:default",
+       "label": "wagi v1.3"
+      }
+     ]
+    }
+   },
+   "rm_id": null,
+   "ocid": "ocds-148610-7045f947-7da2-11eb-86b1-a64936a8669f",
+   "title": "Budowa zbiorczej kanalizacji sanitarnej w miejscowościach Krężna, Kozierogi i Piekarki",
+   "why": "ten sam podsektor, ZiW, podobna wartość",
+   "contributions": [
+    {
+     "feature": "subsector_main",
+     "label": "podsektor",
+     "value": 0.26
+    },
+    {
+     "feature": "design_build",
+     "label": "formuła ZiW",
+     "value": 0.22
+    },
+    {
+     "feature": "length_km",
+     "label": "zakres i ilości",
+     "value": 0.08
+    },
+    {
+     "feature": "budget",
+     "label": "wartość",
+     "value": 0.12
+    },
+    {
+     "feature": "text",
+     "label": "opis (tekst)",
+     "value": 0.06
+    }
+   ],
+   "outcome": {
+    "delay_days": {
+     "value": 78,
+     "display": "+78 dni",
+     "unit": "days",
+     "prov": {
+      "role": "case",
+      "review_status": "auto",
+      "refs": [
+       {
+        "kind": "procedure",
+        "id": "ocds-148610-7045f947-7da2-11eb-86b1-a64936a8669f",
+        "label": "ogł. o wykonaniu",
+        "field_code": "5.2"
+       }
+      ]
+     }
+    },
+    "cost_dev_pct": {
+     "value": 1.4,
+     "display": "+1,4%",
+     "unit": "pct",
+     "prov": {
+      "role": "case",
+      "review_status": "auto",
+      "refs": [
+       {
+        "kind": "procedure",
+        "id": "ocds-148610-7045f947-7da2-11eb-86b1-a64936a8669f",
+        "label": "ogł. o wykonaniu",
+        "field_code": "5.5"
+       }
+      ]
+     }
+    }
+   },
+   "href": "/projekty/ocds-148610-7045f947-7da2-11eb-86b1-a64936a8669f"
+  }
+ ],
+ "unverified_hidden": 1
+}

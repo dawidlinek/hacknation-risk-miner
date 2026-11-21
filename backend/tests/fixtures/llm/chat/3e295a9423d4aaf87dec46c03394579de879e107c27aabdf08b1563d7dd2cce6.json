@@ -1,0 +1,13 @@
+{
+ "task": "chat",
+ "provider": "gemini",
+ "model": "gemini-3.8-flash",
+ "prompt_version": "chat@v1+4a39e741",
+ "sensitivity": "public",
+ "text": "{\n  \"answer\": \"Koszt kilometra w tej inwestycji to 1,17 mln zł/km, co jest wartością wyższą niż w 68% umów. Dokładna średnia lub mediana kosztu kilometra dla całej grupy podobnych umów nie jest podana.\",\n  \"role\": \"calc\",\n  \"fact_ids\": [\"F16\", \"F22\", \"F23\"],\n  \"missing\": [\"średni koszt kilometra w podobnych umowach\", \"mediana kosztu kilometra w podobnych umowach\"],\n  \"apply\": null,\n  \"follow_ups\": [\n    \"Czy 7,0 mln zł wystarczy na realizację?\",\n    \"Ile podobnych umów przekroczyło budżet?\"\n  ]\n}",
+ "tokens_in": 4094,
+ "tokens_out": 179,
+ "tokens_cached": 0,
+ "tokens_thought": 0,
+ "finish_reason": "FinishReason.STOP"
+}

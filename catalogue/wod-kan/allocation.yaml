@@ -1,0 +1,76 @@
+# Sector pack wod-kan: risk allocation matrix defaults (docs/impl/analytics.md §4.3). Controllability, the
+# recommended owner, premiums and the delay cost rate are expert assumptions ("założenie eksperta"), status
+# proposed until approved. How-texts are taken verbatim from design/mockups/A5-Podzial.dc.html (demo case,
+# editable in the Katalog screen). Loaded by `riskminer seed-catalogue` into catalogue_entry (table_name allocation;
+# defaults under code "defaults").
+schema_version: 1
+sector: wod-kan
+assumption: true
+defaults:
+  delay_cost_rate_per_month: 0.005        # share of contract value per month of delay
+  premium: {shared: 0.10, contractor_uncontrolled: 0.60, contractor_controlled: 0.10}
+risks:
+- code: R02
+  label: Nierozpoznany grunt
+  controllability: buyer                  # buyer | shared | contractor
+  recommended: buyer
+  how:
+    buyer: badania geotechniczne przed ogłoszeniem; reszta wg protokołu konieczności
+    shared: badania przed ogłoszeniem, nadwyżka ponad raport dzielona po połowie
+    contractor: wykonawca bada grunt po umowie, w ryczałcie
+  clause_refs: [R02.1-K1]
+  assumption: true
+  status: proposed
+- code: R03
+  label: Służebności na trasie
+  controllability: buyer
+  recommended: buyer
+  how:
+    buyer: zamawiający uzyskuje zgody przed przekazaniem terenu
+    shared: zamawiający negocjuje, wykonawca projektuje obejścia
+    contractor: wykonawca uzyskuje zgody właścicieli
+  assumption: true
+  status: proposed
+- code: R04
+  label: Decyzje organów
+  controllability: shared
+  recommended: shared
+  how:
+    buyer: zamawiający uzyskuje decyzje przed przetargiem
+    shared: "klauzula K-12: termin wydłuża się o zwłokę organu"
+    contractor: wykonawca odpowiada za terminy decyzji
+  clause_refs: [K-12]
+  assumption: true
+  status: proposed
+- code: R06
+  label: Zbyt krótki termin
+  controllability: shared
+  recommended: shared
+  how:
+    buyer: zamawiający wydłuża termin do 18 mies.
+    shared: kary umowne liczone od terminu realnego, kamienie milowe
+    contractor: pełne kary od terminu 14 mies.
+  assumption: true
+  status: proposed
+- code: R08
+  label: Długość sieci „ok. 6 km”
+  controllability: buyer
+  recommended: shared
+  how:
+    buyer: rozliczenie powykonawcze za każdy metr
+    shared: ryczałt do 6,0 km, dalej cena jednostkowa za metr
+    contractor: ryczałt za całość, długość ryzykiem wykonawcy
+  clause_refs: [R01.2-K1]
+  assumption: true
+  status: proposed
+- code: R13
+  label: Wzrost cen materiałów
+  controllability: shared
+  recommended: shared
+  how:
+    buyer: zamawiający pokrywa pełny wzrost cen
+    shared: klauzula K-07 (art. 439 Pzp), próg 5%, limit 10%
+    contractor: bez waloryzacji
+  clause_refs: [K-07, R08.1-K1]
+  assumption: true
+  status: proposed

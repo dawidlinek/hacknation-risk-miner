@@ -1,0 +1,13 @@
+{
+ "task": "redpen_scan",
+ "provider": "gemini",
+ "model": "gemini-3.8-flash",
+ "prompt_version": "redpen_scan@v1+42f11dca",
+ "sensitivity": "public",
+ "text": "{\n  \"notes\": [\n    {\n      \"code\": \"R18\",\n      \"page\": 11,\n      \"pkt\": \"pkt 2\",\n      \"quote\": \"Rozbudowa sieci kanalizacyjnej na działce nr ewid. 358 na dł. od skrzyżowania z drogą - działka nr ewid. 352/34 do skrzyżowania z drogą - działka nr ewid. 383 w obrębie Zatory, gmina Zatory - etap I\",\n      \"title\": \"Realizacja sieci w podziale na etapy\",\n      \"why\": \"Podział na etapy może oznaczać brak możliwości samodzielnego funkcjonowania sieci bez realizacji kolejnych faz.\",\n      \"strength\": \"słaby\",\n      \"clause_hint\": null\n    }\n  ]\n}",
+ "tokens_in": 9925,
+ "tokens_out": 195,
+ "tokens_cached": 0,
+ "tokens_thought": 0,
+ "finish_reason": "FinishReason.STOP"
+}

@@ -1,0 +1,13 @@
+{
+ "task": "redpen_scan",
+ "provider": "gemini",
+ "model": "gemini-3.8-flash",
+ "prompt_version": "redpen_scan@v1+42f11dca",
+ "sensitivity": "public",
+ "text": "{\n  \"notes\": [\n    {\n      \"code\": \"R03.2\",\n      \"page\": 5,\n      \"pkt\": \"pkt 5\",\n      \"quote\": \"Wykonawca opracuje i dostarczy w ramach niniejszego zamówienia dokumentację projektową zawierającą następujące elementy: [...] zgody właścicieli nieruchomości na cele budowlane\",\n      \"title\": \"Pozyskanie zgód właścicieli po stronie wykonawcy\",\n      \"why\": \"Przeniesienie na wykonawcę obowiązku pozyskania zgód prywatnych właścicieli nieruchomości grozi blokadą inwestycji i roszczeniami terminowymi.\",\n      \"strength\": \"silny\",\n      \"clause_hint\": \"R03.2-K1\"\n    },\n    {\n      \"code\": \"R02.3\",\n      \"page\": 5,\n      \"pkt\": \"pkt 5\",\n      \"quote\": \"Projekt budowlany musi być wykonany na aktualnej mapie do celów projektowych, uzyskać uzgodnienie z narady koordynacyjnej w Starostwie Powiatowym w Toruniu i uzgodnienie / decyzję Wojewódzkiego Konserwatora Zabytków w Toruniu.\",\n      \"title\": \"Wymóg uzgodnienia z konserwatorem zabytków\",\n      \"why\": \"Konieczność procedowania uzgodnień konserwatorskich może wydłużyć fazę projektową i narzucić dodatkowe wymagania dotyczące nadzoru archeologicznego.\",\n      \"strength\": \"średni\",\n      \"clause_hint\": null\n    },\n    {\n      \"code\": \"R05.2\",\n      \"page\": 6,\n      \"pkt\": \"pkt 5\",\n      \"quote\": \"Przewody projektować w oparciu o określony w PFU zakres, warunki techniczne do projektowania i budowy wydane przez GZK Czernikowo, w uzgodnieniu z Zamawiającym i Spółdzielnią Mieszkaniową „Rolnik” w Steklinie.\",\n      \"title\": \"Konieczność uzgodnień ze Spółdzielnią Mieszkaniową\",\n      \"why\": \"Zależność rozwiązań projektowych od zgody zewnętrznego podmiotu (spółdzielni) stwarza ryzyko przedłużających się uzgodnień i sporów co do trasy sieci.\",\n      \"strength\": \"średni\",\n      \"clause_hint\": null\n    }\n  ]\n}",
+ "tokens_in": 7937,
+ "tokens_out": 563,
+ "tokens_cached": 0,
+ "tokens_thought": 0,
+ "finish_reason": "FinishReason.STOP"
+}

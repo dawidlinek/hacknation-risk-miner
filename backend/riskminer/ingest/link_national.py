@@ -833,7 +833,8 @@ async def _cru_changes_with_bzp(conn, cru_rows, cru_meta) -> int:
     cids = [r[3] for r in cru_rows if r[10] == "accept" and cru_meta["agreements"][r[1]]["n_changes"] > 0]
     if not cids:
         return 0
-    return await conn.fetchval("SELECT count(DISTINCT contract_id) FROM contract_change WHERE contract_id = ANY($1::bigint[])",
+    return await conn.fetchval("SELECT count(DISTINCT contract_id) FROM contract_change WHERE contract_id = ANY($1::bigint[]) "
+                               "AND kind IN ('change_notice', 'performance_block')",
                                cids)
 
 

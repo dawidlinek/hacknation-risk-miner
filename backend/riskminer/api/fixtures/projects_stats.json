@@ -1,0 +1,93 @@
+{
+ "late": {
+  "value": 20,
+  "display": "20 z 27",
+  "unit": "count",
+  "prov": {
+   "role": "calc",
+   "review_status": "auto",
+   "n": 27,
+   "method": "count(delay_days>0)",
+   "refs": [
+    {
+     "kind": "query",
+     "id": "projects:pilot",
+     "label": "27 umów w 22 projektach"
+    }
+   ]
+  }
+ },
+ "overpaid": {
+  "value": 9,
+  "display": "9 z 27",
+  "unit": "count",
+  "prov": {
+   "role": "calc",
+   "review_status": "auto",
+   "n": 27,
+   "method": "count(cost_dev_pct>0)",
+   "refs": [
+    {
+     "kind": "query",
+     "id": "projects:pilot",
+     "label": "27 umów"
+    }
+   ]
+  }
+ },
+ "overpaid_median": {
+  "value": null,
+  "display": "za mało danych",
+  "unit": "pct",
+  "prov": {
+   "role": "calc",
+   "review_status": "auto",
+   "n": 9,
+   "method": "median(cost_dev_pct) where >0",
+   "refs": [
+    {
+     "kind": "query",
+     "id": "projects:pilot",
+     "label": "9 umów"
+    }
+   ],
+   "insufficient": true
+  }
+ },
+ "improper": {
+  "value": 1,
+  "display": "1 z 27",
+  "unit": "count",
+  "prov": {
+   "role": "calc",
+   "review_status": "auto",
+   "n": 27,
+   "method": "count(properly_performed=false)",
+   "refs": [
+    {
+     "kind": "query",
+     "id": "projects:pilot",
+     "label": "27 umów"
+    }
+   ]
+  }
+ },
+ "changes": {
+  "value": 31,
+  "display": "31",
+  "unit": "count",
+  "prov": {
+   "role": "calc",
+   "review_status": "auto",
+   "n": 27,
+   "method": "count(contract_change)",
+   "refs": [
+    {
+     "kind": "query",
+     "id": "projects:pilot",
+     "label": "27 umów"
+    }
+   ]
+  }
+ }
+}

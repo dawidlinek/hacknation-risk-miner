@@ -1,0 +1,13 @@
+{
+ "task": "chat",
+ "provider": "gemini",
+ "model": "gemini-3.8-flash",
+ "prompt_version": "chat@v1+4a39e741",
+ "sensitivity": "public",
+ "text": "{\n  \"answer\": \"Dopłacono o 40,3% więcej niż w umowie, co obejmowało dopłatę 758 084,56 zł oraz drugą dopłatę 100 325,44 zł. Powodem było zwiększenie zakresu robót w stosunku do Programu Funkcjonalno Użytkowego na podstawie art. 455 ust. 1 pkt 3.\",\n  \"role\": \"ai\",\n  \"fact_ids\": [\"F1\", \"F11\", \"F12\", \"F14\"],\n  \"follow_ups\": [\n    \"Jaka była pierwotna wartość umowy?\",\n    \"Ile łącznie zapłacono po zakończeniu umowy?\"\n  ]\n}",
+ "tokens_in": 3235,
+ "tokens_out": 173,
+ "tokens_cached": 0,
+ "tokens_thought": 0,
+ "finish_reason": "FinishReason.STOP"
+}

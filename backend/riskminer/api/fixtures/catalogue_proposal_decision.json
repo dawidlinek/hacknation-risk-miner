@@ -1,0 +1,22 @@
+{
+ "review_id": 44,
+ "applied": [
+  {
+   "table": "catalogue_risk",
+   "id": 41,
+   "field": "status",
+   "before": "proposed",
+   "after": "approved"
+  }
+ ],
+ "effects": [
+  {
+   "where": "Katalog, ryzyko R02",
+   "before": "2 zatwierdzone przypadki",
+   "after": "3 zatwierdzone przypadki"
+  }
+ ],
+ "gold": null,
+ "undo_until": "2026-11-21T21:15:00Z",
+ "next_item_id": 813
+}

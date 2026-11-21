@@ -1,0 +1,23 @@
+{
+ "total": 2,
+ "limit": 50,
+ "offset": 0,
+ "items": [
+  {
+   "code": "AN-2026-0014",
+   "title": "Kanalizacja sanitarna, ok. 6 km, ZiW",
+   "version": 2,
+   "status": "ready",
+   "sensitivity": "public",
+   "updated_at": "2026-11-21T20:31:00Z"
+  },
+  {
+   "code": "AN-2026-0011",
+   "title": "Oczyszczalnia ścieków, modernizacja",
+   "version": 1,
+   "status": "draft",
+   "sensitivity": "confidential",
+   "updated_at": "2026-11-21T17:05:00Z"
+  }
+ ]
+}

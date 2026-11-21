@@ -1,0 +1,13 @@
+{
+ "task": "chat",
+ "provider": "gemini",
+ "model": "gemini-3.8-flash",
+ "prompt_version": "chat@v1+4a39e741",
+ "sensitivity": "public",
+ "text": "{\"answer\":\"Przez przedłużające się procedury administracyjne. Powodem opóźnienia o 277 dni było przedłużające się postępowanie w Wodach Polskich dotyczące wydania pozwolenia wodnoprawnego na wprowadzanie ścieków do urządzenia wodnego.\",\"role\":\"ai\",\"fact_ids\":[\"F1\",\"F15\"],\"apply\":null,\"follow_ups\":[\"O ile wzrósł koszt inwestycji?\",\"Kto był wykonawcą umowy?\"]}",
+ "tokens_in": 3131,
+ "tokens_out": 106,
+ "tokens_cached": 0,
+ "tokens_thought": 0,
+ "finish_reason": "FinishReason.STOP"
+}

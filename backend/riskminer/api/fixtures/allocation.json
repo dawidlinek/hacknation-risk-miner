@@ -1,0 +1,211 @@
+{
+ "risks": [
+  {
+   "code": "R02",
+   "title": "Nierozpoznany grunt",
+   "impact": {
+    "value": 28,
+    "display": "P80 +28 dni",
+    "unit": "days",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 64,
+     "method": "mc_risk_p80",
+     "refs": [
+      {
+       "kind": "query",
+       "id": "rc:SAN|5-10m|db",
+       "label": "klasa: kanalizacja sanitarna, 5–10 mln zł, ZiW"
+      }
+     ]
+    }
+   },
+   "expected_cost": {
+    "money": {
+     "amount": "210000.00",
+     "currency": "PLN",
+     "vat_basis": "gross"
+    },
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 82,
+     "method": "p(r)*impact*budget",
+     "refs": [
+      {
+       "kind": "query",
+       "id": "rc:SAN|5-10m|db",
+       "label": "klasa: kanalizacja sanitarna, 5–10 mln zł, ZiW"
+      }
+     ]
+    }
+   },
+   "controllability": "buyer",
+   "recommended": "buyer",
+   "chosen": "buyer",
+   "positions": [
+    {
+     "key": "buyer",
+     "label": "Zamawiający",
+     "how": "badania geotechniczne przed ogłoszeniem; reszta wg protokołu konieczności"
+    },
+    {
+     "key": "shared",
+     "label": "Wspólnie",
+     "how": "koszt badań po umowie dzielony po połowie"
+    },
+    {
+     "key": "contractor",
+     "label": "Wykonawca",
+     "how": "wykonawca wycenia ryzyko w ofercie"
+    }
+   ],
+   "premium_factor": {
+    "shared": 0.1,
+    "contractor": 0.6,
+    "prov": {
+     "role": "source",
+     "review_status": "approved",
+     "assumption": true,
+     "refs": [
+      {
+       "kind": "catalogue",
+       "id": "allocation:R02",
+       "label": "założenie eksperta"
+      }
+     ]
+    }
+   },
+   "warning": {
+    "text": "W Konarzewie grunt badano dopiero po umowie i budowa się wydłużyła.",
+    "cases": [
+     "RM-2026-020"
+    ],
+    "prov": {
+     "role": "case",
+     "review_status": "approved",
+     "refs": [
+      {
+       "kind": "project",
+       "id": "RM-2026-020",
+       "label": "Konarzewo"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "code": "R08",
+   "title": "Wzrost cen materiałów",
+   "impact": {
+    "value": 6.5,
+    "display": "P80 +6,5%",
+    "unit": "pct",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 82,
+     "method": "mc_risk_p80",
+     "refs": [
+      {
+       "kind": "query",
+       "id": "rc:SAN|5-10m|db",
+       "label": "klasa: kanalizacja sanitarna, 5–10 mln zł, ZiW"
+      }
+     ]
+    }
+   },
+   "expected_cost": {
+    "money": {
+     "amount": "320000.00",
+     "currency": "PLN",
+     "vat_basis": "gross"
+    },
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 82,
+     "method": "p(r)*impact*budget",
+     "refs": [
+      {
+       "kind": "query",
+       "id": "rc:SAN|5-10m|db",
+       "label": "klasa: kanalizacja sanitarna, 5–10 mln zł, ZiW"
+      }
+     ]
+    }
+   },
+   "controllability": "none",
+   "recommended": "shared",
+   "chosen": "shared",
+   "positions": [
+    {
+     "key": "buyer",
+     "label": "Zamawiający",
+     "how": "zamawiający pokrywa całą zmianę cen"
+    },
+    {
+     "key": "shared",
+     "label": "Wspólnie",
+     "how": "waloryzacja wg wskaźnika GUS powyżej progu 5%"
+    },
+    {
+     "key": "contractor",
+     "label": "Wykonawca",
+     "how": "wykonawca bierze ryzyko w cenie ryczałtowej"
+    }
+   ],
+   "premium_factor": {
+    "shared": 0.05,
+    "contractor": 0.4,
+    "prov": {
+     "role": "source",
+     "review_status": "approved",
+     "assumption": true,
+     "refs": [
+      {
+       "kind": "catalogue",
+       "id": "allocation:R08",
+       "label": "założenie eksperta"
+      }
+     ]
+    }
+   },
+   "warning": null
+  }
+ ],
+ "balance": {
+  "buyer": {
+   "amount": "720000.00",
+   "currency": "PLN",
+   "vat_basis": "gross"
+  },
+  "contractor": {
+   "amount": "340000.00",
+   "currency": "PLN",
+   "vat_basis": "gross"
+  },
+  "premium": {
+   "amount": "95000.00",
+   "currency": "PLN",
+   "vat_basis": "gross"
+  },
+  "off_recommendation": 1,
+  "note": "1 ryzyko podzielone inaczej niż zalecamy.",
+  "prov": {
+   "role": "calc",
+   "review_status": "auto",
+   "n": 82,
+   "method": "sum(expected_cost) by owner",
+   "refs": [
+    {
+     "kind": "query",
+     "id": "rc:SAN|5-10m|db",
+     "label": "klasa: kanalizacja sanitarna, 5–10 mln zł, ZiW"
+    }
+   ]
+  }
+ },
+ "version": 2
+}

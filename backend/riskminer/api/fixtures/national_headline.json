@@ -1,0 +1,96 @@
+{
+ "sentence": "Z 11 574 zakończonych umów wod-kan 29,8% skończyło się po terminie.",
+ "completed": {
+  "value": 11574,
+  "display": "11 574",
+  "unit": "count",
+  "prov": {
+   "role": "calc",
+   "review_status": "auto",
+   "n": 11574,
+   "method": "count(rc_contract core)",
+   "refs": [
+    {
+     "kind": "query",
+     "id": "rc:core",
+     "label": "ogłoszenia o wykonaniu umowy, BZP"
+    }
+   ]
+  }
+ },
+ "late_share": {
+  "value": 0.298,
+  "display": "29,8%",
+  "unit": "share",
+  "prov": {
+   "role": "calc",
+   "review_status": "auto",
+   "n": 11574,
+   "method": "rc_share(late)",
+   "refs": [
+    {
+     "kind": "query",
+     "id": "rc:core",
+     "label": "ogłoszenia o wykonaniu umowy, BZP"
+    }
+   ]
+  }
+ },
+ "delay_days_total": {
+  "value": 612000,
+  "display": "612 tys. dni",
+  "unit": "days",
+  "prov": {
+   "role": "calc",
+   "review_status": "auto",
+   "n": 3450,
+   "method": "sum(delay_days) where late",
+   "refs": [
+    {
+     "kind": "query",
+     "id": "rc:core",
+     "label": "ogłoszenia o wykonaniu umowy, BZP"
+    }
+   ]
+  }
+ },
+ "overpaid": {
+  "money": {
+   "amount": "1240000000.00",
+   "currency": "PLN",
+   "vat_basis": "gross"
+  },
+  "prov": {
+   "role": "calc",
+   "review_status": "auto",
+   "n": 11574,
+   "method": "sum(paid_gross - value_gross) where paid > value",
+   "refs": [
+    {
+     "kind": "query",
+     "id": "rc:core",
+     "label": "ogłoszenia o wykonaniu umowy, BZP"
+    }
+   ]
+  }
+ },
+ "ongoing_overdue_90": {
+  "value": 1830,
+  "display": "1 830",
+  "unit": "count",
+  "prov": {
+   "role": "calc",
+   "review_status": "auto",
+   "n": 1830,
+   "method": "count(v_monitor_signal days_overdue>90)",
+   "refs": [
+    {
+     "kind": "query",
+     "id": "v_monitor_signal",
+     "label": "umowy w toku po terminie"
+    }
+   ]
+  }
+ },
+ "as_of": "2026-11-21T18:40:00Z"
+}

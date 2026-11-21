@@ -1,0 +1,60 @@
+{
+ "total": 45,
+ "limit": 50,
+ "offset": 0,
+ "items": [
+  {
+   "id": 1205,
+   "at": "2026-11-21T13:20:00Z",
+   "actor_kind": "expert",
+   "actor_label": "ekspert",
+   "action_label": "zmienił wagę podobieństwa w",
+   "object": {
+    "label": "Katalogu wiedzy",
+    "href": "/katalog"
+   },
+   "before": {
+    "scope": 0.18
+   },
+   "after": {
+    "scope": 0.22
+   },
+   "note": "katalog v1.2 → v1.3",
+   "ref": "kat-v1.3"
+  },
+  {
+   "id": 1201,
+   "at": "2026-11-21T19:12:00Z",
+   "actor_kind": "model",
+   "actor_label": "Model Bielik 11B (Polska)",
+   "action_label": "zaproponował zdarzenie R04 w",
+   "object": {
+    "label": "Steklin, RM-2026-003",
+    "href": "/projekty/RM-2026-003"
+   },
+   "before": null,
+   "after": {
+    "catalogue_code": "R04"
+   },
+   "note": null,
+   "ref": null
+  },
+  {
+   "id": 902,
+   "at": "2026-11-21T13:05:00Z",
+   "actor_kind": "system",
+   "actor_label": "import BZP",
+   "action_label": "wczytał ogłoszenia do",
+   "object": {
+    "label": "Bazy przypadków",
+    "href": "/zrodla"
+   },
+   "before": null,
+   "after": {
+    "notices": 1077
+   },
+   "note": null,
+   "ref": "run-188"
+  }
+ ]
+}

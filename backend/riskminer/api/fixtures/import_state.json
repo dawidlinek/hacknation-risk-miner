@@ -1,0 +1,104 @@
+{
+ "code": "IMP-2026-0003",
+ "status": "awaiting_answer",
+ "files": [
+  {
+   "name": "paczka_powiat.zip",
+   "bytes": 1932735283,
+   "sha256": "…",
+   "kind": "zip"
+  },
+  {
+   "name": "projekty_2026.xlsx",
+   "bytes": 48213,
+   "sha256": "…",
+   "kind": "xlsx"
+  }
+ ],
+ "tool_calls": [
+  {
+   "call": "list_archive(\"paczka_powiat.zip\")",
+   "out": "2 341 plików, 14 typów",
+   "ms": 410,
+   "llm": false
+  },
+  {
+   "call": "sample_rows(\"projekty_2026.xlsx\", n=20)",
+   "out": "18 kolumn, arkusz Projekty",
+   "ms": 95,
+   "llm": false
+  },
+  {
+   "call": "match_schema(known_formats)",
+   "out": "„zestaw organizatora”, 16 z 18",
+   "ms": 12,
+   "llm": false
+  },
+  {
+   "call": "classify_docs(sample=40)",
+   "out": "SWZ 12, PFU 9, PPU 8, protokoły 11",
+   "ms": 5200,
+   "llm": true
+  }
+ ],
+ "mapping": [
+  {
+   "column": "NIP odbiorcy",
+   "field": "organization.nip",
+   "rule": "nip_checksum",
+   "status": "ok",
+   "valid": 309,
+   "total": 312
+  },
+  {
+   "column": "Kwota",
+   "field": "project.value",
+   "rule": "money_requires_vat_basis",
+   "status": "question"
+  },
+  {
+   "column": "Uwagi",
+   "field": "project.note",
+   "rule": "text_no_analysis",
+   "status": "proposal"
+  }
+ ],
+ "questions": [
+  {
+   "key": "value_vat_basis",
+   "text": "Kwota: netto czy brutto?",
+   "options": [
+    {
+     "value": "gross",
+     "label": "Brutto, z VAT."
+    },
+    {
+     "value": "net",
+     "label": "Netto, bez VAT."
+    }
+   ]
+  }
+ ],
+ "rules": [
+  "Każdy NIP i REGON przechodzi sumę kontrolną.",
+  "Numery BZP, KPO i TED tylko w znanym formacie.",
+  "Kwota zawsze z rodzajem: netto albo brutto.",
+  "Ten sam plik po sha256 nie wchodzi dwa razy.",
+  "Import nigdy nie nadpisuje danych zatwierdzonych przez eksperta."
+ ],
+ "importer": {
+  "name": "zestaw organizatora",
+  "version": "v3",
+  "spec_preview": {
+   "sheet": "Projekty",
+   "columns": {
+    "Nr ogłoszenia": {
+     "field": "procedure.bzp_number",
+     "rule": "bzp_format"
+    }
+   }
+  }
+ },
+ "test_run": null,
+ "job_id": null
+}

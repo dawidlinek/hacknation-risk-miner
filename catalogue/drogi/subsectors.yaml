@@ -1,0 +1,42 @@
+# Sector pack drogi. Patterns are matched on the lower-cased procedure title, in this order (first match wins).
+subsectors:
+- code: MOST
+  name: Most, wiadukt, kładka lub przepust
+  patterns: ['most', 'wiadukt', 'kładk', 'przepust']
+  status: proposed
+- code: CHOD
+  name: Chodnik lub ścieżka rowerowa
+  patterns: ['chodnik', 'ścieżk\w* rower', 'ciąg\w* pieszo', 'drog\w* dla rower']
+  exclude: ['(przebudow|budow|rozbudow)\w* drog']
+  status: proposed
+- code: DK
+  name: Droga krajowa
+  patterns: ['drog\w* krajow', '\bdk ?\d', 'ekspresow', 'autostrad']
+  status: proposed
+- code: DW
+  name: Droga wojewódzka
+  patterns: ['wojewódzk', '\bdw ?\d']
+  status: proposed
+- code: DP
+  name: Droga powiatowa
+  patterns: ['powiatow']
+  status: proposed
+- code: DG
+  name: Droga gminna lub ulica
+  patterns: ['gminn', 'ulic', '\bul\.', 'dojazdow', 'wewnętrzn', 'osiedlow']
+  status: proposed
+- code: DL
+  name: Droga leśna
+  patterns: ['leśn']
+  status: proposed
+- code: INNE
+  name: Inne roboty drogowe (nawierzchnie, remonty cząstkowe)
+  patterns: ['remont\w* cząstkow', 'nawierzchni', 'drog']
+  status: proposed
+works_types:
+- code: build
+  name: budowa / rozbudowa
+- code: renovation
+  name: przebudowa / remont / modernizacja
+- code: mixed
+  name: budowa i przebudowa

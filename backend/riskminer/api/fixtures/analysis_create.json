@@ -1,0 +1,208 @@
+{
+ "code": "AN-2026-0014",
+ "version": 1,
+ "status": "draft",
+ "sensitivity": "public",
+ "documents": [
+  {
+   "id": 11062,
+   "filename": "PFU_kanalizacja.pdf",
+   "doc_type": "PFU",
+   "pages": 38,
+   "sensitivity": "public"
+  }
+ ],
+ "features": [
+  {
+   "key": "subsector_main",
+   "label": "podsektor",
+   "value": "SAN",
+   "display": "kanalizacja sanitarna",
+   "unsure": false,
+   "prov": {
+    "role": "ai",
+    "review_status": "proposed",
+    "refs": [
+     {
+      "kind": "input_text",
+      "id": "opis",
+      "label": "opis"
+     }
+    ],
+    "llm": {
+     "provider": "gemini",
+     "model": "gemini-3.8-flash",
+     "data_location": "global (Gemini Developer API)",
+     "llm_call_id": 17
+    }
+   }
+  },
+  {
+   "key": "design_build",
+   "label": "formuła",
+   "value": true,
+   "display": "zaprojektuj i wybuduj",
+   "unsure": false,
+   "prov": {
+    "role": "ai",
+    "review_status": "proposed",
+    "refs": [
+     {
+      "kind": "document",
+      "id": "11062",
+      "label": "PFU s. 2",
+      "page_no": 2,
+      "quote": "w formule zaprojektuj i wybuduj",
+      "verification": "exact"
+     }
+    ],
+    "llm": {
+     "provider": "gemini",
+     "model": "gemini-3.8-flash",
+     "data_location": "global (Gemini Developer API)",
+     "llm_call_id": 17
+    }
+   }
+  },
+  {
+   "key": "length_km",
+   "label": "długość",
+   "value": 6.0,
+   "display": "ok. 6 km?",
+   "unsure": true,
+   "prov": {
+    "role": "ai",
+    "review_status": "proposed",
+    "refs": [
+     {
+      "kind": "document",
+      "id": "11062",
+      "label": "PFU s. 6",
+      "page_no": 6,
+      "quote": "ok. 6 km, ostateczna długość wynikać będzie z dokumentacji projektowej",
+      "verification": "exact"
+     }
+    ],
+    "llm": {
+     "provider": "gemini",
+     "model": "gemini-3.8-flash",
+     "data_location": "global (Gemini Developer API)",
+     "llm_call_id": 17
+    }
+   }
+  },
+  {
+   "key": "budget",
+   "label": "budżet",
+   "value": {
+    "amount": "7000000.00",
+    "currency": "PLN",
+    "vat_basis": "gross"
+   },
+   "display": "7 mln zł brutto",
+   "unsure": false,
+   "prov": {
+    "role": "calc",
+    "review_status": "auto",
+    "method": "regex:money",
+    "refs": [
+     {
+      "kind": "input_text",
+      "id": "opis",
+      "label": "opis"
+     }
+    ]
+   }
+  },
+  {
+   "key": "planned_months",
+   "label": "termin",
+   "value": 14,
+   "display": "14 mies.",
+   "unsure": false,
+   "prov": {
+    "role": "ai",
+    "review_status": "proposed",
+    "refs": [
+     {
+      "kind": "document",
+      "id": "11063",
+      "label": "PPU §3",
+      "page_no": 2,
+      "quote": "w terminie 14 miesięcy od dnia zawarcia umowy",
+      "verification": "exact"
+     }
+    ],
+    "llm": {
+     "provider": "gemini",
+     "model": "gemini-3.8-flash",
+     "data_location": "global (Gemini Developer API)",
+     "llm_call_id": 17
+    }
+   }
+  },
+  {
+   "key": "funding_programme",
+   "label": "finansowanie",
+   "value": "FENIKS",
+   "display": "FEnIKS",
+   "unsure": false,
+   "prov": {
+    "role": "calc",
+    "review_status": "auto",
+    "method": "regex:programme",
+    "refs": [
+     {
+      "kind": "input_text",
+      "id": "opis",
+      "label": "opis"
+     }
+    ]
+   }
+  }
+ ],
+ "questions": [
+  {
+   "key": "connections",
+   "text": "Ile będzie przyłączy?",
+   "why": "zakres i ilości liczą się do podobieństwa",
+   "input": "count"
+  }
+ ],
+ "funding_programmes": [
+  {
+   "code": "FENIKS",
+   "name": "FEnIKS 2021–2027",
+   "end_date": "2029-12-31",
+   "prov": {
+    "role": "source",
+    "review_status": "approved",
+    "assumption": true,
+    "refs": [
+     {
+      "kind": "catalogue",
+      "id": "funding_programme:FENIKS",
+      "label": "Katalog v1.3"
+     }
+    ]
+   }
+  },
+  {
+   "code": "KPO",
+   "name": "Krajowy Plan Odbudowy",
+   "end_date": "2026-08-31",
+   "prov": {
+    "role": "source",
+    "review_status": "approved",
+    "assumption": true,
+    "refs": [
+     {
+      "kind": "catalogue",
+      "id": "funding_programme:KPO",
+      "label": "Katalog v1.3"
+     }
+    ]
+   }
+  }
+ ]
+}

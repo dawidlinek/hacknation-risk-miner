@@ -1,0 +1,13 @@
+{
+ "task": "document_facts",
+ "provider": "gemini",
+ "model": "gemini-3.5-flash-lite",
+ "prompt_version": "document_facts@v1+84e0de26",
+ "sensitivity": "public",
+ "text": "{\n  \"doc_kind\": \"protokół konieczności\",\n  \"change\": {\n    \"level\": \"contract\",\n    \"kinds\": [\n      \"termin\",\n      \"wynagrodzenie\",\n      \"zakres\"\n    ],\n    \"delta_days\": 36,\n    \"delta_months\": null,\n    \"value_amount\": 151481.54,\n    \"vat_basis\": \"gross\",\n    \"legal_basis\": [\n      \"art. 455 ust. 1 pkt 3 Pzp\"\n    ],\n    \"quote\": \"Proponowany nowy termin zakończenia realizacji zadania: 05.12.2025 r. Koszt robót dodatkowych ustala się na kwotę: 151 481,54 zł brutto\",\n    \"page\": 2\n  },\n  \"causes\": [\n    {\n      \"code\": \"R02.2\",\n      \"page\": 1,\n      \"quote\": \"stan techniczny dwóch filtrów, które pierwotnie miały pozostać w eksploatacji na podstawie deklaracji przedstawionej przez Inwestora, nie pozwala na ich dalsze użytkowanie po ich odkryciu i ocenie technicznej okazało się, że ich dalsze użytkowanie stwarza ryzyko awarii i pogorszenia jakości uzdatnianej wody.\",\n      \"why\": \"Zły stan techniczny istniejących filtrów na stacji uzdatniania wody ujawniony dopiero po ich odkryciu.\"\n    }\n  ],\n  \"linked_investment_delay\": null,\n  \"mitigations\": [\n    {\n      \"text\": \"Dokładna inwentaryzacja i ocena stanu technicznego istniejących urządzeń przed rozpoczęciem postępowania przetargowego.\",\n      \"for_code\": \"R02.2\"\n    }\n  ],\n  \"summary\": \"Protokół konieczności wprowadza roboty dodatkowe związane z wymianą filtrów na stacji uzdatniania wody oraz zwiększa wynagrodzenie i wydłuża termin realizacji umowy.\"\n}",
+ "tokens_in": 4102,
+ "tokens_out": 483,
+ "tokens_cached": 0,
+ "tokens_thought": 0,
+ "finish_reason": "FinishReason.STOP"
+}

@@ -1,0 +1,245 @@
+{
+ "terc": "12",
+ "name": "małopolskie",
+ "level": "woj",
+ "breadcrumb": [
+  {
+   "terc": null,
+   "name": "Polska"
+  },
+  {
+   "terc": "12",
+   "name": "małopolskie"
+  }
+ ],
+ "kpis": [
+  {
+   "key": "late_pct",
+   "label": "PO TERMINIE",
+   "value": {
+    "value": 29.3,
+    "display": "29,3%",
+    "unit": "pct",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 1072,
+     "method": "rc_share(late) by province",
+     "refs": [
+      {
+       "kind": "query",
+       "id": "rc:core|PL12",
+       "label": "ogłoszenia o wykonaniu umowy, BZP"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "key": "completed",
+   "label": "ZAKOŃCZONE UMOWY",
+   "value": {
+    "value": 1072,
+    "display": "1 072",
+    "unit": "count",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 1072,
+     "method": "count(rc_contract) by province",
+     "refs": [
+      {
+       "kind": "query",
+       "id": "rc:core|PL12",
+       "label": "ogłoszenia o wykonaniu umowy, BZP"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "key": "signals",
+   "label": "SYGNAŁY TERAZ",
+   "attention": true,
+   "value": {
+    "value": 217,
+    "display": "217",
+    "unit": "count",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 217,
+     "method": "count(v_monitor_signal)",
+     "refs": [
+      {
+       "kind": "query",
+       "id": "v_monitor_signal|12",
+       "label": "umowy po terminie bez ogł. o wykonaniu"
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "children": [
+  {
+   "terc": "1209",
+   "name": "powiat myślenicki",
+   "signals": 5,
+   "buyers": [
+    "Dobczyce",
+    "Raciechowice"
+   ]
+  },
+  {
+   "terc": "1207",
+   "name": "powiat limanowski",
+   "signals": 7,
+   "buyers": [
+    "Limanowa",
+    "Mszana Dolna"
+   ]
+  }
+ ],
+ "signals": {
+  "total": 217,
+  "on_map": 12,
+  "items": [
+   {
+    "contract_id": 132789,
+    "ocid": "ocds-148610-432fe254-7e02-11ee-a60c-9ec5599dddc1",
+    "bzp_number": "2024/BZP 00009131",
+    "lot_no": 0,
+    "n_parts": 1,
+    "buyer_name": "GMINA LIMANOWA",
+    "title": "Budowa sieci kanalizacji zachodniej części gminy Limanowa. Etap I.",
+    "value": {
+     "amount": "13280022.18",
+     "currency": "PLN",
+     "vat_basis": "gross"
+    },
+    "signed_on": "2023-12-08",
+    "planned_end_on": "2025-06-08",
+    "days_overdue": {
+     "value": 531,
+     "display": "531 dni",
+     "unit": "days",
+     "prov": {
+      "role": "calc",
+      "review_status": "auto",
+      "n": 1,
+      "method": "current_date - planned_end_on",
+      "refs": [
+       {
+        "kind": "notice",
+        "id": "2024/BZP 00009131",
+        "label": "ogł. o wyniku",
+        "field_code": "4.2"
+       }
+      ]
+     }
+    },
+    "n_change_notices": 0,
+    "has_performance": false,
+    "woj": "12",
+    "pow": "1207",
+    "gmi": "1207042",
+    "lon": 20.42,
+    "lat": 49.71,
+    "location_method": "buyer_name",
+    "watched": false
+   },
+   {
+    "contract_id": 144082,
+    "ocid": "ocds-148610-7ffd431d-1da8-11ef-a7c1-72acb4a2af8f",
+    "bzp_number": "2024/BZP 00506046",
+    "lot_no": 1,
+    "n_parts": 2,
+    "buyer_name": "Gmina Dobczyce",
+    "title": "Przebudowa i rozbudowa infrastruktury komunalnej na terenie gminy i miasta Dobczyce",
+    "value": {
+     "amount": "10945644.54",
+     "currency": "PLN",
+     "vat_basis": "gross"
+    },
+    "signed_on": "2024-08-14",
+    "planned_end_on": "2025-07-14",
+    "days_overdue": {
+     "value": 495,
+     "display": "495 dni",
+     "unit": "days",
+     "prov": {
+      "role": "calc",
+      "review_status": "auto",
+      "n": 1,
+      "method": "current_date - planned_end_on",
+      "refs": [
+       {
+        "kind": "notice",
+        "id": "2024/BZP 00506046",
+        "label": "ogł. o wyniku",
+        "field_code": "4.2"
+       }
+      ]
+     }
+    },
+    "n_change_notices": 0,
+    "has_performance": false,
+    "woj": "12",
+    "pow": "1209",
+    "gmi": "1209014",
+    "lon": 20.08,
+    "lat": 49.88,
+    "location_method": "buyer_name",
+    "watched": false
+   },
+   {
+    "contract_id": 143520,
+    "ocid": "ocds-148610-f94a25a4-3723-4b11-85a3-5591467031e3",
+    "bzp_number": "2024/BZP 00477167",
+    "lot_no": 2,
+    "n_parts": 2,
+    "buyer_name": "GMINA LIMANOWA",
+    "title": "Modernizacja i rozbudowa systemu gospodarki komunalnej na terenie Gminy Limanowa",
+    "value": {
+     "amount": "10900000.00",
+     "currency": "PLN",
+     "vat_basis": "gross"
+    },
+    "signed_on": "2024-08-28",
+    "planned_end_on": "2025-12-28",
+    "days_overdue": {
+     "value": 328,
+     "display": "328 dni",
+     "unit": "days",
+     "prov": {
+      "role": "calc",
+      "review_status": "auto",
+      "n": 1,
+      "method": "current_date - planned_end_on",
+      "refs": [
+       {
+        "kind": "notice",
+        "id": "2024/BZP 00477167",
+        "label": "ogł. o wyniku",
+        "field_code": "4.2"
+       }
+      ]
+     }
+    },
+    "n_change_notices": 1,
+    "has_performance": false,
+    "woj": "12",
+    "pow": "1207",
+    "gmi": "1207042",
+    "lon": 20.42,
+    "lat": 49.71,
+    "location_method": "buyer_name",
+    "watched": false
+   }
+  ],
+  "csv_href": "/api/export/signals.csv?terc=12&level=woj",
+  "note": "Na mapie 12 z 217 sygnałów: te, które da się przypisać do gminy po nazwie zamawiającego. Plik CSV ma wszystkie."
+ },
+ "list_href": "/projekty?province=12"
+}

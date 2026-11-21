@@ -1,0 +1,13 @@
+{
+ "task": "redpen_scan",
+ "provider": "gemini",
+ "model": "gemini-3.8-flash",
+ "prompt_version": "redpen_scan@v1+42f11dca",
+ "sensitivity": "public",
+ "text": "{\n  \"notes\": [\n    {\n      \"code\": \"R10.1\",\n      \"page\": 26,\n      \"pkt\": null,\n      \"quote\": \"Podstawą do odbioru końcowego będzie protokół z dokonanego rozruchu wszystkich instalacji potwierdzającego osiągnięcie zakładanych projektowo parametrów i wydajności.\",\n      \"title\": \"Odbiór uzależniony od rozruchu i parametrów\",\n      \"why\": \"Uzależnienie odbioru końcowego od pełnych efektów technologicznych bez sprecyzowania zasad ponoszenia kosztów mediów i przedłużającego się rozruchu rodzi ryzyko sporów.\",\n      \"strength\": \"średni\",\n      \"clause_hint\": \"R10.1-K1\"\n    },\n    {\n      \"code\": \"R08.2\",\n      \"page\": 29,\n      \"pkt\": \"2.3.14\",\n      \"quote\": \"Podstawą płatności jest cena ryczałtowa, skalkulowaną przez Wykonawcę na podstawie SWZ. Cena ryczałtowa pozycji będzie uwzględniać wszystkie czynności, wymagania i badania składające się na jej wykonanie.\",\n      \"title\": \"Cena ryczałtowa obejmująca wszelkie badania\",\n      \"why\": \"Przerzucenie pełnego ryzyka kosztów nieprzewidzianych badań i prób na ryczałt wykonawcy zwiększa ryzyko roszczeń lub wliczenia wysokich marż.\",\n      \"strength\": \"średni\",\n      \"clause_hint\": null\n    },\n    {\n      \"code\": \"R02.2\",\n      \"page\": 31,\n      \"pkt\": \"3.2\",\n      \"quote\": \"Jako załączniki do PFU zawarto: - plan sytuacyjny.\",\n      \"title\": \"Brak inwentaryzacji istniejących obiektów\",\n      \"why\": \"Załączenie wyłącznie planu sytuacyjnego dla istniejących obiektów stacji uzdatniania oznacza brak rzetelnej inwentaryzacji budowlano-instalacyjnej.\",\n      \"strength\": \"silny\",\n      \"clause_hint\": \"R02.2-K1\"\n    }\n  ]\n}",
+ "tokens_in": 7818,
+ "tokens_out": 524,
+ "tokens_cached": 0,
+ "tokens_thought": 0,
+ "finish_reason": "FinishReason.STOP"
+}

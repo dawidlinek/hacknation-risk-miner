@@ -17,6 +17,7 @@ from fastapi import APIRouter, Depends, HTTPException, Query
 from pydantic import BaseModel, Field
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from riskminer.api import auth as A
 from riskminer.api import deps as D
 from riskminer.api import schemas as S
 from riskminer.db.session import get_session
@@ -160,11 +161,13 @@ async def search(q: str = Query(..., min_length=1, max_length=500, description="
                  prefix: bool = Query(False, description="match inflected forms: every word is cut to a crude stem and "
                                                          "prefix-matched (kara umowna -> kar:* & umow:*); "
                                                          "phrases and `or` are ignored"),
-                 limit: int = Query(20, ge=1, le=200), offset: int = Query(0, ge=0), db: AsyncSession = DB):
+                 limit: int = Query(20, ge=1, le=200), offset: int = Query(0, ge=0), db: AsyncSession = DB,
+                 user: A.User | None = Depends(A.current_user)):
     tsq = prefix_tsquery(q) if prefix else q
     if not tsq:
         return {"total": 0, "limit": limit, "offset": offset, "items": []}
-    where, params = ["c.tsv @@ x.tsq"], {"q": tsq, "limit": limit, "offset": offset}
+    # confidential uploads are never searchable for anonymous callers (api_contract §1.6 trap 2, §3.3)
+    where, params = ["c.tsv @@ x.tsq", A.public_doc_filter(user, "d")], {"q": tsq, "limit": limit, "offset": offset}
     if source:
         where.append("split_part(d.data->>'source', '|', 1) = :source")
         params["source"] = source
@@ -199,13 +202,13 @@ async def search(q: str = Query(..., min_length=1, max_length=500, description="
 # ------------------------------------------------------------------------------------------- pages
 
 _DOC_SQL = """SELECT id, title, filename, url, path, pages, ocr, coalesce(data->>'needs_ocr', '') = 'true' AND NOT data ? 'ocr_text_path' AS needs_ocr
-FROM document WHERE id = :id"""
+FROM document d WHERE id = :id AND {visible}"""
 
 
 @router.get("/documents/{document_id}/pages", response_model=DocumentPagesOut, summary="Strony dokumentu (tekst)")
 async def document_pages(document_id: int, include_text: bool = Query(True, description="false: only page numbers and sizes"),
-                         db: AsyncSession = DB):
-    doc = await D.one(db, _DOC_SQL, id=document_id)
+                         db: AsyncSession = DB, user: A.User | None = Depends(A.current_user)):
+    doc = await D.one(db, _DOC_SQL.format(visible=A.public_doc_filter(user, "d")), id=document_id)
     if not doc:
         raise HTTPException(404, "document not found")
     txt = "text" if include_text else "NULL::text AS text"
@@ -218,9 +221,12 @@ async def document_pages(document_id: int, include_text: bool = Query(True, desc
 
 
 @router.get("/documents/{document_id}/pages/{page_no}", response_model=DocumentPageOut, summary="Jedna strona dokumentu")
-async def document_page(document_id: int, page_no: int, db: AsyncSession = DB):
-    r = await D.one(db, """SELECT document_id, page_no, coalesce(length(text), 0) AS chars, text, ocr, ocr_confidence
-                           FROM document_page WHERE document_id = :id AND page_no = :no""", id=document_id, no=page_no)
+async def document_page(document_id: int, page_no: int, db: AsyncSession = DB,
+                        user: A.User | None = Depends(A.current_user)):
+    r = await D.one(db, f"""SELECT pg.document_id, pg.page_no, coalesce(length(pg.text), 0) AS chars, pg.text, pg.ocr, pg.ocr_confidence
+                            FROM document_page pg JOIN document d ON d.id = pg.document_id
+                            WHERE pg.document_id = :id AND pg.page_no = :no AND {A.public_doc_filter(user, "d")}""",
+                    id=document_id, no=page_no)
     if not r:
         raise HTTPException(404, "page not found")
     return DocumentPageOut(**r)

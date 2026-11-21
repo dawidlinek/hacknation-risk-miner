@@ -7,7 +7,12 @@ most 3 candidates per record and scores the 10 pilot reference pairs correctly.
 import uuid
 from datetime import date
 
+import os
+
 import pytest
+
+# reruns the link_national stage: only against a test DB (api_contract §8: tests must not mutate the main DB)
+testdb = pytest.mark.skipif(not os.environ.get('RISKMINER_TESTDB'), reason='mutates the DB; set RISKMINER_TESTDB=1 on a test DB')
 import pytest_asyncio
 
 from riskminer.db.session import raw_conn
@@ -109,6 +114,7 @@ async def _counts(c):
         [L.KPO_METHOD, L.CRU_METHOD])}
 
 
+@testdb
 async def test_reference_pairs(first_run):
     ref = first_run["reference"]
     assert ref["pairs"] == 10 and ref["beneficiary_found"] == 10
@@ -121,6 +127,7 @@ async def test_reference_pairs(first_run):
     assert "—" not in first_run["report_pl"] and "·" not in first_run["report_pl"]
 
 
+@testdb
 async def test_candidate_shape(first_run):
     async with raw_conn() as c:
         bad = await c.fetchval("""SELECT count(*) FROM (SELECT left_id, method, count(*) n, max(rank) r
@@ -145,6 +152,7 @@ async def test_candidate_shape(first_run):
     assert first_run["kpo"]["beneficiary_resolved"] >= 500 and first_run["cru"]["top1_by_decision"].get("accept", 0) > 100
 
 
+@testdb
 async def test_rerun_idempotent_and_keeps_expert_rows(first_run):
     marker = f"EXPERT-TEST-{uuid.uuid4().hex[:8]}"          # unique: safe if two test sessions overlap
     async with raw_conn() as c:

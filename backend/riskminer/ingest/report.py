@@ -108,7 +108,7 @@ async def generate() -> dict:
                        (SELECT count(*) FROM notice n WHERE n.ocid = pr.ocid AND n.is_latest) n_notices,
                        (SELECT count(*) FROM contract c WHERE c.procedure_id = pr.id) n_contracts,
                        (SELECT count(*) FROM contract_performance f WHERE f.procedure_id = pr.id) n_perf,
-                       (SELECT count(*) FROM contract_change ch WHERE ch.procedure_id = pr.id) n_changes,
+                       (SELECT count(*) FROM contract_change ch WHERE ch.procedure_id = pr.id AND ch.kind IN ('change_notice', 'performance_block')) n_changes,
                        lc.reference_verdict, pp.updated_at
                 FROM project_procedure pp JOIN procedure pr ON pr.id = pp.procedure_id
                 LEFT JOIN link_candidate lc ON lc.id = pp.link_candidate_id
@@ -137,7 +137,12 @@ async def generate() -> dict:
         search = await conn.fetchrow("SELECT (SELECT count(DISTINCT document_id) FROM chunk) docs, "
                                      "(SELECT count(*) FROM document_page) pages, (SELECT count(*) FROM chunk) chunks, "
                                      "(SELECT count(*) FROM document WHERE ocr) ocr_docs, "
-                                     "(SELECT count(*) FROM document WHERE (data->>'needs_ocr')::boolean) needs_ocr")
+                                     "(SELECT count(*) FROM document WHERE (data->>'needs_ocr')::boolean) needs_ocr, "
+                                     "(SELECT count(*) FROM document WHERE (data->>'ocr_low_confidence')::boolean) ocr_low")
+        cru = await conn.fetchrow("""SELECT count(*) n, count(*) FILTER (WHERE (data->>'detail_fetched')::boolean) det,
+                count(*) FILTER (WHERE (data->>'water_relevant')::boolean) w,
+                count(*) FILTER (WHERE (data->>'water_relevant')::boolean AND (data->>'detail_fetched')::boolean) w_det
+            FROM external_record WHERE kind = 'cru_agreement'""")
         pp_methods = {r["method"]: r["n"] for r in await conn.fetch(
             "SELECT method, count(*) n FROM project_procedure WHERE method <> 'cross_reference_related' GROUP BY 1")}
 
@@ -233,7 +238,8 @@ async def generate() -> dict:
           f"- Dokumenty z tekstem w indeksie pełnotekstowym: {_n(search['docs'])}; strony: {_n(search['pages'])}; "
           f"fragmenty (chunk): {_n(search['chunks'])}. Wyszukiwanie: `GET /api/search`.",
           f"- OCR (Tesseract, model pol, WCSS): dokumenty po OCR {_n(search['ocr_docs'])}; skany bez warstwy tekstowej "
-          f"czekające na OCR: {_n(search['needs_ocr'])}.",
+          f"czekające na OCR: {_n(search['needs_ocr'])}; z niską pewnością OCR (średnio poniżej 0,6, stan NIECZYTELNY "
+          f"przy cytatach): {_n(search['ocr_low'])}.",
           "", "## 5. Ograniczenia i stany dowodowe", "",
           "- „Szukano, nie znaleziono” jest zapisywane jawnie (`source_check`): brak wyniku ≠ brak zdarzenia.",
           "- Dokumenty niedostępne mają stan: `not_in_package`, `blocked` (zabezpieczenie platformy, którego nie obchodzimy), "
@@ -241,7 +247,12 @@ async def generate() -> dict:
           "- Wyjątek od robots.txt: platformazakupowa.pl i logintrade.net blokują w robots.txt pobieranie załączników. "
           "Za zgodą operatorów tych platform (zgłoszoną przez zespół 21.11.2026) pobieramy publiczne linki do załączników "
           "co 5 s; każde takie pobranie ma w manifeście notatkę `robots.txt override`. Pozostałe serwisy: robots.txt i Crawl-delay respektowane.",
-          "- Dane osobowe kontaktowe nie są kopiowane do tabel znormalizowanych ani eksportów (RODO).", ""]
+          "- Dane osobowe kontaktowe nie są kopiowane do tabel znormalizowanych ani eksportów (RODO).",
+          ] + ([f"- Centralny Rejestr Umów: szczegóły umowy (w tym lista zmian i aneksów) pobrane dla {_n(cru['det'])} z "
+                f"{_n(cru['n'])} umów (wod-kan: {_n(cru['w_det'])} z {_n(cru['w'])}). Serwis stoi za zaporą WAF; gdy pokazał "
+                "stronę wyzwania, pobieranie zatrzymano i zapisano jako `blocked` (nie obchodzimy zabezpieczeń), wznawiamy po "
+                "przerwie. Liczby zmian z CRU dotyczą tylko umów z pobranymi szczegółami."]
+               if cru and cru["n"] and cru["det"] < cru["n"] else []) + [""]
     out = REPO_ROOT / "docs" / "test_report_sources.md"
     out.write_text("\n".join(L), encoding="utf-8")
     return {"report": str(out), "summary_csv": str(exp / "sources_summary.csv"), "sources": len(summary)}

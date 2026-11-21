@@ -1,6 +1,6 @@
 # Raport z testu źródeł: Risk Miner
 
-_Wygenerowano automatycznie: 2026-11-21 17:31 UTC (`uv run riskminer report`). Dane: manifesty `data/raw/*/manifest.jsonl` i baza (tabele `source`, `ingestion_run`, `source_check`, `link_candidate`, `review_item`)._
+_Wygenerowano automatycznie: 2026-11-21 19:27 UTC (`uv run riskminer report`). Dane: manifesty `data/raw/*/manifest.jsonl` i baza (tabele `source`, `ingestion_run`, `source_check`, `link_candidate`, `review_item`)._
 
 ## 1. Podsumowanie per źródło
 
@@ -15,10 +15,10 @@ _Wygenerowano automatycznie: 2026-11-21 17:31 UTC (`uv run riskminer report`). D
 | Mapa Dotacji: KPO B3.1.1 (`mapa_dotacji`) | 695 | 695 | 0 | 0 | 0 | 631 | found=24;not_found=6 | 2026-11-21 12:35:38 UTC | public; attribution (mapadotacji.gov.pl) | `data/raw/mapa_dotacji/` |
 | TED (UE) (`ted`) | 7380 | 7380 | 0 | 0 | 0 | 18325 | found=2;not_found=40 | 2026-11-21 14:00:39 UTC | EU reuse (Decision 2011/833/EU) | `data/raw/ted/` |
 | Orzeczenia KIO (`kio`) | 6608 | 6608 | 0 | 0 | 0 | 2084 | found=17;not_found=25 | 2026-11-21 13:17:02 UTC | public; natural persons pseudonymised by KIO | `data/raw/kio/` |
-| Wyniki kontroli NIK (`nik`) | 1067 | 1062 | 0 | 0 | 5 | 522 | found=1;not_found=21 | 2026-11-21 12:39:12 UTC | public information | `data/raw/nik/` |
-| Centralny Rejestr Umów (`cru`) | 3095 | 3093 | 0 | 2 | 0 | 16982 | found=25;not_found=9;partial=8 | 2026-11-21 17:31:42 UTC | public (art. 34a u.f.p.) | `data/raw/cru/` |
-| Dokumenty postępowań (22) (`docs_22`) | 2687 | 2259 | 0 | 417 | 11 | 1138 | found=6;partial=16 | 2026-11-21 17:05:41 UTC | public information | `data/raw/docs_22/` |
-| Dokumenty: próba krajowa (`docs_sample`) | 19819 | 19761 | 14 | 37 | 7 | 9403 | found=31;not_found=1;partial=173 | 2026-11-21 13:17:39 UTC | public information | `data/raw/docs_sample/` |
+| Wyniki kontroli NIK (`nik`) | 1140 | 1135 | 0 | 0 | 5 | 522 | found=1;not_found=21 | 2026-11-21 19:17:45 UTC | public information | `data/raw/nik/` |
+| Centralny Rejestr Umów (`cru`) | 4884 | 4880 | 0 | 4 | 0 | 16982 | found=25;not_found=9;partial=8 | 2026-11-21 19:00:59 UTC | public (art. 34a u.f.p.) | `data/raw/cru/` |
+| Dokumenty postępowań (22) (`docs_22`) | 3077 | 2649 | 0 | 417 | 11 | 1138 | found=6;partial=16 | 2026-11-21 19:17:45 UTC | public information | `data/raw/docs_22/` |
+| Dokumenty: próba krajowa (`docs_sample`) | 22288 | 22230 | 14 | 37 | 7 | 9403 | found=31;not_found=1;partial=173 | 2026-11-21 19:17:45 UTC | public information | `data/raw/docs_sample/` |
 | KPOŚK (`kposk`) | 6 | 6 | 0 | 0 | 0 | 15950 | - | 2026-11-21 12:38:54 UTC | CC BY 4.0 | `data/raw/kposk/` |
 | GUS BDL (`gus_bdl`) | 455 | 449 | 0 | 0 | 6 | 289873 | - | 2026-11-21 14:42:11 UTC | GUS open data, attribution | `data/raw/gus_bdl/` |
 | GUS: wskaźnik cen (`gus_price_index`) | 4 | 4 | 0 | 0 | 0 | 671 | - | 2026-11-21 12:47:54 UTC | GUS open data, attribution | `data/raw/gus_price_index/` |
@@ -35,21 +35,21 @@ Rodzaje rekordów: `vat_whitelist`: vat_entity=234; `teryt`: teryt_unit=4360; `g
 ## 2. Baza przypadków z BZP (krajowo)
 
 - Ogłoszenia: **248 642** (najnowsze wersje: 248 250; zastąpione wersje: 392)
-- Postępowania (OCID): **101 016**; części: 112 733; umowy: 128 051; ogłoszenia o wykonaniu: 68 755 (w tym 694 ponownie opublikowanych dla tej samej umowy); zmiany umów: 60 293; organizacje: 18 641; dowody (pola formularzy): 860 189
+- Postępowania (OCID): **101 016**; części: 112 733; umowy: 128 051; ogłoszenia o wykonaniu: 68 755 (w tym 694 ponownie opublikowanych dla tej samej umowy); zmiany umów: 60 293; organizacje: 18 641; dowody (pola formularzy): 860 286
 - Sektory: `drogi`: 55 669 postępowań, 133 773 ogłoszeń; `wod-kan`: 45 347 postępowań, 114 477 ogłoszeń (pakiet `drogi` = wycinek BZP CPV 45233* 2024–2026 do demonstracji „nowy sektor w 60 s”; liczby poniżej dotyczą wod-kan)
 - Trafność wod-kan (klasyfikator na poziomie postępowania): component: 9 945, core: 18 689, cpv_only: 42, none: 16 671
-- Klasa referencyjna `rc_contract` (core, roboty, wykonane, bez duplikatów): n = **11 210**; po terminie (pole 5.3 = Nie): 3 397 (30.3%); wypłata > wartość umowy o >0,5%: 2 437
+- Klasa referencyjna `rc_contract` (core, roboty, wykonane, bez duplikatów): n = **11 210**; po terminie (pole 5.3 = Nie): 3 389 (30.2%); wypłata > wartość umowy o >0,5%: 2 437
 
 ## 3. Projekty pilotażowe (22)
 
 | Projekt | Powiązanie BZP (metoda, pewność) | Łańcuch (ogł./umowy/wyk./zmiany) | Wzorzec | Mapa Dotacji | TED | KIO | CRU | Biała lista | API na żywo | Dokumenty | Rozbieżności |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | RM-2026-001 Gmina Oława | exact_id (1.00) `2022/BZP 00058537` | 3/1/1/6 | ✔ zgodne | szukano, brak (0/0) 2026-11-21 | szukano, brak (0/68) 2026-11-21 | szukano, brak (0/51) 2026-11-21 | znaleziono (33/391) 2026-11-21 | znaleziono (1/1) 2026-11-21 | znaleziono (3/3) 2026-11-21 | 77 pobr.; not_applicable: 1 | - |
-| RM-2026-002 Gmina Zagrodno | fuzzy (1.00) `2026/BZP 00089794` | 5/1/2/2 | ✔ zgodne | znaleziono (1.00) | szukano, brak (0/23) 2026-11-21 | szukano, brak (0/4) 2026-11-21 | częściowo (3/0) 2026-11-21 | znaleziono (1/1) 2026-11-21 | znaleziono (5/5) 2026-11-21 | 15 pobr.; not_applicable: 1, not_in_package: 2 | - |
+| RM-2026-002 Gmina Zagrodno | fuzzy (1.00) `2026/BZP 00089794` | 5/1/2/2 | ✔ zgodne | znaleziono (1.00) | szukano, brak (0/23) 2026-11-21 | szukano, brak (0/4) 2026-11-21 | częściowo (3/0) 2026-11-21 | znaleziono (1/1) 2026-11-21 | znaleziono (5/5) 2026-11-21 | 15 pobr.; not_applicable: 1, not_in_package: 2 | change_count_mismatch |
 | RM-2026-003 Gmina Czernikowo | exact_id (1.00) `2024/BZP 00349631` | 5/1/1/5 | ✔ zgodne | znaleziono (1/1) 2026-11-21 | szukano, brak (0/29) 2026-11-21 | szukano, brak (0/2) 2026-11-21 | szukano, brak (0/42) 2026-11-21 | znaleziono (1/1) 2026-11-21 | znaleziono (5/5) 2026-11-21 | 35 pobr.; not_applicable: 2, not_in_package: 1 | - |
 | RM-2026-004 Gmina Czernikowo | exact_id (1.00) `2025/BZP 00569258` | 4/1/1/4 | ✔ zgodne | znaleziono (1/1) 2026-11-21 | szukano, brak (0/29) 2026-11-21 | szukano, brak (0/2) 2026-11-21 | szukano, brak (0/42) 2026-11-21 | znaleziono (1/1) 2026-11-21 | znaleziono (4/4) 2026-11-21 | 53 pobr.; not_applicable: 1 | - |
 | RM-2026-005 Gmina Zławieś Wielka | fuzzy (1.00) `2025/BZP 00245492` | 9/1/1/1 | ✔ zgodne | znaleziono (1.00) | szukano, brak (0/32) 2026-11-21 | szukano, brak (0/0) 2026-11-21 | znaleziono (3/125) 2026-11-21 | znaleziono (1/1) 2026-11-21 | znaleziono (9/9) 2026-11-21 | 38 pobr.; not_applicable: 1, not_in_package: 1 | - |
-| RM-2026-006 Gmina Gościeradów | exact_id (1.00) `2024/BZP 00067908` | 5/1/1/4 | ✔ zgodne | szukano, brak (0/0) 2026-11-21 | szukano, brak (0/17) 2026-11-21 | szukano, brak (0/1) 2026-11-21 | szukano, brak (0/1) 2026-11-21 | znaleziono (1/1) 2026-11-21 | znaleziono (5/5) 2026-11-21 | 56 pobr.; not_applicable: 1, not_in_package: 1 | - |
+| RM-2026-006 Gmina Gościeradów | exact_id (1.00) `2024/BZP 00067908` | 5/1/1/4 | ✔ zgodne | szukano, brak (0/0) 2026-11-21 | szukano, brak (0/17) 2026-11-21 | szukano, brak (0/1) 2026-11-21 | szukano, brak (0/1) 2026-11-21 | znaleziono (1/1) 2026-11-21 | znaleziono (5/5) 2026-11-21 | 56 pobr.; not_applicable: 1, not_in_package: 1 | change_count_mismatch |
 | RM-2026-007 Gmina Kamionka | fuzzy (1.00) `2026/BZP 00139226` | 5/1/1/0 | ✔ zgodne | znaleziono (1.00) | szukano, brak (0/38) 2026-11-21 | szukano, brak (0/24) 2026-11-21 | znaleziono (5/43) 2026-11-21 | znaleziono (1/1) 2026-11-21 | znaleziono (3/3) 2026-11-21 | 25 pobr.; not_applicable: 1, not_in_package: 2 | value_deviation |
 | RM-2026-008 Gmina Biecz | exact_id (1.00) `2026/BZP 00084760` | 7/4/4/2 | ✔ zgodne | znaleziono (1.00) | szukano, brak (0/60) 2026-11-21 | szukano, brak (0/11) 2026-11-21 | częściowo (3/0) 2026-11-21 | znaleziono (1/1) 2026-11-21 | znaleziono (6/6) 2026-11-21 | 64 pobr.; not_applicable: 1, not_in_package: 1 | part_scope_wider; value_deviation |
 | RM-2026-009 Gmina Zakrzew | exact_id (1.00) `2025/BZP 00307948` | 6/2/2/2 | ✔ zgodne | znaleziono (1.00) | szukano, brak (0/33) 2026-11-21 | szukano, brak (0/14) 2026-11-21 | znaleziono (2/121) 2026-11-21 | znaleziono (1/1) 2026-11-21 | znaleziono (4/4) 2026-11-21 | 66 pobr.; not_applicable: 1, not_in_package: 1 | part_mismatch |
@@ -69,6 +69,8 @@ Rodzaje rekordów: `vat_whitelist`: vat_entity=234; `teryt`: teryt_unit=4360; `g
 
 ### Rozbieżności wykryte w zestawie organizatora
 
+- **RM-2026-002** (wiersz 2): Umowa (Przedsiębiorstwo Transportowo Budowlane Sp. z o.o.): w ogłoszeniach jest 2 zmian, a w ogłoszeniu o wykonaniu zadeklarowano 1
+- **RM-2026-006** (wiersz 6): Umowa (EKOMELSp. z o.o.): w ogłoszeniach jest 3 zmian, a w ogłoszeniu o wykonaniu zadeklarowano 2
 - **RM-2026-007** (wiersz 7): Wartość przedsięwzięcia 3 096 863,90 zł odbiega od kwot z BZP (najbliższa: suma wartości umów 1 478 460,00 zł, -52,3%)
 - **RM-2026-008** (wiersz 8): Zestaw wskazuje część 1, ale opis przedsięwzięcia obejmuje części [1, 2, 3, 4]
 - **RM-2026-008** (wiersz 8): Wartość przedsięwzięcia 6 188 345,13 zł odbiega od kwot z BZP (najbliższa: suma wypłat 4 955 056,04 zł, -19,9%)
@@ -89,14 +91,14 @@ Rodzaje rekordów: `vat_whitelist`: vat_entity=234; `teryt`: teryt_unit=4360; `g
 
 **Kontrola na parach referencyjnych.** 10 projektów pilotażowych z numerem KPO ma znany rekord Mapy Dotacji i postępowanie BZP (etap `link_pilot`). Pary nie są cechą wejściową, służą wyłącznie do oceny. Beneficjent przypisany do właściwego NIP: 10/10. Właściwe postępowanie na 1. miejscu: 10/10 (precyzja@1 100,0%), w pierwszej trójce: 10/10 (czułość@3 100,0%). Akceptacje automatyczne dla tych projektów: 7, w tym poprawne 7 (precyzja 100,0%); właściwe postępowanie w kolejce do przeglądu eksperta: 3.
 
-**Umowy z Centralnego Rejestru Umów (od 1.07.2026) a umowy z BZP.** Umów CRU: 16982. Zamawiający rozpoznany po NIP: 4347, po numerze REGON z ogłoszeń BZP: 8153, nierozpoznany: 4482. Dla 6446 umów CRU zamawiający ma w BZP umowę zawartą w oknie ±45 dni (większość pozostałych to umowy poniżej progu stosowania ustawy). Najlepszy kandydat: akceptacja automatyczna 462, do przeglądu 52, odrzucony 7. Wartość z CRU zgadza się z wartością brutto z BZP po doliczeniu 23% VAT w 85,9% zaakceptowanych par, czyli CRU podaje zwykle kwoty netto. Umowy CRU z aneksami lub innymi zmianami: 500, z czego powiązane z umową z BZP automatycznie 38 i do przeglądu 18 (aneksy TSU02: 225, powiązane automatycznie 9, do przeglądu 15). Spośród zaakceptowanych ogłoszenie o zmianie umowy w BZP ma tylko: 4, więc CRU uzupełnia moduł monitorowania o zmiany niewidoczne w BZP.
+**Umowy z Centralnego Rejestru Umów (od 1.07.2026) a umowy z BZP.** Umów CRU: 16982. Zamawiający rozpoznany po NIP: 4771, po numerze REGON z ogłoszeń BZP: 7832, nierozpoznany: 4379. Dla 6430 umów CRU zamawiający ma w BZP umowę zawartą w oknie ±45 dni (większość pozostałych to umowy poniżej progu stosowania ustawy). Najlepszy kandydat: akceptacja automatyczna 462, do przeglądu 52, odrzucony 7. Wartość z CRU zgadza się z wartością brutto z BZP po doliczeniu 23% VAT w 85,9% zaakceptowanych par, czyli CRU podaje zwykle kwoty netto. Umowy CRU z aneksami lub innymi zmianami: 1351, z czego powiązane z umową z BZP automatycznie 38 i do przeglądu 18 (aneksy TSU02: 242, powiązane automatycznie 9, do przeglądu 15). Spośród zaakceptowanych ogłoszenie o zmianie umowy w BZP ma tylko: 4, więc CRU uzupełnia moduł monitorowania o zmiany niewidoczne w BZP.
 
 Progi: akceptacja automatyczna od 0,90 (nadal podlega przeglądowi eksperta), przegląd od 0,60 do 0,90, odrzucenie poniżej 0,60. Wiersze zatwierdzone, poprawione lub odrzucone przez eksperta nie są nadpisywane.
 
 ## 4b. Tekst dokumentów i wyszukiwanie
 
-- Dokumenty z tekstem w indeksie pełnotekstowym: 6 732; strony: 49 308; fragmenty (chunk): 182 381. Wyszukiwanie: `GET /api/search`.
-- OCR (Tesseract, model pol, WCSS): dokumenty po OCR 0; skany bez warstwy tekstowej czekające na OCR: 3 200.
+- Dokumenty z tekstem w indeksie pełnotekstowym: 9 911; strony: 66 043; fragmenty (chunk): 214 449. Wyszukiwanie: `GET /api/search`.
+- OCR (Tesseract, model pol, WCSS): dokumenty po OCR 3 188; skany bez warstwy tekstowej czekające na OCR: 12; z niską pewnością OCR (średnio poniżej 0,6, stan NIECZYTELNY przy cytatach): 427.
 
 ## 5. Ograniczenia i stany dowodowe
 
@@ -104,3 +106,4 @@ Progi: akceptacja automatyczna od 0,90 (nadal podlega przeglądowi eksperta), pr
 - Dokumenty niedostępne mają stan: `not_in_package`, `blocked` (zabezpieczenie platformy, którego nie obchodzimy), `link_dead`, `not_applicable`.
 - Wyjątek od robots.txt: platformazakupowa.pl i logintrade.net blokują w robots.txt pobieranie załączników. Za zgodą operatorów tych platform (zgłoszoną przez zespół 21.11.2026) pobieramy publiczne linki do załączników co 5 s; każde takie pobranie ma w manifeście notatkę `robots.txt override`. Pozostałe serwisy: robots.txt i Crawl-delay respektowane.
 - Dane osobowe kontaktowe nie są kopiowane do tabel znormalizowanych ani eksportów (RODO).
+- Centralny Rejestr Umów: szczegóły umowy (w tym lista zmian i aneksów) pobrane dla 4 446 z 16 982 umów (wod-kan: 1 991 z 14 171). Serwis stoi za zaporą WAF; gdy pokazał stronę wyzwania, pobieranie zatrzymano i zapisano jako `blocked` (nie obchodzimy zabezpieczeń), wznawiamy po przerwie. Liczby zmian z CRU dotyczą tylko umów z pobranymi szczegółami.

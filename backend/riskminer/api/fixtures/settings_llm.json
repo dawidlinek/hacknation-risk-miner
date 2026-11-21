@@ -1,0 +1,87 @@
+{
+ "tasks": [
+  {
+   "task": "classify_changes",
+   "label": "Klasyfikacja przyczyn zmian",
+   "data_label": "dane publiczne, ok. 5 tys. ogłoszeń",
+   "sensitivity": "public",
+   "alias": "bulk",
+   "provider": "gemini",
+   "model": "gemini-3.5-flash-lite",
+   "data_location": "global (Gemini Developer API)",
+   "sovereign": false,
+   "enforced": false
+  },
+  {
+   "task": "extract_features",
+   "label": "Cechy inwestycji z opisu i PFU",
+   "data_label": "dokumenty publiczne",
+   "sensitivity": "public",
+   "alias": "strong",
+   "provider": "gemini",
+   "model": "gemini-3.8-flash",
+   "data_location": "global (Gemini Developer API)",
+   "sovereign": false,
+   "enforced": false
+  },
+  {
+   "task": "confidential_documents",
+   "label": "Poufne dokumenty przed publikacją",
+   "data_label": "dokumenty poufne",
+   "sensitivity": "confidential",
+   "alias": "sovereign",
+   "provider": "wcss_bielik",
+   "model": "speakleash/Bielik-11B-v3.1-Instruct",
+   "data_location": "PL (WCSS Wrocław)",
+   "sovereign": true,
+   "enforced": true
+  }
+ ],
+ "providers": [
+  {
+   "id": "gemini",
+   "kind": "google_genai",
+   "data_location": "global (Gemini Developer API)",
+   "configured": true,
+   "health": {
+    "status": "up",
+    "checked_at": "2026-11-21T20:30:00Z",
+    "latency_ms": 640
+   }
+  },
+  {
+   "id": "wcss_bielik",
+   "kind": "openai_compatible",
+   "data_location": "PL (WCSS Wrocław)",
+   "configured": false,
+   "health": {
+    "status": "unknown",
+    "checked_at": null,
+    "latency_ms": null
+   }
+  }
+ ],
+ "usage_24h": {
+  "calls": {
+   "value": 412,
+   "display": "412",
+   "unit": "count",
+   "prov": {
+    "role": "calc",
+    "review_status": "auto",
+    "n": 412,
+    "method": "count(llm_call)",
+    "refs": [
+     {
+      "kind": "query",
+      "id": "llm_call:24h",
+      "label": "wywołania modeli"
+     }
+    ]
+   }
+  },
+  "tokens_in": 1830000,
+  "tokens_out": 210000,
+  "cost_usd": 3.12
+ }
+}

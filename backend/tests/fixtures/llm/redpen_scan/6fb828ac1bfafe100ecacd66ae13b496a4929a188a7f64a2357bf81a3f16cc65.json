@@ -1,0 +1,13 @@
+{
+ "task": "redpen_scan",
+ "provider": "gemini",
+ "model": "gemini-3.8-flash",
+ "prompt_version": "redpen_scan@v1+42f11dca",
+ "sensitivity": "public",
+ "text": "{\n  \"notes\": [\n    {\n      \"code\": \"R02.3\",\n      \"page\": 11,\n      \"pkt\": null,\n      \"quote\": \"przedsięwzięcia częściowo na obszarze wpisanym do rejestru zabytków województwa kujawsko-pomorskiego, nr rej. A/999/1-3).\",\n      \"title\": \"Lokalizacja w rejestrze zabytków\",\n      \"why\": \"Wymaga uzgodnień konserwatorskich lub nadzoru archeologicznego, co grozi opóźnieniem uzyskania decyzji i realizacji robót.\",\n      \"strength\": \"średni\",\n      \"clause_hint\": \"R02.3-K1\"\n    },\n    {\n      \"code\": \"R01.2\",\n      \"page\": 12,\n      \"pkt\": \"pkt 10.1\",\n      \"quote\": \"Orientacyjny przebieg tras przewodów wodociągowych przedstawiono w części graficznej do niniejszego opracowania.\",\n      \"title\": \"Orientacyjny przebieg trasy wodociągu\",\n      \"why\": \"Niedoprecyzowany przebieg trasy przy formule ryczałtowej rodzi ryzyko sporów o zakres i roszczeń o roboty dodatkowe.\",\n      \"strength\": \"średni\",\n      \"clause_hint\": \"R01.2-K1\"\n    },\n    {\n      \"code\": \"R05.1\",\n      \"page\": 14,\n      \"pkt\": null,\n      \"quote\": \"Wykonawca nie może wykorzystywać ewentualnych błędów lub braków w Dokumentach Przetargowych, a o ich wykryciu winien natychmiast powiadomić Zamawiającego, który dokona odpowiednich poprawek, uzupełnień lub interpretacji.\",\n      \"title\": \"Przeniesienie ryzyka błędów PFU na wykonawcę\",\n      \"why\": \"Ograniczenie odpowiedzialności zamawiającego za błędy PFU może skutkować roszczeniami i sporami w przypadku ujawnienia braków na etapie realizacji.\",\n      \"strength\": \"średni\",\n      \"clause_hint\": null\n    }\n  ]\n}",
+ "tokens_in": 8395,
+ "tokens_out": 523,
+ "tokens_cached": 0,
+ "tokens_thought": 0,
+ "finish_reason": "FinishReason.STOP"
+}

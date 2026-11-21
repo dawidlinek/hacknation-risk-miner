@@ -1,0 +1,400 @@
+{
+  "risks": [
+    {
+      "code": "R02",
+      "title": "Nierozpoznany grunt",
+      "impact_label": "P80 +84 dni",
+      "expected_cost_tpln": 28.3,
+      "controlled_by": "buyer",
+      "recommended": 0,
+      "chosen": 0,
+      "how": [
+        "badania geotechniczne przed ogłoszeniem; reszta wg protokołu konieczności",
+        "badania przed ogłoszeniem, nadwyżka ponad raport dzielona po połowie",
+        "wykonawca bada grunt po umowie, w ryczałcie"
+      ],
+      "warning": "Zalecamy: zamawiający. Ryzyko po stronie, która nad nim nie panuje, wykonawca wyceni w ofercie.",
+      "cases": [],
+      "flagged": false,
+      "n_r": 139,
+      "status": "proposed",
+      "clause_refs": ["R02.1-K1"],
+      "expected_cost": {
+        "money": { "amount": "28335.23", "currency": "PLN", "vat_basis": "gross" },
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1294,
+          "method": "p(r)*impact*budget",
+          "refs": [
+            { "kind": "query", "id": "per_risk:R02", "label": "podsektor SAN, wartość od 2 mln zł" },
+            { "kind": "catalogue", "id": "allocation:R02", "label": "założenie eksperta" }
+          ]
+        }
+      },
+      "impact": {
+        "value": 84.5,
+        "display": "P80 +84 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 139,
+          "method": "per_risk_p80",
+          "refs": [
+            { "kind": "query", "id": "per_risk:R02", "label": "podsektor SAN, wartość od 2 mln zł" },
+            { "kind": "catalogue", "id": "allocation:R02", "label": "założenie eksperta" }
+          ]
+        }
+      },
+      "positions": [
+        {
+          "key": "buyer",
+          "label": "Zamawiający",
+          "how": "badania geotechniczne przed ogłoszeniem; reszta wg protokołu konieczności"
+        },
+        {
+          "key": "shared",
+          "label": "Wspólnie",
+          "how": "badania przed ogłoszeniem, nadwyżka ponad raport dzielona po połowie"
+        },
+        { "key": "contractor", "label": "Wykonawca", "how": "wykonawca bada grunt po umowie, w ryczałcie" }
+      ]
+    },
+    {
+      "code": "R03",
+      "title": "Służebności na trasie",
+      "impact_label": "P80 +95 dni",
+      "expected_cost_tpln": 16.9,
+      "controlled_by": "buyer",
+      "recommended": 0,
+      "chosen": 0,
+      "how": [
+        "zamawiający uzyskuje zgody przed przekazaniem terenu",
+        "zamawiający negocjuje, wykonawca projektuje obejścia",
+        "wykonawca uzyskuje zgody właścicieli"
+      ],
+      "warning": "Zalecamy: zamawiający. Ryzyko po stronie, która nad nim nie panuje, wykonawca wyceni w ofercie.",
+      "cases": [],
+      "flagged": false,
+      "n_r": 103,
+      "status": "proposed",
+      "clause_refs": [],
+      "expected_cost": {
+        "money": { "amount": "16941.09", "currency": "PLN", "vat_basis": "gross" },
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1294,
+          "method": "p(r)*impact*budget",
+          "refs": [
+            { "kind": "query", "id": "per_risk:R03", "label": "podsektor SAN, wartość od 2 mln zł" },
+            { "kind": "catalogue", "id": "allocation:R03", "label": "założenie eksperta" }
+          ]
+        }
+      },
+      "impact": {
+        "value": 95.4,
+        "display": "P80 +95 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 103,
+          "method": "per_risk_p80",
+          "refs": [
+            { "kind": "query", "id": "per_risk:R03", "label": "podsektor SAN, wartość od 2 mln zł" },
+            { "kind": "catalogue", "id": "allocation:R03", "label": "założenie eksperta" }
+          ]
+        }
+      },
+      "positions": [
+        {
+          "key": "buyer",
+          "label": "Zamawiający",
+          "how": "zamawiający uzyskuje zgody przed przekazaniem terenu"
+        },
+        {
+          "key": "shared",
+          "label": "Wspólnie",
+          "how": "zamawiający negocjuje, wykonawca projektuje obejścia"
+        },
+        { "key": "contractor", "label": "Wykonawca", "how": "wykonawca uzyskuje zgody właścicieli" }
+      ]
+    },
+    {
+      "code": "R04",
+      "title": "Decyzje organów",
+      "impact_label": "P80 +96 dni",
+      "expected_cost_tpln": 15.6,
+      "controlled_by": "neither",
+      "recommended": 1,
+      "chosen": 1,
+      "how": [
+        "zamawiający uzyskuje decyzje przed przetargiem",
+        "klauzula K-12: termin wydłuża się o zwłokę organu",
+        "wykonawca odpowiada za terminy decyzji"
+      ],
+      "warning": "Zalecamy: wspólnie. Ryzyko po stronie, która nad nim nie panuje, wykonawca wyceni w ofercie.",
+      "cases": [],
+      "flagged": false,
+      "n_r": 126,
+      "status": "proposed",
+      "clause_refs": ["K-12"],
+      "expected_cost": {
+        "money": { "amount": "15594.59", "currency": "PLN", "vat_basis": "gross" },
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1294,
+          "method": "p(r)*impact*budget",
+          "refs": [
+            { "kind": "query", "id": "per_risk:R04", "label": "podsektor SAN, wartość od 2 mln zł" },
+            { "kind": "catalogue", "id": "allocation:R04", "label": "założenie eksperta" }
+          ]
+        }
+      },
+      "impact": {
+        "value": 96.3,
+        "display": "P80 +96 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 126,
+          "method": "per_risk_p80",
+          "refs": [
+            { "kind": "query", "id": "per_risk:R04", "label": "podsektor SAN, wartość od 2 mln zł" },
+            { "kind": "catalogue", "id": "allocation:R04", "label": "założenie eksperta" }
+          ]
+        }
+      },
+      "positions": [
+        { "key": "buyer", "label": "Zamawiający", "how": "zamawiający uzyskuje decyzje przed przetargiem" },
+        { "key": "shared", "label": "Wspólnie", "how": "klauzula K-12: termin wydłuża się o zwłokę organu" },
+        { "key": "contractor", "label": "Wykonawca", "how": "wykonawca odpowiada za terminy decyzji" }
+      ]
+    },
+    {
+      "code": "R06",
+      "title": "Zbyt krótki termin",
+      "impact_label": "P80 +80 dni",
+      "expected_cost_tpln": 1.3,
+      "controlled_by": "neither",
+      "recommended": 1,
+      "chosen": 1,
+      "how": [
+        "zamawiający wydłuża termin do 18 mies.",
+        "kary umowne liczone od terminu realnego, kamienie milowe",
+        "pełne kary od terminu 14 mies."
+      ],
+      "warning": "Zalecamy: wspólnie. Ryzyko po stronie, która nad nim nie panuje, wykonawca wyceni w ofercie.",
+      "cases": [],
+      "flagged": true,
+      "n_r": 13,
+      "status": "proposed",
+      "clause_refs": [],
+      "expected_cost": {
+        "money": { "amount": "1303.72", "currency": "PLN", "vat_basis": "gross" },
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1294,
+          "method": "p(r)*impact*budget",
+          "refs": [
+            { "kind": "query", "id": "per_risk:R06", "label": "podsektor SAN, wartość od 2 mln zł" },
+            { "kind": "catalogue", "id": "allocation:R06", "label": "założenie eksperta" }
+          ]
+        }
+      },
+      "impact": {
+        "value": 80.4,
+        "display": "P80 +80 dni",
+        "unit": "days",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 13,
+          "method": "per_risk_p80",
+          "refs": [
+            { "kind": "query", "id": "per_risk:R06", "label": "podsektor SAN, wartość od 2 mln zł" },
+            { "kind": "catalogue", "id": "allocation:R06", "label": "założenie eksperta" }
+          ]
+        }
+      },
+      "positions": [
+        { "key": "buyer", "label": "Zamawiający", "how": "zamawiający wydłuża termin do 18 mies." },
+        {
+          "key": "shared",
+          "label": "Wspólnie",
+          "how": "kary umowne liczone od terminu realnego, kamienie milowe"
+        },
+        { "key": "contractor", "label": "Wykonawca", "how": "pełne kary od terminu 14 mies." }
+      ]
+    },
+    {
+      "code": "R08",
+      "title": "Długość sieci „ok. 6 km”",
+      "impact_label": "koszt P80 +6,2%",
+      "expected_cost_tpln": 30.2,
+      "controlled_by": "buyer",
+      "recommended": 1,
+      "chosen": 1,
+      "how": [
+        "rozliczenie powykonawcze za każdy metr",
+        "ryczałt do 6,0 km, dalej cena jednostkowa za metr",
+        "ryczałt za całość, długość ryzykiem wykonawcy"
+      ],
+      "warning": "Zalecamy: wspólnie. Ryzyko po stronie, która nad nim nie panuje, wykonawca wyceni w ofercie.",
+      "cases": [],
+      "flagged": false,
+      "n_r": 142,
+      "status": "proposed",
+      "clause_refs": ["R01.2-K1"],
+      "expected_cost": {
+        "money": { "amount": "30231.46", "currency": "PLN", "vat_basis": "gross" },
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1294,
+          "method": "p(r)*impact*budget",
+          "refs": [
+            { "kind": "query", "id": "per_risk:R08|R01", "label": "podsektor SAN, wartość od 2 mln zł" },
+            { "kind": "catalogue", "id": "allocation:R08", "label": "założenie eksperta" }
+          ]
+        }
+      },
+      "impact": {
+        "value": 6.18,
+        "display": "koszt P80 +6,2%",
+        "unit": "pct",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 142,
+          "method": "per_risk_p80",
+          "refs": [
+            { "kind": "query", "id": "per_risk:R08|R01", "label": "podsektor SAN, wartość od 2 mln zł" },
+            { "kind": "catalogue", "id": "allocation:R08", "label": "założenie eksperta" }
+          ]
+        }
+      },
+      "positions": [
+        { "key": "buyer", "label": "Zamawiający", "how": "rozliczenie powykonawcze za każdy metr" },
+        { "key": "shared", "label": "Wspólnie", "how": "ryczałt do 6,0 km, dalej cena jednostkowa za metr" },
+        { "key": "contractor", "label": "Wykonawca", "how": "ryczałt za całość, długość ryzykiem wykonawcy" }
+      ]
+    },
+    {
+      "code": "R13",
+      "title": "Wzrost cen materiałów",
+      "impact_label": "koszt P80 +5,1%",
+      "expected_cost_tpln": 16.0,
+      "controlled_by": "neither",
+      "recommended": 1,
+      "chosen": 1,
+      "how": [
+        "zamawiający pokrywa pełny wzrost cen",
+        "klauzula K-07 (art. 439 Pzp), próg 5%, limit 10%",
+        "bez waloryzacji"
+      ],
+      "warning": "W podobnej umowie (GMINA PASYM) zmiany miały tę przyczynę.",
+      "cases": [
+        { "label": "GMINA PASYM", "href": "/projekty/ocds-148610-4f45d3ce-f076-444f-a9e5-c44c0a44e0bc" }
+      ],
+      "flagged": false,
+      "n_r": 82,
+      "status": "proposed",
+      "clause_refs": ["K-07", "R08.1-K1"],
+      "expected_cost": {
+        "money": { "amount": "15960.55", "currency": "PLN", "vat_basis": "gross" },
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 1294,
+          "method": "p(r)*impact*budget",
+          "refs": [
+            { "kind": "query", "id": "per_risk:N-PRICE|R13", "label": "podsektor SAN, wartość od 2 mln zł" },
+            { "kind": "catalogue", "id": "allocation:R13", "label": "założenie eksperta" }
+          ]
+        }
+      },
+      "impact": {
+        "value": 5.11,
+        "display": "koszt P80 +5,1%",
+        "unit": "pct",
+        "prov": {
+          "role": "calc",
+          "review_status": "auto",
+          "n": 82,
+          "method": "per_risk_p80",
+          "refs": [
+            { "kind": "query", "id": "per_risk:N-PRICE|R13", "label": "podsektor SAN, wartość od 2 mln zł" },
+            { "kind": "catalogue", "id": "allocation:R13", "label": "założenie eksperta" }
+          ]
+        }
+      },
+      "positions": [
+        { "key": "buyer", "label": "Zamawiający", "how": "zamawiający pokrywa pełny wzrost cen" },
+        { "key": "shared", "label": "Wspólnie", "how": "klauzula K-07 (art. 439 Pzp), próg 5%, limit 10%" },
+        { "key": "contractor", "label": "Wykonawca", "how": "bez waloryzacji" }
+      ]
+    }
+  ],
+  "premium": {
+    "shared": 0.1,
+    "contractor": 0.6,
+    "shared_if_contractor_controls": 0.0,
+    "contractor_if_contractor_controls": 0.1
+  },
+  "premium_prov": {
+    "role": "source",
+    "review_status": "proposed",
+    "assumption": true,
+    "refs": [{ "kind": "catalogue", "id": "allocation:defaults", "label": "założenie eksperta" }]
+  },
+  "premium_attention_tpln": 119.0,
+  "delay_cost_rate_per_month": 0.005,
+  "balance": {
+    "buyer": { "amount": "76750.00", "currency": "PLN", "vat_basis": "gross" },
+    "contractor": { "amount": "31550.00", "currency": "PLN", "vat_basis": "gross" },
+    "premium": { "amount": "6310.00", "currency": "PLN", "vat_basis": "gross" },
+    "off_recommendation": 0,
+    "note": "Podział zgodny z zaleceniami. Wykonawcy doliczą głównie za ryzyka dzielone.",
+    "prov": {
+      "role": "calc",
+      "review_status": "auto",
+      "n": 6,
+      "method": "allocation_balance_v1",
+      "refs": [{ "kind": "catalogue", "id": "allocation:defaults", "label": "założenie eksperta" }],
+      "assumption": true
+    }
+  },
+  "note": "Podział zgodny z zaleceniami. Wykonawcy doliczą głównie za ryzyka dzielone.",
+  "pack": {
+    "items": [
+      { "key": "register", "title": "Rejestr ryzyk", "note": "6 ryzyk", "included": true },
+      { "key": "matrix", "title": "Macierz podziału ryzyk", "note": "Twoje wybory", "included": true },
+      {
+        "key": "checklist",
+        "title": "Lista kontrolna przygotowania",
+        "note": "braki w dokumentach",
+        "included": true
+      },
+      { "key": "clauses", "title": "Proponowane zapisy do PPU", "note": "0 w pakiecie", "included": true },
+      {
+        "key": "annex",
+        "title": "Źródła i cytaty",
+        "note": "numery ogłoszeń, strony dokumentów",
+        "included": true
+      }
+    ],
+    "pending_ai": 0,
+    "formats": ["docx", "pdf", "csv", "json"]
+  },
+  "limitations": [
+    "Oczekiwany koszt ryzyka liczony z przyczyn zmian w podobnych umowach; premie i koszt miesiąca opóźnienia to założenia eksperta z Katalogu.",
+    "Przyczyny zmian sklasyfikował model AI (propozycje do przeglądu przez eksperta, ok. 8 na 10 trafień na próbie wzorcowej); gdzie go brak, użyto reguł słownikowych."
+  ],
+  "plan_days": 426.125
+}

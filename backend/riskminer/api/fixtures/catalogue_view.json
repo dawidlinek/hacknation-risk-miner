@@ -1,0 +1,135 @@
+{
+ "version": "v1.3",
+ "risks": [
+  {
+   "code": "R01",
+   "name": "Niepełny lub niespójny zakres",
+   "effects": "Błędna wycena, roboty dodatkowe, spór o wynagrodzenie",
+   "parts": [
+    {
+     "k": "sygnał w dokumentach",
+     "v": "PFU bez inwentaryzacji; „ok.” przy ilościach"
+    },
+    {
+     "k": "środki zaradcze",
+     "v": "inwentaryzacja przed ogłoszeniem; ceny jednostkowe"
+    }
+   ],
+   "counts": {
+    "approved": 1,
+    "proposed": 3
+   },
+   "quality": {
+    "note": "reguły wyłapują 2 z 14",
+    "precision": {
+     "value": 0.4,
+     "display": "0,40",
+     "unit": "share",
+     "prov": {
+      "role": "calc",
+      "review_status": "auto",
+      "n": 150,
+      "method": "keyword_vs_gold",
+      "refs": [
+       {
+        "kind": "file",
+        "id": "research/bzp_corpus/out/keyword_vs_gold.csv",
+        "label": "zbiór wzorcowy"
+       }
+      ]
+     }
+    },
+    "recall": {
+     "value": 0.14,
+     "display": "0,14",
+     "unit": "share",
+     "prov": {
+      "role": "calc",
+      "review_status": "auto",
+      "n": 150,
+      "method": "keyword_vs_gold",
+      "refs": [
+       {
+        "kind": "file",
+        "id": "research/bzp_corpus/out/keyword_vs_gold.csv",
+        "label": "zbiór wzorcowy"
+       }
+      ]
+     }
+    },
+    "review_href": "/przeglad?kind=event&code=R01"
+   }
+  }
+ ],
+ "proposals": [
+  {
+   "id": 41,
+   "review_item_id": 830,
+   "title": "Warunki atmosferyczne",
+   "description": "Przedłużenie terminu z powodu pogody.",
+   "evidence_text": "11 ze 150 przyczyn w zbiorze wzorcowym (7%)",
+   "merge_suggestion": "R06",
+   "origin": "AI",
+   "status": "proposed"
+  }
+ ],
+ "weights": [
+  {
+   "feature": "subsector_main",
+   "label": "podsektor",
+   "w": 0.26
+  },
+  {
+   "feature": "design_build",
+   "label": "formuła ZiW",
+   "w": 0.22
+  },
+  {
+   "feature": "scope",
+   "label": "zakres i ilości",
+   "w": 0.22
+  },
+  {
+   "feature": "budget",
+   "label": "wartość",
+   "w": 0.16
+  },
+  {
+   "feature": "text",
+   "label": "opis (tekst)",
+   "w": 0.14
+  }
+ ],
+ "subsectors": [
+  {
+   "code": "SAN",
+   "name": "kanalizacja sanitarna"
+  }
+ ],
+ "doc_types": [
+  {
+   "code": "PFU",
+   "name": "Program funkcjonalno-użytkowy"
+  }
+ ],
+ "checklists": [
+  {
+   "code": "geo_docs",
+   "name": "Dokumentacja geotechniczna"
+  }
+ ],
+ "clauses": [
+  {
+   "code": "R08.1-K1",
+   "title": "Waloryzacja (art. 439)"
+  }
+ ],
+ "versions": [
+  {
+   "label": "v1.3",
+   "summary": "wagi: zakres 18 → 22",
+   "actor": "ekspert",
+   "at": "2026-11-21T13:20:00Z"
+  }
+ ]
+}

@@ -1,0 +1,15 @@
+# Allowlist: images only need code. data/ (56 GB), materials/, research/ and .env never enter a build context.
+*
+!backend/
+!frontend/
+!infra/
+!catalogue/
+!config/config.example.yaml
+backend/.venv
+backend/**/__pycache__
+backend/.pytest_cache
+backend/.ruff_cache
+frontend/node_modules
+frontend/dist
+**/.env
+**/*.pyc

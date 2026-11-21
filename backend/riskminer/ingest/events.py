@@ -3,6 +3,8 @@ origin=CALC (rule over SOURCE fields), review_status=auto, evidence_state=POTWIE
 event pointing at the notice + field code. Idempotent via risk_event.key. AI events are produced elsewhere."""
 from __future__ import annotations
 
+# The evidence field code is the field the quote (`cause`) comes from: change reason 5.4.4 (performance block) /
+# 5.3 (change notice), cancellation justification 5.2.1 (legal basis 5.2 when there is no justification).
 RULES: list[tuple[str, str, str]] = [
     # (event_type, catalogue_code, SQL producing: key, procedure_id, contract_id, change_id, summary, cause,
     #  impact_days, impact_value, impact_pct, occurred_on, source_id, notice_id, field_code)
@@ -33,26 +35,26 @@ RULES: list[tuple[str, str, str]] = [
     ("EV_ADDITIONAL_WORKS", "R07", """
      SELECT 'EV_ADDITIONAL_WORKS|ch|' || ch.id, ch.procedure_id, ch.contract_id, ch.id,
             'Zmiana umowy: roboty dodatkowe (art. 455 ust. 1 pkt 3)', ch.cause_text, ch.delta_days, ch.delta_value_amount,
-            ch.delta_value_pct, ch.changed_on, ch.source_id, ch.notice_id, ch.field_code
-     FROM contract_change ch WHERE '455.1.3' = ANY(ch.legal_basis)"""),
+            ch.delta_value_pct, ch.changed_on, ch.source_id, ch.notice_id, CASE WHEN ch.kind = 'performance_block' THEN '5.4.4' ELSE '5.3' END
+     FROM contract_change ch WHERE '455.1.3' = ANY(ch.legal_basis) AND ch.kind IN ('change_notice', 'performance_block')"""),
     ("EV_UNFORESEEN_CHANGE", "R07", """
      SELECT 'EV_UNFORESEEN_CHANGE|ch|' || ch.id, ch.procedure_id, ch.contract_id, ch.id,
             'Zmiana umowy: okoliczności nieprzewidywalne (art. 455 ust. 1 pkt 4)', ch.cause_text, ch.delta_days,
-            ch.delta_value_amount, ch.delta_value_pct, ch.changed_on, ch.source_id, ch.notice_id, ch.field_code
-     FROM contract_change ch WHERE '455.1.4' = ANY(ch.legal_basis)"""),
+            ch.delta_value_amount, ch.delta_value_pct, ch.changed_on, ch.source_id, ch.notice_id, CASE WHEN ch.kind = 'performance_block' THEN '5.4.4' ELSE '5.3' END
+     FROM contract_change ch WHERE '455.1.4' = ANY(ch.legal_basis) AND ch.kind IN ('change_notice', 'performance_block')"""),
     ("EV_TERM_EXTENSION", "R06", """
      SELECT 'EV_TERM_EXTENSION|ch|' || ch.id, ch.procedure_id, ch.contract_id, ch.id,
             'Zmiana terminu wykonania' || CASE WHEN ch.delta_days > 0 THEN ' (+' || round(ch.delta_days) || ' dni)' ELSE '' END,
-            ch.cause_text, ch.delta_days, NULL, NULL, ch.changed_on, ch.source_id, ch.notice_id, ch.field_code
-     FROM contract_change ch WHERE 'time' = ANY(ch.change_types)"""),
+            ch.cause_text, ch.delta_days, NULL, NULL, ch.changed_on, ch.source_id, ch.notice_id, CASE WHEN ch.kind = 'performance_block' THEN '5.4.4' ELSE '5.3' END
+     FROM contract_change ch WHERE 'time' = ANY(ch.change_types) AND ch.kind IN ('change_notice', 'performance_block')"""),
     ("EV_TENDER_CANCELLED_BUDGET", "R11.1", """
      SELECT 'EV_TENDER_CANCELLED_BUDGET|lot|' || l.id, l.procedure_id, NULL, NULL,
             'Unieważnienie: cena oferty przewyższa kwotę zamawiającego (art. 255 pkt 3)', l.cancel_reason, NULL, NULL, NULL,
-            n.published_at::date, l.source_id, l.result_notice_id, '5.2'
+            n.published_at::date, l.source_id, l.result_notice_id, CASE WHEN l.cancel_reason IS NOT NULL THEN '5.2.1' ELSE '5.2' END
      FROM lot l LEFT JOIN notice n ON n.id = l.result_notice_id WHERE l.cancelled AND l.cancel_basis ~ '255\\s*pkt\\.?\\s*3'"""),
     ("EV_TENDER_NO_OFFERS", "R11.2", """
      SELECT 'EV_TENDER_NO_OFFERS|lot|' || l.id, l.procedure_id, NULL, NULL, 'Unieważnienie: brak ofert (art. 255 pkt 1)',
-            l.cancel_reason, NULL, NULL, NULL, n.published_at::date, l.source_id, l.result_notice_id, '5.2'
+            l.cancel_reason, NULL, NULL, NULL, n.published_at::date, l.source_id, l.result_notice_id, CASE WHEN l.cancel_reason IS NOT NULL THEN '5.2.1' ELSE '5.2' END
      FROM lot l LEFT JOIN notice n ON n.id = l.result_notice_id WHERE l.cancelled AND l.cancel_basis ~ '255\\s*pkt\\.?\\s*1\\M'"""),
     ("EV_SINGLE_OFFER", "R11.2", """
      SELECT 'EV_SINGLE_OFFER|lot|' || l.id, l.procedure_id, NULL, NULL, 'Wpłynęła jedna oferta', NULL, NULL, NULL, NULL,
@@ -99,3 +101,4 @@ async def run(conn, rid) -> dict:
     out["total"] = await conn.fetchval("SELECT count(*) FROM risk_event WHERE origin = 'CALC'")
     out["pilot"] = await conn.fetchval("SELECT count(*) FROM risk_event WHERE project_id IS NOT NULL")
     return out
+

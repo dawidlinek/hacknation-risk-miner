@@ -1,0 +1,267 @@
+{
+  "id": "AN-2026-0004",
+  "code": "AN-2026-0004",
+  "version": 1,
+  "status": "draft",
+  "text": "Planujemy budowę kanalizacji sanitarnej ok. 6 km z 3 przepompowniami w formule zaprojektuj i wybuduj, budżet 7 mln zł brutto, 14 miesięcy, FEnIKS, województwo śląskie.",
+  "title": "Kanalizacja sanitarna, ok. 6 km",
+  "sensitivity": "public",
+  "documents": [],
+  "features": [
+    {
+      "key": "podsektor",
+      "label": "podsektor",
+      "value": "SAN",
+      "display": "kanalizacja sanitarna",
+      "source_label": "opis",
+      "source": null,
+      "unsure": false,
+      "editor": "select",
+      "options": [
+        { "label": "kanalizacja sanitarna", "value": "SAN" },
+        { "label": "sieć wodociągowa", "value": "WOD" },
+        { "label": "kanalizacja deszczowa", "value": "DESZ" },
+        { "label": "oczyszczalnia ścieków", "value": "OCZ" },
+        { "label": "stacja uzdatniania wody", "value": "SUW" }
+      ],
+      "unit": null,
+      "item_id": 8746,
+      "origin": "CALC",
+      "review_status": "auto",
+      "prov": {
+        "role": "calc",
+        "review_status": "auto",
+        "method": "regex:subsector",
+        "refs": [{ "kind": "input_text", "id": "opis", "label": "opis" }],
+        "n": 1
+      }
+    },
+    {
+      "key": "formula",
+      "label": "formuła",
+      "value": "design_build",
+      "display": "zaprojektuj i wybuduj",
+      "source_label": "opis",
+      "source": null,
+      "unsure": false,
+      "editor": "select",
+      "options": [
+        { "label": "zaprojektuj i wybuduj", "value": "design_build" },
+        { "label": "samo wykonanie", "value": "build" }
+      ],
+      "unit": null,
+      "item_id": 8747,
+      "origin": "CALC",
+      "review_status": "auto",
+      "prov": {
+        "role": "calc",
+        "review_status": "auto",
+        "method": "regex:formula",
+        "refs": [{ "kind": "input_text", "id": "opis", "label": "opis" }],
+        "n": 1
+      }
+    },
+    {
+      "key": "dlugosc_km",
+      "label": "długość",
+      "value": 6.0,
+      "display": "ok. 6 km?",
+      "source_label": "opis",
+      "source": null,
+      "unsure": true,
+      "editor": "number",
+      "options": null,
+      "unit": "km",
+      "item_id": 8749,
+      "origin": "CALC",
+      "review_status": "auto",
+      "prov": {
+        "role": "calc",
+        "review_status": "auto",
+        "method": "regex:lengths",
+        "refs": [{ "kind": "input_text", "id": "opis", "label": "opis" }],
+        "n": 1
+      }
+    },
+    {
+      "key": "przepompownie",
+      "label": "przepompownie",
+      "value": 3,
+      "display": "3 szt.",
+      "source_label": "opis",
+      "source": null,
+      "unsure": false,
+      "editor": "number",
+      "options": null,
+      "unit": "szt.",
+      "item_id": 8750,
+      "origin": "CALC",
+      "review_status": "auto",
+      "prov": {
+        "role": "calc",
+        "review_status": "auto",
+        "method": "regex:count",
+        "refs": [{ "kind": "input_text", "id": "opis", "label": "opis" }],
+        "n": 1
+      }
+    },
+    {
+      "key": "budzet",
+      "label": "budżet",
+      "value": { "amount": "7000000.00", "currency": "PLN", "vat_basis": "gross" },
+      "display": "7 mln zł brutto",
+      "source_label": "opis",
+      "source": null,
+      "unsure": false,
+      "editor": "money",
+      "options": null,
+      "unit": "zł brutto",
+      "item_id": 8751,
+      "origin": "CALC",
+      "review_status": "auto",
+      "prov": {
+        "role": "calc",
+        "review_status": "auto",
+        "method": "regex:money",
+        "refs": [{ "kind": "input_text", "id": "opis", "label": "opis" }],
+        "n": 1
+      }
+    },
+    {
+      "key": "termin_mies",
+      "label": "termin",
+      "value": 14.0,
+      "display": "14 mies.",
+      "source_label": "opis",
+      "source": null,
+      "unsure": false,
+      "editor": "months",
+      "options": null,
+      "unit": "mies.",
+      "item_id": 8752,
+      "origin": "CALC",
+      "review_status": "auto",
+      "prov": {
+        "role": "calc",
+        "review_status": "auto",
+        "method": "regex:months",
+        "refs": [{ "kind": "input_text", "id": "opis", "label": "opis" }],
+        "n": 1
+      }
+    },
+    {
+      "key": "finansowanie",
+      "label": "finansowanie",
+      "value": "FENIKS",
+      "display": "FEnIKS 2021–2027",
+      "source_label": "opis",
+      "source": null,
+      "unsure": false,
+      "editor": "select",
+      "options": [
+        { "label": "KPO", "value": "KPO_B311" },
+        { "label": "FEnIKS 2021–2027", "value": "FENIKS" },
+        { "label": "Fundusze Europejskie dla województwa", "value": "FEP_RPO" },
+        { "label": "PROW 2014–2020", "value": "PROW" },
+        { "label": "Rządowe programy (RFIL, Polski Ład)", "value": "RFIL_PIS" },
+        { "label": "środki własne", "value": "OWN" }
+      ],
+      "unit": null,
+      "item_id": 8753,
+      "origin": "CALC",
+      "review_status": "auto",
+      "prov": {
+        "role": "calc",
+        "review_status": "auto",
+        "method": "regex:programme",
+        "refs": [{ "kind": "input_text", "id": "opis", "label": "opis" }],
+        "n": 1
+      }
+    },
+    {
+      "key": "rodzaj_robot",
+      "label": "rodzaj robót",
+      "value": "build",
+      "display": "budowa",
+      "source_label": "opis",
+      "source": null,
+      "unsure": false,
+      "editor": "select",
+      "options": [
+        { "label": "budowa", "value": "build" },
+        { "label": "przebudowa lub modernizacja", "value": "renovation" },
+        { "label": "budowa i przebudowa", "value": "mixed" }
+      ],
+      "unit": null,
+      "item_id": 8748,
+      "origin": "CALC",
+      "review_status": "auto",
+      "prov": {
+        "role": "calc",
+        "review_status": "auto",
+        "method": "regex:works_type",
+        "refs": [{ "kind": "input_text", "id": "opis", "label": "opis" }],
+        "n": 1
+      }
+    },
+    {
+      "key": "wojewodztwo",
+      "label": "województwo",
+      "value": "24",
+      "display": "śląskie",
+      "source_label": "opis",
+      "source": null,
+      "unsure": false,
+      "editor": "select",
+      "options": [
+        { "label": "dolnośląskie", "value": "02" },
+        { "label": "kujawsko-pomorskie", "value": "04" },
+        { "label": "lubelskie", "value": "06" },
+        { "label": "lubuskie", "value": "08" },
+        { "label": "łódzkie", "value": "10" },
+        { "label": "małopolskie", "value": "12" },
+        { "label": "mazowieckie", "value": "14" },
+        { "label": "opolskie", "value": "16" },
+        { "label": "podkarpackie", "value": "18" },
+        { "label": "podlaskie", "value": "20" },
+        { "label": "pomorskie", "value": "22" },
+        { "label": "śląskie", "value": "24" },
+        { "label": "świętokrzyskie", "value": "26" },
+        { "label": "warmińsko-mazurskie", "value": "28" },
+        { "label": "wielkopolskie", "value": "30" },
+        { "label": "zachodniopomorskie", "value": "32" }
+      ],
+      "unit": null,
+      "item_id": 8754,
+      "origin": "CALC",
+      "review_status": "auto",
+      "prov": {
+        "role": "calc",
+        "review_status": "auto",
+        "method": "regex:province",
+        "refs": [{ "kind": "input_text", "id": "opis", "label": "opis" }],
+        "n": 1
+      }
+    }
+  ],
+  "follow_ups": [
+    {
+      "key": "przylacza",
+      "title": "Ile będzie przyłączy?",
+      "why": "Nie ma tego w opisie ani w PFU. Z tą liczbą lepiej dobierzemy podobne przypadki.",
+      "input": "number",
+      "placeholder": "np. 120",
+      "skippable": true
+    }
+  ],
+  "questions": [
+    {
+      "key": "przylacza",
+      "text": "Ile będzie przyłączy?",
+      "why": "Nie ma tego w opisie ani w PFU. Z tą liczbą lepiej dobierzemy podobne przypadki.",
+      "input": "number"
+    }
+  ],
+  "ai_features": { "job_id": null, "status": "off" },
+  "ai_pending": false
+}

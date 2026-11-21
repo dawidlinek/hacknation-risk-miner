@@ -1,0 +1,46 @@
+{
+ "expected": [
+  {
+   "doc_type": "PFU",
+   "label": "Program funkcjonalno-użytkowy",
+   "evidence_state": "BRAK_W_PACZCE",
+   "state_label": "nie ma w paczce",
+   "unlocks": "Potwierdzi R01: czego zabrakło w opisie zakresu.",
+   "where_to_find": "platforma zakupowa zamawiającego, załącznik do SWZ"
+  },
+  {
+   "doc_type": "PPU",
+   "label": "Projektowane postanowienia umowy",
+   "evidence_state": "BRAK_W_PACZCE",
+   "state_label": "nie ma w paczce",
+   "unlocks": "Pokaże klauzule waloryzacji i kar.",
+   "where_to_find": "załącznik do SWZ"
+  }
+ ],
+ "public": [
+  {
+   "kind": "notice",
+   "ref": "2024/BZP 00554831/01",
+   "title": "Ogłoszenie o zmianie umowy",
+   "date": "2024-10-09",
+   "facts": 2,
+   "risk_codes": [
+    "R01"
+   ],
+   "review_status": "approved",
+   "object_id": "2024-10-09-00554831"
+  },
+  {
+   "kind": "notice",
+   "ref": "2026/BZP 00276065/01",
+   "title": "Ogłoszenie o wykonaniu umowy",
+   "date": "2026-06-02",
+   "facts": 3,
+   "risk_codes": [],
+   "review_status": "auto",
+   "object_id": "2026-06-02-00276065"
+  }
+ ],
+ "have": 0,
+ "expected_total": 4
+}

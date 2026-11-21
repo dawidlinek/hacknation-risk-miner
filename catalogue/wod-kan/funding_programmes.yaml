@@ -1,0 +1,56 @@
+# Sector pack wod-kan: funding programmes and their deadlines (docs/impl/analytics.md §4.2), used by flag F5 and
+# the programme-deadline question. Deadlines are expert assumptions ("założenie eksperta"); the date from the
+# funding agreement entered by the user overrides the programme default.
+# Loaded by `riskminer seed-catalogue` into catalogue_entry (table_name funding_programme).
+schema_version: 1
+sector: wod-kan
+assumption: true
+programmes:
+- code: KPO_B311
+  name: KPO, inwestycja B3.1.1 (infrastruktura wodno-kanalizacyjna)
+  family: EU
+  deadlines:
+  - kind: indicators_achieved
+    date: 2026-08-31
+    source: "Rozporządzenie (UE) 2021/241; MFiPR, odpowiedź na interpelację 16654 (15.05.2026), 03 §1.7"
+  buffer_days: 60               # F5 threshold
+  assumption: true
+  status: approved
+- code: FENIKS
+  name: FEnIKS 2021-2027
+  family: EU
+  deadlines:
+  - kind: eligibility_end
+    date: 2029-12-31
+    source: "Rozporządzenie (UE) 2021/1060, art. 63 ust. 2; termin z umowy o dofinansowanie ma pierwszeństwo"
+  buffer_days: 60
+  assumption: true
+  status: proposed              # confirm against the call / funding agreement
+- code: FEP_RPO
+  name: Fundusze Europejskie dla województwa (2021-2027)
+  family: EU
+  deadlines:
+  - kind: eligibility_end
+    date: 2029-12-31
+    source: "Rozporządzenie (UE) 2021/1060, art. 63 ust. 2"
+  buffer_days: 60
+  assumption: true
+  status: proposed
+- code: PROW
+  name: PROW 2014-2020
+  family: EU
+  deadlines: []                 # closed; kept for the similarity family only
+  assumption: true
+  status: proposed
+- code: RFIL_PIS
+  name: Rządowe programy (RFIL, Polski Ład / PIS)
+  family: national
+  deadlines: []
+  assumption: true
+  status: proposed
+- code: OWN
+  name: Środki własne
+  family: own
+  deadlines: []
+  assumption: true
+  status: approved

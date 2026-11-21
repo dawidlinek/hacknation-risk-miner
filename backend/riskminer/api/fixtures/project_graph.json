@@ -1,0 +1,258 @@
+{
+ "columns": [
+  {
+   "key": "sources",
+   "label": "Źródła"
+  },
+  {
+   "key": "facts",
+   "label": "Fakty"
+  },
+  {
+   "key": "conclusions",
+   "label": "Wnioski"
+  }
+ ],
+ "nodes": [
+  {
+   "id": "src:xlsx",
+   "column": 0,
+   "label": "Zestaw organizatora",
+   "sub": "XLSX, 1 wiersz",
+   "role": "source",
+   "value": 2
+  },
+  {
+   "id": "src:bzp",
+   "column": 0,
+   "label": "Ogłoszenia BZP",
+   "sub": "5 ogłoszeń",
+   "role": "source",
+   "value": 9
+  },
+  {
+   "id": "src:ai",
+   "column": 0,
+   "label": "Odczyt modelu",
+   "sub": "tekst ogłoszeń",
+   "role": "ai",
+   "value": 3
+  },
+  {
+   "id": "src:calc",
+   "column": 0,
+   "label": "Obliczenia",
+   "sub": "z faktów powyżej",
+   "role": "calc",
+   "value": 2
+  },
+  {
+   "id": "fact:ident",
+   "column": 1,
+   "label": "Identyfikacja",
+   "sub": "NIP, BZP, OCID",
+   "value": 3
+  },
+  {
+   "id": "fact:contract",
+   "column": 1,
+   "label": "Umowa",
+   "sub": "wartość, termin",
+   "value": 3
+  },
+  {
+   "id": "fact:changes",
+   "column": 1,
+   "label": "Zmiany",
+   "sub": "2 dopłaty",
+   "value": 2
+  },
+  {
+   "id": "fact:performance",
+   "column": 1,
+   "label": "Wykonanie",
+   "sub": "data, kwota",
+   "value": 3
+  },
+  {
+   "id": "fact:reasons",
+   "column": 1,
+   "label": "Przyczyny",
+   "sub": "opis zmian",
+   "value": 3
+  },
+  {
+   "id": "fact:results",
+   "column": 1,
+   "label": "Wyniki",
+   "sub": "opóźnienie, koszt",
+   "value": 2
+  },
+  {
+   "id": "concl:link",
+   "column": 2,
+   "label": "Powiązanie z BZP",
+   "sub": "zatwierdzone",
+   "role": "source",
+   "review_status": "approved",
+   "value": 3
+  },
+  {
+   "id": "concl:delay",
+   "column": 2,
+   "label": "+277 dni",
+   "sub": "obliczenie",
+   "role": "calc",
+   "review_status": "auto",
+   "value": 2
+  },
+  {
+   "id": "concl:R01",
+   "column": 2,
+   "label": "R01 zakres",
+   "sub": "zatwierdzone",
+   "role": "source",
+   "review_status": "approved",
+   "value": 2
+  },
+  {
+   "id": "concl:R04",
+   "column": 2,
+   "label": "R04 decyzja organu",
+   "sub": "wniosek AI",
+   "role": "ai",
+   "review_status": "proposed",
+   "review_item_id": 812,
+   "value": 2
+  }
+ ],
+ "links": [
+  {
+   "source": "src:xlsx",
+   "target": "fact:ident",
+   "value": 2,
+   "fact_ids": [
+    "project:3"
+   ]
+  },
+  {
+   "source": "src:bzp",
+   "target": "fact:ident",
+   "value": 1,
+   "fact_ids": [
+    "evidence:551101"
+   ]
+  },
+  {
+   "source": "src:bzp",
+   "target": "fact:contract",
+   "value": 3,
+   "fact_ids": [
+    "evidence:551102",
+    "evidence:551103",
+    "evidence:551104"
+   ]
+  },
+  {
+   "source": "src:bzp",
+   "target": "fact:changes",
+   "value": 2,
+   "fact_ids": [
+    "evidence:551203",
+    "evidence:551204"
+   ]
+  },
+  {
+   "source": "src:bzp",
+   "target": "fact:performance",
+   "value": 3,
+   "fact_ids": [
+    "evidence:551301",
+    "evidence:551302",
+    "evidence:551303"
+   ]
+  },
+  {
+   "source": "src:ai",
+   "target": "fact:reasons",
+   "value": 3,
+   "fact_ids": [
+    "risk_event:9911",
+    "risk_event:9912",
+    "risk_event:9913"
+   ]
+  },
+  {
+   "source": "src:calc",
+   "target": "fact:results",
+   "value": 2,
+   "fact_ids": [
+    "rc_contract:delay",
+    "rc_contract:cost"
+   ]
+  },
+  {
+   "source": "fact:ident",
+   "target": "concl:link",
+   "value": 3,
+   "fact_ids": []
+  },
+  {
+   "source": "fact:results",
+   "target": "concl:delay",
+   "value": 2,
+   "fact_ids": []
+  },
+  {
+   "source": "fact:changes",
+   "target": "concl:R01",
+   "value": 2,
+   "fact_ids": []
+  },
+  {
+   "source": "fact:reasons",
+   "target": "concl:R04",
+   "value": 2,
+   "fact_ids": []
+  }
+ ],
+ "details": {
+  "concl:R04": {
+   "kind": "wniosek, odczyt modelu",
+   "title": "R04: decyzja organu przesunęła termin",
+   "rows": [
+    {
+     "k": "skąd",
+     "v": "2 z 2 faktów pochodzą z odczytu tekstu sekcji zmian ogłoszenia o wykonaniu."
+    },
+    {
+     "k": "pewność",
+     "v": "0,32, do przeglądu"
+    }
+   ],
+   "evidence": [
+    {
+     "kind": "notice",
+     "id": "2026/BZP 00276065/01",
+     "label": "pole 5.4",
+     "field_code": "5.4",
+     "quote": "w związku z przedłużającą się procedurą wydania pozwolenia wodnoprawnego",
+     "verification": "exact"
+    }
+   ],
+   "cta": {
+    "label": "Sprawdź w Przeglądzie",
+    "href": "/przeglad?item=812"
+   }
+  }
+ },
+ "summary": {
+  "facts": 16,
+  "conclusions": 4,
+  "by_role": {
+   "source": 11,
+   "ai": 3,
+   "calc": 2
+  }
+ }
+}

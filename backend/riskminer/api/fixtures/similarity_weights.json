@@ -1,0 +1,11 @@
+{
+ "weights": {
+  "subsector_main": 0.26,
+  "design_build": 0.22,
+  "scope": 0.22,
+  "budget": 0.16,
+  "text": 0.14
+ },
+ "catalogue_version": "v1.4",
+ "summary": "wagi: zakres 18 → 22"
+}

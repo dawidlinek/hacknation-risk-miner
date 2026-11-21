@@ -1,0 +1,41 @@
+{
+ "items": [
+  {
+   "key": "risk_register",
+   "label": "Rejestr ryzyk",
+   "count_label": "6 ryzyk"
+  },
+  {
+   "key": "allocation",
+   "label": "Macierz podziału ryzyk",
+   "count_label": "6 decyzji"
+  },
+  {
+   "key": "clauses",
+   "label": "Proponowane klauzule PPU",
+   "count_label": "3 klauzule"
+  },
+  {
+   "key": "gaps",
+   "label": "Braki w dokumentach",
+   "count_label": "2 braki"
+  },
+  {
+   "key": "sources",
+   "label": "Aneks źródeł",
+   "count_label": "41 odwołań"
+  }
+ ],
+ "excluded": [
+  {
+   "item_id": 5532,
+   "reason": "wniosek AI niezatwierdzony"
+  }
+ ],
+ "formats": [
+  "docx",
+  "pdf",
+  "csv",
+  "json"
+ ]
+}

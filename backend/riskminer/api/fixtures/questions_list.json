@@ -1,0 +1,21 @@
+{
+ "total": 2,
+ "limit": 50,
+ "offset": 0,
+ "items": [
+  {
+   "code": "Q-2026-0004",
+   "title": "Zaprojektuj i wybuduj a samo wykonanie",
+   "saved_at": "2026-11-21T20:40:00Z",
+   "role": "calc",
+   "n": 11574
+  },
+  {
+   "code": "Q-2026-0003",
+   "title": "Opóźnienia w małopolskim",
+   "saved_at": "2026-11-21T18:02:00Z",
+   "role": "calc",
+   "n": 1072
+  }
+ ]
+}

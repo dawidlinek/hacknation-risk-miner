@@ -1,0 +1,13 @@
+{
+ "task": "redpen_scan",
+ "provider": "gemini",
+ "model": "gemini-3.8-flash",
+ "prompt_version": "redpen_scan@v1+42f11dca",
+ "sensitivity": "public",
+ "text": "{\n  \"notes\": [\n    {\n      \"code\": \"R03.2\",\n      \"page\": 5,\n      \"pkt\": \"pkt 5\",\n      \"quote\": \"zgody właścicieli nieruchomości na cele budowlane,\",\n      \"title\": \"Obowiązek pozyskania zgód właścicieli po stronie wykonawcy\",\n      \"why\": \"Przeniesienie na wykonawcę obowiązku pozyskania praw do dysponowania prywatnymi gruntami grozi zablokowaniem inwestycji i opóźnieniami.\",\n      \"strength\": \"silny\",\n      \"clause_hint\": \"R03.2-K1\"\n    },\n    {\n      \"code\": \"R02.3\",\n      \"page\": 5,\n      \"pkt\": \"pkt 5\",\n      \"quote\": \"Projekt budowlany musi być wykonany na aktualnej mapie do celów projektowych, uzyskać uzgodnienie z narady koordynacyjnej w Starostwie Powiatowym w Toruniu i uzgodnienie / decyzję Wojewódzkiego Konserwatora Zabytków w Toruniu.\",\n      \"title\": \"Wymóg uzgodnienia z Konserwatorem Zabytków\",\n      \"why\": \"Procedury konserwatorskie mogą wydłużyć etap projektowania oraz narzucić rygory archeologiczne na etapie robót.\",\n      \"strength\": \"średni\",\n      \"clause_hint\": null\n    }\n  ]\n}",
+ "tokens_in": 8041,
+ "tokens_out": 337,
+ "tokens_cached": 0,
+ "tokens_thought": 0,
+ "finish_reason": "FinishReason.STOP"
+}

@@ -1,0 +1,144 @@
+{
+ "signal": {
+  "contract_id": 132789,
+  "ocid": "ocds-148610-432fe254-7e02-11ee-a60c-9ec5599dddc1",
+  "bzp_number": "2024/BZP 00009131",
+  "lot_no": 0,
+  "n_parts": 1,
+  "buyer_name": "GMINA LIMANOWA",
+  "title": "Budowa sieci kanalizacji zachodniej części gminy Limanowa. Etap I.",
+  "value": {
+   "amount": "13280022.18",
+   "currency": "PLN",
+   "vat_basis": "gross"
+  },
+  "signed_on": "2023-12-08",
+  "planned_end_on": "2025-06-08",
+  "days_overdue": {
+   "value": 531,
+   "display": "531 dni",
+   "unit": "days",
+   "prov": {
+    "role": "calc",
+    "review_status": "auto",
+    "n": 1,
+    "method": "current_date - planned_end_on",
+    "refs": [
+     {
+      "kind": "notice",
+      "id": "2024/BZP 00009131",
+      "label": "ogł. o wyniku",
+      "field_code": "4.2"
+     }
+    ]
+   }
+  },
+  "n_change_notices": 0,
+  "has_performance": false,
+  "woj": "12",
+  "pow": "1207",
+  "gmi": "1207042",
+  "lon": 20.42,
+  "lat": 49.71,
+  "location_method": "buyer_name",
+  "watched": false
+ },
+ "plan": {
+  "planned_days": {
+   "value": 548,
+   "display": "548 dni",
+   "unit": "days",
+   "prov": {
+    "role": "source",
+    "review_status": "auto",
+    "refs": [
+     {
+      "kind": "notice",
+      "id": "2024/BZP 00009131",
+      "label": "ogł. o wyniku",
+      "field_code": "4.2"
+     }
+    ]
+   }
+  },
+  "overdue_days": {
+   "value": 531,
+   "display": "531 dni",
+   "unit": "days",
+   "prov": {
+    "role": "calc",
+    "review_status": "auto",
+    "n": 1,
+    "method": "current_date - planned_end_on",
+    "refs": [
+     {
+      "kind": "notice",
+      "id": "2024/BZP 00009131",
+      "label": "ogł. o wyniku",
+      "field_code": "4.2"
+     }
+    ]
+   }
+  }
+ },
+ "compare": {
+  "region_late_pct": {
+   "value": 29.3,
+   "display": "29,3%",
+   "unit": "pct",
+   "prov": {
+    "role": "calc",
+    "review_status": "auto",
+    "n": 1072,
+    "method": "rc_share(late) by province",
+    "refs": [
+     {
+      "kind": "query",
+      "id": "rc:core|PL12",
+      "label": "ogłoszenia o wykonaniu umowy, BZP"
+     }
+    ]
+   }
+  },
+  "region_median_delay": {
+   "value": 62,
+   "display": "62 dni",
+   "unit": "days",
+   "prov": {
+    "role": "calc",
+    "review_status": "auto",
+    "n": 314,
+    "method": "median(delay_days) where late",
+    "refs": [
+     {
+      "kind": "query",
+      "id": "rc:core|PL12",
+      "label": "spóźnione umowy w małopolskim"
+     }
+    ]
+   }
+  },
+  "sentence": "Ta umowa jest już 531 dni po terminie; połowa spóźnionych umów w małopolskim kończyła się do 62 dni po terminie."
+ },
+ "sources": [
+  {
+   "k": "ogłoszenie o wyniku",
+   "v": "2024/BZP 00009131",
+   "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/list?searchNumber=2024/BZP%2000009131"
+  },
+  {
+   "k": "ogłoszenia o zmianie",
+   "v": "0"
+  },
+  {
+   "k": "ogłoszenie o wykonaniu",
+   "v": "brak",
+   "missing": true
+  }
+ ],
+ "actions": {
+  "card_href": "/projekty/ocds-148610-432fe254-7e02-11ee-a60c-9ec5599dddc1",
+  "can_watch": false,
+  "can_report": false
+ }
+}

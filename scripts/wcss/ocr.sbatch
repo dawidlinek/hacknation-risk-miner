@@ -7,8 +7,8 @@
 #SBATCH --account=hpc-dawlin1140-1773687823
 #SBATCH --partition=bem2-cpu-short
 #SBATCH --cpus-per-task=48
-#SBATCH --mem=96gb
-#SBATCH --time=3:00:00
+#SBATCH --mem=300gb
+#SBATCH --time=2:00:00
 #SBATCH --output=/lustre/pd03/hpc-dawlin1140-1773687823/riskminer/ocr/logs/%x_%j.out
 #SBATCH --error=/lustre/pd03/hpc-dawlin1140-1773687823/riskminer/ocr/logs/%x_%j.err
 
@@ -20,7 +20,6 @@ OUT="$BASE/runs/$SLURM_JOB_ID"
 
 copy_out() {
     mkdir -p "$OUT"
-    if [ -d "$TMPDIR/out" ]; then cp -r "$TMPDIR/out/." "$OUT/"; fi
     echo "finished  $(date -Is)   results $OUT"
 }
 trap copy_out EXIT
@@ -38,17 +37,27 @@ export MAMBA_ROOT_PREFIX="$TMPDIR/mamba"
 export PATH="$TMPDIR/env/bin:$PATH"
 mkdir -p "$TMPDIR/tessdata"
 cp "$TMPDIR/env/share/tessdata/"*.traineddata "$TMPDIR/tessdata/" 2>/dev/null || true
+cp -r "$TMPDIR/env/share/tessdata/configs" "$TMPDIR/env/share/tessdata/tessconfigs" "$TMPDIR/tessdata/" 2>/dev/null || true
 curl -Lsf -o "$TMPDIR/tessdata/pol.traineddata" https://raw.githubusercontent.com/tesseract-ocr/tessdata/main/pol.traineddata
 export TESSDATA_PREFIX="$TMPDIR/tessdata"
 tesseract --version 2>&1 | head -1
-tesseract --list-langs 2>&1 | tr '\n' ' '; echo
+tesseract --list-langs 2>&1 | grep -c . | sed 's/^/languages /'
 
 # one tesseract thread per worker process; workers = allocated cores
 export OMP_THREAD_LIMIT=1 OMP_NUM_THREADS=1 PYTHONNOUSERSITE=1
 
-mkdir -p in out
+mkdir -p in "$OUT"
+ln -sfn "$OUT" out            # results land directly on PD as each document finishes (resumable, crash-safe)
 tar -I zstd -xf "$BASE/input.tar.zst" -C in
 cp "$BASE/ocr_input.tsv" in/
 echo "input     $(wc -l < in/ocr_input.tsv) documents   unpacked $(date -Is)"
 
+# smoke test on node-local scratch: one document must yield text before the full run starts
+python "$BASE/ocr_batch.py" --in-dir in --out-dir smoke --workers "$SLURM_CPUS_PER_TASK" --lang pol --limit 1
+python - <<'PY'
+import json, sys
+r = [json.loads(x) for x in open("smoke/results.jsonl")]
+print("smoke     ", r[0]["status"], r[0]["chars"], "chars", r[0].get("errors"))
+sys.exit(0 if r and r[0]["chars"] > 0 else 3)
+PY
 python "$BASE/ocr_batch.py" --in-dir in --out-dir out --workers "$SLURM_CPUS_PER_TASK" --lang pol

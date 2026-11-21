@@ -1,0 +1,23 @@
+{
+ "total": 37,
+ "limit": 50,
+ "offset": 0,
+ "items": [
+  {
+   "id": 812,
+   "kind": "event",
+   "kind_label": "Zdarzenie ryzyka",
+   "code": "R02",
+   "title": "Dlaczego w Steklinie dopłacono 100 325,44 zł?",
+   "rm_id": "RM-2026-003",
+   "status": "open",
+   "question": "Dlaczego w Steklinie dopłacono 100 325,44 zł?",
+   "context": {
+    "label": "Steklin, RM-2026-003",
+    "href": "/projekty/RM-2026-003"
+   },
+   "model_pick": "R02",
+   "confidence": 0.8
+  }
+ ]
+}

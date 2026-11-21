@@ -11,6 +11,10 @@ files:
 - event_types.yaml
 - evidence_states.yaml
 - lexicon.yaml
+- mitigations.yaml
+- funding_programmes.yaml
+- allocation.yaml
+- cause_labels.yaml
 - red_flags.yaml
 - risks.yaml
 - similarity.yaml

@@ -5,6 +5,8 @@ import re
 import unicodedata
 from decimal import Decimal, InvalidOperation
 
+from riskminer.validators import digits, nip_check, nip_valid, regon_valid  # noqa: F401 (shared, re-exported)
+
 WOJ = {
     "02": "dolnośląskie", "04": "kujawsko-pomorskie", "06": "lubelskie", "08": "lubuskie", "10": "łódzkie",
     "12": "małopolskie", "14": "mazowieckie", "16": "opolskie", "18": "podkarpackie", "20": "podlaskie",
@@ -17,30 +19,6 @@ _BZP_ALT = re.compile(r"BZP\s*[/\-_ ]?\s*(\d{4})\s*[/\-_ ]\s*0*(\d{1,8})(?:\s*[/
 _KPO = re.compile(r"^KPOD\.(\d{2})\.(\d{2})-IW\.(\d{2})-(\d{4})/(\d{2})$")
 _OCID = re.compile(r"^ocds-148610-[0-9a-f-]{20,}$", re.I)
 _TED = re.compile(r"^\d{1,8}-\d{4}$")
-
-
-def digits(s) -> str:
-    return re.sub(r"\D", "", str(s or ""))
-
-
-def nip_valid(n: str | None) -> bool:
-    n = digits(n)
-    if len(n) != 10:
-        return False
-    w = (6, 5, 7, 2, 3, 4, 5, 6, 7)
-    s = sum(int(a) * b for a, b in zip(n, w)) % 11
-    return s != 10 and s == int(n[9])
-
-
-def regon_valid(r: str | None) -> bool:
-    r = digits(r)
-    if len(r) == 9:
-        w = (8, 9, 2, 3, 4, 5, 6, 7)
-    elif len(r) == 14:
-        w = (2, 4, 8, 5, 0, 9, 7, 3, 6, 1, 2, 4, 8)
-    else:
-        return False
-    return sum(int(a) * b for a, b in zip(r, w)) % 11 % 10 == int(r[-1])
 
 
 def norm_bzp(s: str | None) -> tuple[str, str | None] | None:

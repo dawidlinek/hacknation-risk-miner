@@ -1,0 +1,18 @@
+[
+ {
+  "key": "zw",
+  "label": "Zaprojektuj i wybuduj a samo wykonanie"
+ },
+ {
+  "key": "woj_late",
+  "label": "Które województwa najczęściej kończą po terminie?"
+ },
+ {
+  "key": "pfu_changes",
+  "label": "Jak często PFU kończy się dopłatą?"
+ },
+ {
+  "key": "single_offer",
+  "label": "Ile przetargów miało jedną ofertę?"
+ }
+]

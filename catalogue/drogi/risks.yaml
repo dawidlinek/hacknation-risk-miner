@@ -1,0 +1,22 @@
+# Sector pack drogi. The top-level risks R01–R18 are the same categories as in wod-kan (shared risk language across
+# sectors); road-specific sub-risks are proposed for expert review.
+schema_version: 1
+sector: drogi
+risks:
+- {id: R01, name: Niepełny lub niespójny zakres, status: proposed}
+- {id: R01.5, parent: R01, name: Nieujęte w przedmiarze roboty towarzyszące (zjazdy, przepusty pod zjazdami, oznakowanie), status: proposed}
+- {id: R02, name: Niedostateczne rozpoznanie stanu istniejącego, status: proposed}
+- {id: R02.4, parent: R02, name: Nośność podłoża i stan konstrukcji nawierzchni gorszy niż w dokumentacji, status: proposed}
+- {id: R03, name: Kolizje, dostęp do terenu i prawa do nieruchomości, status: proposed}
+- {id: R03.4, parent: R03, name: Niezinwentaryzowane uzbrojenie w pasie drogowym (sieci, kable), status: proposed}
+- {id: R04, name: Decyzje, pozwolenia i uzgodnienia zależne od podmiotów trzecich, status: proposed}
+- {id: R04.5, parent: R04, name: Zatwierdzenie projektu stałej i czasowej organizacji ruchu, decyzja ZRID, status: proposed}
+- {id: R06, name: Nierealistyczny harmonogram i nieuwzględnione zależności, status: proposed}
+- {id: R07, name: Nieprzewidziane zmiany i roboty dodatkowe, status: proposed}
+- {id: R08, name: Model wynagrodzenia niedopasowany do niepewności zakresu, status: proposed}
+- {id: R08.3, parent: R08, name: Ceny asfaltu i paliw a brak waloryzacji, status: proposed}
+- {id: R12, name: Niewystarczająca zdolność wykonawcy lub łańcucha dostaw, status: proposed}
+- {id: R13, name: Ryzyko finansowania, budżetu i płatności, status: proposed}
+- {id: R16, name: Warunki atmosferyczne i sezonowość robót, status: proposed}
+- {id: R16.2, parent: R16, name: Sezon robót bitumicznych (temperatura, opady), status: proposed}
+- {id: R17, name: Koordynacja z infrastrukturą i inwestycjami innych podmiotów, status: proposed}

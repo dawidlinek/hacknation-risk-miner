@@ -1,0 +1,139 @@
+{
+ "total": 217,
+ "limit": 50,
+ "offset": 0,
+ "items": [
+  {
+   "contract_id": 132789,
+   "ocid": "ocds-148610-432fe254-7e02-11ee-a60c-9ec5599dddc1",
+   "bzp_number": "2024/BZP 00009131",
+   "lot_no": 0,
+   "n_parts": 1,
+   "buyer_name": "GMINA LIMANOWA",
+   "title": "Budowa sieci kanalizacji zachodniej części gminy Limanowa. Etap I.",
+   "value": {
+    "amount": "13280022.18",
+    "currency": "PLN",
+    "vat_basis": "gross"
+   },
+   "signed_on": "2023-12-08",
+   "planned_end_on": "2025-06-08",
+   "days_overdue": {
+    "value": 531,
+    "display": "531 dni",
+    "unit": "days",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 1,
+     "method": "current_date - planned_end_on",
+     "refs": [
+      {
+       "kind": "notice",
+       "id": "2024/BZP 00009131",
+       "label": "ogł. o wyniku",
+       "field_code": "4.2"
+      }
+     ]
+    }
+   },
+   "n_change_notices": 0,
+   "has_performance": false,
+   "woj": "12",
+   "pow": "1207",
+   "gmi": "1207042",
+   "lon": 20.42,
+   "lat": 49.71,
+   "location_method": "buyer_name",
+   "watched": false
+  },
+  {
+   "contract_id": 144082,
+   "ocid": "ocds-148610-7ffd431d-1da8-11ef-a7c1-72acb4a2af8f",
+   "bzp_number": "2024/BZP 00506046",
+   "lot_no": 1,
+   "n_parts": 2,
+   "buyer_name": "Gmina Dobczyce",
+   "title": "Przebudowa i rozbudowa infrastruktury komunalnej na terenie gminy i miasta Dobczyce",
+   "value": {
+    "amount": "10945644.54",
+    "currency": "PLN",
+    "vat_basis": "gross"
+   },
+   "signed_on": "2024-08-14",
+   "planned_end_on": "2025-07-14",
+   "days_overdue": {
+    "value": 495,
+    "display": "495 dni",
+    "unit": "days",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 1,
+     "method": "current_date - planned_end_on",
+     "refs": [
+      {
+       "kind": "notice",
+       "id": "2024/BZP 00506046",
+       "label": "ogł. o wyniku",
+       "field_code": "4.2"
+      }
+     ]
+    }
+   },
+   "n_change_notices": 0,
+   "has_performance": false,
+   "woj": "12",
+   "pow": "1209",
+   "gmi": "1209014",
+   "lon": 20.08,
+   "lat": 49.88,
+   "location_method": "buyer_name",
+   "watched": false
+  },
+  {
+   "contract_id": 143520,
+   "ocid": "ocds-148610-f94a25a4-3723-4b11-85a3-5591467031e3",
+   "bzp_number": "2024/BZP 00477167",
+   "lot_no": 2,
+   "n_parts": 2,
+   "buyer_name": "GMINA LIMANOWA",
+   "title": "Modernizacja i rozbudowa systemu gospodarki komunalnej na terenie Gminy Limanowa",
+   "value": {
+    "amount": "10900000.00",
+    "currency": "PLN",
+    "vat_basis": "gross"
+   },
+   "signed_on": "2024-08-28",
+   "planned_end_on": "2025-12-28",
+   "days_overdue": {
+    "value": 328,
+    "display": "328 dni",
+    "unit": "days",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 1,
+     "method": "current_date - planned_end_on",
+     "refs": [
+      {
+       "kind": "notice",
+       "id": "2024/BZP 00477167",
+       "label": "ogł. o wyniku",
+       "field_code": "4.2"
+      }
+     ]
+    }
+   },
+   "n_change_notices": 1,
+   "has_performance": false,
+   "woj": "12",
+   "pow": "1207",
+   "gmi": "1207042",
+   "lon": 20.42,
+   "lat": 49.71,
+   "location_method": "buyer_name",
+   "watched": false
+  }
+ ]
+}

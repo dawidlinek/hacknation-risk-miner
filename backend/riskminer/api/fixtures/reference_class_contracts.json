@@ -1,0 +1,71 @@
+{
+ "total": 82,
+ "limit": 50,
+ "offset": 0,
+ "items": [
+  {
+   "ocid": "ocds-148610-4c21594c-96d0-11eb-86b1-a64936a8669f",
+   "title": "Remont zespołu podziemnych zbiorników na ścieki laboratoryjne i niskoaktywne",
+   "buyer_name": "Narodowe Centrum Badań Jądrowych",
+   "province": "PL14",
+   "value_gross": {
+    "amount": "5554126.50",
+    "currency": "PLN",
+    "vat_basis": "gross"
+   },
+   "planned_days": 147,
+   "actual_days": 278,
+   "delay_days": 131,
+   "cost_dev_pct": 4.1,
+   "notice_number": "2021/BZP 00116749/01"
+  },
+  {
+   "ocid": "ocds-148610-7045f947-7da2-11eb-86b1-a64936a8669f",
+   "title": "Budowa zbiorczej kanalizacji sanitarnej w miejscowościach Krężna, Kozierogi i Piekarki",
+   "buyer_name": "GMINA WOLA KRZYSZTOPORSKA",
+   "province": "PL10",
+   "value_gross": {
+    "amount": "7363221.58",
+    "currency": "PLN",
+    "vat_basis": "gross"
+   },
+   "planned_days": 549,
+   "actual_days": 627,
+   "delay_days": 78,
+   "cost_dev_pct": 1.4,
+   "notice_number": null
+  },
+  {
+   "ocid": "ocds-148610-7483ef1d-fe8d-11ec-9a86-f6f4c648a056",
+   "title": "Uzbrojenie wodno-kanalizacyjne Sianowskiego Obszaru Gospodarczego w obrębie m. Skibno",
+   "buyer_name": "Gmina Sianów",
+   "province": "PL32",
+   "value_gross": {
+    "amount": "5349050.00",
+    "currency": "PLN",
+    "vat_basis": "gross"
+   },
+   "planned_days": 134,
+   "actual_days": 263,
+   "delay_days": 129,
+   "cost_dev_pct": 0.0,
+   "notice_number": "2022/BZP 00336745/01"
+  },
+  {
+   "ocid": "ocds-148610-e789fa01-899e-11ec-94c8-de8df8ed9da1",
+   "title": "Poprawa gospodarki wodno-ściekowej na terenie gminy Iława",
+   "buyer_name": "Gmina Iława",
+   "province": "PL28",
+   "value_gross": {
+    "amount": "5998000.01",
+    "currency": "PLN",
+    "vat_basis": "gross"
+   },
+   "planned_days": 487,
+   "actual_days": 483,
+   "delay_days": 0,
+   "cost_dev_pct": 0.0,
+   "notice_number": null
+  }
+ ]
+}

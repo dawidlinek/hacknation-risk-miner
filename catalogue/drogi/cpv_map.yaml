@@ -1,0 +1,18 @@
+# Sector pack drogi: CPV codes of road works (BZP field 3.4 / 4.2.2).
+cpv_map:
+- {cpv: '45233000', subsector: null, strength: strong, label: Roboty w zakresie konstruowania, fundamentowania oraz wykonywania nawierzchni autostrad, dróg, status: proposed}
+- {cpv: '45233100', subsector: null, strength: strong, label: Roboty budowlane w zakresie budowy autostrad i dróg, status: proposed}
+- {cpv: '45233120', subsector: null, strength: strong, label: Roboty w zakresie budowy dróg, status: proposed}
+- {cpv: '45233140', subsector: null, strength: strong, label: Roboty drogowe, status: proposed}
+- {cpv: '45233142', subsector: null, strength: strong, label: Roboty w zakresie naprawy dróg, status: proposed}
+- {cpv: '45233160', subsector: CHOD, strength: strong, label: Ścieżki i inne nawierzchnie utwardzone, status: proposed}
+- {cpv: '45233161', subsector: CHOD, strength: strong, label: Roboty budowlane w zakresie ścieżek pieszych, status: proposed}
+- {cpv: '45233162', subsector: CHOD, strength: strong, label: Roboty budowlane w zakresie ścieżek rowerowych, status: proposed}
+- {cpv: '45233200', subsector: null, strength: medium, label: Roboty w zakresie różnych nawierzchni, status: proposed}
+- {cpv: '45233220', subsector: null, strength: medium, label: Roboty w zakresie nawierzchni dróg, status: proposed}
+- {cpv: '45233222', subsector: null, strength: medium, label: Roboty budowlane w zakresie układania chodników i asfaltowania, status: proposed}
+- {cpv: '45221100', subsector: MOST, strength: strong, label: Roboty budowlane w zakresie mostów, status: proposed}
+- {cpv: '45221110', subsector: MOST, strength: strong, label: Roboty budowlane w zakresie budowy mostów, status: proposed}
+- {cpv: '45221111', subsector: MOST, strength: strong, label: Roboty budowlane w zakresie mostów drogowych, status: proposed}
+- {cpv: '45221112', subsector: MOST, strength: strong, label: Roboty budowlane w zakresie mostów kolejowych / wiaduktów, status: proposed}
+- {cpv: '45221119', subsector: MOST, strength: medium, label: Roboty budowlane w zakresie renowacji mostów, status: proposed}

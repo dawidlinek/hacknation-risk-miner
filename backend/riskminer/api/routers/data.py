@@ -9,6 +9,7 @@ from fastapi import APIRouter, Depends, HTTPException, Query
 from fastapi.responses import HTMLResponse
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from riskminer.api import auth as A
 from riskminer.api import deps as D
 from riskminer.api import schemas as S
 from riskminer.db.session import get_session
@@ -70,58 +71,60 @@ async def sources_summary(db: AsyncSession = DB):
 _PROJECT_SQL = """
 SELECT p.*,
   (SELECT array_agg(pr.ocid ORDER BY pp.score DESC NULLS LAST) FROM project_procedure pp JOIN procedure pr ON pr.id=pp.procedure_id
-     WHERE pp.project_id=p.id) AS procedures,
-  (SELECT pp.method FROM project_procedure pp WHERE pp.project_id=p.id ORDER BY pp.score DESC NULLS LAST LIMIT 1) AS link_method,
-  (SELECT pp.score FROM project_procedure pp WHERE pp.project_id=p.id ORDER BY pp.score DESC NULLS LAST LIMIT 1) AS link_score,
+     WHERE pp.project_id=p.id AND pp.review_status <> 'rejected') AS procedures,
+  (SELECT pp.method FROM project_procedure pp WHERE pp.project_id=p.id AND pp.review_status <> 'rejected' ORDER BY pp.score DESC NULLS LAST LIMIT 1) AS link_method,
+  (SELECT pp.score FROM project_procedure pp WHERE pp.project_id=p.id AND pp.review_status <> 'rejected' ORDER BY pp.score DESC NULLS LAST LIMIT 1) AS link_score,
   (SELECT count(*) FROM review_item r WHERE r.project_id=p.id AND r.status='open') AS open_issues
 FROM project p
 """
 
 
-@router.get("/projects", response_model=S.Page[S.ProjectOut], summary="Projekty (filtry: q, województwo, podsektor, pilot)")
+@router.get("/projects", summary="Projekty z metrykami (filtry: q, województwo, podsektor, opóźnienie, rozbieżność, sortowanie)")
 async def list_projects(q: str | None = None, province: str | None = None, subsector: str | None = None,
-                        pilot: bool | None = None, limit: int = Query(100, le=1000), offset: int = 0,
-                        db: AsyncSession = DB):
-    where, params = ["true"], {"limit": limit, "offset": offset}
-    if q:
-        where.append("(p.title ILIKE :q OR p.beneficiary_name ILIKE :q OR p.rm_id ILIKE :q OR p.public_id ILIKE :q)")
-        params["q"] = f"%{q}%"
-    if province:
-        where.append("p.province = :province")
-        params["province"] = province
-    if subsector:
-        where.append("(p.subsector_main = :sub OR :sub = ANY(p.subsectors_extra))")
-        params["sub"] = subsector
-    if pilot is not None:
-        where.append("p.is_pilot = :pilot")
-        params["pilot"] = pilot
-    w = " AND ".join(where)
-    total = await D.scalar(db, f"SELECT count(*) FROM project p WHERE {w}", **params)
-    rs = await D.rows(db, f"{_PROJECT_SQL} WHERE {w} ORDER BY p.rm_id LIMIT :limit OFFSET :offset", **params)
-    return _page(total, limit, offset, [D.project(r) for r in rs])
+                        pilot: bool | None = None, late: bool | None = None, has_discrepancy: bool | None = None,
+                        to_review: bool | None = None, contractor_nip: str | None = None,
+                        sort: str | None = Query(None, pattern="^-?(delay_days|cost_dev_pct|value|rm_id)$"),
+                        rm_ids: str | None = None, limit: int = Query(100, le=1000), offset: int = 0,
+                        db: AsyncSession = DB, user: A.User | None = Depends(A.current_user)):
+    from riskminer.api import projects_read as PR
+    res = await PR.list_page(db, user, base_sql=_PROJECT_SQL, q=q, province=province, subsector=subsector, pilot=pilot, late=late,
+                             has_discrepancy=has_discrepancy, to_review=to_review, contractor_nip=contractor_nip, sort=sort,
+                             rm_ids=rm_ids, limit=limit, offset=offset)
+    items = []
+    for pid in res.get("ids", []):
+        r = res["rows"][pid]
+        out = D.project(r).model_dump()
+        if user is None:
+            out["open_issues"] = 0
+        out["metrics"] = PR.metrics_for(r, user, res["refs"].get(pid))
+        items.append(out)
+    return {"total": res["total"], "limit": limit, "offset": offset, "items": items, "facets": res["facets"]}
 
 
 @router.get("/projects/{rm_id}", response_model=S.ProjectDetailOut,
             summary="Karta projektu: powiązania, łańcuch ogłoszeń, umowy, zmiany, wykonanie, rozbieżności, źródła")
-async def get_project(rm_id: str, db: AsyncSession = DB):
+async def get_project(rm_id: str, db: AsyncSession = DB, user: A.User | None = Depends(A.current_user)):
     r = await D.one(db, f"{_PROJECT_SQL} WHERE p.rm_id = :rm", rm=rm_id)
     if not r:
         raise HTTPException(404, "project not found")
     base = D.project(r).model_dump()
     o = await D.one(db, "SELECT * FROM organization WHERE id = :id", id=r["beneficiary_org_id"]) if r["beneficiary_org_id"] else None
     links = await D.rows(db, """SELECT pp.*, pr.ocid FROM project_procedure pp JOIN procedure pr ON pr.id=pp.procedure_id
-                                WHERE pp.project_id=:id ORDER BY pp.score DESC NULLS LAST""", id=r["id"])
+                                WHERE pp.project_id=:id AND pp.review_status <> 'rejected' ORDER BY pp.score DESC NULLS LAST""", id=r["id"])
     cands = await D.rows(db, "SELECT * FROM link_candidate WHERE left_table='project' AND left_id=:id AND right_table='procedure' "
                              "ORDER BY rank NULLS LAST, score DESC", id=r["id"])
     ext_links = await D.rows(db, "SELECT * FROM link_candidate WHERE left_table='project' AND left_id=:id AND right_table<>'procedure' "
                                  "ORDER BY score DESC", id=r["id"])
     procs = [await _procedure_detail(db, l["ocid"]) for l in links]
-    issues = await D.rows(db, "SELECT r.*, :rm AS rm_id FROM review_item r WHERE project_id=:id ORDER BY severity, id",
-                          id=r["id"], rm=rm_id)
+    # public mode: the review queue is internal, unverified AI rows and confidential documents are hidden
+    issues = (await D.rows(db, "SELECT r.*, :rm AS rm_id FROM review_item r WHERE project_id=:id ORDER BY severity, id",
+                           id=r["id"], rm=rm_id)) if user else []
     checks = await D.rows(db, "SELECT * FROM source_check WHERE subject_type='project' AND subject_key=:rm ORDER BY source_kind",
                           rm=rm_id)
-    docs = await D.rows(db, "SELECT * FROM document WHERE project_id=:id ORDER BY doc_type, id", id=r["id"])
-    evs = await D.rows(db, "SELECT * FROM risk_event WHERE project_id=:id ORDER BY occurred_on NULLS LAST, id", id=r["id"])
+    docs = await D.rows(db, f"SELECT * FROM document d WHERE project_id=:id AND {A.public_doc_filter(user)} "
+                            f"AND {A.public_filter(user, 'd')} ORDER BY doc_type, id", id=r["id"])
+    evs = await D.rows(db, f"SELECT * FROM risk_event e WHERE project_id=:id AND {A.public_filter(user, 'e')} "
+                           "ORDER BY occurred_on NULLS LAST, id", id=r["id"])
     return S.ProjectDetailOut(
         risk_events=[D.risk_event(e) for e in evs],
         **base, organization=D.org(o) if o else None,
@@ -135,8 +138,8 @@ async def get_project(rm_id: str, db: AsyncSession = DB):
 
 
 @router.get("/projects/{rm_id}/timeline", response_model=list[S.TimelineEvent], summary="Przebieg projektu (oś czasu)")
-async def project_timeline(rm_id: str, db: AsyncSession = DB):
-    p = await get_project(rm_id, db)
+async def project_timeline(rm_id: str, db: AsyncSession = DB, user: A.User | None = Depends(A.current_user)):
+    p = await get_project(rm_id, db, user)
     ev: list[S.TimelineEvent] = []
     for pd in p.procedure_details:
         ev.extend(pd.timeline)
@@ -176,8 +179,8 @@ async def list_procedures(q: str | None = None, buyer_nip: str | None = None, pr
     if has_performance is not None:
         where.append(("" if has_performance else "NOT ") + "('CP' = ANY(p.notice_types))")
     if design_build is not None:
-        where.append("p.design_build = :db")
-        params["db"] = design_build
+        where.append("p.design_build = :dbuild")
+        params["dbuild"] = design_build
     w = " AND ".join(where)
     total = await D.scalar(db, f"SELECT count(*) FROM procedure p WHERE {w}", **params)
     rs = await D.rows(db, f"SELECT * FROM procedure p WHERE {w} ORDER BY p.first_published_on DESC NULLS LAST, p.id "
@@ -424,7 +427,8 @@ async def get_org(nip: str, db: AsyncSession = DB):
 
 # ------------------------------------------------------------------------------- sources & runs
 
-@router.get("/sources", response_model=S.Page[S.SourceOut], summary="Pobrane artefakty (1 wiersz = 1 linia manifestu)")
+@router.get("/sources", response_model=S.Page[S.SourceOut], summary="Pobrane artefakty (1 wiersz = 1 linia manifestu)",
+            dependencies=[Depends(A.require_login)])
 async def list_sources(kind: str | None = None, status: str | None = None, limit: int = Query(100, le=1000),
                        offset: int = 0, db: AsyncSession = DB):
     where, params = ["true"], {"limit": limit, "offset": offset}
@@ -448,7 +452,8 @@ async def get_source(source_id: int, db: AsyncSession = DB):
     return S.SourceOut(**r)
 
 
-@router.get("/runs", response_model=S.Page[S.RunOut], summary="Przebiegi konektorów/importerów (ingestion_run)")
+@router.get("/runs", response_model=S.Page[S.RunOut], summary="Przebiegi konektorów/importerów (ingestion_run)",
+            dependencies=[Depends(A.require_login)])
 async def list_runs(connector: str | None = None, limit: int = Query(50, le=500), offset: int = 0, db: AsyncSession = DB):
     where, params = ["true"], {"limit": limit, "offset": offset}
     if connector:
@@ -462,7 +467,8 @@ async def list_runs(connector: str | None = None, limit: int = Query(50, le=500)
 
 # ------------------------------------------------------------------------- links, review, evidence
 
-@router.get("/link-candidates", response_model=S.Page[S.LinkCandidateOut], summary="Kandydaci powiązań z cechami i wynikiem")
+@router.get("/link-candidates", response_model=S.Page[S.LinkCandidateOut], summary="Kandydaci powiązań z cechami i wynikiem",
+            dependencies=[Depends(A.require_login)])
 async def list_link_candidates(rm_id: str | None = None, method: str | None = None, decision: str | None = None,
                                limit: int = Query(100, le=1000), offset: int = 0, db: AsyncSession = DB):
     where, params = ["true"], {"limit": limit, "offset": offset}
@@ -482,25 +488,7 @@ async def list_link_candidates(rm_id: str | None = None, method: str | None = No
     return _page(total, limit, offset, [S.LinkCandidateOut(**r) for r in rs])
 
 
-@router.get("/review-items", response_model=S.Page[S.ReviewItemOut], summary="Kolejka eksperta: rozbieżności, powiązania, zdarzenia")
-async def list_review_items(kind: str | None = None, status: str | None = "open", rm_id: str | None = None,
-                            limit: int = Query(100, le=1000), offset: int = 0, db: AsyncSession = DB):
-    where, params = ["true"], {"limit": limit, "offset": offset}
-    if kind:
-        where.append("r.kind = :kind")
-        params["kind"] = kind
-    if status:
-        where.append("r.status = :status")
-        params["status"] = status
-    if rm_id:
-        where.append("p.rm_id = :rm")
-        params["rm"] = rm_id
-    w = " AND ".join(where)
-    j = "review_item r LEFT JOIN project p ON p.id = r.project_id"
-    total = await D.scalar(db, f"SELECT count(*) FROM {j} WHERE {w}", **params)
-    rs = await D.rows(db, f"SELECT r.*, p.rm_id FROM {j} WHERE {w} ORDER BY p.rm_id NULLS LAST, r.id "
-                          "LIMIT :limit OFFSET :offset", **params)
-    return _page(total, limit, offset, [S.ReviewItemOut(**r) for r in rs])
+# GET /api/review-items moved to routers/review.py (login only, extended)
 
 
 @router.get("/evidence", response_model=list[S.EvidenceOut], summary="Dowody dla rekordu (tabela, id)")
@@ -552,8 +540,9 @@ async def list_source_checks(source_kind: str | None = None, subject_key: str | 
 
 @router.get("/documents", response_model=S.Page[S.DocumentOut], summary="Dokumenty (i stany dowodowe brakujących)")
 async def list_documents(rm_id: str | None = None, doc_type: str | None = None, fetch_state: str | None = None,
-                         limit: int = Query(100, le=1000), offset: int = 0, db: AsyncSession = DB):
-    where, params = ["true"], {"limit": limit, "offset": offset}
+                         limit: int = Query(100, le=1000), offset: int = 0, db: AsyncSession = DB,
+                         user: A.User | None = Depends(A.current_user)):
+    where, params = [A.public_doc_filter(user, "document"), A.public_filter(user, "document")], {"limit": limit, "offset": offset}
     if rm_id:
         where.append("project_id = (SELECT id FROM project WHERE rm_id=:rm)")
         params["rm"] = rm_id
@@ -570,11 +559,14 @@ async def list_documents(rm_id: str | None = None, doc_type: str | None = None, 
 
 
 @router.get("/catalogue/{table}", summary="Katalog wiedzy (pakiet sektorowy): risk | subsector | cpv_map | doc_type | checklist | clause | entry")
-async def catalogue(table: str, sector: str = "wod-kan", status: str | None = None, db: AsyncSession = DB) -> list[dict[str, Any]]:
+async def catalogue(table: str, sector: str = "wod-kan", status: str | None = None, db: AsyncSession = DB,
+                    user: A.User | None = Depends(A.current_user)) -> list[dict[str, Any]]:
     allowed = {"risk", "subsector", "cpv_map", "doc_type", "checklist", "clause", "entry"}
     if table not in allowed:
         raise HTTPException(404, f"unknown catalogue table; use one of {sorted(allowed)}")
     where, params = ["sector = :sector"], {"sector": sector}
+    if user is None:
+        status = "approved"  # public: approved rows only
     if status:
         where.append("status = :status")
         params["status"] = status
@@ -585,8 +577,9 @@ async def catalogue(table: str, sector: str = "wod-kan", status: str | None = No
             summary="Zdarzenia ryzyka (deterministyczne z pól BZP = CALC; propozycje AI = AI)")
 async def list_risk_events(event_type: str | None = None, catalogue_code: str | None = None, rm_id: str | None = None,
                            ocid: str | None = None, origin: str | None = None, review_status: str | None = None,
-                           limit: int = Query(100, le=1000), offset: int = 0, db: AsyncSession = DB):
-    where, params = ["true"], {"limit": limit, "offset": offset}
+                           limit: int = Query(100, le=1000), offset: int = 0, db: AsyncSession = DB,
+                           user: A.User | None = Depends(A.current_user)):
+    where, params = [A.public_filter(user, "e")], {"limit": limit, "offset": offset}
     for col, val in (("e.event_type", event_type), ("e.catalogue_code", catalogue_code), ("e.origin", origin),
                      ("e.review_status", review_status)):
         if val:

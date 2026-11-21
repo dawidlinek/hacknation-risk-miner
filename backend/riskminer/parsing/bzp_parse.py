@@ -85,6 +85,8 @@ class Entry:
     section: str           # the enclosing <h2> title, e.g. "SEKCJA IV – ..."
     criterion: int | None = None
     seq: int = 0           # position in document
+    start: int = -1        # absolute offset in the notice's htmlBody where this field's <h3> starts
+    end: int = -1          # absolute offset where its value ends (next heading); html_to_text(html[start:end]) = label + value
 
 
 @dataclass
@@ -154,6 +156,7 @@ def parse_html(html: str) -> ParsedNotice:
     a = html.find("<main>")
     b = html.rfind("</main>")
     body = html[a + 6 : b] if a >= 0 and b > a else html
+    base = a + 6 if a >= 0 and b > a else 0          # body offset inside html (for Entry.start/end)
     m = re.search(r"<!--\s*Version\s+([\d.]+)\s*-->", body)
     pn.template_version = m.group(1) if m else None
 
@@ -164,7 +167,8 @@ def parse_html(html: str) -> ParsedNotice:
     for i, h in enumerate(heads):
         tag = h.group(1).lower()
         inner = h.group(2)
-        tail_html = body[h.end() : heads[i + 1].start() if i + 1 < len(heads) else len(body)]
+        nxt = heads[i + 1].start() if i + 1 < len(heads) else len(body)
+        tail_html = body[h.end() : nxt]
         if tag == "h1":
             pn.title = html_to_text(inner).replace("\n", " / ")
             continue
@@ -206,7 +210,7 @@ def parse_html(html: str) -> ParsedNotice:
             if rest.strip() and len(lab) < 200:
                 label, value = lab.strip(), rest.strip()
         label = label.rstrip(" :").strip()
-        pn.entries.append(Entry(code, label, value, part, section, crit, len(pn.entries)))
+        pn.entries.append(Entry(code, label, value, part, section, crit, len(pn.entries), base + h.start(), base + nxt))
     return pn
 
 

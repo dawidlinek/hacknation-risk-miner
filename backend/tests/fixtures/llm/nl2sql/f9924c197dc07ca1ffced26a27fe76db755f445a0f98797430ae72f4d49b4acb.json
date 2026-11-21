@@ -1,0 +1,13 @@
+{
+ "task": "nl2sql",
+ "provider": "gemini",
+ "model": "gemini-3.8-flash",
+ "prompt_version": "nl2sql@v1+0f475312",
+ "sensitivity": "public",
+ "text": "{\n  \"sql\": \"SELECT cause_ai, count(*) AS n, round(100.0 * count(*) / sum(count(*)) OVER (), 1) AS pct FROM v_ask_change WHERE is_works AND cause_ai IS NOT NULL GROUP BY cause_ai ORDER BY n DESC\",\n  \"answer_template\": \"Najczęstszą przyczyną zmian według modelu jest {cause_ai}, która odpowiada za {pct}% z {n} sklasyfikowanych zmian.\",\n  \"bars\": {\n    \"label_col\": \"cause_ai\",\n    \"value_col\": \"n\"\n  },\n  \"title\": \"Najczęstsze przyczyny zmian według modelu\",\n  \"cannot_answer\": null\n}",
+ "tokens_in": 1185,
+ "tokens_out": 165,
+ "tokens_cached": 0,
+ "tokens_thought": 0,
+ "finish_reason": "FinishReason.STOP"
+}

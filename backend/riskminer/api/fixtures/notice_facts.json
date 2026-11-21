@@ -1,0 +1,44 @@
+{
+ "rows": [
+  {
+   "field_code": "4.4",
+   "label": "wartość zmiany",
+   "value": "+758 084,56 zł brutto",
+   "prov": {
+    "role": "source",
+    "review_status": "auto",
+    "refs": [
+     {
+      "kind": "notice",
+      "id": "2024/BZP 00554831/01",
+      "label": "pole 4.4",
+      "field_code": "4.4"
+     }
+    ]
+   }
+  },
+  {
+   "field_code": "5.3",
+   "label": "przyczyna zmiany",
+   "value": "Roboty nieprzewidziane w PFU, niezbędne do wykonania przedmiotu umowy.",
+   "prov": {
+    "role": "source",
+    "review_status": "auto",
+    "refs": [
+     {
+      "kind": "notice",
+      "id": "2024/BZP 00554831/01",
+      "label": "pole 5.3",
+      "field_code": "5.3"
+     }
+    ]
+   }
+  }
+ ],
+ "meta": {
+  "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/...",
+  "retrieved_at": "2026-11-12T00:00:00Z",
+  "sha256": "…",
+  "licence": "informacja publiczna"
+ }
+}

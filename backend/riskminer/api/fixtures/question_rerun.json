@@ -1,0 +1,193 @@
+{
+ "before": {
+  "id": "qd_51a2",
+  "code": "Q-2026-0004",
+  "role": "calc",
+  "role_label": "obliczenie",
+  "text": "Umowy w formule zaprojektuj i wybuduj kończą się po terminie częściej: 45,0% wobec 27,6% przy samym wykonaniu.",
+  "bars": [
+   {
+    "label": "zaprojektuj i wybuduj",
+    "value": 45.0,
+    "display": "45,0%",
+    "highlight": true
+   },
+   {
+    "label": "samo wykonanie",
+    "value": 27.6,
+    "display": "27,6%",
+    "highlight": false
+   }
+  ],
+  "numbers": [
+   {
+    "value": 0.45,
+    "display": "45,0%",
+    "unit": "share",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 1464,
+     "method": "sql",
+     "refs": [
+      {
+       "kind": "query",
+       "id": "v_ask_contract:design_build=true",
+       "label": "1 464 umowy ZiW"
+      }
+     ]
+    }
+   },
+   {
+    "value": 0.276,
+    "display": "27,6%",
+    "unit": "share",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 10110,
+     "method": "sql",
+     "refs": [
+      {
+       "kind": "query",
+       "id": "v_ask_contract:design_build=false",
+       "label": "10 110 umów"
+      }
+     ]
+    }
+   }
+  ],
+  "method": {
+   "kind": "sql",
+   "view": "v_ask_contract",
+   "sql": "SELECT design_build, count(*) AS n, avg(late::int) AS late_share FROM v_ask_contract GROUP BY design_build"
+  },
+  "sources": [
+   {
+    "kind": "query",
+    "id": "v_ask_contract",
+    "label": "n = 11 574"
+   }
+  ],
+  "n": 11574,
+  "missing": [],
+  "actions": [
+   {
+    "kind": "save",
+    "label": "Zapisz jako rekord"
+   },
+   {
+    "kind": "export_csv",
+    "label": "Pobierz CSV",
+    "href": "/api/questions/qd_51a2/rows.csv"
+   },
+   {
+    "kind": "open_list",
+    "label": "Pokaż umowy",
+    "href": "/projekty?zakres=umowy&formula=zw"
+   }
+  ],
+  "apply": null,
+  "processing": {
+   "provider": "gemini",
+   "model": "gemini-3.8-flash",
+   "data_location": "global (Gemini Developer API)"
+  }
+ },
+ "after": {
+  "id": "qd_51a3",
+  "code": "Q-2026-0004",
+  "role": "calc",
+  "role_label": "obliczenie",
+  "text": "Umowy w formule zaprojektuj i wybuduj kończą się po terminie częściej: 45,0% wobec 27,6% przy samym wykonaniu.",
+  "bars": [
+   {
+    "label": "zaprojektuj i wybuduj",
+    "value": 45.0,
+    "display": "45,0%",
+    "highlight": true
+   },
+   {
+    "label": "samo wykonanie",
+    "value": 27.6,
+    "display": "27,6%",
+    "highlight": false
+   }
+  ],
+  "numbers": [
+   {
+    "value": 0.45,
+    "display": "45,0%",
+    "unit": "share",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 1464,
+     "method": "sql",
+     "refs": [
+      {
+       "kind": "query",
+       "id": "v_ask_contract:design_build=true",
+       "label": "1 464 umowy ZiW"
+      }
+     ]
+    }
+   },
+   {
+    "value": 0.276,
+    "display": "27,6%",
+    "unit": "share",
+    "prov": {
+     "role": "calc",
+     "review_status": "auto",
+     "n": 10110,
+     "method": "sql",
+     "refs": [
+      {
+       "kind": "query",
+       "id": "v_ask_contract:design_build=false",
+       "label": "10 110 umów"
+      }
+     ]
+    }
+   }
+  ],
+  "method": {
+   "kind": "sql",
+   "view": "v_ask_contract",
+   "sql": "SELECT design_build, count(*) AS n, avg(late::int) AS late_share FROM v_ask_contract GROUP BY design_build"
+  },
+  "sources": [
+   {
+    "kind": "query",
+    "id": "v_ask_contract",
+    "label": "n = 11 574"
+   }
+  ],
+  "n": 11574,
+  "missing": [],
+  "actions": [
+   {
+    "kind": "save",
+    "label": "Zapisz jako rekord"
+   },
+   {
+    "kind": "export_csv",
+    "label": "Pobierz CSV",
+    "href": "/api/questions/qd_51a2/rows.csv"
+   },
+   {
+    "kind": "open_list",
+    "label": "Pokaż umowy",
+    "href": "/projekty?zakres=umowy&formula=zw"
+   }
+  ],
+  "apply": null,
+  "processing": {
+   "provider": "gemini",
+   "model": "gemini-3.8-flash",
+   "data_location": "global (Gemini Developer API)"
+  }
+ },
+ "changed": false
+}

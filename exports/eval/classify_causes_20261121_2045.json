@@ -1,0 +1,258 @@
+{
+ "gold_sha256": "3ec113a625316525edd4b10803cff4e5fce9d05c5b2e39ba5ae1c07bad410f14",
+ "prompt_version": "classify_causes@v1+be62e5e4",
+ "results": [
+  {
+   "alias": "emergency",
+   "provider": "openrouter",
+   "model": "mistralai/mistral-medium-3-5",
+   "variant": "packed25",
+   "n": 150,
+   "metrics": {
+    "accuracy": 0.78,
+    "accuracy_ci95": [
+     0.707,
+     0.84
+    ],
+    "accuracy_primary_or_secondary": 0.853,
+    "accuracy_ps_ci95": [
+     0.793,
+     0.907
+    ],
+    "macro_f1_support3": 0.767,
+    "macro_f1_all": 0.73,
+    "kappa": 0.7546,
+    "quotes_verified": 0.86,
+    "json_missing": 0,
+    "latency_p50_ms": 10024,
+    "latency_p95_ms": 11285,
+    "wall_s": 11.6,
+    "cost_usd": 0.1198,
+    "cost_per_1000_usd": 0.799,
+    "calls": 6
+   },
+   "per_class": {
+    "N-CLIENT": {
+     "support": 6,
+     "tp": 4,
+     "precision": 0.667,
+     "recall": 0.667,
+     "f1": 0.667
+    },
+    "N-COVID": {
+     "support": 5,
+     "tp": 5,
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0
+    },
+    "N-FORMAL": {
+     "support": 5,
+     "tp": 5,
+     "precision": 0.833,
+     "recall": 1.0,
+     "f1": 0.909
+    },
+    "N-LAW": {
+     "support": 0,
+     "tp": 0,
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0
+    },
+    "N-PRICE": {
+     "support": 2,
+     "tp": 2,
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0
+    },
+    "N-SCOPE-RED": {
+     "support": 2,
+     "tp": 2,
+     "precision": 0.5,
+     "recall": 1.0,
+     "f1": 0.667
+    },
+    "N-UNSPEC": {
+     "support": 16,
+     "tp": 13,
+     "precision": 0.765,
+     "recall": 0.812,
+     "f1": 0.788
+    },
+    "R01": {
+     "support": 11,
+     "tp": 5,
+     "precision": 0.625,
+     "recall": 0.455,
+     "f1": 0.526
+    },
+    "R02": {
+     "support": 19,
+     "tp": 18,
+     "precision": 0.72,
+     "recall": 0.947,
+     "f1": 0.818
+    },
+    "R03": {
+     "support": 11,
+     "tp": 6,
+     "precision": 1.0,
+     "recall": 0.545,
+     "f1": 0.706
+    },
+    "R04": {
+     "support": 9,
+     "tp": 9,
+     "precision": 0.75,
+     "recall": 1.0,
+     "f1": 0.857
+    },
+    "R06": {
+     "support": 0,
+     "tp": 0,
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0
+    },
+    "R07": {
+     "support": 33,
+     "tp": 27,
+     "precision": 0.844,
+     "recall": 0.818,
+     "f1": 0.831
+    },
+    "R08": {
+     "support": 5,
+     "tp": 1,
+     "precision": 1.0,
+     "recall": 0.2,
+     "f1": 0.333
+    },
+    "R09": {
+     "support": 5,
+     "tp": 2,
+     "precision": 0.667,
+     "recall": 0.4,
+     "f1": 0.5
+    },
+    "R10": {
+     "support": 2,
+     "tp": 0,
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0
+    },
+    "R12": {
+     "support": 6,
+     "tp": 6,
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0
+    },
+    "R13": {
+     "support": 4,
+     "tp": 3,
+     "precision": 1.0,
+     "recall": 0.75,
+     "f1": 0.857
+    },
+    "R16": {
+     "support": 9,
+     "tp": 9,
+     "precision": 0.9,
+     "recall": 1.0,
+     "f1": 0.947
+    },
+    "R17": {
+     "support": 0,
+     "tp": 0,
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0
+    }
+   },
+   "confusion": {
+    "R16": {
+     "R16": 9
+    },
+    "R07": {
+     "R07": 27,
+     "N-CLIENT": 1,
+     "R04": 1,
+     "R01": 1,
+     "R02": 1,
+     "N-UNSPEC": 1,
+     "N-SCOPE-RED": 1
+    },
+    "N-COVID": {
+     "N-COVID": 5
+    },
+    "R02": {
+     "R02": 18,
+     "R07": 1
+    },
+    "R12": {
+     "R12": 6
+    },
+    "R03": {
+     "R02": 4,
+     "R03": 6,
+     "N-SCOPE-RED": 1
+    },
+    "N-UNSPEC": {
+     "N-UNSPEC": 13,
+     "R04": 1,
+     "N-FORMAL": 1,
+     "R16": 1
+    },
+    "R01": {
+     "R07": 4,
+     "R01": 5,
+     "R02": 1,
+     "N-CLIENT": 1
+    },
+    "R04": {
+     "R04": 9
+    },
+    "R10": {
+     "R01": 1,
+     "R04": 1
+    },
+    "N-SCOPE-RED": {
+     "N-SCOPE-RED": 2
+    },
+    "R09": {
+     "R09": 2,
+     "N-UNSPEC": 1,
+     "R02": 1,
+     "R01": 1
+    },
+    "R13": {
+     "R13": 3,
+     "N-LAW": 1
+    },
+    "R08": {
+     "N-UNSPEC": 2,
+     "R10": 1,
+     "R06": 1,
+     "R08": 1
+    },
+    "N-PRICE": {
+     "N-PRICE": 2
+    },
+    "N-CLIENT": {
+     "N-CLIENT": 4,
+     "R09": 1,
+     "R17": 1
+    },
+    "N-FORMAL": {
+     "N-FORMAL": 5
+    }
+   },
+   "run": "eval:emergency:packed25:1795290308",
+   "data_location": "global (OpenRouter, routed to upstream providers)"
+  }
+ ]
+}
