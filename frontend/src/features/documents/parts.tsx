@@ -186,8 +186,7 @@ export function FileDrop({
       <legend className="sr-only">Dodawanie dokumentów</legend>
       <span className="text-[15px] font-semibold">Upuść PDF, DOCX albo ZIP</span>
       <span className="max-w-[460px] text-[13px] text-muted">
-        Agent importu rozpozna typ dokumentu, przypisze go do projektu i zaproponuje fakty do przeglądu. Nic
-        nie trafi do karty bez Twojej decyzji.
+        Agent importu rozpozna typ dokumentu, przypisze go do projektu i zaproponuje fakty do przeglądu.
       </span>
       <input
         ref={input}

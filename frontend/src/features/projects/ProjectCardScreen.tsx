@@ -65,6 +65,13 @@ export function ProjectCardScreen({ id }: { id: string }) {
               ))}
             </div>
           ) : null}
+          {chat ? (
+            <ChatPanel
+              context="project"
+              ask={(q) => askProject(card.id, q)}
+              placeholder="Zadaj pytanie o ten projekt"
+            />
+          ) : null}
           {card.timeline.length === 0 ? (
             <EmptyState>Brak ogłoszeń powiązanych z projektem.</EmptyState>
           ) : (
@@ -86,13 +93,6 @@ export function ProjectCardScreen({ id }: { id: string }) {
               ))}
             </StepList>
           )}
-          {chat && /^RM-/.test(card.id) ? (
-            <ChatPanel
-              context="project"
-              ask={(q) => askProject(card.id, q)}
-              placeholder="Zadaj pytanie o ten projekt"
-            />
-          ) : null}
         </>
       }
       aside={

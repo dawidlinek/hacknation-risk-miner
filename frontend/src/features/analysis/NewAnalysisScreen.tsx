@@ -14,7 +14,7 @@ import {
   useState,
 } from 'react'
 import { toast } from 'sonner'
-import { ApiError, contractFetch } from '@/api/client'
+import { ApiError } from '@/api/client'
 import type { FollowUp, UploadedDocument } from '@/api/contracts/analyses'
 import { Page } from '@/app/Page'
 import { OriginMarker } from '@/components/common/ProvenanceTag'
@@ -46,12 +46,13 @@ const onEnter = (fn: () => void) => (e: ReactKeyboardEvent<HTMLElement>) => {
   }
 }
 
-/** National count for the lead sentence (API value only; the sentence works without it). */
-const headlineQuery = {
-  queryKey: ['analytics', 'headline'] as const,
-  queryFn: () => contractFetch<{ completed?: { value: number; display: string } }>('/api/analytics/headline'),
-  staleTime: 30 * 60_000,
-}
+/** One-click example description (user request: "add one button to fill out examples"). */
+const EXAMPLE_TEXT =
+  'Budowa kanalizacji sanitarnej w gminie wiejskiej: ok. 6,2 km sieci grawitacyjnej i tłocznej z 3 przepompowniami ścieków ' +
+  'oraz przyłączami do 140 budynków. Formuła zaprojektuj i wybuduj, wartość szacunkowa ok. 7,4 mln zł brutto, ' +
+  'termin realizacji 14 miesięcy od podpisania umowy. Finansowanie: program FEnIKS, wkład własny gminy 15%. ' +
+  'Trasa częściowo w pasie drogi powiatowej, w rejonie wysokiego poziomu wód gruntowych, z przejściem pod ciekiem. ' +
+  'Wynagrodzenie ryczałtowe, kary umowne 0,1% za dzień zwłoki, gwarancja 60 miesięcy.'
 
 const JellySite = lazy(() => import('../jelly/JellySite').then((m) => ({ default: m.JellySite })))
 
@@ -189,7 +190,6 @@ export function NewAnalysisScreen({ fromId }: { fromId?: string }) {
   const d = draft.data
   const status = d ? aiStatusLine(d) : null
   const jelly = useFeature('jelly')
-  const headline = useQuery(headlineQuery)
   const blocked = !canRun(text, docIds, uploading)
   return (
     // A1 mockup: one centred 780 px column, building site, centred question, composer card, chips, centred run button
@@ -204,11 +204,6 @@ export function NewAnalysisScreen({ fromId }: { fromId?: string }) {
         <h1 className="t-display m-0 outline-none" tabIndex={-1} data-page-title>
           Co planujesz zbudować?
         </h1>
-        <p className="m-0 max-w-[560px] text-[17px] text-text-muted">
-          {headline.data?.completed?.value
-            ? `Opisz inwestycję albo wrzuć PFU. Sprawdzimy, jak kończyło się ${headline.data.completed.display} wykonanych umów wod-kan w Polsce.`
-            : 'Opisz inwestycję albo wrzuć PFU. Sprawdzimy, jak kończyły się wykonane umowy wod-kan w Polsce.'}
-        </p>
       </div>
       <form
         className="flex flex-col gap-7"
@@ -286,6 +281,9 @@ export function NewAnalysisScreen({ fromId }: { fromId?: string }) {
         ) : null}
 
         <div className="flex flex-col items-center gap-2">
+          <Button type="button" variant="outline" size="sm" onClick={() => setText(EXAMPLE_TEXT)}>
+            Wypełnij przykładem
+          </Button>
           <Button
             type="submit"
             size="xl"
