@@ -45,7 +45,6 @@ export function adaptAnswer(raw: RealAnswer, question: string): AskAnswer {
     ...(raw.n !== null && raw.n !== undefined && !(raw.sources ?? []).some((s) => /n = /.test(s.label))
       ? [`n = ${raw.n}`]
       : []),
-    ...(raw.missing ?? []).map((m) => `brakuje: ${m}`),
   ]
   return {
     id: raw.id,

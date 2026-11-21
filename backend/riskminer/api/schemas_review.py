@@ -28,6 +28,9 @@ class ReviewItemRow(BaseModel):
     created_at: datetime
     resolved_by: str | None = None
     resolved_at: datetime | None = None
+    type: str | None = Field(None, description="rodzaj w obrębie kategorii: event_type zdarzenia albo kod sprawy")
+    type_label: str | None = None
+    strength: dict[str, Any] | None = Field(None, description="siła dowodu: level ready | check | weak, label po polsku")
 
 
 class DecisionIn(BaseModel):

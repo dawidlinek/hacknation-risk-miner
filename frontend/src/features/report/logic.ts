@@ -106,6 +106,35 @@ export function sortFlags(flags: ReportFlag[]): ReportFlag[] {
   return [...kept.filter((f) => f.origin === 'CALC'), ...kept.filter((f) => f.origin !== 'CALC')]
 }
 
+/**
+ * Identical warnings found on several pages (same title, text, origin and review state) show once; their meta lines
+ * merge when only the last part (the page) differs: "R03.3, reguła, PFU s. 2" + "... PFU s. 6" -> "..., PFU s. 2, PFU s. 6".
+ */
+export function groupFlags(flags: ReportFlag[]): ReportFlag[] {
+  const out: ReportFlag[] = []
+  const metas = new Map<string, string[]>()
+  for (const f of flags) {
+    const key = [f.title, f.text, f.origin, f.review_status].join('|')
+    const seen = metas.get(key)
+    if (seen) {
+      seen.push(f.meta)
+      continue
+    }
+    metas.set(key, [f.meta])
+    out.push(f)
+  }
+  return out.map((f) => {
+    const all = metas.get([f.title, f.text, f.origin, f.review_status].join('|')) ?? [f.meta]
+    if (all.length === 1) return f
+    const head = (m: string) => m.split(', ').slice(0, -1).join(', ')
+    const same = all.every((m) => head(m) === head(all[0]) && head(m) !== '')
+    const meta = same
+      ? `${head(all[0])}, ${[...new Set(all.map((m) => m.split(', ').at(-1)))].join(', ')}`
+      : [...new Set(all)].join('; ')
+    return { ...f, meta }
+  })
+}
+
 export function flagHref(id: string, f: ReportFlag): string | null {
   if (!f.doc) return null
   const hash = f.doc.note_no ? `#u${f.doc.note_no}` : ''

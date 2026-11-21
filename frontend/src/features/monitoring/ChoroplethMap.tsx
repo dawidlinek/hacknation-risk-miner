@@ -59,6 +59,9 @@ export interface ChoroplethMapProps {
   onUp: () => void
 }
 
+/** Pills shown on the powiat map without pins; signals arrive sorted by days overdue. */
+const PILL_CAP = 12
+
 function emptyFC(): GeoFC {
   return { type: 'FeatureCollection', features: [] }
 }
@@ -256,13 +259,14 @@ export function ChoroplethMap(p: ChoroplethMapProps) {
         : [],
     [target.level, gmiLabels.data, gmi.data],
   )
-  const stacks = useMemo(() => pillStacks(p.signals), [p.signals])
+  // powiat map: "+N d" pills for the longest overdue signals (D2s-Powiat), all of them with pins on, plus the selected one
   const pillSignals =
     idle && target.level >= 2
       ? p.showPins
         ? p.signals
-        : p.signals.filter((s) => s.id === target.signalId)
+        : p.signals.filter((s, i) => i < PILL_CAP || s.id === target.signalId)
       : []
+  const stacks = pillStacks(pillSignals)
 
   return (
     <div className="relative h-full w-full overflow-hidden rounded-card bg-surface">
@@ -387,7 +391,7 @@ export function ChoroplethMap(p: ChoroplethMapProps) {
                 longitude={s.lon as number}
                 latitude={s.lat as number}
                 anchor="bottom"
-                offset={[0, -(stacks.get(s.id) ?? 0) * 14]}
+                offset={[0, -(stacks.get(s.id) ?? 0) * 24]}
               >
                 <button
                   type="button"

@@ -7,11 +7,9 @@ import { ApiError } from '@/api/client'
 import type { ImportSession } from '@/api/contracts/import'
 import { Page, PageHeader, TwoCol } from '@/app/Page'
 import { useSession } from '@/auth/session'
-import { EmptyState } from '@/components/common/DataState'
 import { Button } from '@/components/ui/button'
 import { Progress } from '@/components/ui/progress'
 import { cn } from '@/lib/cn'
-import { fmtDateTime } from '@/lib/dates'
 import {
   answerQuestion,
   approveImport,
@@ -21,7 +19,6 @@ import {
   jobQuery,
   proposeMapping,
   runImport,
-  runsQuery,
   startEnrich,
   testRun,
   uploadFiles,
@@ -249,6 +246,7 @@ function AgentThread({ initial, onDone }: { initial: ImportSession; onDone: () =
           {failed ? (
             <span className="text-attention-text">{job.data?.error ?? 'Import zakończył się błędem.'}</span>
           ) : null}
+          {job.data?.status === 'done' ? <ImportedProjects result={job.data.result} /> : null}
         </div>
       ) : null}
       {busy ? (
@@ -257,6 +255,41 @@ function AgentThread({ initial, onDone }: { initial: ImportSession; onDone: () =
         </span>
       ) : null}
     </section>
+  )
+}
+
+type LinkedRow = { rm_id: string; method: string | null; score: number | null }
+const LINK_METHOD: Record<string, string> = {
+  exact_id: 'numer ogłoszenia BZP',
+  cross_reference: 'numer powołany w późniejszych ogłoszeniach',
+  kpo_cited: 'numer KPO w ogłoszeniach zamawiającego',
+  fuzzy: 'NIP, nazwa, CPV i data',
+}
+
+/** After the run: each imported record, its BZP link (method, score) and a link to its card. */
+export function ImportedProjects({ result }: { result: Record<string, unknown> | null }) {
+  const ids = Array.isArray(result?.projects) ? (result.projects as string[]) : []
+  if (ids.length === 0) return null
+  const link = (result?.link ?? {}) as { link?: { per_project?: LinkedRow[] }; events?: number }
+  const per = new Map((link.link?.per_project ?? []).map((r) => [r.rm_id, r]))
+  return (
+    <ul className="m-0 flex list-none flex-col gap-1.5 p-0" aria-label="Zaimportowane projekty">
+      {ids.map((id) => {
+        const r = per.get(id)
+        return (
+          <li key={id} className="flex flex-wrap items-baseline gap-x-3 gap-y-1 text-[14px]">
+            <Link to="/projekty/$id" params={{ id }} className="font-medium">
+              Otwórz kartę projektu {id}
+            </Link>
+            <span className="text-text-body-muted">
+              {r?.method
+                ? `powiązano z BZP: ${LINK_METHOD[r.method] ?? r.method}, wynik ${(r.score ?? 0).toFixed(2).replace('.', ',')}`
+                : 'nie znaleziono postępowania w BZP, sprawa trafiła do Przeglądu'}
+            </span>
+          </li>
+        )
+      })}
+    </ul>
   )
 }
 
@@ -285,49 +318,6 @@ function EnrichCard() {
       <Button size="lg" className="self-start" onClick={() => m.mutate()} disabled={m.isPending || readOnly}>
         Uruchom wzbogacanie
       </Button>
-    </section>
-  )
-}
-
-function RunLog() {
-  const runs = useQuery(runsQuery)
-  const items = runs.data?.items ?? []
-  return (
-    <section className="flex flex-col gap-2">
-      <h2 className="t-h3 m-0">Ostatnie uruchomienia</h2>
-      {items.length === 0 ? (
-        <EmptyState>Jeszcze nic nie uruchomiono.</EmptyState>
-      ) : (
-        <ul className="m-0 flex list-none flex-col gap-1.5 p-0">
-          {items.slice(0, 10).map((r) => {
-            const bad = ['failed', 'error'].includes(r.status)
-            return (
-              <li
-                key={String(r.id)}
-                className="flex items-center gap-3 rounded-item bg-surface px-3.5 py-2.5"
-              >
-                <span
-                  aria-hidden
-                  className={cn(
-                    'size-2.5 shrink-0 rounded-pill',
-                    bad ? 'bg-attention' : r.status === 'running' ? 'bg-text-secondary' : 'bg-success',
-                  )}
-                />
-                <span className="flex min-w-0 flex-1 flex-col">
-                  <span className="t-item truncate">
-                    {r.connector}: {r.stage}
-                  </span>
-                  {r.error ? <span className="text-[13px] text-attention-text">{r.error}</span> : null}
-                </span>
-                <span className="t-mono text-muted">{fmtDateTime(r.started_at, { short: true })}</span>
-              </li>
-            )
-          })}
-        </ul>
-      )}
-      <Link to="/historia" className="t-caption text-text-secondary hover:underline">
-        Pełny dziennik w Historii
-      </Link>
     </section>
   )
 }
@@ -409,7 +399,6 @@ export function ImportScreen() {
         }
         aside={
           <>
-            <RunLog />
             <section className="flex flex-col gap-2 rounded-panel bg-soft p-5">
               <h2 className="t-h3 m-0">Reguły, których agent nie obejdzie</h2>
               <ul className="m-0 flex list-none flex-col gap-1.5 p-0">

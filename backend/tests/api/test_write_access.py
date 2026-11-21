@@ -1,5 +1,4 @@
-"""Write access contract (S0, lead request 21.11): every non-GET route in /openapi.json refuses the read-only demo Juror (403)
-and anonymous callers (401), except routes the design opens to public viewers (PUBLIC_WRITES below).
+"""Write access contract (S0, lead request 21.11): every non-GET route in /openapi.json refuses anonymous callers (401/403),
 
 Requests carry no valid body on purpose: FastAPI resolves dependencies (require_writer / require_admin) before validating the
 body, so a gated route answers 403/401 and an ungated one leaks through as 422/404/2xx. Runs inside the transactional fixture;
@@ -15,7 +14,7 @@ from riskminer.api.main import app
 
 pytestmark = pytest.mark.fulldb
 
-# Routes public viewers (anonymous or Juror) may call by design (api_contract §2.3: Flow 1 is public; ask and chats are public,
+# Routes public viewers (anonymous visitors) may call by design (api_contract §2.3: Flow 1 is public; ask and chats are public,
 # rate-limited; analysis writes are owner-checked inside the handler).
 PUBLIC_WRITES = {
     ("POST", "/api/auth/login"), ("POST", "/api/auth/logout"), ("POST", "/api/auth/demo-login"),
@@ -49,17 +48,6 @@ def _no_side_effects(monkeypatch):
     monkeypatch.setenv("RISKMINER_LLM_FAKE", "1")
 
 
-@pytest.fixture
-async def juror(db):
-    import httpx
-    async with httpx.AsyncClient(transport=httpx.ASGITransport(app=app), base_url="http://t",
-                                 headers={"X-Requested-With": "ex-ante"}) as c:
-        r = await c.post("/api/auth/demo-login", json={"persona": "juror"})
-        if r.status_code != 200:
-            pytest.skip(f"demo login unavailable: {r.status_code} {r.text[:120]}")
-        yield c
-
-
 async def _probe(c, db, want: set[int]) -> list[str]:
     s = await _samples(db)
     leaks = []
@@ -71,11 +59,6 @@ async def _probe(c, db, want: set[int]) -> list[str]:
         if r.status_code not in want:
             leaks.append(f"{r.status_code} {method} {path}  {r.text[:120]!r}")
     return leaks
-
-
-async def test_juror_cannot_write(juror, db):
-    leaks = await _probe(juror, db, {403})
-    assert not leaks, "routes that do not refuse the read-only Juror with 403:\n" + "\n".join(leaks)
 
 
 async def test_anonymous_cannot_write(client, db):

@@ -13,6 +13,7 @@ import { Button } from '@/components/ui/button'
 import { useFeatures } from '@/config/features'
 import { cn } from '@/lib/cn'
 import { fmtInt, fmtScore } from '@/lib/format'
+import { plural } from '@/lib/plural'
 import { addClauseToPack, reportQuery, runAnalysis } from './api'
 import {
   ANSWER_TONE,
@@ -23,6 +24,7 @@ import {
   flagDot,
   flagHref,
   funnelWidth,
+  groupFlags,
   keyDisplay,
   type Report,
   type ReportCase,
@@ -210,26 +212,31 @@ export function RangeBar({ g, q }: { g: ReturnType<typeof rangeGeometry>; q: Rep
 
 // ---- flags -------------------------------------------------------------------------------------------------------
 
+/** A2 marker: calculation = teal ring, AI to review = attention ring, AI approved = ink check. */
 function FlagDotView({ f }: { f: ReportFlag }) {
   const d = flagDot(f)
   return (
     <span
       aria-hidden
       className={cn(
-        'mt-1 flex size-4 shrink-0 items-center justify-center rounded-pill',
-        d === 'calc' && 'bg-prov-calc',
+        'mt-px flex size-5.5 shrink-0 items-center justify-center rounded-pill',
+        d === 'calc' && 'border-2 border-prov-calc',
         d === 'ai-approved' && 'bg-ink text-on-ink',
-        d === 'ai-proposed' && 'border-2 border-attention bg-surface',
+        d === 'ai-proposed' && 'border-2 border-attention',
       )}
     >
-      {d === 'ai-approved' ? <Check className="size-2.5" /> : null}
+      {d === 'ai-approved' ? (
+        <Check className="size-3" />
+      ) : (
+        <span className={cn('size-2 rounded-pill', d === 'calc' ? 'bg-prov-calc' : 'bg-attention')} />
+      )}
     </span>
   )
 }
 
 export function FlagList({ id, flags, firstDoc }: { id: string; flags: ReportFlag[]; firstDoc?: number }) {
   const f = useFeatures()
-  const list = sortFlags(flags)
+  const list = groupFlags(sortFlags(flags))
   return (
     <section aria-labelledby="r1" className="flex flex-col gap-3">
       <div className="flex flex-wrap items-baseline justify-between gap-2">
@@ -269,12 +276,14 @@ export function FlagList({ id, flags, firstDoc }: { id: string; flags: ReportFla
                 {href ? (
                   <a
                     href={href}
-                    className="flex items-start gap-3 rounded-item bg-soft px-4 py-3 text-text no-underline hover:bg-soft-2"
+                    className="flex items-start gap-3.5 rounded-item border border-divider px-3.5 py-3 text-text no-underline hover:bg-soft"
                   >
                     {body}
                   </a>
                 ) : (
-                  <div className="flex items-start gap-3 rounded-item bg-soft px-4 py-3">{body}</div>
+                  <div className="flex items-start gap-3.5 rounded-item border border-divider px-3.5 py-3">
+                    {body}
+                  </div>
                 )}
               </li>
             )
@@ -328,12 +337,14 @@ export function CaseList({ cases }: { cases: ReportCase[] }) {
                   {fmtScore(c.score)}
                 </span>
                 <span className="flex min-w-0 flex-1 flex-col gap-0.5">
-                  <span className="t-small line-clamp-2 font-medium">{c.title}</span>
+                  <span className="t-small line-clamp-3 font-medium">{c.title}</span>
+                  <span className="t-mono flex flex-wrap gap-x-3">
+                    <span className={cn((c.delay_days ?? 0) > 0 && 'text-attention-text')}>
+                      {caseDelay(c)}
+                    </span>
+                    <span className="text-muted">koszt {caseCost(c)}</span>
+                  </span>
                   <span className="t-caption text-text-body-muted">{c.why}</span>
-                </span>
-                <span className="t-mono flex shrink-0 flex-col items-end">
-                  <span>{caseDelay(c)}</span>
-                  <span className="text-muted">{caseCost(c)}</span>
                 </span>
               </span>
               <SimilarityBar c={c} />
@@ -431,7 +442,9 @@ function Details({ r }: { r: Report }) {
     <div className="flex flex-col gap-3">
       {rc ? (
         <details className="rounded-panel border border-divider px-5 py-4" open>
-          <summary className="t-item cursor-pointer">Grupa porównawcza: {fmtInt(rc.n)} umów</summary>
+          <summary className="t-item cursor-pointer">
+            Grupa porównawcza: {fmtInt(rc.n)} {plural(rc.n, ['umowa', 'umowy', 'umów'])}
+          </summary>
           <ol className="m-0 mt-3 flex list-none flex-col gap-2 p-0" data-testid="funnel">
             {rc.funnel.map((f, i) => (
               <li key={f.label} className="flex flex-col gap-1">

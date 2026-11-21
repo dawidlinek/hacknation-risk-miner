@@ -17,10 +17,10 @@ export async function realBackend(page: Page) {
   })
 }
 
-/** Passwordless demo persona: juror (read-only expert), expert (writes), admin. */
-export async function loginAs(request: APIRequestContext, persona: 'juror' | 'expert' | 'admin') {
-  const r = await request.post('/api/auth/demo-login', { data: { persona }, headers: CSRF })
-  expect(r.ok(), `demo-login ${persona}: ${r.status()}`).toBeTruthy()
+/** Passwordless one-click login as the single demo user "Ekspert (demo)" (full rights). */
+export async function login(request: APIRequestContext) {
+  const r = await request.post('/api/auth/demo-login', { headers: CSRF })
+  expect(r.ok(), `demo-login: ${r.status()}`).toBeTruthy()
 }
 
 /** Creates and runs an analysis in this browser context (analyses are owner-only). Returns its code. */

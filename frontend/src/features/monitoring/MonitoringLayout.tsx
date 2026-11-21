@@ -1,19 +1,28 @@
 import { useQuery } from '@tanstack/react-query'
 import { useNavigate, useParams, useSearch } from '@tanstack/react-router'
-import { Search } from 'lucide-react'
-import { type ReactNode, useCallback, useEffect, useMemo, useState } from 'react'
+import { History, Search } from 'lucide-react'
+import {
+  type CSSProperties,
+  type ReactNode,
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react'
 import type { RegionStat, Signal } from '@/api/contracts/monitoring'
-import { Page } from '@/app/Page'
 import { Input } from '@/components/ui/input'
 import { useFeature } from '@/config/features'
 import { TimeMachine } from '@/features/replay/TimeMachine'
+import { cn } from '@/lib/cn'
 import { fmtInt } from '@/lib/format'
-import { regionsQuery, signalsQuery } from './api'
+import { type MonFilters, regionsQuery, signalsQuery } from './api'
 import { ChoroplethMap } from './ChoroplethMap'
 import { MonitoringContext, type MonitoringSearch } from './context'
 import { hasWebGL, wojGeoQuery } from './geo'
 import { colorAt, effectiveMetric, levelOf, METRICS, parseMetric, scaleRegions, signalsInView } from './logic'
-import { MapToolbar, ModeSwitch } from './parts'
+import { FilterBar, MapToolbar, ModeSwitch } from './parts'
 
 /** Layout of /monitoring: filter bar, left panel (the Outlet) and the persistent map. */
 export function MonitoringLayout({ children }: { children: ReactNode }) {
@@ -25,6 +34,8 @@ export function MonitoringLayout({ children }: { children: ReactNode }) {
   const metric = effectiveMetric(mode, parseMetric(search.miara))
   const pins = Boolean(search.sygnaly) || mode === 'open'
   const replay = useFeature('monitoring_replay')
+  // Wehikuł czasu opens on demand under the map, so the map keeps the viewport
+  const [replayOpen, setReplayOpen] = useState(false)
   const [asOfRaw, setAsOf] = useState<string | null>(null)
   // replay steps can arrive faster than the API answers: only the settled date drives the queries
   const [asOf, setAsOfSettled] = useState<string | null>(null)
@@ -32,6 +43,22 @@ export function MonitoringLayout({ children }: { children: ReactNode }) {
     const t = setTimeout(() => setAsOfSettled(asOfRaw), 350)
     return () => clearTimeout(t)
   }, [asOfRaw])
+  const filters: MonFilters = useMemo(
+    () => ({ subsector: search.podsektor, value: search.wartosc, year: search.rok }),
+    [search.podsektor, search.wartosc, search.rok],
+  )
+  // the map view fills the viewport under the app header (no page scroll on desktop); the panels scroll inside
+  const shell = useRef<HTMLDivElement>(null)
+  const [top, setTop] = useState(70)
+  useLayoutEffect(() => {
+    const measure = () => {
+      const el = shell.current
+      if (el) setTop(Math.round(el.getBoundingClientRect().top + window.scrollY))
+    }
+    measure()
+    window.addEventListener('resize', measure)
+    return () => window.removeEventListener('resize', measure)
+  }, [])
   const [qDraft, setQDraft] = useState(search.q ?? '')
   useEffect(() => setQDraft(search.q ?? ''), [search.q])
 
@@ -45,10 +72,10 @@ export function MonitoringLayout({ children }: { children: ReactNode }) {
     [navigate],
   )
 
-  const woj = useQuery(regionsQuery('woj', undefined, asOf))
+  const woj = useQuery(regionsQuery('woj', undefined, asOf, filters))
   const wojGeo = useQuery(wojGeoQuery)
-  const powRegions = useQuery({ ...regionsQuery('pow', params.woj, asOf), enabled: level >= 1 })
-  const gmiRegions = useQuery({ ...regionsQuery('gmi', params.pow, asOf), enabled: level >= 2 })
+  const powRegions = useQuery({ ...regionsQuery('pow', params.woj, asOf, filters), enabled: level >= 1 })
+  const gmiRegions = useQuery({ ...regionsQuery('gmi', params.pow, asOf, filters), enabled: level >= 2 })
   const powGeoNames = useMemo(
     () => new Map((powRegions.data?.items ?? []).map((r) => [r.teryt, r.name])),
     [powRegions.data],
@@ -62,7 +89,7 @@ export function MonitoringLayout({ children }: { children: ReactNode }) {
         ? { terc: params.woj as string, lvl: 'woj' as const }
         : { terc: null, lvl: null }
   const signals = useQuery({
-    ...signalsQuery(sigScope.terc, sigScope.lvl, search.q, asOf),
+    ...signalsQuery(sigScope.terc, sigScope.lvl, search.q, asOf, filters),
     enabled: level >= 1 || pins || Boolean(search.q),
   })
   const inView: Signal[] = useMemo(
@@ -133,10 +160,15 @@ export function MonitoringLayout({ children }: { children: ReactNode }) {
         wojGeo: wojGeo.data,
         pins,
         search,
+        filters,
         setSearch,
       }}
     >
-      <Page className="max-w-[1480px] gap-4 pt-5 pb-8">
+      <div
+        ref={shell}
+        style={{ '--mon-h': `calc(100dvh - ${top}px)` } as CSSProperties}
+        className="mx-auto flex w-full max-w-[1480px] flex-col gap-3 px-6 pt-4 pb-3 lg:h-(--mon-h) lg:min-h-[560px]"
+      >
         <div className="flex flex-wrap items-center gap-3">
           <ModeSwitch
             mode={mode}
@@ -161,12 +193,33 @@ export function MonitoringLayout({ children }: { children: ReactNode }) {
               className="h-10 w-full pl-10"
             />
           </label>
-          <span className="t-caption text-text-body-muted">{totalLabel}</span>
+          <FilterBar
+            filters={filters}
+            onChange={(f) => setSearch({ podsektor: f.subsector, wartosc: f.value, rok: f.year })}
+          />
+          {replay ? (
+            <button
+              type="button"
+              aria-expanded={replayOpen}
+              onClick={() => {
+                if (replayOpen) setAsOf(null)
+                setReplayOpen((o) => !o)
+              }}
+              className={cn(
+                'inline-flex h-10 items-center gap-2 rounded-inner border px-3 text-[14px] font-medium',
+                replayOpen ? 'border-ink bg-ink text-on-ink' : 'border-border bg-surface hover:bg-soft',
+              )}
+            >
+              <History aria-hidden className="size-4" />
+              Wehikuł czasu
+            </button>
+          ) : null}
+          <span className="t-caption ml-auto text-text-body-muted">{totalLabel}</span>
         </div>
 
-        <div className="grid items-stretch gap-4 lg:h-[820px] lg:grid-cols-[minmax(340px,420px)_1fr]">
+        <div className="grid items-stretch gap-4 lg:min-h-0 lg:flex-1 lg:grid-cols-[minmax(340px,420px)_1fr]">
           <div className="min-h-0 overflow-y-auto pr-1 lg:h-full">{children}</div>
-          <div className="relative h-[60vh] min-h-[420px] lg:h-full">
+          <div className="relative h-[60vh] min-h-[420px] lg:h-full lg:min-h-0">
             {gl ? (
               <ChoroplethMap
                 target={target}
@@ -205,12 +258,16 @@ export function MonitoringLayout({ children }: { children: ReactNode }) {
             />
           </div>
         </div>
-        {replay ? <TimeMachine terc={sigScope.terc} level={sigScope.lvl} onAsOf={setAsOf} /> : null}
-        <p className="t-caption m-0 text-muted">
+        {replay && replayOpen ? (
+          <div className="shrink-0 overflow-y-auto lg:max-h-[42%]">
+            <TimeMachine terc={sigScope.terc} level={sigScope.lvl} onAsOf={setAsOf} />
+          </div>
+        ) : null}
+        <p className="t-caption m-0 shrink-0 text-muted">
           Granice: PRG, uproszczone. Umowy wod-kan z BZP, 2021–2026. Brak ogłoszenia o wykonaniu to sygnał,
           nie dowód opóźnienia.
         </p>
-      </Page>
+      </div>
     </MonitoringContext.Provider>
   )
 }

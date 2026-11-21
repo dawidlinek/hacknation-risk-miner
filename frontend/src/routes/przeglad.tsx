@@ -11,6 +11,9 @@ export const Route = createFileRoute('/przeglad')({
     rodzaj: z.string().optional().catch(undefined),
     sprawa: z.coerce.number().int().optional().catch(undefined),
     ryzyko: z.string().optional().catch(undefined),
+    typ: z.string().optional().catch(undefined),
+    projekt: z.string().optional().catch(undefined),
+    kolejnosc: z.enum(['strength', 'queue']).optional().catch(undefined),
   }),
   beforeLoad: async ({ context, location }) => {
     await requireRole(context, 'expert', location.href)
@@ -29,7 +32,22 @@ function ReviewRoute() {
       kind={kind}
       first={s.sprawa}
       code={s.ryzyko}
-      onKind={(k) => navigate({ search: { rodzaj: k ? KIND_SLUG[k] : undefined }, replace: true })}
+      filter={{ type: s.typ, project: s.projekt, sort: s.kolejnosc }}
+      onKind={(k) =>
+        navigate({ search: { rodzaj: k ? KIND_SLUG[k] : undefined, kolejnosc: s.kolejnosc }, replace: true })
+      }
+      onFilter={(f) =>
+        navigate({
+          search: {
+            rodzaj: s.rodzaj,
+            ryzyko: f.code === '' ? undefined : s.ryzyko,
+            typ: f.type,
+            projekt: f.project,
+            kolejnosc: f.sort,
+          },
+          replace: true,
+        })
+      }
     />
   )
 }

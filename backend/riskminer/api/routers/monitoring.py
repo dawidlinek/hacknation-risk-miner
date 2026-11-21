@@ -62,25 +62,38 @@ def _as_of(as_of: str | None) -> date | None:
         raise A.ApiError(422, "Nieprawidłowa data (oczekiwano RRRR-MM-DD).", "bad_date")
 
 
-def _filters(subsector, value_min, value_max, year_from, year_to, q, as_of) -> M.Filters:
+def _sector(sector: str | None) -> str:
+    """wod-kan (default) or any installed sector pack (catalogue/<sector>/pack.yaml)."""
+    from pathlib import Path
+
+    from riskminer.config import settings
+    s = (sector or "wod-kan").strip()
+    if s != "wod-kan" and not (len(s) <= 20 and s.replace("-", "").isalnum()
+                               and (Path(settings().catalogue_dir) / s / "pack.yaml").exists()):
+        raise A.ApiError(422, f"Nieznany sektor: {s}.", "unknown_sector")
+    return s
+
+
+def _filters(subsector, value_min, value_max, year_from, year_to, q, as_of, sector=None) -> M.Filters:
     return M.Filters(subsector=subsector, value_min=value_min, value_max=value_max, year_from=year_from, year_to=year_to,
-                     q=q, as_of=_as_of(as_of))
+                     q=q, as_of=_as_of(as_of), sector=_sector(sector))
 
 
 @router.get("/regions", summary="Mapa: wartości dla regionów (województwa, powiaty, gminy)")
 async def regions(level: Level = "woj", parent: str | None = None, mode: Literal["done", "open"] = "done", metric: Metric = "late",
                   subsector: str | None = None, value_min: float | None = None, value_max: float | None = None,
                   year_from: int | None = None, year_to: int | None = None, q: str | None = None, as_of: str | None = None,
-                  db: AsyncSession = DB):
+                  sector: str | None = None, db: AsyncSession = DB):
     return await M.regions(db, level, parent, mode, metric,
-                           _filters(subsector, value_min, value_max, year_from, year_to, q, as_of))
+                           _filters(subsector, value_min, value_max, year_from, year_to, q, as_of, sector))
 
 
 @router.get("/regions/{terc}", summary="Region: wskaźniki, podregiony, sygnały")
 async def region(terc: str, mode: Literal["done", "open"] = "done", metric: Metric = "late", subsector: str | None = None,
                  value_min: float | None = None, value_max: float | None = None, year_from: int | None = None,
-                 year_to: int | None = None, q: str | None = None, as_of: str | None = None, db: AsyncSession = DB):
-    res = await M.region(db, terc, mode, metric, _filters(subsector, value_min, value_max, year_from, year_to, q, as_of))
+                 year_to: int | None = None, q: str | None = None, as_of: str | None = None, sector: str | None = None,
+                 db: AsyncSession = DB):
+    res = await M.region(db, terc, mode, metric, _filters(subsector, value_min, value_max, year_from, year_to, q, as_of, sector))
     if res is None:
         raise A.ApiError(404, "Nie ma takiego regionu (kod TERYT).", "region_not_found")
     return res
@@ -90,8 +103,9 @@ async def region(terc: str, mode: Literal["done", "open"] = "done", metric: Metr
 async def signals(terc: str | None = None, level: Level | None = None, limit: int = Query(50, le=500), offset: int = 0,
                   sort: str = "-days_overdue", geo: bool = False, as_of: str | None = None,
                   subsector: str | None = None, value_min: float | None = None, value_max: float | None = None,
-                  year_from: int | None = None, year_to: int | None = None, q: str | None = None, db: AsyncSession = DB):
-    page = await M.signals(db, terc, level, _filters(subsector, value_min, value_max, year_from, year_to, q, as_of),
+                  year_from: int | None = None, year_to: int | None = None, q: str | None = None,
+                  sector: str | None = None, db: AsyncSession = DB):
+    page = await M.signals(db, terc, level, _filters(subsector, value_min, value_max, year_from, year_to, q, as_of, sector),
                            limit, offset, sort, geo)
     page["items"] = [s.model_dump() for s in page["items"]]
     return page

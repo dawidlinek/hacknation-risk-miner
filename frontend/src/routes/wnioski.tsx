@@ -1,10 +1,8 @@
-import { createFileRoute } from '@tanstack/react-router'
-import { pageTitle } from '@/config/brand'
-import { lessonsQuery } from '@/features/lessons/api'
-import { LessonsScreen } from '@/features/lessons/LessonsScreen'
+import { createFileRoute, redirect } from '@tanstack/react-router'
 
+// Screen removed from the product (user decision, 21.11.2026): old links go to the start page.
 export const Route = createFileRoute('/wnioski')({
-  loader: ({ context }) => context.queryClient.ensureQueryData(lessonsQuery()),
-  head: () => ({ meta: [{ title: pageTitle('Wnioski sektorowe') }] }),
-  component: () => <LessonsScreen />,
+  beforeLoad: () => {
+    throw redirect({ to: '/' })
+  },
 })

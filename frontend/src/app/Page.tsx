@@ -1,11 +1,11 @@
 import type { ComponentProps, ReactNode } from 'react'
 import { cn } from '@/lib/cn'
 
-/** max-width 1240, gutter 24, top 36, bottom 72 (README §5). */
+/** content width 1240 plus a 24 gutter each side (the mockups' content-box 1240), top 36, bottom 72 (README §5). */
 export function Page({ className, ...p }: ComponentProps<'div'>) {
   return (
     <div
-      className={cn('mx-auto flex w-full max-w-[1240px] flex-col gap-7 px-6 pt-9 pb-18', className)}
+      className={cn('mx-auto flex w-full max-w-[1288px] flex-col gap-7 px-6 pt-9 pb-18', className)}
       {...p}
     />
   )
@@ -68,19 +68,20 @@ export function PageHeader({
 }) {
   return (
     <div className="flex flex-wrap items-end justify-between gap-4">
-      <div className="flex min-w-0 flex-col gap-2">
+      {/* the title column shrinks (long project names wrap) so the actions stay on the right, as in the mockups */}
+      <div className="flex min-w-0 max-w-[900px] flex-[1_1_480px] flex-col gap-2">
         {breadcrumb ? <div className="t-mono text-muted">{breadcrumb}</div> : null}
         {eyebrow ? <div className="t-caption text-muted">{eyebrow}</div> : null}
         <div className="flex items-center gap-3">
           {before}
-          <h1 className="t-h1 m-0" tabIndex={-1} data-page-title>
+          <h1 className="t-h1 m-0 outline-none" tabIndex={-1} data-page-title>
             {title}
           </h1>
         </div>
         {subtitle ? <div className="t-mono text-muted">{subtitle}</div> : null}
         {lead ? <p className="m-0 max-w-[720px] text-text-body-muted">{lead}</p> : null}
       </div>
-      {actions ? <div className="flex flex-wrap gap-2">{actions}</div> : null}
+      {actions ? <div className="flex flex-none flex-wrap gap-2">{actions}</div> : null}
     </div>
   )
 }

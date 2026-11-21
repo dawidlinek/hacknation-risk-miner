@@ -472,7 +472,7 @@ async def similar_cases(db: AsyncSession, rm_id: str, k: int = 5) -> list[dict]:
     me = me[0]
     val = float(me["value"] or 0) or None
     rs = await rows(db, """
-        SELECT rc.*, pr.title, pj.rm_id, pn.notice_number, pn.url
+        SELECT rc.*, pr.title, pr.buyer_name, pj.rm_id, pn.notice_number, pn.url
         FROM rc_contract rc JOIN procedure pr ON pr.id = rc.procedure_id
         LEFT JOIN project_procedure pp ON pp.procedure_id = rc.procedure_id AND pp.review_status <> 'rejected'
         LEFT JOIN project pj ON pj.id = pp.project_id LEFT JOIN notice pn ON pn.id = (SELECT notice_id FROM contract_performance WHERE id = rc.performance_id)
@@ -495,6 +495,9 @@ async def similar_cases(db: AsyncSession, rm_id: str, k: int = 5) -> list[dict]:
                    [Ref(kind="procedure", id=r["ocid"], label="postępowanie").model_dump(mode="json", exclude_none=True)]
         out.append({
             "rank": i, "rm_id": r.get("rm_id"), "ocid": r["ocid"], "title": r["title"],
+            # who built it, when it finished and how many annexes it took (B3 "Podobne przypadki" rows)
+            "buyer_name": r.get("buyer_name"), "year": r.get("completion_year") or r.get("contract_year"),
+            "changes_count": r.get("changes_count"),
             "score": num(score, fmt_num(score, 2), "score", Prov(role="calc", review_status="auto", n=int(pool), method="similarity_simple",
                                                                 refs=[q_ref("similarity:simple", "podsektor, wartość, formuła")])),
             "why": "ten sam podsektor" + (", podobna wartość" if c_val > 0.2 else "") + (", ta sama formuła" if c_form else ""),
@@ -505,7 +508,8 @@ async def similar_cases(db: AsyncSession, rm_id: str, k: int = 5) -> list[dict]:
                         "cost_dev_pct": num(round(r["cost_dev_pct"], 1) if r["cost_dev_pct"] is not None else None,
                                             f"{'+' if (r['cost_dev_pct'] or 0) > 0 else ''}{fmt_num(r['cost_dev_pct'], 1)}%" if r["cost_dev_pct"] is not None else "brak",
                                             "pct", Prov(role="case", review_status="auto", refs=[Ref(**x) for x in ref_perf]))},
-            "href": f"/projekty/{r['rm_id']}" if r.get("rm_id") else f"/umowy/{r['contract_id']}"})
+            # an unlinked contract opens as an automatic card by its OCID (there is no /umowy page)
+            "href": f"/projekty/{r['rm_id'] or r['ocid']}"})
     return out
 
 
@@ -558,7 +562,7 @@ async def card(db: AsyncSession, rm_id: str, user: A.User | None) -> dict | None
     for s in st:
         s["href"] = None
     return {
-        "rm_id": rm_id, "id": rm_id, "kind": p["kind"], "title": p["title"], "auto_card": not p.get("is_pilot"),  # pilot RM-* cards are curated records; only cards built from OCIDs alone are automatic
+        "rm_id": rm_id, "id": rm_id, "kind": p["kind"], "title": p["title"], "auto_card": p["kind"] == "bzp_procedure",  # pilot and imported records are curated records; only cards built from OCIDs alone are automatic
         "buyer": {"name": (org or {}).get("name") or p.get("beneficiary_name"), "nip": p.get("beneficiary_nip"), "nip_valid": (org or {}).get("nip_valid")},
         "summary": {"sentence": summary_sentence(m, ch["perf"], ch["contracts"]),
                     "prov": {"role": "calc", "review_status": "auto", "method": "template:card_v1", "n": m.get("n_contracts") or 0,

@@ -63,7 +63,18 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("derive-events")
     sub.add_parser("make-doc-sample")
     sub.add_parser("link-national")
-    for c in ("derive-lengths", "geo-buyers", "quality", "refresh-rc", "derive-geo", "anchor-evidence"):
+    li = sub.add_parser("link-imported", help="imported records: checks, BZP link, risk events (after an import)")
+    li.add_argument("--rm-ids", required=True, help="comma-separated record ids, e.g. RM-2026-023")
+    ir = sub.add_parser("import-record", help="import agent without the UI: inspect, map, test, approve, run, link")
+    ir.add_argument("files", nargs="+", help="XLSX / CSV / TXT / MD / JSON / DOCX / PDF with the record(s)")
+    ir.add_argument("--vat", choices=["gross", "net"], help="answer to 'netto czy brutto?' if the file has amounts")
+    ir.add_argument("--importer", default=None, help="importer name (default: the matched format)")
+    ir.add_argument("--dry-run", action="store_true", help="stop after the test run (rolled back)")
+    pe = sub.add_parser("export-project", help="per-project record export (same as GET /api/projects/{id}/export.{fmt})")
+    pe.add_argument("rm_id")
+    pe.add_argument("--fmt", default="md", choices=["json", "md", "docx", "pdf"])
+    pe.add_argument("--out", help="output file (default: exports/<rm_id>.<fmt>)")
+    for c in ("derive-lengths", "geo-buyers", "quality", "refresh-rc", "derive-geo", "anchor-evidence", "assign-sectors"):
         sub.add_parser(c)
     dt = sub.add_parser("doc-text")
     dt.add_argument("--force", action="store_true", help="rebuild chunks even if the text is unchanged")
@@ -151,10 +162,19 @@ def main(argv: list[str] | None = None) -> int:
     elif a.cmd == "ocr-pending":
         from riskminer.ingest import ocr_doc
         res = asyncio.run(ocr_doc.enqueue_pending())
-    elif a.cmd in ("derive-lengths", "geo-buyers", "quality", "refresh-rc", "derive-geo", "anchor-evidence"):
+    elif a.cmd in ("derive-lengths", "geo-buyers", "quality", "refresh-rc", "derive-geo", "anchor-evidence",
+                   "assign-sectors"):
         res = asyncio.run(getattr(pipeline, a.cmd.replace("-", "_"))())
     elif a.cmd == "link-national":
         res = asyncio.run(pipeline.link_national())
+    elif a.cmd == "link-imported":
+        res = asyncio.run(pipeline.link_imported(rm_ids=[x.strip() for x in a.rm_ids.split(",") if x.strip()]))
+    elif a.cmd == "import-record":
+        from riskminer.imports import cli_run
+        res = asyncio.run(cli_run.run(a.files, vat=a.vat, importer=a.importer, dry_run=a.dry_run))
+    elif a.cmd == "export-project":
+        from riskminer.api import project_export
+        res = asyncio.run(project_export.export_to_file(a.rm_id, a.fmt, a.out))
     elif a.cmd == "doc-text":
         res = asyncio.run(pipeline.doc_text(force=a.force))
     elif a.cmd == "make-doc-sample":

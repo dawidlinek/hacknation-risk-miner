@@ -78,10 +78,11 @@ export function PublicDocRow({
       </span>
       <span className="flex min-w-0 flex-1 flex-col gap-0.5">
         <span className="text-[15px] font-semibold">{item.title}</span>
-        <span className="t-mono text-[12px] text-muted">
-          {item.ref}
-          {item.dateLabel ? `, ${item.dateLabel}` : ''}
-        </span>
+        {item.ref || item.dateLabel ? (
+          <span className="t-mono line-clamp-2 text-[12px] text-muted">
+            {[item.ref, item.dateLabel].filter(Boolean).join(', ')}
+          </span>
+        ) : null}
       </span>
       <span className="flex flex-col items-end gap-0.5">
         <span className="t-mono whitespace-nowrap text-[12px]">{item.factsLabel}</span>

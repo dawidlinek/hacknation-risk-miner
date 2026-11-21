@@ -43,6 +43,27 @@ async def project_card(rm_id: str, db: AsyncSession = DB, user: A.User | None = 
     return out
 
 
+@router.get("/projects/{rm_id}/export.{fmt}", summary="Eksport rekordu projektu: JSON, Markdown, DOCX albo PDF",
+            description="Identyfikacja i finansowanie, powiązanie z BZP (metoda, wynik, cechy), plan i wykonanie z podstawą VAT, zmiany umowy, "
+                        "zdarzenia ryzyka z kodami R i dowodami, propozycje AI oznaczone jako propozycje, dokumenty i „Co się zmieniło”, "
+                        "lista źródeł (URL, data pobrania, sha256). Widok publiczny bez niezweryfikowanych propozycji AI.")
+async def project_export(rm_id: str, fmt: Literal["json", "md", "docx", "pdf"], db: AsyncSession = DB,
+                         user: A.User | None = Depends(A.current_user)):
+    from fastapi.responses import Response
+
+    from riskminer.api import project_export as PE
+    try:
+        data, name, media = await PE.render(db, rm_id, fmt, user)
+    except PE.NotFound:
+        raise _nf() from None
+    except Exception as e:  # noqa: BLE001 - e.g. LibreOffice missing for PDF: say so instead of a bare 500
+        from riskminer.documents.convert import ConvertError
+        if isinstance(e, ConvertError):
+            raise A.ApiError(503, "Nie udało się przygotować PDF (konwerter niedostępny). Pobierz DOCX albo Markdown.", "convert_failed") from None
+        raise
+    return Response(data, media_type=media, headers={"Content-Disposition": f'attachment; filename="{name}"'})
+
+
 @router.get("/projects/{rm_id}/similar", response_model=list[SimilarCase], summary="Podobne przypadki")
 async def project_similar(rm_id: str, k: int = Query(5, le=20), db: AsyncSession = DB):
     return await PV.similar_cases(db, rm_id, k)

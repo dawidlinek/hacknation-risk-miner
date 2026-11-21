@@ -1,0 +1,50 @@
+# Sector pack budynki: the top-level risks R01-R18 are the shared risk categories (same as wod-kan, drogi);
+# building-specific sub-risks are proposals for expert review.
+schema_version: 1
+sector: budynki
+risks:
+- id: R01
+  name: Niepełny lub niespójny zakres
+  status: proposed
+- id: R02
+  name: Niedostateczne rozpoznanie stanu istniejącego
+  status: proposed
+- id: R03
+  name: Kolizje
+  status: proposed
+- id: R04
+  name: Decyzje
+  status: proposed
+- id: R06
+  name: Nierealistyczny harmonogram i nieuwzględnione zależności
+  status: proposed
+- id: R07
+  name: Nieprzewidziane zmiany i roboty dodatkowe
+  status: proposed
+- id: R08
+  name: Model wynagrodzenia niedopasowany do niepewności zakresu
+  status: proposed
+- id: R12
+  name: Niewystarczająca zdolność wykonawcy lub łańcucha dostaw
+  status: proposed
+- id: R13
+  name: Ryzyko finansowania
+  status: proposed
+- id: R16
+  name: Warunki atmosferyczne i sezonowość robót
+  status: proposed
+- id: R17
+  name: Koordynacja z infrastrukturą i inwestycjami innych podmiotów
+  status: proposed
+- id: R02.5
+  parent: R02
+  name: Stan techniczny konstrukcji i instalacji gorszy niż w ekspertyzie (budynek istniejący)
+  status: proposed
+- id: R04.6
+  parent: R04
+  name: Uzgodnienia konserwatorskie i przeciwpożarowe dla budynku użyteczności publicznej
+  status: proposed
+- id: R06.3
+  parent: R06
+  name: 'Roboty w czynnym obiekcie (szkoła, szpital): ograniczenia okresu i godzin prac'
+  status: proposed

@@ -127,6 +127,8 @@ def sector_pack(sector: str | None) -> dict:
         "tech_tags": [(t["name"], t["pattern"]) for t in lex.get("tech_tags") or []] or None,
         "sector_detect": lex.get("sector_detect") or [],
         "reuse_from": an.get("reuse_from"),
+        # detection order across extension packs (lower first); packs without `assign` go last (drogi)
+        "priority": int((pack.get("assign") or {}).get("priority", 1000)),
     }
     _PACKS[sector] = out
     return out

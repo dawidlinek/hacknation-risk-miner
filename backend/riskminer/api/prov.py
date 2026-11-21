@@ -195,6 +195,9 @@ class SimilarCase(BaseModel):
     contributions: list[Contribution]
     outcome: SimilarOutcome
     href: str
+    buyer_name: str | None = None
+    year: int | None = None
+    changes_count: int | None = None
 
 
 class Signal(BaseModel):

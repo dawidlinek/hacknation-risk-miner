@@ -304,7 +304,7 @@ function WhatIfPanel({
       <div className="self-end rounded-item bg-ink px-4 py-2.5 text-on-ink t-small">{w.question}</div>
       <div className="flex flex-col gap-2 rounded-item bg-soft px-4 py-3">
         <p className="t-small m-0">{answer}</p>
-        <ProvenanceTag origin="CALC" text={w.provenance} />
+        <ProvenanceTag origin="CALC" text={w.provenance.replace(/^obliczenie, /, '')} />
         <Button
           variant={active ? 'default' : 'outline'}
           size="sm"
@@ -388,15 +388,18 @@ export function HBarList({ rows }: { rows: { label: string; value: number; displ
   return (
     <ul className="m-0 flex list-none flex-col gap-2 p-0">
       {rows.map((r, i) => (
-        <li key={r.label} className="grid grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)_auto] items-center gap-2">
-          <span className="t-small truncate">{r.label}</span>
-          <span className="h-2 rounded-pill bg-soft-2">
-            <span
-              className={cn('block h-2 rounded-pill', i === 0 ? 'bg-attention' : 'bg-text-body-muted')}
-              style={{ width: `${Math.max(2, Math.round((Math.max(r.value, 0) / max) * 100))}%` }}
-            />
+        // full risk name on its own line (the side column is too narrow to truncate it usefully), bar and value below
+        <li key={r.label} className="flex flex-col gap-1">
+          <span className="t-small">{r.label}</span>
+          <span className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-2">
+            <span className="h-2 rounded-pill bg-soft-2">
+              <span
+                className={cn('block h-2 rounded-pill', i === 0 ? 'bg-attention' : 'bg-text-body-muted')}
+                style={{ width: `${Math.max(2, Math.round((Math.max(r.value, 0) / max) * 100))}%` }}
+              />
+            </span>
+            <span className="t-mono text-text-body-muted">{r.display}</span>
           </span>
-          <span className="t-mono text-text-body-muted">{r.display}</span>
         </li>
       ))}
     </ul>

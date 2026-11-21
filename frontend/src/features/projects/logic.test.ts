@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { adaptProjectsPage, type RealProjectsPage } from '@/api/adapters/projects'
-import { costBarPct, delayBarPct, filterRows, slugToFilter, sortValue } from './logic'
+import { costBarPct, delayBarPct, filterRows, SORT_KEYS, slugToFilter, sortValue } from './logic'
 
 const raw: RealProjectsPage = {
   total: 2,
@@ -71,5 +71,11 @@ describe('projects table', () => {
     expect(delayBarPct(200)).toBe(50)
     expect(costBarPct(-80)).toBe(50)
     expect(costBarPct(25)).toBe(25)
+  })
+})
+
+describe('table columns', () => {
+  it('Zmiany, Wykonanie and Stan are no longer sortable columns (old links fall back to delay)', () => {
+    expect(SORT_KEYS).toEqual(['title', 'subsector', 'value', 'delay', 'cost'])
   })
 })

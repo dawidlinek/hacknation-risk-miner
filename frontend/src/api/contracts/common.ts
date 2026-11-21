@@ -54,6 +54,11 @@ export interface SimilarCase {
   delay_days: number | null
   cost_dev_pct: number | null
   href?: string | null
+  /** project card rows (B3): who built it, the year it finished, annex count, size of the compared pool */
+  buyer?: string | null
+  year?: number | null
+  changes?: number | null
+  pool_n?: number | null
 }
 export interface AskAnswer {
   id: string

@@ -1,0 +1,42 @@
+# Sector pack cieplo. Patterns are matched on the lower-cased procedure title, in this order (first match wins).
+subsectors:
+- code: SIEC
+  name: Sieć ciepłownicza lub przyłącza cieplne
+  patterns:
+  - sieci?\w* ciepł
+  - ciepłownic
+  - przyłącz\w* ciepł
+  - magistral
+  - preizolowan
+  status: proposed
+- code: KOT
+  name: Kotłownia, źródło ciepła lub węzeł cieplny
+  patterns:
+  - kotłow
+  - kocioł
+  - kotł
+  - węzł\w* ciepl
+  - węzeł
+  - źródł\w* ciepła
+  - pomp\w* ciepła
+  status: proposed
+- code: INST
+  name: Instalacje sanitarne lub grzewcze w budynku
+  patterns:
+  - instalac
+  - centraln\w* ogrzew
+  - \bc\.?\s?o\.?\b
+  - wentylac
+  - klimatyz
+  - gazow
+  status: proposed
+- code: INNE
+  name: Inne roboty ciepłownicze lub instalacyjne
+  patterns:
+  - ogrzew
+  - ciepł
+  - modernizac
+  - przebudow
+  - budow
+  - remont
+  status: proposed

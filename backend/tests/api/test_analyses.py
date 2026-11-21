@@ -301,17 +301,14 @@ async def test_affected_analyses(client, expert, db):
     assert "stale_cases" not in (await client.get(f"/api/analyses/{code}")).json()
 
 
-async def test_affected_juror_forbidden(db):
+async def test_affected_anonymous_unauthorized(db):
     import httpx
 
     from riskminer.api.main import app
     async with httpx.AsyncClient(transport=httpx.ASGITransport(app=app), base_url="http://t",
                                  headers={"X-Requested-With": "ex-ante"}) as c:
-        r = await c.post("/api/auth/demo-login", json={"persona": "juror"})
-        if r.status_code != 200:
-            pytest.skip("demo login unavailable")
         r = await c.post("/api/analyses-affected", json={"rm_id": "RM-2026-013"})
-        assert r.status_code == 403
+        assert r.status_code == 401
 
 
 ROAD = "Przebudowa drogi gminnej 2,4 km z chodnikiem, 3,1 mln zł, 10 mies."
@@ -388,3 +385,26 @@ async def test_confidential_doc_sovereign_down_rules_only(client, db):
     assert r.status_code == 200 and r.json()["jobs"]["features"] and r.json()["jobs"]["redpen"]
     assert (await db.execute(text("SELECT sensitivity FROM document WHERE id = :d"), {"d": did})).scalar() == "public"
     assert (await client.get(f"/api/analyses/{code}/draft")).json()["sensitivity"] == "public"
+
+
+@pytest.mark.parametrize("sector,text,sub", [
+    ("budynki", "Termomodernizacja budynku szkoły podstawowej, 2,1 mln zł, 9 mies.", "TERMO"),
+    ("cieplo", "Budowa sieci ciepłowniczej z rur preizolowanych 1,8 km, 6 mln zł, 12 mies.", "SIEC"),
+])
+async def test_extension_sector_from_catalogue_pack(client, db, monkeypatch, sector, text, sub):
+    """Sectors 3 and 4 are data (catalogue/<sector>/pack.yaml), not code: detection, chips, reference class, headline."""
+    from riskminer.analysis import features as FE
+    monkeypatch.setattr(FE, "feature", lambda name, default=False: name == "sector_roads" or default)
+    d = (await client.post("/api/analyses", json={"text": text})).json()
+    chips = {c["key"]: c for c in d["features"]}
+    assert chips["sektor"]["value"] == sector and chips["podsektor"]["value"] == sub
+    assert [o["value"] for o in chips["sektor"]["options"]] == ["wod-kan", "cieplo", "budynki", "drogi"]
+    code = d["id"]
+    assert (await client.post(f"/api/analyses/{code}/run")).status_code == 200
+    rc = (await client.get(f"/api/analyses/{code}")).json()["reference_class"]
+    assert rc["sector"] == sector and rc["n"] >= 30
+    print(f"\n{sector}: funnel", [f["n"] for f in rc["funnel"]], "n", rc["n"])
+    h = (await client.get(f"/api/analytics/headline?sector={sector}")).json()
+    print(h["sentence"])
+    assert h["sector"] == sector and h["completed"]["value"] >= 300 and "w sektorze" in h["sentence"]
+    assert (await client.get("/api/analytics/headline?sector=nieznany")).status_code == 404

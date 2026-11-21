@@ -44,6 +44,14 @@ class Filters:
     year_to: int | None = None
     q: str | None = None
     as_of: date | None = None
+    sector: str = "wod-kan"     # other sector packs (drogi, budynki, cieplo): all their completed works, by region
+
+
+def _population(f: Filters, params: dict) -> str:
+    if f.sector == "wod-kan":
+        return CORE
+    params["sector"] = f.sector
+    return "r.sector = :sector AND r.scope_kind = 'works'"
 
 
 def level_of(terc: str) -> str:
@@ -63,7 +71,7 @@ def _sig_key(level: str) -> str:
 
 
 def _rc_where(f: Filters, params: dict, parent: str | None, level: str) -> str:
-    w = [CORE]
+    w = [_population(f, params)]
     if parent:
         w.append(f"{_key(level)} LIKE :parent")
         params["parent"] = parent + "%"
@@ -92,6 +100,8 @@ def _rc_where(f: Filters, params: dict, parent: str | None, level: str) -> str:
 
 
 def _sig_where(f: Filters, params: dict) -> str:
+    if f.sector != "wod-kan":
+        return "false"          # monitor_signals(as_of) covers core water/sewage works only (frozen schema)
     w = ["true"]
     if f.subsector:
         w.append("s.subsector_main = :sub")
@@ -246,6 +256,7 @@ async def regions(db: AsyncSession, level: str, parent: str | None, mode: str, m
         label = f"{fmt_num(tot['n'])} umów zakończonych, {fmt_num(ls * 100) if ls is not None else '?'}% po terminie"
         n_total = int(tot["n"])
     return {"level": level, "parent": parent, "mode": mode, "metric": {"key": metric, **METRICS[metric]},
+            "sector": f.sector, "signals_available": f.sector == "wod-kan",
             "total": {"label": label, "n": n_total},
             "legend": {"min": {"value": min(vals), "display": fmt(min(vals))} if vals else None,
                        "max": {"value": max(vals), "display": fmt(max(vals))} if vals else None},
@@ -335,7 +346,8 @@ async def region(db: AsyncSession, terc: str, mode: str, metric: str, f: Filters
     on_map = int((sig or {}).get("on_map") or 0)
     total = int((sig or {}).get("n") or 0)
     lvl_q = f"terc={terc}&level={level}"
-    return {"terc": terc, "name": nm_all[terc], "level": level, "breadcrumb": crumbs, "kpis": kpis, "children": children,
+    return {"terc": terc, "name": nm_all[terc], "level": level, "sector": f.sector, "signals_available": f.sector == "wod-kan",
+            "breadcrumb": crumbs, "kpis": kpis, "children": children,
             "signals": {"total": total, "on_map": on_map, "items": [s.model_dump() for s in page["items"]],
                         "csv_href": f"/api/export/signals.csv?{lvl_q}",
                         "note": (f"Na mapie {fmt_num(on_map)} z {fmt_num(total)} sygnałów: te, które da się przypisać do gminy "

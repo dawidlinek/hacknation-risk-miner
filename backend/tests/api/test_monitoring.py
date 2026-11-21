@@ -107,30 +107,23 @@ async def test_search_hides_confidential_from_anonymous(client, expert, admin, d
     assert (await admin.get(f"/api/documents/{doc_id}/pages")).status_code == 200
 
 
-async def _juror(client):
-    r = await client.post("/api/auth/demo-login", json={"persona": "juror"})
-    assert r.status_code == 200 and r.json()["read_only"] is True
-    return client
-
-
 @pytest.mark.parametrize("method,path,body", [
-    ("post", "/api/monitoring/watches", {"reason": "juror"}),
+    ("post", "/api/monitoring/watches", {"reason": "anon"}),
     ("delete", "/api/monitoring/watches/{watch_id}", None),
-    ("post", "/api/monitoring/contracts/{cid}/report-case", {"note": "juror"}),
+    ("post", "/api/monitoring/contracts/{cid}/report-case", {"note": "anon"}),
 ])
-async def test_juror_cannot_write_monitoring(client, db, method, path, body):
-    """The read-only demo Juror reads monitoring but every write route answers 403 read_only (nothing is written)."""
+async def test_anonymous_cannot_write_monitoring(client, db, method, path, body):
+    """An anonymous visitor reads monitoring but every write route answers 401 (nothing is written)."""
     cid = (await db.execute(text("SELECT contract_id FROM v_monitor_signal LIMIT 1"))).scalar()
     wid = (await db.execute(text("INSERT INTO monitor_watch (contract_id, reason, active) VALUES (:c, 'x', true) "
                                  "RETURNING id"), {"c": cid})).scalar()
-    j = await _juror(client)
-    d = (await j.get(f"/api/monitoring/contracts/{cid}")).json()
+    d = (await client.get(f"/api/monitoring/contracts/{cid}")).json()
     assert d["actions"]["can_watch"] is False and d["actions"]["can_report"] is False
     n_before = (await db.execute(text("SELECT (SELECT count(*) FILTER (WHERE active) FROM monitor_watch), (SELECT count(*) FROM review_item)"))).one()
     url = path.format(watch_id=wid, cid=cid)
     kw = {"json": {**body, "contract_id": cid}} if body is not None else {}
-    r = await getattr(j, method)(url, **kw)
-    assert r.status_code == 403 and r.json()["code"] == "read_only", r.text
+    r = await getattr(client, method)(url, **kw)
+    assert r.status_code == 401, r.text
     assert (await db.execute(text("SELECT (SELECT count(*) FILTER (WHERE active) FROM monitor_watch), (SELECT count(*) FROM review_item)"))).one() == n_before
 
 
@@ -188,11 +181,24 @@ async def test_alert_for_grant_change_on_project(db):
     assert row[0] and row[1] is None and row[2] == "grant_term_change" and row[3] == "CALC" and row[4].endswith(f"p{row[0]}")
 
 
-async def test_juror_cannot_change_alert_status(client, db):
+async def test_anonymous_cannot_change_alert_status(client, db):
     from riskminer.monitoring import alerts as AL
-    doc = await _doc(db, "juror alert (test)")
+    doc = await _doc(db, "anon alert (test)")
     r = await AL.raise_for_document(db, document_id=doc, contract_id=await _case_contract(db, "RM-2026-002"),
                                     doc_date="2026-05-05")
-    j = await _juror(client)
-    s = await j.post(f"/api/monitoring/alerts/{r['alert_id']}/status", json={"status": "closed"})
-    assert s.status_code == 403 and s.json()["code"] == "read_only"
+    s = await client.post(f"/api/monitoring/alerts/{r['alert_id']}/status", json={"status": "closed"})
+    assert s.status_code == 401
+
+
+async def test_regions_for_other_sector_packs(client):
+    """Sector packs (catalogue/<sector>/pack.yaml): budynki and cieplo show their completed works by region; the
+    overdue-contract signals exist for core wod-kan only; unknown sectors are a 422; the default stays wod-kan."""
+    base = (await client.get("/api/monitoring/regions", params={"level": "woj"})).json()
+    assert base["sector"] == "wod-kan" and base["signals_available"] is True
+    for sector in ("budynki", "cieplo"):
+        r = (await client.get("/api/monitoring/regions", params={"level": "woj", "sector": sector})).json()
+        assert r["sector"] == sector and r["signals_available"] is False and r["total"]["n"] >= 30, r["total"]
+        assert r["total"]["n"] < base["total"]["n"]
+        s = (await client.get("/api/monitoring/signals", params={"sector": sector})).json()
+        assert s["total"] == 0
+    assert (await client.get("/api/monitoring/regions", params={"sector": "../etc"})).status_code == 422

@@ -47,7 +47,7 @@ features:
   import_agent: true               # 2.1 agent thread (on: F2 wired /zrodla to /imports*; D's flow test green)
   project_docs: true               # 2.5 project documents tab (on: B wired /projects/{id}/documents, facts, upload)
   project_history: true            # 2.6 project history tab (on: B wired /history, /compare, /audit restore)
-  jelly: false                     # 3D builder bots on 1.1/1.2 (held: still animates under prefers-reduced-motion)
+  jelly: true                      # 3D builder bots on 1.1/1.2 (reduced motion or no WebGL: a still frame, no loop)
   dashboard: true                  # Pulpit for experts (on: F2 wired / to /dashboard + /analytics/headline)
   settings_view: true              # read-only Ustawienia: providers, data_location, routing (brief: where data is processed)
   sector_roads: true               # second sector (drogi, pilot extension): road analyses on 30 335 completed road works (A)

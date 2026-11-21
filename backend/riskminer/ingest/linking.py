@@ -9,6 +9,10 @@ Port of research/bzp_linking/link_projects.py onto the DB (the offline copy = wh
   4. Cross-source validation -> review_item (discrepancy): NIP/province mismatch, część vs lots
      (Zakrzew row 9, Biecz row 8), KPO value vs contract amounts (rows 7/14), missing contract notice (row 22).
 Every candidate is stored in link_candidate with its features; the chosen one becomes project_procedure.
+
+`run(conn, rid, project_ids=[...])` links imported records (import agent, `riskminer.ingest.link_import`) with the same
+algorithm plus two steps that never touch the pilot path (validated 22/22): the KPO number cited in the buyer's own
+notices (`kpo_cited`, identifier-first) and, when the record's NIP failed its checksum, the buyer found by name.
 """
 from __future__ import annotations
 
@@ -61,8 +65,21 @@ def _score_candidate(group, p) -> tuple[float, dict]:
                              "title": title[:200]}
 
 
-async def run(conn, rid) -> dict:
-    projects = await conn.fetch("SELECT * FROM project WHERE is_pilot ORDER BY rm_id")
+async def _buyer_by_name(conn, name: str | None) -> str | None:
+    """Imported record without a valid NIP: the one buyer NIP the BZP notices give for exactly this buyer name."""
+    if not name:
+        return None
+    nips = await conn.fetch("""SELECT n.buyer_nip, count(*) AS n FROM notice n WHERE n.is_latest AND n.buyer_nip IS NOT NULL
+                               AND lower(n.buyer_name) = lower($1) GROUP BY 1 ORDER BY 2 DESC LIMIT 2""", name.strip())
+    return ids.digits(nips[0]["buyer_nip"]) if len(nips) == 1 else None
+
+
+async def run(conn, rid, project_ids: list[int] | None = None) -> dict:
+    if project_ids is None:
+        projects = await conn.fetch("SELECT * FROM project WHERE is_pilot ORDER BY rm_id")
+    else:
+        projects = await conn.fetch("SELECT * FROM project WHERE id = ANY($1::bigint[]) ORDER BY rm_id", project_ids)
+    created_by = "linker:pilot" if project_ids is None else "linker:import"
     ref = {}
     if REFERENCE.exists():
         ref = {c["project_id"]: c.get("tenderId") for c in json.loads(REFERENCE.read_text(encoding="utf-8"))}
@@ -75,6 +92,11 @@ async def run(conn, rid) -> dict:
         def issue(code, title, severity="medium", **detail):
             issues.append((rm, code, title, severity, detail))
 
+        if not nip and not p["is_pilot"]:
+            nip = await _buyer_by_name(conn, p["beneficiary_name"])
+            if nip:
+                issue("nip_from_buyer_name", f"Rekord nie ma poprawnego NIP odbiorcy; zamawiającego „{p['beneficiary_name']}” "
+                      f"znaleziono w BZP po nazwie (NIP {nip}). Sprawdź NIP w rekordzie.", "high", resolved_nip=nip)
         given = None
         if ext.get("bzp_base"):
             base = ext["bzp_base"]
@@ -86,7 +108,9 @@ async def run(conn, rid) -> dict:
                 if given["notice_type"] != "ContractNotice":
                     issue("bzp_not_contract_notice", f"Numer {base} to ogłoszenie typu {given['notice_type']}, "
                           "nie ogłoszenie o zamówieniu", "low", notice=given["notice_number"])
-                if ids.digits(given["buyer_nip"]) != nip:
+                if not nip and not p["is_pilot"]:
+                    nip = ids.digits(given["buyer_nip"]) or None    # imported record without a valid NIP: the notice's
+                elif ids.digits(given["buyer_nip"]) != nip:
                     issue("nip_mismatch", f"NIP w zestawie ({nip}) różni się od NIP zamawiającego w ogłoszeniu "
                           f"({given['buyer_nip']}, {given['buyer_name']})", "high",
                           dataset_nip=nip, notice_nip=given["buyer_nip"], notice=given["notice_number"])
@@ -105,6 +129,25 @@ async def run(conn, rid) -> dict:
                 else:
                     issue("bzp_not_found", f"Numer {base} nie znaleziony w BZP (żaden z 4 typów ogłoszeń) ani w "
                           "odwołaniach innych ogłoszeń zamawiającego", "high")
+        kpo_related: list[str] = []
+        if res["ocid"] is None and ext.get("kpo") and nip and not p["is_pilot"]:
+            # identifier-first for imported KPO records: the buyer's own notices citing the KPO project number
+            cites = await _notices_of(conn, "n.buyer_nip = $1 AND n.extracted::text LIKE $2", nip, f"%{ext['kpo']}%")
+            groups_k = defaultdict(list)
+            for n in cites:
+                groups_k[n["ocid"]].append(n)
+            if groups_k:
+                full = {tid: await _notices_of(conn, "n.ocid = $1", tid) for tid in groups_k}
+                ranked = sorted(((_score_candidate(g, p), tid) for tid, g in full.items()), key=lambda x: -x[0][0])
+                (s0, feats0), best = ranked[0]
+                res.update(method="kpo_cited", ocid=best, score=0.97 if len(ranked) == 1 else 0.9)
+                res["kpo_citing"] = sorted(n["notice_number"] for n in groups_k[best])
+                res["kpo_features"] = {**feats0, "fuzzy_score": s0}
+                kpo_related = [tid for _, tid in ranked[1:]]
+                if kpo_related:
+                    issue("kpo_cited_by_many", f"Numer KPO {ext['kpo']} powołuje {len(ranked)} postępowań zamawiającego; "
+                          f"główne wybrano po zgodności nazwy, pozostałe dołączono jako powiązane do przeglądu", "medium",
+                          ocids=[tid for _, tid in ranked])
         if res["ocid"] is None:
             org_notices = await _notices_of(conn, "n.buyer_nip = $1", nip)
             groups = defaultdict(list)
@@ -128,6 +171,13 @@ async def run(conn, rid) -> dict:
                           f"({cands[1][1]})", "medium", top=[c[:2] for c in cands[:3]])
             else:
                 issue("no_procedure_found", "Nie znaleziono postępowania po NIP/nazwie/CPV/dacie", "high")
+        elif res["method"] == "kpo_cited":
+            f0 = res["kpo_features"]
+            cand_rows.append((p["id"], res["ocid"], "kpo_cited", {"given": ext.get("kpo"), "nip_match": True,
+                              "citing_notices": res["kpo_citing"], **f0}, res["score"], 1,
+                              f"Numer projektu KPO z rekordu powołany w ogłoszeniach zamawiającego "
+                              f"({', '.join(res['kpo_citing'][:3])}); wspólne słowa tytułu: {', '.join(f0['overlap'][:8]) or 'brak'}",
+                              "accept"))
         else:
             cand_rows.append((p["id"], res["ocid"], res["method"], {"given": ext.get("bzp") or ext.get("kpo"),
                               "nip_match": True}, res["score"], 1,
@@ -143,7 +193,7 @@ async def run(conn, rid) -> dict:
         chain = await _notices_of(conn, "n.ocid = $1", res["ocid"])
         nums = sorted({n["bzp_number"] for n in chain if n["bzp_number"]})
         extra = await _notices_of(conn, "n.refs && $1::varchar[] AND n.buyer_nip = $2 AND n.ocid <> $3", nums, nip, res["ocid"])
-        res["related_ocids"] = sorted({n["ocid"] for n in extra})
+        res["related_ocids"] = sorted({n["ocid"] for n in extra} | set(kpo_related))
         res["chain"] = [n["notice_number"] for n in sorted(chain, key=lambda n: n["published_at"])]
         provs = {n["province"] for n in chain if n["province"]}
         if p["province"] and provs and p["province"] not in provs:
@@ -254,7 +304,7 @@ async def run(conn, rid) -> dict:
         await upsert_copy(
             conn, "review_item",
             ("key", "kind", "code", "target_table", "target_id", "project_id", "title", "detail", "severity", "created_by"),
-            [(f"link|{rm}|{code}", "discrepancy", code, "project", pid[rm], pid[rm], title, detail, sev, "linker:pilot")
+            [(f"link|{rm}|{code}", "discrepancy", code, "project", pid[rm], pid[rm], title, detail, sev, created_by)
              for rm, code, title, sev, detail in issues],
             ("key",), update=["title", "detail", "severity"])
         # CALC project attributes from the linked procedure (only where empty)
@@ -265,9 +315,11 @@ async def run(conn, rid) -> dict:
                    works_type = coalesce(p.works_type, pr.work_type),
                    delivery_model = coalesce(p.delivery_model, CASE WHEN pr.design_build THEN 'design_build' ELSE 'build' END)
             FROM project_procedure pp JOIN procedure pr ON pr.id = pp.procedure_id
-            WHERE pp.project_id = p.id AND pp.method <> 'cross_reference_related'""")
-        await audit(conn, "system:linker", "link_pilot", "project", None, None,
-                    {"linked": sum(1 for r in results if r["ocid"]), "issues": len(issues)})
+            WHERE pp.project_id = p.id AND pp.method <> 'cross_reference_related'
+              AND ($1::bigint[] IS NULL OR p.id = ANY($1::bigint[]))""", project_ids)
+        await audit(conn, "system:linker", "link_pilot" if project_ids is None else "link_import", "project", None, None,
+                    {"linked": sum(1 for r in results if r["ocid"]), "issues": len(issues),
+                     **({"rm_ids": [p["rm_id"] for p in projects]} if project_ids is not None else {})})
     linked = sum(1 for r in results if r["ocid"])
     return {"projects": len(projects), "linked": linked, "by_method": _count(r["method"] for r in results),
             "reference": _count(r.get("reference") for r in results), "issues": len(issues),

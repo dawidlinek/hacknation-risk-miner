@@ -4,6 +4,8 @@ import type { ReactNode } from 'react'
 import { Page } from '@/app/Page'
 import { PillTabs } from '@/components/common/PillTabs'
 import { Button } from '@/components/ui/button'
+import { useFeature } from '@/config/features'
+import { JellyDigger } from '@/features/jelly/JellyDigger'
 import { reportQuery } from './api'
 
 /** Shared frame of an analysis record (1.2–1.5): title, mono record line, actions, section tabs, then the section. */
@@ -12,6 +14,9 @@ export function AnalysisLayout({ id, children }: { id: string; children: ReactNo
   const base = `/analizy/${encodeURIComponent(id)}`
   const pathname = useRouterState({ select: (st) => st.location.pathname })
   const onDocs = pathname.includes('/dokumenty')
+  // A2 mockup: the master jelly in its koparka sits before the project name on the summary only
+  const onSummary = pathname.replace(/\/$/, '') === base
+  const jelly = useFeature('jelly')
   const title = r.data?.title || id
   const firstDoc = r.data?.documents?.[0]?.document_id
   return (
@@ -21,9 +26,12 @@ export function AnalysisLayout({ id, children }: { id: string; children: ReactNo
           {onDocs ? (
             <div className="t-h1 m-0">{title}</div>
           ) : (
-            <h1 className="t-h1 m-0" tabIndex={-1} data-page-title>
-              {title}
-            </h1>
+            <div className="flex items-end gap-4">
+              {jelly && onSummary ? <JellyDigger /> : null}
+              <h1 className="t-h1 m-0 outline-none" tabIndex={-1} data-page-title>
+                {title}
+              </h1>
+            </div>
           )}
           <span className="t-mono text-muted" data-testid="analysis-record">
             {r.data?.subtitle || id}

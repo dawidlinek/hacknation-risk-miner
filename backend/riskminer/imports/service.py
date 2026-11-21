@@ -143,17 +143,22 @@ async def inspect(db: AsyncSession, code: str, actor: str, request_id: str | Non
             calls.append(c)
             names = (c["data"] or {}).get("names") or []
             calls.append(_call(f"classify_docs(sample={min(len(names), sandbox.MAX_CLASSIFY)})", sandbox.classify_docs, names))
-        elif f["kind"] in ("xlsx", "csv"):
+        elif f["kind"] in ("xlsx", "csv") or f["kind"] in sandbox.RECORD_KINDS:
             c = _call(f'sample_rows("{f["name"]}", n={sandbox.MAX_SAMPLE})', sandbox.sample_rows, p)
             c["file"] = f["name"]
-            calls.append(c)
             headers = (c["data"] or {}).get("headers") or []
+            if f["kind"] in sandbox.RECORD_KINDS and sum(1 for h in headers if sandbox._known(h)) < 3:
+                # a text document, not a record: classify it like any other document
+                calls.append(_call(f'classify_docs("{f["name"]}")', sandbox.classify_docs, [f["name"]]))
+                continue
+            f["tabular"] = True
+            calls.append(c)
             m = _call("match_schema(known_formats)", sandbox.match_schema, headers, importers)
             m["file"] = f["name"]
             calls.append(m)
         else:
             calls.append(_call(f'classify_docs("{f["name"]}")', sandbox.classify_docs, [f["name"]]))
-    await _save(db, code, tool_calls=calls, status="inspected")
+    await _save(db, code, tool_calls=calls, files=s["files"], status="inspected")
     await _audit(db, actor, "import.inspect", s["id"], {"calls": [c["call"] for c in calls]}, request_id)
     return await state(db, code)
 
@@ -254,8 +259,12 @@ async def answer(db: AsyncSession, code: str, body: dict, actor: str, request_id
     return await state(db, code)
 
 
+def _is_table(f: dict) -> bool:
+    return f["kind"] in ("xlsx", "csv") or bool(f.get("tabular"))
+
+
 def _first_table(s: dict) -> dict | None:
-    return next((f for f in s["files"] if f["kind"] in ("xlsx", "csv")), None)
+    return next((f for f in s["files"] if _is_table(f)), None)
 
 
 async def test_run(db: AsyncSession, code: str, rows: int, actor: str, request_id: str | None) -> dict | None:
@@ -359,7 +368,8 @@ async def full_run(db: AsyncSession, code: str, run_id: str | None = None) -> di
                              CAST(:p AS jsonb), 'running') ON CONFLICT (id) DO UPDATE SET status = 'running'"""),
                      {"id": rid, "p": json.dumps({"import_code": code, "importer_id": s["importer_id"]})})
     store = RawStore("imports", root=raw_root())
-    stats: dict[str, Any] = {"files": 0, "rows": 0, "ok": 0, "failed": 0, "inserted": 0, "updated": 0, "protected_skipped": 0}
+    stats: dict[str, Any] = {"files": 0, "rows": 0, "ok": 0, "failed": 0, "inserted": 0, "updated": 0, "protected_skipped": 0,
+                             "projects": []}
     for f in s["files"]:
         src = Path(f["path"])
         dest = store.path_for(f"{f['sha256'][:16]}_{f['name']}")
@@ -380,7 +390,7 @@ async def full_run(db: AsyncSession, code: str, run_id: str | None = None) -> di
                                     {"u": f"upload:{code}/{f['name']}", "b": f["bytes"], "s": content_sha, "p": store.rel(dest),
                                      "n": f"import {code}", "r": rid, "k": content_sha[:64]})).scalar()
         stats["files"] += 1
-        if f["kind"] not in ("xlsx", "csv"):
+        if not _is_table(f):
             continue
         res = await runner.run(db, dest, spec, file_sha=content_sha, source_id=sid, dry_run=False)
         stats["rows"] += res.rows
@@ -389,6 +399,7 @@ async def full_run(db: AsyncSession, code: str, run_id: str | None = None) -> di
         stats["inserted"] += res.would["insert"]["project"]
         stats["updated"] += res.would["update"]
         stats["protected_skipped"] += res.would["protected_skipped"]
+        stats["projects"] += [k for k in res.written_keys if k not in stats["projects"]]
         for fl in res.failures:
             await db.execute(text("""INSERT INTO review_item (key, kind, code, title, detail, severity, created_by, source_id)
                 VALUES (:k, 'import', :rule, :t, CAST(:d AS jsonb), 'medium', 'system:import', :sid)

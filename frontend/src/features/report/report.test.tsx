@@ -7,6 +7,7 @@ import demo from './__fixtures__/report.demo.json'
 import {
   flagHref,
   funnelWidth,
+  groupFlags,
   keyDisplay,
   type Report,
   type ReportQuestion,
@@ -159,5 +160,31 @@ describe('second sector', () => {
       </QueryClientProvider>,
     )
     expect(screen.queryByTestId('sector-badge')).toBeNull()
+  })
+})
+
+describe('groupFlags', () => {
+  const base = {
+    origin: 'CALC' as const,
+    review_status: 'auto' as const,
+    title: 'Przekroczenie cieku, drogi lub kolei',
+    text: 'Trasa przecina przeszkodę.',
+    risk_codes: ['R03'],
+  }
+  it('the same warning on two pages shows once with both pages', () => {
+    const out = groupFlags([
+      { ...base, id: 'a', meta: 'R03.3, reguła, PFU s. 2' },
+      { ...base, id: 'b', meta: 'R03.3, reguła, PFU s. 6' },
+      { ...base, id: 'c', title: 'Inna uwaga', meta: 'R06, obliczenie' },
+    ])
+    expect(out.map((f) => f.id)).toEqual(['a', 'c'])
+    expect(out[0].meta).toBe('R03.3, reguła, PFU s. 2, PFU s. 6')
+  })
+  it('different review states stay apart', () => {
+    const out = groupFlags([
+      { ...base, id: 'a', meta: 'R03.3, AI, PFU s. 2', origin: 'AI', review_status: 'proposed' },
+      { ...base, id: 'b', meta: 'R03.3, AI, PFU s. 6', origin: 'AI', review_status: 'approved' },
+    ])
+    expect(out).toHaveLength(2)
   })
 })

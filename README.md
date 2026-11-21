@@ -4,7 +4,7 @@
 
 **Podsumowanie dla jury (PL).** ex ante to cyfrowa pamięć instytucjonalna inwestycji wodno-kanalizacyjnych (zadanie MFiPR „Risk Miner”, HackNation 2026). System automatycznie łączy publiczne źródła (BZP, TED, KIO, NIK i inne) w bazę zrealizowanych umów ze źródłem, zdarzeniami ryzyka i dowodami, a dla nowej inwestycji pokazuje, jak kończyły się podobne: z liczebnością próby, przedziałem i odnośnikiem do źródła każdej liczby. Wnioski AI są tylko propozycjami, o których decyduje ekspert. Wersja demonstracyjna: https://exante.linek.dev (logowanie jednym kliknięciem jako „juror”, tylko do odczytu). Interfejs jest po polsku.
 
-Live demo: **https://exante.linek.dev** (one-click login as a demo persona: juror, expert or administrator, no password; the juror persona is read-only).
+Live demo: **https://exante.linek.dev** (one-click "Zaloguj się" as the single demo user with full rights, no password).
 
 ex ante is a source-backed case base and risk analytics tool for public water and sewage investments in Poland. It turns scattered public records into linked, evidenced cases, then answers one question for a new investment: how did similar projects really end, and what should the contract say so that it does not happen again.
 

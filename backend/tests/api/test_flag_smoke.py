@@ -347,9 +347,20 @@ def test_sector_roads():
     assert (REPO_ROOT / "catalogue" / "drogi" / "lexicon.yaml").exists()
 
 
+async def test_jelly(client):
+    """Frontend only (A1 building site, A2 koparka): no API call of its own. Here: the flag is served to the UI, and the vendored
+    renderer is the design asset byte for byte apart from its two lint-ignore header lines (three r128 is MIT)."""
+    from riskminer.config import REPO_ROOT
+    f = _ok(await client.get("/api/config/features"), "features")
+    assert "jelly" in (f.get("features") or f)
+    vendored = (REPO_ROOT / "frontend" / "src" / "features" / "jelly" / "jelly-scene.js").read_text(encoding="utf-8").splitlines()
+    design = (REPO_ROOT / "design" / "assets" / "jelly-scene.js").read_text(encoding="utf-8").splitlines()
+    assert [ln for ln in vendored if not ln.startswith("// biome-ignore-all")] == design
+
+
 def test_flags_on_have_a_smoke():
     """Every flag that is on must have a test above (add one before flipping a new flag)."""
-    covered = {"case_graph", "radar", "radar_drill", "review_queue", "catalogue_edit", "monte_carlo", "allocation", "pack_export", "learning_loop", "project_docs", "project_history", "import_agent", "red_pen", "unit_cost", "backtest", "dashboard", "ask_memory", "settings_view", "monitoring_replay", "new_document_reanalysis", "sector_roads"}  # replay smoke = backend only
+    covered = {"case_graph", "radar", "radar_drill", "review_queue", "catalogue_edit", "monte_carlo", "allocation", "pack_export", "learning_loop", "project_docs", "project_history", "import_agent", "red_pen", "unit_cost", "backtest", "dashboard", "ask_memory", "settings_view", "monitoring_replay", "new_document_reanalysis", "sector_roads", "jelly"}  # replay smoke = backend only
     feats = app_config().get("features") or {}
     ui_flags = {"red_pen", "unit_cost", "backtest", "case_graph", "monte_carlo", "radar", "learning_loop", "sovereign_switch",
                 "sector_pack_wizard", "ask_memory", "allocation", "pack_export", "radar_drill", "monitoring_replay", "review_queue",

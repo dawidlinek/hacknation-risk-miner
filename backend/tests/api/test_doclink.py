@@ -203,10 +203,9 @@ async def test_analysis_steps_and_access(expert, client, db):
     assert (await expert.post(f"/api/documents/{secret}/link")).status_code == 404
 
 
-async def test_juror_cannot_link_and_no_facts_is_409(client, expert, db):
+async def test_anonymous_cannot_link_and_no_facts_is_409(client, expert, db):
     did = await _doc(db, "x", ZAGRODNO)
-    await client.post("/api/auth/demo-login", json={"persona": "juror"})
-    assert (await client.post(f"/api/documents/{did}/link")).status_code == 403
+    assert (await client.post(f"/api/documents/{did}/link")).status_code == 401
     nof = await _scalar(db, "INSERT INTO document (title, filename, sensitivity, doc_type, fetch_state) VALUES ('b','b.pdf','public','x','found') RETURNING id")
     assert (await expert.post(f"/api/documents/{nof}/link")).status_code == 409
 
@@ -272,3 +271,13 @@ async def test_tender_scan_documents_are_not_linked_twice(expert, db):
     r = await expert.post(f"/api/documents/{did}/link")
     assert r.status_code == 200 and r.json()["skipped"] == "tender_scan" and r.json()["review_items"] == []
     assert await _scalar(db, "SELECT count(*) FROM risk_event WHERE key LIKE :k", k=f"doc:{did}:%") == 0
+
+
+async def test_evidence_rows_carry_the_document_source(expert, db):
+    src = await _scalar(db, "INSERT INTO source (kind, url, status, licence) VALUES ('upload', 'file:///test', 'ok', 'user-upload') RETURNING id")
+    did = await _doc(db, "zagrodno-src", ZAGRODNO)
+    await db.execute(text("UPDATE document SET source_id = :s WHERE id = :d"), {"s": src, "d": did})
+    await expert.post(f"/api/documents/{did}/link")
+    n, missing = (await db.execute(text("SELECT count(*), count(*) FILTER (WHERE source_id IS NULL) FROM evidence WHERE document_id = :d"), {"d": did})).one()
+    assert n >= 5 and missing == 0
+    assert await _scalar(db, "SELECT count(DISTINCT source_id) FROM evidence WHERE document_id = :d", d=did) == 1

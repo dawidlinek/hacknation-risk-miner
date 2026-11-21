@@ -1,0 +1,31 @@
+# Sector pack cieplo (district heating networks and building heating / sanitary installations): fourth sector, an
+# extension of the pilot. Every entry is status: proposed until an expert approves it in Katalog. `assign` tells
+# derive which procedures belong to this sector (data, not code); it runs before budynki (lower priority number).
+sector: cieplo
+name: Sieci ciepłownicze i instalacje sanitarne (rozszerzenie pilotażu)
+label_short: ciepło
+schema_version: 1
+status: proposed
+files:
+- subsectors.yaml
+- cpv_map.yaml
+- risks.yaml
+- lexicon.yaml
+- similarity.yaml
+assign:
+  priority: 10
+  cpv_main_prefixes: ['45232140', '45232141', '45232142', '4533']
+  cpv_any_exact: ['45232140', '45232141', '45232142']   # heating-network code among the additional CPVs
+  exclude_cpv_main_prefixes: ['4521']                     # a building job with a heating line stays budynki
+analytics:
+  base_population:
+    sector: cieplo
+    relevance: [none, cpv_only, component, core]
+    scope_kind: works
+    require_subsector: false
+  base_label: wszystkie wykonane umowy na sieci ciepłownicze i instalacje (CPV 45232140, 4533), 2021-2026
+  unit_cost:
+    subsectors: [SIEC]
+    unit: km
+    label: koszt kilometra sieci ciepłowniczej
+  reuse_from: wod-kan

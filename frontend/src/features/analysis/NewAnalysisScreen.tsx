@@ -1,11 +1,12 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { useNavigate } from '@tanstack/react-router'
-import { FileText, Upload, X } from 'lucide-react'
+import { ArrowRight, FileText, Upload, X } from 'lucide-react'
 import {
   type DragEvent,
   type FormEvent,
   lazy,
   type KeyboardEvent as ReactKeyboardEvent,
+  type ReactNode,
   Suspense,
   useCallback,
   useEffect,
@@ -15,7 +16,7 @@ import {
 import { toast } from 'sonner'
 import { ApiError, contractFetch } from '@/api/client'
 import type { FollowUp, UploadedDocument } from '@/api/contracts/analyses'
-import { Page, PageHeader } from '@/app/Page'
+import { Page } from '@/app/Page'
 import { OriginMarker } from '@/components/common/ProvenanceTag'
 import { Button } from '@/components/ui/button'
 import { Checkbox } from '@/components/ui/checkbox'
@@ -190,83 +191,98 @@ export function NewAnalysisScreen({ fromId }: { fromId?: string }) {
   const status = d ? aiStatusLine(d) : null
   const jelly = useFeature('jelly')
   const headline = useQuery(headlineQuery)
+  const blocked = !canRun(text, docIds, uploading)
   return (
-    <Page>
+    // A1 mockup: one centred 780 px column, building site, centred question, composer card, chips, centred run button
+    <Page className="max-w-[828px] gap-7 pt-16 pb-24">
       {jelly ? (
         <Suspense fallback={null}>
           <JellySite />
         </Suspense>
       ) : null}
-      <PageHeader
-        title="Co planujesz zbudować?"
-        breadcrumb={fromId ? `Edycja założeń ${fromId}` : undefined}
-        lead={
-          headline.data?.completed?.value
+      <div className="flex flex-col items-center gap-3 text-center">
+        {fromId ? <div className="t-mono text-muted">Edycja założeń {fromId}</div> : null}
+        <h1 className="t-display m-0 outline-none" tabIndex={-1} data-page-title>
+          Co planujesz zbudować?
+        </h1>
+        <p className="m-0 max-w-[560px] text-[17px] text-text-muted">
+          {headline.data?.completed?.value
             ? `Opisz inwestycję albo wrzuć PFU. Sprawdzimy, jak kończyło się ${headline.data.completed.display} wykonanych umów wod-kan w Polsce.`
-            : 'Opisz inwestycję albo wrzuć PFU. Sprawdzimy, jak kończyły się wykonane umowy wod-kan w Polsce.'
-        }
-      />
+            : 'Opisz inwestycję albo wrzuć PFU. Sprawdzimy, jak kończyły się wykonane umowy wod-kan w Polsce.'}
+        </p>
+      </div>
       <form
-        className="flex flex-col gap-4"
+        className="flex flex-col gap-7"
         onSubmit={(e: FormEvent) => {
           e.preventDefault()
           if (canRun(text, docIds, uploading)) run.mutate()
         }}
       >
-        <label htmlFor="opis" className="t-item">
-          Opis inwestycji
-        </label>
-        <Textarea
-          id="opis"
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-          rows={5}
-          placeholder="np. Budowa kanalizacji sanitarnej ok. 6 km z 3 przepompowniami, zaprojektuj i wybuduj, 7 mln zł brutto, 14 miesięcy, FEnIKS"
-          className="rounded-panel p-5 text-[16px] shadow-[var(--shadow-composer)]"
-        />
-        <FileDrop onFiles={addFiles} />
-        <label htmlFor="pub" className="t-small flex cursor-pointer items-center gap-2 text-text-body-muted">
-          <Checkbox id="pub" checked={isPublic} onCheckedChange={(v) => setIsPublic(v === true)} />
-          Dokument jest publiczny (np. pobrany z BZP)
-        </label>
-        <p className="t-caption m-0 text-muted">
-          Dokumenty niepubliczne czyta wyłącznie model działający w Polsce. Gdy jest niedostępny, pokazujemy
-          uwagi z reguł, a dokument nie trafia do chmury.
-        </p>
-        {files.length ? (
-          <ul className="m-0 flex list-none flex-wrap gap-2 p-0">
-            {files.map((f) => (
-              <li
-                key={f.key}
-                className={cn(
-                  't-small flex items-center gap-2 rounded-pill border px-3 py-1.5',
-                  f.status === 'error' ? 'border-attention text-attention-text' : 'border-border',
-                )}
-              >
-                <FileText className="size-4" aria-hidden />
-                <span className="max-w-[240px] truncate">{f.name}</span>
-                <span className="t-mono text-muted">
-                  {f.status === 'uploading' ? 'wczytujemy…' : f.status === 'done' ? f.doc?.label : f.error}
-                </span>
-                <button
-                  type="button"
-                  aria-label={`Usuń ${f.name}`}
-                  onClick={() => setFiles((p) => p.filter((x) => x.key !== f.key))}
-                  className="text-muted hover:text-text"
+        <FileDrop
+          onFiles={addFiles}
+          footer={
+            <label
+              htmlFor="pub"
+              className="t-small flex cursor-pointer items-center gap-2 text-text-body-muted"
+            >
+              <Checkbox id="pub" checked={isPublic} onCheckedChange={(v) => setIsPublic(v === true)} />
+              Dokument jest publiczny (np. pobrany z BZP)
+            </label>
+          }
+        >
+          <label htmlFor="opis" className="sr-only">
+            Opis inwestycji
+          </label>
+          <Textarea
+            id="opis"
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+            rows={3}
+            placeholder="np. Budowa kanalizacji sanitarnej ok. 6 km z 3 przepompowniami, zaprojektuj i wybuduj, 7 mln zł brutto, 14 miesięcy, FEnIKS"
+            className="min-h-[84px] resize-none rounded-none border-0 bg-transparent p-0 text-[18px] leading-normal md:text-[18px] shadow-none focus-visible:ring-0 dark:bg-transparent"
+          />
+          {files.length ? (
+            <ul className="m-0 flex list-none flex-wrap gap-2 p-0">
+              {files.map((f) => (
+                <li
+                  key={f.key}
+                  className={cn(
+                    't-small flex items-center gap-2 rounded-pill py-1.5 pr-2 pl-3',
+                    f.status === 'error' ? 'border border-attention text-attention-text' : 'bg-soft',
+                  )}
                 >
-                  <X className="size-3.5" aria-hidden />
-                </button>
-              </li>
-            ))}
-          </ul>
-        ) : null}
+                  <FileText className="size-3.5" aria-hidden />
+                  <span className="max-w-[240px] truncate">{f.name}</span>
+                  <span className="t-mono text-muted">
+                    {f.status === 'uploading' ? 'wczytujemy…' : f.status === 'done' ? f.doc?.label : f.error}
+                  </span>
+                  <button
+                    type="button"
+                    aria-label={`Usuń ${f.name}`}
+                    onClick={() => setFiles((p) => p.filter((x) => x.key !== f.key))}
+                    className="inline-flex size-5.5 items-center justify-center rounded-pill text-muted hover:text-text"
+                  >
+                    <X className="size-3.5" aria-hidden />
+                  </button>
+                </li>
+              ))}
+            </ul>
+          ) : null}
+        </FileDrop>
+        <p className="t-caption -mt-4 mb-0 px-5 text-muted">
+          PFU, projekt umowy lub SWZ (PDF, DOCX do 50 MB): przeciągnij na pole opisu. Dokumenty niepubliczne
+          czyta wyłącznie model działający w Polsce; gdy jest niedostępny, pokazujemy uwagi z reguł, a
+          dokument nie trafia do chmury.
+        </p>
 
         {id ? (
-          <section aria-labelledby="chips" className="flex flex-col gap-3 rounded-panel bg-soft p-5">
-            <h2 id="chips" className="t-h3 m-0">
-              Rozumiemy to tak{' '}
-              <span className="t-caption font-normal text-muted">kliknij, żeby poprawić</span>
-            </h2>
+          <section aria-labelledby="chips" className="flex flex-col gap-3.5 rounded-panel bg-soft p-5.5">
+            <div className="flex flex-wrap items-baseline justify-between gap-2">
+              <h2 id="chips" className="t-h3 m-0">
+                Rozumiemy to tak
+              </h2>
+              <span className="t-caption text-muted">kliknij, żeby poprawić</span>
+            </div>
             {status ? (
               <p
                 role="status"
@@ -287,16 +303,18 @@ export function NewAnalysisScreen({ fromId }: { fromId?: string }) {
           </section>
         ) : null}
 
-        <div className="flex flex-wrap items-center gap-3">
+        <div className="flex flex-col items-center gap-2">
           <Button
             type="submit"
             size="xl"
-            disabled={!canRun(text, docIds, uploading) || run.isPending}
+            disabled={blocked || run.isPending}
             aria-busy={run.isPending}
+            className="h-13 px-6.5 text-[16px]"
           >
             {run.isPending ? 'Liczymy…' : 'Uruchom analizę'}
+            {run.isPending ? null : <ArrowRight aria-hidden />}
           </Button>
-          {!canRun(text, docIds, uploading) ? (
+          {blocked ? (
             <span className="t-caption text-muted">
               {uploading
                 ? 'Poczekaj, aż pliki się wczytają.'
@@ -309,7 +327,16 @@ export function NewAnalysisScreen({ fromId }: { fromId?: string }) {
   )
 }
 
-function FileDrop({ onFiles }: { onFiles: (f: FileList | File[]) => void }) {
+/** The composer card (A1): description, file chips and footer; the whole card is a drop target for documents. */
+function FileDrop({
+  onFiles,
+  children,
+  footer,
+}: {
+  onFiles: (f: FileList | File[]) => void
+  children: ReactNode
+  footer: ReactNode
+}) {
   const [over, setOver] = useState(false)
   const input = useRef<HTMLInputElement>(null)
   const drop = (e: DragEvent) => {
@@ -327,14 +354,12 @@ function FileDrop({ onFiles }: { onFiles: (f: FileList | File[]) => void }) {
       onDragLeave={() => setOver(false)}
       onDrop={drop}
       className={cn(
-        'flex flex-wrap items-center justify-between gap-3 rounded-panel border-2 border-dashed px-5 py-4',
-        over ? 'border-ink bg-soft' : 'border-border',
+        'flex flex-col gap-3.5 rounded-panel border bg-surface px-5 pt-5 pb-3.5 shadow-[var(--shadow-composer)]',
+        over ? 'border-ink border-dashed' : 'border-border',
       )}
       data-testid="file-drop"
     >
-      <span className="t-small text-text-body-muted">
-        Przeciągnij tu PFU, projekt umowy lub SWZ (PDF, DOCX do 50 MB)
-      </span>
+      {children}
       <input
         ref={input}
         type="file"
@@ -344,10 +369,13 @@ function FileDrop({ onFiles }: { onFiles: (f: FileList | File[]) => void }) {
         aria-label="Wybierz pliki"
         onChange={(e) => e.target.files && onFiles(e.target.files)}
       />
-      <Button type="button" variant="outline" onClick={() => input.current?.click()}>
-        <Upload aria-hidden />
-        Dodaj dokument
-      </Button>
+      <div className="flex flex-wrap items-center justify-between gap-3 border-divider border-t pt-3">
+        <Button type="button" variant="outline" onClick={() => input.current?.click()}>
+          <Upload aria-hidden />
+          Dodaj dokument
+        </Button>
+        {footer}
+      </div>
     </div>
   )
 }

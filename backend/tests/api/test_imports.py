@@ -96,15 +96,11 @@ async def test_import_agent_flow(expert, db):
     ("/api/imports/{code}/approve", {"json": {"importer_name": "juror"}}),
     ("/api/imports/{code}/run", {}),
 ])
-async def test_juror_cannot_write_imports(client, expert, db, path, kw):
-    """The read-only demo Juror may list importers and read an import, but every write step answers 403 read_only."""
+async def test_anonymous_cannot_write_imports(client, expert, db, path, kw):
+    """Every import write step answers 401 to an anonymous caller."""
     f = {"files": ("projekty_juror.xlsx", _xlsx([ROW_OK]), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")}
     code = (await expert.post("/api/imports", files=f)).json()["code"]
-    r = await client.post("/api/auth/demo-login", json={"persona": "juror"})
-    assert r.status_code == 200 and r.json()["read_only"] is True
-    assert (await client.get("/api/importers")).status_code == 200
-    assert (await client.get(f"/api/imports/{code}")).status_code == 200
     before = (await db.execute(text("SELECT count(*), max(updated_at) FROM import_session"))).one()
     r = await client.post(path.format(code=code), **kw)
-    assert r.status_code == 403 and r.json()["code"] == "read_only", r.text
+    assert r.status_code == 401, r.text
     assert (await db.execute(text("SELECT count(*), max(updated_at) FROM import_session"))).one() == before

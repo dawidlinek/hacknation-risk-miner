@@ -3,7 +3,6 @@ import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { toast } from 'sonner'
 import { ApiError } from '@/api/client'
-import { PageHeader } from '@/app/Page'
 import { EmptyState } from '@/components/common/DataState'
 import { ProvenanceTag } from '@/components/common/ProvenanceTag'
 import { Button } from '@/components/ui/button'
@@ -132,7 +131,7 @@ export function RedPenBody({
                               href={`#u${no}`}
                               aria-label={`Uwaga ${no}`}
                               onClick={() => onActive(no)}
-                              className="t-mono ml-0.5 inline-flex size-[18px] items-center justify-center rounded-pill bg-attention align-super text-[10px] text-on-ink no-underline"
+                              className="t-mono ml-0.5 inline-flex size-[18px] items-center justify-center rounded-pill bg-attention align-super text-[10px] text-text no-underline"
                             >
                               {no}
                             </a>
@@ -156,7 +155,17 @@ export function RedPenBody({
         </span>
       </section>
       <aside className="flex min-w-0 max-w-full flex-[1_1_360px] flex-col gap-3">
-        <PageHeader title="Uwagi do dokumentów" subtitle={countsLabel(r.counts.found, r.counts.missing)} />
+        {/* A3 mockup: a compact 22 px heading with the counts on the same line (the record title above is not a heading) */}
+        <div className="flex flex-wrap items-baseline justify-between gap-2">
+          <h1
+            className="m-0 font-semibold text-[22px] tracking-[-0.02em] outline-none"
+            tabIndex={-1}
+            data-page-title
+          >
+            Uwagi do dokumentów
+          </h1>
+          <span className="t-mono text-muted">{countsLabel(r.counts.found, r.counts.missing)}</span>
+        </div>
         {(r.status as string) === 'sovereign_unavailable' ? (
           <SovereignBanner
             id={id}
@@ -217,7 +226,7 @@ function Dot({ n }: { n: Note }) {
         't-mono flex size-6 shrink-0 items-center justify-center rounded-pill text-[11px]',
         n.kind === 'missing'
           ? 'border-2 border-dashed border-attention text-attention-text'
-          : 'bg-attention text-on-ink',
+          : 'bg-attention text-text',
       )}
     >
       {n.no}

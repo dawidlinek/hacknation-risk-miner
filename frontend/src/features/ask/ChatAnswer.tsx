@@ -17,7 +17,7 @@ export function methodLabel(m: string): string {
 
 const ROLE_ORIGIN = { obliczenie: 'CALC', wniosek_ai: 'AI', brak_danych: 'SOURCE' } as const
 
-/** Pattern 13: role label, text, bars, "Jak to policzyłem" (SQL), source chips, actions. */
+/** Pattern 13: role label, text, bars, source chips, actions. */
 export function ChatAnswer({
   answer,
   onSaved,
@@ -61,19 +61,6 @@ export function ChatAnswer({
             </li>
           ))}
         </ul>
-      ) : null}
-      {answer.sql || answer.method ? (
-        <details className="text-[13px]">
-          <summary className="cursor-pointer font-medium text-text-secondary">Jak to policzyłem</summary>
-          {answer.sql ? (
-            <pre className="t-mono mt-2 overflow-x-auto rounded-inner bg-surface p-3 whitespace-pre-wrap text-text">
-              {answer.sql}
-            </pre>
-          ) : null}
-          {answer.method ? (
-            <span className="t-mono mt-1 block text-muted">metoda: {methodLabel(answer.method)}</span>
-          ) : null}
-        </details>
       ) : null}
       {answer.sources.length > 0 ? (
         <ul className="m-0 flex list-none flex-wrap gap-1.5 p-0" aria-label="Źródła">

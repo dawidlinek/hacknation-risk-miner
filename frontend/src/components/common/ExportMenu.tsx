@@ -10,8 +10,8 @@ import {
 } from '@/components/ui/dropdown-menu'
 import { downloadFile } from '@/lib/download'
 
-export type ExportFormat = 'docx' | 'pdf' | 'csv' | 'json'
-const LABEL: Record<ExportFormat, string> = { docx: 'DOCX', pdf: 'PDF', csv: 'CSV', json: 'JSON' }
+export type ExportFormat = 'docx' | 'pdf' | 'csv' | 'json' | 'md'
+const LABEL: Record<ExportFormat, string> = { docx: 'DOCX', pdf: 'PDF', csv: 'CSV', json: 'JSON', md: 'Markdown' }
 
 /** DropdownMenu of formats; `urlFor(fmt)` builds the endpoint, the file downloads via fetch → blob. */
 export function ExportMenu({

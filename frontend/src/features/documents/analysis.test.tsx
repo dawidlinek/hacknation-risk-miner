@@ -398,10 +398,10 @@ describe('G5 new document panel', () => {
 describe('read-only account and the full chain', () => {
   const juror = () =>
     http.get('/api/auth/me', () =>
-      HttpResponse.json({ role: 'expert', name: 'juror', initials: 'J', read_only: true }),
+      HttpResponse.json({ role: 'expert', name: 'czytelnik', initials: 'C', read_only: true }),
     )
 
-  it('the Juror sees the screen but cannot upload or link', async () => {
+  it('a read-only account sees the screen but cannot upload or link', async () => {
     const steps = analysis().steps.map((s) => (s.key === 'linking' ? { ...s, state: 'pending' as const } : s))
     server.use(
       juror(),

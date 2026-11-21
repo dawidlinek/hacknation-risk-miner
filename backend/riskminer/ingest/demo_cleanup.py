@@ -72,7 +72,7 @@ async def find(conn, *, include_raw_named: bool = False, anon_analyses_since: st
             skipped.append(row)
     # "[e2e]" titles always; with anon_analyses_since also analyses created by anonymous visitors since that time
     # (tooling: e2e specs, deck screenshots, headless checks), judged by the current owner, so analyses handed
-    # to a demo persona (owner user:juror) stay. Seeded system:* analyses are never selected.
+    # to a demo demo user (owner user:Ekspert (demo)) stay. Seeded system:* analyses are never selected.
     analyses = [dict(r) for r in await conn.fetch("""
         SELECT id, code, title, created_by,
                CASE WHEN title LIKE '[e2e]%' THEN 'e2e_title' WHEN code = ANY($2::text[]) THEN 'named' ELSE 'anonymous_tooling' END AS reason

@@ -5,7 +5,7 @@ import { useCallback, useEffect, useMemo, useState } from 'react'
 import { toast } from 'sonner'
 import { KIND_TAB_LABEL } from '@/api/adapters/review'
 import { ApiError } from '@/api/client'
-import type { DecisionResult, ReviewCard, ReviewKind } from '@/api/contracts/review'
+import type { DecisionResult, ReviewKind } from '@/api/contracts/review'
 import { Page, PageHeader, TwoCol } from '@/app/Page'
 import { useSession } from '@/auth/session'
 import { EmptyState, SkeletonBlock } from '@/components/common/DataState'
@@ -17,8 +17,19 @@ import { Kbd } from '@/components/ui/kbd'
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
 import { useFeature } from '@/config/features'
 import { cn } from '@/lib/cn'
-import { decide, reviewCardQuery, reviewCountsQuery, reviewListQuery, skipItem, undoDecision } from './api'
+import {
+  decide,
+  type ReviewCardView,
+  reviewCardQuery,
+  reviewCountsQuery,
+  reviewFacetsQuery,
+  reviewListQuery,
+  skipItem,
+  undoDecision,
+} from './api'
+import { type QueueFilter, questionOnly } from './context'
 import { resolveHotkey } from './hotkeys'
+import { ProposalPanel, QueueFilters, SubjectBlock } from './parts'
 
 const KINDS: ReviewKind[] = ['events', 'links', 'discrepancies', 'facts', 'catalogue']
 
@@ -65,7 +76,7 @@ function KindTabs({
   )
 }
 
-function EffectsPanel({ card, pick, gold }: { card: ReviewCard; pick: number; gold: boolean }) {
+function EffectsPanel({ card, pick, gold }: { card: ReviewCardView; pick: number; gold: boolean }) {
   const option = card.options[pick]
   const rows = [...(option?.effects ?? []), ...(gold && card.gold ? [card.gold] : [])]
   return (
@@ -104,13 +115,13 @@ function ReviewItemView({
   onSkip,
   onMove,
 }: {
-  card: ReviewCard
+  card: ReviewCardView
   position: number
   total: number
   length: number
   index: number
-  onDecide: (card: ReviewCard, pick: number, text: string, gold: boolean) => Promise<void>
-  onSkip: (card: ReviewCard) => Promise<void>
+  onDecide: (card: ReviewCardView, pick: number, text: string, gold: boolean) => Promise<void>
+  onSkip: (card: ReviewCardView) => Promise<void>
   onMove: (to: number) => void
 }) {
   const learning = useFeature('learning_loop')
@@ -162,8 +173,8 @@ function ReviewItemView({
       main={
         <>
           <div className="flex flex-col gap-2">
-            <span className="t-caption flex flex-wrap items-baseline justify-between gap-2 text-muted">
-              <span>
+            <span className="t-caption flex items-baseline justify-between gap-3 text-muted">
+              <span className="min-w-0 truncate">
                 {card.kind_label}
                 {card.context.href ? (
                   <>
@@ -174,21 +185,33 @@ function ReviewItemView({
                   </>
                 ) : null}
               </span>
-              <span className="t-mono text-muted">
+              <span className="t-mono shrink-0 text-muted">
                 {position} z {total}
               </span>
             </span>
             <h2 className="t-h2 m-0" data-review-question>
-              {card.question}
+              {card.about?.title && card.kind !== 'catalogue'
+                ? questionOnly(card.question, card.about.title)
+                : card.question}
             </h2>
             {card.sub ? <p className="m-0 max-w-[720px] text-text-body-muted">{card.sub}</p> : null}
           </div>
 
+          {card.about && card.kind !== 'catalogue' ? (
+            <SubjectBlock
+              about={card.about}
+              hideLead={card.options.some((o) => o.sub && o.sub === card.about?.lead)}
+              hideHref={card.context.href || undefined}
+              heading={card.question}
+            />
+          ) : null}
+          {card.proposal ? <ProposalPanel proposal={card.proposal} /> : null}
+
           {hasEvidence ? (
             <QuoteCard
-              title={card.evidence.title}
-              reference={card.evidence.ref}
-              referenceUrl={card.evidence.ref_url}
+              title={card.source?.title ?? card.evidence.title}
+              reference={card.source?.label ?? card.evidence.ref}
+              referenceUrl={card.source?.href ?? card.evidence.ref_url}
               pre={card.evidence.pre}
               hit={card.evidence.hit}
               post={card.evidence.post}
@@ -199,7 +222,19 @@ function ReviewItemView({
                   : [{ text: 'cytat niezweryfikowany', tone: 'warn' as const }]),
               ]}
               onOpenSource={() => setOpened(true)}
-            />
+            >
+              {card.source?.original_url && card.source.original_url !== card.source.href ? (
+                <a
+                  href={card.source.original_url}
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={() => setOpened(true)}
+                  className="t-caption self-start text-text-secondary hover:underline"
+                >
+                  Oryginał na platformie zamawiającego ↗
+                </a>
+              ) : null}
+            </QuoteCard>
           ) : card.chips.length > 0 ? (
             <div className="flex flex-wrap gap-1.5">
               {card.chips.map((c) => (
@@ -286,8 +321,15 @@ function ReviewItemView({
                 onCheckedChange={(v) => setGold(v === true)}
                 className="size-5.5 rounded-[7px]"
               />
-              <span>
-                Wzorcowy przykład <Kbd aria-hidden>G</Kbd>
+              <span className="flex flex-col gap-0.5">
+                <span>
+                  Wzorcowy przykład <Kbd aria-hidden>G</Kbd>
+                </span>
+                <span className="t-caption text-muted">
+                  {card.kind === 'events'
+                    ? 'model użyje tej decyzji przy podobnych sprawach w kolejce'
+                    : 'decyzja trafi do zbioru wzorcowych przykładów modelu'}
+                </span>
               </span>
             </label>
           ) : null}
@@ -326,16 +368,22 @@ export function ReviewScreen({
   kind,
   first,
   code,
+  filter = {},
   onKind,
+  onFilter,
 }: {
   kind: ReviewKind | undefined
   first: number | undefined
   code: string | undefined
+  filter?: QueueFilter
   onKind: (k: ReviewKind | undefined) => void
+  onFilter?: (f: QueueFilter) => void
 }) {
   const qc = useQueryClient()
   const counts = useQuery(reviewCountsQuery)
-  const list = useQuery(reviewListQuery(kind, first, code))
+  const list = useQuery(reviewListQuery(kind, first, code, filter))
+  const facets = useQuery(reviewFacetsQuery(kind, code, filter))
+  const filtered = Boolean(filter.type || filter.project || code)
   const [ids, setIds] = useState<number[] | null>(null)
   const [index, setIndex] = useState(0)
   const [learning, setLearning] = useState<DecisionResult['learning']>(null)
@@ -356,6 +404,7 @@ export function ReviewScreen({
 
   const refresh = useCallback(() => {
     void qc.invalidateQueries({ queryKey: ['review', 'counts'] })
+    void qc.invalidateQueries({ queryKey: ['review', 'facets'] })
     void qc.invalidateQueries({ queryKey: ['nav', 'counts'] })
     void qc.invalidateQueries({ queryKey: ['project'] })
     void qc.invalidateQueries({ queryKey: ['projects'] })
@@ -370,12 +419,16 @@ export function ReviewScreen({
   }, [])
 
   const onDecide = useCallback(
-    async (c: ReviewCard, pick: number, text: string, gold: boolean) => {
+    async (c: ReviewCardView, pick: number, text: string, gold: boolean) => {
       const at = index
       try {
         const r = await decide(c.id, c.options[pick], { text, gold })
         removeCurrent(c.id)
-        setLearning(r.learning ?? null)
+        setLearning(
+          r.learning && c.kind !== 'events'
+            ? { text: 'Zapisano jako wzorcowy przykład w zbiorze wzorcowym.', link: null }
+            : (r.learning ?? null),
+        )
         toast(r.toast, {
           duration: 9000,
           action: {
@@ -410,7 +463,7 @@ export function ReviewScreen({
     [index, refresh, removeCurrent],
   )
 
-  const onSkip = useCallback(async (c: ReviewCard) => {
+  const onSkip = useCallback(async (c: ReviewCardView) => {
     try {
       await skipItem(c.id)
     } catch {
@@ -421,10 +474,17 @@ export function ReviewScreen({
   }, [])
 
   const total = useMemo(() => {
+    if (filtered && list.data) return list.data.total
     const c = counts.data
     if (!c) return ids?.length ?? 0
     return kind ? c[kind] : Object.values(c).reduce((a, b) => a + b, 0)
-  }, [counts.data, kind, ids])
+  }, [counts.data, kind, ids, filtered, list.data])
+
+  // the list is loaded in pages of 200: when the loaded part is done but more stay open, fetch the next part
+  const more = Boolean(list.data && list.data.total > list.data.items.length)
+  useEffect(() => {
+    if (ids !== null && ids.length === 0 && more && !list.isFetching) void list.refetch()
+  }, [ids, more, list])
 
   return (
     <Page>
@@ -433,6 +493,9 @@ export function ReviewScreen({
         lead="Model proponuje, Ty decydujesz. Każda decyzja ma źródło i da się ją cofnąć."
       />
       <KindTabs counts={counts.data} active={kind ?? card.data?.kind} onPick={onKind} />
+      {onFilter ? (
+        <QueueFilters facets={facets.data} filter={filter} codeFilter={code} onChange={onFilter} />
+      ) : null}
       {learning ? (
         <div role="status" className="rounded-item bg-soft px-4 py-3 text-[14px] text-text-body-muted">
           {learning.text}
@@ -443,12 +506,25 @@ export function ReviewScreen({
       ) : list.isError ? (
         <EmptyState>Nie udało się wczytać kolejki. Odśwież stronę za chwilę.</EmptyState>
       ) : ids !== null && ids.length === 0 ? (
-        <EmptyState>
-          Wszystko przejrzane. Nowe sprawy pojawią się po kolejnym wzbogacaniu.{' '}
-          <Link to="/" className="font-medium">
-            Wróć do Pulpitu
-          </Link>
-        </EmptyState>
+        filtered ? (
+          <EmptyState>
+            Brak otwartych spraw dla wybranych filtrów.{' '}
+            <button
+              type="button"
+              className="font-medium underline"
+              onClick={() => onFilter?.({ sort: filter.sort })}
+            >
+              Pokaż wszystkie
+            </button>
+          </EmptyState>
+        ) : (
+          <EmptyState>
+            Wszystko przejrzane. Nowe sprawy pojawią się po kolejnym wzbogacaniu.{' '}
+            <Link to="/" className="font-medium">
+              Wróć do Pulpitu
+            </Link>
+          </EmptyState>
+        )
       ) : card.data ? (
         <ReviewItemView
           key={card.data.id}

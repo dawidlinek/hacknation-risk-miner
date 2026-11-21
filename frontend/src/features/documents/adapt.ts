@@ -38,6 +38,45 @@ export function statusLabel(status: ReviewStatus, fallback: string | undefined, 
   return fallback || 'z ogłoszenia BZP'
 }
 
+/** BZP notice types the API may pass through untranslated (eZamówienia `noticeType`). */
+const NOTICE_TYPE: Record<string, string> = {
+  ContractNotice: 'Ogłoszenie o zamówieniu',
+  NoticeUpdateNotice: 'Ogłoszenie o zmianie ogłoszenia',
+  TenderResultNotice: 'Ogłoszenie o wyniku postępowania',
+  ContractPerformingNotice: 'Ogłoszenie o wykonaniu umowy',
+  AgreementUpdateNotice: 'Ogłoszenie o zmianie umowy',
+  CompetitionNotice: 'Ogłoszenie o konkursie',
+  CompetitionResultNotice: 'Ogłoszenie o wynikach konkursu',
+  AgreementIntentionNotice: 'Ogłoszenie o zamiarze zawarcia umowy',
+}
+/** Document types from the organiser's download list ("expected: qa"). */
+const EXPECTED_TYPE: Record<string, string> = {
+  qa: 'Pytania i odpowiedzi do SWZ',
+  pfu: 'Program funkcjonalno-użytkowy (PFU)',
+  przedmiar: 'Przedmiar robót',
+  swz: 'Specyfikacja warunków zamówienia (SWZ)',
+  ppu: 'Projektowane postanowienia umowy',
+  umowa: 'Umowa',
+  stwiorb: 'Specyfikacja techniczna (STWiORB)',
+  projekt: 'Dokumentacja projektowa',
+  protokol: 'Protokół',
+}
+
+/**
+ * Title and subtitle of a public document. Some titles reach us as crawler labels ("expected: qa",
+ * "platformazakupowa page: ...") or raw notice types; they get a Polish name and the original moves to the subtitle.
+ */
+export function publicTitle(title: string, ref: string): { title: string; sub: string } {
+  if (NOTICE_TYPE[title]) return { title: NOTICE_TYPE[title], sub: ref }
+  const exp = /^expected:\s*(\S+)$/i.exec(title)
+  if (exp)
+    return { title: EXPECTED_TYPE[exp[1].toLowerCase()] ?? `Dokument postępowania (${exp[1]})`, sub: '' }
+  const page = /^(\S+) page:\s*(.+)$/i.exec(title)
+  if (page) return { title: `Strona postępowania (${page[1]})`, sub: page[2] }
+  if (/^[0-9a-f]{8}-[0-9a-f-]{27,}\.\w+$/i.test(title)) return { title: 'Plik z postępowania', sub: title }
+  return { title, sub: ref }
+}
+
 export function adaptDocuments(raw: RealDocuments, isPublic: boolean): DocsView {
   const expected: ExpectedItem[] = raw.expected.map((e) => ({
     key: e.key,
@@ -53,9 +92,9 @@ export function adaptDocuments(raw: RealDocuments, isPublic: boolean): DocsView 
     key: p.key,
     kind: p.kind,
     objectId: p.object_id,
-    title: p.title,
+    title: publicTitle(p.title, p.ref).title,
     ext: asExt(p.ext),
-    ref: p.ref,
+    ref: publicTitle(p.title, p.ref).sub,
     dateLabel: p.date ? fmtDate(p.date) : '',
     factsLabel: factsLabel(p.facts, p.risk_codes),
     riskCodes: p.risk_codes ?? [],

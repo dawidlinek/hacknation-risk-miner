@@ -214,8 +214,9 @@ async def _evidence(db: AsyncSession, table: str, claim_id: int, doc_id: int, fi
     if await _scalar(db, "SELECT count(*) FROM evidence WHERE claim_table=:t AND claim_id=:c AND document_id=:d AND coalesce(claim_field,'')=coalesce(:f,'') "
                          "AND coalesce(quote,'')=coalesce(:q,'')", t=table, c=claim_id, d=doc_id, f=field, q=quote):
         return
-    await db.execute(text("""INSERT INTO evidence (claim_table, claim_id, claim_field, document_id, page_no, quote, verification, evidence_state, note)
-                             VALUES (:t, :c, :f, :d, :p, :q, :v, :s, :n)"""),
+    # invariant 1: every evidence row carries the source of its document (url, sha256, licence live on `source`)
+    await db.execute(text("""INSERT INTO evidence (claim_table, claim_id, claim_field, document_id, source_id, page_no, quote, verification, evidence_state, note)
+                             VALUES (:t, :c, :f, :d, (SELECT source_id FROM document WHERE id = :d), :p, :q, :v, :s, :n)"""),
                      {"t": table, "c": claim_id, "f": field, "d": doc_id, "p": page, "q": quote, "v": VERIF.get(verification or "", "unverified"), "s": state, "n": note})
 
 

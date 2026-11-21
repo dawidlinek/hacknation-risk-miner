@@ -1,0 +1,30 @@
+# Sector pack budynki (public buildings): third sector, an extension of the pilot. Every entry is status: proposed
+# until an expert approves it in Katalog. Loaded by `riskminer seed-catalogue`; the analytics engine reads the
+# `analytics` block; `assign` tells derive which procedures belong to this sector (data, not code).
+sector: budynki
+name: Budynki publiczne (rozszerzenie pilotażu)
+label_short: budynki
+schema_version: 1
+status: proposed
+files:
+- subsectors.yaml
+- cpv_map.yaml
+- risks.yaml
+- lexicon.yaml
+- similarity.yaml
+assign:
+  # procedures not classified as water/sewage (relevance core/component) and not from the roads channel
+  priority: 20
+  cpv_main_prefixes: ['4521']
+analytics:
+  base_population:
+    sector: budynki
+    relevance: [none, cpv_only, component, core]
+    scope_kind: works
+    require_subsector: false         # unmatched titles count as INNE
+  base_label: wszystkie wykonane umowy na roboty w budynkach (CPV 4521), 2021-2026
+  unit_cost:
+    subsectors: []                   # buildings are priced per m2, which BZP notices rarely state: no unit cost
+    unit: m2
+    label: koszt metra kwadratowego
+  reuse_from: wod-kan

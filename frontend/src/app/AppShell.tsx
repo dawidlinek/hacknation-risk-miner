@@ -115,11 +115,6 @@ export function AccountMenu() {
   const navigate = useNavigate()
   return (
     <div className="flex items-center gap-2">
-      {session.read_only ? (
-        <span className="t-caption hidden rounded-pill border border-border px-2.5 py-1 text-text-secondary md:inline">
-          tryb tylko do odczytu
-        </span>
-      ) : null}
       <DropdownMenu>
         <DropdownMenuTrigger
           aria-label={`${session.initials ?? 'E'}, konto: ${session.name ?? 'ekspert'}`}
@@ -129,10 +124,7 @@ export function AccountMenu() {
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end" className="min-w-[200px]">
           <DropdownMenuLabel className="text-[13px] text-muted">
-            {session.name ?? 'Ekspert'}
-            {session.read_only ? (
-              <span className="mt-0.5 block text-[12px] text-attention-text">tryb tylko do odczytu</span>
-            ) : null}
+            {session.name ?? 'Ekspert (demo)'}
           </DropdownMenuLabel>
           <DropdownMenuSeparator />
           <DropdownMenuItem
@@ -153,7 +145,7 @@ export function AppHeader() {
   const home = isPublic ? (f.radar ? '/monitoring' : '/analizy/nowa') : '/'
   return (
     <header className="border-b border-divider">
-      <div className="mx-auto flex max-w-[1240px] flex-wrap items-center justify-between gap-x-5 gap-y-3 px-6 py-3.5">
+      <div className="mx-auto flex max-w-[1288px] flex-wrap items-center justify-between gap-x-5 gap-y-3 px-6 py-3.5">
         <div className="flex items-center gap-3">
           <Link to={home as never} className="text-text no-underline">
             <Wordmark />

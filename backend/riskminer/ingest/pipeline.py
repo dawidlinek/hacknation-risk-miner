@@ -130,6 +130,19 @@ async def link_pilot(job_id: int | None = None) -> dict:
     return await _stage("link_pilot", "link", {}, linking.run, job_id)
 
 
+async def link_imported(rm_ids: list[str] | None = None, project_ids: list[int] | None = None,
+                        job_id: int | None = None) -> dict:
+    """Imported records (import agent): record checks, BZP link, risk events (riskminer/ingest/link_import.py)."""
+    from riskminer.ingest import link_import
+
+    async def fn(conn, rid):
+        ids_ = list(project_ids or [])
+        if rm_ids:
+            ids_ += [r["id"] for r in await conn.fetch("SELECT id FROM project WHERE rm_id = ANY($1::text[])", list(rm_ids))]
+        return await link_import.run(conn, rid, ids_)
+    return await _stage("link_import", "link", {"rm_ids": rm_ids, "project_ids": project_ids}, fn, job_id)
+
+
 async def derive_lengths(job_id: int | None = None) -> dict:
     from riskminer.ingest import lengths
     return await _stage("lengths", "derive", {}, lengths.run, job_id)
@@ -176,6 +189,12 @@ async def derive_events(job_id: int | None = None) -> dict:
     res = await _stage("events", "derive", {}, events.run, job_id)
     res["anchors"] = await anchor_evidence(job_id)
     return res
+
+
+async def assign_sectors(job_id: int | None = None) -> dict:
+    """Re-apply the sector packs' assign rules to existing procedures (catalogue/<sector>/pack.yaml)."""
+    from riskminer.ingest import sectors
+    return await _stage("sectors", "derive", {}, sectors.run, job_id)
 
 
 async def anchor_evidence(job_id: int | None = None) -> dict:

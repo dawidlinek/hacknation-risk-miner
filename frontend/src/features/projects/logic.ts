@@ -12,16 +12,8 @@ export const FILTER_SLUG: Record<ProjectFilter, string> = {
 export const slugToFilter = (s: string | undefined): ProjectFilter =>
   (Object.entries(FILTER_SLUG).find(([, v]) => v === s)?.[0] as ProjectFilter | undefined) ?? 'all'
 
-export const SORT_KEYS: ProjectSortKey[] = [
-  'title',
-  'subsector',
-  'value',
-  'delay',
-  'cost',
-  'changes',
-  'performed',
-  'state',
-]
+/** Sortable table columns (B2). Zmiany, Wykonanie and Stan were dropped from the table, so old links fall back. */
+export const SORT_KEYS: ProjectSortKey[] = ['title', 'subsector', 'value', 'delay', 'cost']
 
 export function matchesFilter(r: ProjectRow, f: ProjectFilter): boolean {
   switch (f) {

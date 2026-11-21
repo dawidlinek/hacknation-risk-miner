@@ -1,0 +1,10 @@
+# Sector pack cieplo: words that identify the sector in a description and technical components for similarity.
+sector_detect: ['ciepłownic', 'sieci?\w* ciepł', 'kotłow', 'węzł\w* ciepl', 'centraln\w* ogrzew', 'instalac\w* sanitar', 'preizolowan']
+tech_tags:
+- {name: rury preizolowane, pattern: 'preizolowan'}
+- {name: węzeł cieplny, pattern: 'węzł\w* ciepl|węzeł'}
+- {name: kotłownia, pattern: 'kotłow|kocioł|kotł'}
+- {name: pompa ciepła, pattern: 'pomp\w* ciepła'}
+- {name: instalacja c.o., pattern: 'centraln\w* ogrzew|\bc\.?\s?o\.?\b'}
+- {name: wentylacja, pattern: 'wentylac|rekuperac'}
+- {name: przyłącza, pattern: 'przyłącz'}

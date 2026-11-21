@@ -5,6 +5,7 @@ import {
   expectedDetail,
   factsLabel,
   noticeDetail,
+  publicTitle,
   statusLabel,
 } from './adapt'
 import { findSelection, validateUpload } from './logic'
@@ -186,5 +187,23 @@ describe('documents logic', () => {
     expect(validateUpload({ name: 'PACZKA.ZIP', size: 10 })).toBeNull()
     expect(validateUpload({ name: 'a.exe', size: 10 })).toMatch(/PDF, DOCX i ZIP/)
     expect(validateUpload({ name: 'a.pdf', size: 60 * 1024 * 1024 })).toMatch(/50 MB/)
+  })
+})
+
+describe('public document titles', () => {
+  it('raw notice types and crawler labels read in Polish', () => {
+    expect(publicTitle('NoticeUpdateNotice', '2026/BZP 00108931/01')).toEqual({
+      title: 'Ogłoszenie o zmianie ogłoszenia',
+      sub: '2026/BZP 00108931/01',
+    })
+    expect(publicTitle('expected: qa', 'expected: qa')).toEqual({
+      title: 'Pytania i odpowiedzi do SWZ',
+      sub: '',
+    })
+    expect(publicTitle('platformazakupowa page: Zamawiający informuje', 'x').title).toBe(
+      'Strona postępowania (platformazakupowa)',
+    )
+    expect(publicTitle('08de6a2b-05f9-45a6-bbe7-1e0001c4a846.pdf', 'x').title).toBe('Plik z postępowania')
+    expect(publicTitle('SWZ.docx', 'SWZ.docx')).toEqual({ title: 'SWZ.docx', sub: 'SWZ.docx' })
   })
 })

@@ -1,8 +1,7 @@
 import { queryOptions } from '@tanstack/react-query'
 import { adaptImport, adaptImporters, type RealImport, type RealImporter } from '@/api/adapters/imports'
 import { contractFetch } from '@/api/client'
-import type { Page } from '@/api/contracts/common'
-import type { ImportSession, JobOut, RunOut } from '@/api/contracts/import'
+import type { ImportSession, JobOut } from '@/api/contracts/import'
 
 const adapt = async (p: Promise<RealImport>) => adaptImport(await p)
 
@@ -37,12 +36,6 @@ export const runImport = (code: string) =>
 export const importersQuery = queryOptions({
   queryKey: ['importers'],
   queryFn: async () => adaptImporters(await contractFetch<RealImporter[]>('/api/importers')),
-})
-
-export const runsQuery = queryOptions({
-  queryKey: ['runs'],
-  queryFn: () => contractFetch<Page<RunOut>>('/api/runs', { query: { limit: 20 } }),
-  refetchInterval: (q) => (q.state.data?.items.some((r) => r.status === 'running') ? 2000 : false),
 })
 
 export const jobQuery = (id: number | null) =>

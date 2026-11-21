@@ -58,6 +58,10 @@ const ISSUE_TITLE: Record<string, string> = {
 }
 const issueTitle = (code: string) => ISSUE_TITLE[code] ?? 'Rozbieżność w danych'
 
+/** The API sentence may carry a raw word list ("[['100', '237']]"); show it as plain words. */
+export const tidyIssue = (t: string) =>
+  t.replace(/\[\[?((?:'[^']*'(?:,\s*)?)+)\]?\]/g, (_, inner: string) => inner.replace(/'/g, ''))
+
 export function PulpitScreen() {
   const { data } = useSuspenseQuery(dashboardQuery)
   const { d, h } = data
@@ -82,7 +86,6 @@ export function PulpitScreen() {
           eyebrow="W skrócie"
           size="lg"
           sentence={h.sentence}
-          provenance={`obliczenie, ${h.completed.display} umów, dane na ${h.data_as_of.split('-').reverse().join('.')}`}
         />
       ) : null}
       <div className="grid gap-3" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))' }}>
@@ -97,8 +100,10 @@ export function PulpitScreen() {
           />
         ))}
       </div>
+      {/* Main mockup: chat in the main column, compact source list on the right. The discrepancies sit under the chat
+          (the mockup has them on the right next to a filled conversation; with an empty chat that left a hole) */}
       <div className="flex flex-wrap items-start gap-6">
-        <div className="flex min-w-0 flex-[999_1_480px] flex-col gap-6">
+        <div className="flex min-w-0 flex-[999_1_600px] flex-col gap-6">
           {chat ? (
             <ChatPanel
               title="Zapytaj pamięć"
@@ -112,9 +117,12 @@ export function PulpitScreen() {
             </EmptyState>
           )}
           <section className="flex flex-col gap-2 rounded-panel bg-soft p-5" aria-labelledby="iss-h">
-            <h2 id="iss-h" className="t-h3 m-0">
-              Do wyjaśnienia
-            </h2>
+            <div className="flex flex-col gap-0.5 px-1 pb-2">
+              <h2 id="iss-h" className="t-h3 m-0">
+                Do wyjaśnienia w danych
+              </h2>
+              <span className="t-caption text-muted">rozbieżności między zestawem a źródłami</span>
+            </div>
             {d.issues.length === 0 ? (
               <p className="m-0 text-[14px] text-text-body-muted">Brak rozbieżności do wyjaśnienia.</p>
             ) : (
@@ -124,15 +132,15 @@ export function PulpitScreen() {
                     <Link
                       to="/przeglad"
                       search={{ sprawa: i.id } as never}
-                      className="flex items-start gap-3 rounded-item bg-surface px-3.5 py-2.5 text-text no-underline hover:bg-soft-2"
+                      className="flex items-start gap-3 rounded-item bg-surface px-3.5 py-3 text-text no-underline hover:bg-soft-2"
                     >
                       <span className="mt-px">
                         <StepDot state="now" />
                       </span>
                       <span className="flex min-w-0 flex-col gap-0.5">
                         <span className="t-item">{issueTitle(i.code)}</span>
-                        <span className="line-clamp-2 text-[14px] text-text-body-muted" title={i.title}>
-                          {i.title}
+                        <span className="line-clamp-3 text-[13px] text-text-body-muted" title={i.title}>
+                          {tidyIssue(i.title)}
                         </span>
                         <span className="t-mono text-muted">{i.rm_id ?? i.code}</span>
                       </span>
@@ -143,36 +151,41 @@ export function PulpitScreen() {
             )}
           </section>
         </div>
-        <aside
-          className="flex min-w-0 flex-[1_1_320px] flex-col gap-3 rounded-panel bg-soft p-5"
-          aria-labelledby="src-h"
-        >
-          <h2 id="src-h" className="t-h3 m-0">
-            Źródła danych
-          </h2>
-          <ul className="m-0 flex list-none flex-col gap-1.5 p-0">
-            {d.sources.map((s) => (
-              <li key={s.kind} className="flex items-start gap-3 rounded-item bg-surface px-3.5 py-2.5">
-                <span
-                  aria-hidden
-                  className={cn(
-                    'mt-1.5 size-2.5 shrink-0 rounded-pill',
-                    s.state === 'ok' ? 'bg-success' : s.state === 'error' ? 'bg-attention' : 'bg-border',
-                  )}
-                />
-                <span className="flex min-w-0 flex-col">
-                  <span className="t-item">{s.label}</span>
-                  <span className="t-caption text-text-body-muted">{s.what}</span>
-                  <span className="t-mono text-muted">
-                    {s.count_label ?? '[do uruchomienia]'}
-                    {s.last_retrieved_at
-                      ? `, pobrano ${fmtDateTime(s.last_retrieved_at, { short: true })}`
-                      : ''}
+        <aside className="flex min-w-0 max-w-full flex-[1_1_360px] flex-col gap-4">
+          <section
+            className="flex flex-col gap-1 rounded-panel border border-divider px-5.5 py-5"
+            aria-labelledby="src-h"
+          >
+            <div className="mb-1.5 flex items-baseline justify-between gap-2">
+              <h2 id="src-h" className="t-h3 m-0">
+                Źródła danych
+              </h2>
+              <Link to="/zrodla" className="font-medium text-[13px]">
+                Uruchomienia →
+              </Link>
+            </div>
+            <ul className="m-0 flex list-none flex-col p-0">
+              {d.sources.map((s) => (
+                <li
+                  key={s.kind}
+                  className="flex items-center gap-2.5 border-divider border-t py-2"
+                  title={`${s.what}${s.last_retrieved_at ? `, pobrano ${fmtDateTime(s.last_retrieved_at, { short: true })}` : ''}`}
+                >
+                  <span
+                    aria-hidden
+                    className={cn(
+                      'size-2 shrink-0 rounded-pill',
+                      s.state === 'ok' ? 'bg-success' : s.state === 'error' ? 'bg-attention' : 'bg-border',
+                    )}
+                  />
+                  <span className="min-w-0 flex-1 truncate font-medium text-[14px]">{s.label}</span>
+                  <span className="t-mono whitespace-nowrap text-text-body-muted">
+                    {s.count_label ?? 'do uruchomienia'}
                   </span>
-                </span>
-              </li>
-            ))}
-          </ul>
+                </li>
+              ))}
+            </ul>
+          </section>
         </aside>
       </div>
     </Page>

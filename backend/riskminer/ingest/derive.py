@@ -16,6 +16,7 @@ from datetime import date
 from decimal import Decimal
 from typing import Any
 
+from riskminer.ingest import sectors
 from riskminer.ingest.dbutil import upsert_copy
 from riskminer.parsing import bzp_parse as bp
 from riskminer.parsing.change_keywords import keyword_categories, what_changed
@@ -206,7 +207,7 @@ async def run(conn, rid) -> dict:
             last["published_at"].date() if last["published_at"] else None,
             sorted(types), cancelled, tag.relevance, tag.primary, tag.subsectors, tag.scope_kind, tag.work_type,
             tag.design_build, tag.why, (cn or ns[0])["source_id"], "SOURCE", "auto",
-            "drogi" if all(n["channel"] == "bzp_roads" for n in ns) else "wod-kan",
+            sectors.assign_sector(all(n["channel"] == "bzp_roads" for n in ns), tag.relevance, cpv_main, cpv_all),
         ))
         # lots ------------------------------------------------------------------------------
         lots: dict[int, dict] = {}

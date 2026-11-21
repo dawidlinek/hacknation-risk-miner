@@ -39,7 +39,7 @@ Postgres 18 runs as uid 999 and initialises `/srv/exante/pg` itself on first sta
 |---|---|
 | `POSTGRES_PASSWORD` | long random string (secret) |
 | `POSTGRES_USER`, `POSTGRES_DB` | optional, default `riskminer` |
-| `RISKMINER_USERS` | not needed: login is one-click demo personas (juror, ekspert, administrator), no passwords. Leave empty |
+| `RISKMINER_USERS` | not needed: login is one click as the single demo user "Ekspert (demo)" with full rights, no passwords. Leave empty |
 | `RISKMINER_SESSION_SECRET` | `openssl rand -hex 32` (secret) |
 | `RISKMINER_COOKIE_SECURE` | `true` (default) |
 | `GEMINI_API_KEY` | the restricted server key (secret) |
@@ -122,7 +122,7 @@ Public checks: `db`, `api`, `worker` must not appear in `docker ps` with a publi
 ## 6. Smoke test
 
 1. Open the site: Monitoring and Nowa inwestycja load without login.
-2. `POST /api/auth/login` through the UI as a demo persona (juror), the reviewer name shows in the header; cookie `rm_session` is `Secure`, `HttpOnly`.
+2. `POST /api/auth/login` through the UI with the one-click "Zaloguj się" (demo user), the user name shows in the header; cookie `rm_session` is `Secure`, `HttpOnly`.
 3. A write route without login answers 401: `curl -i -X POST https://exante.linek.dev/api/review -H 'X-Requested-With: ex-ante'`.
 4. **Flow 1:** Nowa inwestycja, pick a sample, run the analysis, open the report, open a source document PDF (served from `/srv/exante/data/raw/docs_22`).
 5. **Export:** the CSV/Pakiet export downloads (needs `/srv/exante/exports` writable).
@@ -139,7 +139,7 @@ Once the final restore is done and the demo data is final, record the baseline *
 scripts/deploy/demo_reset.sh root@212.127.90.86 baseline
 ```
 
-(same thing through the API as an admin persona: `POST /api/admin/demo-baseline`).
+(same thing through the API as the demo user: `POST /api/admin/demo-baseline`).
 
 Between jurors:
 

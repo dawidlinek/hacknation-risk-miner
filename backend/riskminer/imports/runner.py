@@ -34,6 +34,7 @@ class RunResult:
     would: dict[str, Any] = field(default_factory=lambda: {"insert": {"project": 0, "organization": 0}, "update": 0,
                                                             "protected_skipped": 0})
     project_keys: list[str] = field(default_factory=list)
+    written_keys: list[str] = field(default_factory=list)      # inserted or updated (protected rows excluded)
 
     def as_dict(self) -> dict:
         return {"rows": self.rows, "ok": self.ok, "failed": self.failed, "failures": self.failures[:200], "would": self.would}
@@ -118,6 +119,7 @@ async def run(db: AsyncSession, path: Path, spec: dict, *, file_sha: str, source
     res.would["insert"]["project"] = sum(1 for k in keys if k not in existing)
     res.would["update"] = sum(1 for k in keys if k in existing and k not in protected)
     res.would["protected_skipped"] = len(protected)
+    res.written_keys = [k for k in dict.fromkeys(keys) if k not in protected]
     nips = {r["beneficiary_nip"] for r in records if r["beneficiary_nip"]}
     known = {r[0] for r in (await db.execute(text("SELECT nip FROM organization WHERE nip = ANY(:n)"),
                                              {"n": list(nips)})).all()} if nips else set()

@@ -41,9 +41,9 @@ const KPI_LABEL_SHORT = new Set(['late_pct', 'median_delay', 'signals', 'over_pc
 
 /** 4.1a: voivodeship. KPIs, powiats with signals, biggest signals, CSV. */
 export function RegionPanel({ woj }: { woj: string }) {
-  const { asOf, setSearch } = useMonitoring()
-  const detail = useQuery(regionDetailQuery(woj, asOf))
-  const sig = useQuery(signalsQuery(woj, 'woj', undefined, asOf))
+  const { asOf, setSearch, filters } = useMonitoring()
+  const detail = useQuery(regionDetailQuery(woj, asOf, filters))
+  const sig = useQuery(signalsQuery(woj, 'woj', undefined, asOf, filters))
   if (detail.isPending) return <SkeletonBlock className="h-[480px]" />
   if (detail.isError || !detail.data) return <EmptyState>Nie znaleziono tego województwa.</EmptyState>
   const d = detail.data
@@ -159,10 +159,10 @@ function CsvButton({ terc, level, label }: { terc: string; level: 'woj' | 'pow';
 
 /** 4.1b: powiat. KPIs and every signal in it. */
 export function PowiatPanel({ woj, pow }: { woj: string; pow: string }) {
-  const { asOf } = useMonitoring()
-  const detail = useQuery(regionDetailQuery(pow, asOf))
+  const { asOf, filters } = useMonitoring()
+  const detail = useQuery(regionDetailQuery(pow, asOf, filters))
   const wojDetail = useQuery(regionDetailQuery(woj))
-  const sig = useQuery(signalsQuery(pow, 'pow', undefined, asOf))
+  const sig = useQuery(signalsQuery(pow, 'pow', undefined, asOf, filters))
   if (detail.isPending || sig.isPending) return <SkeletonBlock className="h-[480px]" />
   if (detail.isError || !detail.data) return <EmptyState>Nie znaleziono tego powiatu.</EmptyState>
   const d = detail.data

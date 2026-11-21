@@ -6,7 +6,7 @@ import { existsSync, readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { expect, test } from '@playwright/test'
 import { expectNoA11yViolations } from './a11y'
-import { anyOcid, loginAs, realBackend } from './helpers'
+import { anyOcid, login, realBackend } from './helpers'
 
 const ORGANIZER_FILE = resolve(
   import.meta.dirname,
@@ -18,7 +18,7 @@ test.describe('demo (a): od projektu do dowodu', () => {
   test.beforeEach(async ({ page }) => realBackend(page))
 
   test('Projekty, Steklin, auto karta BZP, graf powiązań, link do Przeglądu', async ({ page }) => {
-    await loginAs(page.request, 'juror')
+    await login(page.request)
     await page.goto('/projekty')
     await expect(page.getByRole('heading', { level: 1, name: 'Projekty' })).toBeVisible()
     await expectNoA11yViolations(page, '2.2')
@@ -66,7 +66,7 @@ test.describe('demo (a): od projektu do dowodu', () => {
     test.skip(process.env.E2E_UPLOAD !== '1', 'set E2E_UPLOAD=1 to upload an organizer file')
     test.skip(!existsSync(ORGANIZER_FILE), 'materials/organizer_cases/ not present')
     test.setTimeout(240_000)
-    await loginAs(page.request, 'expert')
+    await login(page.request)
     await page.goto(`/projekty/${ZAGRODNO}/dokumenty`)
     await expect(page.getByText('Upuść PDF, DOCX albo ZIP')).toBeVisible()
     await expectNoA11yViolations(page, '2.5')

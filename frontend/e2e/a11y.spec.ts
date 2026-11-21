@@ -1,11 +1,11 @@
 // axe sweep (wcag2a/aa/21a/21aa; fails on serious + critical) over every flagged-on route, on the real backend.
-// Public routes run anonymous; expert routes run as the read-only demo persona "juror" (nothing is written).
+// Public routes run anonymous; expert routes run as the the demo user (nothing is written).
 // Flow 1 pages use an analysis created in this browser context (analyses are owner-only) with a public PFU
 // uploaded in the same context (local data/raw file; the Red Pen page is skipped without it).
 // Owners: A for analizy/** and replay, F2 for the rest.
 import { expect, type Page, test } from '@playwright/test'
 import { expectNoA11yViolations } from './a11y'
-import { anyOcid, createAnalysis, loginAs, realBackend, uploadPublicPfu } from './helpers'
+import { anyOcid, createAnalysis, login, realBackend, uploadPublicPfu } from './helpers'
 
 async function check(page: Page, path: string) {
   await page.goto(path)
@@ -52,10 +52,10 @@ test.describe('a11y public', () => {
   })
 })
 
-test.describe('a11y expert (juror)', () => {
+test.describe('a11y expert (demo user)', () => {
   test.beforeEach(async ({ page }) => {
     await realBackend(page)
-    await loginAs(page.request, 'juror')
+    await login(page.request)
   })
   for (const path of EXPERT) test(path, async ({ page }) => check(page, path))
 })

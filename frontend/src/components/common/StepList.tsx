@@ -43,7 +43,7 @@ export function StepDot({ state, label }: { state: StepState; label?: ReactNode 
       <span
         className={cn(
           base,
-          state === 'now' || state === 'ai_proposed' ? 'bg-attention text-white' : 'bg-ink text-on-ink',
+          state === 'now' || state === 'ai_proposed' ? 'bg-attention text-text' : 'bg-ink text-on-ink',
           'text-[11px] font-semibold',
         )}
       >

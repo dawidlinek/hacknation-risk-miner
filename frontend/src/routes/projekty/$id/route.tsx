@@ -13,6 +13,7 @@ import { type PillTab, PillTabs } from '@/components/common/PillTabs'
 import { Button } from '@/components/ui/button'
 import { pageTitle } from '@/config/brand'
 import { projectCardQuery } from '@/features/projects/api'
+import { ProjectRecordExport } from '@/features/projects/RecordExport'
 import { fmtNip } from '@/lib/format'
 
 export const Route = createFileRoute('/projekty/$id')({
@@ -22,7 +23,7 @@ export const Route = createFileRoute('/projekty/$id')({
   notFoundComponent: () => (
     <Page>
       <div className="flex flex-col items-start gap-3 rounded-panel bg-soft p-6">
-        <h1 className="t-h2 m-0" data-page-title tabIndex={-1}>
+        <h1 className="t-h2 m-0 outline-none" data-page-title tabIndex={-1}>
           Ta sekcja nie jest jeszcze dostępna.
         </h1>
         <Link to="/projekty/$id" params={{ id: Route.useParams().id }} className="font-medium">
@@ -121,6 +122,7 @@ function ProjectLayout() {
               }
               filename={(f) => `${card.id}.${f}`}
             />
+            <ProjectRecordExport id={card.id} />
           </>
         }
       />

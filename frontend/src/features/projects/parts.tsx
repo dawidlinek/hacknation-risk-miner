@@ -5,33 +5,31 @@ import type {
   PlanVsActual as PlanVsActualData,
   ProjectGap,
   ProjectIdentifier,
-  ProjectLesson,
 } from '@/api/contracts/projects'
-import { Item, Panel, SectionTitle } from '@/app/Page'
+import { Item, OutlinePanel, Panel, SectionTitle } from '@/app/Page'
 import { LoginRequired } from '@/auth/LoginRequired'
-import { useSession } from '@/auth/session'
 import { EmptyState } from '@/components/common/DataState'
-import { ReviewStatusBadge } from '@/components/common/ReviewStatusBadge'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/cn'
-import { fmtDays, fmtPct, fmtScore } from '@/lib/format'
+import { fmtDays, fmtInt, fmtScore } from '@/lib/format'
+import { plural } from '@/lib/plural'
 
 /** Plan bar + overrun bar (B3). Plan share = plan / actual when the actual exceeds the plan. */
 export function PlanVsActual({ item }: { item: PlanVsActualData }) {
   const over = item.actual > item.plan
   const planPct = over && item.actual > 0 ? (item.plan / item.actual) * 100 : 100
   return (
-    <Item className="flex flex-col gap-2 bg-soft">
+    <Item className="flex flex-col gap-2.5 rounded-[22px] bg-soft px-5 py-4.5">
       <div className="flex items-baseline justify-between gap-2">
-        <span className="t-item">{item.label}</span>
-        <span className={cn('t-h3', over && 'text-attention-text')}>{item.delta_label}</span>
+        <span className="text-[14px] text-text-muted">{item.label}</span>
+        <span className="font-semibold text-[28px] leading-none tracking-[-0.04em]">{item.delta_label}</span>
       </div>
       <div
         role="img"
         aria-label={`${item.label}: ${item.note}`}
-        className="relative h-2.5 w-full overflow-hidden rounded-pill bg-soft-2"
+        className="relative h-2.5 w-full overflow-hidden rounded-pill bg-border"
       >
-        <span className="absolute inset-y-0 left-0 bg-text-secondary" style={{ width: `${planPct}%` }} />
+        <span className="absolute inset-y-0 left-0 rounded-pill bg-ink" style={{ width: `${planPct}%` }} />
         {over ? (
           <span className="absolute inset-y-0 right-0 bg-attention" style={{ left: `${planPct}%` }} />
         ) : null}
@@ -41,13 +39,6 @@ export function PlanVsActual({ item }: { item: PlanVsActualData }) {
   )
 }
 
-const SIM_COLOR: Record<SimFeature, string> = {
-  podsektor: 'var(--sim-podsektor)',
-  formula: 'var(--sim-formula)',
-  zakres: 'var(--sim-zakres)',
-  wartosc: 'var(--sim-wartosc)',
-  tekst: 'var(--sim-tekst)',
-}
 const SIM_LABEL: Record<SimFeature, string> = {
   podsektor: 'podsektor',
   formula: 'formuła',
@@ -56,121 +47,72 @@ const SIM_LABEL: Record<SimFeature, string> = {
   tekst: 'opis',
 }
 
-/** "Podobne przypadki": score, title, why, outcome, stacked contribution bar. F1's CaseRow replaces this once it lands. */
+/** "Podobne przypadki" (B3): completed contracts like this one; score tile, name, buyer and year, why, delay and annexes. */
 export function SimilarCaseList({ cases }: { cases: SimilarCase[] }) {
-  if (cases.length === 0)
-    return <EmptyState>Brak podobnych przypadków z zatwierdzonymi zdarzeniami.</EmptyState>
+  const pool = cases.find((c) => c.pool_n)?.pool_n
   return (
-    <div className="flex flex-col gap-2">
-      {cases.map((c) => (
-        <Item key={c.project_id} className="flex flex-col gap-1.5">
-          <div className="flex items-baseline justify-between gap-3">
-            <Link
-              to="/projekty/$id"
-              params={{ id: c.project_id }}
-              className="t-item text-text no-underline hover:underline"
-            >
-              {c.title}
-            </Link>
-            <span className="t-mono text-muted">{fmtScore(c.score)}</span>
-          </div>
-          <span className="text-[13px] text-text-body-muted">{c.why}</span>
-          <div
-            role="img"
-            aria-label={`Podobieństwo ${fmtScore(c.score)}: ${c.contributions.map((x) => `${SIM_LABEL[x.feature]} ${fmtScore(x.value)}`).join(', ')}`}
-            className="flex h-1.5 w-full overflow-hidden rounded-pill bg-soft-2"
-          >
-            {c.contributions.map((x) => (
-              <span
-                key={x.feature}
-                style={{ flex: `${Math.max(x.value, 0)} 1 0`, background: SIM_COLOR[x.feature] }}
-              />
-            ))}
-          </div>
-          <div className="t-mono flex gap-4 text-muted">
-            <span className={cn((c.delay_days ?? 0) > 0 && 'text-attention-text')}>
-              {c.delay_days === null ? 'brak' : fmtDays(c.delay_days)}
-            </span>
-            <span className={cn((c.cost_dev_pct ?? 0) > 0.5 && 'text-attention-text')}>
-              {c.cost_dev_pct === null ? 'brak' : fmtPct(c.cost_dev_pct, { signed: true })}
-            </span>
-          </div>
-        </Item>
-      ))}
-    </div>
-  )
-}
-
-/** Public mode keeps only reviewed lessons (second line of defence; the backend filters first). */
-export function visibleLessons(lessons: ProjectLesson[], isPublic: boolean): ProjectLesson[] {
-  return isPublic
-    ? lessons.filter(
-        (l) => l.review_status === 'approved' || l.review_status === 'edited' || l.review_status === 'auto',
-      )
-    : lessons
-}
-
-/** Unspecified model labels (N-UNSPEC) get a Polish phrase instead of the raw catalogue code. */
-export function lessonTitle(title: string): string {
-  return title.replace(/przyczyna według modelu N-UNSPEC \([^)]*\)/, 'przyczyna nieustalona')
-}
-
-export interface LessonGroup {
-  key: string
-  title: string
-  items: ProjectLesson[]
-}
-
-/** Near-duplicate lessons (same cleaned title, risk code and review status) collapse into one group with a count. */
-export function groupLessons(lessons: ProjectLesson[]): LessonGroup[] {
-  const groups = new Map<string, LessonGroup>()
-  for (const l of lessons) {
-    const title = lessonTitle(l.title)
-    const key = `${title}|${l.risk_code ?? ''}|${l.review_status}`
-    const g = groups.get(key)
-    if (g) g.items.push(l)
-    else groups.set(key, { key, title, items: [l] })
-  }
-  return [...groups.values()]
-}
-
-export function LessonList({ lessons }: { lessons: ProjectLesson[] }) {
-  const { isPublic } = useSession()
-  const shown = visibleLessons(lessons, isPublic)
-  return (
-    <Panel>
-      <SectionTitle>Lekcje z tej umowy</SectionTitle>
-      {shown.length === 0 ? (
-        <EmptyState>
-          {isPublic
-            ? 'Lekcje pojawią się po przeglądzie eksperta.'
-            : 'Nie ma jeszcze zdarzeń ryzyka dla tej umowy.'}
-        </EmptyState>
+    <OutlinePanel aria-labelledby="similar-cases" className="gap-1.5">
+      <div className="mb-1 flex flex-wrap items-baseline justify-between gap-2">
+        <h2 id="similar-cases" className="t-h3 m-0">
+          Podobne przypadki
+        </h2>
+        {pool ? (
+          <span className="t-caption text-muted">
+            spośród {fmtInt(pool)} {plural(pool, ['wykonanej umowy', 'wykonanych umów', 'wykonanych umów'])} z
+            tego podsektora
+          </span>
+        ) : null}
+      </div>
+      {cases.length === 0 ? (
+        <EmptyState>Brak podobnych wykonanych umów w bazie.</EmptyState>
       ) : (
-        groupLessons(shown).map(({ key, title, items }) => {
-          const l = items[0]
-          return (
-            <Item key={key} className="flex flex-col gap-1">
-              <div className="flex items-start justify-between gap-3">
-                <span className="t-item">
-                  {title}
-                  {items.length > 1 ? (
-                    <span className="t-mono ml-2 font-normal text-muted">{items.length} zdarzeń</span>
-                  ) : null}
+        <ul className="m-0 flex list-none flex-col p-0">
+          {cases.map((c) => (
+            <li key={c.project_id} className="border-divider border-t">
+              <Link
+                to="/projekty/$id"
+                params={{ id: c.project_id }}
+                className="flex items-start gap-3 px-1 py-2.5 text-text no-underline hover:bg-soft"
+              >
+                <span
+                  className="t-mono inline-flex size-10 flex-none items-center justify-center rounded-[12px] bg-soft font-semibold text-[14px] text-text"
+                  title={`Podobieństwo ${fmtScore(c.score)}: ${c.contributions.map((x) => `${SIM_LABEL[x.feature]} ${fmtScore(x.value)}`).join(', ')}`}
+                >
+                  {fmtScore(c.score)}
                 </span>
-                <ReviewStatusBadge
-                  status={l.review_status}
-                  reviewItemId={l.review_item_id}
-                  className="shrink-0"
-                />
-              </div>
-              {items.length === 1 ? <span className="text-[14px] text-text-body-muted">{l.text}</span> : null}
-              <span className="t-mono text-muted">{l.code_label}</span>
-            </Item>
-          )
-        })
+                <span className="flex min-w-0 flex-1 flex-col gap-0.5">
+                  <span className="t-item line-clamp-3">{c.title}</span>
+                  {c.buyer || c.year ? (
+                    <span className="t-mono text-muted">
+                      {[c.buyer, c.year ? `zakończenie ${c.year}` : null].filter(Boolean).join(', ')}
+                    </span>
+                  ) : null}
+                  <span className="t-mono flex flex-wrap gap-x-3 text-[13px]">
+                    <span
+                      className={cn((c.delay_days ?? 0) > 0 ? 'text-attention-text' : 'text-text-secondary')}
+                    >
+                      {c.delay_days === null
+                        ? 'termin: brak danych'
+                        : c.delay_days === 0
+                          ? 'w terminie'
+                          : `${fmtDays(c.delay_days)} po terminie`}
+                    </span>
+                    {c.changes != null ? (
+                      <span className="text-text-secondary">
+                        {c.changes === 0
+                          ? 'bez aneksów'
+                          : `${fmtInt(c.changes)} ${plural(c.changes, ['aneks', 'aneksy', 'aneksów'])}`}
+                      </span>
+                    ) : null}
+                  </span>
+                  <span className="text-[13px] text-text-body-muted">Podobne: {c.why}</span>
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
       )}
-    </Panel>
+    </OutlinePanel>
   )
 }
 

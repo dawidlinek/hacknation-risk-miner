@@ -8,7 +8,7 @@ import asyncio
 import logging
 from typing import Any, Literal
 
-from fastapi import APIRouter, Depends, Query, Request
+from fastapi import APIRouter, Depends, HTTPException, Query, Request
 from pydantic import BaseModel, Field
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -377,9 +377,15 @@ async def mark_analyses_affected(body: AffectedIn, request: Request, user: User 
 # ---- national analytics (read-only; Pulpit, pitch, A6 chips) -----------------------------------------------------------
 
 @router.get("/analytics/headline", summary="Liczby krajowe: opóźnienia, dopłaty, zmiany (obliczenie)")
-async def analytics_headline(db: AsyncSession = Depends(get_session)):
-    from riskminer.analytics.base import get_casebase
+async def analytics_headline(sector: str | None = None, db: AsyncSession = Depends(get_session)):
+    from riskminer.analytics.base import DEFAULT_SECTOR, get_casebase, sector_pack
     from riskminer.analytics.headline import headline
+    if sector and sector != DEFAULT_SECTOR:
+        try:
+            sector_pack(sector)
+        except KeyError:
+            raise HTTPException(404, detail=f"Nie znamy sektora „{sector}”.") from None
+        return headline(await get_casebase(db, sector=sector))
     return headline(await get_casebase(db))
 
 

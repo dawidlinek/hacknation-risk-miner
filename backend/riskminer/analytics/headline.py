@@ -54,13 +54,17 @@ def headline(cb: CaseBase) -> dict:
     v = cb["value_gross"][c_ok]
     p = cb["paid_gross"][c_ok]
     overpaid = float(np.maximum(p - v, 0).sum())
-    ref = {"kind": "query", "id": "an_contract:all", "label": f"{T.pl_num(n)} wykonanych umów wod-kan (BZP)"}
+    wk = cb.sector in (None, "wod-kan")
+    short = "wod-kan" if wk else cb.pack["label_short"]
+    ref = {"kind": "query", "id": "an_contract:all" if wk else f"an_contract:{cb.sector}",
+           "label": f"{T.pl_num(n)} wykonanych umów {short} (BZP)"}
 
     def num(value, display, unit, nn, method):
         return {"value": value, "display": display, "unit": unit,
                 "prov": {"role": "calc", "review_status": "auto", "n": int(nn), "method": method, "refs": [ref]}}
 
-    sentence = (f"Od 2021 r. {T.pct(late_share)} z {T.pl_num(n)} wykonanych umów wodno-kanalizacyjnych skończyło się "
+    what = "wodno-kanalizacyjnych" if wk else f"w sektorze {short}"
+    sentence = (f"Od 2021 r. {T.pct(late_share)} z {T.pl_num(n)} wykonanych umów {what} skończyło się "
                 f"po terminie, łącznie {T.pl_num(delay_sum / 1000)} tys. dni opóźnień. Ponad wartość umów zapłacono "
                 f"{T.pl_num(overpaid / 1e6)} mln zł.")
     return {
@@ -84,6 +88,7 @@ def headline(cb: CaseBase) -> dict:
         "data_as_of": cb.data_as_of.isoformat() if cb.data_as_of else None,
         "data_version": cb.data_version,
         "chips": _chips(cb),
+        "sector": cb.sector or "wod-kan",
     }
 
 

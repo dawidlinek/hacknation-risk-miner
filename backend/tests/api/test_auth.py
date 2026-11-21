@@ -1,4 +1,5 @@
 """Auth: login/me/logout, role gates, public-route leaks (api_contract §5, §8.7). Uses the transactional fixtures."""
+import pytest
 import httpx
 
 from riskminer.api import auth as A
@@ -88,51 +89,43 @@ def test_users_parse():
     assert set(u) == {"a", "b"} and u["b"][0] == "admin"
 
 
-async def test_demo_personas_listed_and_login_audited(client, db):
+async def test_demo_login_single_user_audited(client, db):
     from sqlalchemy import text
     ps = (await client.get("/api/auth/demo-personas")).json()
-    assert [p["persona"] for p in ps] == ["juror", "expert", "admin"]
-    r = await client.post("/api/auth/demo-login", json={"persona": "juror"})
+    assert [p["persona"] for p in ps] == ["demo"]
+    r = await client.post("/api/auth/demo-login")  # no body: one user, full rights
     assert r.status_code == 200
     j = r.json()
-    assert j["role"] == "expert" and j["read_only"] is True and j["persona"] == "juror" and j["user"]["name"] == "juror"
-    row = (await db.execute(text("SELECT actor, after->>'persona', after->>'method' FROM audit_log WHERE action='auth.login' ORDER BY id DESC LIMIT 1"))).one()
-    assert tuple(row) == ("user:juror", "juror", "demo")
-    me = (await client.get("/api/auth/me")).json()
-    assert me["persona"] == "juror" and me["read_only"] is True
-    assert (await client.post("/api/auth/demo-login", json={"persona": "root"})).status_code == 422
+    assert j["role"] == "admin" and j["read_only"] is False and j["user"]["name"] == "Ekspert (demo)" and j["initials"] == "ED"
+    row = (await db.execute(text("SELECT actor, after->>'method' FROM audit_log WHERE action='auth.login' ORDER BY id DESC LIMIT 1"))).one()
+    assert tuple(row) == ("user:Ekspert (demo)", "demo")
+    assert (await client.get("/api/auth/me")).json()["name"] == "Ekspert (demo)"
 
 
-async def test_juror_reads_but_cannot_write(client, db):
+@pytest.mark.parametrize("persona", ["juror", "expert", "admin", "root"])
+async def test_old_persona_param_maps_to_the_same_user(client, persona):
+    r = await client.post("/api/auth/demo-login", json={"persona": persona})
+    assert r.status_code == 200 and r.json()["user"]["name"] == "Ekspert (demo)" and r.json()["read_only"] is False
+
+
+async def test_demo_user_reads_and_writes_everything(client, db):
     from sqlalchemy import text
-    await client.post("/api/auth/demo-login", json={"persona": "juror"})
+    await client.post("/api/auth/demo-login")
     assert (await client.get("/api/review-items/counts")).status_code == 200
-    assert (await client.get("/api/dashboard")).status_code == 200
-    iid = (await db.execute(text("SELECT id FROM review_item WHERE status='open' LIMIT 1"))).scalar()
-    for method, path, body in (("post", f"/api/review-items/{iid}/decision", {"option": "x", "action": "approve"}),
-                               ("post", f"/api/review-items/{iid}/skip", None),
-                               ("post", "/api/projects/RM-2026-003/links", {"action": "add", "bzp_number": "x"}),
-                               ("patch", "/api/catalogue/risk/R01", {"patch": {"description": "x"}}),
-                               ("put", "/api/catalogue/similarity/weights", {"weights": {"value": 0.1}}),
-                               ("post", "/api/audit/1/restore", {"reason": "x"})):
-        r = await getattr(client, method)(path, **({"json": body} if body is not None else {}))
-        assert r.status_code == 403 and r.json().get("code", "read_only") in ("read_only", None), (path, r.text)
-
-
-async def test_expert_and_admin_personas_can_write(client, db):
-    from sqlalchemy import text
-    r = await client.post("/api/auth/demo-login", json={"persona": "expert"})
-    assert r.json()["read_only"] is False and r.json()["user"]["name"] == "ekspert"
     iid = (await db.execute(text("SELECT id FROM review_item WHERE status='open' LIMIT 1"))).scalar()
     assert (await client.post(f"/api/review-items/{iid}/skip")).status_code == 200
-    assert (await client.post("/api/catalogue/versions/v1.1/restore", json={"reason": "x"})).status_code == 403  # admin only
-    a = await client.post("/api/auth/demo-login", json={"persona": "admin"})
-    assert a.json()["role"] == "admin"
-    assert (await client.get("/api/auth/me")).json()["name"] == "administrator"
+    assert (await client.post("/api/catalogue/versions/v1.1/restore", json={"reason": "x"})).status_code != 403  # admin rights too
+
+
+async def test_anonymous_gets_401_on_write(client, db):
+    from sqlalchemy import text
+    iid = (await db.execute(text("SELECT id FROM review_item WHERE status='open' LIMIT 1"))).scalar()
+    r = await client.post(f"/api/review-items/{iid}/skip")
+    assert r.status_code == 401 and r.json()["code"] == "login_required"
 
 
 async def test_demo_login_can_be_disabled(client, monkeypatch):
     monkeypatch.setenv("RISKMINER_DEMO_LOGIN", "false")
     assert (await client.get("/api/auth/demo-personas")).json() == []
-    r = await client.post("/api/auth/demo-login", json={"persona": "admin"})
+    r = await client.post("/api/auth/demo-login")
     assert r.status_code == 403

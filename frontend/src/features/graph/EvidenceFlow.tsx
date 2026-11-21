@@ -7,7 +7,10 @@ import { bandColor, CSS_COLOR, feedsOf, flowOpacity, linkStage, nodeMap, spreadL
 type N = FlowNode & SankeyNode<FlowNode, object>
 type L = SankeyLink<FlowNode, object> & { stage: 1 | 2 }
 
-const H = 640
+const BASE_H = 640
+/** The unspecified-cause code reads as a phrase, not as "N-UNSPEC ryzyko". */
+const nodeLabel = (l: string) => l.replace(/^N-UNSPEC\b.*$/, 'Przyczyna nieustalona')
+const LABEL_GAP_CONCL = 54 // a 2-line conclusion label plus its sub line
 const NODE_W = 12
 const MIN_W = 520
 const DEFAULT_W = 1000
@@ -54,6 +57,11 @@ export function EvidenceFlow({
     return () => ro.disconnect()
   }, [])
   const W = width
+  // tall enough that every conclusion label fits between the header and the bottom (13+ conclusions overflowed 640)
+  const H = useMemo(
+    () => Math.max(BASE_H, 40 + 24 + LABEL_GAP_CONCL * flow.nodes.filter((n) => n.column === 2).length),
+    [flow.nodes],
+  )
   const geo = useMemo(() => geometry(W), [W])
   const COLX = geo.x
 
@@ -74,7 +82,7 @@ export function EvidenceFlow({
       links: flow.links.map((l) => ({ ...l })),
     })
     return g as unknown as { nodes: N[]; links: L[] }
-  }, [flow, COLX])
+  }, [flow, COLX, H])
 
   const nodes = useMemo(() => nodeMap(flow), [flow])
   const feeds = useMemo(() => feedsOf(flow.links, selected), [flow.links, selected])
@@ -86,14 +94,14 @@ export function EvidenceFlow({
       const ns = layout.nodes.filter((n) => n.column === col)
       const ys = spreadLabels(
         ns.map((n) => ((n.y0 ?? 0) + (n.y1 ?? 0)) / 2),
-        col === 2 ? 54 : 40,
+        col === 2 ? LABEL_GAP_CONCL : 40,
         40,
         H - 24,
       )
       for (const [i, n] of ns.entries()) out.set(n.id, ys[i])
     }
     return out
-  }, [layout])
+  }, [layout, H])
 
   return (
     <div ref={ref} className="relative w-full" style={{ height: H }}>
@@ -176,7 +184,7 @@ export function EvidenceFlow({
           <>
             <span
               className="text-[13px] leading-tight font-medium text-text"
-              title={n.label}
+              title={nodeLabel(n.label)}
               style={{
                 display: '-webkit-box',
                 WebkitLineClamp: 2,
@@ -184,7 +192,7 @@ export function EvidenceFlow({
                 overflow: 'hidden',
               }}
             >
-              {n.label}
+              {nodeLabel(n.label)}
             </span>
             <span
               className={cn(

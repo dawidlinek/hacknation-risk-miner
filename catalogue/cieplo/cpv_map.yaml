@@ -1,0 +1,47 @@
+# Sector pack cieplo: CPV codes of district heating and installation works (BZP field 3.4 / 4.2.2).
+cpv_map:
+- cpv: '45232140'
+  subsector: SIEC
+  strength: strong
+  label: Roboty budowlane w zakresie sieci ciepłowniczych
+  status: proposed
+- cpv: '45232141'
+  subsector: KOT
+  strength: medium
+  label: Instalacje grzewcze (sieci)
+  status: proposed
+- cpv: '45232142'
+  subsector: KOT
+  strength: medium
+  label: Stacje przekaźnikowe ciepła
+  status: proposed
+- cpv: '45330000'
+  subsector: INST
+  strength: strong
+  label: Roboty instalacyjne wodno-kanalizacyjne i sanitarne
+  status: proposed
+- cpv: '45331000'
+  subsector: INST
+  strength: strong
+  label: Instalowanie urządzeń grzewczych, wentylacyjnych i klimatyzacyjnych
+  status: proposed
+- cpv: '45331100'
+  subsector: INST
+  strength: strong
+  label: Instalowanie centralnego ogrzewania
+  status: proposed
+- cpv: '45331110'
+  subsector: KOT
+  strength: strong
+  label: Instalowanie kotłów
+  status: proposed
+- cpv: '45332000'
+  subsector: INST
+  strength: medium
+  label: Roboty instalacyjne wodociągowe i kanalizacyjne (w budynkach)
+  status: proposed
+- cpv: '45333000'
+  subsector: INST
+  strength: medium
+  label: Roboty instalacyjne gazowe
+  status: proposed

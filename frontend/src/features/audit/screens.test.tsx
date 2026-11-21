@@ -159,63 +159,11 @@ describe('2.6 Historia zmian projektu', () => {
   })
 })
 
-describe('D3 Historia', () => {
-  it('requests the category for the pill, shows object links and entry ids', async () => {
-    asExpert()
-    const seen: string[] = []
-    server.use(
-      http.get('/api/audit', ({ request }) => {
-        seen.push(new URL(request.url).search)
-        return HttpResponse.json({
-          total: 1,
-          limit: 200,
-          offset: 0,
-          items: [
-            entry(7, {
-              table: 'catalogue_version',
-              row_id: null,
-              object: { label: 'Katalogu wiedzy', href: '/katalog' },
-              note: 'katalog v1.2 → v1.3',
-              action_label: 'zapisał wersję',
-            }),
-          ],
-        })
-      }),
-    )
-    await renderRoute('/historia')
-    expect(await screen.findByRole('link', { name: 'Katalogu wiedzy' })).toHaveAttribute('href', '/katalog')
-    expect(screen.getByText('kat-7')).toBeInTheDocument()
-    expect(screen.getByText('katalog v1.2 → v1.3')).toBeInTheDocument()
-    await userEvent.click(screen.getByRole('button', { name: 'Katalog' }))
-    await waitFor(() => expect(seen.some((s) => s.includes('category=catalogue'))).toBe(true))
-  })
-
-  it('day filter sends since and until', async () => {
-    asExpert()
-    const seen: string[] = []
-    server.use(
-      http.get('/api/audit', ({ request }) => {
-        seen.push(new URL(request.url).search)
-        return HttpResponse.json({ total: 0, limit: 200, offset: 0, items: [] })
-      }),
-    )
-    await renderRoute('/historia?dzien=2026-11-21')
-    expect(await screen.findByText('Brak wpisów dla tych filtrów.')).toBeInTheDocument()
-    expect(seen[0]).toContain('since=')
-    expect(seen[0]).toContain('until=')
-  })
-
-  it('public visitors are sent to the login screen', async () => {
-    const { router } = await renderRoute('/historia')
-    await waitFor(() => expect(router.state.location.pathname).toBe('/zaloguj'))
-  })
-})
-
 describe('read-only account', () => {
   it('Przywróć is disabled with the reason', async () => {
     server.use(
       http.get('/api/auth/me', () =>
-        HttpResponse.json({ role: 'expert', name: 'juror', initials: 'J', read_only: true }),
+        HttpResponse.json({ role: 'expert', name: 'czytelnik', initials: 'C', read_only: true }),
       ),
       cardHandler(),
       http.get('/api/projects/:id/history', () => HttpResponse.json(history)),

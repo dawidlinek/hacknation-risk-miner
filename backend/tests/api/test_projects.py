@@ -134,6 +134,10 @@ async def test_similar_has_outcomes_as_case(client):
     assert 1 <= len(s) <= 3
     assert s[0]["outcome"]["delay_days"]["prov"]["role"] == "case"
     assert abs(sum(c["value"] for c in s[0]["contributions"]) - s[0]["score"]["value"]) < 0.02
+    # B3 rows: buyer, year, annex count and a link to an existing card
+    assert all({"buyer_name", "year", "changes_count"} <= set(x) for x in s)
+    assert all(x["href"].startswith("/projekty/") for x in s)
+    assert any(x["buyer_name"] for x in s) and any(x["year"] for x in s)
 
 
 async def test_dashboard_and_headline(client, expert):

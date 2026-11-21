@@ -40,3 +40,6 @@ materials/text/*
 # Local tool config and generated test packs (curated samples are committed separately)
 .claude/
 exports/packs/
+
+# TanStack router generator scratch
+frontend/.tanstack/

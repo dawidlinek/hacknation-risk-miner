@@ -1,9 +1,11 @@
+import { useQuery } from '@tanstack/react-query'
 import { Link } from '@tanstack/react-router'
 import { MoreHorizontal } from 'lucide-react'
 import { type ReactNode, useEffect, useRef, useState } from 'react'
 import type { MetricKey, MonitoringMode, Signal } from '@/api/contracts/monitoring'
 import { cn } from '@/lib/cn'
 import { fmtDays, fmtMoneyShort } from '@/lib/format'
+import { type MonFilters, subsectorsQuery, VALUE_BUCKETS, YEARS } from './api'
 import type { GeoFeature } from './geo'
 import { outlinePath } from './geo'
 import { MENU_METRICS, METRICS, SEGMENT_METRICS } from './logic'
@@ -257,5 +259,62 @@ export function SignalList({
         )
       })}
     </ol>
+  )
+}
+
+const selectCls = (on: boolean) =>
+  cn(
+    'h-10 rounded-inner border bg-surface px-3 text-[14px] font-medium',
+    on ? 'border-ink text-text' : 'border-border text-text',
+  )
+
+/** Podsektor, Wartość and Lata dropdowns of the map (D2); the API filters regions, panels and signals by them. */
+export function FilterBar({ filters, onChange }: { filters: MonFilters; onChange: (f: MonFilters) => void }) {
+  const subs = useQuery(subsectorsQuery)
+  return (
+    <fieldset className="m-0 flex flex-wrap items-center gap-2 border-0 p-0">
+      <legend className="sr-only">Filtry mapy</legend>
+      <select
+        aria-label="Podsektor"
+        value={filters.subsector ?? ''}
+        onChange={(e) => onChange({ ...filters, subsector: e.target.value || undefined })}
+        className={selectCls(Boolean(filters.subsector))}
+      >
+        <option value="">Podsektor: wszystkie</option>
+        {(subs.data ?? []).map((s) => (
+          <option key={s.code} value={s.code}>
+            {s.name}
+          </option>
+        ))}
+      </select>
+      <select
+        aria-label="Wartość umowy"
+        value={filters.value ?? ''}
+        onChange={(e) => onChange({ ...filters, value: e.target.value || undefined })}
+        className={selectCls(Boolean(filters.value))}
+      >
+        <option value="">Wartość: każda</option>
+        {VALUE_BUCKETS.map((b) => (
+          <option key={b.key} value={b.key}>
+            {b.label} brutto
+          </option>
+        ))}
+      </select>
+      <select
+        aria-label="Lata"
+        value={filters.year ?? ''}
+        onChange={(e) => onChange({ ...filters, year: e.target.value ? Number(e.target.value) : undefined })}
+        className={selectCls(Boolean(filters.year))}
+      >
+        <option value="">
+          Lata {YEARS[0]}–{YEARS.at(-1)}
+        </option>
+        {YEARS.map((y) => (
+          <option key={y} value={y}>
+            {y}
+          </option>
+        ))}
+      </select>
+    </fieldset>
   )
 }

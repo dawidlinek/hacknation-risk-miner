@@ -1,0 +1,47 @@
+# Sector pack budynki: CPV codes of building works (BZP field 3.4 / 4.2.2).
+cpv_map:
+- cpv: '45210000'
+  subsector: null
+  strength: strong
+  label: Roboty budowlane w zakresie budynków
+  status: proposed
+- cpv: '45211000'
+  subsector: MIESZK
+  strength: strong
+  label: Roboty budowlane w zakresie budynków mieszkalnych
+  status: proposed
+- cpv: '45212000'
+  subsector: SPORT
+  strength: strong
+  label: Roboty budowlane w zakresie obiektów rekreacyjnych, sportowych i kulturalnych
+  status: proposed
+- cpv: '45213000'
+  subsector: INNE
+  strength: medium
+  label: Roboty budowlane w zakresie obiektów handlowych, magazynowych i przemysłowych
+  status: proposed
+- cpv: '45214000'
+  subsector: SZK
+  strength: strong
+  label: Roboty budowlane w zakresie obiektów związanych z edukacją i badaniami
+  status: proposed
+- cpv: '45215000'
+  subsector: ZDR
+  strength: strong
+  label: Roboty budowlane w zakresie obiektów związanych z lecznictwem i opieką społeczną
+  status: proposed
+- cpv: '45216000'
+  subsector: ADM
+  strength: strong
+  label: Roboty budowlane w zakresie obiektów związanych z porządkiem publicznym
+  status: proposed
+- cpv: '45453000'
+  subsector: null
+  strength: weak
+  label: Roboty remontowe i renowacyjne
+  status: proposed
+- cpv: '45321000'
+  subsector: TERMO
+  strength: medium
+  label: Izolacja cieplna
+  status: proposed

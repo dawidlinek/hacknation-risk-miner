@@ -1,7 +1,7 @@
 import { useSuspenseQuery } from '@tanstack/react-query'
 import { Link } from '@tanstack/react-router'
 import type { TimelineStep } from '@/api/contracts/projects'
-import { Panel, SectionTitle, TwoCol } from '@/app/Page'
+import { TwoCol } from '@/app/Page'
 import { EmptyState } from '@/components/common/DataState'
 import { ReviewStatusBadge } from '@/components/common/ReviewStatusBadge'
 import { StepItem, StepList } from '@/components/common/StepList'
@@ -10,7 +10,7 @@ import { useFeature } from '@/config/features'
 import { askProject } from '@/features/ask/api'
 import { ChatPanel } from '@/features/ask/ChatPanel'
 import { projectCardQuery } from './api'
-import { GapList, IdentifierList, LessonList, PlanVsActual, SimilarCaseList } from './parts'
+import { GapList, IdentifierList, PlanVsActual, SimilarCaseList } from './parts'
 
 function StepRef({ step }: { step: TimelineStep }) {
   if (!step.ref) return null
@@ -97,11 +97,7 @@ export function ProjectCardScreen({ id }: { id: string }) {
       }
       aside={
         <>
-          <Panel>
-            <SectionTitle>Podobne przypadki</SectionTitle>
-            <SimilarCaseList cases={card.similar_cases} />
-          </Panel>
-          <LessonList lessons={card.lessons} />
+          <SimilarCaseList cases={card.similar_cases} />
           <GapList gaps={card.gaps} />
           <IdentifierList items={card.identifiers} />
         </>

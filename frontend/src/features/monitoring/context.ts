@@ -1,5 +1,6 @@
 import { createContext, useContext } from 'react'
 import type { MetricKey, MonitoringMode, RegionsOut } from '@/api/contracts/monitoring'
+import type { MonFilters } from './api'
 import type { GeoFC } from './geo'
 import type { MetricDef, ScaledRegion } from './logic'
 
@@ -8,6 +9,9 @@ export interface MonitoringSearch {
   miara?: string
   sygnaly?: number
   q?: string
+  podsektor?: string
+  wartosc?: string
+  rok?: number
 }
 
 export interface MonitoringCtx {
@@ -21,6 +25,8 @@ export interface MonitoringCtx {
   /** replay date (YYYY-MM-DD) from the time machine, null = today */
   asOf: string | null
   search: MonitoringSearch
+  /** Podsektor, Wartość, Lata from the filter bar, passed to every monitoring query */
+  filters: MonFilters
   setSearch: (patch: Partial<MonitoringSearch>) => void
 }
 

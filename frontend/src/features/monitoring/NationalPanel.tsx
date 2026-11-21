@@ -10,8 +10,8 @@ import { RegionOutline, SignalList } from './parts'
 
 /** Level 0: "Wojewodztwa 16" with the active metric name and a ranked list. */
 export function NationalPanel() {
-  const { scaled, def, mode, search, setSearch, asOf } = useMonitoring()
-  const found = useQuery({ ...signalsQuery(null, null, search.q, asOf), enabled: Boolean(search.q) })
+  const { scaled, def, mode, search, setSearch, asOf, filters } = useMonitoring()
+  const found = useQuery({ ...signalsQuery(null, null, search.q, asOf, filters), enabled: Boolean(search.q) })
   const geo = useQuery(wojGeoQuery)
   const byTerc = useMemo(
     () => new Map((geo.data?.features ?? []).map((f) => [f.properties.terc, f])),

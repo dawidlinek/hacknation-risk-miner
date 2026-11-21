@@ -1,0 +1,10 @@
+# Sector pack budynki: words that identify the sector in a description and technical components for similarity.
+sector_detect: ['budyn', 'szkoł', 'przedszk', 'szpital', 'przychodni', 'termomoderniz', 'hal\w* sport', 'świetlic', 'remiz', 'urzęd']
+tech_tags:
+- {name: termomodernizacja, pattern: 'termomoderniz|docieplen|izolac\w* termi'}
+- {name: wymiana stolarki, pattern: 'stolark|okien|drzwi'}
+- {name: dach, pattern: 'dach|pokryci\w* dach'}
+- {name: instalacje wewnętrzne, pattern: 'instalac\w* (elektry|sanitar|c\.?o|wod|gaz)'}
+- {name: winda lub dostępność, pattern: 'wind|dźwig|dostępnoś|niepełnospraw'}
+- {name: fotowoltaika lub pompa ciepła, pattern: 'fotowolt|pomp\w* ciepła|oze\b'}
+- {name: rozbudowa, pattern: 'rozbudow|nadbudow'}

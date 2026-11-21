@@ -1,0 +1,73 @@
+# Sector pack budynki. Patterns are matched on the lower-cased procedure title, in this order (first match wins).
+subsectors:
+- code: TERMO
+  name: Termomodernizacja budynku
+  patterns:
+  - termomoderniz
+  - efektywnoś\w* energ
+  - docieplen
+  status: proposed
+- code: SZK
+  name: Szkoła lub przedszkole
+  patterns:
+  - szkoł
+  - szkol
+  - przedszk
+  - żłob
+  - oświat
+  status: proposed
+- code: ZDR
+  name: Szpital, przychodnia lub opieka społeczna
+  patterns:
+  - szpital
+  - przychodni
+  - ośrod\w* zdrow
+  - zol\b
+  - dom\w* pomocy
+  - opiek
+  status: proposed
+- code: SPORT
+  name: Obiekt sportowy
+  patterns:
+  - hal\w* sport
+  - sal\w* gimnast
+  - basen
+  - pływal
+  - boisk
+  - stadion
+  status: proposed
+- code: KULT
+  name: Dom kultury, biblioteka lub świetlica
+  patterns:
+  - kultur
+  - bibliotek
+  - świetlic
+  - muzeum
+  - teatr
+  status: proposed
+- code: MIESZK
+  name: Budynek mieszkalny komunalny
+  patterns:
+  - mieszka
+  - lokal\w* socjal
+  - komunaln
+  status: proposed
+- code: ADM
+  name: Urząd lub budynek administracyjny
+  patterns:
+  - urzęd
+  - urząd
+  - administrac
+  - remiz
+  - straż
+  status: proposed
+- code: INNE
+  name: Inny budynek publiczny
+  patterns:
+  - budyn
+  - obiekt
+  - remont
+  - przebudow
+  - rozbudow
+  - budow
+  status: proposed

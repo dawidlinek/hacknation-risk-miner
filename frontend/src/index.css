@@ -7,12 +7,12 @@
 :root {
   --bg: #ffffff; --surface: #ffffff; --soft: #f6f6f6; --soft-2: #f0f0f0;
   --border: #e5e5e5; --divider: #f0f0f0;
-  --ink: #0a0a0a; --on-ink: #ffffff;
-  --text: #0a0a0a; --text-secondary: #404040; --text-body-muted: #525252; --text-muted: #6b6b6b; --text-on-ink-muted: #a3a3a3;
-  --attention: #3056f5; --attention-text: #2341b9; --attention-soft: #eef1fe;
+  --ink: #3056f5; --on-ink: #ffffff;
+  --text: #0a0a0a; --text-secondary: #404040; --text-body-muted: #525252; --text-muted: #6b6b6b; --text-on-ink-muted: #dfe6fd;
+  --attention: #ffd23f; --attention-text: #7a5c00; --attention-soft: #fff6d1;
   --success: #16a34a; --success-text: #166534; --success-soft: #dcfce7;
-  --prov-source: #525252; --prov-calc: #0f766e; --prov-ai: #7c3aed; --prov-case: #a16207;
-  --prov-source-soft: #f6f6f6; --prov-calc-soft: #e6f6f3; --prov-ai-soft: #f3eeff; --prov-case-soft: #fdf6e3;
+  --prov-source: #525252; --prov-calc: #0f766e; --prov-ai: #7c3aed; --prov-case: #be185d;
+  --prov-source-soft: #f6f6f6; --prov-calc-soft: #e6f6f3; --prov-ai-soft: #f3eeff; --prov-case-soft: #fdf2f8;
   --sev-high: #b91c1c; --sev-medium: #a16207; --sev-low: #525252;
   --review-auto: #6b6b6b; --review-proposed: #2341b9; --review-approved: #166534; --review-edited: #0e7490; --review-rejected: #b91c1c;
 
@@ -44,12 +44,12 @@
 :root[data-theme="dark"] {
   --bg: #0a0a0a; --surface: #111111; --soft: #171717; --soft-2: #1f1f1f;
   --border: #2a2a2a; --divider: #1f1f1f;
-  --ink: #fafafa; --on-ink: #0a0a0a;
-  --text: #fafafa; --text-secondary: #d4d4d4; --text-body-muted: #bdbdbd; --text-muted: #a3a3a3; --text-on-ink-muted: #525252;
-  --attention: #7d97ff; --attention-text: #a9b9ff; --attention-soft: #0f1a45;
+  --ink: #3056f5; --on-ink: #ffffff;
+  --text: #fafafa; --text-secondary: #d4d4d4; --text-body-muted: #bdbdbd; --text-muted: #a3a3a3; --text-on-ink-muted: #dfe6fd;
+  --attention: #ffd23f; --attention-text: #ffe27a; --attention-soft: #2b2405;
   --success: #4ade80; --success-text: #86efac; --success-soft: #0b2615;
-  --prov-source: #a3a3a3; --prov-calc: #2dd4bf; --prov-ai: #a78bfa; --prov-case: #fbbf24;
-  --prov-source-soft: #1f1f1f; --prov-calc-soft: #082a27; --prov-ai-soft: #1e1433; --prov-case-soft: #0d1b33;
+  --prov-source: #a3a3a3; --prov-calc: #2dd4bf; --prov-ai: #a78bfa; --prov-case: #f472b6;
+  --prov-source-soft: #1f1f1f; --prov-calc-soft: #082a27; --prov-ai-soft: #1e1433; --prov-case-soft: #2a0e1c;
   --sev-high: #f87171; --sev-medium: #fbbf24; --sev-low: #a3a3a3;
   --review-auto: #a3a3a3; --review-proposed: #a9b9ff; --review-approved: #86efac; --review-edited: #67e8f9; --review-rejected: #fca5a5;
   --chart-plan: #404040; --chart-p50: #737373; --chart-p80: #d4d4d4; --chart-p90: #7d97ff;
@@ -123,8 +123,8 @@
 }
 
 @keyframes rm-attention-ring {
-  0% { box-shadow: 0 0 0 0 rgba(48, 86, 245, 0.35); }
-  100% { box-shadow: 0 0 0 8px rgba(48, 86, 245, 0); }
+  0% { box-shadow: 0 0 0 0 rgba(255, 210, 63, 0.55); }
+  100% { box-shadow: 0 0 0 8px rgba(255, 210, 63, 0); }
 }
 .rm-attention-ring { animation: rm-attention-ring 1.8s ease-out infinite; }
 

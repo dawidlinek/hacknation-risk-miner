@@ -19,11 +19,38 @@ from riskminer.config import feature
 PROGRAMME_LABEL = {"KPO_B311": "KPO", "FENIKS": "FEnIKS 2021–2027", "FEP_RPO": "Fundusze Europejskie dla województwa",
                    "PROW": "PROW 2014–2020", "RFIL_PIS": "Rządowe programy (RFIL, Polski Ład)", "OWN": "środki własne"}
 
-SECTOR_LABEL = {"wod-kan": "wod-kan", "drogi": "drogi (rozszerzenie pilotażu)"}
+SECTOR_LABEL = {"wod-kan": "wod-kan"}   # extension sectors come from catalogue/<sector>/pack.yaml (sector_labels)
+
+
+def extension_sectors() -> list[str]:
+    """Sector packs other than wod-kan, in detection order (assign.priority, then name); [] while the flag is off.
+    A new sector is data: a catalogue/<sector>/pack.yaml with an `analytics` block, no code change."""
+    if not feature("sector_roads"):
+        return []
+    from riskminer.analytics.base import DEFAULT_SECTOR, known_sectors
+    out = []
+    for sec in known_sectors():
+        if sec == DEFAULT_SECTOR:
+            continue
+        try:
+            out.append((sector_pack(sec)["priority"], sec))
+        except (KeyError, OSError, ValueError):
+            continue
+    return [sec for _, sec in sorted(out)]
+
+
+def sector_labels() -> dict[str, str]:
+    out = dict(SECTOR_LABEL)
+    for sec in extension_sectors():
+        out[sec] = f"{sector_pack(sec)['label_short']} (rozszerzenie pilotażu)"
+    return out
+
+
+def sector_options() -> list[dict]:
+    return [{"value": k, "label": v} for k, v in sector_labels().items()]
 
 FEATURE_DEFS: dict[str, dict[str, Any]] = {
-    "sektor": {"label": "sektor", "editor": "select",
-               "options": [{"value": k, "label": v} for k, v in SECTOR_LABEL.items()]},
+    "sektor": {"label": "sektor", "editor": "select", "options": None},   # sector_options(), read per request
     "podsektor": {"label": "podsektor", "editor": "select",
                   "options": [{"value": k, "label": v} for k, v in SUB_LABEL.items()]},
     "formula": {"label": "formuła", "editor": "select",
@@ -67,7 +94,7 @@ def display(key: str, value: Any, unsure: bool = False) -> str:
     if key == "podsektor":
         return all_sub_labels().get(value, str(value))
     if key == "sektor":
-        return SECTOR_LABEL.get(value, str(value))
+        return sector_labels().get(value, str(value))
     if key == "formula":
         return "zaprojektuj i wybuduj" if value in (True, "design_build") else "samo wykonanie"
     if key == "rodzaj_robot":
@@ -91,11 +118,8 @@ def display(key: str, value: Any, unsure: bool = False) -> str:
 
 def all_sub_labels() -> dict[str, str]:
     out = dict(SUB_LABEL)
-    if feature("sector_roads"):
-        try:
-            out.update(sector_pack("drogi")["sub_labels"])
-        except KeyError:
-            pass
+    for sec in reversed(extension_sectors()):       # shared codes (INNE) keep the first pack's label; chip() uses options
+        out.update(sector_pack(sec)["sub_labels"])
     return out
 
 
@@ -112,18 +136,16 @@ _WODKAN_WORDS = re.compile(r"kanalizac|wodociąg|ściek|oczyszczal|uzdatnian|prz
 
 
 def detect_sector(text: str) -> tuple[str, re.Match | None]:
-    """wod-kan unless the description is about roads and says nothing about water or sewage (flag sector_roads)."""
+    """wod-kan unless the description says nothing about water or sewage and matches an extension pack's
+    `sector_detect` words (catalogue/<sector>/lexicon.yaml), tried in assign.priority order (flag sector_roads)."""
     lo = (text or "").lower()
-    if not feature("sector_roads") or _WODKAN_WORDS.search(lo):
+    if _WODKAN_WORDS.search(lo):
         return "wod-kan", None
-    try:
-        pack = sector_pack("drogi")
-    except KeyError:
-        return "wod-kan", None
-    for p in pack["sector_detect"]:
-        m = re.search(p, lo)
-        if m:
-            return "drogi", m
+    for sec in extension_sectors():
+        for p in sector_pack(sec)["sector_detect"]:
+            m = re.search(p, lo)
+            if m:
+                return sec, m
     return "wod-kan", None
 
 
@@ -143,7 +165,12 @@ def chip(key: str, value: Any, *, source_label: str = "opis", method: str = "reg
          origin: str = "CALC", review_status: str = "auto", quote: str | None = None,
          source: dict | None = None, options: list[dict] | None = None) -> dict[str, Any]:
     d = FEATURE_DEFS[key]
-    return {"key": key, "label": d["label"], "value": value, "display": display(key, value, unsure),
+    if options is None and key == "sektor":
+        options = sector_options()
+    disp = display(key, value, unsure)
+    if options and key == "podsektor":                  # sector-specific label (INNE exists in several packs)
+        disp = next((o["label"] for o in options if o["value"] == value), disp)
+    return {"key": key, "label": d["label"], "value": value, "display": disp,
             "source_label": source_label, "source": source, "unsure": unsure, "editor": d["editor"],
             "options": options if options is not None else d.get("options"), "unit": d.get("unit"), "origin": origin, "review_status": review_status,
             "method": method, "quote": quote}

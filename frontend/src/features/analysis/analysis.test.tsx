@@ -107,15 +107,18 @@ describe('ChipsEditor', () => {
 })
 
 describe('JellySite', () => {
-  it('reduced motion (and jsdom without matchMedia): a static still frame, no canvas, no animation loop', async () => {
+  it('reduced motion (and jsdom without matchMedia): a still frame, finished pyramid, no canvas, no loop', async () => {
     const { JellySite } = await import('../jelly/JellySite')
     render(<JellySite />)
     const site = screen.getByTestId('jelly-site')
     expect(site.querySelector('canvas')).toBeNull()
-    expect(site.querySelectorAll('[data-still-bot]')).toHaveLength(4)
+    // four hard-hat builders and the koparka driver
+    expect(site.querySelectorAll('[data-still-bot]')).toHaveLength(5)
+    // pile of 5 blocks plus the finished 4-3-2-1 pyramid
+    expect(site.querySelector('[data-blocks]')?.children).toHaveLength(15)
     expect(site).toHaveAttribute('aria-hidden', 'true')
   })
-  it('motion allowed: four sleeping hard-hat bots for the WebGL renderer', async () => {
+  it('motion allowed: four sleeping hard-hat bots and the koparka driver for the WebGL renderer', async () => {
     const orig = window.matchMedia
     window.matchMedia = ((q: string) => ({
       matches: false,
@@ -126,15 +129,26 @@ describe('JellySite', () => {
     try {
       const { JellySite } = await import('../jelly/JellySite')
       render(<JellySite />)
-      const bots = screen.getByTestId('jelly-site').querySelectorAll('[data-jelly]')
-      expect(bots).toHaveLength(4)
-      expect(
-        [...bots].every(
-          (b) => b.getAttribute('data-hat') === 'hard' && b.getAttribute('data-state') === 'asleep',
-        ),
-      ).toBe(true)
+      const site = screen.getByTestId('jelly-site')
+      const bots = [...site.querySelectorAll('[data-jelly]')]
+      expect(bots).toHaveLength(5)
+      expect(bots.every((b) => b.getAttribute('data-state') === 'asleep')).toBe(true)
+      expect(bots.filter((b) => b.getAttribute('data-hat') === 'hard')).toHaveLength(4)
+      // dashed outline of the pyramid to build (10 slots) next to the pile (5)
+      expect(site.querySelector('[data-blocks]')?.children).toHaveLength(15)
     } finally {
       window.matchMedia = orig
     }
+  })
+})
+
+describe('JellyDigger', () => {
+  it('reduced motion: a still driver in the koparka, no canvas', async () => {
+    const { JellyDigger } = await import('../jelly/JellyDigger')
+    render(<JellyDigger />)
+    const d = screen.getByTestId('jelly-digger')
+    expect(d.querySelector('canvas')).toBeNull()
+    expect(d.querySelectorAll('[data-still-bot]')).toHaveLength(1)
+    expect(d.querySelector('[data-exc]')).toHaveAttribute('data-dig', 'off')
   })
 })

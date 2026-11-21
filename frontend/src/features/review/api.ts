@@ -10,7 +10,10 @@ import {
   type RealReviewList,
 } from '@/api/adapters/review'
 import { contractFetch } from '@/api/client'
-import type { DecisionResult, ReviewKind, ReviewOption } from '@/api/contracts/review'
+import type { DecisionResult, ReviewCard, ReviewKind, ReviewOption } from '@/api/contracts/review'
+import { type CardContext, contextOf, type QueueFilter, type RawContext, type ReviewFacets } from './context'
+
+export type ReviewCardView = ReviewCard & CardContext
 
 export const reviewCountsQuery = queryOptions({
   queryKey: ['review', 'counts'],
@@ -18,25 +21,72 @@ export const reviewCountsQuery = queryOptions({
   staleTime: 15_000,
 })
 
-/** Open items of a kind, oldest first; `first` (?sprawa=) is delivered first by the backend. */
+const filterQuery = (f: QueueFilter) => ({
+  type: f.type || undefined,
+  rm_id: f.project || undefined,
+  sort: f.sort ?? 'strength',
+})
+
+/** Open items of a kind, strongest evidence first by default; `first` (?sprawa=) is delivered first by the backend. */
 export const reviewListQuery = (
   kind: ReviewKind | undefined,
   first: number | undefined,
   code: string | undefined,
+  filter: QueueFilter = {},
 ) =>
   queryOptions({
-    queryKey: ['review', 'list', kind ?? 'all', first ?? 0, code ?? ''],
+    queryKey: [
+      'review',
+      'list',
+      kind ?? 'all',
+      first ?? 0,
+      code ?? '',
+      filter.type ?? '',
+      filter.project ?? '',
+      filter.sort ?? '',
+    ],
     queryFn: () =>
       contractFetch<RealReviewList>('/api/review-items', {
-        query: { status: 'open', kind: kind ? REAL_KIND[kind] : undefined, code, id: first, limit: 100 },
+        query: {
+          status: 'open',
+          kind: kind ? REAL_KIND[kind] : undefined,
+          code,
+          id: first,
+          limit: 200,
+          ...filterQuery(filter),
+        },
       }),
     staleTime: 0,
+  })
+
+/** Type, project and strength facets of the current list; each facet's numbers add up to the list total. */
+export const reviewFacetsQuery = (
+  kind: ReviewKind | undefined,
+  code: string | undefined,
+  filter: QueueFilter = {},
+) =>
+  queryOptions({
+    queryKey: ['review', 'facets', kind ?? 'all', code ?? '', filter.type ?? '', filter.project ?? ''],
+    queryFn: () =>
+      contractFetch<ReviewFacets>('/api/review-items/facets', {
+        query: {
+          status: 'open',
+          kind: kind ? REAL_KIND[kind] : undefined,
+          code,
+          ...filterQuery(filter),
+          sort: undefined,
+        },
+      }),
+    staleTime: 15_000,
   })
 
 export const reviewCardQuery = (id: number) =>
   queryOptions({
     queryKey: ['review', 'card', id],
-    queryFn: async () => adaptReviewCard(await contractFetch<RealReviewCard>(`/api/review-items/${id}`)),
+    queryFn: async (): Promise<ReviewCardView> => {
+      const raw = await contractFetch<RealReviewCard & RawContext>(`/api/review-items/${id}`)
+      return { ...adaptReviewCard(raw), ...contextOf(raw) }
+    },
     staleTime: 30_000,
   })
 

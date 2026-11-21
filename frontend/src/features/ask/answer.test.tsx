@@ -24,15 +24,15 @@ describe('ChatAnswer (pattern 13)', () => {
     expect(methodLabel('template:summary_v1')).toMatch(/bez AI/)
     expect(methodLabel('llm')).toMatch(/model AI/)
   })
-  it('template answers also get "Jak to policzyłem", the n chip and the save action', () => {
+  it('template answers show the n chip and the save action, without a method block', () => {
     const a = adaptAnswer(raw, 'Dlaczego taka szansa na termin?')
     render(
       <QueryClientProvider client={new QueryClient()}>
         <ChatAnswer answer={a} />
       </QueryClientProvider>,
     )
-    expect(screen.getByText('Jak to policzyłem')).toBeInTheDocument()
-    expect(screen.getByText(/szablon na liczbach z bazy/)).toBeInTheDocument()
+    expect(screen.queryByText('Jak to policzyłem')).not.toBeInTheDocument()
+    expect(screen.queryByText(/szablon na liczbach z bazy/)).not.toBeInTheDocument()
     expect(screen.getByText('n = 82')).toBeInTheDocument()
     expect(screen.getByText('obliczenie')).toBeInTheDocument()
     expect(screen.getByRole('button', { name: 'Zapisz jako rekord' })).toBeInTheDocument()

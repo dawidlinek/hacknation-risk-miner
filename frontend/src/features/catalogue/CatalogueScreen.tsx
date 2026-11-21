@@ -22,6 +22,7 @@ import { useFeature } from '@/config/features'
 import { cn } from '@/lib/cn'
 import { fmtDateTime } from '@/lib/dates'
 import { catalogueQuery, decideProposal, patchRisk, putWeights } from './api'
+import { ClausesPanel } from './ClausesPanel'
 
 export type CatalogueTab = 'ryzyka' | 'wersje' | 'podsektory' | 'dokumenty' | 'listy' | 'zapisy'
 export const TABS: CatalogueTab[] = ['ryzyka', 'wersje', 'podsektory', 'dokumenty', 'listy', 'zapisy']
@@ -276,6 +277,16 @@ function WeightSliders({ weights, editable }: { weights: SimilarityWeight[]; edi
   )
 }
 
+// phase codes of the sector pack (doc_types.yaml, checklist.yaml) shown in plain Polish
+const PHASE: Record<string, string> = {
+  przygotowanie: 'przygotowanie',
+  postepowanie: 'postępowanie',
+  realizacja: 'realizacja',
+  odbior: 'odbiór',
+  ewaluacja: 'ewaluacja',
+  'WOD-PREP': 'przygotowanie inwestycji wodociągowej',
+}
+
 function ItemList({ items, empty }: { items: CatalogueItem[]; empty: string }) {
   if (items.length === 0) return <EmptyState>{empty}</EmptyState>
   return (
@@ -287,7 +298,7 @@ function ItemList({ items, empty }: { items: CatalogueItem[]; empty: string }) {
         >
           <span className="t-mono rounded-md bg-soft-2 px-2 py-0.5">{i.code}</span>
           <span className="min-w-0 flex-1 text-[14px]">{i.name}</span>
-          {i.detail ? <span className="t-mono text-muted">{i.detail}</span> : null}
+          {i.detail ? <span className="t-caption text-muted">{PHASE[i.detail] ?? i.detail}</span> : null}
         </li>
       ))}
     </ul>
@@ -388,9 +399,7 @@ export function CatalogueScreen({ tab, onTab }: { tab: CatalogueTab; onTab: (t: 
       {tab === 'podsektory' ? <ItemList items={data.subsectors} empty="Brak podsektorów." /> : null}
       {tab === 'dokumenty' ? <ItemList items={data.doc_types} empty="Brak typów dokumentów." /> : null}
       {tab === 'listy' ? <ItemList items={data.checklists} empty="Brak list kontrolnych." /> : null}
-      {tab === 'zapisy' ? (
-        <ItemList items={data.clauses} empty="Zapisy umowne pojawią się po zatwierdzeniu przez eksperta." />
-      ) : null}
+      {tab === 'zapisy' ? <ClausesPanel /> : null}
       {!editable ? (
         <p className="t-caption m-0 text-muted">
           {readOnly

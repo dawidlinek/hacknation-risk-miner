@@ -57,7 +57,7 @@ function BalanceSection({ b, attention, saving }: { b: Balance; attention: numbe
   const total = b.segments.buyer + b.segments.shared + b.segments.contractor || 1
   const segs = [
     { k: 'buyer', v: b.segments.buyer, c: 'bg-ink' },
-    { k: 'shared', v: b.segments.shared, c: 'bg-[#D4D4D4]' },
+    { k: 'shared', v: b.segments.shared, c: 'bg-[var(--chart-plan)]' },
     { k: 'contractor', v: b.segments.contractor, c: 'bg-attention' },
   ].filter((s) => s.v > 0)
   const legend = [
@@ -71,33 +71,37 @@ function BalanceSection({ b, attention, saving }: { b: Balance; attention: numbe
     },
   ]
   return (
-    <section aria-labelledby="bal" className="flex flex-col gap-3 rounded-panel border border-divider p-5">
+    // A5 mockup: soft panel, a segmented bar with 2 px gaps, then three white tiles with the amounts
+    <section aria-labelledby="bal" className="flex flex-col gap-3 rounded-panel bg-soft px-5.5 py-5">
       <div className="flex flex-wrap items-baseline justify-between gap-2">
         <h2 id="bal" className="t-h3 m-0">
           Bilans Twojego podziału
         </h2>
-        <span className="t-caption text-muted">
+        <span className="t-mono text-muted">
           {saving ? 'Zapisujemy…' : 'szacunek, oczekiwany koszt ryzyk'}
         </span>
       </div>
       <div
         role="img"
         aria-label={balanceAria(b)}
-        className="flex h-4 w-full overflow-hidden rounded-pill bg-soft"
+        className="flex h-4 w-full gap-0.5 overflow-hidden rounded-pill"
         data-testid="balance-bar"
       >
         {segs.map((s) => (
-          <span key={s.k} className={cn('h-full', s.c)} style={{ width: `${(s.v / total) * 100}%` }} />
+          <span key={s.k} className={cn('h-full', s.c)} style={{ flex: `${s.v / total} 1 0` }} />
         ))}
       </div>
-      <div className="flex flex-col gap-1.5">
+      <div className="grid gap-2.5" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(170px, 1fr))' }}>
         {legend.map((k) => (
-          <div key={k.l} className="flex items-center justify-between gap-3">
-            <span className="t-small flex items-center gap-2">
-              <span aria-hidden className={cn('size-2.5 rounded-pill', k.dot)} />
+          <div key={k.l} className="flex flex-col gap-0.5 rounded-[16px] bg-surface px-3.5 py-3">
+            <span className="flex items-center gap-2 text-[13px] text-text-muted">
+              <span aria-hidden className={cn('size-2.5 rounded-[3px]', k.dot)} />
               {k.l}
             </span>
-            <span className={cn('t-item', k.warn && 'text-attention-text')} data-testid={`legend-${k.l}`}>
+            <span
+              className={cn('font-semibold text-[24px] tracking-[-0.03em]', k.warn && 'text-attention-text')}
+              data-testid={`legend-${k.l}`}
+            >
               {k.v}
             </span>
           </div>
@@ -252,20 +256,24 @@ function PackPanel({ id, data }: { id: string; data: AllocationResponse }) {
         </h2>
         <span className="t-caption text-muted">jeden plik, gotowy do dołączenia</span>
       </div>
-      <div className="flex flex-col gap-1.5">
-        {data.pack.items.map((i) => (
+      {/* one white card with divided rows (A5 mockup); the note wraps under a long title instead of squeezing it */}
+      <div className="flex flex-col rounded-item bg-surface px-3.5 py-1.5">
+        {data.pack.items.map((i, n) => (
           <label
             key={i.key}
             htmlFor={`pk-${i.key}`}
-            className="flex cursor-pointer items-center gap-3 rounded-item bg-surface px-3.5 py-2.5"
+            className={cn(
+              'flex cursor-pointer flex-wrap items-center gap-x-3 gap-y-0.5 py-2.5',
+              n > 0 && 'border-divider border-t',
+            )}
           >
             <Checkbox
               id={`pk-${i.key}`}
               checked={!!included[i.key]}
               onCheckedChange={(v) => setIncluded((p) => ({ ...p, [i.key]: v === true }))}
             />
-            <span className="t-small flex-1">{i.title}</span>
-            <span className="t-mono text-muted">{i.note}</span>
+            <span className="min-w-[140px] flex-1 font-medium text-[14.5px]">{i.title}</span>
+            <span className="t-mono ml-auto text-muted">{i.note}</span>
           </label>
         ))}
       </div>

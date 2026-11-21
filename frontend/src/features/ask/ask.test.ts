@@ -32,8 +32,8 @@ describe('adaptAnswer', () => {
     expect(a.sql).toBe('SELECT 1')
     expect(a.method).toBe('ask:woj_late')
   })
-  it('lists sources once and names what is missing', () => {
-    expect(a.sources).toEqual(['n = 11 186', 'brakuje: słownik TERYT powiatów'])
+  it('lists sources once and leaves out the "brakuje" notes', () => {
+    expect(a.sources).toEqual(['n = 11 186'])
   })
   it('keeps known actions only', () => {
     expect(a.actions.map((x) => x.kind)).toEqual(['save', 'export_csv'])
@@ -54,17 +54,18 @@ describe('error messages', () => {
   })
 })
 
-describe('adaptSession (demo personas)', () => {
-  it('passes persona and read_only through the flat shape', () => {
+describe('adaptSession (demo user)', () => {
+  it('passes the single demo user through the flat shape', () => {
     const s = adaptSession({
-      role: 'expert',
-      name: 'juror',
-      initials: 'J',
-      persona: 'juror',
-      read_only: true,
+      role: 'admin',
+      name: 'Ekspert (demo)',
+      initials: 'ED',
+      persona: 'demo',
+      read_only: false,
     })
-    expect(s.read_only).toBe(true)
-    expect(s.persona).toBe('juror')
+    expect(s.role).toBe('admin')
+    expect(s.read_only).toBe(false)
+    expect(s.persona).toBe('demo')
   })
   it('anonymous stays public', () => {
     expect(adaptSession({ user: null, role: 'public', name: null, initials: null }).role).toBe('public')

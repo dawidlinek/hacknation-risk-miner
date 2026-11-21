@@ -19,7 +19,6 @@ export const NAV: NavItem[] = [
   { label: 'Monitoring', to: '/monitoring', match: ['/monitoring'], flag: 'radar', count: 'monitoring_new' },
   { label: 'Nowa inwestycja', to: '/analizy/nowa', match: ['/analizy'] },
   { label: 'Projekty', to: '/projekty', match: ['/projekty'] },
-  { label: 'Wnioski', to: '/wnioski', match: ['/wnioski'] },
   {
     label: 'Przegląd',
     to: '/przeglad',
@@ -33,8 +32,6 @@ export const NAV: NavItem[] = [
 
 export const MORE: NavItem[] = [
   { label: 'Import i źródła', to: '/zrodla', match: ['/zrodla'], expertOnly: true },
-  { label: 'Historia', to: '/historia', match: ['/historia'], expertOnly: true },
-  { label: 'Ustawienia', to: '/ustawienia', match: ['/ustawienia'], expertOnly: true, flag: 'settings_view' },
 ]
 
 export function isActive(item: NavItem, pathname: string) {

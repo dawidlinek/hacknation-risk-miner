@@ -19,10 +19,10 @@ import {
 } from '@/components/ui/dropdown-menu'
 import { Input } from '@/components/ui/input'
 import { cn } from '@/lib/cn'
-import { fmtDays, fmtInt, fmtMoneyShort, fmtPct } from '@/lib/format'
+import { fmtDays, fmtMoneyShort, fmtPct } from '@/lib/format'
 import { plural } from '@/lib/plural'
 import { projectsTableQuery } from './api'
-import { costBarPct, delayBarPct, FILTER_SLUG, filterRows, slugToFilter, sortValue } from './logic'
+import { costBarPct, delayBarPct, FILTER_SLUG, filterRows, SORT_KEYS, slugToFilter, sortValue } from './logic'
 
 export interface ProjectsSearch {
   q?: string
@@ -35,26 +35,6 @@ export interface ProjectsSearch {
 
 const PAGE_SIZE = 10
 
-function StateChip({ row, isPublic }: { row: ProjectRow; isPublic: boolean }) {
-  const label = isPublic && row.state.tone === 'review' ? 'niezweryfikowane' : row.state.label
-  const cls =
-    row.state.tone === 'review'
-      ? 'bg-attention-soft text-attention-text'
-      : row.state.tone === 'discrepancy'
-        ? 'border-[1.5px] border-dashed border-attention text-attention-text'
-        : 'bg-soft text-text-secondary'
-  return (
-    <span
-      className={cn(
-        'inline-flex min-h-6.5 max-w-[130px] items-center whitespace-normal rounded-pill px-2.5 py-0.5 text-[12.5px] leading-tight',
-        cls,
-      )}
-    >
-      {label}
-    </span>
-  )
-}
-
 export function ProjectsScreen({
   search,
   onSearch,
@@ -65,7 +45,7 @@ export function ProjectsScreen({
   const { data } = useSuspenseQuery(projectsTableQuery)
   const { isPublic } = useSession()
   const filter: ProjectFilter = slugToFilter(search.filtr)
-  const sortId: ProjectSortKey = search.sort ?? 'delay'
+  const sortId: ProjectSortKey = search.sort && SORT_KEYS.includes(search.sort) ? search.sort : 'delay'
   const desc = (search.kier ?? 'desc') === 'desc'
   const page = Math.max(0, (search.str ?? 1) - 1)
   const [selected, setSelected] = useState<Set<string>>(new Set())
@@ -87,7 +67,7 @@ export function ProjectsScreen({
         id: 'title',
         header: 'Projekt',
         sortValue: (r) => sortValue(r, 'title'),
-        className: 'w-[34%] min-w-[240px] whitespace-normal',
+        className: 'w-[46%] min-w-[300px] whitespace-normal',
         cell: (r) => (
           <div className="flex flex-col gap-0.5">
             <Link
@@ -106,7 +86,7 @@ export function ProjectsScreen({
       {
         id: 'subsector',
         header: 'Podsektor',
-        className: 'max-w-[130px] whitespace-normal',
+        className: 'w-[18%] whitespace-normal',
         sortValue: (r) => sortValue(r, 'subsector'),
         cell: (r) => r.subsector_label,
       },
@@ -168,37 +148,8 @@ export function ProjectsScreen({
           </div>
         ),
       },
-      {
-        id: 'changes',
-        header: 'Zmiany',
-        className: 'whitespace-nowrap',
-        align: 'right',
-        sortValue: (r) => sortValue(r, 'changes'),
-        cell: (r) => (r.changes === null ? 'brak' : fmtInt(r.changes)),
-      },
-      {
-        id: 'performed',
-        header: 'Wykonanie',
-        className: 'whitespace-nowrap',
-        sortValue: (r) => sortValue(r, 'performed'),
-        cell: (r) =>
-          r.properly_performed === null ? (
-            'brak'
-          ) : (
-            <span className={r.properly_performed ? 'text-text-secondary' : 'text-attention-text'}>
-              {r.properly_performed ? 'należycie' : 'nienależycie'}
-            </span>
-          ),
-      },
-      {
-        id: 'state',
-        header: 'Stan',
-        className: 'w-[132px]',
-        sortValue: (r) => sortValue(r, 'state'),
-        cell: (r) => <StateChip row={r} isPublic={isPublic} />,
-      },
     ],
-    [isPublic],
+    [],
   )
 
   const subsectors = data.facets.subsectors

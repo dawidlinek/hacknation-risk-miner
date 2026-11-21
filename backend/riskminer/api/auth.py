@@ -74,8 +74,8 @@ def verify_password(password: str, stored: str) -> bool:
 @dataclass(frozen=True)
 class User:
     name: str
-    role: str  # expert | admin (a read-only demo persona has role expert + read_only)
-    persona: str | None = None  # demo persona: juror | expert | admin
+    role: str  # expert | admin (the demo user has role admin = full rights)
+    persona: str | None = None  # demo user marker ("demo")
     read_only: bool = False
 
     @property
@@ -83,21 +83,19 @@ class User:
         return f"user:{self.name}"
 
 
-# Demo-only one-click personas (no password). Role checks on write endpoints stay server-side: the Juror is read-only.
-DEMO_PERSONAS: dict[str, dict] = {
-    "juror": {"name": "juror", "role": "expert", "read_only": True, "label": "Juror", "description": "przegląda dane i uruchamia analizy, nie zmienia bazy"},
-    "expert": {"name": "ekspert", "role": "expert", "read_only": False, "label": "Ekspert", "description": "zatwierdza, poprawia i odrzuca wnioski AI oraz powiązania (do testu pracy eksperta)"},
-    "admin": {"name": "administrator", "role": "admin", "read_only": False, "label": "Administrator", "description": "ustawienia, wersje katalogu"},
-}
+# Demo-only one-click login (no password): ONE user with full rights (expert + admin). Old persona names
+# (juror, expert, admin) are still accepted and map to the same user, so old links and cookies keep working.
+DEMO_USER = {"name": "Ekspert (demo)", "role": "admin", "persona": "demo",
+             "label": "Ekspert (demo)", "description": "zatwierdza, poprawia i odrzuca wnioski, edytuje katalog, ustawienia i wersje"}
+DEMO_PERSONAS: dict[str, dict] = {"demo": DEMO_USER}
 
 
 def demo_login_enabled() -> bool:
     return (_env("RISKMINER_DEMO_LOGIN") or "true").lower() not in ("0", "false", "no")
 
 
-def demo_user(persona: str) -> User:
-    d = DEMO_PERSONAS[persona]
-    return User(d["name"], d["role"], persona=persona, read_only=d["read_only"])
+def demo_user(persona: str | None = None) -> User:
+    return User(DEMO_USER["name"], DEMO_USER["role"], persona="demo", read_only=False)
 
 
 def load_users(raw: str | None = None) -> dict[str, tuple[str, str]]:
@@ -174,8 +172,8 @@ def _read(request: Request) -> Session | None:
         d = _serializer().loads(tok, max_age=MAX_AGE)
     except BadSignature:
         return None
-    if d.get("p") in DEMO_PERSONAS and demo_login_enabled():
-        user = demo_user(d["p"])
+    if d.get("p") and demo_login_enabled():  # any demo cookie (also the old juror/expert/admin ones) is the one demo user
+        user = demo_user()
     else:
         user = User(d["u"], d["r"]) if d.get("u") and d.get("r") in ROLES and not d.get("p") else None
     return Session(anon_id=d.get("a") or new_anon_id(), user=user)
@@ -208,7 +206,7 @@ async def require_login(s: Session = Depends(session)) -> User:
 
 
 async def require_writer(user: User = Depends(require_login)) -> User:
-    """Logged in and allowed to change data (expert or admin; the demo Juror is read-only)."""
+    """Logged in and allowed to change data (expert or admin; the single demo user is both)."""
     if user.read_only:
         raise ApiError(403, "To konto jest tylko do odczytu.", "read_only")
     return user

@@ -79,7 +79,7 @@ export function useLogin() {
   })
 }
 
-/** One-click demo accounts (GET /api/auth/demo-personas); an empty list means the demo login is off. */
+/** The single one-click demo user (GET /api/auth/demo-personas); an empty list means the demo login is off. */
 export const demoPersonasQuery = queryOptions({
   queryKey: ['auth', 'demo-personas'],
   queryFn: async (): Promise<DemoPersona[]> => {
@@ -95,10 +95,8 @@ export const demoPersonasQuery = queryOptions({
 export function useDemoLogin() {
   const qc = useQueryClient()
   return useMutation({
-    mutationFn: async (persona: DemoPersona['persona']) =>
-      adaptSession(
-        await contractFetch<unknown>('/api/auth/demo-login', { method: 'POST', json: { persona } }),
-      ),
+    mutationFn: async () =>
+      adaptSession(await contractFetch<unknown>('/api/auth/demo-login', { method: 'POST' })),
     onSuccess: (s) => {
       qc.setQueryData(keys.session, s)
       qc.invalidateQueries({ queryKey: keys.navCounts })

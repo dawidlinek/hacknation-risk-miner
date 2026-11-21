@@ -49,9 +49,9 @@ def parse_annotation(a: str) -> dict:
     m = re.search(r"dofinansowanie:\s*([\d\s\xa0.,]+)\s*zł", a, re.I)
     if m:
         out["subsidy"] = ids.pl_money(m.group(1))
-    m = re.search(r"^(KPO[^.]*\.?\s*(?:inwestycja\s+[A-Z0-9.]+)?)", a)
+    m = re.search(r"^(KPO(?:,?\s*inwestycja\s+[A-Z]\d+(?:\.\d+)*)?)", a)   # "KPO, inwestycja B3.1.1. Wartość ..."
     if m:
-        out["programme"] = m.group(1).strip(" .")
+        out["programme"] = m.group(1).strip(" .,")
     m = re.search(r"Opis:\s*[„\"](.+?)[”\"]\s*$", a, re.S)
     if m:
         out["description"] = m.group(1).strip()

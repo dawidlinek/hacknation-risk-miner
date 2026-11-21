@@ -132,6 +132,10 @@ interface RealSimilar {
   why: string
   contributions: { feature: string; label?: string; value: number }[]
   outcome?: { delay_days?: RealNum | null; cost_dev_pct?: RealNum | null } | null
+  href?: string | null
+  buyer_name?: string | null
+  year?: number | null
+  changes_count?: number | null
 }
 
 export interface RealCard {
@@ -249,6 +253,11 @@ const adaptSimilar = (s: RealSimilar): SimilarCase => ({
   contributions: s.contributions.map((c) => ({ feature: FEATURE[c.feature] ?? 'zakres', value: c.value })),
   delay_days: numValue(s.outcome?.delay_days ?? null),
   cost_dev_pct: numValue(s.outcome?.cost_dev_pct ?? null),
+  href: s.href ?? null,
+  buyer: s.buyer_name ?? null,
+  year: s.year ?? null,
+  changes: s.changes_count ?? null,
+  pool_n: s.score.prov?.n ?? null,
 })
 
 export function adaptCard(raw: RealCard): ProjectCard {
