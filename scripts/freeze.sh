@@ -12,13 +12,16 @@ cd "$ROOT/backend"
 step() { printf '\n== %s\n' "$*"; }
 
 step "1. Alembic heads"
-HEADS=$(uv run --no-sync alembic heads 2>/dev/null | grep -c "(head)" || true)
+HEADS=$(uv run --no-sync alembic heads 2>/dev/null | grep -c "head)" || true)   # real + "effective" (labelled branches)
 uv run --no-sync alembic heads 2>/dev/null
 echo "real heads: $HEADS"
 if [ "$HEADS" -gt 1 ]; then
   if [ "$APPLY" = 1 ]; then
-    uv run --no-sync alembic merge -m freeze --rev-id 0015_freeze heads
-    uv run --no-sync alembic upgrade head      # merge revision only: no SQL, updates alembic_version
+    # merge every head incl. labelled branches only reached via depends_on (alembic's `merge heads` skips those)
+    ALL=$(uv run --no-sync alembic heads 2>/dev/null | awk '{print $1}' | paste -sd' ')
+    uv run --no-sync alembic merge -m freeze --rev-id 0015_freeze $ALL
+    # no-SQL merge: stamp (alembic_version may omit branches applied only through depends_on)
+    uv run --no-sync alembic stamp --purge 0015_freeze
     uv run --no-sync alembic heads
   else
     echo "-> would run: alembic merge -m freeze --rev-id 0015_freeze heads && alembic upgrade head (use --apply)"
