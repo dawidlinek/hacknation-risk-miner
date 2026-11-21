@@ -272,6 +272,21 @@ async def analysis_chat(code: str, body: ChatIn, db: AsyncSession = DB, sess: A.
     is_user = sess.user is not None
     if not SV.can_read(a, sess.actor, is_user, is_user and sess.user.role == "admin"):
         raise A.ApiError(403, "To nie jest Twoja analiza.", "forbidden")
+    # typed "co jeśli" with the user's own numbers: computed from the simulation, not promised by the LLM
+    from riskminer.llm import whatif as WI
+    if WI.parse(body.message):
+        ans = None
+        try:
+            sim = await SV.simulation(db, code)
+            _, rep = await SV._ready(db, code)
+            ans = WI.answer(body.message, sim, SV._features_from(rep).value_gross)
+        except Exception:  # noqa: BLE001 - analysis not ready or no simulation: the LLM chat answers instead
+            ans = None
+        if ans:
+            qid = await Q.store(db, kind="analysis_chat", question=body.message, answer=ans, owner=sess.actor,
+                                scope={"analysis_code": code, "context": body.context})
+            await db.commit()
+            return {**ans, "id": f"q{qid}"}
     report = await SV.get_report(db, code)
     if isinstance(report, tuple):
         report = report[-1]
