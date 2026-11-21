@@ -138,6 +138,31 @@ async def ask(body: AskIn, request: Request, db: AsyncSession = DB, sess: A.Sess
     return ans
 
 
+class AgentIn(BaseModel):
+    question: str
+    route: str | None = None
+    scope: AskScope | None = None
+
+
+@router.post("/ask/agent", summary="Zapytaj jako asystent: kroki, narzędzia i odpowiedź",
+             dependencies=[Depends(A.rate_limit("ask", 10))])
+async def ask_agent(body: AgentIn, request: Request, db: AsyncSession = DB, sess: A.Session = SESSION):
+    """Agent loop (riskminer/llm/agent.py): the model plans, calls read-only tools (app guide, data, documents,
+    project, monitoring) in several steps and answers; the visible steps come back with the answer."""
+    from riskminer.llm import agent as AG
+
+    try:
+        out = await AG.run(body.question, body.route, actor=sess.actor, db=db)
+    except LLMError as e:
+        return _err(e)
+    ans = out["answer"]
+    qid = await Q.store(db, kind="ask", question=body.question, answer=ans, owner=sess.actor,
+                        scope=body.scope.model_dump() if body.scope else {}, llm_call_id=out["llm_call_id"],
+                        title=body.question[:120])
+    await db.commit()
+    return {"answer": {**ans, "id": f"q{qid}"}, "steps": out["steps"]}
+
+
 def _qid(s: str) -> int:
     s = s.removeprefix("qd_").removeprefix("q")
     if not s.isdigit():

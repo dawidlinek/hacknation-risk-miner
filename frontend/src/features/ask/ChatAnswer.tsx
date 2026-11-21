@@ -1,6 +1,6 @@
 import { Link } from '@tanstack/react-router'
 import { toast } from 'sonner'
-import type { AskAnswer } from '@/api/contracts/common'
+import type { AgentStep, AskAnswer } from '@/api/contracts/common'
 import { OriginMarker } from '@/components/common/ProvenanceTag'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/cn'
@@ -42,7 +42,8 @@ export function ChatAnswer({
           {answer.role_label}
         </span>
       </header>
-      <p className="m-0 text-[15px] leading-[1.55]">{answer.text}</p>
+      {answer.steps && answer.steps.length > 0 ? <AgentSteps steps={answer.steps} /> : null}
+      <p className="m-0 text-[15px] leading-[1.55] whitespace-pre-line">{answer.text}</p>
       {bars.length > 0 ? (
         <ul className="m-0 flex list-none flex-col gap-1.5 p-0" aria-label="Zestawienie">
           {bars.slice(0, compact ? 5 : 16).map((b) => (
@@ -130,5 +131,28 @@ export function ChatAnswer({
         })}
       </div>
     </article>
+  )
+}
+
+/** The agent's visible work: what it thinks it should do next and each tool it called, with a short result. */
+export function AgentSteps({ steps }: { steps: AgentStep[] }) {
+  return (
+    <ol className="m-0 flex list-none flex-col gap-1.5 border-l-2 border-soft-2 p-0 pl-3 text-[13px]" aria-label="Kroki asystenta">
+      {steps.map((st, i) =>
+        st.kind === 'tool' ? (
+          <li key={i} className="flex flex-col gap-0.5">
+            <span className="flex flex-wrap items-center gap-1.5">
+              <span className="t-mono rounded-pill bg-surface px-2 py-0.5 text-text-secondary">{st.label ?? st.tool}</span>
+              {st.input ? <span className="t-mono text-muted">{st.input}</span> : null}
+            </span>
+            {st.result ? <span className="text-text-secondary">→ {st.result}</span> : null}
+          </li>
+        ) : (
+          <li key={i} className="text-muted italic">
+            {st.text}
+          </li>
+        ),
+      )}
+    </ol>
   )
 }

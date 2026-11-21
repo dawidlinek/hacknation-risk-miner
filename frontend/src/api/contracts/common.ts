@@ -77,4 +77,15 @@ export interface AskAnswer {
     href?: string
   }[]
   saved_id?: string | null
+  /** agent chat: visible steps (thought, tool call with a short result) before the answer */
+  steps?: AgentStep[]
+}
+
+export interface AgentStep {
+  kind: 'thinking' | 'tool'
+  text?: string
+  tool?: string
+  label?: string
+  input?: string
+  result?: string
 }

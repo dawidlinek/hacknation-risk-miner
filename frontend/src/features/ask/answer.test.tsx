@@ -38,3 +38,25 @@ describe('ChatAnswer (pattern 13)', () => {
     expect(screen.getByRole('button', { name: 'Zapisz jako rekord' })).toBeInTheDocument()
   })
 })
+
+describe('agent steps', () => {
+  it('shows the thought, the tool call with its input and the short result before the answer', () => {
+    const a = {
+      ...adaptAnswer(raw, 'co mogę tu zrobić?'),
+      steps: [
+        { kind: 'thinking' as const, text: 'Sprawdzę, co jest na tym ekranie.' },
+        { kind: 'tool' as const, tool: 'opis_aplikacji', label: 'opis aplikacji', input: '/monitoring', result: 'Monitoring: mapa i lista województw' },
+      ],
+    }
+    render(
+      <QueryClientProvider client={new QueryClient()}>
+        <ChatAnswer answer={a} />
+      </QueryClientProvider>,
+    )
+    const list = screen.getByRole('list', { name: 'Kroki asystenta' })
+    expect(list).toHaveTextContent('Sprawdzę, co jest na tym ekranie.')
+    expect(list).toHaveTextContent('opis aplikacji')
+    expect(list).toHaveTextContent('/monitoring')
+    expect(list).toHaveTextContent('→ Monitoring: mapa i lista województw')
+  })
+})

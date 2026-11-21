@@ -1,6 +1,6 @@
 import { queryOptions, useMutation, useQueryClient } from '@tanstack/react-query'
 import { ApiError, contractFetch } from '@/api/client'
-import type { AskAnswer } from '@/api/contracts/common'
+import type { AgentStep, AskAnswer } from '@/api/contracts/common'
 import { isRateLimited, RATE_LIMIT_MSG } from '@/auth/session'
 
 interface RealRef {
@@ -78,8 +78,16 @@ export const suggestionsQuery = (context: 'pulpit' | 'zapytaj' | 'analysis' | 'p
     staleTime: Number.POSITIVE_INFINITY,
   })
 
-export const askQuestion = async (question: string): Promise<AskAnswer> =>
-  adaptAnswer(await contractFetch<RealAnswer>('/api/ask', { method: 'POST', json: { question } }), question)
+/** Zapytaj as an agent: the model plans, calls tools (app guide, data, documents, projects, monitoring) and answers;
+ * the visible steps come back with the answer. The current screen is sent so "co mogę tu zrobić?" works anywhere. */
+export const askQuestion = async (question: string): Promise<AskAnswer> => {
+  const route = typeof window === 'undefined' ? '/zapytaj' : window.location.pathname
+  const res = await contractFetch<{ answer: RealAnswer; steps: AgentStep[] }>('/api/ask/agent', {
+    method: 'POST',
+    json: { question, route },
+  })
+  return { ...adaptAnswer(res.answer, question), steps: res.steps ?? [] }
+}
 
 export const askProject = async (rmId: string, message: string): Promise<AskAnswer> =>
   adaptAnswer(

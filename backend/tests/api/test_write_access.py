@@ -23,7 +23,7 @@ PUBLIC_WRITES = {
     ("POST", "/api/analyses/{code}/items/{item_id}/decision"), ("POST", "/api/analyses/{code}/simulate"),
     ("PUT", "/api/analyses/{code}/allocation"), ("POST", "/api/analyses/{code}/pack/clauses"),
     ("POST", "/api/analyses/{code}/chat"),
-    ("POST", "/api/ask"), ("POST", "/api/questions"), ("POST", "/api/questions/{code}/rerun"),
+    ("POST", "/api/ask"), ("POST", "/api/ask/agent"), ("POST", "/api/questions"), ("POST", "/api/questions/{code}/rerun"),
     ("POST", "/api/projects/{rm_id}/chat"),
 }
 
