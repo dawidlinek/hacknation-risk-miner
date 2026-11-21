@@ -320,7 +320,7 @@ export function ChoroplethMap(p: ChoroplethMapProps) {
               type="circle"
               paint={{
                 'circle-radius': ['get', 'r'],
-                'circle-color': '#EA580C',
+                'circle-color': '#3056F5',
                 'circle-opacity': 0.55,
                 'circle-stroke-color': '#C2410C',
                 'circle-stroke-width': 0.6,

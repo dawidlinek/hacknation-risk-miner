@@ -52,7 +52,8 @@ _ROWS: list[tuple[str, str, str]] = [
 ]
 
 
-async def find(conn, *, include_raw_named: bool = False, anon_analyses_since: str | None = None) -> dict[str, Any]:
+async def find(conn, *, include_raw_named: bool = False, anon_analyses_since: str | None = None,
+               analysis_codes: list[str] | None = None) -> dict[str, Any]:
     hashes = case_hashes()
     docs = await conn.fetch("""
         SELECT d.id, d.filename, d.sha256, d.project_id, d.created_at, d.data->>'uploaded_by' AS uploaded_by
@@ -74,18 +75,20 @@ async def find(conn, *, include_raw_named: bool = False, anon_analyses_since: st
     # to a demo persona (owner user:juror) stay. Seeded system:* analyses are never selected.
     analyses = [dict(r) for r in await conn.fetch("""
         SELECT id, code, title, created_by,
-               CASE WHEN title LIKE '[e2e]%' THEN 'e2e_title' ELSE 'anonymous_tooling' END AS reason
+               CASE WHEN title LIKE '[e2e]%' THEN 'e2e_title' WHEN code = ANY($2::text[]) THEN 'named' ELSE 'anonymous_tooling' END AS reason
         FROM analysis WHERE title LIKE '[e2e]%'
            OR ($1::timestamptz IS NOT NULL AND owner LIKE 'anon:%' AND created_at >= $1::timestamptz)
-        ORDER BY id""", anon_analyses_since)]
+           OR code = ANY($2::text[])
+        ORDER BY id""", anon_analyses_since, list(analysis_codes or []))]
     return {"documents": picked, "documents_kept": skipped, "analyses": analyses}
 
 
 async def run(conn, *, apply: bool = False, include_raw_named: bool = False, actor: str = "system:demo-cleanup",
-              backup_dir: Path | None = None, anon_analyses_since: str | None = None) -> dict:
+              backup_dir: Path | None = None, anon_analyses_since: str | None = None,
+              analysis_codes: list[str] | None = None) -> dict:
     from datetime import datetime as _dt
     since = _dt.fromisoformat(anon_analyses_since) if anon_analyses_since else None
-    sel = await find(conn, include_raw_named=include_raw_named, anon_analyses_since=since)
+    sel = await find(conn, include_raw_named=include_raw_named, anon_analyses_since=since, analysis_codes=analysis_codes)
     doc_ids = [d["id"] for d in sel["documents"]]
     an_ids = [a["id"] for a in sel["analyses"]]
     an_codes = [a["code"] for a in sel["analyses"]]

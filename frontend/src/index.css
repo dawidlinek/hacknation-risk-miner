@@ -9,20 +9,20 @@
   --border: #e5e5e5; --divider: #f0f0f0;
   --ink: #0a0a0a; --on-ink: #ffffff;
   --text: #0a0a0a; --text-secondary: #404040; --text-body-muted: #525252; --text-muted: #6b6b6b; --text-on-ink-muted: #a3a3a3;
-  --attention: #ea580c; --attention-text: #c2410c; --attention-soft: #fff3eb;
+  --attention: #3056f5; --attention-text: #2341b9; --attention-soft: #eef1fe;
   --success: #16a34a; --success-text: #166534; --success-soft: #dcfce7;
-  --prov-source: #525252; --prov-calc: #0f766e; --prov-ai: #7c3aed; --prov-case: #2563eb;
-  --prov-source-soft: #f6f6f6; --prov-calc-soft: #e6f6f3; --prov-ai-soft: #f3eeff; --prov-case-soft: #eef4ff;
+  --prov-source: #525252; --prov-calc: #0f766e; --prov-ai: #7c3aed; --prov-case: #a16207;
+  --prov-source-soft: #f6f6f6; --prov-calc-soft: #e6f6f3; --prov-ai-soft: #f3eeff; --prov-case-soft: #fdf6e3;
   --sev-high: #b91c1c; --sev-medium: #a16207; --sev-low: #525252;
-  --review-auto: #6b6b6b; --review-proposed: #c2410c; --review-approved: #166534; --review-edited: #2563eb; --review-rejected: #b91c1c;
+  --review-auto: #6b6b6b; --review-proposed: #2341b9; --review-approved: #166534; --review-edited: #0e7490; --review-rejected: #b91c1c;
 
   /* charts */
-  --chart-plan: #d4d4d4; --chart-p50: #a3a3a3; --chart-p80: #525252; --chart-p90: #ea580c;
+  --chart-plan: #d4d4d4; --chart-p50: #a3a3a3; --chart-p80: #525252; --chart-p90: #3056f5;
   --chart-band-p10-p90: #e5e5e5; --chart-band-p10-p80: #a3a3a3; --chart-median: #0a0a0a;
-  --chart-grid: #f0f0f0; --chart-axis: #6b6b6b; --chart-highlight: #ea580c;
-  --scenario-baseline: #0a0a0a; --scenario-s1: #2563eb; --scenario-s2: #0891b2; --scenario-s3: #4d7c0f; --scenario-s4: #db2777; --scenario-combined: #ea580c;
-  --sim-podsektor: #0a0a0a; --sim-formula: #7c3aed; --sim-zakres: #0f766e; --sim-wartosc: #ea580c; --sim-tekst: #a3a3a3;
-  --map-heat-0: #f6f6f6; --map-heat-1: #fde7d3; --map-heat-2: #fdba74; --map-heat-3: #ea580c; --map-heat-4: #9a3412;
+  --chart-grid: #f0f0f0; --chart-axis: #6b6b6b; --chart-highlight: #3056f5;
+  --scenario-baseline: #0a0a0a; --scenario-s1: #ca8a04; --scenario-s2: #0891b2; --scenario-s3: #4d7c0f; --scenario-s4: #db2777; --scenario-combined: #3056f5;
+  --sim-podsektor: #0a0a0a; --sim-formula: #7c3aed; --sim-zakres: #0f766e; --sim-wartosc: #3056f5; --sim-tekst: #a3a3a3;
+  --map-heat-0: #f6f6f6; --map-heat-1: #dfe6fd; --map-heat-2: #9fb2fa; --map-heat-3: #3056f5; --map-heat-4: #1c3496;
   --seq-0: #e5e5e5; --seq-1: #d4d4d4; --seq-2: #a3a3a3; --seq-3: #525252; --seq-4: #0a0a0a;
 
   --shadow-composer: 0 1px 2px rgba(0,0,0,.04), 0 12px 32px rgba(0,0,0,.06);
@@ -46,18 +46,18 @@
   --border: #2a2a2a; --divider: #1f1f1f;
   --ink: #fafafa; --on-ink: #0a0a0a;
   --text: #fafafa; --text-secondary: #d4d4d4; --text-body-muted: #bdbdbd; --text-muted: #a3a3a3; --text-on-ink-muted: #525252;
-  --attention: #fb923c; --attention-text: #fdba74; --attention-soft: #2a1708;
+  --attention: #7d97ff; --attention-text: #a9b9ff; --attention-soft: #0f1a45;
   --success: #4ade80; --success-text: #86efac; --success-soft: #0b2615;
-  --prov-source: #a3a3a3; --prov-calc: #2dd4bf; --prov-ai: #a78bfa; --prov-case: #60a5fa;
+  --prov-source: #a3a3a3; --prov-calc: #2dd4bf; --prov-ai: #a78bfa; --prov-case: #fbbf24;
   --prov-source-soft: #1f1f1f; --prov-calc-soft: #082a27; --prov-ai-soft: #1e1433; --prov-case-soft: #0d1b33;
   --sev-high: #f87171; --sev-medium: #fbbf24; --sev-low: #a3a3a3;
-  --review-auto: #a3a3a3; --review-proposed: #fdba74; --review-approved: #86efac; --review-edited: #93c5fd; --review-rejected: #fca5a5;
-  --chart-plan: #404040; --chart-p50: #737373; --chart-p80: #d4d4d4; --chart-p90: #fb923c;
+  --review-auto: #a3a3a3; --review-proposed: #a9b9ff; --review-approved: #86efac; --review-edited: #67e8f9; --review-rejected: #fca5a5;
+  --chart-plan: #404040; --chart-p50: #737373; --chart-p80: #d4d4d4; --chart-p90: #7d97ff;
   --chart-band-p10-p90: #262626; --chart-band-p10-p80: #737373; --chart-median: #fafafa;
-  --chart-grid: #1f1f1f; --chart-axis: #a3a3a3; --chart-highlight: #fb923c;
-  --scenario-baseline: #fafafa; --scenario-s1: #60a5fa; --scenario-s2: #22d3ee; --scenario-s3: #a3e635; --scenario-s4: #f472b6; --scenario-combined: #fb923c;
-  --sim-podsektor: #fafafa; --sim-formula: #a78bfa; --sim-zakres: #2dd4bf; --sim-wartosc: #fb923c; --sim-tekst: #737373;
-  --map-heat-0: #171717; --map-heat-1: #3a1d0a; --map-heat-2: #7c2d12; --map-heat-3: #ea580c; --map-heat-4: #fdba74;
+  --chart-grid: #1f1f1f; --chart-axis: #a3a3a3; --chart-highlight: #7d97ff;
+  --scenario-baseline: #fafafa; --scenario-s1: #facc15; --scenario-s2: #22d3ee; --scenario-s3: #a3e635; --scenario-s4: #f472b6; --scenario-combined: #7d97ff;
+  --sim-podsektor: #fafafa; --sim-formula: #a78bfa; --sim-zakres: #2dd4bf; --sim-wartosc: #7d97ff; --sim-tekst: #737373;
+  --map-heat-0: #171717; --map-heat-1: #111c47; --map-heat-2: #1f3594; --map-heat-3: #3056f5; --map-heat-4: #9fb2fa;
   --seq-0: #262626; --seq-1: #404040; --seq-2: #737373; --seq-3: #d4d4d4; --seq-4: #fafafa;
   color-scheme: dark;
 }
@@ -123,8 +123,8 @@
 }
 
 @keyframes rm-attention-ring {
-  0% { box-shadow: 0 0 0 0 rgba(234, 88, 12, 0.35); }
-  100% { box-shadow: 0 0 0 8px rgba(234, 88, 12, 0); }
+  0% { box-shadow: 0 0 0 0 rgba(48, 86, 245, 0.35); }
+  100% { box-shadow: 0 0 0 8px rgba(48, 86, 245, 0); }
 }
 .rm-attention-ring { animation: rm-attention-ring 1.8s ease-out infinite; }
 
