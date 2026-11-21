@@ -50,7 +50,7 @@ const onEnter = (fn: () => void) => (e: ReactKeyboardEvent<HTMLElement>) => {
 const EXAMPLE_TEXT =
   'Budowa sieci kanalizacji sanitarnej w sołectwie Kaniów (gmina Bestwina, woj. śląskie): ok. 4,1 km sieci ' +
   'grawitacyjnej i tłocznej z 3 przepompowniami ścieków, w formule zaprojektuj i wybuduj według załączonego PFU. ' +
-  'Wartość szacunkowa ok. 7,4 mln zł brutto, termin realizacji 14 miesięcy od podpisania umowy. Finansowanie: ' +
+  'Wartość szacunkowa ok. 7,4 mln zł brutto, termin realizacji 22 miesiące od podpisania umowy (etap I 10 miesięcy, etap II 12 miesięcy). Finansowanie: ' +
   'program FEnIKS, wkład własny gminy 15%. Trasa częściowo w pasie drogi powiatowej, w rejonie wysokiego poziomu ' +
   'wód gruntowych.'
 /** Example PFU attached by the same button, so Czerwony długopis has a document to read (public BZP document of the
