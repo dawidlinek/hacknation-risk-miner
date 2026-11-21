@@ -249,7 +249,7 @@ export function MonitoringLayout({ children }: { children: ReactNode }) {
               legend={{
                 lo: def.fmt(scaled.lo),
                 hi: def.fmt(scaled.hi),
-                gradient: `linear-gradient(90deg, ${colorAt(0, mode)}, ${colorAt(1, mode)})`,
+                gradient: `linear-gradient(90deg, ${colorAt(0, mode)}, ${colorAt(0.5, mode)}, ${colorAt(1, mode)})`,
               }}
               pins={pins}
               onPins={() => setSearch({ sygnaly: pins ? undefined : 1 })}
@@ -263,10 +263,6 @@ export function MonitoringLayout({ children }: { children: ReactNode }) {
             <TimeMachine terc={sigScope.terc} level={sigScope.lvl} onAsOf={setAsOf} />
           </div>
         ) : null}
-        <p className="t-caption m-0 shrink-0 text-muted">
-          Granice: PRG, uproszczone. Umowy wod-kan z BZP, 2021–2026. Brak ogłoszenia o wykonaniu to sygnał,
-          nie dowód opóźnienia.
-        </p>
       </div>
     </MonitoringContext.Provider>
   )

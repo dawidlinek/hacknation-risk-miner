@@ -68,17 +68,20 @@ export const effectiveMetric = (mode: MonitoringMode, metric: MetricKey): Metric
   mode === 'open' ? 'sig' : metric
 
 export type Rgb = [number, number, number]
-export const INK_RAMP: [Rgb, Rgb] = [
-  [237, 237, 237],
-  [38, 38, 38],
+/** Completed-contract metrics: light to deep brand blue (the user asked for a colourful map, not grey). */
+export const BLUE_STOPS: Rgb[] = [
+  [232, 238, 255],
+  [159, 178, 250],
+  [48, 86, 245],
+  [28, 52, 150],
 ]
-/** map-heat ramp for signals (README: orange only for signals), tokens --map-heat-0..4 in light mode. */
+/** Signals ("W toku"): yellow (the attention colour) to red. */
 export const HEAT_STOPS: Rgb[] = [
-  [246, 246, 246],
-  [253, 231, 211],
-  [253, 186, 116],
-  [234, 88, 12],
-  [154, 52, 18],
+  [255, 246, 209],
+  [255, 210, 63],
+  [245, 158, 11],
+  [220, 38, 38],
+  [153, 27, 27],
 ]
 
 const mix = (a: Rgb, b: Rgb, t: number): Rgb =>
@@ -88,12 +91,10 @@ export const rgb = (c: Rgb) => `rgb(${c.join(',')})`
 /** t in [0,1] to a colour: ink ramp for completed-contract metrics, heat ramp for signals. */
 export function colorAt(t: number, mode: MonitoringMode): string {
   const x = Math.min(1, Math.max(0, t))
-  if (mode === 'open') {
-    const seg = x * (HEAT_STOPS.length - 1)
-    const i = Math.min(HEAT_STOPS.length - 2, Math.floor(seg))
-    return rgb(mix(HEAT_STOPS[i], HEAT_STOPS[i + 1], seg - i))
-  }
-  return rgb(mix(INK_RAMP[0], INK_RAMP[1], x))
+  const stops = mode === 'open' ? HEAT_STOPS : BLUE_STOPS
+  const seg = x * (stops.length - 1)
+  const i = Math.min(stops.length - 2, Math.floor(seg))
+  return rgb(mix(stops[i], stops[i + 1], seg - i))
 }
 
 export interface ScaledRegion {
@@ -164,5 +165,5 @@ export function pillStacks(signals: Signal[]): Map<string, number> {
 }
 
 /** Powiat tint by signal count: 1, 2, 3+ (4.1a). */
-export const POWIAT_TINT = ['#FFF3EB', '#FED7AA', '#FDBA74'] as const
+export const POWIAT_TINT = ['#FFF6D1', '#FFE27A', '#FFD23F'] as const
 export const tintFor = (n: number): string | null => (n <= 0 ? null : POWIAT_TINT[Math.min(2, n - 1)])

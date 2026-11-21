@@ -144,7 +144,7 @@ export function ChoroplethMap(p: ChoroplethMapProps) {
           ...f,
           properties: {
             ...f.properties,
-            fill: on ? '#FFF3EB' : has ? '#FFFFFF' : '#FAFAFA',
+            fill: on ? '#FFF6D1' : has ? '#FFFFFF' : '#FAFAFA',
             on: on ? 1 : 0,
             tip: f.properties.name,
           },
@@ -312,7 +312,7 @@ export function ChoroplethMap(p: ChoroplethMapProps) {
             id="gmi-line"
             type="line"
             paint={{
-              'line-color': ['case', ['==', ['get', 'on'], 1], '#C2410C', '#A3A3A3'],
+              'line-color': ['case', ['==', ['get', 'on'], 1], '#2341B9', '#A3A3A3'],
               'line-width': ['case', ['==', ['get', 'on'], 1], 1.6, 0.5],
             }}
           />
@@ -326,7 +326,7 @@ export function ChoroplethMap(p: ChoroplethMapProps) {
                 'circle-radius': ['get', 'r'],
                 'circle-color': '#3056F5',
                 'circle-opacity': 0.55,
-                'circle-stroke-color': '#C2410C',
+                'circle-stroke-color': '#2341B9',
                 'circle-stroke-width': 0.6,
               }}
             />

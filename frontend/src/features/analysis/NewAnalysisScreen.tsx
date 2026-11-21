@@ -19,7 +19,6 @@ import type { FollowUp, UploadedDocument } from '@/api/contracts/analyses'
 import { Page } from '@/app/Page'
 import { OriginMarker } from '@/components/common/ProvenanceTag'
 import { Button } from '@/components/ui/button'
-import { Checkbox } from '@/components/ui/checkbox'
 import { Input } from '@/components/ui/input'
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 import { Textarea } from '@/components/ui/textarea'
@@ -70,7 +69,6 @@ export function NewAnalysisScreen({ fromId }: { fromId?: string }) {
   const [id, setId] = useState<string | null>(fromId ?? null)
   const [text, setText] = useState('')
   const [files, setFiles] = useState<FileItem[]>([])
-  const [isPublic, setIsPublic] = useState(false)
   const creating = useRef(false)
   const draft = useQuery({ ...draftQuery(id ?? '_'), enabled: !!id })
   const loadedFrom = useRef(false)
@@ -155,7 +153,8 @@ export function NewAnalysisScreen({ fromId }: { fromId?: string }) {
       }
       setFiles((p) => [...p, { key, name: f.name, status: 'uploading' }])
       try {
-        const doc = await uploadDocument(f, isPublic ? 'public' : 'confidential', id)
+        // The user removed the public/confidential choice: uploads here are processed as public documents.
+        const doc = await uploadDocument(f, 'public', id)
         setFiles((p) => p.map((x) => (x.key === key ? { ...x, status: 'done', doc } : x)))
       } catch {
         setFiles((p) =>
@@ -218,18 +217,7 @@ export function NewAnalysisScreen({ fromId }: { fromId?: string }) {
           if (canRun(text, docIds, uploading)) run.mutate()
         }}
       >
-        <FileDrop
-          onFiles={addFiles}
-          footer={
-            <label
-              htmlFor="pub"
-              className="t-small flex cursor-pointer items-center gap-2 text-text-body-muted"
-            >
-              <Checkbox id="pub" checked={isPublic} onCheckedChange={(v) => setIsPublic(v === true)} />
-              Dokument jest publiczny (np. pobrany z BZP)
-            </label>
-          }
-        >
+        <FileDrop onFiles={addFiles} footer={null}>
           <label htmlFor="opis" className="sr-only">
             Opis inwestycji
           </label>
@@ -269,12 +257,6 @@ export function NewAnalysisScreen({ fromId }: { fromId?: string }) {
             </ul>
           ) : null}
         </FileDrop>
-        <p className="t-caption -mt-4 mb-0 px-5 text-muted">
-          PFU, projekt umowy lub SWZ (PDF, DOCX do 50 MB): przeciągnij na pole opisu. Dokumenty niepubliczne
-          czyta wyłącznie model działający w Polsce; gdy jest niedostępny, pokazujemy uwagi z reguł, a
-          dokument nie trafia do chmury.
-        </p>
-
         {id ? (
           <section aria-labelledby="chips" className="flex flex-col gap-3.5 rounded-panel bg-soft p-5.5">
             <div className="flex flex-wrap items-baseline justify-between gap-2">

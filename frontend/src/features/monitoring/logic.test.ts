@@ -30,12 +30,12 @@ const stat = (teryt: string, late: number, completed = 100): RegionStat => ({
 
 describe('colour scale', () => {
   it('ink ramp endpoints', () => {
-    expect(colorAt(0, 'done')).toBe('rgb(237,237,237)')
-    expect(colorAt(1, 'done')).toBe('rgb(38,38,38)')
+    expect(colorAt(0, 'done')).toBe('rgb(232,238,255)')
+    expect(colorAt(1, 'done')).toBe('rgb(28,52,150)')
   })
   it('signals use the orange heat ramp', () => {
-    expect(colorAt(0, 'open')).toBe('rgb(246,246,246)')
-    expect(colorAt(1, 'open')).toBe('rgb(154,52,18)')
+    expect(colorAt(0, 'open')).toBe('rgb(255,246,209)')
+    expect(colorAt(1, 'open')).toBe('rgb(153,27,27)')
   })
   it('scaleRegions: rank, label colour above t = 0.55, neutral fill for too little data', () => {
     const { regions, lo, hi } = scaleRegions(
@@ -73,9 +73,9 @@ describe('metrics and levels', () => {
   })
   it('powiat tint by count', () => {
     expect(tintFor(0)).toBeNull()
-    expect(tintFor(1)).toBe('#FFF3EB')
-    expect(tintFor(2)).toBe('#FED7AA')
-    expect(tintFor(9)).toBe('#FDBA74')
+    expect(tintFor(1)).toBe('#FFF6D1')
+    expect(tintFor(2)).toBe('#FFE27A')
+    expect(tintFor(9)).toBe('#FFD23F')
   })
 })
 
