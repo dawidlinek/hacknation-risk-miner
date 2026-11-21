@@ -43,7 +43,10 @@ describe('adaptAnswer', () => {
   })
   it('repeated sources become one chip each', () => {
     const src = { kind: 'query', id: 'x', label: 'klasa: kanalizacja sanitarna (82 umowy z BZP)' }
-    const dup = adaptAnswer({ ...raw, n: null, sources: [src, src, { ...src, label: 'Katalog: czerwone flagi' }, src] }, 'q')
+    const dup = adaptAnswer(
+      { ...raw, n: null, sources: [src, src, { ...src, label: 'Katalog: czerwone flagi' }, src] },
+      'q',
+    )
     expect(dup.sources).toEqual(['klasa: kanalizacja sanitarna (82 umowy z BZP)', 'Katalog: czerwone flagi'])
   })
 })

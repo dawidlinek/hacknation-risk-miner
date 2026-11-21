@@ -45,7 +45,13 @@ describe('agent steps', () => {
       ...adaptAnswer(raw, 'co mogę tu zrobić?'),
       steps: [
         { kind: 'thinking' as const, text: 'Sprawdzę, co jest na tym ekranie.' },
-        { kind: 'tool' as const, tool: 'opis_aplikacji', label: 'opis aplikacji', input: '/monitoring', result: 'Monitoring: mapa i lista województw' },
+        {
+          kind: 'tool' as const,
+          tool: 'opis_aplikacji',
+          label: 'opis aplikacji',
+          input: '/monitoring',
+          result: 'Monitoring: mapa i lista województw',
+        },
       ],
     }
     render(

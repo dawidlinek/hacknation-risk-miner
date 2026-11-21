@@ -1,16 +1,11 @@
-import { useMutation, useSuspenseQuery } from '@tanstack/react-query'
+import { useSuspenseQuery } from '@tanstack/react-query'
 import { createFileRoute, Link, Outlet } from '@tanstack/react-router'
-import { RefreshCw } from 'lucide-react'
-import { toast } from 'sonner'
-import { ApiError, contractFetch } from '@/api/client'
-import type { JobOut } from '@/api/contracts/import'
+import { ApiError } from '@/api/client'
 import { NotFound } from '@/app/NotFound'
 import { Page, PageHeader } from '@/app/Page'
-import { LoginRequired } from '@/auth/LoginRequired'
 import { useSession } from '@/auth/session'
 import { ExportMenu } from '@/components/common/ExportMenu'
 import { type PillTab, PillTabs } from '@/components/common/PillTabs'
-import { Button } from '@/components/ui/button'
 import { pageTitle } from '@/config/brand'
 import { projectCardQuery } from '@/features/projects/api'
 import { ProjectRecordExport } from '@/features/projects/RecordExport'
@@ -49,18 +44,6 @@ function ProjectLayout() {
   const { id } = Route.useParams()
   const { data: card } = useSuspenseQuery(projectCardQuery(id))
   const { isExpert, readOnly } = useSession()
-  const enrich = useMutation({
-    mutationFn: () =>
-      contractFetch<JobOut>('/api/jobs', { method: 'POST', json: { kind: 'load_all', payload: {} } }),
-    onSuccess: (job) =>
-      toast.success(`Wzbogacanie uruchomione (#${job.id}). Karta odświeży się po zakończeniu.`),
-    onError: (e) =>
-      toast.error(
-        e instanceof ApiError && e.status === 403
-          ? 'Wzbogacanie może uruchomić administrator.'
-          : 'Nie udało się uruchomić wzbogacania.',
-      ),
-  })
   const base = `/projekty/${id}`
   const tabs: PillTab[] = [
     { label: 'Przebieg', href: base, exact: true },
@@ -102,19 +85,6 @@ function ProjectLayout() {
         title={card.title}
         actions={
           <>
-            {card.auto_card ? null : (
-              <LoginRequired>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  onClick={() => enrich.mutate()}
-                  disabled={enrich.isPending || readOnly}
-                >
-                  <RefreshCw aria-hidden />
-                  Wzbogać ponownie
-                </Button>
-              </LoginRequired>
-            )}
             <ExportMenu
               formats={['csv', 'json']}
               urlFor={(f) =>

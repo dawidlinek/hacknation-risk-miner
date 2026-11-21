@@ -23,7 +23,10 @@ describe('Eksportuj rekord', () => {
     }
     await user.click(screen.getByRole('menuitem', { name: 'Markdown' }))
     await waitFor(() =>
-      expect(downloadFile).toHaveBeenCalledWith('/api/projects/RM-2026-023/export.md', 'rekord_RM-2026-023.md'),
+      expect(downloadFile).toHaveBeenCalledWith(
+        '/api/projects/RM-2026-023/export.md',
+        'rekord_RM-2026-023.md',
+      ),
     )
   })
 })

@@ -111,8 +111,10 @@ async def test_confidential_default_hidden_from_others(client, expert, db):
 
 
 async def test_rejects(client):
-    r = await _up(client, content=b"hello", name="x.txt")
+    r = await _up(client, content=b"hello", name="x.xlsx")
     assert r.status_code == 415 and r.json()["code"] == "unsupported_type"
+    r = await _up(client, content=b"\x00\x01binary", name="x.txt")          # plain text accepted, binary named .txt is not
+    assert r.status_code == 415 and r.json()["code"] == "type_mismatch"
     r = await _up(client, content=b"not a pdf", name="x.pdf")
     assert r.status_code == 415 and r.json()["code"] == "type_mismatch"
     r = await _up(client, project_rm_id="RM-2026-003")

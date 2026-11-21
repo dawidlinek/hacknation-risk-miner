@@ -12,7 +12,10 @@ import {
 import { contractFetch } from '@/api/client'
 import type { RegionLevel } from '@/api/contracts/monitoring'
 
-/** While the replay date changes keep the previous answer on screen (same scope only), so the map never flashes empty. */
+/**
+ * While the replay date or a filter changes keep the previous answer of the same place on screen, so the map and the
+ * panels never flash empty; the panels dim it until the new answer lands.
+ */
 const scoped =
   <T>(scope: readonly unknown[]) =>
   (prev: T | undefined, prevQuery: Query<T> | undefined) =>
@@ -57,7 +60,7 @@ export const regionsQuery = (level: RegionLevel, parent?: string, asOf?: string 
         }),
       ),
     staleTime: 5 * 60_000,
-    placeholderData: scoped(['monitoring', 'regions', level, parent ?? null, fkey(f)]),
+    placeholderData: scoped(['monitoring', 'regions', level, parent ?? null]),
   })
 
 export const regionDetailQuery = (terc: string, asOf?: string | null, f?: MonFilters) =>
@@ -70,7 +73,7 @@ export const regionDetailQuery = (terc: string, asOf?: string | null, f?: MonFil
         }),
       ),
     staleTime: 5 * 60_000,
-    placeholderData: scoped(['monitoring', 'region', terc, fkey(f)]),
+    placeholderData: scoped(['monitoring', 'region', terc]),
   })
 
 /** Signals of a region (terc + level), biggest overdue first; the backend caps `limit` at 500. */
@@ -97,7 +100,7 @@ export const signalsQuery = (
         }),
       ),
     staleTime: 5 * 60_000,
-    placeholderData: scoped(['monitoring', 'signals', terc, level, q ?? '', fkey(f)]),
+    placeholderData: scoped(['monitoring', 'signals', terc, level, q ?? '']),
   })
 
 export const contractQuery = (id: string) =>

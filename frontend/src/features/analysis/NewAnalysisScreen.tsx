@@ -48,11 +48,17 @@ const onEnter = (fn: () => void) => (e: ReactKeyboardEvent<HTMLElement>) => {
 
 /** One-click example description (user request: "add one button to fill out examples"). */
 const EXAMPLE_TEXT =
-  'Budowa kanalizacji sanitarnej w gminie wiejskiej: ok. 6,2 km sieci grawitacyjnej i tłocznej z 3 przepompowniami ścieków ' +
-  'oraz przyłączami do 140 budynków. Formuła zaprojektuj i wybuduj, wartość szacunkowa ok. 7,4 mln zł brutto, ' +
-  'termin realizacji 14 miesięcy od podpisania umowy. Finansowanie: program FEnIKS, wkład własny gminy 15%. ' +
-  'Trasa częściowo w pasie drogi powiatowej, w rejonie wysokiego poziomu wód gruntowych, z przejściem pod ciekiem. ' +
-  'Wynagrodzenie ryczałtowe, kary umowne 0,1% za dzień zwłoki, gwarancja 60 miesięcy.'
+  'Budowa sieci kanalizacji sanitarnej w sołectwie Kaniów (gmina Bestwina, woj. śląskie): ok. 4,1 km sieci ' +
+  'grawitacyjnej i tłocznej z 3 przepompowniami ścieków, w formule zaprojektuj i wybuduj według załączonego PFU. ' +
+  'Wartość szacunkowa ok. 7,4 mln zł brutto, termin realizacji 14 miesięcy od podpisania umowy. Finansowanie: ' +
+  'program FEnIKS, wkład własny gminy 15%. Trasa częściowo w pasie drogi powiatowej, w rejonie wysokiego poziomu ' +
+  'wód gruntowych.'
+/** Example PFU attached by the same button, so Czerwony długopis has a document to read (public BZP document of the
+ * pilot project RM-2026-013, served from public/examples). */
+const EXAMPLE_PFU = {
+  url: '/examples/PFU_Kaniow_przyklad.pdf',
+  name: 'PFU_Kaniow_przyklad.pdf',
+}
 
 const JellySite = lazy(() => import('../jelly/JellySite').then((m) => ({ default: m.JellySite })))
 
@@ -173,6 +179,17 @@ export function NewAnalysisScreen({ fromId }: { fromId?: string }) {
     }
   }
 
+  const fillExample = async () => {
+    setText(EXAMPLE_TEXT)
+    if (files.some((f) => f.name === EXAMPLE_PFU.name && f.status !== 'error')) return
+    try {
+      const blob = await (await fetch(EXAMPLE_PFU.url)).blob()
+      await addFiles([new File([blob], EXAMPLE_PFU.name, { type: 'application/pdf' })])
+    } catch {
+      toast.error('Nie udało się dołączyć przykładowego PFU.')
+    }
+  }
+
   const run = useMutation({
     mutationFn: async () => {
       const target = (await sync(text, docIds)) ?? id
@@ -212,7 +229,14 @@ export function NewAnalysisScreen({ fromId }: { fromId?: string }) {
           if (canRun(text, docIds, uploading)) run.mutate()
         }}
       >
-        <FileDrop onFiles={addFiles} footer={null}>
+        <FileDrop
+          onFiles={addFiles}
+          footer={
+            <Button type="button" variant="ghost" onClick={() => void fillExample()}>
+              Wypełnij przykładem
+            </Button>
+          }
+        >
           <label htmlFor="opis" className="sr-only">
             Opis inwestycji
           </label>
@@ -281,9 +305,6 @@ export function NewAnalysisScreen({ fromId }: { fromId?: string }) {
         ) : null}
 
         <div className="flex flex-col items-center gap-2">
-          <Button type="button" variant="outline" size="sm" onClick={() => setText(EXAMPLE_TEXT)}>
-            Wypełnij przykładem
-          </Button>
           <Button
             type="submit"
             size="xl"
@@ -294,13 +315,7 @@ export function NewAnalysisScreen({ fromId }: { fromId?: string }) {
             {run.isPending ? 'Liczymy…' : 'Uruchom analizę'}
             {run.isPending ? null : <ArrowRight aria-hidden />}
           </Button>
-          {blocked ? (
-            <span className="t-caption text-muted">
-              {uploading
-                ? 'Poczekaj, aż pliki się wczytają.'
-                : 'Napisz co najmniej 20 znaków albo dołącz dokument.'}
-            </span>
-          ) : null}
+          {uploading ? <span className="t-caption text-muted">Poczekaj, aż pliki się wczytają.</span> : null}
         </div>
       </form>
     </Page>
@@ -349,7 +364,7 @@ function FileDrop({
         aria-label="Wybierz pliki"
         onChange={(e) => e.target.files && onFiles(e.target.files)}
       />
-      <div className="flex flex-wrap items-center justify-between gap-3 border-divider border-t pt-3">
+      <div className="flex flex-wrap items-center gap-2 border-divider border-t pt-3">
         <Button type="button" variant="outline" onClick={() => input.current?.click()}>
           <Upload aria-hidden />
           Dodaj dokument

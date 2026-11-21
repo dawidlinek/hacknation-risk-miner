@@ -18,11 +18,14 @@ import {
   inspectImport,
   jobQuery,
   proposeMapping,
+  routeDocuments,
   runImport,
   startEnrich,
   testRun,
   uploadFiles,
 } from './api'
+import { DocumentIntake } from './DocumentIntake'
+import { NO_FILES_IN_DROP, needsDocumentRouting, needsMapping, type RouteResult } from './route'
 
 const errMsg = (e: unknown, fallback: string) => (e instanceof ApiError && e.detail ? e.detail : fallback)
 const bare = (name: string) => name.replace(/\.[^.]+$/, '').replace(/[_-]+/g, ' ')
@@ -80,6 +83,7 @@ function AgentThread({ initial, onDone }: { initial: ImportSession; onDone: () =
   const [session, setSession] = useState(initial)
   const [busy, setBusy] = useState<string | null>(null)
   const [answered, setAnswered] = useState<Record<string, string>>({})
+  const [routed, setRouted] = useState<RouteResult | null>(null)
   const started = useRef(false)
   const job = useQuery(jobQuery(session.status === 'running' ? session.job_id : null))
   const code = session.code
@@ -95,12 +99,21 @@ function AgentThread({ initial, onDone }: { initial: ImportSession; onDone: () =
     }
   }, [])
 
-  // uploaded -> agent inspects the files and proposes a mapping on its own
+  // uploaded -> agent inspects the files; case documents (PDF, DOCX, scans) go to the document pipeline, datasets and
+  // project records get a mapping proposal
   useEffect(() => {
     if (session.status !== 'uploaded' || started.current) return
     started.current = true
     void step('Agent przegląda pliki…', async () => {
-      await inspectImport(code)
+      const inspected = await inspectImport(code)
+      let r: RouteResult | null = null
+      if (needsDocumentRouting(inspected.files)) {
+        setBusy('Przekazujemy dokumenty do analizy…')
+        r = await routeDocuments(code)
+        setRouted(r)
+      }
+      if (!needsMapping(inspected.files, r)) return getImport(code)
+      setBusy('Agent proponuje mapowanie kolumn…')
       return proposeMapping(code)
     })
   }, [session.status, code, step])
@@ -126,7 +139,11 @@ function AgentThread({ initial, onDone }: { initial: ImportSession; onDone: () =
         <h2 className="t-h3 m-0">
           Agent importu <span className="t-mono ml-1 text-muted">{code}</span>
         </h2>
-        <span className="t-caption text-muted">{session.status_label}</span>
+        <span className="t-caption text-muted">
+          {routed && routed.tables === 0 && routed.documents.length > 0
+            ? 'dokumenty przekazane do analizy'
+            : session.status_label}
+        </span>
       </div>
       <ul className="m-0 flex list-none flex-wrap gap-2 p-0">
         {session.files.map((f) => (
@@ -148,6 +165,7 @@ function AgentThread({ initial, onDone }: { initial: ImportSession; onDone: () =
           ))}
         </ul>
       ) : null}
+      {routed ? <DocumentIntake docs={routed.documents} /> : null}
       {session.mapping.length > 0 ? (
         <>
           <p className="m-0 text-[14px]">Tak mapuję kolumny pliku na pola bazy:</p>
@@ -335,10 +353,29 @@ export function ImportScreen() {
     onError: (e) =>
       toast.error(errMsg(e, 'Nie udało się wczytać pliku. Obsługujemy XLSX, CSV, PDF, DOCX i ZIP.')),
   })
-  const take = (list: FileList | null) => {
+  const take = (list: FileList | null | undefined) => {
     if (readOnly) return toast.error('To konto jest tylko do odczytu.')
-    if (list && list.length > 0) up.mutate([...list])
+    if (!list || list.length === 0) return toast.error(NO_FILES_IN_DROP)
+    up.mutate([...list])
   }
+  // A file dropped next to the drop zone must not make the browser open it (a PDF replaces the app): the whole page
+  // takes the drop.
+  const takeRef = useRef(take)
+  takeRef.current = take
+  useEffect(() => {
+    const over = (e: DragEvent) => e.preventDefault()
+    const drop = (e: DragEvent) => {
+      if (e.defaultPrevented) return
+      e.preventDefault()
+      takeRef.current(e.dataTransfer?.files)
+    }
+    window.addEventListener('dragover', over)
+    window.addEventListener('drop', drop)
+    return () => {
+      window.removeEventListener('dragover', over)
+      window.removeEventListener('drop', drop)
+    }
+  }, [])
   const refresh = useCallback(() => {
     void qc.invalidateQueries({ queryKey: ['runs'] })
     void qc.invalidateQueries({ queryKey: ['importers'] })
@@ -374,14 +411,18 @@ export function ImportScreen() {
               <Upload aria-hidden className="size-6 text-muted" />
               <span className="t-item">Upuść pliki tutaj albo wybierz z dysku</span>
               <span className="text-[14px] text-text-body-muted">
-                XLSX, CSV, PDF, DOCX albo ZIP. Plik trafia do piaskownicy, importer działa na kopii.
+                Zestaw danych (XLSX, CSV) albo dokumenty sprawy (PDF, DOCX, skan). Dokumenty trafiają do
+                analizy i same łączą się z projektem.
               </span>
               <input
                 ref={input}
                 type="file"
                 multiple
                 hidden
-                onChange={(e) => take(e.target.files)}
+                onChange={(e) => {
+                  take(e.target.files)
+                  e.target.value = ''
+                }}
                 aria-label="Wybierz pliki do importu"
               />
               <Button

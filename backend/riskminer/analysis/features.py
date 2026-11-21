@@ -194,12 +194,20 @@ def extract(text: str) -> dict[str, dict[str, Any]]:
     elif feature("sector_roads"):
         out["sektor"] = chip("sektor", "wod-kan", method="regex:sector", unsure=False)
     sub = None
-    for code, rx in (() if sector != "wod-kan" else (("OCZ", r"oczyszczal"), ("SUW", r"uzdatnian|\bsuw\b"), ("DESZ", r"deszczow"),
-                     ("SAN", r"kanalizac\w*\s+sanitarn|kanalizac|ściek"), ("WOD", r"wodociąg|sieci? wodn"))):
-        m = re.search(rx, lo)
-        if m:
-            sub = code
-            out["podsektor"] = chip("podsektor", code, method="regex:subsector", quote=q(m))
+    # the title / first lines name the object; a long description also mentions others ("likwidacja przydomowych
+    # oczyszczalni", "dyspozytornia oczyszczalni"), so the head decides first and the whole text only as a fallback
+    head = lo[:400]
+    for scope in (head, lo):
+        for code, rx in (() if sector != "wod-kan" else (("OCZ", r"oczyszczal"), ("SUW", r"uzdatnian|\bsuw\b"), ("DESZ", r"deszczow"),
+                         ("SAN", r"kanalizac\w*\s+sanitarn|kanalizac|ściek"), ("WOD", r"wodociąg|sieci? wodn"))):
+            if scope is head and code == "OCZ" and re.search(r"przydomow\w*\s+oczyszczal", head) and not re.search(r"budow\w*\s+oczyszczal|oczyszczalni\w*\s+ściek", head):
+                continue
+            m = re.search(rx, scope)
+            if m:
+                sub = code
+                out["podsektor"] = chip("podsektor", code, method="regex:subsector", quote=q(m))
+                break
+        if sub:
             break
     m = re.search(r"zaprojektuj\w*\s+i\s+wybuduj|projektuj\s+i\s+buduj|\bziw\b|zaprojektowani\w*\s+i\s+wykonani", lo)
     if m:
@@ -235,13 +243,26 @@ def extract(text: str) -> dict[str, dict[str, Any]]:
             v *= 1e3
         if v >= 100_000 and (best is None or v > best[0]):
             best = (v, vat, m)
+    # an amount the buyer secured for the task beats a larger estimate ("zabezpieczono 10,8 mln", "kwota przeznaczona")
+    for m in re.finditer(_NUM + r"\s*(mln|milion\w*|tys\.?|tysi\w*)?\s*(zł|pln)\s*(brutto|netto)?", lo):
+        sent = lo[max(0, lo.rfind(".", 0, m.start() - 1) + 1): m.end()]
+        if not re.search(r"zabezpieczon|przeznaczon|kwot\w* na sfinansowanie|w budżecie|budżet\w* zadania", sent):
+            continue
+        v, mult, vat = _f(m, 1, 2), m.group(3), m.group(5)
+        v *= 1e6 if mult and mult.startswith(("mln", "milion")) else 1e3 if mult and mult.startswith(("tys", "tysi")) else 1
+        if v >= 100_000:
+            best = (v, vat, m)
+            break
     if best:
         v, vat, m = best
         net = vat == "netto"
         amount = v * 1.23 if net else v
         out["budzet"] = chip("budzet", {"amount": f"{amount:.2f}", "currency": "PLN", "vat_basis": "gross"},
                              method="regex:money" + (":net×1.23" if net else ""), unsure=vat is None, quote=q(m))
-    m = re.search(r"(\d+(?:[,.]\d+)?)\s*(?:mies|miesi)", lo)
+    # months, not "mieszkańców"; the execution term beats design phases and guarantee periods mentioned elsewhere
+    months = r"(\d+(?:[,.]\d+)?)\s*(?:mies\.|miesi[ąę]c\w*|m-c\w*)"
+    m = (re.search(r"termin\w*\s+(?:realizacji|wykonania)[^.;\n]{0,60}?" + months, lo)
+         or next((x for x in re.finditer(months, lo) if not re.search(r"gwarancj|rękojm|okres\w* rozlicz", lo[max(0, x.start() - 60): x.start()])), None))
     if m:
         out["termin_mies"] = chip("termin_mies", float(m.group(1).replace(",", ".")), method="regex:months",
                                   quote=q(m))

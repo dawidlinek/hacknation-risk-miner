@@ -77,9 +77,21 @@ def _text_rows(text: str) -> list[list]:
         m = _KV.match(ln)
         if m and _known(m.group(1).strip()):
             pairs.append([m.group(1).strip(), m.group(2).strip()])
-        elif pairs and not m:
+        elif pairs:                                       # continuation of a wrapped value (may itself contain ':')
             pairs[-1][1] = (str(pairs[-1][1]) + " " + ln.strip()).strip()
-    return pairs
+    if len(pairs) >= 3:
+        return pairs
+    # a two-column table printed to PDF: "Identyfikator rekordu RM-2026-023" lines (no colon), wrapped values continue
+    names = sorted({x for f in registry.KNOWN_FORMATS.values() for x in f["headers"]}, key=len, reverse=True)
+    pairs = []
+    for ln in body:
+        low = ln.strip().lower()
+        h = next((n for n in names if low.startswith(n.lower()) and (len(low) == len(n) or not low[len(n)].isalnum())), None)
+        if h:
+            pairs.append([h, ln.strip()[len(h):].strip(" :\t")])
+        elif pairs:
+            pairs[-1][1] = (str(pairs[-1][1]) + " " + ln.strip()).strip()
+    return pairs if len(pairs) >= 3 else []
 
 
 def _docx_rows(path: Path) -> list[list]:
@@ -88,7 +100,7 @@ def _docx_rows(path: Path) -> list[list]:
     best: list[list] = []
     for t in doc.tables:
         rows = [[c.text.strip() for c in r.cells] for r in t.rows]
-        h, d = _shape(rows)
+        h, _d = _shape(rows)
         if sum(1 for x in h if _known(x)) > sum(1 for x in _shape(best)[0] if _known(x)):
             best = rows
     if best:

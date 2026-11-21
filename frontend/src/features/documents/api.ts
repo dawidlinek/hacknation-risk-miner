@@ -26,6 +26,10 @@ export interface UploadResult {
   filename: string
   pages?: number | null
   text_status?: string
+  duplicate?: boolean
+  /** re-upload of a known file: attached to this project, or also linked here while it belongs to another one */
+  attached?: 'attached' | 'also_linked' | null
+  previous?: { project_rm_id: string | null; open_review_items: number } | null
 }
 
 /** POST /api/documents/upload (multipart) bound to the project; goes to review as facts to confirm. */

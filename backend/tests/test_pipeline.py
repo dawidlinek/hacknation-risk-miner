@@ -30,7 +30,8 @@ async def test_bzp_copy_counts():
 
 async def test_pilot_linked_22_and_discrepancies():
     async with raw_conn() as c:
-        linked = await c.fetchval("SELECT count(DISTINCT project_id) FROM project_procedure WHERE method <> 'cross_reference_related'")
+        linked = await c.fetchval("SELECT count(DISTINCT pp.project_id) FROM project_procedure pp JOIN project p ON p.id = pp.project_id "
+                                  "WHERE p.is_pilot AND pp.method <> 'cross_reference_related'")   # imported records link too
         correct = await c.fetchval("SELECT count(*) FROM link_candidate WHERE reference_verdict='correct' "
                                    "AND left_table='project' AND right_table='procedure'")
         codes = {(r["rm_id"], r["code"]) for r in await c.fetch(

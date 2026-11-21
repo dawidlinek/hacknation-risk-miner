@@ -65,6 +65,18 @@ async def expert_writes(db: AsyncSession):
         await db.execute(text("SELECT set_config('riskminer.expert_write', 'off', true)"))
 
 
+@asynccontextmanager
+async def operator_cleanup_writes(conn):
+    """For riskminer/ingest/demo_cleanup.py only, when the user explicitly asks to remove test artefacts that carry
+    approvals (e.g. auto-approved Red Pen notes of a rehearsal analysis): the same scope as expert_writes, on a raw
+    asyncpg connection. The caller records every removed approved row in audit_log."""
+    await conn.execute("SELECT set_config('riskminer.expert_write', 'on', true)")
+    try:
+        yield
+    finally:
+        await conn.execute("SELECT set_config('riskminer.expert_write', 'off', true)")
+
+
 async def audit(db: AsyncSession, actor: str, action: str, table: str | None, row_id: int | None,
                 before: Any = None, after: Any = None, request_id: str | None = None, note: str | None = None) -> int:
     r = await db.execute(text(

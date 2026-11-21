@@ -98,13 +98,13 @@ export function adaptUpload(u: UploadResponse): UploadedDocument & { text_status
   }
 }
 
-export const ACCEPT = '.pdf,.docx,.doc,.odt'
+export const ACCEPT = '.pdf,.docx,.doc,.odt,.rtf,.txt,.md'
 export const MAX_MB = 50
 
 export function fileError(f: { name: string; size: number }): string | null {
   const ext = f.name.toLowerCase().split('.').pop() ?? ''
-  if (!['pdf', 'docx', 'doc', 'odt'].includes(ext) || f.size > MAX_MB * 1024 * 1024) {
-    return 'Nie udało się wczytać pliku. Obsługujemy PDF i DOCX do 50 MB.'
+  if (!['pdf', 'docx', 'doc', 'odt', 'rtf', 'txt', 'md'].includes(ext) || f.size > MAX_MB * 1024 * 1024) {
+    return 'Nie udało się wczytać pliku. Obsługujemy PDF i DOCX (także DOC, ODT, RTF, TXT) do 50 MB.'
   }
   return null
 }

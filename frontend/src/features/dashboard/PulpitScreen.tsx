@@ -81,13 +81,7 @@ export function PulpitScreen() {
           </>
         }
       />
-      {h ? (
-        <SummaryCard
-          eyebrow="W skrócie"
-          size="lg"
-          sentence={h.sentence}
-        />
-      ) : null}
+      {h ? <SummaryCard eyebrow="W skrócie" size="lg" sentence={h.sentence} /> : null}
       <div className="grid gap-3" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))' }}>
         {d.tiles.map((t) => (
           <StatTile

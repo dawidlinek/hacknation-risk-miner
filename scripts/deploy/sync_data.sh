@@ -1,17 +1,19 @@
 #!/usr/bin/env bash
 # rsync the shipped data (docs_22 PDFs, data/ref) and the server config to /srv/exante on the server.
-# Usage: scripts/deploy/sync_data.sh <ssh-target> [--dry-run] [--force-config]
+# Usage: scripts/deploy/sync_data.sh <ssh-target> [--dry-run] [--force-config] [--config-only]
+#   --config-only  send only config/config.yaml (or config.example.yaml); the API reloads it within about a second
 # Resumable (--partial); a second run only sends the delta, so run it during the rehearsal and again at 07:30.
 # Never shipped: docs_sample, bzp_roads raw, data/archive, data/ocr, materials/bzp_kopia.
 set -euo pipefail
 
 TARGET="${1:?usage: $0 <ssh-target> [--dry-run] [--force-config]}"
 shift || true
-DRY=""; FORCE_CONFIG=0
+DRY=""; FORCE_CONFIG=0; CONFIG_ONLY=0
 for a in "$@"; do
   case "$a" in
     --dry-run) DRY="--dry-run" ;;
     --force-config) FORCE_CONFIG=1 ;;
+    --config-only) CONFIG_ONLY=1; FORCE_CONFIG=1 ;;
     *) echo "unknown option $a" >&2; exit 2 ;;
   esac
 done
@@ -25,6 +27,7 @@ RSH="ssh -o BatchMode=yes -o ServerAliveInterval=30"
 
 $RSH "$TARGET" "mkdir -p $BASE/pg $BASE/dump $BASE/data/raw $BASE/data/ref $BASE/exports $BASE/hf $BASE/config"
 
+if [ "$CONFIG_ONLY" != "1" ]; then
 # rsync when the server has it (resumable, delta only); otherwise tar over ssh (full copy, no resume).
 if $RSH "$TARGET" "command -v rsync >/dev/null"; then
   copy() { rsync -e "$RSH" -a --partial --info=progress2 $DRY "$1/" "$TARGET:$2/"; }
@@ -42,6 +45,7 @@ copy "$ROOT/data/raw/docs_22" "$BASE/data/raw/docs_22"
 
 # The container user may differ from the ssh user: make the tree readable, and writable for uploads.
 [ -n "$DRY" ] || $RSH "$TARGET" "chmod -R a+rX $BASE/data $BASE/config; chmod 777 $BASE/exports $BASE/hf; chmod 775 $BASE/data $BASE/data/raw"
+fi
 
 echo "== config"
 SRC="$ROOT/config/config.yaml"

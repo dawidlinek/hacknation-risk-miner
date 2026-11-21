@@ -2,6 +2,7 @@ import { useQuery } from '@tanstack/react-query'
 import { Link } from '@tanstack/react-router'
 import { useMemo } from 'react'
 import { EmptyState, SkeletonBlock } from '@/components/common/DataState'
+import { cn } from '@/lib/cn'
 import { fmtInt } from '@/lib/format'
 import { signalsQuery } from './api'
 import { type MonitoringSearch, useMonitoring } from './context'
@@ -10,7 +11,7 @@ import { RegionOutline, SignalList } from './parts'
 
 /** Level 0: "Wojewodztwa 16" with the active metric name and a ranked list. */
 export function NationalPanel() {
-  const { scaled, def, mode, search, setSearch, asOf, filters } = useMonitoring()
+  const { scaled, def, mode, search, setSearch, asOf, filters, wojStale, prefetch } = useMonitoring()
   const found = useQuery({ ...signalsQuery(null, null, search.q, asOf, filters), enabled: Boolean(search.q) })
   const geo = useQuery(wojGeoQuery)
   const byTerc = useMemo(
@@ -51,6 +52,7 @@ export function NationalPanel() {
             </p>
             <SignalList
               signals={items}
+              onHover={prefetch.signal}
               hrefFor={(s) => ({
                 to: '/monitoring/$woj/$pow/umowa/$umowa',
                 params: { woj: s.teryt.woj, pow: s.teryt.pow, umowa: s.id },
@@ -63,7 +65,11 @@ export function NationalPanel() {
   }
   if (scaled.length === 0) return <SkeletonBlock className="h-[480px]" />
   return (
-    <section aria-labelledby="mon-h" className="flex flex-col gap-3">
+    <section
+      aria-labelledby="mon-h"
+      aria-busy={wojStale}
+      className={cn('flex flex-col gap-3 transition-opacity', wojStale && 'opacity-60')}
+    >
       <div className="flex items-baseline justify-between gap-3">
         <h1 id="mon-h" className="t-h2 m-0" data-page-title tabIndex={-1}>
           Województwa <span className="t-mono ml-1 text-muted">{scaled.length}</span>
@@ -77,6 +83,8 @@ export function NationalPanel() {
               to="/monitoring/$woj"
               params={{ woj: r.stat.teryt }}
               search={((p: MonitoringSearch) => p) as never}
+              onMouseEnter={() => prefetch.woj(r.stat.teryt)}
+              onFocus={() => prefetch.woj(r.stat.teryt)}
               className="grid grid-cols-[44px_1fr_auto] items-center gap-3 rounded-item bg-surface px-3 py-2 text-text no-underline hover:bg-soft"
             >
               <RegionOutline feature={byTerc.get(r.stat.teryt)} fill={r.fill} />

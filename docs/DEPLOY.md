@@ -62,6 +62,7 @@ scripts/deploy/sync_data.sh root@212.127.90.86             # ~3.1 GB docs_22 + d
 This sends `data/raw/docs_22`, `data/ref`, and `config/config.yaml` (falls back to `config.example.yaml`) to `/srv/exante/`.
 An existing server config is not overwritten unless `--force-config`. Then edit `/srv/exante/config/config.yaml` on the server:
 
+- **The server config is a copy, not the repo file. Sync it after every deploy that changes `config/config.example.yaml`** (new or changed feature flags): `scripts/deploy/sync_data.sh root@212.127.90.86 --config-only`. It overwrites the server copy with the repo's file and the API reloads it within a second (no restart). Compare first with `curl -s https://exante.linek.dev/api/config/features`. Missed once: `jelly` stayed off on the live site after the repo turned it on.
 - Edits to this file take effect within about a second, with no restart or redeploy (the API re-reads it when its mtime or size changes; an unparsable file keeps the last good config). The file is mounted read-only in the containers, so edit it on the host.
 - `features:` set exactly the flags that are finished (unfinished stay `false`).
 - `api.cors_origins`: not needed, same origin. `api.serve_fixtures: false` so unfinished stubs answer 501 rather than fake data (check with the backend owners).

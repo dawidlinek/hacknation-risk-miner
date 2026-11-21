@@ -2,6 +2,7 @@ import { queryOptions } from '@tanstack/react-query'
 import { adaptImport, adaptImporters, type RealImport, type RealImporter } from '@/api/adapters/imports'
 import { contractFetch } from '@/api/client'
 import type { ImportSession, JobOut } from '@/api/contracts/import'
+import type { RouteResult } from './route'
 
 const adapt = async (p: Promise<RealImport>) => adaptImport(await p)
 
@@ -20,6 +21,9 @@ export const proposeMapping = (code: string) =>
   contractFetch<unknown>(`/api/imports/${code}/propose-mapping`, { method: 'POST' }).then(() =>
     getImport(code),
   )
+/** Hand the files that are case documents (not datasets or project records) to the document pipeline. */
+export const routeDocuments = (code: string) =>
+  contractFetch<RouteResult>(`/api/imports/${code}/documents`, { method: 'POST' })
 export const answerQuestion = (code: string, key: string, value: string) =>
   contractFetch<unknown>(`/api/imports/${code}/answers`, { method: 'POST', json: { [key]: value } }).then(
     () => getImport(code),

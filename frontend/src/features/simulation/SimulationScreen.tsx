@@ -405,4 +405,3 @@ export function HBarList({ rows }: { rows: { label: string; value: number; displ
     </ul>
   )
 }
-

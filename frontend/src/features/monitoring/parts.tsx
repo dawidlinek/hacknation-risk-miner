@@ -85,8 +85,12 @@ export function ModeSwitch({
   )
 }
 
-/** Floating toolbar over the map: colour metric, "..." menu with all metrics, legend and pins toggle. */
+/**
+ * Floating toolbar over the map: colour metric, "..." menu with all metrics, legend and pins toggle. The legend follows
+ * the level: the metric scale on Poland, the signal tint of powiats in a voivodeship, the overdue pills in a powiat.
+ */
 export function MapToolbar({
+  level,
   mode,
   metric,
   onMetric,
@@ -96,10 +100,11 @@ export function MapToolbar({
   pinsLabel,
   pinsDisabled,
 }: {
+  level: 0 | 1 | 2 | 3
   mode: MonitoringMode
   metric: MetricKey
   onMetric: (m: MetricKey) => void
-  legend: { lo: string; hi: string; gradient: string }
+  legend: { lo: string; hi: string; gradient: string; tints: readonly string[] }
   pins: boolean
   onPins: () => void
   pinsLabel: string
@@ -122,7 +127,29 @@ export function MapToolbar({
   }, [open])
   return (
     <div className="absolute right-3 bottom-3 left-3 flex flex-wrap items-center gap-3 rounded-item bg-surface/95 px-3 py-2 shadow-composer">
-      {mode === 'done' ? (
+      {level === 1 ? (
+        <span className="flex items-center gap-2 text-[13px] text-text-secondary">
+          Kolor powiatów: liczba sygnałów
+          <span className="flex items-center gap-1 text-[12px]" aria-hidden>
+            {legend.tints.map((c, i) => (
+              <span key={c} className="flex items-center gap-1">
+                <span className="size-3 rounded-[3px] border border-border" style={{ background: c }} />
+                {i === legend.tints.length - 1 ? `${i + 1}+` : i + 1}
+              </span>
+            ))}
+          </span>
+        </span>
+      ) : level >= 2 ? (
+        <span className="flex items-center gap-2 text-[13px] text-text-secondary">
+          <span
+            aria-hidden
+            className="rounded-pill border border-attention-text bg-surface px-2 py-0.5 text-[11px] font-semibold text-attention-text"
+          >
+            +N d
+          </span>
+          dni po terminie z umowy
+        </span>
+      ) : mode === 'done' ? (
         <span className="flex items-center gap-2">
           <span className="text-[13px] text-text-secondary">Kolor regionów:</span>
           <Segmented
@@ -171,11 +198,13 @@ export function MapToolbar({
       ) : (
         <span className="text-[13px] text-text-secondary">Kolor regionów: liczba sygnałów</span>
       )}
-      <span className="flex items-center gap-2 text-[12px] text-text-secondary" aria-hidden>
-        {legend.lo}
-        <span className="h-2 w-28 rounded-pill" style={{ background: legend.gradient }} />
-        {legend.hi}
-      </span>
+      {level === 0 ? (
+        <span className="flex items-center gap-2 text-[12px] text-text-secondary" aria-hidden>
+          {legend.lo}
+          <span className="h-2 w-28 rounded-pill" style={{ background: legend.gradient }} />
+          {legend.hi}
+        </span>
+      ) : null}
       <button
         type="button"
         aria-pressed={pins}
@@ -222,11 +251,14 @@ export function SignalList({
   hrefFor,
   limit,
   onPick,
+  onHover,
 }: {
   signals: Signal[]
   hrefFor: (s: Signal) => { to: string; params: Record<string, string> }
   limit?: number
   onPick?: (s: Signal) => void
+  /** hover or focus on a row: prefetch the contract */
+  onHover?: (s: Signal) => void
 }) {
   const rows = limit ? signals.slice(0, limit) : signals
   return (
@@ -240,6 +272,8 @@ export function SignalList({
               params={h.params as never}
               search={((prev: Record<string, unknown>) => prev) as never}
               onClick={() => onPick?.(s)}
+              onMouseEnter={() => onHover?.(s)}
+              onFocus={() => onHover?.(s)}
               className="grid grid-cols-[28px_1fr_auto] items-start gap-3 rounded-item bg-surface px-3.5 py-2.5 text-text no-underline hover:bg-soft"
             >
               <span className="t-mono pt-0.5 text-muted">{String(i + 1).padStart(2, '0')}</span>

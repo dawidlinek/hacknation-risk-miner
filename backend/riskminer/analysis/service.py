@@ -209,6 +209,8 @@ async def create(s: AsyncSession, *, text_in: str, document_ids: list[int], titl
         sensitivity = "confidential"
     code = (await s.execute(text("SELECT rm_next_code('AN')"))).scalar_one()
     chips = FE.extract(text_in)
+    for k, c in (await _doc_regex_chips(s, document_ids)).items():
+        chips.setdefault(k, c)          # the description wins; the documents fill what it does not say
     feats = {k: v["value"] for k, v in chips.items()}
     row = (await s.execute(text(
         "INSERT INTO analysis (code, title, input_text, input_documents, features, sensitivity, status, created_by, "
@@ -231,6 +233,20 @@ async def create(s: AsyncSession, *, text_in: str, document_ids: list[int], titl
     d = _draft(a, chips, docs, [])
     d["ai_features"] = {"job_id": jobs.get("features"), "status": "queued" if jobs else "off"}
     return d
+
+
+async def _doc_regex_chips(s: AsyncSession, document_ids: list[int] | None) -> dict[str, dict]:
+    """Regex chips (CALC, local rules, so allowed for confidential documents) read from the attached documents' text.
+    Without them a confidential upload with an empty description had no features while the sovereign model was down."""
+    if not document_ids:
+        return {}
+    parts = []
+    for did in document_ids:
+        parts += [p["text"] or "" for p in await _pages(s, did)]
+    out = FE.extract("\n".join(parts)[:200_000])
+    for c in out.values():
+        c["source_label"] = "dokument"
+    return out
 
 
 def _title_from(chips: dict, txt: str) -> str:
@@ -317,6 +333,14 @@ async def patch_features(s: AsyncSession, code: str, values: dict[str, Any], ski
     results["stale"] = ["report"]
     new_text = text_in is not None and text_in != a.get("input_text")
     new_docs = document_ids is not None and sorted(document_ids) != sorted(a.get("input_documents") or [])
+    if new_docs:
+        # documents attached later: their regex chips fill only features nobody has given yet (text, AI, owner)
+        have = set(before) | set(changed) | (set(FE.extract(text_in)) if new_text else set())
+        for k, c in (await _doc_regex_chips(s, document_ids)).items():
+            if k in have:
+                continue
+            await _insert_item(s, a["id"], new_v, {"section": "feature", "key": k, "title": c["label"], "origin": "CALC",
+                                                   "review_status": "auto", "body": c, "quote": c.get("quote")})
     if ai and (new_text or new_docs):
         jobs = dict(results.get("jobs") or {})
         jobs["features"] = await enqueue(s, "analysis_features_ai", {"analysis_code": code}, actor, priority=20)

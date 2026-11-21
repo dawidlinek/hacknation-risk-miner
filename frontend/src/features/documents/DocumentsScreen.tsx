@@ -10,7 +10,7 @@ import { Button } from '@/components/ui/button'
 import { AnalysisPanel } from './AnalysisPanel'
 import { documentDetail, expectedDetail, noticeDetail } from './adapt'
 import { noticeFactsQuery, projectDocumentsQuery, uploadErrorMessage, useUploadDocument } from './api'
-import { docsHeading, findSelection, READ_ONLY_REASON } from './logic'
+import { docsHeading, findSelection, READ_ONLY_REASON, uploadToast } from './logic'
 import { CtaLink, ExpectedDocRow, FieldTag, FileDrop, MetaList, PublicDocRow } from './parts'
 import type { DetailView, PublicItem } from './types'
 
@@ -80,17 +80,15 @@ export function DocumentsScreen({
   const sel = findSelection(view, selected)
   const empty = view.expected.length === 0 && view.publicDocs.length === 0
 
+  // mutateAsync: with several files in one drop, each upload gets its own toast (mutate callbacks fire only for the last)
   const onFile = (file: File, makePublic: boolean) =>
-    upload.mutate(
-      { file, isPublic: makePublic },
-      {
-        onSuccess: (r) => {
-          toast.success('Dokument w kolejce. Fakty trafią do Przeglądu.')
-          onSelect(`doc:${r.document_id}`)
-        },
-        onError: (e) => toast.error(uploadErrorMessage(e)),
-      },
-    )
+    upload
+      .mutateAsync({ file, isPublic: makePublic })
+      .then((r) => {
+        toast.success(uploadToast(file.name, r))
+        onSelect(`doc:${r.document_id}`)
+      })
+      .catch((e) => toast.error(uploadErrorMessage(e)))
 
   let panel: React.ReactNode
   if (sel?.type === 'expected') panel = <Detail detail={expectedDetail(sel.item, isExpert)} />

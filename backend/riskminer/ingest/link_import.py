@@ -41,17 +41,17 @@ def record_issues(p: dict) -> list[tuple[str, str, str, dict]]:
     nb = ids.norm_bzp(pub) if pub else None
     k = ids.kpo_check(pub, woj) if pub else {"valid_format": False}
     if pub and id_type.lower().startswith("projekt kpo") and not k["valid_format"]:
-        out.append(("public_id_type_mismatch", f"Rekord {rm}: rodzaj identyfikatora to „{id_type}”, a identyfikator „{pub}” "
-                    "nie jest numerem projektu KPO", "high", {"value": pub, "type": id_type}))
+        out.append(("public_id_type_mismatch", (f"Rekord {rm}: rodzaj identyfikatora to „{id_type}”, a identyfikator „{pub}” "
+                    "nie jest numerem projektu KPO"), "high", {"value": pub, "type": id_type}))
     if pub and id_type.lower().startswith("ogłoszenie bzp") and not nb:
-        out.append(("public_id_type_mismatch", f"Rekord {rm}: rodzaj identyfikatora to „{id_type}”, a identyfikator „{pub}” "
-                    "nie jest numerem ogłoszenia BZP", "high", {"value": pub, "type": id_type}))
+        out.append(("public_id_type_mismatch", (f"Rekord {rm}: rodzaj identyfikatora to „{id_type}”, a identyfikator „{pub}” "
+                    "nie jest numerem ogłoszenia BZP"), "high", {"value": pub, "type": id_type}))
     if nb and f"{nb[0]}/{nb[1] or '01'}" != pub:
         out.append(("bzp_normalised", f"Rekord {rm}: numer BZP znormalizowano z „{pub}” do „{nb[0]}/{nb[1] or '01'}”", "low",
                     {"value": pub, "normalised": f"{nb[0]}/{nb[1] or '01'}"}))
     if k.get("valid_format") and k.get("iw_matches_woj") is False:
-        out.append(("kpo_iw_woj", f"Rekord {rm}: segment IW.{k['iw']} numeru KPO nie pasuje do województwa {woj} "
-                    f"(oczekiwano IW.{k['iw_expected']})", "medium", {"value": pub, "check": k}))
+        out.append(("kpo_iw_woj", (f"Rekord {rm}: segment IW.{k['iw']} numeru KPO nie pasuje do województwa {woj} "
+                    f"(oczekiwano IW.{k['iw_expected']})"), "medium", {"value": pub, "check": k}))
     name_woj = (_raw(row, "project.woj_name") or "").lower()
     if woj and ids.WOJ.get(woj) and name_woj and ids.WOJ[woj] != name_woj:
         out.append(("teryt_woj_mismatch", f"Rekord {rm}: kod TERYT {woj} to {ids.WOJ[woj]}, a w rekordzie „{name_woj}”",
@@ -89,8 +89,8 @@ async def run(conn, rid, project_ids: list[int]) -> dict:
                            "created_by"),
                           [(f"record|{rm_of[s['project_id']]}|procedure_shared|{s['other_rm']}", "discrepancy", "procedure_shared",
                             "project", s["project_id"], s["project_id"],
-                            f"Postępowanie {s['ocid']} jest już powiązane z projektem {s['other_rm']}; sprawdź, czy rekord "
-                            f"{rm_of[s['project_id']]} nie dubluje tamtego projektu", {"ocid": s["ocid"], "other": s["other_rm"]},
+                            (f"Postępowanie {s['ocid']} jest już powiązane z projektem {s['other_rm']}; sprawdź, czy rekord "
+                            f"{rm_of[s['project_id']]} nie dubluje tamtego projektu"), {"ocid": s["ocid"], "other": s["other_rm"]},
                             "high", "linker:import") for s in shared],
                           ("key",), update=["title", "detail"])
         attached = await conn.execute("""UPDATE risk_event e SET project_id = pp.project_id FROM project_procedure pp

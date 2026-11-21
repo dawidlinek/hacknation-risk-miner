@@ -165,7 +165,7 @@ describe('2.5 Dokumenty projektu', () => {
     await waitFor(() =>
       expect(fields).toEqual({ project: 'RM-2026-003', sensitivity: 'public', file: 'yes' }),
     )
-    expect(await screen.findByText('Dokument w kolejce. Fakty trafią do Przeglądu.')).toBeInTheDocument()
+    expect(await screen.findByText(/dokument w kolejce. Fakty trafią do Przeglądu./)).toBeInTheDocument()
   })
 
   it('unsupported files are refused before upload', async () => {

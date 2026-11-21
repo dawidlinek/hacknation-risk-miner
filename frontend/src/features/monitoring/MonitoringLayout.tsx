@@ -1,4 +1,4 @@
-import { useQuery } from '@tanstack/react-query'
+import { useIsFetching, useQuery, useQueryClient } from '@tanstack/react-query'
 import { useNavigate, useParams, useSearch } from '@tanstack/react-router'
 import { History, Search } from 'lucide-react'
 import {
@@ -17,11 +17,20 @@ import { useFeature } from '@/config/features'
 import { TimeMachine } from '@/features/replay/TimeMachine'
 import { cn } from '@/lib/cn'
 import { fmtInt } from '@/lib/format'
-import { type MonFilters, regionsQuery, signalsQuery } from './api'
+import { contractQuery, type MonFilters, regionDetailQuery, regionsQuery, signalsQuery } from './api'
 import { ChoroplethMap } from './ChoroplethMap'
 import { MonitoringContext, type MonitoringSearch } from './context'
-import { hasWebGL, wojGeoQuery } from './geo'
-import { colorAt, effectiveMetric, levelOf, METRICS, parseMetric, scaleRegions, signalsInView } from './logic'
+import { gmiGeoQuery, hasWebGL, labelsQuery, powGeoQuery, wojGeoQuery } from './geo'
+import {
+  colorAt,
+  effectiveMetric,
+  levelOf,
+  METRICS,
+  POWIAT_TINT,
+  parseMetric,
+  scaleRegions,
+  signalsInView,
+} from './logic'
 import { FilterBar, MapToolbar, ModeSwitch } from './parts'
 
 /** Layout of /monitoring: filter bar, left panel (the Outlet) and the persistent map. */
@@ -115,6 +124,60 @@ export function MonitoringLayout({ children }: { children: ReactNode }) {
     [gmiRegions.data],
   )
 
+  // names and signals the map already has, so a panel can title itself before its own request lands
+  const regionName = useCallback(
+    (terc: string) =>
+      terc.length === 2
+        ? woj.data?.items.find((r) => r.teryt === terc)?.name
+        : (powGeoNames.get(terc) ?? gmiNames.get(terc)),
+    [woj.data, powGeoNames, gmiNames],
+  )
+  const signalById = useCallback((id: string) => signals.data?.items.find((s) => s.id === id), [signals.data])
+
+  // hover intent prefetches everything the next level reads (the API needs ~0.5-1.2 s per call)
+  const qc = useQueryClient()
+  const prefetch = useMemo(() => {
+    const seen = new Set<string>()
+    const once = (key: string, run: () => void) => {
+      if (seen.has(key)) return
+      seen.add(key)
+      run()
+    }
+    const pow = (terc: string) =>
+      once(`p${terc}|${asOf}|${JSON.stringify(filters)}`, () => {
+        qc.prefetchQuery(regionDetailQuery(terc, asOf, filters))
+        qc.prefetchQuery(signalsQuery(terc, 'pow', undefined, asOf, filters))
+        qc.prefetchQuery(regionsQuery('gmi', terc, asOf, filters))
+        qc.prefetchQuery(gmiGeoQuery(terc))
+        qc.prefetchQuery(labelsQuery('gmi-centroids'))
+      })
+    return {
+      woj: (terc: string) =>
+        once(`w${terc}|${asOf}|${JSON.stringify(filters)}`, () => {
+          qc.prefetchQuery(regionDetailQuery(terc, asOf, filters))
+          qc.prefetchQuery(signalsQuery(terc, 'woj', undefined, asOf, filters))
+          qc.prefetchQuery(regionsQuery('pow', terc, asOf, filters))
+          qc.prefetchQuery(powGeoQuery(terc))
+          qc.prefetchQuery(labelsQuery('pow-centroids'))
+        }),
+      pow,
+      signal: (s: Signal) =>
+        once(`s${s.id}`, () => {
+          qc.prefetchQuery(contractQuery(s.id))
+          if (s.teryt.pow !== params.pow) pow(s.teryt.pow)
+        }),
+    }
+  }, [qc, asOf, filters, params.pow])
+  // only requests something on screen waits for (prefetches do not count)
+  const fetching =
+    useIsFetching({ queryKey: ['monitoring'], predicate: (q) => q.getObserversCount() > 0 }) > 0
+  const [busy, setBusy] = useState(false)
+  useEffect(() => {
+    if (!fetching) return setBusy(false)
+    const t = setTimeout(() => setBusy(true), 250)
+    return () => clearTimeout(t)
+  }, [fetching])
+
   const target = { level, woj: params.woj, pow: params.pow, signalId: params.umowa }
   const goWoj = (terc: string) =>
     navigate({ to: '/monitoring/$woj', params: { woj: terc }, search: ((p: MonitoringSearch) => p) as never })
@@ -162,6 +225,10 @@ export function MonitoringLayout({ children }: { children: ReactNode }) {
         search,
         filters,
         setSearch,
+        wojStale: woj.isPlaceholderData,
+        regionName,
+        signalById,
+        prefetch,
       }}
     >
       <div
@@ -227,6 +294,9 @@ export function MonitoringLayout({ children }: { children: ReactNode }) {
                 regions={scaled.regions}
                 powCounts={powCounts}
                 gmiCounts={gmiCounts}
+                powReady={
+                  Boolean(powRegions.data) && powRegions.data?.items[0]?.teryt.slice(0, 2) === params.woj
+                }
                 powNames={powGeoNames}
                 gmiNames={gmiNames}
                 signals={inView}
@@ -235,6 +305,7 @@ export function MonitoringLayout({ children }: { children: ReactNode }) {
                 onSelectWoj={goWoj}
                 onSelectPow={goPow}
                 onSelectSignal={goSignal}
+                prefetch={prefetch}
                 onUp={up}
               />
             ) : (
@@ -242,7 +313,16 @@ export function MonitoringLayout({ children }: { children: ReactNode }) {
                 Mapa wymaga WebGL. Lista po lewej działa bez niej.
               </div>
             )}
+            {busy ? (
+              <div
+                role="status"
+                className="pointer-events-none absolute top-3 left-3 rounded-pill bg-surface/95 px-3 py-1.5 text-[13px] text-text-secondary shadow-sm animate-in fade-in"
+              >
+                Wczytujemy dane…
+              </div>
+            ) : null}
             <MapToolbar
+              level={level}
               mode={mode}
               metric={metric}
               onMetric={(m) => setSearch({ miara: m === 'late' ? undefined : m })}
@@ -250,6 +330,7 @@ export function MonitoringLayout({ children }: { children: ReactNode }) {
                 lo: def.fmt(scaled.lo),
                 hi: def.fmt(scaled.hi),
                 gradient: `linear-gradient(90deg, ${colorAt(0, mode)}, ${colorAt(0.5, mode)}, ${colorAt(1, mode)})`,
+                tints: POWIAT_TINT,
               }}
               pins={pins}
               onPins={() => setSearch({ sygnaly: pins ? undefined : 1 })}

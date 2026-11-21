@@ -74,6 +74,7 @@ async def state(db: AsyncSession, code: str) -> dict | None:
             "files": [{k: f.get(k) for k in ("name", "bytes", "sha256", "kind", "duplicate_of_source_id")} for f in s["files"]],
             "tool_calls": _public_calls(s["tool_calls"] or []), "mapping": s["mapping"] or [], "questions": s["questions"] or [],
             "rules": rules.RULES_PL, "importer": importer, "test_run": s["test_result"], "job_id": s["job_id"],
+            "documents": (s["answers"] or {}).get("_documents") or [],   # files handed to the document pipeline (imports/documents.py)
             "run_id": str(s["run_id"]) if s["run_id"] else None}
 
 

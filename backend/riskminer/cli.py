@@ -89,6 +89,12 @@ def main(argv: list[str] | None = None) -> int:
     dc.add_argument("--include-raw-named", action="store_true", help="also uploads named like <16 hex>_file (script copies)")
     dc.add_argument("--anon-analyses-since", help="also analyses by anonymous visitors created since this ISO time (tooling)")
     dc.add_argument("--analysis", action="append", default=[], help="also this analysis code (repeatable)")
+    dc.add_argument("--document", action="append", type=int, default=[], help="also this document id (repeatable)")
+    dc.add_argument("--import-session", action="append", default=[], help="import session code (repeatable)")
+    dc.add_argument("--importer", action="append", type=int, default=[], help="importer id (repeatable)")
+    dc.add_argument("--job", action="append", type=int, default=[], help="job id (repeatable)")
+    dc.add_argument("--include-approved", action="store_true",
+                    help="also remove selected test analyses that carry approved items (only on the user's explicit request)")
     sub.add_parser("worker")
     eq = sub.add_parser("enqueue")
     eq.add_argument("kind")
@@ -157,7 +163,9 @@ def main(argv: list[str] | None = None) -> int:
         async def _dc():
             async with raw_conn() as conn:
                 return await demo_cleanup.run(conn, apply=a.apply, include_raw_named=a.include_raw_named, actor="cli",
-                                             anon_analyses_since=a.anon_analyses_since, analysis_codes=a.analysis)
+                                             anon_analyses_since=a.anon_analyses_since, analysis_codes=a.analysis,
+                                             document_ids=a.document, import_sessions=a.import_session,
+                                             importer_ids=a.importer, job_ids=a.job, include_approved=a.include_approved)
         res = asyncio.run(_dc())
     elif a.cmd == "ocr-pending":
         from riskminer.ingest import ocr_doc

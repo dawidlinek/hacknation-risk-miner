@@ -232,7 +232,10 @@ async def documents_view(db: AsyncSession, rm_id: str, user: A.User | None) -> d
     if ch is None:
         return None
     p = ch["project"]
-    scope = "d.procedure_id = ANY(:p)" if p["id"] is None else "d.project_id = :p"
+    # a document re-uploaded to this card while it belongs to another project is listed here too (documents/duplicates.py)
+    scope = "d.procedure_id = ANY(:p)" if p["id"] is None else (
+        "(d.project_id = :p OR d.id IN (SELECT lc.left_id FROM link_candidate lc WHERE lc.left_table = 'document' "
+        "AND lc.right_table = 'project' AND lc.right_id = :p AND lc.method = 'user_upload' AND lc.review_status <> 'rejected'))")
     docs = await rows(db, f"SELECT d.id, d.doc_type, d.title, d.filename, d.fetch_state, d.url, d.sha256, d.mime, d.data->'facts'->>'doc_kind' AS doc_kind FROM document d WHERE {scope} "
                           f"AND {A.public_doc_filter(user)} AND {A.public_filter(user, 'd')} ORDER BY d.id",
                       p=[x["id"] for x in ch["procs"]] if p["id"] is None else p["id"])

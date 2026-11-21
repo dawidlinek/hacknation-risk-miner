@@ -45,6 +45,10 @@ async def upload(file: UploadFile = File(...),
         from riskminer.ingest import ocr_doc
         j = await ocr_doc.enqueue(db, out["document_id"], created_by=s.actor)
         out["jobs"].append({"kind": "document_ocr", "job_id": j["id"]})
+    if out["duplicate"]:
+        # the same file again: reuse it, attach it to this project (or ask, if it is another project's), re-run what never ran
+        from riskminer.documents import duplicates
+        out = await duplicates.handle(db, out, project_rm_id=project_rm_id, actor=s.actor, request_id=A.request_id())
     await db.commit()
     if project_rm_id and not out["duplicate"] and out["text_status"] == "ok" and worker.known_kind("document_extract"):
         j = await worker.enqueue("document_extract", {"document_id": out["document_id"]}, created_by=s.actor)

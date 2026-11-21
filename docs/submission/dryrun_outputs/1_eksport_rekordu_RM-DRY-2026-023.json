@@ -1,0 +1,778 @@
+{
+ "meta": {
+  "generator": "Risk Miner",
+  "export": "rekord projektu",
+  "format_version": 1,
+  "generated_at": "2026-11-21T22:43:56.950960+00:00",
+  "view": "ekspert",
+  "rm_id": "RM-DRY-2026-023",
+  "legend": {
+   "origin": {
+    "SOURCE": "źródło",
+    "CALC": "wyliczenie",
+    "AI": "model AI"
+   },
+   "review_status": {
+    "auto": "automatycznie",
+    "proposed": "propozycja do weryfikacji",
+    "approved": "zatwierdzone przez eksperta",
+    "edited": "poprawione przez eksperta",
+    "rejected": "odrzucone"
+   }
+  },
+  "unverified_ai_hidden": 0
+ },
+ "record": {
+  "rm_id": "RM-DRY-2026-023",
+  "kind": "pilot_project",
+  "title": "[dryrun] Budowa sieci kanalizacji sanitarnej w miejscowości Ruda",
+  "description": "[dryrun] Przedmiotem jest budowa sieci kanalizacji sanitarnej, wraz z odcinkami przyłączy oraz budową przepompowni ścieków na działkach nr ewid. 191/1, 191/2, 3596 i 859 obręb 0004 Gidle w m. Gidle gm. Gidle oraz na działkach nr ewid. 715/1, 715/2, 970 i 971/1 obręb 0014 Ruda w m. Ruda gm. Gidle. Zakres opracowania obejmuje budowę sieci kanalizacji sanitarnej o spływie grawitacyjnym długości łącznej 1103,6 m wraz z przepompownią ścieków, budowę odcinka sieci kanalizacji sanitarnej ciśnieniowej długości 384,5 m oraz budowę 70 szt. przyłączy kanalizacji sanitarnej długości łącznej 343,2 m.",
+  "beneficiary": {
+   "name": "Gmina Gidle",
+   "name_in_bzp": "GMINA GIDLE",
+   "nip": "7722260381",
+   "nip_valid": true
+  },
+  "location": {
+   "teryt_woj": "10",
+   "province": "PL10",
+   "city": "Gidle"
+  },
+  "public_id_type": "Projekt KPO",
+  "public_id": "KPOD.03.15-IW.17-0008/25",
+  "external_ids": {
+   "kpo": "KPOD.03.15-IW.17-0008/25"
+  },
+  "scope": "całe postępowanie",
+  "scope_part": null,
+  "status": "Zakończone",
+  "subsector_main": "SAN",
+  "works_type": "build",
+  "delivery_model": "build",
+  "record_date": "2026-11-21",
+  "record_version": "2.0",
+  "is_pilot": false,
+  "funding": {
+   "programme": "KPO, inwestycja B3.1.1",
+   "value": {
+    "amount": "3560796.21",
+    "currency": "PLN",
+    "vat_basis": "unknown"
+   },
+   "subsidy": {
+    "amount": "2428948.62",
+    "currency": "PLN",
+    "vat_basis": "unknown"
+   },
+   "note": "Kwoty z rekordu (adnotacja instytucji); rekord nie podaje, czy są netto czy brutto."
+  },
+  "annotation": "KPO, inwestycja B3.1.1. Wartość przedsięwzięcia: 3 560 796,21 zł; dofinansowanie: 2 428 948,62 zł. Opis: „[dryrun] Przedmiotem jest budowa sieci kanalizacji sanitarnej, wraz z odcinkami przyłączy oraz budową przepompowni ścieków na działkach nr ewid. 191/1, 191/2, 3596 i 859 obręb 0004 Gidle w m. Gidle gm. Gidle oraz na działkach nr ewid. 715/1, 715/2, 970 i 971/1 obręb 0014 Ruda w m. Ruda gm. Gidle. Zakres opracowania obejmuje budowę sieci kanalizacji sanitarnej o spływie grawitacyjnym długości łącznej 1103,6 m wraz z przepompownią ścieków, budowę odcinka sieci kanalizacji sanitarnej ciśnieniowej długości 384,5 m oraz budowę 70 szt. przyłączy kanalizacji sanitarnej długości łącznej 343,2 m.”",
+  "origin": "SOURCE",
+  "review_status": "auto",
+  "source": {
+   "id": 139422,
+   "kind": "import",
+   "url": "upload:IMP-2026-0002/dryrun_rekord_projektu.xlsx",
+   "retrieved_at": "2026-11-21T22:07:56.102077+00:00",
+   "sha256": "094182db4772eb5280a70d3ea80acecfab72fb5fb425b3514e8346eeac268a60",
+   "path": "data/raw/imports/2026-11-21/094182db4772eb52_dryrun_rekord_projektu.xlsx",
+   "licence": "user-upload"
+  }
+ },
+ "links": [
+  {
+   "ocid": "ocds-148610-cd1dbec8-2938-4d10-bbd4-cc60465639d1",
+   "title": "Budowa sieci kanalizacji sanitarnej w miejscowości Ruda",
+   "contract_notice_no": "2025/BZP 00177537",
+   "buyer": "GMINA GIDLE",
+   "buyer_nip": "7722260381",
+   "method": "kpo_cited",
+   "method_label": "numer projektu KPO powołany w ogłoszeniach zamawiającego",
+   "score": 0.97,
+   "review_status": "auto",
+   "decision": "accept",
+   "explanation": "Numer projektu KPO z rekordu powołany w ogłoszeniach zamawiającego (2025/BZP 00613896/01, 2025/BZP 00616071/01); wspólne słowa tytułu: kanali, ruda, sanita",
+   "features": {
+    "given": "KPOD.03.15-IW.17-0008/25",
+    "title": "Budowa sieci kanalizacji sanitarnej w miejscowości Ruda",
+    "kpo_era": true,
+    "overlap": [
+     "kanali",
+     "ruda",
+     "sanita"
+    ],
+    "nip_match": true,
+    "raw_score": 0.95,
+    "cpv_wodkan": true,
+    "fuzzy_score": 0.792,
+    "title_jaccard": 0.75,
+    "citing_notices": [
+     "2025/BZP 00613896/01",
+     "2025/BZP 00616071/01"
+    ],
+    "first_published": "2025-04-04"
+   },
+   "lots": [],
+   "design_build": false,
+   "subsector": "SAN",
+   "first_published_on": "2025-04-04",
+   "estimate": null,
+   "chain": [
+    "2025/BZP 00177537/01",
+    "2025/BZP 00264451/01",
+    "2025/BZP 00560195/01",
+    "2025/BZP 00613896/01",
+    "2025/BZP 00616071/01"
+   ],
+   "title_similarity": 0.75,
+   "value_check": {
+    "value": 3481846.21,
+    "closest": "suma wartości umów",
+    "diff_pct": -2.22,
+    "project_value": 3560796.21
+   }
+  }
+ ],
+ "link_alternatives": [
+  {
+   "ocid": "ocds-148610-cd1dbec8-2938-4d10-bbd4-cc60465639d1",
+   "method": "kpo_cited",
+   "score": 0.97,
+   "rank": 1,
+   "decision": "accept",
+   "explanation": "Numer projektu KPO z rekordu powołany w ogłoszeniach zamawiającego (2025/BZP 00613896/01, 2025/BZP 00616071/01); wspólne słowa tytułu: kanali, ruda, sanita"
+  }
+ ],
+ "contracts": [
+  {
+   "contract_id": 148350,
+   "lot_no": 0,
+   "contractor": "ZTHU Stanisław Krupiński",
+   "contractor_nip": null,
+   "signed_on": "2025-05-27",
+   "planned_duration_days": 182.0,
+   "planned_end_on": "2025-11-25",
+   "value": {
+    "amount": "3481846.21",
+    "currency": "PLN",
+    "vat_basis": "gross"
+   },
+   "result_notice_no": "2025/BZP 00264451",
+   "origin": "SOURCE",
+   "review_status": "auto",
+   "source_id": 1
+  }
+ ],
+ "plan_vs_actual": {
+  "summary": "Skończono 13 dni po terminie i zapłacono o 11,2% więcej niż w umowie.",
+  "dates": [
+   {
+    "contract_id": 148350,
+    "lot_no": 0,
+    "signed_on": "2025-05-27",
+    "planned_days": 182.0,
+    "planned_end_on": "2025-11-25",
+    "completed_on": "2025-12-08",
+    "actual_days": 195,
+    "delay_days": 13,
+    "on_time_declared": false,
+    "changes_count": 3,
+    "properly_performed": true,
+    "contract_value": {
+     "amount": "3481846.21",
+     "currency": "PLN",
+     "vat_basis": "gross"
+    },
+    "paid": {
+     "amount": "3871773.32",
+     "currency": "PLN",
+     "vat_basis": "gross"
+    },
+    "cost_dev_pct": 11.2,
+    "performance_notice": "2025/BZP 00616071/01",
+    "performance_url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de414d-56f0-f9d5-d6d3-f50001625d9b",
+    "origin": "CALC",
+    "method": "completed_on - signed_on; paid / contract value - 1"
+   }
+  ],
+  "values": {
+   "estimate_bzp": null,
+   "contracts_total": {
+    "amount": "3481846.21",
+    "currency": "PLN",
+    "vat_basis": "gross"
+   },
+   "paid_total": {
+    "amount": "3871773.32",
+    "currency": "PLN",
+    "vat_basis": "gross"
+   },
+   "cost_dev_pct": 11.2,
+   "funding_value": {
+    "amount": "3560796.21",
+    "currency": "PLN",
+    "vat_basis": "unknown"
+   }
+  },
+  "delay_days_max": 13,
+  "vat_note": "Porównujemy tylko kwoty tej samej podstawy: szacunek zamawiającego w BZP jest netto, wartości umów i wypłaty brutto."
+ },
+ "changes": [
+  {
+   "change_id": 35426,
+   "contract_id": 148350,
+   "kind": "change_notice",
+   "kind_label": "ogłoszenie o zmianie umowy (BZP)",
+   "change_no": "2025/BZP 00560195",
+   "changed_on": "2025-10-27",
+   "legal_basis": [
+    "455.1.3"
+   ],
+   "legal_basis_raw": "art. 455 ust. 1 pkt 3 ustawy",
+   "change_types": [
+    "scope"
+   ],
+   "delta_days": null,
+   "delta_value": {
+    "amount": "299883.20",
+    "currency": "PLN",
+    "vat_basis": "unknown"
+   },
+   "delta_value_pct": 8.612764088739002,
+   "cause": "Konieczność wykonania robót dodatkowych",
+   "description": "Roboty dodatkowe konieczne:\n1) Wykonanie przebudowy istniejącego kanału deszczowego Dn 500 na odcinku równoległym do S1 – S2.\n2) Wykonanie podbudowy z kruszywa na wjazdach do posesji.\n3) Wymiana krawężników wzdłuż jezdni obustronnie na całej długości inwestycji.",
+   "notice": "2025/BZP 00560195/01",
+   "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de2da7-fde0-2b24-0560-4900011901b6",
+   "document": null,
+   "origin": "SOURCE",
+   "review_status": "auto",
+   "source_id": 1,
+   "ai_cause": {
+    "proposal": true,
+    "risk_code": "R07",
+    "secondary_code": null,
+    "quote": "Konieczność wykonania robót dodatkowych",
+    "verification": "exact",
+    "confidence": 0.8999999761581421,
+    "model": "gemini-3.5-flash-lite",
+    "review_status": "proposed"
+   }
+  },
+  {
+   "change_id": 35538,
+   "contract_id": 148350,
+   "kind": "change_notice",
+   "kind_label": "ogłoszenie o zmianie umowy (BZP)",
+   "change_no": "2025/BZP 00613896",
+   "changed_on": "2025-11-24",
+   "legal_basis": [
+    "455.1.3"
+   ],
+   "legal_basis_raw": "art. 455 ust. 1 pkt 3 ustawy",
+   "change_types": [
+    "scope"
+   ],
+   "delta_days": null,
+   "delta_value": {
+    "amount": "90043.91",
+    "currency": "PLN",
+    "vat_basis": "unknown"
+   },
+   "delta_value_pct": 2.5860967018414063,
+   "cause": "Konieczność wykonania robót dodatkowych",
+   "description": "Roboty dodatkowe konieczne:\na) Wykonanie podbudowy z kruszywa na wjazdach do posesji\nb) Wykonanie obrzeży przy wjazdach z kostki brukowej",
+   "notice": "2025/BZP 00613896/01",
+   "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de3f0d-b74b-b4bb-d6d3-f50001624f4a",
+   "document": null,
+   "origin": "SOURCE",
+   "review_status": "auto",
+   "source_id": 1,
+   "ai_cause": {
+    "proposal": true,
+    "risk_code": "R07",
+    "secondary_code": null,
+    "quote": "Konieczność wykonania robót dodatkowych",
+    "verification": "exact",
+    "confidence": 0.8999999761581421,
+    "model": "gemini-3.5-flash-lite",
+    "review_status": "proposed"
+   }
+  },
+  {
+   "change_id": 56523,
+   "contract_id": 148350,
+   "kind": "performance_block",
+   "kind_label": "ogłoszenie o wykonaniu umowy, sekcja zmian (BZP)",
+   "change_no": "1",
+   "changed_on": null,
+   "legal_basis": [
+    "455.1.1"
+   ],
+   "legal_basis_raw": "art. 455 ust. 1 pkt 1 ustawy",
+   "change_types": [
+    "price",
+    "scope"
+   ],
+   "delta_days": null,
+   "delta_value": {
+    "amount": "0.00",
+    "currency": "PLN",
+    "vat_basis": "unknown"
+   },
+   "delta_value_pct": null,
+   "cause": "Konieczność wykonania robót zamiennych",
+   "description": "Roboty zmienne - zaniechane:\na) Ograniczenie objętości robót ziemnych wynikające z wypłycenia projektowanego odcinka kanalizacji sanitarnej o około 1,5m.\nb) Rezygnacja z kanału sanitarnego pomiędzy studniami S46 – S 48\nRoboty zamienne – dodatkowe :\na) Zabudowa dodatkowej przepompowni ścieków\nb) Wykonanie połączenia nowej pompowni z kanałem grawitacyjnym\nc) Wykonanie dodatkowego rurociągu tłocznego",
+   "notice": "2025/BZP 00616071/01",
+   "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de414d-56f0-f9d5-d6d3-f50001625d9b",
+   "document": null,
+   "origin": "SOURCE",
+   "review_status": "auto",
+   "source_id": 1,
+   "ai_cause": {
+    "proposal": true,
+    "risk_code": "R07",
+    "secondary_code": null,
+    "quote": "Konieczność wykonania robót zamiennych",
+    "verification": "exact",
+    "confidence": 0.8500000238418579,
+    "model": "gemini-3.5-flash-lite",
+    "review_status": "proposed"
+   }
+  },
+  {
+   "change_id": 56524,
+   "contract_id": 148350,
+   "kind": "performance_block",
+   "kind_label": "ogłoszenie o wykonaniu umowy, sekcja zmian (BZP)",
+   "change_no": "2",
+   "changed_on": null,
+   "legal_basis": [
+    "455.1.3"
+   ],
+   "legal_basis_raw": "art. 455 ust. 1 pkt 3 ustawy",
+   "change_types": [
+    "scope"
+   ],
+   "delta_days": null,
+   "delta_value": {
+    "amount": "299883.20",
+    "currency": "PLN",
+    "vat_basis": "unknown"
+   },
+   "delta_value_pct": null,
+   "cause": "Konieczność wykonania robót dodatkowych",
+   "description": "Roboty dodatkowe konieczne:\n1) Wykonanie przebudowy istniejącego kanału deszczowego Dn 500 na odcinku równoległym do S1 – S2.\n2) Wykonanie podbudowy z kruszywa na wjazdach do posesji.\n3) Wymiana krawężników wzdłuż jezdni obustronnie na całej długości inwestycji.",
+   "notice": "2025/BZP 00616071/01",
+   "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de414d-56f0-f9d5-d6d3-f50001625d9b",
+   "document": null,
+   "origin": "SOURCE",
+   "review_status": "auto",
+   "source_id": 1,
+   "ai_cause": {
+    "proposal": true,
+    "risk_code": "R07",
+    "secondary_code": null,
+    "quote": "Konieczność wykonania robót dodatkowych",
+    "verification": "exact",
+    "confidence": 0.8999999761581421,
+    "model": "gemini-3.5-flash-lite",
+    "review_status": "proposed"
+   }
+  },
+  {
+   "change_id": 56525,
+   "contract_id": 148350,
+   "kind": "performance_block",
+   "kind_label": "ogłoszenie o wykonaniu umowy, sekcja zmian (BZP)",
+   "change_no": "3",
+   "changed_on": null,
+   "legal_basis": [
+    "455.1.3"
+   ],
+   "legal_basis_raw": "art. 455 ust. 1 pkt 3 ustawy",
+   "change_types": [
+    "scope"
+   ],
+   "delta_days": null,
+   "delta_value": {
+    "amount": "90043.91",
+    "currency": "PLN",
+    "vat_basis": "unknown"
+   },
+   "delta_value_pct": null,
+   "cause": "Konieczność wykonania robót dodatkowych",
+   "description": "Roboty dodatkowe konieczne:\n1) Wykonanie podbudowy z kruszywa na wjazdach do posesji.\n2)Wykonanie obrzeży przy wjazdach z kostki brukowej.",
+   "notice": "2025/BZP 00616071/01",
+   "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de414d-56f0-f9d5-d6d3-f50001625d9b",
+   "document": null,
+   "origin": "SOURCE",
+   "review_status": "auto",
+   "source_id": 1,
+   "ai_cause": {
+    "proposal": true,
+    "risk_code": "R07",
+    "secondary_code": null,
+    "quote": "Konieczność wykonania robót dodatkowych",
+    "verification": "exact",
+    "confidence": 0.8500000238418579,
+    "model": "gemini-3.5-flash-lite",
+    "review_status": "proposed"
+   }
+  }
+ ],
+ "risk_events": [
+  {
+   "event_id": 30242,
+   "event_type": "EV_ADDITIONAL_WORKS",
+   "risk_code": "R07",
+   "risk_name": "Nieprzewidziane zmiany i roboty dodatkowe",
+   "summary": "Zmiana umowy: roboty dodatkowe (art. 455 ust. 1 pkt 3)",
+   "cause": "Konieczność wykonania robót dodatkowych",
+   "occurred_on": "2025-10-27",
+   "impact_days": null,
+   "impact_value": {
+    "amount": "299883.20",
+    "currency": "PLN",
+    "vat_basis": "gross"
+   },
+   "impact_pct": 8.61,
+   "mitigation": null,
+   "evidence_state": "POTWIERDZONO",
+   "origin": "CALC",
+   "review_status": "auto",
+   "proposal": false,
+   "change_notice": "2025/BZP 00560195/01",
+   "evidence": [
+    {
+     "source_id": 1,
+     "source_kind": "bzp_copy",
+     "notice_number": "2025/BZP 00560195/01",
+     "document_id": null,
+     "page_no": null,
+     "field_code": "5.3",
+     "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de2da7-fde0-2b24-0560-4900011901b6",
+     "retrieved_at": "2026-11-12T11:55:53+00:00",
+     "quote": "Konieczność wykonania robót dodatkowych",
+     "verification": "structured_field",
+     "evidence_state": "POTWIERDZONO",
+     "sha256": "af0e37f5bbc6ee72c7431e3d6ef4572b550a95c4667a5abd3d868ac3dbfa8654"
+    }
+   ]
+  },
+  {
+   "event_id": 30306,
+   "event_type": "EV_ADDITIONAL_WORKS",
+   "risk_code": "R07",
+   "risk_name": "Nieprzewidziane zmiany i roboty dodatkowe",
+   "summary": "Zmiana umowy: roboty dodatkowe (art. 455 ust. 1 pkt 3)",
+   "cause": "Konieczność wykonania robót dodatkowych",
+   "occurred_on": "2025-11-24",
+   "impact_days": null,
+   "impact_value": {
+    "amount": "90043.91",
+    "currency": "PLN",
+    "vat_basis": "gross"
+   },
+   "impact_pct": 2.59,
+   "mitigation": null,
+   "evidence_state": "POTWIERDZONO",
+   "origin": "CALC",
+   "review_status": "auto",
+   "proposal": false,
+   "change_notice": "2025/BZP 00613896/01",
+   "evidence": [
+    {
+     "source_id": 1,
+     "source_kind": "bzp_copy",
+     "notice_number": "2025/BZP 00613896/01",
+     "document_id": null,
+     "page_no": null,
+     "field_code": "5.3",
+     "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de3f0d-b74b-b4bb-d6d3-f50001624f4a",
+     "retrieved_at": "2026-11-12T11:55:53+00:00",
+     "quote": "Konieczność wykonania robót dodatkowych",
+     "verification": "structured_field",
+     "evidence_state": "POTWIERDZONO",
+     "sha256": "af0e37f5bbc6ee72c7431e3d6ef4572b550a95c4667a5abd3d868ac3dbfa8654"
+    }
+   ]
+  },
+  {
+   "event_id": 15236,
+   "event_type": "EV_LATE_COMPLETION",
+   "risk_code": null,
+   "risk_name": null,
+   "summary": "Wykonanie po pierwotnym terminie (+13 dni)",
+   "cause": null,
+   "occurred_on": "2025-12-08",
+   "impact_days": 13.0,
+   "impact_value": null,
+   "impact_pct": null,
+   "mitigation": null,
+   "evidence_state": "POTWIERDZONO",
+   "origin": "CALC",
+   "review_status": "auto",
+   "proposal": false,
+   "change_notice": null,
+   "evidence": [
+    {
+     "source_id": 1,
+     "source_kind": "bzp_copy",
+     "notice_number": "2025/BZP 00616071/01",
+     "document_id": null,
+     "page_no": null,
+     "field_code": "5.3",
+     "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de414d-56f0-f9d5-d6d3-f50001625d9b",
+     "retrieved_at": "2026-11-12T11:55:53+00:00",
+     "quote": null,
+     "verification": "structured_field",
+     "evidence_state": "POTWIERDZONO",
+     "sha256": "af0e37f5bbc6ee72c7431e3d6ef4572b550a95c4667a5abd3d868ac3dbfa8654"
+    }
+   ]
+  },
+  {
+   "event_id": 23613,
+   "event_type": "EV_PRICE_INCREASE",
+   "risk_code": null,
+   "risk_name": null,
+   "summary": "Wypłata wyższa niż wartość umowy (11.2%)",
+   "cause": null,
+   "occurred_on": "2025-12-08",
+   "impact_days": null,
+   "impact_value": {
+    "amount": "389927.11",
+    "currency": "PLN",
+    "vat_basis": "gross"
+   },
+   "impact_pct": 11.2,
+   "mitigation": null,
+   "evidence_state": "POTWIERDZONO",
+   "origin": "CALC",
+   "review_status": "auto",
+   "proposal": false,
+   "change_notice": null,
+   "evidence": [
+    {
+     "source_id": 1,
+     "source_kind": "bzp_copy",
+     "notice_number": "2025/BZP 00616071/01",
+     "document_id": null,
+     "page_no": null,
+     "field_code": "5.5",
+     "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de414d-56f0-f9d5-d6d3-f50001625d9b",
+     "retrieved_at": "2026-11-12T11:55:53+00:00",
+     "quote": null,
+     "verification": "structured_field",
+     "evidence_state": "POTWIERDZONO",
+     "sha256": "af0e37f5bbc6ee72c7431e3d6ef4572b550a95c4667a5abd3d868ac3dbfa8654"
+    }
+   ]
+  },
+  {
+   "event_id": 32557,
+   "event_type": "EV_ADDITIONAL_WORKS",
+   "risk_code": "R07",
+   "risk_name": "Nieprzewidziane zmiany i roboty dodatkowe",
+   "summary": "Zmiana umowy: roboty dodatkowe (art. 455 ust. 1 pkt 3)",
+   "cause": "Konieczność wykonania robót dodatkowych",
+   "occurred_on": null,
+   "impact_days": null,
+   "impact_value": {
+    "amount": "299883.20",
+    "currency": "PLN",
+    "vat_basis": "gross"
+   },
+   "impact_pct": null,
+   "mitigation": null,
+   "evidence_state": "POTWIERDZONO",
+   "origin": "CALC",
+   "review_status": "auto",
+   "proposal": false,
+   "change_notice": "2025/BZP 00616071/01",
+   "evidence": [
+    {
+     "source_id": 1,
+     "source_kind": "bzp_copy",
+     "notice_number": "2025/BZP 00616071/01",
+     "document_id": null,
+     "page_no": null,
+     "field_code": "5.4.4",
+     "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de414d-56f0-f9d5-d6d3-f50001625d9b",
+     "retrieved_at": "2026-11-12T11:55:53+00:00",
+     "quote": "Konieczność wykonania robót dodatkowych",
+     "verification": "structured_field",
+     "evidence_state": "POTWIERDZONO",
+     "sha256": "af0e37f5bbc6ee72c7431e3d6ef4572b550a95c4667a5abd3d868ac3dbfa8654"
+    }
+   ]
+  },
+  {
+   "event_id": 32558,
+   "event_type": "EV_ADDITIONAL_WORKS",
+   "risk_code": "R07",
+   "risk_name": "Nieprzewidziane zmiany i roboty dodatkowe",
+   "summary": "Zmiana umowy: roboty dodatkowe (art. 455 ust. 1 pkt 3)",
+   "cause": "Konieczność wykonania robót dodatkowych",
+   "occurred_on": null,
+   "impact_days": null,
+   "impact_value": {
+    "amount": "90043.91",
+    "currency": "PLN",
+    "vat_basis": "gross"
+   },
+   "impact_pct": null,
+   "mitigation": null,
+   "evidence_state": "POTWIERDZONO",
+   "origin": "CALC",
+   "review_status": "auto",
+   "proposal": false,
+   "change_notice": "2025/BZP 00616071/01",
+   "evidence": [
+    {
+     "source_id": 1,
+     "source_kind": "bzp_copy",
+     "notice_number": "2025/BZP 00616071/01",
+     "document_id": null,
+     "page_no": null,
+     "field_code": "5.4.4",
+     "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de414d-56f0-f9d5-d6d3-f50001625d9b",
+     "retrieved_at": "2026-11-12T11:55:53+00:00",
+     "quote": "Konieczność wykonania robót dodatkowych",
+     "verification": "structured_field",
+     "evidence_state": "POTWIERDZONO",
+     "sha256": "af0e37f5bbc6ee72c7431e3d6ef4572b550a95c4667a5abd3d868ac3dbfa8654"
+    }
+   ]
+  }
+ ],
+ "ai_proposals": [
+  {
+   "what": "przyczyna zmiany umowy",
+   "change_id": 35426,
+   "proposal": true,
+   "risk_code": "R07",
+   "secondary_code": null,
+   "quote": "Konieczność wykonania robót dodatkowych",
+   "verification": "exact",
+   "confidence": 0.8999999761581421,
+   "model": "gemini-3.5-flash-lite",
+   "review_status": "proposed",
+   "on": "ogłoszenie o zmianie umowy (BZP) 2025/BZP 00560195/01 27.10.2025"
+  },
+  {
+   "what": "przyczyna zmiany umowy",
+   "change_id": 35538,
+   "proposal": true,
+   "risk_code": "R07",
+   "secondary_code": null,
+   "quote": "Konieczność wykonania robót dodatkowych",
+   "verification": "exact",
+   "confidence": 0.8999999761581421,
+   "model": "gemini-3.5-flash-lite",
+   "review_status": "proposed",
+   "on": "ogłoszenie o zmianie umowy (BZP) 2025/BZP 00613896/01 24.11.2025"
+  },
+  {
+   "what": "przyczyna zmiany umowy",
+   "change_id": 56523,
+   "proposal": true,
+   "risk_code": "R07",
+   "secondary_code": null,
+   "quote": "Konieczność wykonania robót zamiennych",
+   "verification": "exact",
+   "confidence": 0.8500000238418579,
+   "model": "gemini-3.5-flash-lite",
+   "review_status": "proposed",
+   "on": "ogłoszenie o wykonaniu umowy, sekcja zmian (BZP) 2025/BZP 00616071/01"
+  },
+  {
+   "what": "przyczyna zmiany umowy",
+   "change_id": 56524,
+   "proposal": true,
+   "risk_code": "R07",
+   "secondary_code": null,
+   "quote": "Konieczność wykonania robót dodatkowych",
+   "verification": "exact",
+   "confidence": 0.8999999761581421,
+   "model": "gemini-3.5-flash-lite",
+   "review_status": "proposed",
+   "on": "ogłoszenie o wykonaniu umowy, sekcja zmian (BZP) 2025/BZP 00616071/01"
+  },
+  {
+   "what": "przyczyna zmiany umowy",
+   "change_id": 56525,
+   "proposal": true,
+   "risk_code": "R07",
+   "secondary_code": null,
+   "quote": "Konieczność wykonania robót dodatkowych",
+   "verification": "exact",
+   "confidence": 0.8500000238418579,
+   "model": "gemini-3.5-flash-lite",
+   "review_status": "proposed",
+   "on": "ogłoszenie o wykonaniu umowy, sekcja zmian (BZP) 2025/BZP 00616071/01"
+  }
+ ],
+ "review_items": [],
+ "documents": [],
+ "whats_changed": [],
+ "notices": [
+  {
+   "notice_number": "2025/BZP 00177537/01",
+   "type": "ContractNotice",
+   "type_label": "ogłoszenie o zamówieniu",
+   "published_at": "2025-04-04T11:17:18.222726+00:00",
+   "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd736a-42e2-962a-8f1b-b600017e1400"
+  },
+  {
+   "notice_number": "2025/BZP 00264451/01",
+   "type": "TenderResultNotice",
+   "type_label": "ogłoszenie o wyniku",
+   "published_at": "2025-06-06T07:28:08.744778+00:00",
+   "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dda4cb-af98-fe96-e710-760001de8b6a"
+  },
+  {
+   "notice_number": "2025/BZP 00560195/01",
+   "type": "AgreementUpdateNotice",
+   "type_label": "ogłoszenie o zmianie umowy",
+   "published_at": "2025-11-27T11:27:47.519996+00:00",
+   "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de2da7-fde0-2b24-0560-4900011901b6"
+  },
+  {
+   "notice_number": "2025/BZP 00613896/01",
+   "type": "AgreementUpdateNotice",
+   "type_label": "ogłoszenie o zmianie umowy",
+   "published_at": "2025-12-19T14:48:47.537860+00:00",
+   "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de3f0d-b74b-b4bb-d6d3-f50001624f4a"
+  },
+  {
+   "notice_number": "2025/BZP 00616071/01",
+   "type": "ContractPerformingNotice",
+   "type_label": "ogłoszenie o wykonaniu umowy",
+   "published_at": "2025-12-22T11:29:15.990222+00:00",
+   "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de414d-56f0-f9d5-d6d3-f50001625d9b"
+  }
+ ],
+ "sources": [
+  {
+   "id": 1,
+   "kind": "bzp_copy",
+   "url": "https://ezamowienia.gov.pl/mo-board/api/v1/notice",
+   "retrieved_at": "2026-11-12T11:55:53+00:00",
+   "sha256": "af0e37f5bbc6ee72c7431e3d6ef4572b550a95c4667a5abd3d868ac3dbfa8654",
+   "path": "materials/bzp_kopia/risk_miner_bzp_kopia/bzp_kopia/notices.jsonl",
+   "licence": "public information (organizer copy of the BZP API, records unchanged)",
+   "note": "Organizer national BZP copy: 113278 notices 2021-01-13..2026-11-12; sha256 is of notices.jsonl.xz per organizer manifest.json"
+  },
+  {
+   "id": 139422,
+   "kind": "import",
+   "url": "upload:IMP-2026-0002/dryrun_rekord_projektu.xlsx",
+   "retrieved_at": "2026-11-21T22:07:56.102077+00:00",
+   "sha256": "094182db4772eb5280a70d3ea80acecfab72fb5fb425b3514e8346eeac268a60",
+   "path": "data/raw/imports/2026-11-21/094182db4772eb52_dryrun_rekord_projektu.xlsx",
+   "licence": "user-upload",
+   "note": "import IMP-2026-0002"
+  }
+ ]
+}

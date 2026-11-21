@@ -297,6 +297,16 @@ async def link_document(db: AsyncSession, document_id: int, *, actor: str = ACTO
                               "accept" if pr["score"] >= 0.99 else "review", "auto" if pr["score"] >= 0.99 else "proposed")
         if pr["score"] >= 0.99 and not doc.get("project_id"):
             await db.execute(text("UPDATE document SET project_id = :p WHERE id = :d AND project_id IS NULL"), {"p": project["id"], "d": document_id})
+        elif doc.get("project_id") and doc["project_id"] != project["id"]:
+            # dropped on one project's card, but its own identifiers name another project: ask, never move it silently
+            bound = await _scalar(db, "SELECT rm_id FROM project WHERE id = :i", i=doc["project_id"])
+            it = await _item(db, f"doc:{document_id}:project_mismatch", kind="discrepancy", code="document_project_mismatch",
+                             project_id=doc["project_id"], source_id=sid,
+                             title=f"Dokument wgrany do projektu {bound}, a jego identyfikatory wskazują {project['rm_id']}",
+                             question=f"Do którego projektu należy dokument „{label}”: {bound} czy {project['rm_id']}?",
+                             detail={"sub": f"Powiązanie: {pr['method']}, wynik {pr['score']}.", "document_id": document_id,
+                                     "bound": bound, "found": project["rm_id"], "features": pr["features"]})
+            res["review_items"].append(it)
     else:
         it = await _item(db, f"doc:{document_id}:no_project", kind="discrepancy", code="document_no_project", project_id=None, source_id=sid,
                          title=f"Nie powiązano dokumentu „{label}” z żadnym projektem",
@@ -457,7 +467,7 @@ async def link_document(db: AsyncSession, document_id: int, *, actor: str = ACTO
 
     # --- flags from the extraction (mixed legal basis ...), R18 catalogue proposal
     for fl in facts.get("flags") or []:
-        if fl.get("code") in ("nip_checksum",):  # already handled by our own validation
+        if fl.get("code") in ("nip_checksum", "regon_checksum"):  # already handled by our own validation
             continue
         it = await _item(db, f"doc:{document_id}:flag:{fl.get('code')}", kind="discrepancy", code=f"document_{fl.get('code')}", project_id=pid, source_id=sid,
                          title=fl.get("text") or fl.get("code"), question=f"{fl.get('text')} Czy to wymaga uwagi?",

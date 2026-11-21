@@ -167,3 +167,83 @@ export function pillStacks(signals: Signal[]): Map<string, number> {
 /** Powiat tint by signal count: 1, 2, 3+ (4.1a). */
 export const POWIAT_TINT = ['#FFF6D1', '#FFE27A', '#FFD23F'] as const
 export const tintFor = (n: number): string | null => (n <= 0 ? null : POWIAT_TINT[Math.min(2, n - 1)])
+
+/** "+N d" pills of one gmina stacked over its point, longest overdue at the bottom. */
+export interface PillPlan {
+  pills: { s: Signal; stack: number }[]
+  /** "jeszcze N" chip on top of a capped stack */
+  more: { key: string; lon: number; lat: number; n: number; stack: number }[]
+}
+
+/**
+ * Pills for the powiat map. Parts of one notice with the same delay show once, a gmina stacks at most `perStack`
+ * pills and counts the rest on one chip, so a busy gmina does not grow a tower over the map. The order stays put when
+ * the selection changes (no pill jumps under the pointer): the selected contract stands in for its notice and, when
+ * it is below the cap, takes the top slot.
+ */
+export function planPills(signals: Signal[], selectedId?: string, perStack = 3): PillPlan {
+  const groups = new Map<string, Signal[]>()
+  for (const s of signals) {
+    if (s.lon === null || s.lat === null) continue
+    const g = s.teryt.gmi ?? s.teryt.pow
+    const reps = groups.get(g) ?? []
+    groups.set(g, reps)
+    const i = reps.findIndex((r) => r.bzp === s.bzp && r.days_late === s.days_late)
+    if (i < 0) reps.push(s)
+    else if (s.id === selectedId) reps[i] = s
+  }
+  const pills: PillPlan['pills'] = []
+  const more: PillPlan['more'] = []
+  for (const [g, reps] of groups) {
+    const shown = reps.slice(0, perStack)
+    const sel = reps.findIndex((s) => s.id === selectedId)
+    if (sel >= perStack) shown[perStack - 1] = reps[sel]
+    shown.forEach((s, i) => {
+      pills.push({ s, stack: i })
+    })
+    const rest = reps.length - shown.length
+    if (rest > 0)
+      more.push({
+        key: g,
+        lon: shown[0].lon as number,
+        lat: shown[0].lat as number,
+        n: rest,
+        stack: shown.length,
+      })
+  }
+  return { pills, more }
+}
+
+/** Screen box of a map label, px from the top-left of the canvas. */
+export interface Box {
+  key: string
+  x: number
+  y: number
+  w: number
+  h: number
+}
+
+const hits = (a: Box, b: Box, gap: number) =>
+  a.x < b.x + b.w + gap && b.x < a.x + a.w + gap && a.y < b.y + b.h + gap && b.y < a.y + a.h + gap
+
+/** Greedy label placement: boxes come in priority order; one that overlaps a placed box or leaves the frame is hidden. */
+export function placeBoxes(
+  boxes: Box[],
+  frame: { w: number; h: number },
+  fixed: Box[] = [],
+  gap = 2,
+): Set<string> {
+  const placed = [...fixed]
+  const out = new Set<string>()
+  for (const b of boxes) {
+    if (b.x < 0 || b.y < 0 || b.x + b.w > frame.w || b.y + b.h > frame.h) continue
+    if (placed.some((p) => hits(b, p, gap))) continue
+    placed.push(b)
+    out.add(b.key)
+  }
+  return out
+}
+
+/** Polish plural of "umowa". */
+export const umowy = (n: number) =>
+  n === 1 ? 'umowa' : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 'umowy' : 'umów'

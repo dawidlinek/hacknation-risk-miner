@@ -8,9 +8,12 @@ import {
   METRICS,
   parseMetric,
   pillStacks,
+  placeBoxes,
+  planPills,
   scaleRegions,
   signalsInView,
   tintFor,
+  umowy,
 } from './logic'
 
 const stat = (teryt: string, late: number, completed = 100): RegionStat => ({
@@ -111,6 +114,54 @@ describe('signals in view and pill stacking', () => {
   it('stacks pills per gmina', () => {
     const s = pillStacks(all)
     expect([s.get('1'), s.get('2'), s.get('3'), s.get('4')]).toEqual([0, 1, 0, 0])
+  })
+})
+
+describe('planPills', () => {
+  const g = (id: string, bzp: string, days: number): Signal => ({
+    ...sig(id, '14', '1434', '1434063'),
+    bzp,
+    days_late: days,
+  })
+  // one gmina: three parts of notice A, then notices B, C, D, E
+  const list = [g('a1', 'A', 900), g('a2', 'A', 900), g('a3', 'A', 900), g('b', 'B', 800), g('c', 'C', 700)]
+  const more = [...list, g('d', 'D', 600), g('e', 'E', 500)]
+  it('shows parts of one notice once and caps the stack with a count chip', () => {
+    const p = planPills(more)
+    expect(p.pills.map((x) => [x.s.id, x.stack])).toEqual([
+      ['a1', 0],
+      ['b', 1],
+      ['c', 2],
+    ])
+    expect(p.more).toEqual([{ key: '1434063', lon: 1, lat: 1, n: 2, stack: 3 }])
+  })
+  it('keeps the order when a contract is selected', () => {
+    expect(planPills(list, 'a3').pills.map((x) => x.s.id)).toEqual(['a3', 'b', 'c'])
+    expect(planPills(list, 'b').pills.map((x) => x.s.id)).toEqual(['a1', 'b', 'c'])
+  })
+  it('puts a selected contract below the cap in the top slot', () => {
+    expect(planPills(more, 'e').pills.map((x) => x.s.id)).toEqual(['a1', 'b', 'e'])
+  })
+  it('skips signals without coordinates', () => {
+    expect(planPills([{ ...g('x', 'X', 100), lon: null, lat: null }]).pills).toEqual([])
+  })
+})
+
+describe('placeBoxes', () => {
+  const box = (key: string, x: number, y: number) => ({ key, x, y, w: 40, h: 20 })
+  it('drops labels that overlap a placed one, a fixed box or the frame edge', () => {
+    const shown = placeBoxes(
+      [box('a', 10, 10), box('b', 30, 15), box('c', 100, 10), box('d', 200, 140), box('e', 290, 10)],
+      { w: 300, h: 200 },
+      [{ key: 'toolbar', x: 0, y: 150, w: 300, h: 50 }],
+    )
+    expect([...shown]).toEqual(['a', 'c'])
+  })
+})
+
+describe('umowy', () => {
+  it('declines', () => {
+    expect([1, 2, 5, 12, 22, 25].map(umowy)).toEqual(['umowa', 'umowy', 'umów', 'umów', 'umowy', 'umów'])
   })
 })
 

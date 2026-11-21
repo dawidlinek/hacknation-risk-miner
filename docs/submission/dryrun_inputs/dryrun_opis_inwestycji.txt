@@ -1,0 +1,66 @@
+[dryrun] OPIS PLANOWANEJ INWESTYCJI
+
+Budowa sieci kanalizacji sanitarnej wraz z przepompowniami ścieków w miejscowościach Olszynka i Zalesie, gmina Przykładowo, w formule „zaprojektuj i wybuduj”
+
+Dokument testowy (próba generalna przed testem organizatora). Gmina i miejscowości są fikcyjne.
+
+1. Informacje ogólne
+
+Zamawiający: Gmina Przykładowo, gmina wiejska w województwie łódzkim, około 6 200 mieszkańców. Inwestycja jest ujęta w Wieloletniej Prognozie Finansowej gminy na lata 2027–2029 oraz w aktualizacji Krajowego Programu Oczyszczania Ścieków Komunalnych jako przedsięwzięcie poza aglomeracją.
+
+Cel inwestycji: likwidacja około 210 zbiorników bezodpływowych i przydomowych oczyszczalni o niskiej skuteczności, ograniczenie wywozu nieczystości ciekłych oraz ochrona wód cieku Olszanka, który przepływa przez obie miejscowości i zasila zbiornik retencyjny gminy.
+
+Źródło finansowania: Fundusze Europejskie dla Łódzkiego 2021–2027, priorytet dotyczący gospodarki wodno-ściekowej, poziom dofinansowania do 70% kosztów kwalifikowanych, oraz środki własne gminy. Wniosek o dofinansowanie złożono we wrześniu 2026 r.; rozstrzygnięcie naboru spodziewane jest w I kwartale 2027 r. Warunkiem dofinansowania jest zakończenie rzeczowe przedsięwzięcia do 31.12.2028 r. i rozliczenie końcowe do 31.03.2029 r.
+
+Wartość szacunkowa zamówienia (projektowanie i roboty): 9 450 000 zł netto, tj. 11 623 500 zł brutto. W budżecie gminy na zadanie zabezpieczono 10 800 000 zł brutto, z czego 2 900 000 zł to środki własne. Kosztorys inwestorski sporządzono w czerwcu 2026 r. na podstawie wskaźników scalonych, bez dokumentacji projektowej.
+
+2. Zakres rzeczowy
+
+Przedmiotem zamówienia jest zaprojektowanie i wykonanie:
+a) sieci kanalizacji sanitarnej grawitacyjnej z rur PVC-U lub PP o średnicy DN 200 mm o łącznej długości około 7,4 km, ze studniami rewizyjnymi z tworzyw sztucznych i betonowymi na załamaniach trasy;
+b) rurociągów tłocznych z rur PE100 o średnicach DN 90–125 mm o łącznej długości około 2,3 km;
+c) 4 przepompowni sieciowych ścieków w wykonaniu podziemnym, z szafami sterowniczymi, zasilaniem energetycznym i ogrodzeniem, oraz systemem monitoringu i zdalnego sterowania (SCADA) zintegrowanym z dyspozytornią oczyszczalni;
+d) 210 przyłączy kanalizacyjnych (odcinków od kanału głównego do granicy działki, zakończonych studzienką przyłączeniową);
+e) przejścia pod drogą wojewódzką metodą przewiertu sterowanego w rurze osłonowej oraz przejścia pod ciekiem Olszanka (wymagane pozwolenie wodnoprawne);
+f) odtworzenia nawierzchni dróg gminnych po robotach (około 3,1 km nawierzchni bitumicznej i 1,2 km nawierzchni tłuczniowej) oraz poboczy i zjazdów.
+
+Ścieki z obu miejscowości będą odprowadzane do istniejącej gminnej oczyszczalni ścieków w miejscowości Przykładowo (przepustowość średnia 450 m3/d, obecne obciążenie około 85%). Rozbudowa oczyszczalni o reaktor i stację odwadniania osadów jest planowana jako odrębne zadanie na lata 2028–2029 i nie ma jeszcze zapewnionego finansowania. Podłączenie nowych użytkowników ponad obecny zapas przepustowości zależy od tej rozbudowy.
+
+3. Formuła realizacji i harmonogram
+
+Zamówienie zostanie udzielone w trybie podstawowym bez negocjacji (zamówienie krajowe poniżej progów unijnych), w formule „zaprojektuj i wybuduj” na podstawie programu funkcjonalno-użytkowego (PFU) opracowanego w sierpniu 2026 r. Zamówienie nie jest podzielone na części.
+
+Planowany harmonogram:
+- ogłoszenie postępowania: luty 2027 r.;
+- podpisanie umowy: maj 2027 r.;
+- termin realizacji całości: 18 miesięcy od dnia podpisania umowy, w tym opracowanie dokumentacji projektowej i uzyskanie pozwolenia na budowę oraz pozwolenia wodnoprawnego w ciągu 6 miesięcy;
+- zakończenie robót i odbiór końcowy: listopad 2028 r.
+
+Między planowanym końcem robót a terminem zakończenia rzeczowego wynikającym z umowy o dofinansowanie pozostaje około jednego miesiąca rezerwy.
+
+4. Uwarunkowania terenowe i stan przygotowania
+
+Własność terenu: trasa sieci przebiega głównie w pasach dróg gminnych, ale około 2,1 km przechodzi przez 35 działek prywatnych (grunty rolne i zabudowa zagrodowa). Do dnia sporządzenia opisu uzyskano oświadczenia o zgodzie na dysponowanie nieruchomością na cele budowlane od właścicieli 21 działek (60%). Pozostałe zgody ma uzyskać wykonawca na etapie projektowania; dla działek, których właściciele odmówią, gmina rozważy wywłaszczenie albo zmianę trasy.
+
+Warunki gruntowo-wodne: gmina dysponuje wyłącznie archiwalnymi badaniami geotechnicznymi z 2019 r. (6 otworów wiertniczych wykonanych dla budowy drogi gminnej w Olszynce). Według tych badań zwierciadło wody gruntowej występuje na głębokości 0,8–1,5 m poniżej poziomu terenu, a w dolinie cieku Olszanka stwierdzono grunty organiczne (torfy i namuły) o miąższości do 2,5 m. Nowych badań nie wykonano; PFU przewiduje, że dokumentację geotechniczną wykona wykonawca.
+
+Uzbrojenie terenu: w drogach gminnych przebiegają sieć wodociągowa (częściowo z lat 70., rury azbestowo-cementowe), gazociąg średniego ciśnienia i kable energetyczne. Inwentaryzacja sieci wodociągowej jest niekompletna, a mapy zasadnicze dla części Zalesia nie były aktualizowane od 2011 r.
+
+Środowisko i zabytki: około 400 m od trasy znajduje się granica obszaru Natura 2000 (dolina rzeki). Wniosek o wydanie decyzji o środowiskowych uwarunkowaniach złożono w październiku 2026 r.; postępowanie trwa. Część trasy w Olszynce przecina strefę ochrony konserwatorskiej stanowiska archeologicznego, co wymaga nadzoru archeologicznego w trakcie robót ziemnych.
+
+Doświadczenia z poprzednich zadań: w 2024 r. gmina unieważniła przetarg na budowę wodociągu w Zalesiu, ponieważ jedyna złożona oferta przekraczała kwotę przeznaczoną na sfinansowanie zamówienia o 38%. Ponowione postępowanie rozstrzygnięto, a umowę zrealizowano z opóźnieniem 4 miesięcy z powodu kolizji z niezinwentaryzowanymi kablami i robót dodatkowych.
+
+5. Projektowane postanowienia umowy (wyciąg)
+
+- Wynagrodzenie ryczałtowe za całość przedmiotu umowy, płatne fakturami częściowymi do 90% wartości, po odbiorach etapów; brak zaliczek.
+- Waloryzacja wynagrodzenia zgodnie z art. 439 ustawy Pzp: według wskaźnika cen produkcji budowlano-montażowej GUS, po przekroczeniu zmiany o 5% względem miesiąca złożenia oferty; łączna maksymalna zmiana wynagrodzenia z tytułu waloryzacji nie może przekroczyć 5% wartości umowy.
+- Ryzyko warunków gruntowo-wodnych: wykonawca uwzględni w cenie ryczałtowej wszelkie warunki gruntowe i wodne, w tym konieczność odwodnienia wykopów i wymiany gruntu, niezależnie od wyników badań, które wykona.
+- Ryzyko kolizji z uzbrojeniem terenu: koszty usunięcia kolizji z sieciami ujawnionymi w trakcie robót ponosi wykonawca.
+- Zmiany umowy: dopuszczalne w przypadkach określonych w art. 455 ustawy Pzp; zmiana terminu możliwa w razie przedłużenia procedur administracyjnych z przyczyn niezależnych od wykonawcy, nie więcej niż o 3 miesiące.
+- Kary umowne: 0,1% wynagrodzenia za każdy dzień zwłoki w wykonaniu przedmiotu umowy, łączny limit kar 20% wynagrodzenia.
+- Gwarancja jakości: 60 miesięcy od odbioru końcowego; zabezpieczenie należytego wykonania umowy: 5% ceny ofertowej.
+- Podwykonawstwo dopuszczone, z obowiązkiem przedkładania umów o podwykonawstwo.
+
+6. Pytania zamawiającego do analizy
+
+Zamawiający prosi o ocenę: (1) czy termin 18 miesięcy jest realny dla tego zakresu i formuły; (2) czy budżet 10 800 000 zł brutto wystarczy, biorąc pod uwagę podobne inwestycje; (3) które ryzyka powinny pozostać po stronie zamawiającego, a które można przenieść na wykonawcę; (4) jakie zapisy w SWZ i umowie warto zmienić przed ogłoszeniem postępowania.

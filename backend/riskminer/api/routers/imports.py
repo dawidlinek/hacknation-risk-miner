@@ -63,6 +63,19 @@ async def propose_mapping(code: str, request: Request, user: A.User = Depends(A.
     return res
 
 
+@router.post("/imports/{code}/documents", summary="Agent: przekaż dokumenty sprawy (PDF, DOCX, skan) do analizy dokumentów",
+             dependencies=CSRF)
+async def route_documents(code: str, request: Request, user: A.User = Depends(A.require_writer),
+                          s: A.Session = Depends(A.session), db: AsyncSession = DB):
+    """Files the agent did not recognise as a dataset or a project record go through the document pipeline (OCR, facts,
+    automatic project and contract linking, proposals for review): riskminer/imports/documents.py."""
+    from riskminer.imports import documents as D
+    res = _check(await D.route(db, code, actor=user.actor, anon_id=s.anon_id, user_actor=user.actor,
+                               request_id=A.request_id(request)), code)
+    await db.commit()
+    return res
+
+
 @router.post("/imports/{code}/answers", summary="Odpowiedz na pytania agenta", dependencies=CSRF)
 async def answers(code: str, body: dict[str, Any], request: Request, user: A.User = Depends(A.require_writer),
                   db: AsyncSession = DB):

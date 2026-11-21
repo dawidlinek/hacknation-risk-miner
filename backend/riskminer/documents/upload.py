@@ -39,8 +39,13 @@ LICENCE = "user-upload"
 ALLOWED = {".pdf": "application/pdf",
            ".docx": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
            ".doc": "application/msword",
-           ".odt": "application/vnd.oasis.opendocument.text"}
-MAGIC = {".pdf": (b"%PDF",), ".docx": (b"PK\x03\x04",), ".odt": (b"PK\x03\x04",), ".doc": (b"\xd0\xcf\x11\xe0",)}
+           ".odt": "application/vnd.oasis.opendocument.text",
+           ".rtf": "application/rtf",
+           ".txt": "text/plain; charset=utf-8",
+           ".md": "text/markdown; charset=utf-8"}
+MAGIC = {".pdf": (b"%PDF",), ".docx": (b"PK\x03\x04",), ".odt": (b"PK\x03\x04",), ".doc": (b"\xd0\xcf\x11\xe0",), ".rtf": (b"{\\rtf",)}
+TEXT_EXTS = {".txt", ".md"}       # plain text: no magic bytes; decoded (UTF-8, then CP1250) and split into pages
+TEXT_PAGE_CHARS = 3000
 MIN_CHARS_PER_PAGE = 40          # below this on average the PDF has no usable text layer (scan)
 SOFFICE_TIMEOUT_S = 120
 DATA_LOCATION = "PL (serwer ex ante)"
@@ -74,10 +79,41 @@ def check_file(filename: str, content: bytes, max_bytes: int) -> str:
         raise UploadError(413, f"Plik jest za duży (limit {max_bytes // (1024 * 1024)} MB).", "file_too_large")
     ext = Path(filename or "").suffix.lower()
     if ext not in ALLOWED:
-        raise UploadError(415, "Obsługujemy pliki PDF, DOCX, DOC i ODT.", "unsupported_type")
+        raise UploadError(415, "Obsługujemy pliki PDF, DOCX, DOC, ODT, RTF i TXT.", "unsupported_type")
+    if ext in TEXT_EXTS:
+        if b"\x00" in content[:4096] or decode_text(content) is None:
+            raise UploadError(415, "Zawartość pliku nie zgadza się z rozszerzeniem.", "type_mismatch")
+        return ext
     if not content.startswith(MAGIC[ext]):
         raise UploadError(415, "Zawartość pliku nie zgadza się z rozszerzeniem.", "type_mismatch")
     return ext
+
+
+def decode_text(content: bytes) -> str | None:
+    for enc in ("utf-8-sig", "cp1250"):
+        try:
+            return content.decode(enc)
+        except UnicodeDecodeError:
+            continue
+    return None
+
+
+def text_pages(text_: str, size: int = TEXT_PAGE_CHARS) -> list[str]:
+    """Plain text -> pages: form feeds if the file has them, else ~`size` characters cut at paragraph ends, so
+    a quote's page number stays stable for the same file."""
+    text_ = _clean(text_)
+    if "\f" in text_:
+        return [p for p in text_.split("\f")]
+    pages, cur = [], ""
+    for para in text_.split("\n\n"):
+        if cur and len(cur) + len(para) + 2 > size:
+            pages.append(cur)
+            cur = para
+        else:
+            cur = f"{cur}\n\n{para}" if cur else para
+    if cur or not pages:
+        pages.append(cur)
+    return pages
 
 
 def _clean(s: str) -> str:
@@ -119,6 +155,8 @@ def extract_pages(content: bytes, ext: str) -> Extracted:
         try:
             if ext == ".pdf":
                 return Extracted(pdf_pages(src), "pypdfium2")
+            if ext in TEXT_EXTS:
+                return Extracted(text_pages(decode_text(content) or ""), "plain-text")
             return Extracted(pdf_pages(to_pdf(src, Path(td))), "soffice->pdf+pypdfium2")
         except UploadError:
             raise
@@ -193,8 +231,10 @@ async def _existing_document(db: AsyncSession, sha: str, owner_anon: str, owner_
     r = (await db.execute(text("""
         SELECT d.id, d.filename, d.sha256, d.pages, d.doc_type, d.sensitivity, d.data, d.project_id
         FROM document d JOIN source s ON s.id = d.source_id AND s.kind = :k
-        WHERE d.sha256 = :s AND (d.data->>'owner_anon' = :a OR (CAST(:u AS text) IS NOT NULL AND d.data->>'owner_user' = :u))
-        ORDER BY d.id LIMIT 1"""), {"k": SOURCE_KIND, "s": sha, "a": owner_anon, "u": owner_user})).mappings().first()
+        WHERE d.sha256 = :s AND (d.data->>'owner_anon' = :a OR (CAST(:u AS text) IS NOT NULL AND d.data->>'owner_user' = :u)
+                                 OR d.sensitivity = 'public')
+        ORDER BY (d.data->>'owner_anon' = :a OR d.data->>'owner_user' = CAST(:u AS text)) IS TRUE DESC, d.id LIMIT 1"""),
+        {"k": SOURCE_KIND, "s": sha, "a": owner_anon, "u": owner_user})).mappings().first()
     return dict(r) if r else None
 
 
@@ -235,8 +275,17 @@ async def handle_upload(db: AsyncSession, *, filename: str, content: bytes, sens
     safe_name = Path(filename).name[:200]
 
     existing = await _existing_document(db, sha, owner_anon, user_actor)
-    if existing and (project_id is None or existing["project_id"] == project_id):
+    if existing:          # also for another project: documents/duplicates.py attaches it or asks (one row per file)
         dt = existing["data"] or {}
+        if sensitivity == "public" and existing["sensitivity"] == "confidential":
+            # the same owner uploads the same file again, now ticked public: that explicit choice wins (else the AI
+            # pass would stay blocked by the first, default-confidential upload); recorded like make-public
+            await db.execute(text("UPDATE document SET sensitivity = 'public', updated_at = now() WHERE id = :d"), {"d": existing["id"]})
+            await db.execute(text("""INSERT INTO audit_log (actor, action, table_name, row_id, before, after, request_id)
+                                     VALUES (:a, 'document.make_public', 'document', :d, CAST(:b AS jsonb), CAST(:af AS jsonb), :r)"""),
+                             {"a": actor, "d": existing["id"], "b": json.dumps({"sensitivity": "confidential"}),
+                              "af": json.dumps({"sensitivity": "public", "via": "re-upload"}), "r": request_id})
+            existing["sensitivity"] = "public"
         return {"document_id": existing["id"], "filename": existing["filename"], "sha256": sha, "pages": existing["pages"],
                 "doc_type": {"code": (existing["doc_type"] or "inne").upper(), "confidence": dt.get("doc_type_confidence"),
                              "method": dt.get("doc_type_method")},
@@ -250,7 +299,7 @@ async def handle_upload(db: AsyncSession, *, filename: str, content: bytes, sens
     text_path = None
     if ex.pages:
         tbytes = "\f".join(ex.pages).encode("utf-8")
-        tp = raw_dir() / f"{sha}.txt"
+        tp = raw_dir() / (f"{sha}.derived.txt" if ext in TEXT_EXTS else f"{sha}.txt")   # a .txt upload's raw bytes own <sha>.txt
         if not tp.exists():
             tp.write_bytes(tbytes)
         append_manifest({"source": SOURCE_KIND, "fetched_at": _utc(), "method": "DERIVED", "url": f"upload:{sha}#text",

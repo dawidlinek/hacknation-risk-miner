@@ -158,16 +158,27 @@ export function FileDrop({
   const [over, setOver] = useState(false)
   const [isPublic, setPublic] = useState(true)
   const [error, setError] = useState<string | null>(null)
-  const take = (f: File | undefined) => {
-    if (!f) return
-    const err = validateUpload(f)
-    setError(err)
-    if (!err) onFile(f, isPublic)
+  // every dropped or picked file is uploaded on its own (the three organizer documents may come in one drop)
+  const take = (list: FileList | null | undefined) => {
+    const files = [...(list ?? [])]
+    if (files.length === 0) return
+    const errors = files.map((f) => validateUpload(f))
+    setError(
+      errors.some(Boolean)
+        ? files
+            .map((f, i) => (errors[i] ? `${f.name}: ${errors[i]}` : ''))
+            .filter(Boolean)
+            .join(' ')
+        : null,
+    )
+    files.forEach((f, i) => {
+      if (!errors[i]) onFile(f, isPublic)
+    })
   }
   const onDrop = (e: DragEvent) => {
     e.preventDefault()
     setOver(false)
-    if (!disabledReason) take(e.dataTransfer.files[0])
+    if (!disabledReason) take(e.dataTransfer.files)
   }
   return (
     <fieldset
@@ -192,10 +203,11 @@ export function FileDrop({
         ref={input}
         type="file"
         accept={ACCEPT}
+        multiple
         className="sr-only"
         aria-label="Wybierz plik z dysku"
         onChange={(e) => {
-          take(e.target.files?.[0])
+          take(e.target.files)
           e.target.value = ''
         }}
       />

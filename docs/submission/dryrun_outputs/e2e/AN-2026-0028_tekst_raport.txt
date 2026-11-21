@@ -1,0 +1,104 @@
+Kanalizacja sanitarna, 7,4 km, 4 przepompownie
+AN-2026-0028, 10,8 mln zł brutto, 18 miesięcy, Fundusze Europejskie dla województwa (2021-2027)
+Edytuj założenia
+Pakiet do akt
+Podsumowanie
+Czerwony długopis
+Symulacja
+Podział ryzyk i pakiet
+W SKRÓCIE
+
+Podobne inwestycje (111 umów: kanalizacja sanitarna, wartość powyżej 10 mln zł) w 50% kończyły się po terminie. Przy planie 18 mies. szansa na termin to ok. 53%, a 8 na 10 umów skończyłoby się w 22 mies. Koszt kilometra (1,46 mln zł) jest wyższy niż w 77% umów.
+
+obliczenie, n = 111, szablon (bez AI)
+Czy zdążysz w 18 miesięcy?
+Raczej tak
+53% szans
+Ty
+14 mies.
+8 na 10 podobnych umów
+38 mies.
+obliczenie, n = 105, przedział 90%: 45%–61%
+Czy 10,8 mln zł wystarczy?
+Tak
+1,46 mln zł/km
+Ty
+0
+połowa podobnych umów
+2,0 mln zł/km
+obliczenie, n = 1962, 77. percentyl
+Czy zdążysz przed końcem programu?
+Tak
+98% szans
+Ty
+14 mies.
+8 na 10 podobnych umów
+38 mies.
+obliczenie, n = 105; termin programu: założenie eksperta
+Na co uważać przed przetargiem
+Zimowe roboty ziemne bez rezerwy
+Okres robót obejmuje grudzień–luty, a termin (18 mies.) jest krótszy niż mediana 18,7 mies.
+R16, obliczenie, n = 105
+Zapytaj o ten raport
+Dlaczego termin jest ryzykowny?
+Co najbardziej podnosi koszt?
+Których danych brakuje?
+Grupa porównawcza: 111 umów
+wszystkie wykonane umowy wod-kan, 2021–2026
+11 222
++ kanalizacja sanitarna
+4 287
++ wartość powyżej 10 mln zł
+111
++ zaprojektuj i wybuduj
+18
+
+Za mało podobnych umów (n = 18), więc pominięto formułę (zaprojektuj i wybuduj): n = 111.
+
+W tej grupie umowy „zaprojektuj i wybuduj” kończyły się po terminie o 7 pp częściej niż samo wykonanie.
+
+obliczenie, ogłoszenia o wykonaniu umów z BZP
+
+Sprawdziliśmy prognozy na 6 143 umowach zakończonych później: 85% opóźnień mieściło się w przedziale 8 na 10.
+
+Ograniczenia analizy (10)
+Podobne przypadki
+0,83
+Rozbudowa sieci kanalizacji sanitarnej na terenie Gminy Inowłódz
++139 dni
+koszt 0%
+ten sam podsektor, podobna wartość (8,3 wobec 10,8 mln zł), podobna długość sieci (6,1 wobec 7,4 km)
+0,83
+Wykonanie w trybie zaprojektuj i wybuduj zadania inwestycyjnego pn. Budowa sieci kanalizacji sanitarnej w Boguszynie, modernizacja stacji uzdatniania wody w Boguszynie i Dominicach (...)
+w terminie
+koszt +2,7%
+ten sam podsektor, podobny opis, podobna wartość (11,7 wobec 10,8 mln zł)
+0,76
+„Budowa sieci kanalizacji sanitarnej w Gminie Bestwina – sołectwo Kaniów”
++31 dni
+koszt +6,8%
+ten sam podsektor, podobny opis, podobna wartość (6,0 wobec 10,8 mln zł)
+przypadek zweryfikowany
+sygnał R16 → w tym przypadku też
+0,67
+Budowa kanalizacji sanitarnej w miejscowości Baszków Gmina Zduny - etap II
++40 dni
+koszt +14,4%
+ten sam podsektor, ten sam rodzaj robót, ten sam okres cen
+przypadek zweryfikowany
+podsektor
+formuła
+zakres i ilości
+wartość
+opis (tekst)
+inne cechy
+Co dopisać do umowy
+Warunki atmosferyczne
+Zimowe roboty ziemne bez rezerwy
+R16-K1
+Waloryzacja i model wynagrodzenia (art. 439)
+50% podobnych umów rozliczono ponad wartość (52 z 104).
+R08.1-K1
+Roboty dodatkowe i zamienne
+W 33 z 111 podobnych umów zmiany dotyczyły: nieprzewidziane zmiany i roboty dodatkowe.
+R01.1-K1

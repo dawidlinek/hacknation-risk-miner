@@ -157,6 +157,30 @@ def _owner(r: dict) -> str:
     return names.get(ch, ch or "")
 
 
+def _money_pl(m: dict) -> str:
+    """{'amount': '49903.54', 'currency': 'PLN', 'vat_basis': 'gross'} -> '49 903,54 zł brutto'."""
+    if not m or m.get("amount") in (None, ""):
+        return ""
+    try:
+        from riskminer.api.prov import fmt_num
+        amt = fmt_num(float(m["amount"]), 2)
+    except (TypeError, ValueError):
+        return f"{m.get('amount')} {m.get('currency', '')}".strip()
+    cur = "zł" if (m.get("currency") or "PLN") == "PLN" else m.get("currency")
+    vat = {"gross": " brutto", "net": " netto"}.get(m.get("vat_basis") or "", "")
+    return f"{amt} {cur}{vat}"
+
+
+def _quote_of(f: dict) -> str:
+    """The flag's quote with its page, for the signals table (the annex keeps the full source list)."""
+    q = f.get("quote") or next((r.get("quote") for r in ((f.get("prov") or {}).get("refs") or []) if r.get("quote")), None)
+    if not q:
+        return ""
+    page = (f.get("doc") or {}).get("page")
+    q = " ".join(str(q).split())
+    return f"„{q[:300]}{'…' if len(q) > 300 else ''}”" + (f" (s. {page})" if page else "")
+
+
 def risk_register(report: dict, inc_flags: list[dict]) -> list[list[str]]:
     """Rows: code, title, probability / key number, impact, expected cost, owner. Uses report['allocation'] when present."""
     rows: list[list[str]] = []
@@ -165,7 +189,7 @@ def risk_register(report: dict, inc_flags: list[dict]) -> list[list[str]]:
         for r in alloc:
             ec = (r.get("expected_cost") or {}).get("money") or {}
             rows.append([r.get("code"), r.get("title"), "", _disp(r.get("impact")) or r.get("impact_label") or "",
-                         f"{ec.get('amount', '')} {ec.get('currency', '')}".strip(), _owner(r)])
+                         _money_pl(ec), _owner(r)])
         return rows
     for f in inc_flags:
         for code in f.get("risk_codes") or [""]:
@@ -215,8 +239,10 @@ def build_docx(report: dict, annex: list[dict], hashes: dict[str, dict]) -> byte
     inc, exc = split_flags(report)
     _h(doc, "Sygnały ryzyka", 1)
     if inc:
-        _table(doc, ["Sygnał", "Opis", "Ryzyko", "Liczba (n)"],
-               [[f.get("title"), f.get("text"), ", ".join(f.get("risk_codes") or []), (_disp(f.get("number")) + (f" (n={_n_of(f.get('number'))})" if _n_of(f.get("number")) else "")).strip()]
+        _table(doc, ["Sygnał", "Opis", "Cytat (strona)", "Ryzyko", "Liczba (n)"],
+               [[(f.get("title") or "") + (" [AI, zatwierdzone]" if f.get("origin") == "AI" else ""), f.get("text"), _quote_of(f),
+                 ", ".join(f.get("risk_codes") or []),
+                 (_disp(f.get("number")) + (f" (n={_n_of(f.get('number'))})" if _n_of(f.get("number")) else "")).strip()]
                 for f in inc])
     else:
         doc.add_paragraph("Brak sygnałów w pakiecie.")

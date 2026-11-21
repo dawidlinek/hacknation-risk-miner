@@ -20,4 +20,22 @@ export function validateUpload(file: { name: string; size: number }): string | n
   return null
 }
 
+/** Toast after a card upload; a known file (same SHA-256) is reused, never an error. */
+export function uploadToast(
+  name: string,
+  r: {
+    duplicate?: boolean
+    attached?: string | null
+    previous?: { project_rm_id: string | null; open_review_items: number } | null
+  },
+): string {
+  if (!r.duplicate) return `${name}: dokument w kolejce. Fakty trafią do Przeglądu.`
+  const rm = r.previous?.project_rm_id
+  if (r.attached === 'also_linked')
+    return `${name}: ten plik już był przy projekcie ${rm ?? 'innym'}. Pokazujemy go też tutaj, a pytanie o projekt czeka w Przeglądzie.`
+  if (r.attached === 'attached')
+    return `${name}: ten plik już był. Dołączyliśmy go do tego projektu i powiązujemy ponownie.`
+  return `${name}: ten plik już był, pokazujemy jego fakty, sprawy i „Co się zmieniło”.`
+}
+
 export const READ_ONLY_REASON = 'To konto jest tylko do odczytu, dodawanie dokumentów jest wyłączone.'

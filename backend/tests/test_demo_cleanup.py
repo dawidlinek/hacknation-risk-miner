@@ -38,3 +38,30 @@ async def test_cleanup_removes_only_e2e_artefacts(tmp_path):
             assert any(x["table"] == "document" and x["row"]["id"] == gone for x in lines)
         finally:
             await tr.rollback()
+
+
+async def test_cleanup_removes_dryrun_project_but_keeps_national_events(tmp_path):
+    """A dry-run project linked to a real procedure: the project and its links go; BZP-derived risk events that the
+    link attached are detached (project_id NULL), never deleted."""
+    async with raw_conn() as conn:
+        tr = conn.transaction()
+        await tr.start()
+        try:
+            proc = await conn.fetchval("SELECT procedure_id FROM risk_event WHERE procedure_id IS NOT NULL AND key NOT LIKE "
+                                       "'doc:%' AND project_id IS NULL LIMIT 1")
+            pid = await conn.fetchval("INSERT INTO project (rm_id, title, is_pilot, origin, review_status) VALUES "
+                                      "('RM-DRY-2026-999', '[dryrun] test', false, 'SOURCE', 'auto') RETURNING id")
+            await conn.execute("INSERT INTO project_procedure (project_id, procedure_id, method) VALUES ($1, $2, 'test')",
+                               pid, proc)
+            ev = await conn.fetch("UPDATE risk_event SET project_id = $1 WHERE procedure_id = $2 AND key NOT LIKE 'doc:%' "
+                                  "RETURNING id", pid, proc)
+            res = await demo_cleanup.run(conn, apply=True, actor="test", backup_dir=tmp_path)
+            assert "RM-DRY-2026-999" in [p["rm_id"] for p in res["projects"]]
+            assert res["deleted"]["project"] >= 1 and res["deleted"]["risk_event_detached"] >= len(ev)
+            assert await conn.fetchval("SELECT count(*) FROM project WHERE id = $1", pid) == 0
+            ids = [r["id"] for r in ev]
+            assert await conn.fetchval("SELECT count(*) FROM risk_event WHERE id = ANY($1::bigint[]) AND project_id IS NULL",
+                                       ids) == len(ids)
+            assert await conn.fetchval("SELECT count(*) FROM project WHERE is_pilot") == 22
+        finally:
+            await tr.rollback()

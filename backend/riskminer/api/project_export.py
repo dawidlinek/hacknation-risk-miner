@@ -239,7 +239,7 @@ async def build(db: AsyncSession, rm_id: str, user: A.User | None) -> dict:
         docs = await rows(db, f"""SELECT d.id, d.doc_type, d.title, d.filename, d.url, d.sha256, d.pages, d.sensitivity, d.source_id, d.fetch_state,
                                          d.data->'facts'->>'doc_kind_label' AS kind_label, d.data->'facts'->>'doc_date' AS doc_date,
                                          (d.data ? 'facts') AS has_facts
-                                  FROM document d WHERE d.project_id = :p AND {A.public_doc_filter(user)} AND {A.public_filter(user, 'd')}
+                                  FROM document d WHERE d.project_id = :p AND d.fetch_state = 'found' AND {A.public_doc_filter(user)} AND {A.public_filter(user, 'd')}
                                   ORDER BY d.id""", p=pid)
     changed = []
     if p["kind"] == "pilot_project":
@@ -249,10 +249,15 @@ async def build(db: AsyncSession, rm_id: str, user: A.User | None) -> dict:
                 continue
             try:
                 cs = await doclink.changes_since(db, rm_id, d["id"])
-            except Exception:  # noqa: BLE001 - a document without linked facts has no diff yet
+            except Exception:  # noqa: BLE001, S112 - a document without linked facts has no diff yet
                 continue
+            groups = cs.get("groups") or {}
+            if not any(groups.get(k) for k in ("potwierdzone", "zmienione", "nowe", "zamkniete")):
+                continue                                    # a document that changed nothing is not news
             changed.append({"document_id": d["id"], "document": d.get("kind_label") or d.get("title") or d.get("filename"),
-                            **{k: cs.get(k) for k in ("confirmed", "changed", "new", "closed", "summary", "aggregates") if k in cs}})
+                            "date": (cs.get("document") or {}).get("date"),
+                            **{k: groups.get(k) or [] for k in ("potwierdzone", "zmienione", "nowe", "zamkniete")},
+                            "aggregates": cs.get("aggregates") or {}, "analyses_to_rerun": cs.get("analyses_to_rerun") or []})
 
     # ---- sources ------------------------------------------------------------------------------------------------
     sids = {p.get("source_id")} | {c.get("source_id") for c in ch["contracts"]} | {x.get("source_id") for x in ch["perf"]} | \
@@ -328,8 +333,8 @@ def sections(x: dict) -> list[tuple[str, list[str] | None, list[list[str]] | Non
     ident = [["Identyfikator rekordu", r["rm_id"]], ["Nazwa przedsięwzięcia", r["title"]],
              ["Odbiorca (zamawiający)", f"{r['beneficiary']['name'] or ''}, NIP {r['beneficiary']['nip'] or 'brak'}"
               + (" (suma kontrolna poprawna)" if r["beneficiary"].get("nip_valid") else "")],
-             ["Województwo (TERYT), siedziba", f"{ids.WOJ.get(r['location'].get('teryt_woj') or '', '')} ({r['location'].get('teryt_woj') or 'brak'}), "
-                                               f"{r['location'].get('city') or 'brak'}"],
+             ["Województwo (TERYT), siedziba", (f"{ids.WOJ.get(r['location'].get('teryt_woj') or '', '')} ({r['location'].get('teryt_woj') or 'brak'}), "
+                                               f"{r['location'].get('city') or 'brak'}")],
              ["Identyfikator publiczny", f"{r.get('public_id_type') or ''}: {r.get('public_id') or 'brak'}"],
              ["Zakres rekordu", r.get("scope") or "brak"], ["Status", r.get("status") or "brak"],
              ["Podsektor, formuła", f"{r.get('subsector_main') or 'brak'}, {DELIVERY_PL.get(r.get('delivery_model'), r.get('delivery_model') or 'brak')}"],
@@ -367,9 +372,9 @@ def sections(x: dict) -> list[tuple[str, list[str] | None, list[list[str]] | Non
                        _m(d.get("contract_value")), _m(d.get("paid")), _n(d.get("cost_dev_pct"), "%"), d.get("performance_notice") or "brak"])
     v = pva["values"]
     out.append(("4. Plan i wykonanie", [pva["summary"],
-                                        f"Szacunek zamawiającego (BZP): {_m(v.get('estimate_bzp'))}. Umowy razem: {_m(v.get('contracts_total'))}. "
+                                        (f"Szacunek zamawiającego (BZP): {_m(v.get('estimate_bzp'))}. Umowy razem: {_m(v.get('contracts_total'))}. "
                                         f"Wypłacono razem: {_m(v.get('paid_total'))}. Odchylenie kosztu: {_n(v.get('cost_dev_pct'), '%')}. "
-                                        f"Wartość przedsięwzięcia z rekordu: {_m(v.get('funding_value'))}."],
+                                        f"Wartość przedsięwzięcia z rekordu: {_m(v.get('funding_value'))}.")],
                 d_rows if len(d_rows) > 1 else None, [pva["vat_note"], "Opóźnienie i odchylenie to wyliczenia (CALC) z ogłoszenia o wykonaniu umowy."]))
     ch_rows = [["Data", "Źródło", "Podstawa", "Rodzaj zmiany", "Termin", "Kwota", "Przyczyna (cytat)", "Pochodzenie"]]
     for c in x["changes"]:
@@ -413,9 +418,9 @@ def sections(x: dict) -> list[tuple[str, list[str] | None, list[list[str]] | Non
     paras = []
     for w in wc:
         paras.append(f"Dokument {w['document_id']} ({w.get('document')}):")
-        for key, label in (("confirmed", "potwierdzone"), ("changed", "zmienione"), ("new", "nowe"), ("closed", "zamknięte")):
+        for key, label in (("potwierdzone", "potwierdzone"), ("zmienione", "zmienione"), ("nowe", "nowe"), ("zamkniete", "zamknięte")):
             for it in w.get(key) or []:
-                val = it.get("value") or (f"{it.get('before')} → {it.get('after')}" if it.get("before") or it.get("after") else "")
+                val = it.get("value") or (f"{it.get('before')} na {it.get('after')}" if it.get("before") or it.get("after") else "")
                 paras.append(f"  {label}: {it.get('label')}{': ' + str(val) if val else ''}")
     docs = x["documents"]
     d2 = [["Nr", "Dokument", "Rodzaj", "Strony", "sha256"], *[[str(d["id"]), d.get("title") or d.get("filename") or "", d.get("kind_label") or d.get("doc_type") or "",
@@ -435,8 +440,8 @@ def sections(x: dict) -> list[tuple[str, list[str] | None, list[list[str]] | Non
 def to_markdown(x: dict) -> str:
     r = x["record"]
     lines = [f"# Rekord projektu {r['rm_id']}", "", f"**{r.get('title') or ''}**", "",
-             f"Eksport z Risk Miner, {PV.pl_date(str(x['meta']['generated_at'])[:10])}, widok: {x['meta']['view']}. "
-             "Każdy fakt ma pochodzenie: źródło (SOURCE), wyliczenie (CALC) albo model AI (AI, zawsze jako propozycja).", ""]
+             (f"Eksport z Risk Miner, {PV.pl_date(str(x['meta']['generated_at'])[:10])}, widok: {x['meta']['view']}. "
+             "Każdy fakt ma pochodzenie: źródło (SOURCE), wyliczenie (CALC) albo model AI (AI, zawsze jako propozycja)."), ""]
     for head, paras, table, notes in sections(x):
         lines += [f"## {head}", ""]
         for p in paras or []:
