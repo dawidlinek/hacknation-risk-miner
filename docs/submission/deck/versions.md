@@ -70,7 +70,7 @@ live system differs.
 | Path b report (AN-2026-0018) | 82 similar contracts, P(on time) about 34%, cost per km above 68% of contracts | n = 82 | live report screen |
 | Example road analysis | n = 893, 73% on time, 0,83 mln zł/km | one analysis | `overnight_log.md` 21:27 |
 
-Still `[do sprawdzenia]` or placeholders: team names on slide 10, the public demo URL on slide 10, and the ask
+Still `[do sprawdzenia]` or placeholders: team names on slide 10, and the ask
 items (pilot scope) are a proposal for the team to confirm.
 
 ## How the PDF was made

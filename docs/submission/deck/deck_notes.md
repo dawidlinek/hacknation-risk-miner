@@ -74,7 +74,7 @@ All numbers are on the slides with their `n`. Sources: `GET /api/analytics/headl
 ## Before Sunday 11:00
 
 - Fill the team names on slide 10 (`[Imię Nazwisko]` placeholders).
-- Replace `demo: [adres do sprawdzenia]` on slide 10 with the public URL once the deploy is live, or delete the line.
+- Slide 10 shows the live demo: exante.linek.dev.
 - The walkthrough screens come from analysis AN-2026-0018 (created for the screenshots as an anonymous visitor).
 - Re-check `3 397` on slide 9 against `GET /api/monitoring/signals` on the morning of the submission.
 - Export the final PDF from the deck (Share, Export, PDF) or use `ex-ante-pitch.pdf` in this folder.
