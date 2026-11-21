@@ -86,7 +86,8 @@ export const askQuestion = async (question: string): Promise<AskAnswer> => {
     method: 'POST',
     json: { question, route },
   })
-  return { ...adaptAnswer(res.answer, question), steps: res.steps ?? [] }
+  // the agent's own label ("odpowiedź asystenta na podstawie narzędzi"), not the approved-events label of AI answers
+  return { ...adaptAnswer(res.answer, question), role_label: res.answer.role_label, steps: res.steps ?? [] }
 }
 
 export const askProject = async (rmId: string, message: string): Promise<AskAnswer> =>
