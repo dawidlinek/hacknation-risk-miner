@@ -1,40 +1,20 @@
-# CI (verification.md §3). Big data never enters CI: no national DB, no data/, no materials/.
-# backend: tests marked `unit` (no database) + syntax/undefined-name lint. frontend: typecheck, lint, unit tests, build.
-# End-to-end (frontend/e2e, Playwright) needs the full stack and runs locally / against the rehearsal URL:
-#   E2E_BASE_URL=https://… npx playwright test --project=live
+# CI for ex ante: lint, typecheck, unit/component tests and licence gates.
+# e2e (Playwright) needs the live database and stays local: `cd frontend && npx playwright test --project=live`.
 name: ci
+
 on:
   push:
     branches: [main]
   pull_request:
-  workflow_dispatch:
 
 concurrency:
   group: ci-${{ github.ref }}
   cancel-in-progress: true
 
-jobs:
-  backend:
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: backend
-    env:
-      DATABASE_URL: postgresql+asyncpg://ci:ci@127.0.0.1:1/none   # unit tests must not touch a database
-      RISKMINER_LLM_FAKE: "1"
-    steps:
-      - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v6
-        with:
-          python-version: "3.12"
-      - run: uv sync --frozen
-      - name: Lint (syntax errors, undefined names)
-        run: uv run --no-sync ruff check riskminer tests --select E9,F63,F7,F82
-      - name: Unit tests (no database)
-        run: uv run --no-sync pytest -q -p no:cacheprovider -m "unit and not mutates and not live and not live_llm"
-      - name: OpenAPI contract export
-        run: uv run --no-sync python ../scripts/export_openapi.py /tmp/openapi.json
+permissions:
+  contents: read
 
+jobs:
   frontend:
     runs-on: ubuntu-latest
     defaults:
@@ -44,15 +24,55 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: "24"
+          node-version: 24
           cache: npm
           cache-dependency-path: frontend/package-lock.json
-      - run: npm ci
+      - run: npm ci --no-audit --no-fund
+      - name: Route tree
+        run: npx tsr generate
       - name: Typecheck
-        run: npm run typecheck
-      - name: Lint (biome)
-        run: npm run lint
-      - name: Unit tests (vitest)
+        run: npx tsc -b --noEmit
+      - name: Lint (Biome)
+        run: npx biome check src e2e
+      - name: Copy rules (no U+2014, no U+00B7)
+        run: node scripts/check-copy.mjs
+      - name: Vitest (unit + component, MSW node)
         run: npx vitest run
       - name: Build
-        run: npm run build
+        run: npx vite build
+      - name: Licences (production deps, permissive only)
+        run: >-
+          npx license-checker-rseidelsohn --production --excludePrivatePackages --onlyAllow
+          "MIT;ISC;BSD-2-Clause;BSD-3-Clause;Apache-2.0;0BSD;CC0-1.0;OFL-1.1;BlueOak-1.0.0;Unlicense;MIT OR Apache-2.0;(MIT OR Apache-2.0);MIT OR CC0-1.0;MIT AND ISC AND BSD-3-Clause;(MIT AND ISC AND BSD-3-Clause)"
+
+  backend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    env:
+      # No database in CI: only tests marked `unit` run (DB, network and model tests stay local).
+      DATABASE_URL: postgresql+asyncpg://ci:ci@127.0.0.1:1/none
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: '3.12'
+          enable-cache: true
+          cache-dependency-glob: backend/uv.lock
+      - run: uv sync --frozen
+      - name: Ruff (syntax errors and undefined names)
+        run: uv run --no-sync ruff check --select E9,F63,F7,F82 .
+      - name: Pytest (non-mutating, no database)
+        run: uv run --no-sync pytest -q -m unit -p no:cacheprovider
+      - name: Banned dependencies (CLAUDE.md invariant 5)
+        run: |
+          banned='pymupdf|fitz|ocrmypdf|ghostscript|marker-pdf|surya-ocr|mineru|magic-pdf|litellm|psycopg|psycopg2|psycopg-binary|psycopg2-binary'
+          if grep -iE "^name = \"(${banned})\"$" uv.lock; then
+            echo "::error::banned dependency in backend/uv.lock (see CLAUDE.md invariant 5)"; exit 1
+          fi
+          if grep -iE '"node_modules/(pymupdf|ghostscript|litellm)[^"]*"' ../frontend/package-lock.json; then
+            echo "::error::banned dependency in frontend/package-lock.json"; exit 1
+          fi
+      - name: Licences (declared copyleft or non-commercial fails)
+        run: uvx pip-licenses@5 --python .venv/bin/python --from=mixed --fail-on "GPL;Commons Clause;Non-Commercial" --partial-match

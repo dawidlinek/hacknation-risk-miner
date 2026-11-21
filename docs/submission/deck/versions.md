@@ -35,11 +35,14 @@ side-by-side comparison; the decks below stay the editable, presentable and expo
 
 ## Storyline (all versions)
 
-1 Hook (national numbers), 2 Problem (six scattered sources), 3 Solution (ex ante, tagline), 4 Demo path b
-(five steps, design-build 45% vs 28%), 5 Data path a (23 sources, 249 tys. notices, 22 z 22, chain, "Co się
-zmieniło"), 6 Trust (98,8%, 43 z 43, 80–88%, 80% vs 37%), 7 Expert control and learning (queue, catalogue, few-shot,
-R18), 8 Sovereignty (Bielik and PLLuM on WCSS, Gemini with Mistral fallback, config, licences), 9 Scale (roads,
-3 397 overdue), 10 Ask and team.
+1 Hook (national numbers), 2 Problem (six scattered sources), 3 Rozwiązanie (three points + Pulpit screen),
+4 Ścieżka b, kroki 1 i 2 (Nowa inwestycja and Raport screens), 5 Ścieżka b, kroki 3 do 5 (Czerwony długopis,
+Symulacja, Podział ryzyk i pakiet), 6 Ścieżka a (Projekty, karta Steklin, graf powiązań + 23 / 249 tys. / 128 tys. /
+3 z 3), 7 Zaufanie (98,8%, 43 z 43, 80–88%, 80% vs 37%), 8 Kontrola eksperta i suwerenność (Przegląd and Ustawienia
+screens), 9 Skala (Monitoring map, 3 397, roads), 10 Prośba i zespół.
+
+All screens are real captures of the running app (1600x1000, 21.11.2026), path b from analysis AN-2026-0018.
+Sources: `scratchpad/screens` capture script driven by the app's own demo-login personas.
 
 ## Verified numbers
 
@@ -64,6 +67,7 @@ live system differs.
 | Cause classification, gold set | AI 80%, keyword rules 37% | n = 150 | be-llm eval, `exports/eval/` |
 | Ongoing contracts > 90 days past planned end | 3 397 | of 3 803 with a signal, 21.11.2026 | `GET /api/monitoring/signals`; the brief's 3 321 is the research figure, and the live value moves daily |
 | Roads notices | 134 tys. (134 287) | | `GET /api/stats` |
+| Path b report (AN-2026-0018) | 82 similar contracts, P(on time) about 34%, cost per km above 68% of contracts | n = 82 | live report screen |
 | Example road analysis | n = 893, 73% on time, 0,83 mln zł/km | one analysis | `overnight_log.md` 21:27 |
 
 Still `[do sprawdzenia]` or placeholders: team names on slide 10, the public demo URL on slide 10, and the ask

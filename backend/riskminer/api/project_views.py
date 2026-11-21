@@ -509,6 +509,14 @@ async def similar_cases(db: AsyncSession, rm_id: str, k: int = 5) -> list[dict]:
     return out
 
 
+async def _safe(coro) -> list:
+    """Secondary card sections degrade to an empty list (empty or restoring database) instead of failing the whole card."""
+    try:
+        return await coro
+    except Exception:
+        return []
+
+
 async def _from_documents(db: AsyncSession, ch: dict) -> list[dict]:
     """"Nowe w bazie dzięki temu dokumentowi" for every document of the project that was read and linked."""
     from riskminer.review import doclink
@@ -563,8 +571,8 @@ async def card(db: AsyncSession, rm_id: str, user: A.User | None) -> dict | None
                  for x in (docs or {}).get("expected", []) if not x["have"]],
         "doc_counts": {"have": (docs or {}).get("have", 0), "expected": (docs or {}).get("expected_total", 0)},
         "identifiers": ident,
-        "similar": await similar_cases(db, rm_id, 5),
+        "similar": await _safe(similar_cases(db, rm_id, 5)),
         "unverified_hidden": ch["hidden"],
-        "from_documents": await _from_documents(db, ch),
+        "from_documents": await _safe(_from_documents(db, ch)),
         "chat": {"suggestions": ["Dlaczego umowa skończyła się po terminie?", "Co zmieniło wartość umowy?"]},
     }

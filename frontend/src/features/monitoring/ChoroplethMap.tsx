@@ -385,7 +385,7 @@ export function ChoroplethMap(p: ChoroplethMapProps) {
                 <button
                   type="button"
                   onClick={() => p.onSelectSignal(s)}
-                  aria-label={`Umowa ${s.buyer}, ${s.days_late ?? 0} dni po terminie`}
+                  aria-label={`+${fmtInt(s.days_late ?? 0)} d, ${s.buyer}, po terminie`}
                   className={cn(
                     'rounded-pill border px-2 py-0.5 text-[11px] font-semibold whitespace-nowrap shadow-sm',
                     on

@@ -1,10 +1,11 @@
 // axe sweep (wcag2a/aa/21a/21aa; fails on serious + critical) over every flagged-on route, on the real backend.
 // Public routes run anonymous; expert routes run as the read-only demo persona "juror" (nothing is written).
-// Flow 1 pages use an analysis created in this browser context (analyses are owner-only) with the synthetic
-// public PFU (document 33366) attached. Owners: A for analizy/** and replay, F2 for the rest.
+// Flow 1 pages use an analysis created in this browser context (analyses are owner-only) with a public PFU
+// uploaded in the same context (local data/raw file; the Red Pen page is skipped without it).
+// Owners: A for analizy/** and replay, F2 for the rest.
 import { expect, type Page, test } from '@playwright/test'
 import { expectNoA11yViolations } from './a11y'
-import { anyOcid, createAnalysis, loginAs, PUBLIC_PFU, realBackend } from './helpers'
+import { anyOcid, createAnalysis, loginAs, realBackend, uploadPublicPfu } from './helpers'
 
 async function check(page: Page, path: string) {
   await page.goto(path)
@@ -44,9 +45,10 @@ test.describe('a11y public', () => {
   test('Flow 1 on an own analysis', async ({ page }) => {
     test.setTimeout(180_000)
     await page.goto('/zaloguj')
-    const code = await createAnalysis(page.request, [PUBLIC_PFU])
-    for (const sub of ['', `/dokumenty/${PUBLIC_PFU}`, '/symulacja', '/pakiet'])
-      await check(page, `/analizy/${code}${sub}`)
+    const doc = await uploadPublicPfu(page.request)
+    const code = await createAnalysis(page.request, doc ? [doc] : [])
+    const subs = ['', ...(doc ? [`/dokumenty/${doc}`] : []), '/symulacja', '/pakiet']
+    for (const sub of subs) await check(page, `/analizy/${code}${sub}`)
   })
 })
 

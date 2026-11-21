@@ -1,3 +1,5 @@
+import { existsSync, readFileSync } from 'node:fs'
+import { resolve } from 'node:path'
 import type { APIRequestContext, Page } from '@playwright/test'
 import { expect } from '@playwright/test'
 
@@ -50,4 +52,23 @@ export async function anyOcid(request: APIRequestContext): Promise<string> {
   return items[0].ocid
 }
 
-export const PUBLIC_PFU = 33366
+/** A real public PFU from the docs_22 download (local data, not in git). */
+export const PFU_FILE = resolve(
+  import.meta.dirname,
+  '../../data/raw/docs_22/2026-11-21/RM-2026-013/files/9cdc085eedd413b1_PFU_Kaniów.pdf',
+)
+
+/** Uploads the public PFU in this browser context; returns its document id, or null when the file is absent. */
+export async function uploadPublicPfu(request: APIRequestContext): Promise<number | null> {
+  if (!existsSync(PFU_FILE)) return null
+  const r = await request.post('/api/documents/upload', {
+    headers: CSRF,
+    multipart: {
+      file: { name: 'PFU_Kaniow_e2e.pdf', mimeType: 'application/pdf', buffer: readFileSync(PFU_FILE) },
+      sensitivity: 'public',
+    },
+  })
+  expect(r.ok(), await r.text()).toBeTruthy()
+  const body = (await r.json()) as { document_id?: number; id?: number }
+  return (body.document_id ?? body.id) as number
+}

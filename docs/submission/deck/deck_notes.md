@@ -8,16 +8,20 @@ inside the 2 minutes on slide 4. If the demo cannot run, stay on slide 4 and say
 
 ## Timing and mapping
 
+Slides 4 to 6 are a walkthrough of the real app (screens captured from the running system on 21.11.2026,
+analysis AN-2026-0018). Live, switch to the app on slide 4 and come back on slide 7; if the demo cannot run,
+the walkthrough slides carry the same story.
+
 | Time | Slide | What happens |
 |---|---|---|
 | 0:00 to 0:15 | 1 Hook | Numbers only. No product name yet. |
 | 0:15 to 0:25 | 2 Problem | Six sources, no memory. |
-| 0:25 to 0:35 | 3 Solution | One sentence and the tagline. |
-| 0:35 to 1:15 | 4 Demo (path b) | Switch to the app: `/analizy/nowa` → report → Czerwony długopis → symulacja → pakiet. |
-| 1:15 to 1:30 | 5 Data (path a) | Back to slides. Say the numbers, skip the chain. |
-| 1:30 to 1:45 | 6 Trust | Two numbers: 80–88% and 80% vs 37%. |
-| 1:45 to 1:55 | 7 + 8 | One line each: the expert decides, confidential stays in Poland. |
-| 1:55 to 2:00 | 10 Ask | The ask and the tagline. Slide 9 is shown only if there is time or a question. |
+| 0:25 to 0:35 | 3 Rozwiązanie | One sentence, the Pulpit screen. |
+| 0:35 to 1:05 | 4, 5 Ścieżka b | Live: `/analizy/nowa` → report → Czerwony długopis → Symulacja → Podział ryzyk i pakiet. Backup: the two slides. |
+| 1:05 to 1:20 | 6 Ścieżka a | Projekty → karta Steklin → graf powiązań; say the four numbers in the strip. |
+| 1:20 to 1:35 | 7 Zaufanie | Two numbers: 80–88% and 80% vs 37%. |
+| 1:35 to 1:50 | 8 Kontrola i suwerenność | Przegląd and Ustawienia, one line each. |
+| 1:50 to 2:00 | 10 Prośba | The ask and the tagline. Slide 9 (map, 3 397, roads) only if there is time or a question. |
 
 ## Script (Polish)
 
@@ -26,21 +30,21 @@ inside the 2 minutes on slide 4. If the demo cannot run, stay on slide 4 and say
 
 **[2]** Ta wiedza istnieje. Leży w BZP, TED, BIP, KIO, NIK i w aneksach. Ale każda gmina uczy się sama.
 
-**[3]** Dlatego zbudowaliśmy ex ante. Wiedza ex post, decyzje ex ante.
+**[3]** Dlatego zbudowaliśmy ex ante. Wiedza ex post, decyzje ex ante. Tak wygląda pulpit.
 
-**[4, demo]** Opisuję nową inwestycję: kanalizacja, sześć kilometrów, zaprojektuj i wybuduj. Po kilku sekundach
-mam raport: podobne zakończone przypadki i dlaczego są podobne, szanse na termin, koszt za kilometr na tle kraju.
-Czerwony długopis zaznacza ryzykowne zapisy w PFU i proponuje lepszą klauzulę. Symulacja pokazuje, co daje
-na przykład badanie gruntu przed przetargiem. Na końcu podział ryzyk i pakiet do akt.
+**[4, demo]** Opisuję nową inwestycję: kanalizacja, sześć kilometrów, zaprojektuj i wybuduj, 7 milionów. Po kilku
+sekundach mam raport: 82 podobne umowy, szansa na termin około 34 procent, kilometr droższy niż w 68 procentach umów.
 
-**[5]** Pod spodem: 23 publiczne źródła, prawie 250 tysięcy ogłoszeń, 22 z 22 projektów pilotażowych powiązanych,
-a każda umowa w kraju ma swoją kartę. Nowy dokument, jak protokół od organizatorów, sam się wiąże i pokazuje,
-co się zmieniło.
+**[5, demo]** Czerwony długopis zaznacza ryzykowny zapis w PFU i daje gotową klauzulę. Symulacja pokazuje, kiedy
+skończę i co najbardziej przesuwa termin. Na końcu podział ryzyk i pakiet do akt.
 
-**[6]** Nie prosimy o zaufanie, mierzymy. Na 6 143 umowach, których model nie widział, 80 do 88 procent wyników
+**[6]** Druga ścieżka: 22 projekty pilotażowe, wszystkie powiązane. Karta Steklina: 277 dni po terminie, a graf
+pokazuje, skąd jest każdy fakt. Pod spodem 23 źródła i prawie 250 tysięcy ogłoszeń.
+
+**[7]** Nie prosimy o zaufanie, mierzymy. Na 6 143 umowach, których model nie widział, 80 do 88 procent wyników
 mieści się w naszym przedziale. AI trafia przyczynę zmian w 80 procentach, reguły w 37.
 
-**[7, 8]** Każdy wniosek AI zatwierdza ekspert. Dokumenty poufne przetwarzają tylko polskie modele.
+**[8]** Każdy wniosek AI zatwierdza ekspert. Dokumenty poufne czyta tylko polski model.
 
 **[10]** Prosimy o pilotaż na prawdziwych naborach. ex ante: wiedza ex post, decyzje ex ante. Dziękujemy.
 
@@ -71,5 +75,6 @@ All numbers are on the slides with their `n`. Sources: `GET /api/analytics/headl
 
 - Fill the team names on slide 10 (`[Imię Nazwisko]` placeholders).
 - Replace `demo: [adres do sprawdzenia]` on slide 10 with the public URL once the deploy is live, or delete the line.
+- The walkthrough screens come from analysis AN-2026-0018 (created for the screenshots as an anonymous visitor).
 - Re-check `3 397` on slide 9 against `GET /api/monitoring/signals` on the morning of the submission.
 - Export the final PDF from the deck (Share, Export, PDF) or use `ex-ante-pitch.pdf` in this folder.

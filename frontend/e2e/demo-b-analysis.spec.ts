@@ -3,19 +3,15 @@
 // -> 1.5 Podział ryzyk -> PDF (and DOCX) download. Creates one [e2e] AN-… analysis per run.
 // Run: npx playwright test e2e/demo-b-analysis.spec.ts --project=live
 import { existsSync } from 'node:fs'
-import { resolve } from 'node:path'
 import { expect, test } from '@playwright/test'
 import { expectNoA11yViolations } from './a11y'
-import { realBackend } from './helpers'
+import { PFU_FILE, realBackend } from './helpers'
 
 const DESCRIPTION =
   'Budowa kanalizacji sanitarnej ok. 6 km z 3 przepompowniami w formule zaprojektuj i wybuduj, ' +
   'budżet 7 mln zł brutto, termin 14 miesięcy, finansowanie FEnIKS. [e2e]'
-// A real public PFU from the docs_22 download (local data, not in git). Without it the Red Pen step is skipped.
-const PFU = resolve(
-  import.meta.dirname,
-  '../../data/raw/docs_22/2026-11-21/RM-2026-013/files/9cdc085eedd413b1_PFU_Kaniów.pdf',
-)
+// Without the local PFU file (helpers.PFU_FILE) the Red Pen step is skipped.
+const PFU = PFU_FILE
 
 test.describe('demo (b): nowa inwestycja do pakietu', () => {
   test.beforeEach(async ({ page }) => realBackend(page))
