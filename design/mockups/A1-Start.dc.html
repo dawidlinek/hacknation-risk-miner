@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Nowa analiza</title>
+<script src="./support.js"></script>
+<script src="/_blob/193d5fec451bdc8129711276511a9ae9"></script>
+<script src="/_blob/42845c550289069c2b8a56a7108c40a2"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0A0A0A}a:hover{color:#404040}
+a:focus-visible,button:focus-visible,summary:focus-visible,textarea:focus-visible{outline:2px solid #0A0A0A;outline-offset:2px}
+@keyframes rmDig{0%,100%{transform:rotate(-8deg)}45%,62%{transform:rotate(17deg)}}
+.rm-arm{transform-box:view-box;transform-origin:62px 40px;transform:rotate(-8deg)}
+[data-dig="on"] .rm-arm{animation:rmDig 2.4s ease-in-out infinite}
+@media (prefers-reduced-motion: reduce){[data-dig="on"] .rm-arm{animation:none}}
+</style>
+</helmet>
+<div style="min-height:100vh;background:#FFFFFF;font-family:'Geist',system-ui,sans-serif;color:#0A0A0A">
+<header style="border-bottom:1px solid #F0F0F0">
+<div style="max-width:1240px;margin:0 auto;padding:14px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px">
+<a href="{{home}}" style="display:inline-flex;align-items:baseline;text-decoration:none;color:#0A0A0A;font-size:19px;font-weight:700;letter-spacing:-.04em">{{brandA}}<span style="margin-left:3px;padding:0 6px 2px;border-radius:8px;background:#0A0A0A;color:#FFFFFF;letter-spacing:-.02em">{{brandB}}</span></a>
+<nav aria-label="Moduły" style="display:flex;gap:4px;flex-wrap:wrap;align-items:center">
+<sc-for list="{{nav}}" as="n" hint-placeholder-count="6"><a href="{{n.href}}" style="{{n.style}}">{{n.label}}<sc-if value="{{n.count}}" hint-placeholder-val="{{false}}"><span style="margin-left:6px;font:600 11px 'Geist Mono',monospace;padding:1px 6px;border-radius:999px;{{n.cs}}">{{n.count}}</span></sc-if></a></sc-for>
+<sc-if value="{{auth}}" hint-placeholder-val="{{false}}"><details style="position:relative"><summary style="list-style:none;min-height:36px;display:inline-flex;align-items:center;padding:0 12px;border-radius:999px;font:500 14px 'Geist',sans-serif;color:#404040;cursor:pointer">Więcej</summary><div style="position:absolute;right:0;top:42px;z-index:5;background:#FFFFFF;border:1px solid #E5E5E5;border-radius:18px;padding:6px;min-width:200px;box-shadow:0 12px 32px rgba(10,10,10,.14);display:flex;flex-direction:column"><sc-for list="{{more}}" as="m" hint-placeholder-count="3"><a href="{{m.href}}" style="padding:10px 12px;border-radius:12px;text-decoration:none;font:500 14px 'Geist',sans-serif;color:#0A0A0A">{{m.label}}</a></sc-for></div></details></sc-if>
+</nav>
+<div style="display:flex;align-items:center;gap:10px"><a href="A6-Czat.dc.html" style="min-height:40px;display:inline-flex;align-items:center;gap:8px;padding:0 14px;border-radius:999px;border:1px solid #E5E5E5;text-decoration:none;color:#0A0A0A;font:500 14px 'Geist',sans-serif"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"></path></svg>Zapytaj</a><sc-if value="{{auth}}" hint-placeholder-val="{{false}}"><button type="button" aria-label="Konto: ekspert" style="width:40px;height:40px;border-radius:999px;border:1px solid #E5E5E5;background:#F5F5F5;font:600 14px 'Geist',sans-serif">E</button></sc-if><sc-if value="{{anon}}" hint-placeholder-val="{{false}}"><a href="Main.dc.html" style="min-height:40px;display:inline-flex;align-items:center;padding:0 16px;border-radius:999px;background:#0A0A0A;color:#FFFFFF;text-decoration:none;font:600 14px 'Geist',sans-serif">Zaloguj się</a></sc-if></div>
+</div>
+</header>
+<main style="max-width:780px;margin:0 auto;padding:64px 24px 96px;display:flex;flex-direction:column;gap:28px">
+<div ref="{{refSite}}" aria-hidden="true" style="position:relative;width:100%;max-width:760px;height:150px;margin:0 auto -8px"><canvas ref="{{refCv}}" style="position:absolute;left:-24px;right:-24px;top:-40px;bottom:0;width:calc(100% + 48px);height:calc(100% + 40px);pointer-events:none;z-index:3"></canvas><div style="position:absolute;left:0;right:0;bottom:17px;height:1px;background:#E5E5E5"></div><div style="position:absolute;left:0;bottom:14px;width:120px;height:78px;z-index:4"><div data-exc data-dig="off" style="position:absolute;left:0;bottom:0;width:120px;height:78px;pointer-events:none"><span data-jelly="auto" data-color="#EC4899" data-state="asleep" style="position:absolute;left:15px;top:9px;display:block;width:30px;height:30px"></span><svg viewBox="0 0 120 78" width="120" height="78" aria-hidden="true" style="position:absolute;left:0;top:0;overflow:visible"><rect x="4" y="58" width="72" height="16" rx="8" fill="#262626"></rect><circle cx="14" cy="66" r="4.5" fill="#737373"></circle><circle cx="32" cy="66" r="4.5" fill="#737373"></circle><circle cx="50" cy="66" r="4.5" fill="#737373"></circle><circle cx="66" cy="66" r="4.5" fill="#737373"></circle><rect x="2" y="38" width="12" height="18" rx="4" fill="#CA8A04"></rect><rect x="8" y="36" width="66" height="22" rx="5" fill="#FACC15"></rect><rect x="8" y="51" width="66" height="4" fill="#EAB308"></rect><path d="M12 37 V13 Q12 9 16 9 H44 Q48 9 48 13 V37" stroke="#EAB308" stroke-width="4" fill="none" stroke-linejoin="round"></path><rect x="9" y="5" width="42" height="7" rx="3.5" fill="#FACC15"></rect><g class="rm-arm"><line x1="58" y1="30" x2="84" y2="18" stroke="#A3A3A3" stroke-width="2.5" stroke-linecap="round"></line><line x1="62" y1="40" x2="92" y2="12" stroke="#FACC15" stroke-width="8" stroke-linecap="round"></line><line x1="92" y1="12" x2="110" y2="42" stroke="#EAB308" stroke-width="5.5" stroke-linecap="round"></line><path d="M103 40 L117 43 L115 56 Q106 59 101 50 Z" fill="#525252"></path></g><circle cx="62" cy="40" r="3.5" fill="#CA8A04"></circle></svg></div></div><div data-blocks style="position:absolute;inset:0;z-index:4;pointer-events:none"></div><sc-for list="{{bots}}" as="b" hint-placeholder-count="4"><div data-bot style="position:absolute;left:0;bottom:18px;width:54px;height:54px;z-index:5;pointer-events:none;transform:translate({{b.x}}px,0)"><span data-jelly="auto" data-color="{{b.c}}" data-state="asleep" data-hat="hard" style="position:absolute;left:0;top:0;display:block;width:54px;height:54px"></span></div></sc-for></div>
+
+<div style="display:flex;flex-direction:column;gap:12px;text-align:center;align-items:center">
+<h1 style="margin:0;font-size:44px;font-weight:600;letter-spacing:-.04em;line-height:1.05">Co planujesz zbudować?</h1>
+<p style="margin:0;font-size:17px;color:#6B6B6B;max-width:560px">Opisz inwestycję albo wrzuć PFU. Sprawdzimy, jak kończyło się 11 184 wykonanych umów wod-kan w Polsce.</p>
+</div>
+<form style="border-radius:28px;border:1px solid #E5E5E5;box-shadow:0 1px 2px rgba(0,0,0,.04),0 12px 32px rgba(0,0,0,.06);padding:20px 20px 14px;display:flex;flex-direction:column;gap:14px">
+<label for="a1d" style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)">Opis inwestycji</label>
+<textarea id="a1d" rows="3" style="border:0;outline:none;resize:none;font:400 18px/1.5 'Geist',sans-serif;color:#0A0A0A;background:transparent">Budowa kanalizacji sanitarnej ok. 6 km z 3 przepompowniami, zaprojektuj i wybuduj. 7 mln zł brutto, 14 miesięcy, FEnIKS.</textarea>
+<div style="display:flex;flex-wrap:wrap;gap:8px">
+<sc-for list="{{files}}" as="f" hint-placeholder-count="2"><span style="display:inline-flex;align-items:center;gap:8px;padding:6px 8px 6px 12px;border-radius:999px;background:#F6F6F6;font-size:13px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6v18h12V7z"></path><path d="M14 3v4h4"></path></svg>{{f.name}}<span style="font-family:'Geist Mono',monospace;font-size:11.5px;color:#6B6B6B">{{f.kind}}</span><button type="button" aria-label="Usuń plik" style="width:22px;height:22px;border-radius:999px;border:0;background:#E5E5E5;color:#404040;font-size:12px">×</button></span></sc-for>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid #F0F0F0;padding-top:12px;flex-wrap:wrap">
+<button type="button" style="min-height:40px;padding:0 14px;border-radius:999px;border:1px solid #E5E5E5;background:#FFFFFF;font:500 14px 'Geist',sans-serif;display:inline-flex;align-items:center;gap:8px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Dodaj dokument</button>
+
+</div>
+</form>
+
+<section aria-labelledby="a1s" style="background:#F6F6F6;border-radius:28px;padding:22px;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap"><h2 id="a1s" style="margin:0;font-size:18px;font-weight:600;letter-spacing:-.015em">Rozumiemy to tak</h2><span style="font-size:13px;color:#6B6B6B">kliknij, żeby poprawić</span></div>
+<div style="display:flex;flex-wrap:wrap;gap:8px"><sc-for list="{{chips}}" as="c" hint-placeholder-count="7"><button type="button" style="{{c.style}}"><span style="color:#6B6B6B">{{c.k}}</span> {{c.v}}<span style="font:500 11px 'Geist Mono',monospace;color:#6B6B6B;margin-left:4px">{{c.src}}</span></button></sc-for></div>
+<div style="background:#FFFFFF;border-radius:18px;padding:12px 14px;display:flex;gap:12px;align-items:flex-start">
+<span style="width:22px;height:22px;flex:none;box-sizing:border-box;border-radius:999px;border:2px solid #EA580C;display:inline-flex;align-items:center;justify-content:center"><span style="width:8px;height:8px;border-radius:999px;background:#EA580C"></span></span>
+<span style="flex:1;display:flex;flex-direction:column;gap:6px"><span style="font-size:15px;font-weight:600">Ile będzie przyłączy?</span><span style="font-size:13px;color:#525252">Nie ma tego w opisie ani w PFU. Z tą liczbą lepiej dobierzemy podobne przypadki.</span><span style="display:flex;gap:8px;flex-wrap:wrap"><label style="display:inline-flex;align-items:center;gap:8px;min-height:36px;padding:0 6px 0 14px;border-radius:999px;border:1px solid #E5E5E5;font-size:14px">Przyłączy<input aria-label="Liczba przyłączy" placeholder="np. 120" style="width:80px;height:28px;border:0;outline:none;font:500 14px 'Geist',sans-serif"></label><button type="button" style="min-height:36px;padding:0 14px;border-radius:999px;border:0;background:transparent;font:500 14px 'Geist',sans-serif;color:#525252">Nie wiem, pomiń</button></span></span>
+</div>
+</section>
+
+<div style="display:flex;justify-content:center;gap:12px;align-items:center;flex-wrap:wrap">
+<a href="A2-Raport.dc.html" style="min-height:52px;display:inline-flex;align-items:center;gap:10px;padding:0 26px;border-radius:999px;background:#0A0A0A;color:#FFFFFF;text-decoration:none;font:600 16px 'Geist',sans-serif">Uruchom analizę<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"></path></svg></a>
+
+</div>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"brandA":{"editor":"text","default":"ex"},"brandB":{"editor":"text","default":"ante"},"$preview":{"width":1440,"height":1300}}'>
+class Component extends DCLogic {
+  componentDidMount() { this.tryMount(0); }
+  componentWillUnmount() { this.dead = true; cancelAnimationFrame(this.raf); clearTimeout(this.retryT); (this.timers || []).forEach(clearTimeout); if (this.jelly) { this.jelly.dispose(); this.jelly = null; } }
+  tryMount(n) {
+    if (this.jelly || this.dead) return;
+    const J = window.ZgraiJelly;
+    if (!J || !this.cv || !this.site) { if (n < 80) this.retryT = setTimeout(() => this.tryMount(n + 1), 100); else if (this.site) this.site.style.display = 'none'; return; }
+    this.jelly = J.mountOverlay(this.cv, this.site, {});
+    this.build();
+  }
+  build() {
+    // Builder jellies: asleep at first, then they wake up, carry blocks from the pile and stack a small building.
+    const site = this.site, layer = site.querySelector('[data-blocks]'), W = site.clientWidth, H = site.clientHeight, G = 18;
+    const RM = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const BW = 28, BH = 17, GAP = 3, ROWS = [4, 3, 2, 1];
+    const blk = (x, y, css) => { const d = document.createElement('div'); d.style.cssText = 'position:absolute;left:0;top:0;width:' + BW + 'px;height:' + BH + 'px;border-radius:5px;transition:opacity .45s;transform:translate(' + x + 'px,' + y + 'px);' + css; layer.appendChild(d); return d; };
+    const sx = W - 24 - (4 * BW + 3 * GAP), slots = [];
+    ROWS.forEach((n, r) => { const off = (4 - n) * (BW + GAP) / 2; for (let c = 0; c < n; c++) slots.push({ x: sx + off + c * (BW + GAP), y: H - G - (r + 1) * BH - r * GAP }); });
+    slots.forEach((s) => blk(s.x, s.y, 'border:1.5px dashed #D4D4D4;box-sizing:border-box;background:transparent'));
+    [[0, 0], [1, 0], [2, 0], [0.5, 1], [1.5, 1]].forEach(([c, r]) => blk(134 + c * (BW + GAP), H - G - (r + 1) * BH - r * GAP, 'background:#0A0A0A'));
+    const pileX = 134 + 3 * (BW + GAP) + 4, dropX = sx - 58;
+    const bots = Array.from(site.querySelectorAll('[data-bot]')).map((el, i) => ({ el, span: el.querySelector('[data-jelly]'), x: [270, 340, 410, 480][i] || 270 + i * 70, mode: 'sleep', t: 0, sp: 118 + i * 14, carry: null, ph: i * 1.7, i }));
+    const state = (b, s) => b.span.setAttribute('data-state', s);
+    let claimed = 0, filled = 0, placed = [], party = 0;
+    const put = (b, hop) => { b.el.style.transform = 'translate(' + b.x + 'px,' + (-hop) + 'px)'; if (b.carry) b.carry.style.transform = 'translate(' + (b.x + 13) + 'px,' + (H - G - 50 - BH - hop) + 'px)'; };
+    bots.forEach((b) => put(b, 0));
+    this.timers = [];
+    const wake = () => {
+      if (this.woke) return; this.woke = true;
+      const ex = site.querySelector('[data-exc]'); if (ex) { ex.querySelector('[data-jelly]').setAttribute('data-state', 'awake'); this.timers.push(setTimeout(() => ex.setAttribute('data-dig', 'on'), 500)); }
+      bots.forEach((b, i) => this.timers.push(setTimeout(() => { state(b, 'awake'); this.timers.push(setTimeout(() => { b.mode = RM ? 'idle' : 'toPile'; }, 700)); }, i * 180)));
+      if (RM) slots.forEach((s) => blk(s.x, s.y, 'background:#0A0A0A'));
+    };
+    this.timers.push(setTimeout(wake, 1600));
+    site.addEventListener('pointerenter', wake);
+    const reset = () => { placed.forEach((d) => { d.style.opacity = '0'; }); const old = placed; placed = []; this.timers.push(setTimeout(() => old.forEach((d) => d.remove()), 500)); claimed = 0; filled = 0; };
+    let last = performance.now();
+    const step = () => {
+      if (this.dead) return;
+      const now = performance.now(), dt = Math.max(0, Math.min(0.05, (now - last) / 1000)); last = now; this.frames = (this.frames || 0) + 1;
+      if (party > 0) { party -= dt; if (party <= 0) { bots.forEach((b) => { state(b, 'awake'); if (b.mode === 'wait') b.mode = 'toPile'; }); reset(); } }
+      bots.forEach((b) => {
+        let hop = 0;
+        const go = (tx) => { const d = tx - b.x, s = Math.sign(d) * Math.min(Math.abs(d), b.sp * dt); b.x += s; b.ph += dt * 11; hop = Math.abs(Math.sin(b.ph)) * 6; return Math.abs(tx - b.x) < 0.5; };
+        if (b.mode === 'toPile') { if (go(pileX + (b.i % 2) * 10)) { if (claimed < slots.length && party <= 0) { b.mode = 'pick'; b.t = 0; state(b, 'speaking'); } else { b.mode = 'wait'; } } }
+        else if (b.mode === 'pick') { b.t += dt; if (b.t > 0.35) { b.slot = slots[claimed++]; b.carry = blk(b.x + 13, 0, 'background:#0A0A0A;z-index:2'); state(b, 'awake'); b.mode = 'toSite'; } }
+        else if (b.mode === 'toSite') { if (go(dropX - b.i * 15)) { b.mode = 'place'; b.t = 0; b.fx = b.x + 13; b.fy = H - G - 50 - BH; state(b, 'speaking'); } }
+        else if (b.mode === 'place') {
+          b.t += dt; const k = Math.min(1, b.t / 0.55), e = k * k * (3 - 2 * k), arc = Math.sin(Math.PI * k) * 34;
+          const x = b.fx + (b.slot.x - b.fx) * e, y = b.fy + (b.slot.y - b.fy) * e - arc;
+          b.carry.style.transform = 'translate(' + x + 'px,' + y + 'px)';
+          if (k >= 1) { placed.push(b.carry); b.carry = null; filled++; state(b, 'awake'); b.mode = 'toPile'; if (filled === slots.length) { party = 1.8; bots.forEach((o) => state(o, 'speaking')); } }
+        }
+        if (b.mode !== 'place') put(b, hop); else b.el.style.transform = 'translate(' + b.x + 'px,0)';
+      });
+      this.raf = requestAnimationFrame(step);
+    };
+    if (!RM) this.raf = requestAnimationFrame(step);
+  }
+  renderVals() {
+    if (!this.refSite) { this.refSite = (el) => { this.site = el; }; this.refCv = (el) => { this.cv = el; }; }
+    return Object.assign(this.baseVals(), { refSite: this.refSite, refCv: this.refCv, bots: [{ c: '#2563EB', x: 270 }, { c: '#F97316', x: 340 }, { c: '#14B8A6', x: 410 }, { c: '#8B5CF6', x: 480 }] });
+  }
+  baseVals() {
+    const active = 'Nowa inwestycja';
+    const AUTH = false;
+    const NAV = [['Pulpit','Main.dc.html','',1],['Monitoring','D2-Monitoring.dc.html','12',0],['Nowa inwestycja','A1-Start.dc.html','',0],['Projekty','B2-Projekty.dc.html','',0],['Przegląd','C1-Przeglad.dc.html','37',1],['Katalog','C2-Katalog.dc.html','',1]];
+    const nav = NAV.filter((x) => AUTH || !x[3]).map(([label, href, count]) => ({ label, href, count: AUTH ? count : '', cs: label === active ? 'background:#FFFFFF;color:#0A0A0A' : 'background:#F0F0F0;color:#404040', style: "min-height:36px;display:inline-flex;align-items:center;padding:0 12px;border-radius:999px;text-decoration:none;font:500 14px 'Geist',sans-serif;" + (label === active ? 'background:#0A0A0A;color:#FFFFFF' : 'color:#404040') }));
+    const more = [['Import i źródła','B1-Import.dc.html'],['Historia','D3-Historia.dc.html'],['Ustawienia','D4-Ustawienia.dc.html']].map(([label, href]) => ({ label, href }));
+    const files = [{ name: 'PFU_kanalizacja_v2.pdf', kind: 'PFU, 38 s.' }, { name: 'PPU_projekt.docx', kind: 'PPU, 22 s.' }];
+    const base = "min-height:38px;padding:0 14px;border-radius:999px;background:#FFFFFF;font:500 14px 'Geist',sans-serif;color:#0A0A0A;";
+    const chip = (k, v, src, unsure) => ({ k, v, src, style: base + (unsure ? 'border:1.5px dashed #EA580C' : 'border:1px solid #E5E5E5') });
+    const chips = [chip('podsektor', 'kanalizacja sanitarna', 'opis'), chip('formuła', 'zaprojektuj i wybuduj', 'PFU s.2'), chip('długość', 'ok. 6 km?', 'PFU s.6', true), chip('przepompownie', '3', 'PFU s.7'), chip('budżet', '7 mln zł brutto', 'opis'), chip('termin', '14 mies.', 'PPU §3'), chip('finansowanie', 'FEnIKS', 'opis')];
+    return { auth: AUTH, anon: !AUTH, home: AUTH ? 'Main.dc.html' : 'D2-Monitoring.dc.html',  brandA: this.props.brandA ?? 'ex', brandB: this.props.brandB ?? 'ante', nav, more, files, chips };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Projekty</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0A0A0A}a:hover{color:#404040}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{outline:2px solid #0A0A0A;outline-offset:2px}
+</style>
+</helmet>
+<div style="min-height:100vh;background:#FFFFFF;font-family:'Geist',system-ui,sans-serif;color:#0A0A0A">
+<header style="border-bottom:1px solid #F0F0F0">
+<div style="max-width:1240px;margin:0 auto;padding:14px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px">
+<a href="{{home}}" style="display:inline-flex;align-items:baseline;text-decoration:none;color:#0A0A0A;font-size:19px;font-weight:700;letter-spacing:-.04em">{{brandA}}<span style="margin-left:3px;padding:0 6px 2px;border-radius:8px;background:#0A0A0A;color:#FFFFFF;letter-spacing:-.02em">{{brandB}}</span></a>
+<nav aria-label="Moduły" style="display:flex;gap:4px;flex-wrap:wrap;align-items:center">
+<sc-for list="{{nav}}" as="n" hint-placeholder-count="6"><a href="{{n.href}}" style="{{n.style}}">{{n.label}}<sc-if value="{{n.count}}" hint-placeholder-val="{{false}}"><span style="margin-left:6px;font:600 11px 'Geist Mono',monospace;padding:1px 6px;border-radius:999px;{{n.cs}}">{{n.count}}</span></sc-if></a></sc-for>
+<sc-if value="{{auth}}" hint-placeholder-val="{{false}}"><details style="position:relative"><summary style="list-style:none;min-height:36px;display:inline-flex;align-items:center;padding:0 12px;border-radius:999px;font:500 14px 'Geist',sans-serif;color:#404040;cursor:pointer">Więcej</summary><div style="position:absolute;right:0;top:42px;z-index:5;background:#FFFFFF;border:1px solid #E5E5E5;border-radius:18px;padding:6px;min-width:200px;box-shadow:0 12px 32px rgba(10,10,10,.14);display:flex;flex-direction:column"><sc-for list="{{more}}" as="m" hint-placeholder-count="3"><a href="{{m.href}}" style="padding:10px 12px;border-radius:12px;text-decoration:none;font:500 14px 'Geist',sans-serif;color:#0A0A0A">{{m.label}}</a></sc-for></div></details></sc-if>
+</nav>
+<div style="display:flex;align-items:center;gap:10px"><a href="A6-Czat.dc.html" style="min-height:40px;display:inline-flex;align-items:center;gap:8px;padding:0 14px;border-radius:999px;border:1px solid #E5E5E5;text-decoration:none;color:#0A0A0A;font:500 14px 'Geist',sans-serif"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"></path></svg>Zapytaj</a><sc-if value="{{auth}}" hint-placeholder-val="{{false}}"><button type="button" aria-label="Konto: ekspert" style="width:40px;height:40px;border-radius:999px;border:1px solid #E5E5E5;background:#F5F5F5;font:600 14px 'Geist',sans-serif">E</button></sc-if><sc-if value="{{anon}}" hint-placeholder-val="{{false}}"><a href="Main.dc.html" style="min-height:40px;display:inline-flex;align-items:center;padding:0 16px;border-radius:999px;background:#0A0A0A;color:#FFFFFF;text-decoration:none;font:600 14px 'Geist',sans-serif">Zaloguj się</a></sc-if></div>
+</div>
+</header>
+<div style="max-width:1240px;margin:0 auto;padding:36px 24px 72px;display:flex;flex-direction:column;gap:22px">
+<div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:flex-end">
+<h1 style="margin:0;font-size:36px;font-weight:600;letter-spacing:-.035em;line-height:1.1">Projekty</h1>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><button type="button" style="min-height:42px;padding:0 16px;border-radius:999px;border:1px solid #E5E5E5;background:#FFFFFF;font:500 14px 'Geist',sans-serif">Eksportuj zaznaczone</button></div>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px">
+<sc-for list="{{stats}}" as="s" hint-placeholder-count="4"><div style="background:#F6F6F6;border-radius:22px;padding:18px 20px;display:flex;flex-direction:column;gap:6px"><span style="font-size: 14px; color: #6B6B6B">{{s.l}}</span><span style="font-size: 30px; font-weight: 600; letter-spacing: -.04em; line-height: 1">{{s.v}}</span></div></sc-for>
+</div>
+
+<div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+<label style="display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 14px;border-radius:999px;border:1px solid #E5E5E5;flex:1 1 280px;max-width:380px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B6B6B" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4-4"></path></svg><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)">Szukaj</span><input type="search" placeholder="gmina, NIP, numer BZP lub KPO" style="flex:1;min-width:0;border:0;outline:none;font:400 14px 'Geist',sans-serif"></label>
+<sc-for list="{{filters}}" as="f" hint-placeholder-count="5"><button type="button" aria-pressed="{{f.on}}" style="{{f.s}}">{{f.l}}</button></sc-for>
+</div>
+
+<div style="border:1px solid #E5E5E5;border-radius:22px;overflow:hidden">
+<div style="overflow-x:auto">
+<table style="width:100%;min-width:1080px;border-collapse:collapse;font-size:14px">
+<thead><tr style="background:#F6F6F6;text-align:left">
+<th scope="col" style="padding:12px 0 12px 16px;width:32px"><input type="checkbox" aria-label="Zaznacz wszystkie" style="width:16px;height:16px;accent-color:#0A0A0A"></th>
+<sc-for list="{{cols}}" as="c" hint-placeholder-count="8"><th scope="col" aria-sort="{{c.aria}}" style="{{c.th}}"><button type="button" onClick="{{c.sort}}" style="{{c.btn}}">{{c.l}}<span aria-hidden="true" style="font-size:11px;color:{{c.ic}}">{{c.icon}}</span></button></th></sc-for>
+</tr></thead>
+<tbody>
+<sc-for list="{{rows}}" as="r" hint-placeholder-count="10">
+<tr style="border-top:1px solid #F0F0F0">
+<td style="padding:12px 0 12px 16px"><input type="checkbox" aria-label="Zaznacz {{r.t}}" style="width:16px;height:16px;accent-color:#0A0A0A"></td>
+<td style="padding:12px 12px"><a href="B3-Karta.dc.html" style="display:flex;flex-direction:column;gap:2px;text-decoration:none;color:#0A0A0A"><span style="font-weight:600">{{r.t}}</span><span style="font:500 12px 'Geist Mono',monospace;color:#6B6B6B">{{r.id}}, {{r.org}}</span></a></td>
+<td style="padding:12px 12px;color:#404040;font-size:13px">{{r.sub}}</td>
+<td style="padding:12px 12px;text-align:right;font:500 13px 'Geist Mono',monospace;white-space:nowrap">{{r.val}}</td>
+<td style="padding:12px 12px;text-align:right;font:500 13px 'Geist Mono',monospace;white-space:nowrap;color:{{r.dc}}">{{r.delay}}</td>
+<td style="padding:12px 12px;text-align:right;font:500 13px 'Geist Mono',monospace;white-space:nowrap;color:{{r.cc}}">{{r.cost}}</td>
+<td style="padding:12px 12px;text-align:right;font:500 13px 'Geist Mono',monospace">{{r.chg}}</td>
+<td style="padding:12px 12px;font-size:13px;color:{{r.okC}}">{{r.ok}}</td>
+<td style="padding:12px 16px 12px 12px"><span style="{{r.stS}}">{{r.st}}</span></td>
+</tr>
+</sc-for>
+</tbody>
+</table>
+</div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 16px;border-top:1px solid #F0F0F0;font-size:13px;color:#525252">
+<span>Pokazano 10 z 22 projektów. Kwoty brutto z ogłoszeń BZP.</span>
+<span style="display:flex;gap:6px"><button type="button" style="min-height:34px;padding:0 14px;border-radius:999px;border:1px solid #E5E5E5;background:#FFFFFF;font:500 13px 'Geist',sans-serif">Poprzednie</button><button type="button" style="min-height:34px;padding:0 14px;border-radius:999px;border:1px solid #E5E5E5;background:#FFFFFF;font:500 13px 'Geist',sans-serif">Następne</button></span>
+</div>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"brandA":{"editor":"text","default":"ex"},"brandB":{"editor":"text","default":"ante"},"$preview":{"width":1440,"height":1400}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { sort: 'delay', dir: -1 }; }
+  renderVals() {
+    const active = 'Projekty';
+    const AUTH = false;
+    const NAV = [['Pulpit','Main.dc.html','',1],['Monitoring','D2-Monitoring.dc.html','12',0],['Nowa inwestycja','A1-Start.dc.html','',0],['Projekty','B2-Projekty.dc.html','',0],['Przegląd','C1-Przeglad.dc.html','37',1],['Katalog','C2-Katalog.dc.html','',1]];
+    const nav = NAV.filter((x) => AUTH || !x[3]).map(([label, href, count]) => ({ label, href, count: AUTH ? count : '', cs: label === active ? 'background:#FFFFFF;color:#0A0A0A' : 'background:#F0F0F0;color:#404040', style: "min-height:36px;display:inline-flex;align-items:center;padding:0 12px;border-radius:999px;text-decoration:none;font:500 14px 'Geist',sans-serif;" + (label === active ? 'background:#0A0A0A;color:#FFFFFF' : 'color:#404040') }));
+    const more = [['Import i źródła','B1-Import.dc.html'],['Historia','D3-Historia.dc.html'],['Ustawienia','D4-Ustawienia.dc.html']].map(([label, href]) => ({ label, href }));
+    const stats = [
+      { l: 'Umowy po terminie', v: '20 z 27', p: '' },
+      { l: 'Zapłacono ponad umowę', v: '19 z 27', p: 'mediana +8,5%, najwięcej +40,3%' },
+      { l: 'Nienależycie wykonane', v: '4', p: 'pole 5.6 ogłoszenia o wykonaniu' },
+      { l: 'Zmiany umów', v: '48', p: 'w ogłoszeniach o wykonaniu' }
+    ];
+    const fb = "min-height:40px;padding:0 14px;border-radius:999px;font:500 14px 'Geist',sans-serif;";
+    const filters = [['Wszystkie 22', true], ['Po terminie', false], ['Z rozbieżnością 4', false], ['Do przeglądu', false], ['Podsektor ▾', false]].map(([l, on]) => ({ l, on: String(on), s: fb + (on ? 'border:0;background:#0A0A0A;color:#FFFFFF' : 'border:1px solid #E5E5E5;background:#FFFFFF;color:#404040') }));
+    const { sort, dir } = this.state;
+    const C = [['t', 'Projekt', 'left'], ['sub', 'Podsektor', 'left'], ['val', 'Wartość umowy', 'right'], ['delay', 'Opóźnienie', 'right'], ['cost', 'Koszt wobec umowy', 'right'], ['chg', 'Zmiany', 'right'], ['ok', 'Wykonanie', 'left'], ['st', 'Stan', 'left']];
+    const cols = C.map(([k, l, al]) => ({ l, aria: sort === k ? (dir < 0 ? 'descending' : 'ascending') : 'none', icon: sort === k ? (dir < 0 ? '↓' : '↑') : '↕', ic: sort === k ? '#0A0A0A' : '#A3A3A3', sort: () => this.setState({ sort: k, dir: sort === k ? -dir : -1 }), th: 'padding:12px 12px;font-weight:600;font-size:12.5px;color:#404040;white-space:nowrap;text-align:' + al, btn: "display:inline-flex;align-items:center;gap:6px;border:0;background:transparent;padding:0;font:600 12.5px 'Geist',sans-serif;color:#404040;cursor:pointer" }));
+    const red = '#C2410C', ink = '#0A0A0A';
+    const ST = { rev: 'min-height:26px;display:inline-flex;align-items:center;padding:0 10px;border-radius:999px;background:#FFF3EB;color:#9A3412;font-size:12.5px;white-space:nowrap', ok: 'min-height:26px;display:inline-flex;align-items:center;padding:0 10px;border-radius:999px;background:#F6F6F6;color:#404040;font-size:12.5px;white-space:nowrap', dis: 'min-height:26px;display:inline-flex;align-items:center;padding:0 10px;border-radius:999px;border:1.5px dashed #EA580C;color:#9A3412;font-size:12.5px;white-space:nowrap' };
+    const fmtZl = (v) => (v / 1e6).toFixed(2).replace('.', ',') + ' mln zł';
+    const D = [
+      ['Oczyszczalnia ścieków w Steklinie', 'RM-2026-003', 'Gmina Czernikowo', 'Oczyszczalnia ścieków', 2131590, 277, 40.3, 3, true, 'rev', '2 do przeglądu'],
+      ['Kanalizacja deszczowa w ciągu DW 444, Sulmierzyce', 'RM-2026-019', 'WZDW w Poznaniu', 'Kanalizacja deszczowa', 3154933, 395, 32.7, 6, true, 'ok', 'zatwierdzone'],
+      ['Kanalizacja z oczyszczalnią, Konarzewo', 'RM-2026-020', 'Gmina Nowogard', 'Kanalizacja sanitarna', 1969611, 185, -12.7, 2, true, 'rev', '1 do przeglądu'],
+      ['Sieć wod.-kan. z oczyszczalnią, Janów', 'RM-2026-015', 'Gmina Elbląg', 'Sieć wodociągowa', 3744316, 150, 25.6, 2, true, 'ok', 'zatwierdzone'],
+      ['Modernizacja SUW w Czernikowie', 'RM-2026-004', 'Gmina Czernikowo', 'Uzdatnianie wody', 3918954, 98, 5.5, 4, true, 'ok', 'zatwierdzone'],
+      ['Rurociąg tłoczny Godzikowice – Jaczkowice', 'RM-2026-001', 'Gmina Oława', 'Kanalizacja sanitarna', 2107348, 77, 6.6, 6, true, 'ok', 'zatwierdzone'],
+      ['Rozdział kanalizacji, ul. 700-lecia', 'RM-2026-021', 'Gmina Nowogard', 'Kanalizacja sanitarna', 5421102, 68, -45.0, 1, false, 'dis', 'płatność częściowa'],
+      ['Kanalizacja sanitarna, Tanibórz', 'RM-2026-017', 'Gmina Kleszczewo', 'Kanalizacja sanitarna', 4275776, 53, 26.8, 1, true, 'ok', 'zatwierdzone'],
+      ['Rozbudowa sieci wodociągowej', 'RM-2026-007', 'Gmina Kamionka', 'Sieć wodociągowa', 1478460, 19, -0.6, 0, false, 'dis', 'rozbieżność wartości'],
+      ['Kanalizacja sanitarna, 4 części', 'RM-2026-008', 'Gmina Biecz', 'Kanalizacja sanitarna', 4470745, 0, 21.7, 2, true, 'dis', 'rozbieżność zakresu']
+    ];
+    const keyIdx = { t: 0, sub: 3, val: 4, delay: 5, cost: 6, chg: 7, ok: 8, st: 10 };
+    const sorted = D.slice().sort((a, b) => { const i = keyIdx[sort]; const x = a[i], y = b[i]; return (x > y ? 1 : x < y ? -1 : 0) * dir; });
+    const rows = sorted.map(([t, id, org, sub, val, delay, cost, chg, ok, st, stL]) => ({
+      t, id, org, sub, val: fmtZl(val), delay: (delay > 0 ? '+' : '') + delay + ' d', dc: delay > 0 ? red : ink,
+      dBar: 'width:' + Math.round(Math.min(delay, 400) / 400 * 100) + '%;background:' + (delay > 90 ? '#EA580C' : '#525252'),
+      cost: (cost > 0 ? '+' : cost < 0 ? '−' : '') + Math.abs(cost).toFixed(1).replace('.', ',') + '%', cc: cost > 0.5 ? red : ink,
+      cBar: cost >= 0 ? 'left:50%;width:' + Math.round(Math.min(cost, 50) / 50 * 50) + '%;background:#EA580C' : 'right:50%;width:' + Math.round(Math.min(-cost, 50) / 50 * 50) + '%;background:#525252',
+      chg: String(chg), ok: ok ? 'należycie' : 'nienależycie', okC: ok ? '#404040' : red, st: stL, stS: ST[st]
+    }));
+    return { auth: AUTH, anon: !AUTH, home: AUTH ? 'Main.dc.html' : 'D2-Monitoring.dc.html',  brandA: this.props.brandA ?? 'ex', brandB: this.props.brandB ?? 'ante', nav, more, stats, filters, cols, rows };
+  }
+}
+</script>
+</body>
+</html>

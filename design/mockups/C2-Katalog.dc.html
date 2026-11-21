@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Katalog wiedzy</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0A0A0A}a:hover{color:#404040}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{outline:2px solid #0A0A0A;outline-offset:2px}
+</style>
+</helmet>
+<div style="min-height:100vh;background:#FFFFFF;font-family:'Geist',system-ui,sans-serif;color:#0A0A0A">
+<header style="border-bottom:1px solid #F0F0F0">
+<div style="max-width:1240px;margin:0 auto;padding:14px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px">
+<a href="{{home}}" style="display:inline-flex;align-items:baseline;text-decoration:none;color:#0A0A0A;font-size:19px;font-weight:700;letter-spacing:-.04em">{{brandA}}<span style="margin-left:3px;padding:0 6px 2px;border-radius:8px;background:#0A0A0A;color:#FFFFFF;letter-spacing:-.02em">{{brandB}}</span></a>
+<nav aria-label="Moduły" style="display:flex;gap:4px;flex-wrap:wrap;align-items:center">
+<sc-for list="{{nav}}" as="n" hint-placeholder-count="6"><a href="{{n.href}}" style="{{n.style}}">{{n.label}}<sc-if value="{{n.count}}" hint-placeholder-val="{{false}}"><span style="margin-left:6px;font:600 11px 'Geist Mono',monospace;padding:1px 6px;border-radius:999px;{{n.cs}}">{{n.count}}</span></sc-if></a></sc-for>
+<sc-if value="{{auth}}" hint-placeholder-val="{{false}}"><details style="position:relative"><summary style="list-style:none;min-height:36px;display:inline-flex;align-items:center;padding:0 12px;border-radius:999px;font:500 14px 'Geist',sans-serif;color:#404040;cursor:pointer">Więcej</summary><div style="position:absolute;right:0;top:42px;z-index:5;background:#FFFFFF;border:1px solid #E5E5E5;border-radius:18px;padding:6px;min-width:200px;box-shadow:0 12px 32px rgba(10,10,10,.14);display:flex;flex-direction:column"><sc-for list="{{more}}" as="m" hint-placeholder-count="3"><a href="{{m.href}}" style="padding:10px 12px;border-radius:12px;text-decoration:none;font:500 14px 'Geist',sans-serif;color:#0A0A0A">{{m.label}}</a></sc-for></div></details></sc-if>
+</nav>
+<div style="display:flex;align-items:center;gap:10px"><a href="A6-Czat.dc.html" style="min-height:40px;display:inline-flex;align-items:center;gap:8px;padding:0 14px;border-radius:999px;border:1px solid #E5E5E5;text-decoration:none;color:#0A0A0A;font:500 14px 'Geist',sans-serif"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"></path></svg>Zapytaj</a><sc-if value="{{auth}}" hint-placeholder-val="{{false}}"><button type="button" aria-label="Konto: ekspert" style="width:40px;height:40px;border-radius:999px;border:1px solid #E5E5E5;background:#F5F5F5;font:600 14px 'Geist',sans-serif">E</button></sc-if><sc-if value="{{anon}}" hint-placeholder-val="{{false}}"><a href="Main.dc.html" style="min-height:40px;display:inline-flex;align-items:center;padding:0 16px;border-radius:999px;background:#0A0A0A;color:#FFFFFF;text-decoration:none;font:600 14px 'Geist',sans-serif">Zaloguj się</a></sc-if></div>
+</div>
+</header>
+<div style="max-width:1240px;margin:0 auto;padding:36px 24px 72px;display:flex;flex-direction:column;gap:22px">
+<div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:flex-end">
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font:500 13px 'Geist Mono',monospace;color:#6B6B6B">wersja 1.3, 21.11.2026 13:20</span><h1 style="margin:0;font-size:36px;font-weight:600;letter-spacing:-.035em;line-height:1.1">Katalog wiedzy</h1></div>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><button type="button" style="min-height:42px;padding:0 18px;border-radius:999px;border:0;background:#0A0A0A;color:#FFFFFF;font:600 14px 'Geist',sans-serif">Nowe ryzyko</button></div>
+</div>
+<nav aria-label="Części katalogu" style="display:flex;gap:6px;flex-wrap:wrap"><sc-for list="{{tabs}}" as="t" hint-placeholder-count="10"><a href="{{t.href}}" style="{{t.s}}">{{t.l}}</a></sc-for></nav>
+
+<div style="display:flex;flex-wrap:wrap;gap:36px;align-items:flex-start">
+<main style="flex:999 1 560px;min-width:0;display:flex;flex-direction:column;gap:8px">
+
+<sc-for list="{{risks}}" as="r" hint-placeholder-count="8">
+<details style="border:1px solid #F0F0F0;border-radius:18px;padding:0 16px">
+<summary style="list-style:none;cursor:pointer;display:flex;gap:14px;align-items:center;min-height:60px">
+<span style="width:46px;height:34px;flex:none;border-radius:10px;background:#F6F6F6;display:inline-flex;align-items:center;justify-content:center;font:600 13px 'Geist Mono',monospace">{{r.code}}</span>
+<span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:1px"><span style="font-size:15px;font-weight:600">{{r.t}}</span><span style="font-size:13px;color:#525252;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{r.e}}</span></span>
+<span style="display:flex;flex-direction:column;align-items:flex-end;gap:2px;text-align:right;white-space:nowrap"><span style="font:500 12px 'Geist Mono',monospace;color:#6B6B6B">{{r.n}}</span><sc-if value="{{r.q}}" hint-placeholder-val="{{false}}"><span style="font:500 12px 'Geist',sans-serif;color:#C2410C">{{r.q}}</span></sc-if></span>
+</summary>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;padding:0 0 16px">
+<sc-for list="{{r.parts}}" as="p" hint-placeholder-count="4"><label style="display:flex;flex-direction:column;gap:4px;background:#F6F6F6;border-radius:14px;padding:10px 12px"><span style="font-size:12px;color:#6B6B6B">{{p.k}}</span><input value="{{p.v}}" aria-label="{{p.k}}" style="border:0;background:transparent;font:500 14px 'Geist',sans-serif;color:#0A0A0A;outline:none"></label></sc-for>
+</div>
+<sc-if value="{{r.q}}" hint-placeholder-val="{{false}}"><div style="display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:0 0 16px;padding:10px 14px;border-radius:14px;background:#FFF3EB;font-size:13.5px;line-height:1.5;color:#262626"><span style="flex:1 1 320px">{{r.qd}}</span><sc-if value="{{r.qa}}" hint-placeholder-val="{{false}}"><a href="C1-Przeglad.dc.html" style="font-size:13.5px;font-weight:500;white-space:nowrap">{{r.qa}} →</a></sc-if></div></sc-if>
+</details>
+</sc-for>
+</main>
+
+<aside style="flex:1 1 360px;max-width:100%;min-width:0;display:flex;flex-direction:column;gap:16px">
+<section aria-labelledby="k1" style="background:#F6F6F6;border-radius:28px;padding:22px;display:flex;flex-direction:column;gap:8px">
+<div style="display:flex;flex-direction:column;gap:2px;padding:2px 4px 8px"><h2 id="k1" style="margin:0;font-size:18px;font-weight:600;letter-spacing:-.015em">Propozycje modelu</h2><span style="font-size:13px;color:#6B6B6B">nowe kategorie z przyczyn zmian umów</span></div>
+<sc-for list="{{props}}" as="p" hint-placeholder-count="2">
+<div style="background:#FFFFFF;border-radius:18px;padding:14px;display:flex;flex-direction:column;gap:8px">
+<span style="display:flex;justify-content:space-between;gap:8px"><span style="font-size: 15px; font-weight: 600">{{p.t}}</span></span>
+<span style="font-size:13px;color:#525252">{{p.d}}</span>
+<span style="font:500 11.5px 'Geist Mono',monospace;color:#6B6B6B">{{p.src}}</span>
+<div style="display:flex;gap:6px;flex-wrap:wrap"><button type="button" style="min-height:34px;padding:0 12px;border-radius:999px;border:0;background:#0A0A0A;color:#FFFFFF;font:600 13px 'Geist',sans-serif">Dodaj</button><button type="button" style="min-height:34px;padding:0 12px;border-radius:999px;border:1px solid #E5E5E5;background:#FFFFFF;font:500 13px 'Geist',sans-serif">{{p.merge}}</button><button type="button" style="min-height:34px;padding:0 12px;border-radius:999px;border:1px solid #E5E5E5;background:#FFFFFF;font:500 13px 'Geist',sans-serif">Odrzuć</button></div>
+</div>
+</sc-for>
+</section>
+<section aria-labelledby="k2" style="border:1px solid #F0F0F0;border-radius:28px;padding:22px;display:flex;flex-direction:column;gap:10px">
+<h2 id="k2" style="margin:0;font-size:18px;font-weight:600;letter-spacing:-.015em">Wagi podobieństwa</h2>
+<span style="font-size:13px;color:#525252">Co decyduje, że dwie inwestycje są „podobne”.</span>
+<sc-for list="{{weights}}" as="w" hint-placeholder-count="5"><label style="display:grid;grid-template-columns:120px minmax(0,1fr) 34px;gap:10px;align-items:center;font-size:14px"><span>{{w.l}}</span><input type="range" min="0" max="40" value="{{w.v}}" style="accent-color:#0A0A0A"><span style="font:500 13px 'Geist Mono',monospace;text-align:right">{{w.v}}</span></label></sc-for>
+<span style="font:500 12px 'Geist Mono',monospace;color:#6B6B6B">założenie eksperta, zmiana przelicza podobne przypadki</span>
+</section>
+
+</aside>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"brandA":{"editor":"text","default":"ex"},"brandB":{"editor":"text","default":"ante"},"$preview":{"width":1440,"height":1400}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const active = 'Katalog';
+    const AUTH = true;
+    const NAV = [['Pulpit','Main.dc.html','',1],['Monitoring','D2-Monitoring.dc.html','12',0],['Nowa inwestycja','A1-Start.dc.html','',0],['Projekty','B2-Projekty.dc.html','',0],['Przegląd','C1-Przeglad.dc.html','37',1],['Katalog','C2-Katalog.dc.html','',1]];
+    const nav = NAV.filter((x) => AUTH || !x[3]).map(([label, href, count]) => ({ label, href, count: AUTH ? count : '', cs: label === active ? 'background:#FFFFFF;color:#0A0A0A' : 'background:#F0F0F0;color:#404040', style: "min-height:36px;display:inline-flex;align-items:center;padding:0 12px;border-radius:999px;text-decoration:none;font:500 14px 'Geist',sans-serif;" + (label === active ? 'background:#0A0A0A;color:#FFFFFF' : 'color:#404040') }));
+    const more = [['Import i źródła','B1-Import.dc.html'],['Historia','D3-Historia.dc.html'],['Ustawienia','D4-Ustawienia.dc.html']].map(([label, href]) => ({ label, href }));
+    const tabs = ['Ryzyka R01–R15','Propozycje AI, 2','Podsektory','Mapa CPV','Dokumenty w fazach','Listy kontrolne','Zapisy umowne','Wagi podobieństwa','Wersje'].map((l, i) => ({ l, href: i === 0 ? 'C2-Katalog.dc.html' : '#', s: "min-height:36px;display:inline-flex;align-items:center;padding:0 14px;border-radius:999px;text-decoration:none;font:500 14px 'Geist',sans-serif;" + (l === 'Ryzyka R01–R15' ? 'background:#0A0A0A;color:#FFFFFF' : 'border:1px solid #E5E5E5;color:#404040') }));
+    const R = [
+      ['R01', 'Niepełny lub niespójny zakres', 'Błędna wycena, roboty dodatkowe, spór o wynagrodzenie', 'PFU bez inwentaryzacji; „ok.” przy ilościach', 'roboty dodatkowe (art. 455 ust. 1 pkt 3)', 'wzrost wynagrodzenia, wydłużenie', 'inwentaryzacja przed ogłoszeniem; ceny jednostkowe'],
+      ['R02', 'Niedostateczne rozpoznanie stanu istniejącego', 'Przeprojektowanie, nieprzewidziane roboty, przestoje', 'brak dokumentacji geotechnicznej; badania „na etapie projektowania”', 'zmiana technologii, roboty zamienne', '+ dni, + koszt', 'badania przed przetargiem; protokół konieczności'],
+      ['R03', 'Kolizje, dostęp do terenu, prawa do nieruchomości', 'Brak możliwości rozpoczęcia, zmiana trasy, roszczenia', 'trasa przez grunty prywatne; brak służebności', 'wstrzymanie robót', '+ dni', 'zgody przed przekazaniem terenu'],
+      ['R04', 'Decyzje i uzgodnienia zależne od podmiotów trzecich', 'Opóźnienie rozpoczęcia lub odbioru', 'pozwolenie wodnoprawne po stronie wykonawcy', 'przesunięcie terminu', '+ dni', 'klauzula: termin + zwłoka organu'],
+      ['R05', 'Niejasny podział odpowiedzialności', 'Luka odpowiedzialności, spór o koszt lub termin', 'brak koordynacji z innymi zarządcami', 'kolizja robót', '+ dni', 'macierz podziału ryzyk w PPU'],
+      ['R06', 'Nierealistyczny harmonogram', 'Opóźnienie, kary, presja na jakość', 'termin krótszy niż mediana klasy', 'opóźnienie, kary', '+ dni', 'termin z klasy referencyjnej'],
+      ['R08', 'Model wynagrodzenia niedopasowany do niepewności', 'Zawyżona rezerwa albo niedoszacowanie', 'ryczałt przy nieustalonych ilościach', 'spór o zakres', '+ koszt', 'ryczałt + ceny jednostkowe ponad próg'],
+      ['R13', 'Ryzyko finansowania, budżetu i płatności', 'Utrata dofinansowania, brak środków na zmiany', 'brak waloryzacji; termin blisko końca programu', 'aneks, utrata środków', '+ koszt', 'klauzula waloryzacyjna (art. 439)']
+    ];
+    const counts = { R01: '1 zatw., 3 do przeglądu', R02: '2 zatw., 4 do przeglądu', R03: '1 zatw.', R04: '0 zatw., 2 do przeglądu', R05: '1 do przeglądu', R06: '2 zatw.', R08: 'brak zdarzeń', R13: '1 do przeglądu' };
+    const Q = {
+      R01: ['reguły wyłapują 2 z 14', 'W zbiorze wzorcowym 150 przyczyn zmian reguły wyłapały 2 z 14 przypadków R01. Pozostałe ocenia model, a zatwierdzasz Ty.', 'Przejrzyj 3 propozycje'],
+      R02: ['reguły wyłapują 14 z 25', 'W zbiorze wzorcowym 150 przyczyn zmian reguły wyłapały 14 z 25 przypadków R02. Pozostałe ocenia model, a zatwierdzasz Ty.', 'Przejrzyj 4 propozycje'],
+      R04: ['fałszywe alarmy: 12 z 24', 'W zbiorze wzorcowym reguły oznaczyły R04 przy 24 przyczynach, w tym 12 błędnie. Doprecyzuj sygnał powyżej albo przejrzyj propozycje.', 'Przejrzyj 2 propozycje'],
+      R08: ['fałszywe alarmy: 17 z 22', 'W zbiorze wzorcowym reguły oznaczyły R08 przy 22 przyczynach, w tym 17 błędnie. Doprecyzuj sygnał powyżej.', '']
+    };
+    const risks = R.map(([code, t, e, sig, ev, imp, mit]) => ({ code, t, e, n: counts[code], q: Q[code] ? Q[code][0] : '', qd: Q[code] ? Q[code][1] : '', qa: Q[code] ? Q[code][2] : '', parts: [{ k: 'sygnał w dokumentach', v: sig }, { k: 'możliwe zdarzenie', v: ev }, { k: 'wpływ', v: imp }, { k: 'środki zaradcze', v: mit }] }));
+    const props = [
+      { t: 'Kolizja z inwestycją innego zarządcy', d: 'Np. budowa ronda przez zarząd dróg w trakcie robót kanalizacyjnych. Dziś trafia raz do R03, raz do R05.', src: 'z przyczyn zmian: Nowogard ul. 700-lecia + [n] ogłoszeń krajowych', merge: 'Połącz z R05' },
+      { t: 'Warunki atmosferyczne', d: 'Przedłużenie terminu z powodu pogody. Brak osobnej kategorii w R01–R15.', src: '11 ze 150 przyczyn w zbiorze wzorcowym (7%), m.in. Zakrzew część 1', merge: 'Połącz z R06' }
+    ];
+    const weights = [{ l: 'podsektor', v: '26' }, { l: 'formuła ZiW', v: '22' }, { l: 'zakres i ilości', v: '22' }, { l: 'wartość', v: '16' }, { l: 'opis (tekst)', v: '14' }];
+    const versions = [{ t: 'v1.3, wagi: zakres 18 → 22', w: 'ekspert, 21.11 13:20' }, { t: 'v1.2, R04: nowy środek zaradczy', w: 'ekspert, 21.11 12:58' }, { t: 'v1.1, import materiału eksperckiego', w: 'system, 21.11 12:10' }];
+    return { auth: AUTH, anon: !AUTH, home: AUTH ? 'Main.dc.html' : 'D2-Monitoring.dc.html',  brandA: this.props.brandA ?? 'ex', brandB: this.props.brandB ?? 'ante', nav, more, tabs, risks, props, weights, versions };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,1455 @@
+# Sector pack wod-kan: edit in the panel or here; loaded by `riskminer seed-catalogue`.
+# Source: docs/research/03_domain_methodology.md (+ expert materials). status: approved | proposed.
+schema_version: 1
+sector: wod-kan
+effect_units:
+  delay_days: dni (rzeczywisty − planowany koniec)
+  cost_pct: wypłata/umowa − 1 (brutto/brutto)
+  budget_pct: cena wybrana/(wartość zamówienia × (1+VAT)) − 1
+default_sources:
+  BZP_2022_2026: 'Analiza własna: ogłoszenia o wykonaniu umowy BZP 2022–2026, wod-kan, n=7105 (kopia bzp.cytr.us, 2026-11-21)'
+  BZP_CHG_2022_2026: 'Analiza własna: ogłoszenia o zmianie umowy BZP 2022–2026, wod-kan, n=1163'
+  BZP_RES_2022_2026: 'Analiza własna: ogłoszenia o wyniku BZP 2022–2026, wod-kan, n=9414 części'
+risks:
+- id: R01
+  name: Niepełny lub niespójny zakres
+  status: approved
+  effects_text: Błędna wycena, pominięcie lub dublowanie robót, zmiana zakresu, roboty dodatkowe, roszczenie albo spór o wynagrodzenie.
+  children:
+  - R01.1
+  - R01.2
+  - R01.3
+  - R01.4
+- id: R01.1
+  parent: R01
+  name: Rozbieżności między projektem, przedmiarem, STWiORB i PFU
+  status: proposed
+  phases:
+  - przygotowanie
+  - postepowanie
+  - realizacja
+  formula:
+  - buduj
+  - zaprojektuj_i_wybuduj
+  signals:
+  - doc_types:
+    - QA
+    patterns:
+    - przedmiar\w* nie (zawiera|uwzględnia|obejmuje)
+    - brak (pozycji|w przedmiarze)
+    - rozbieżnoś\w* (między|pomiędzy)
+    - niezgodnoś\w* (projektu|przedmiaru|dokumentacji)
+    strength: 0.45
+  - doc_types:
+    - SWZ_MOD
+    patterns:
+    - zmian\w* (przedmiaru|dokumentacji projektowej|STWiORB)
+    - zamieszcza zmieniony przedmiar
+    strength: 0.4
+  - doc_types:
+    - meta
+    rule: liczba pytań w Q&A / wartość zamówienia [mln zł] > P75 grupy referencyjnej
+    strength: 0.3
+  - doc_types:
+    - meta
+    rule: termin składania ofert przesunięty ≥ 2 razy (ogłoszenia o zmianie ogłoszenia)
+    strength: 0.3
+  events:
+  - EV_ADDITIONAL_WORKS
+  - EV_PRICE_INCREASE
+  - EV_TERM_EXTENSION
+  notice_evidence:
+    legal_basis:
+    - 455 ust. 1 pkt 3
+    - 455 ust. 2
+    - 455 ust. 1 pkt 1
+    reason_patterns:
+    - nieujęt\w* w (przedmiarze|dokumentacji)
+    - błęd\w* (projekt|w dokumentacji)
+    - roboty (dodatkowe|zamienne)
+  effects:
+    empirical:
+      category: projekt/dokumentacja
+      n: 642
+      p_late: 0.67
+      delay_days:
+        p50: 46
+        p75: 128
+      cost_pct:
+        p50: 0.005
+        p75: 0.057
+        p90: 0.134
+      source: BZP_2022_2026
+    literature: 'Rybka & Bondar-Nowakowska 2013: projekt zamawiającego (Red Book), 92 zmiany dokumentacji, koszt 14,42% kwoty kontraktu; ZiW
+      (Yellow Book), 1 zmiana, 7,01%.'
+  causes:
+  - pośpiech w przygotowaniu dokumentacji
+  - nieaktualne mapy do celów projektowych
+  - długi czas między projektem a przetargiem
+  - brak weryfikacji przedmiaru
+  mitigations:
+  - niezależna weryfikacja dokumentacji i przedmiaru przed ogłoszeniem
+  - aktualizacja projektu starszego niż 2 lata
+  - hierarchia dokumentów w umowie
+  - ceny jednostkowe do rozliczania robót dodatkowych
+  clauses:
+  - 'W przypadku rozbieżności pomiędzy dokumentami obowiązuje następująca kolejność ważności: 1) umowa, 2) SWZ wraz z wyjaśnieniami i zmianami,
+    3) dokumentacja projektowa, 4) STWiORB, 5) przedmiar robót (charakter pomocniczy).'
+  - Roboty nieujęte w dokumentacji, niezbędne do prawidłowego wykonania przedmiotu umowy, wykonawca wykona po sporządzeniu protokołu konieczności;
+    ich wartość ustala się według cen jednostkowych z kosztorysu ofertowego, a w razie ich braku, według średnich stawek i cen SEKOCENBUD z kwartału
+    poprzedzającego wykonanie robót (R, S, Kp, Z).
+  checklist_refs:
+  - 04:3.5.1
+- id: R01.2
+  parent: R01
+  name: Zakres orientacyjny w PFU (formuła zaprojektuj i wybuduj)
+  status: proposed
+  formula:
+  - zaprojektuj_i_wybuduj
+  signals:
+  - doc_types:
+    - PFU
+    - OPZ
+    - NOTICE_DESC
+    patterns:
+    - wartości (są )?orientacyjne
+    - nie mogą zostać zagwarantowane
+    - ok\.\s?\d
+    - około \d+ ?(m|mb|km|szt)
+    - brak (analizy terenu|badań gruntu)
+    strength: 0.55
+  - doc_types:
+    - PPU
+    patterns:
+    - wynagrodzenie ryczałtowe
+    combine_with: wartości orientacyjne
+    strength: 0.6
+    note: ryczałt + ilości orientacyjne = przeniesienie niepoliczalnego ryzyka na wykonawcę → premia w cenie lub spór
+  events:
+  - EV_ADDITIONAL_WORKS
+  - EV_PRICE_INCREASE
+  - EV_TERM_EXTENSION
+  - EV_SCOPE_REDUCTION
+  effects:
+    empirical:
+      note: 'ZiW vs buduj (BZP_2022_2026): P(5.3=Nie) 50% vs 29%; opóźnienie P80 129 vs 39 dni; P(≥1 zmiana) 62% vs 41%; koszt P90 +7,5% vs +7,3%'
+  causes:
+  - PFU przygotowany bez wizji terenu i badań
+  - zakres liczony z mapy
+  mitigations:
+  - koncepcja i badania geotechniczne przed PFU
+  - ilości graniczne (min–max) z ceną jednostkową za nadwyżkę
+  - etapowanie z punktem decyzyjnym po koncepcji
+  clauses:
+  - Wynagrodzenie ryczałtowe obejmuje wykonanie sieci o łącznej długości do [L_max] m; za długość przekraczającą [L_max] wynagrodzenie ustala
+    się jako iloczyn nadwyżki i ceny jednostkowej za 1 m określonej w formularzu ofertowym. W przypadku długości mniejszej niż [L_min] wynagrodzenie
+    ulega obniżeniu według tej samej ceny jednostkowej.
+  - Po zatwierdzeniu koncepcji przez zamawiającego strony w terminie 14 dni potwierdzają zakres rzeczowy; zmiana zakresu wynikająca z koncepcji
+    stanowi zmianę przewidzianą w art. 455 ust. 1 pkt 1 Pzp.
+- id: R01.3
+  parent: R01
+  name: Roboty towarzyszące poza zakresem (odtworzenie nawierzchni, zjazdy, przebudowy kolizji)
+  status: proposed
+  signals:
+  - doc_types:
+    - QA
+    patterns:
+    - kto (ponosi|pokrywa) koszt\w* odtworzeni
+    - odtworzeni\w* nawierzchni (na całej szerokości|w pełnej)
+    - zakres odtworzenia
+    strength: 0.45
+  - doc_types:
+    - PFU
+    - OPZ
+    patterns:
+    - odtworzeni\w* nawierzchni zgodnie z (warunkami|decyzją) zarządcy
+    strength: 0.3
+  events:
+  - EV_ADDITIONAL_WORKS
+  - EV_PRICE_INCREASE
+  effects:
+    empirical:
+      category: drogi/nawierzchnie/koordynacja
+      n: 204
+      delay_days:
+        p50: 62
+        p75: 134
+      cost_pct:
+        p50: 0.021
+        p75: 0.085
+        p90: 0.195
+      source: BZP_2022_2026
+  mitigations:
+  - uzyskać warunki zarządcy drogi przed przetargiem
+  - wycenić odtworzenie jako odrębną pozycję obmiarową
+  clauses:
+  - Odtworzenie nawierzchni rozlicza się obmiarowo według ceny jednostkowej za 1 m² dla każdego typu nawierzchni; jeżeli zarządca drogi określi
+    zakres odtworzenia większy niż przyjęty w dokumentacji, wynagrodzenie ulega zmianie według tych cen jednostkowych.
+- id: R01.4
+  parent: R01
+  name: Niejasna granica zakresu sieć / przyłącza / sięgacze
+  status: proposed
+  signals:
+  - doc_types:
+    - PFU
+    - OPZ
+    - SWZ
+    - QA
+    patterns:
+    - przyłącz\w* (do|w granicach) (budynk|nieruchomoś)
+    - sięgacz\w*
+    - do granicy (działki|nieruchomości)
+    - studni\w* przyłączeniow
+    - czy (zamawiający|zakres) obejmuje przyłącz
+    strength: 0.35
+  events:
+  - EV_ADDITIONAL_WORKS
+  - EV_SCOPE_REDUCTION
+  effects:
+    empirical:
+      category: mieszkańcy/przyłącza
+      n: 249
+      p_late: 0.63
+      delay_days:
+        p50: 46
+        p75: 113
+      cost_pct:
+        p50: 0.016
+        p75: 0.066
+        p90: 0.164
+      source: BZP_2022_2026
+  mitigations:
+  - jednoznaczna definicja punktu granicznego w PFU/OPZ
+  - wykaz działek z przyłączami i zgodami właścicieli
+  clauses:
+  - Zakres obejmuje wykonanie [N] odgałęzień (sięgaczy) zakończonych studnią przyłączeniową [korkiem] w odległości do 1 m od granicy nieruchomości;
+    liczba odgałęzień może ulec zmianie o ±[X]% bez zmiany ceny jednostkowej za odgałęzienie.
+  checklist_refs:
+  - '04:3.3'
+  - 04:2.4.1
+- id: R02
+  name: Niedostateczne rozpoznanie stanu istniejącego
+  status: approved
+  effects_text: Przeprojektowanie, nieprzewidziane roboty, przestoje, wzrost kosztu albo wydłużenie terminu.
+  children:
+  - R02.1
+  - R02.2
+  - R02.3
+- id: R02.1
+  parent: R02
+  name: Warunki gruntowo-wodne (woda gruntowa, grunty słabe, kurzawka, skała)
+  status: proposed
+  signals:
+  - doc_types:
+    - SWZ
+    - PFU
+    - OPZ
+    - QA
+    patterns:
+    - brak (badań|dokumentacji) (geotechn|geolog|gruntow)
+    - czy zamawiający posiada (badania|opinię) geotechn
+    - opini\w* geotechniczn\w* (wykona|leży po stronie) wykonaw
+    strength: 0.5
+  - doc_types:
+    - GEOTECH
+    - PROJECT
+    - STWIORB
+    patterns:
+    - zwierciadł\w* wody (gruntowej )?(na głębokości|ustabilizowan)\D{0,20}(0,\d|1,\d)
+    - kurzawk
+    - grunt\w* (nienośn|organiczn|torf)
+    - namuł
+    - igłofiltr
+    - odwodnieni\w* wykop
+    strength: 0.45
+  - doc_types:
+    - meta
+    rule: trasa w dolinie cieku / teren podmokły (z opisu lub mapy)
+    strength: 0.3
+  events:
+  - EV_ADDITIONAL_WORKS
+  - EV_UNFORESEEN_CHANGE
+  - EV_TERM_EXTENSION
+  notice_evidence:
+    legal_basis:
+    - 455 ust. 1 pkt 4
+    - 455 ust. 1 pkt 3
+    reason_patterns:
+    - warunk\w* grunt
+    - wod\w* gruntow
+    - odwodni
+    - geotechn
+    - kurzawk
+    - skał
+  effects:
+    empirical:
+      category: grunt/woda
+      n: 185
+      delay_days:
+        p50: 58
+        p75: 127
+      cost_pct:
+        p50: 0.0
+        p75: 0.065
+        p90: 0.197
+      source: BZP_2022_2026
+    literature: 'Interpelacja 16654 (2026): gminy wskazują trudne warunki geologiczne i hydrologiczne jako przyczynę opóźnień KPO B3.1.1.'
+  causes:
+  - brak badań lub badania punktowe co >500 m
+  - sezonowe wahania zwierciadła wody
+  - mokry sezon realizacji
+  mitigations:
+  - badania podłoża w rozstawie dostosowanym do trasy
+  - pozycja rezerwowa na odwodnienie rozliczana obmiarowo
+  - uzgodnienie wodnoprawne odwodnienia przed startem
+  clauses:
+  - Zamawiający przekazuje dokumentację badań podłoża gruntowego (załącznik nr [X]). W przypadku stwierdzenia warunków gruntowo-wodnych istotnie
+    odmiennych od opisanych w tej dokumentacji wykonawca niezwłocznie, nie później niż w terminie 3 dni roboczych, zawiadamia inspektora nadzoru;
+    strony sporządzają protokół konieczności, a roboty dodatkowe (odwodnienie, wymiana gruntu, umocnienia) rozlicza się według cen jednostkowych
+    z kosztorysu ofertowego. Termin wykonania ulega przedłużeniu o czas niezbędny do ich wykonania, potwierdzony przez inspektora nadzoru.
+  - Odwodnienie wykopów rozlicza się obmiarowo według ceny jednostkowej za dobę pracy zestawu odwadniającego na 1 m wykopu, do kwoty rezerwy [Y]
+    zł.
+  checklist_refs:
+  - '04:5.4'
+  - 04:6.6.1
+- id: R02.2
+  parent: R02
+  name: Nieznany stan istniejącej infrastruktury (przebudowa, modernizacja OŚ/SUW, renowacja kanałów)
+  status: proposed
+  works_type:
+  - przebudowa
+  signals:
+  - doc_types:
+    - PFU
+    - OPZ
+    - QA
+    patterns:
+    - brak (inwentaryzacji|dokumentacji powykonawczej)
+    - stan techniczny (nieznany|do ustalenia)
+    - inspekcj\w* (TV|CCTV|kamerą) (wykona|po stronie) wykonaw
+    - czy zamawiający posiada (inwentaryzację|ekspertyzę)
+    strength: 0.45
+  events:
+  - EV_ADDITIONAL_WORKS
+  - EV_UNFORESEEN_CHANGE
+  mitigations:
+  - inwentaryzacja i ekspertyza przed przetargiem
+  - inspekcja CCTV kanałów do renowacji
+  - ruch obiektu w trakcie modernizacji, plan tymczasowy
+  clauses:
+  - Wykonawca w terminie [14] dni od przekazania terenu budowy wykona inwentaryzację stanu istniejącego obiektów objętych przebudową; ujawnione
+    w jej wyniku konieczne roboty nieprzewidziane w dokumentacji rozlicza się na zasadach określonych w § [X] (protokół konieczności, ceny jednostkowe).
+  - Zamawiający zapewnia ciągłość pracy oczyszczalni/stacji w okresie robót; wykonawca przedstawi plan przełączeń i pracy tymczasowej do akceptacji
+    operatora.
+- id: R02.3
+  parent: R02
+  name: Archeologia, niewybuchy, zanieczyszczenia gruntu
+  status: proposed
+  signals:
+  - doc_types:
+    - DECISION
+    - PFU
+    - OPZ
+    patterns:
+    - stanowisk\w* archeolog
+    - nadzór archeolog
+    - strefa ochrony konserwatorskiej
+    - niewybuch
+    - saper
+    - zanieczyszcz\w* (grunt|ziemi)
+    strength: 0.35
+  effects:
+    empirical:
+      category: archeologia/niewybuchy/zanieczyszczenia
+      n: 19
+      p_late: 0.79
+      delay_days:
+        p50: 116
+        p75: 195
+      cost_pct:
+        p75: 0.045
+        p90: 0.133
+      source: BZP_2022_2026
+      note: mała próba
+  mitigations:
+  - uzgodnienie z WUOZ przed przetargiem
+  - nadzór archeologiczny jako odrębna pozycja
+  - rozpoznanie historyczne terenu
+  clauses:
+  - Wstrzymanie robót na polecenie organu ochrony zabytków lub w związku z odkryciem przedmiotu, który posiada cechy zabytku, albo niewybuchu,
+    stanowi okoliczność uzasadniającą przedłużenie terminu o czas wstrzymania robót.
+- id: R03
+  name: Kolizje, dostęp do terenu i prawa do nieruchomości
+  status: approved
+  effects_text: Brak możliwości rozpoczęcia części robót, zmiana trasy lub technologii, wstrzymanie prac albo roszczenia.
+  children:
+  - R03.1
+  - R03.2
+  - R03.3
+- id: R03.1
+  parent: R03
+  name: Kolizje z uzbrojeniem terenu (w tym niezinwentaryzowanym)
+  status: proposed
+  signals:
+  - doc_types:
+    - QA
+    patterns:
+    - koliz\w*
+    - niezinwentaryzowan
+    - sieci? (gazow|teletechn|energetyczn)\w* (koliduj|w kolizji)
+    strength: 0.45
+  - doc_types:
+    - PFU
+    - OPZ
+    patterns:
+    - warunki (techniczne )?(gestor|właściciel\w* sieci) (uzyska|leży po stronie) wykonaw
+    - przebudow\w* kolizji
+    strength: 0.4
+  - doc_types:
+    - meta
+    rule: wąskie ulice zabudowy zwartej; trasa w pasie drogi z istniejącym uzbrojeniem (opis)
+    strength: 0.3
+  events:
+  - EV_ADDITIONAL_WORKS
+  - EV_UNFORESEEN_CHANGE
+  - EV_TERM_EXTENSION
+  notice_evidence:
+    legal_basis:
+    - 455 ust. 1 pkt 3
+    - 455 ust. 1 pkt 4
+    reason_patterns:
+    - koliz
+    - niezinwentaryz
+    - gestor
+    - tauron|enea|energa|pge|orange|psg|polska spółka gazownictwa
+  effects:
+    empirical:
+      category: kolizje/gestorzy
+      n: 166
+      delay_days:
+        p50: 46
+        p75: 124
+      cost_pct:
+        p50: 0.006
+        p75: 0.062
+        p90: 0.161
+      source: BZP_2022_2026
+    literature: 'KE SWD(2020)43: projekt kanalizacji w Sochaczewie, napotkane ok. 50-letnie, niezarejestrowane uzbrojenie wymagało robót dodatkowych
+      i zmian projektu; opóźnienie > 1 rok (łącznie z wolnym przetargiem).'
+  mitigations:
+  - aktualna mapa do celów projektowych
+  - warunki gestorów przed przetargiem
+  - przekopy kontrolne w miejscach krytycznych
+  - pozycja rezerwowa
+  clauses:
+  - Kolizje z uzbrojeniem terenu nieujawnionym na mapie do celów projektowych stanowią okoliczność, za którą wykonawca nie ponosi odpowiedzialności.
+    Wykonawca niezwłocznie zawiadamia inspektora nadzoru i gestora sieci; termin wykonania ulega przedłużeniu o czas uzgodnień z gestorem, nie
+    dłuższy niż [30] dni dla każdej kolizji, a koszt przebudowy rozlicza się według cen jednostkowych.
+  checklist_refs:
+  - '04:5.4'
+- id: R03.2
+  parent: R03
+  name: Brak prawa do dysponowania gruntem / służebności na trasie
+  status: proposed
+  signals:
+  - doc_types:
+    - PFU
+    - OPZ
+    - PROJECT_DESC
+    - FUNDING_DESC
+    patterns:
+    - własnoś\w* prywatn
+    - teren\w* prywatn
+    - przez (działk|nieruchomoś)\w* prywatn
+    - zgod\w* właściciel
+    - służebnoś
+    - nieuregulowan\w* stan\w* prawn
+    strength: 0.45
+  - doc_types:
+    - QA
+    patterns:
+    - czy zamawiający posiada (prawo do dysponowania|zgody właścicieli)
+    - brak zgody (właściciel|na wejście)
+    strength: 0.55
+  - doc_types:
+    - PFU
+    patterns:
+    - uzyskanie zgód właścicieli (leży po stronie|należy do) wykonawc
+    strength: 0.55
+    note: ZiW przenosi ryzyko na wykonawcę, ale skutek terminowy zostaje u zamawiającego
+  events:
+  - EV_TERM_EXTENSION
+  - EV_SCOPE_REDUCTION
+  - EV_UNFORESEEN_CHANGE
+  notice_evidence:
+    reason_patterns:
+    - właściciel
+    - brak zgody
+    - służebn
+    - dysponowani
+    - zmian\w* trasy
+  effects:
+    empirical:
+      category: nieruchomości
+      n: 127
+      delay_days:
+        p50: 46
+        p75: 146
+      cost_pct:
+        p75: 0.031
+        p90: 0.071
+      source: BZP_2022_2026
+    literature: 'KE SWD(2020)43: wodociąg Sofia, wywłaszczenia → 3 lata opóźnienia i +32% kosztu.'
+  causes:
+  - trasa poza pasem drogowym
+  - brak wcześniejszych rozmów z właścicielami
+  - rozdrobnione działki
+  mitigations:
+  - zgody przed przetargiem (formuła buduj)
+  - decyzja z art. 124 ugn jako ścieżka awaryjna
+  - trasa w pasie drogowym
+  - wykaz działek z dysponowaniem jako załącznik
+  clauses:
+  - Zamawiający oświadcza, że posiada prawo do dysponowania nieruchomościami na cele budowlane w zakresie działek wymienionych w załączniku nr
+    [X]. Brak prawa do dysponowania nieruchomością ujawniony po zawarciu umowy uprawnia strony do zmiany trasy sieci lub ograniczenia zakresu
+    robót, nie więcej niż o [10]% wynagrodzenia, z obniżeniem wynagrodzenia według cen jednostkowych z kosztorysu ofertowego, oraz do przedłużenia
+    terminu o czas niezbędny do uzyskania decyzji, o której mowa w art. 124 ustawy o gospodarce nieruchomościami.
+  checklist_refs:
+  - '04:5.2'
+  - '04:5.3'
+  - 04:5.5.1
+- id: R03.3
+  parent: R03
+  name: Przekroczenia przeszkód (cieki, wały, drogi krajowe/wojewódzkie, kolej)
+  status: proposed
+  signals:
+  - doc_types:
+    - PFU
+    - OPZ
+    - PROJECT
+    patterns:
+    - przekroczeni\w* (cieku|rzeki|rowu|drogi|torów|linii kolejowej)
+    - przewiert\w*
+    - przecisk
+    - HDD
+    - przejści\w* pod (dnem|drogą|torami)
+    - drog\w* (krajow|wojewódzk)
+    - PKP|PLK
+    strength: 0.4
+  events:
+  - EV_TERM_EXTENSION
+  - EV_ADDITIONAL_WORKS
+  mitigations:
+  - uzgodnienia z zarządcą (GDDKiA/ZDW/PKP PLK/Wody Polskie) przed przetargiem
+  - technologia bezwykopowa wyceniona osobno
+  - pozwolenie wodnoprawne art. 389 pkt 9 PW
+  clauses:
+  - Termin wykonania przekroczenia [cieku/drogi/linii kolejowej] liczy się od dnia doręczenia wykonawcy ostatecznej decyzji/uzgodnienia zarządcy;
+    opóźnienie zarządcy ponad ustawowy termin załatwienia sprawy przedłuża termin wykonania o czas tego opóźnienia, pod warunkiem złożenia przez
+    wykonawcę kompletnego wniosku w terminie wynikającym z harmonogramu.
+- id: R04
+  name: Decyzje, pozwolenia i uzgodnienia zależne od podmiotów trzecich
+  status: approved
+  effects_text: Opóźnienie rozpoczęcia lub kontynuacji prac, zmiana warunków realizacji albo brak możliwości użytkowania obiektu.
+  children:
+  - R04.1
+  - R04.2
+  - R04.3
+  - R04.4
+  effects:
+    empirical:
+      category: decyzje/pozwolenia/uzgodnienia
+      n: 327
+      delay_days:
+        p50: 78
+        p75: 184
+      cost_pct:
+        p75: 0.024
+        p90: 0.1
+      source: BZP_2022_2026
+- id: R04.1
+  parent: R04
+  name: Decyzja o środowiskowych uwarunkowaniach / ocena Natura 2000
+  status: proposed
+  applicability_rules:
+  - 'sieć kanalizacyjna ≥ 1 km (rozp. RM 2019 poz. 1839 §3 ust.1 pkt 81; wyjątki: przebudowa bezwykopowa, deszczówka w pasie drogowym, przyłącza)'
+  - oczyszczalnia ≥ 400 RLM (pkt 79)
+  - rurociąg wodociągowy magistralny / od SUW do sieci rozdzielczej (pkt 71)
+  - ujęcie wód podziemnych ≥ 10 m³/h (pkt 73) lub ≥ 1 m³/h przy innym ujęciu < 500 m (pkt 74)
+  - obszar Natura 2000 / formy ochrony przyrody na trasie
+  signals:
+  - doc_types:
+    - SWZ
+    - PFU
+    - OPZ
+    patterns:
+    - decyzj\w* o środowiskowych uwarunkowaniach (zostanie|należy|uzyska)
+    - brak decyzji środowiskowej
+    - raport (oddziaływania|OOŚ)
+    - Natura 2000
+    - RDOŚ
+    strength: 0.45
+  - doc_types:
+    - meta
+    rule: applicability_rules == true AND w pakiecie brak DŚU lub wzmianki o niej → stan DOKUMENT_NIE_WSPOMINA/BRAK_W_PACZCE
+    strength: 0.35
+  events:
+  - EV_TERM_EXTENSION
+  mitigations:
+  - DŚU przed ogłoszeniem przetargu (buduj)
+  - w ZiW, bufor ≥ 3–6 mies. na DŚU i warunki z niej wynikające
+  clauses:
+  - Okres od złożenia kompletnego wniosku o wydanie decyzji do dnia jej ostateczności, w części przekraczającej [60] dni, nie wlicza się do terminu
+    wykonania etapu projektowego, o ile opóźnienie nie wynika z przyczyn leżących po stronie wykonawcy.
+  checklist_refs:
+  - '04:6.3'
+  - '04:6.4'
+  - 04:6.6.2
+- id: R04.2
+  parent: R04
+  name: Pozwolenie / zgłoszenie wodnoprawne
+  status: proposed
+  applicability_rules:
+  - zrzut ścieków oczyszczonych (OŚ), pozwolenie wodnoprawne (usługi wodne / szczególne korzystanie z wód)
+  - rurociąg pod/nad wodami płynącymi lub przez wał, art. 389 pkt 9 PW (pozwolenie)
+  - długotrwałe obniżenie zwierciadła wód podziemnych, art. 389 pkt 3 (pozwolenie)
+  - trwałe odwadnianie wykopów, odprowadzanie wód z wykopów, art. 394 ust.1 pkt 5, 8 (zgłoszenie)
+  signals:
+  - doc_types:
+    - SWZ
+    - PFU
+    - OPZ
+    - QA
+    patterns:
+    - pozwoleni\w* wodnoprawn
+    - zgłoszeni\w* wodnoprawn
+    - operat wodnoprawn
+    - Wody Polskie
+    - wylot\w* (do|ścieków)
+    - odbiornik\w* ścieków
+    strength: 0.35
+  events:
+  - EV_TERM_EXTENSION
+  - EV_UNFORESEEN_CHANGE
+  notice_evidence:
+    reason_patterns:
+    - wodnoprawn
+    - Wody Polskie
+    - PGW
+  mitigations:
+  - operat wodnoprawny w zakresie wykonawcy ZiW z buforem czasowym
+  - wczesna konsultacja z PGW Wody Polskie
+  clauses:
+  - Wykonawca uzyska w imieniu zamawiającego pozwolenia i zgłoszenia wodnoprawne niezbędne do wykonania robót, w tym na odwodnienie wykopów i
+    przekroczenia cieków; termin uzyskania przez organ, przekraczający termin ustawowy, przedłuża termin wykonania o czas opóźnienia organu.
+- id: R04.3
+  parent: R04
+  name: Pozwolenie na budowę / zgłoszenie, ZUD, uzgodnienia konserwatorskie (ZiW)
+  status: proposed
+  formula:
+  - zaprojektuj_i_wybuduj
+  signals:
+  - doc_types:
+    - PFU
+    - OPZ
+    patterns:
+    - uzyskanie (pozwolenia na budowę|zgłoszenia|decyzji)\w* (leży po stronie|należy do|po stronie) wykonawc
+    - narad\w* koordynacyjn
+    - ZUD
+    - konserwator
+    strength: 0.35
+  events:
+  - EV_TERM_EXTENSION
+  note: sieci wodociągowe i kanalizacyjne, zgłoszenie (PB art. 29 ust.1 pkt 2 lit. b–c); pozwolenie wymagane, gdy przedsięwzięcie wymaga OOŚ/oceny
+    Natura 2000 (art. 29 ust. 6)
+  mitigations:
+  - kamień milowy 'projekt + decyzje' z terminem i rezerwą
+  - dopuszczenie etapowania robót wg uzyskanych decyzji
+- id: R04.4
+  parent: R04
+  name: Warunki techniczne operatora i gestorów, przepustowość odbiornika (OŚ/SUW/kolektor)
+  status: proposed
+  signals:
+  - doc_types:
+    - PFU
+    - OPZ
+    - PROJECT_DESC
+    - FUNDING_DESC
+    patterns:
+    - warunk\w* techniczn\w* (przyłączenia|podłączenia) (zostaną|należy) uzyska
+    - przepustowoś\w* (oczyszczalni|stacji)
+    - wpięt\w* do (realizowanej|budowanej|projektowanej)
+    - podłączeni\w* do sieci (gminy|w gminie)
+    strength: 0.4
+  events:
+  - EV_ADDITIONAL_WORKS
+  - EV_TERM_EXTENSION
+  notice_evidence:
+    reason_patterns:
+    - warunk\w* techniczn
+    - operator
+    - przedsiębiorstw\w* wodociąg
+  mitigations:
+  - pisemne stanowisko operatora o możliwości dostawy/odbioru (wg 04:4.2) przed przetargiem
+  - aktualność ≤ 12 mies.
+  checklist_refs:
+  - '04:4.1'
+  - '04:4.2'
+  - 04:4.5.1
+- id: R05
+  name: Niejasny lub nieadekwatny podział odpowiedzialności
+  status: approved
+  effects_text: Luka odpowiedzialności, dublowanie prac, odmowa wykonania, roszczenie i spór o koszt lub termin.
+  children:
+  - R05.1
+  - R05.2
+- id: R05.1
+  parent: R05
+  name: Ryzyko projektowe i hierarchia dokumentów (ZiW vs dokumentacja zamawiającego)
+  status: proposed
+  signals:
+  - doc_types:
+    - PPU
+    - SWU
+    rule: brak klauzuli kolejności ważności dokumentów
+    strength: 0.3
+  - doc_types:
+    - PPU
+    patterns:
+    - wykonawca (ponosi|przejmuje) (pełną )?odpowiedzialnoś\w* za (błędy|kompletność) dokumentacji (projektowej )?(zamawiającego|przekazanej)
+    strength: 0.5
+    note: potencjalnie sprzeczne z art. 433 pkt 3 Pzp → R11.3
+  events:
+  - EV_ADDITIONAL_WORKS
+  - EV_KIO_APPEAL
+  mitigations:
+  - 'jasny podział: kto odpowiada za dane wejściowe (mapy, badania, warunki), a kto za rozwiązania'
+  - klauzula hierarchii dokumentów
+  checklist_refs:
+  - '04:7.2'
+  - 04:7.6.1
+- id: R05.2
+  parent: R05
+  name: Interfejs z operatorem / właścicielem innej sieci, przyszła eksploatacja
+  status: proposed
+  signals:
+  - doc_types:
+    - PFU
+    - OPZ
+    - FUNDING_DESC
+    patterns:
+    - eksploatator
+    - przedsiębiorstw\w* wodociągow\w*
+    - przekazani\w* (do eksploatacji|w administrowanie)
+    - sieć (gminy|należąca do)
+    strength: 0.25
+  mitigations:
+  - porozumienie z operatorem przed realizacją (odbiory, standardy materiałów)
+  - udział operatora w odbiorach
+  checklist_refs:
+  - '04:7.4'
+- id: R06
+  name: Nierealistyczny harmonogram i nieuwzględnione zależności
+  status: approved
+  effects_text: Opóźnienie, kary, kumulacja prac, presja na skrócenie prób i badań albo pogorszenie jakości.
+  children:
+  - R06.1
+  - R06.2
+- id: R06.1
+  parent: R06
+  name: Presja terminu dofinansowania (KPO 15.06/31.08.2026, koniec perspektywy)
+  status: proposed
+  signals:
+  - doc_types:
+    - meta
+    rule: źródło finansowania = KPO AND planowany koniec umowy > (termin IOI − 60 dni)
+    strength: 0.55
+  - doc_types:
+    - meta
+    rule: planowany czas realizacji < P25 grupy referencyjnej przy porównywalnym zakresie (km, RLM)
+    strength: 0.45
+  - doc_types:
+    - PPU
+    - SWZ
+    patterns:
+    - termin wykonania[^.]{0,40}do dnia \d
+    - nieprzekraczaln\w* termin
+    strength: 0.3
+  events:
+  - EV_LATE_COMPLETION
+  - EV_TERM_EXTENSION
+  - EV_FUNDING_CHANGE
+  effects:
+    literature: 'MFiPR 15.05.2026 (odp. na interpelację 16654): termin B3.1.1 przesunięty z 15.05 na 15.06.2026 na liczne wnioski gmin; wskaźniki
+      KPO do 31.08.2026.'
+    empirical:
+      note: 'pole 3.3 = UE: P(5.3=Nie) 37% vs 30% bez UE (BZP_2022_2026); rok publikacji 2026: 39% spóźnionych vs 27% w 2022'
+  mitigations:
+  - ogłoszenie przetargu z dokumentacją gotową
+  - bufor ≥ 15% czasu
+  - etapy i odbiory częściowe zsynchronizowane z wnioskami o płatność
+  - plan B, zakres podstawowy wymagany do wskaźnika vs zakres opcjonalny
+  clauses:
+  - 'Termin wykonania: [X] miesięcy od dnia zawarcia umowy, nie później niż do [data]; wskazanie daty jest uzasadnione terminem kwalifikowalności
+    wydatków wynikającym z umowy o dofinansowanie (obiektywna przyczyna w rozumieniu art. 436 pkt 1 Pzp).'
+  - Wykonawca przedstawi harmonogram rzeczowo-finansowy z wyodrębnionymi kamieniami milowymi; w przypadku opóźnienia przekraczającego [14] dni
+    względem harmonogramu wykonawca w terminie 7 dni przedstawi plan naprawczy (zwiększenie zasobów, praca zmianowa) bez dodatkowego wynagrodzenia.
+  - Zamawiający przewiduje prawo opcji / możliwość ograniczenia zakresu o nie więcej niż [15]% wynagrodzenia (zakres opcjonalny wskazany w załączniku),
+    jeżeli jego wykonanie w terminie zagrażałoby kwalifikowalności wydatków.
+- id: R06.2
+  parent: R06
+  name: Niedoszacowany czas projektowania i uzyskiwania decyzji w formule ZiW
+  status: proposed
+  formula:
+  - zaprojektuj_i_wybuduj
+  signals:
+  - doc_types:
+    - meta
+    rule: ZiW AND łączny termin < 12 mies. AND wymagana DŚU/pozwolenie wodnoprawne
+    strength: 0.55
+  effects:
+    empirical:
+      note: 'ZiW (BZP_2022_2026, n=676): P(późno) 50%, opóźnienie P50 19 d, P80 129 d, P90 180 d; mediana planowanego czasu 426 d'
+  mitigations:
+  - osobny termin na etap projektowy z mechanizmem przesunięcia przy opóźnieniu organów
+  - wcześniejsza DŚU przez zamawiającego
+- id: R07
+  name: Nieprzewidziane zmiany i roboty dodatkowe
+  status: approved
+  kind: event_category
+  note: Kategoria zdarzeniowa, przy zatwierdzaniu przypisz przyczynę źródłową (R01–R04, R16–R18). Pole 'przyczyna nieustalona' dozwolone z obniżoną
+    pewnością.
+  events:
+  - EV_ADDITIONAL_WORKS
+  - EV_UNFORESEEN_CHANGE
+  - EV_DEMINIMIS_CHANGE
+  effects:
+    empirical:
+      note: 'ogłoszenia o zmianie (pkt 3/4) podnoszące cenę: wzrost względem wartości pierwotnej P50 5,5%, P75 12,7%, P90 22,9% (n=578, BZP_CHG_2022_2026)'
+- id: R08
+  name: Model wynagrodzenia niedopasowany do niepewności zakresu
+  status: approved
+  children:
+  - R08.1
+  - R08.2
+- id: R08.1
+  parent: R08
+  name: Brak lub niewystarczająca waloryzacja (inflacja, wzrost cen materiałów)
+  status: proposed
+  signals:
+  - doc_types:
+    - PPU
+    rule: czas trwania umowy > 6 mies. AND brak postanowień o waloryzacji (art. 439) → naruszenie ustawy
+    strength: 0.7
+  - doc_types:
+    - PPU
+    patterns:
+    - maksymaln\w* (łączn\w* )?wartoś\w* zmiany wynagrodzenia[^.]{0,60}\b([1-4](,\d)?|5)\s?%
+    - poziom\w* zmiany[^.]{0,60}\b(1\d|[2-9]\d)\s?%
+    - wskaźnik\w* cen towarów i usług konsumpcyjnych
+    strength: 0.4
+    note: niski limit (≤5%), wysoki próg (≥10%) lub indeks CPI zamiast cen produkcji budowlano-montażowej
+  - doc_types:
+    - meta
+    rule: umowa zawarta > 180 dni po terminie składania ofert
+    strength: 0.35
+  - doc_types:
+    - meta
+    rule: okres realizacji ustalony na ≤ 6 mies. przy zakresie typowo dłuższym (ucieczka od art. 439)
+    strength: 0.35
+  events:
+  - EV_PRICE_INCREASE
+  - EV_UNFORESEEN_CHANGE
+  - EV_NOT_PERFORMED
+  notice_evidence:
+    legal_basis:
+    - 455 ust. 1 pkt 1
+    - 455 ust. 1 pkt 4
+    reason_patterns:
+    - waloryz
+    - wzrost\w* cen
+    - inflac
+  effects:
+    empirical:
+      category: waloryzacja/ceny
+      n: 86
+      delay_days:
+        p50: 27
+        p75: 126
+      cost_pct:
+        p50: 0.065
+        p75: 0.112
+        p90: 0.17
+      source: BZP_2022_2026
+    macro: 'GUS: ceny budowy obiektów inżynierii lądowej i wodnej r/r: XI 2022 +14,8%, I 2023 +13,2%, XII 2023 +8,8%.'
+  mitigations:
+  - klauzula art. 439 oparta o wskaźnik GUS dla inżynierii lądowej i wodnej, symetryczna, z realnym limitem
+  - rezerwa budżetowa na waloryzację
+  clauses:
+  - 1. Strony przewidują zmianę wysokości wynagrodzenia w przypadku zmiany ceny materiałów lub kosztów związanych z realizacją zamówienia (art.
+    439 Pzp). 2. Miarą zmiany jest wskaźnik cen produkcji budowlano-montażowej, budowa obiektów inżynierii lądowej i wodnej, ogłaszany w komunikacie
+    Prezesa GUS, liczony narastająco od miesiąca, w którym upłynął termin składania ofert (a gdy umowę zawarto po upływie 180 dni od tego terminu
+   , od dnia otwarcia ofert). 3. Strona może żądać zmiany wynagrodzenia, jeżeli wskaźnik zmieni się o więcej niż 5% (próg); zmiana obejmuje część
+    wynagrodzenia za roboty pozostałe do wykonania, o wartość zmiany wskaźnika ponad próg, nie częściej niż raz na kwartał. 4. Zmiana obejmuje
+    zarówno wzrost, jak i obniżenie cen. 5. Maksymalna łączna wartość zmiany wynagrodzenia wynosi [10–15]% wynagrodzenia pierwotnego. 6. Wykonawca
+    zmienia wynagrodzenie podwykonawców zgodnie z art. 439 ust. 5 Pzp.
+- id: R08.2
+  parent: R08
+  name: Ryczałt przy niepewnych ilościach / kosztorys bez limitu
+  status: proposed
+  signals:
+  - doc_types:
+    - PPU
+    patterns:
+    - wynagrodzenie ryczałtow
+    combine_with:
+    - R01.2
+    - R02.1
+    - R03.1
+    strength: 0.4
+  - doc_types:
+    - PPU
+    patterns:
+    - wynagrodzenie kosztorysow
+    - kosztorys powykonawcz
+    - obmiar
+    rule: brak limitu wartości
+    strength: 0.3
+  events:
+  - EV_PRICE_INCREASE
+  - EV_PAID_BELOW_CONTRACT
+  effects:
+    empirical:
+      category: obmiar/kosztorys
+      n: 167
+      delay_days:
+        p50: 8
+        p75: 50
+      cost_pct:
+        p50: 0.024
+        p75: 0.086
+        p90: 0.19
+      source: BZP_2022_2026
+  mitigations:
+  - model mieszany, ryczałt za elementy przewidywalne, obmiar dla odwodnień, wymian gruntu i odtworzeń
+  - limit wartości robót obmiarowych
+- id: R09
+  name: Niejednoznaczne lub niemierzalne wymagania techniczne
+  status: approved
+  children:
+  - R09.1
+  - R09.2
+- id: R09.1
+  parent: R09
+  name: Brak mierzalnych parametrów technologicznych (oczyszczalnia, SUW)
+  status: proposed
+  subsectors:
+  - oczyszczalnia
+  - uzdatnianie
+  signals:
+  - doc_types:
+    - PFU
+    - OPZ
+    rule: 'brak liczbowych parametrów: Qśr/Qmax [m³/d], RLM, ładunki BZT5/ChZT/zawiesina/N/P na dopływie, wymagania na odpływie; dla SUW: Fe,
+      Mn, NH4, mętność, wydajność [m³/h]'
+    strength: 0.45
+  - doc_types:
+    - PFU
+    patterns:
+    - technologi\w* (do|według) uznania wykonawcy
+    - parametry zostaną (ustalone|określone)
+    strength: 0.4
+  events:
+  - EV_UNFORESEEN_CHANGE
+  - EV_IMPROPER_PERFORMANCE
+  mitigations:
+  - pomiary ilości i jakości ścieków/wody surowej przed PFU
+  - parametry gwarantowane w umowie
+- id: R09.2
+  parent: R09
+  name: Wskazanie marek / niejasna równoważność materiałów i urządzeń
+  status: proposed
+  signals:
+  - doc_types:
+    - OPZ
+    - STWIORB
+    - PROJECT
+    patterns:
+    - lub równoważn
+    - typu [A-Z][a-z]+
+    - np\. firmy
+    rule: wskazanie producenta bez kryteriów równoważności
+    strength: 0.3
+  events:
+  - EV_KIO_APPEAL
+  - EV_TERM_EXTENSION
+  clauses:
+  - 'Ilekroć w dokumentacji wskazano znak towarowy lub producenta, dopuszcza się rozwiązania równoważne o parametrach nie gorszych niż: [wykaz
+    parametrów]; wykonawca wykazuje równoważność przed wbudowaniem, a zamawiający rozpatruje wniosek w terminie 7 dni.'
+- id: R10
+  name: Niedookreślone próby, rozruch i odbiór
+  status: approved
+  children:
+  - R10.1
+  - R10.2
+- id: R10.1
+  parent: R10
+  name: Rozruch technologiczny oczyszczalni / SUW
+  status: proposed
+  subsectors:
+  - oczyszczalnia
+  - uzdatnianie
+  signals:
+  - doc_types:
+    - PPU
+    - PFU
+    rule: 'brak określenia: czasu rozruchu, liczby prób, laboratorium, kryteriów odbioru, postępowania przy niedostatecznym dopływie'
+    strength: 0.45
+  events:
+  - EV_LATE_COMPLETION
+  - EV_IMPROPER_PERFORMANCE
+  effects:
+    empirical:
+      note: 'OŚ (BZP_2022_2026, n=783): P(późno) 40%, opóźnienie P80 84 d, P90 158 d; SUW/ujęcia (n=375): 38%, P80 79 d'
+  clauses:
+  - Rozruch technologiczny trwa nie krócej niż [3] miesiące. Odbiór końcowy następuje po potwierdzeniu parametrów ścieków oczyszczonych wymaganych
+    pozwoleniem wodnoprawnym w co najmniej [4] próbach średniodobowych pobranych i zbadanych przez laboratorium akredytowane. W przypadku dopływu
+    ścieków niższego niż [X]% przepływu projektowego strony sporządzają protokół odbioru warunkowego, a próby powtarza się w terminie [6] miesięcy
+    w ramach rękojmi.
+- id: R10.2
+  parent: R10
+  name: Odbiory sieci, inspekcja TV, próby szczelności, inwentaryzacja geodezyjna
+  status: proposed
+  signals:
+  - doc_types:
+    - STWIORB
+    - PPU
+    rule: brak wymogu inspekcji TV kanałów grawitacyjnych przed odbiorem / brak kryteriów spadków i deformacji
+    strength: 0.3
+  events:
+  - EV_LATE_COMPLETION
+  clauses:
+  - 'Warunkiem odbioru końcowego jest przedłożenie: protokołów prób szczelności, raportu z inspekcji TV kanałów grawitacyjnych wraz z nagraniem,
+    inwentaryzacji geodezyjnej powykonawczej przyjętej do PZGiK.'
+- id: R11
+  name: Postępowanie podatne na odwołanie lub ograniczenie konkurencji
+  status: approved
+  children:
+  - R11.1
+  - R11.2
+  - R11.3
+- id: R11.1
+  parent: R11
+  name: Unieważnienie z powodu ceny > budżet, powtórzone postępowanie
+  status: proposed
+  signals:
+  - doc_types:
+    - meta
+    rule: kosztorys inwestorski starszy niż 6 mies. przy wysokiej dynamice cen (indeks GUS r/r > 5%)
+    strength: 0.4
+  - doc_types:
+    - meta
+    rule: kwota na sfinansowanie (art. 222 ust.4) < wartość zamówienia × 1,23
+    strength: 0.5
+  events:
+  - EV_TENDER_CANCELLED_BUDGET
+  - EV_REPEAT_TENDER
+  effects:
+    empirical:
+      note: 'BZP_RES_2022_2026: udział unieważnionych części: 2022 31%, 2023 24%, 2024 16%, 2025 11%, 2026 12%; 61% unieważnień, art. 255 pkt
+        3. Relacja cena wybrana/(wartość×1,23): mediana 0,92 (2022) → 0,71 (2026).'
+  mitigations:
+  - aktualizacja kosztorysu wskaźnikiem GUS przed ogłoszeniem
+  - rezerwa budżetowa
+  - art. 257 Pzp w ogłoszeniu gdy finansowanie niepewne
+  - podział na części
+- id: R11.2
+  parent: R11
+  name: Brak ofert / jedna oferta / nadmierne warunki udziału
+  status: proposed
+  signals:
+  - doc_types:
+    - SWZ
+    rule: warunek doświadczenia > 100% wartości zamówienia lub wymóg kilku robót o wysokiej wartości
+    strength: 0.35
+  - doc_types:
+    - meta
+    rule: termin składania ofert < 21 dni dla robót > 5 mln zł; ogłoszenie w okresie wysokiego obłożenia rynku
+    strength: 0.3
+  events:
+  - EV_TENDER_NO_OFFERS
+  - EV_SINGLE_OFFER
+  effects:
+    empirical:
+      note: 'BZP_RES_2022_2026: odsetek postępowań z 1 ofertą 25% (2022) → 6% (2026); mediana liczby ofert 3 → 6'
+- id: R11.3
+  parent: R11
+  name: Odwołanie do KIO
+  status: proposed
+  signals:
+  - doc_types:
+    - PPU
+    rule: postanowienia sprzeczne z art. 433 Pzp (kary za opóźnienie zamiast zwłoki, odpowiedzialność za okoliczności zamawiającego, ograniczenie
+      zakresu bez minimum)
+    strength: 0.4
+  - doc_types:
+    - QA
+    patterns:
+    - wnosimy o (zmianę|wykreślenie)
+    - narusza (art\.|zasad)
+    - nieproporcjonaln
+    strength: 0.25
+  events:
+  - EV_KIO_APPEAL
+  effects:
+    literature: KIO rozpoznaje odwołanie w terminie 15 dni od doręczenia (art. 544 ust.1 Pzp); typowo +3–6 tyg. do zawarcia umowy.
+- id: R12
+  name: Niewystarczająca zdolność wykonawcy lub łańcucha dostaw
+  status: approved
+  children:
+  - R12.1
+  - R12.2
+  - R12.3
+- id: R12.1
+  parent: R12
+  name: Niewypłacalność / upadłość wykonawcy, odstąpienie od umowy
+  status: proposed
+  signals:
+  - doc_types:
+    - meta
+    rule: wartość umowy > 3× największej wcześniejszej umowy wykonawcy w BZP
+    strength: 0.35
+  - doc_types:
+    - meta
+    rule: wykonawca ma w BZP wcześniejsze ogłoszenie o wykonaniu z 5.1=Nie lub 5.6=Nie
+    strength: 0.5
+  - doc_types:
+    - BIP
+    - NEWS
+    patterns:
+    - bezpośredni\w* zapłat\w* podwykonawc
+    - zszedł z budowy
+    - odstąpi\w* od umowy
+    - upadłoś
+    - restrukturyzac
+    strength: 0.7
+  events:
+  - EV_NOT_PERFORMED
+  - EV_CONTRACTOR_REPLACED
+  - EV_COMPLETION_TENDER
+  notice_evidence:
+    legal_basis:
+    - 455 ust. 1 pkt 2
+    fields:
+      '5.1': Nie
+  effects:
+    empirical:
+      note: 'BZP_2022_2026: umowy niewykonane 0,5%, nienależycie 0,7%, rzadkie, ale z największym skutkiem (nowy przetarg na dokończenie).'
+    literature: 'KE SWD(2020)43: Craiova, wymiana wykonawcy przez nowy przetarg; Słowenia, dwóch kolejnych wykonawców upadło. Coface: budownictwo
+      ~17–18% niewypłacalności firm w PL w 2025.'
+  mitigations:
+  - zabezpieczenie do 10% przy uzasadnionym ryzyku (art. 452 ust.3)
+  - płatności częściowe miesięczne
+  - monitoring bezpośrednich zapłat (art. 465 ust.7)
+  - cesja umów podwykonawczych
+  clauses:
+  - Wykonawca niezwłocznie, nie później niż w terminie 3 dni, informuje zamawiającego o złożeniu wniosku o ogłoszenie upadłości lub otwarcie postępowania
+    restrukturyzacyjnego. Zamawiający może odstąpić od umowy w terminie 30 dni od powzięcia wiadomości o przerwaniu robót przez wykonawcę na okres
+    dłuższy niż 21 dni lub o konieczności dokonania bezpośrednich zapłat podwykonawcom na sumę większą niż 5% wartości umowy (art. 465 ust. 7
+    Pzp).
+  - W razie odstąpienia strony w terminie 7 dni sporządzają protokół inwentaryzacji robót; wykonawca przekazuje dokumentację budowy, karty gwarancyjne
+    i prawa z umów z dostawcami urządzeń.
+- id: R12.2
+  parent: R12
+  name: Długie terminy dostaw urządzeń i materiałów (pompy, technologia OŚ/SUW, automatyka, rury)
+  status: proposed
+  signals:
+  - doc_types:
+    - PFU
+    - OPZ
+    patterns:
+    - dmuchaw
+    - reaktor\w* SBR
+    - pomp\w* zatapialn
+    - automatyk
+    - SCADA
+    - telemetri
+    - filtr\w* (ciśnieniow|odżelaziaj)
+    strength: 0.25
+  events:
+  - EV_TERM_EXTENSION
+  effects:
+    empirical:
+      category: dostawy
+      n: 241
+      delay_days:
+        p50: 46
+        p75: 120
+      cost_pct:
+        p75: 0.05
+        p90: 0.147
+      source: BZP_2022_2026
+  clauses:
+  - Wykonawca w terminie 30 dni od zawarcia umowy przedstawi potwierdzenie złożenia zamówień na urządzenia o czasie dostawy dłuższym niż 8 tygodni.
+    Dopuszcza się zastosowanie urządzeń równoważnych o parametrach nie gorszych niż wymagane, bez zmiany wynagrodzenia, po akceptacji zamawiającego
+    i operatora.
+- id: R12.3
+  parent: R12
+  name: Rażąco niska cena / agresywna oferta
+  status: proposed
+  signals:
+  - doc_types:
+    - meta
+    rule: cena wybranej oferty < 0,7 × (wartość zamówienia × 1,23) lub < 0,7 × średnia ofert (art. 224 ust. 2)
+    strength: 0.4
+  - doc_types:
+    - RESULT
+    rule: 6.1.7 liczba ofert z RNC > 0
+    strength: 0.3
+  events:
+  - EV_PRICE_INCREASE
+  - EV_NOT_PERFORMED
+  - EV_TERM_EXTENSION
+  effects:
+    empirical:
+      note: 'BZP_RES_2022_2026: cena wybrana/(wartość×1,23) P10 0,44, P25 0,64, niski stosunek częsty od 2024 (mediana 0,71 w 2026); wymaga analizy
+        łącznie z jakością kosztorysu inwestorskiego.'
+  mitigations:
+  - rzetelne wyjaśnienia RNC z kalkulacją
+  - zabezpieczenie podwyższone
+  - ścisły monitoring harmonogramu
+- id: R13
+  name: Ryzyko finansowania, budżetu i płatności
+  status: approved
+  children:
+  - R13.1
+  - R13.2
+- id: R13.1
+  parent: R13
+  name: Utrata lub obniżenie dofinansowania (terminy, wskaźniki, kwalifikowalność)
+  status: proposed
+  signals:
+  - doc_types:
+    - meta
+    rule: R06.1 aktywne AND brak zakresu opcjonalnego
+    strength: 0.45
+  - doc_types:
+    - FUNDING
+    patterns:
+    - wskaźnik\w* (rezultatu|produktu)[^.]{0,80}(osób|RLM|przyłącz)
+    - zwrot dofinansowania
+    strength: 0.25
+  events:
+  - EV_FUNDING_CHANGE
+  effects:
+    literature: 'NIK P/20/046: opóźnienia AKPOŚK wynikały głównie z braku środków własnych i niepozyskania dofinansowania; w 40 aglomeracjach
+      wydatkowano 30,2% planowanych nakładów (do IX 2020).'
+  clauses:
+  - Odbiory częściowe i płatności następują zgodnie z harmonogramem rzeczowo-finansowym skorelowanym z wnioskami o płatność; wykonawca przekazuje
+    dokumenty rozliczeniowe w terminie 7 dni od odbioru. Zmiana umowy o dofinansowanie w zakresie terminów lub zakresu stanowi podstawę zmiany
+    umowy przewidzianą w art. 455 ust. 1 pkt 1 Pzp.
+- id: R13.2
+  parent: R13
+  name: Luka budżetowa (cena > kwota, brak środków na roboty dodatkowe, zmiany WPF)
+  status: proposed
+  signals:
+  - doc_types:
+    - meta
+    rule: cena wybranej oferty > kwota na sfinansowanie (zwiększenie kwoty)
+    strength: 0.4
+  - doc_types:
+    - WPF
+    rule: zwiększenie 'łącznych nakładów' przedsięwzięcia w WPF ≥ 10% lub przesunięcie 'okresu realizacji'
+    strength: 0.6
+  events:
+  - EV_FUNDING_CHANGE
+  - EV_SCOPE_REDUCTION
+- id: R14
+  name: Nadmierne koszty eksploatacji i utrzymania
+  status: approved
+  children:
+  - R14.1
+- id: R14.1
+  parent: R14
+  name: Mały przepływ, długie przewody tłoczne, energochłonność przepompowni
+  status: proposed
+  signals:
+  - doc_types:
+    - PFU
+    - PROJECT_DESC
+    - FUNDING_DESC
+    rule: długość sieci / liczba przyłączy > P75 grupy (m na przyłącze) lub zabudowa rozproszona/sezonowa
+    strength: 0.35
+  - doc_types:
+    - PFU
+    patterns:
+    - kanalizacj\w* (ciśnieniow|podciśnieniow)
+    - przepompowni\w* przydomow
+    - tłoczni\w* przydomow
+    - rurociąg\w* tłoczn\w* o długości
+    strength: 0.3
+  effects:
+    literature: 'Poradnik 04 §2.3: długi przewód przy małym poborze, wydłużony czas przebywania wody; ścieki w długich tłocznych, zagniwanie
+      (H₂S), korozja.'
+  mitigations:
+  - wymagania eksploatacyjne w PFU (energia, czas zatrzymania, płukanie, telemetria)
+  - kryterium kosztu cyklu życia
+  - konsultacja z operatorem
+  checklist_refs:
+  - '04:2.3'
+- id: R15
+  name: Nieosiągnięcie efektu technologicznego, użytkowego lub środowiskowego
+  status: approved
+  children:
+  - R15.1
+  - R15.2
+- id: R15.1
+  parent: R15
+  name: Niski stopień przyłączeń nieruchomości (RLM, liczba osób)
+  status: proposed
+  signals:
+  - doc_types:
+    - FUNDING_DESC
+    - PFU
+    rule: zakres = sieć z sięgaczami do granicy działki, bez przyłączy na terenie nieruchomości i bez programu dofinansowania przyłączy
+    strength: 0.45
+  - doc_types:
+    - meta
+    rule: brak w pakiecie deklaracji mieszkańców / analizy odbiorców (Poradnik 04 §2.1)
+    strength: 0.35
+  events:
+  - EV_LOW_CONNECTION
+  - EV_FUNDING_CHANGE
+  effects:
+    literature: 'NIK P/20/046: w 26 gminach 5 088–6 360 nieruchomości niepodłączonych do sieci zbudowanych do 2017 r. i 866–1 152 do sieci zbudowanych
+      później; 20 z 44 gmin nie miało danych o nieruchomościach do podłączenia; tylko 6 gmin systematycznie egzekwowało obowiązek; postępowania
+      objęły 7% niepodłączonych.'
+  mitigations:
+  - deklaracje przyłączeniowe przed decyzją o zakresie
+  - przyłącza w zakresie inwestycji lub dotacja gminna
+  - egzekucja art. 5 ust. 7 ucpg
+  - harmonogram przyłączeń w umowie o dofinansowanie
+  checklist_refs:
+  - '04:2.1'
+  - '04:2.2'
+  - 04:2.4.1
+  - 04:1.5.2
+- id: R15.2
+  parent: R15
+  name: Nieosiągnięte parametry oczyszczania / jakości wody
+  status: proposed
+  subsectors:
+  - oczyszczalnia
+  - uzdatnianie
+  signals:
+  - doc_types:
+    - PFU
+    - PPU
+    rule: brak gwarantowanych parametrów odpływu/wody uzdatnionej i sankcji
+    strength: 0.4
+  events:
+  - EV_IMPROPER_PERFORMANCE
+  - EV_NIK_FINDING
+  clauses:
+  - Wykonawca gwarantuje osiągnięcie parametrów ścieków oczyszczonych określonych w pozwoleniu wodnoprawnym i załączniku nr [X] przez okres [24]
+    miesięcy od odbioru; w razie ich nieosiągnięcia wykonawca na własny koszt wykona niezbędne zmiany technologiczne w terminie [60] dni.
+- id: R16
+  name: Warunki atmosferyczne i sezonowość robót
+  status: proposed
+  level: 1
+  rationale: Brak w R01–R15 kategorii zdarzeń egzogenicznych; pogoda, 25% przestojów w obserwacji budów wod-kan (Rybka i in. 2016), 12% zmienionych
+    umów (BZP).
+  signals:
+  - doc_types:
+    - meta
+    rule: planowany okres robót ziemnych obejmuje XII–II AND brak rezerwy czasowej
+    strength: 0.35
+  events:
+  - EV_TERM_EXTENSION
+  - EV_LATE_COMPLETION
+  effects:
+    empirical:
+      category: warunki atmosferyczne
+      n: 345
+      delay_days:
+        p50: 64
+        p75: 131
+      cost_pct:
+        p75: 0.027
+        p90: 0.11
+      source: BZP_2022_2026
+  clauses:
+  - Okolicznością uzasadniającą zmianę terminu są warunki atmosferyczne uniemożliwiające prowadzenie robót zgodnie z technologią (np. temperatura
+    powietrza poniżej [−5] °C lub opad powyżej [10] mm/dobę według najbliższej stacji IMGW), trwające łącznie dłużej niż [średnia wieloletnia
+    dla danego miesiąca + 5] dni, potwierdzone wpisem do dziennika budowy i zaakceptowane przez inspektora nadzoru; termin przedłuża się o liczbę
+    dni ponad ten próg.
+  proposed_by: analiza korpusu BZP + literatura (03_domain_methodology §2.4)
+- id: R17
+  name: Koordynacja z infrastrukturą i inwestycjami innych podmiotów (drogi, kolej, inne sieci, odtworzenia)
+  status: proposed
+  level: 1
+  rationale: 11% ogłoszeń o zmianie dotyczy dróg/nawierzchni; najdłuższy ogon kosztowy (P90 +19,5%).
+  signals:
+  - doc_types:
+    - PFU
+    - OPZ
+    - QA
+    - FUNDING_DESC
+    patterns:
+    - w (ciągu|pasie) drogi (wojewódzkiej|krajowej|powiatowej)
+    - przebudow\w* drogi
+    - równocześnie z
+    - zarządc\w* drogi
+    - koordynac
+    strength: 0.35
+  events:
+  - EV_TERM_EXTENSION
+  - EV_ADDITIONAL_WORKS
+  effects:
+    empirical:
+      category: drogi/nawierzchnie/koordynacja
+      n: 204
+      p_late: 0.66
+      delay_days:
+        p50: 62
+        p75: 134
+      cost_pct:
+        p50: 0.021
+        p75: 0.085
+        p90: 0.195
+      source: BZP_2022_2026
+  mitigations:
+  - porozumienie z zarządcą drogi o harmonogramie i zakresie odtworzeń
+  - wspólny harmonogram z inwestycją drogową
+  proposed_by: analiza korpusu BZP + literatura (03_domain_methodology §2.4)
+- id: R18
+  name: Zależność efektu od zadań powiązanych (sieć ↔ oczyszczalnia/SUW/kolektor innego podmiotu)
+  status: proposed
+  level: 1
+  rationale: 'Poradnik 04 §3.3, §4.3, §7.5; przykłady: RM-2026-002 (wpięcie do oczyszczalni w budowie), zmiana umowy Uście (podłączenie do sieci
+    gminy Wolsztyn).'
+  signals:
+  - doc_types:
+    - FUNDING_DESC
+    - PFU
+    - OPZ
+    - NOTICE_DESC
+    patterns:
+    - (realizowan|budowan|projektowan)\w* obecnie (oczyszczalni|sieci|stacji)
+    - etap (I|II|III|1|2|3)\b
+    - w ramach odrębnego zadania
+    - podłączeni\w* do (sieci|kolektora) (gminy|miasta)
+    strength: 0.4
+  events:
+  - EV_LOW_CONNECTION
+  - EV_TERM_EXTENSION
+  mitigations:
+  - harmonogram zadań powiązanych w jednym planie
+  - warunek gotowości odbiornika przed odbiorem sieci
+  - porozumienie międzygminne
+  checklist_refs:
+  - '04:3.3'
+  - '04:4.3'
+  - 04:6.6.1
+  - '04:7.5'
+  proposed_by: analiza korpusu BZP + literatura (03_domain_methodology §2.4)

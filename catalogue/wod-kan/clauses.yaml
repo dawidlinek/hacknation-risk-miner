@@ -1,0 +1,169 @@
+# Sector pack wod-kan: edit in the panel or here; loaded by `riskminer seed-catalogue`.
+# Source: docs/research/03_domain_methodology.md (+ expert materials). status: approved | proposed.
+clauses:
+- code: R01.1-K1
+  risk_code: R01.1
+  text: 'W przypadku rozbieżności pomiędzy dokumentami obowiązuje następująca kolejność ważności: 1) umowa, 2) SWZ wraz z wyjaśnieniami i zmianami,
+    3) dokumentacja projektowa, 4) STWiORB, 5) przedmiar robót (charakter pomocniczy).'
+  status: proposed
+- code: R01.1-K2
+  risk_code: R01.1
+  text: Roboty nieujęte w dokumentacji, niezbędne do prawidłowego wykonania przedmiotu umowy, wykonawca wykona po sporządzeniu protokołu konieczności;
+    ich wartość ustala się według cen jednostkowych z kosztorysu ofertowego, a w razie ich braku, według średnich stawek i cen SEKOCENBUD z kwartału
+    poprzedzającego wykonanie robót (R, S, Kp, Z).
+  status: proposed
+- code: R01.2-K1
+  risk_code: R01.2
+  text: Wynagrodzenie ryczałtowe obejmuje wykonanie sieci o łącznej długości do [L_max] m; za długość przekraczającą [L_max] wynagrodzenie ustala
+    się jako iloczyn nadwyżki i ceny jednostkowej za 1 m określonej w formularzu ofertowym. W przypadku długości mniejszej niż [L_min] wynagrodzenie
+    ulega obniżeniu według tej samej ceny jednostkowej.
+  status: proposed
+- code: R01.2-K2
+  risk_code: R01.2
+  text: Po zatwierdzeniu koncepcji przez zamawiającego strony w terminie 14 dni potwierdzają zakres rzeczowy; zmiana zakresu wynikająca z koncepcji
+    stanowi zmianę przewidzianą w art. 455 ust. 1 pkt 1 Pzp.
+  status: proposed
+- code: R01.3-K1
+  risk_code: R01.3
+  text: Odtworzenie nawierzchni rozlicza się obmiarowo według ceny jednostkowej za 1 m² dla każdego typu nawierzchni; jeżeli zarządca drogi określi
+    zakres odtworzenia większy niż przyjęty w dokumentacji, wynagrodzenie ulega zmianie według tych cen jednostkowych.
+  status: proposed
+- code: R01.4-K1
+  risk_code: R01.4
+  text: Zakres obejmuje wykonanie [N] odgałęzień (sięgaczy) zakończonych studnią przyłączeniową [korkiem] w odległości do 1 m od granicy nieruchomości;
+    liczba odgałęzień może ulec zmianie o ±[X]% bez zmiany ceny jednostkowej za odgałęzienie.
+  status: proposed
+- code: R02.1-K1
+  risk_code: R02.1
+  text: Zamawiający przekazuje dokumentację badań podłoża gruntowego (załącznik nr [X]). W przypadku stwierdzenia warunków gruntowo-wodnych istotnie
+    odmiennych od opisanych w tej dokumentacji wykonawca niezwłocznie, nie później niż w terminie 3 dni roboczych, zawiadamia inspektora nadzoru;
+    strony sporządzają protokół konieczności, a roboty dodatkowe (odwodnienie, wymiana gruntu, umocnienia) rozlicza się według cen jednostkowych
+    z kosztorysu ofertowego. Termin wykonania ulega przedłużeniu o czas niezbędny do ich wykonania, potwierdzony przez inspektora nadzoru.
+  status: proposed
+- code: R02.1-K2
+  risk_code: R02.1
+  text: Odwodnienie wykopów rozlicza się obmiarowo według ceny jednostkowej za dobę pracy zestawu odwadniającego na 1 m wykopu, do kwoty rezerwy
+    [Y] zł.
+  status: proposed
+- code: R02.2-K1
+  risk_code: R02.2
+  text: Wykonawca w terminie [14] dni od przekazania terenu budowy wykona inwentaryzację stanu istniejącego obiektów objętych przebudową; ujawnione
+    w jej wyniku konieczne roboty nieprzewidziane w dokumentacji rozlicza się na zasadach określonych w § [X] (protokół konieczności, ceny jednostkowe).
+  status: proposed
+- code: R02.2-K2
+  risk_code: R02.2
+  text: Zamawiający zapewnia ciągłość pracy oczyszczalni/stacji w okresie robót; wykonawca przedstawi plan przełączeń i pracy tymczasowej do akceptacji
+    operatora.
+  status: proposed
+- code: R02.3-K1
+  risk_code: R02.3
+  text: Wstrzymanie robót na polecenie organu ochrony zabytków lub w związku z odkryciem przedmiotu, który posiada cechy zabytku, albo niewybuchu,
+    stanowi okoliczność uzasadniającą przedłużenie terminu o czas wstrzymania robót.
+  status: proposed
+- code: R03.1-K1
+  risk_code: R03.1
+  text: Kolizje z uzbrojeniem terenu nieujawnionym na mapie do celów projektowych stanowią okoliczność, za którą wykonawca nie ponosi odpowiedzialności.
+    Wykonawca niezwłocznie zawiadamia inspektora nadzoru i gestora sieci; termin wykonania ulega przedłużeniu o czas uzgodnień z gestorem, nie
+    dłuższy niż [30] dni dla każdej kolizji, a koszt przebudowy rozlicza się według cen jednostkowych.
+  status: proposed
+- code: R03.2-K1
+  risk_code: R03.2
+  text: Zamawiający oświadcza, że posiada prawo do dysponowania nieruchomościami na cele budowlane w zakresie działek wymienionych w załączniku
+    nr [X]. Brak prawa do dysponowania nieruchomością ujawniony po zawarciu umowy uprawnia strony do zmiany trasy sieci lub ograniczenia zakresu
+    robót, nie więcej niż o [10]% wynagrodzenia, z obniżeniem wynagrodzenia według cen jednostkowych z kosztorysu ofertowego, oraz do przedłużenia
+    terminu o czas niezbędny do uzyskania decyzji, o której mowa w art. 124 ustawy o gospodarce nieruchomościami.
+  status: proposed
+- code: R03.3-K1
+  risk_code: R03.3
+  text: Termin wykonania przekroczenia [cieku/drogi/linii kolejowej] liczy się od dnia doręczenia wykonawcy ostatecznej decyzji/uzgodnienia zarządcy;
+    opóźnienie zarządcy ponad ustawowy termin załatwienia sprawy przedłuża termin wykonania o czas tego opóźnienia, pod warunkiem złożenia przez
+    wykonawcę kompletnego wniosku w terminie wynikającym z harmonogramu.
+  status: proposed
+- code: R04.1-K1
+  risk_code: R04.1
+  text: Okres od złożenia kompletnego wniosku o wydanie decyzji do dnia jej ostateczności, w części przekraczającej [60] dni, nie wlicza się do
+    terminu wykonania etapu projektowego, o ile opóźnienie nie wynika z przyczyn leżących po stronie wykonawcy.
+  status: proposed
+- code: R04.2-K1
+  risk_code: R04.2
+  text: Wykonawca uzyska w imieniu zamawiającego pozwolenia i zgłoszenia wodnoprawne niezbędne do wykonania robót, w tym na odwodnienie wykopów
+    i przekroczenia cieków; termin uzyskania przez organ, przekraczający termin ustawowy, przedłuża termin wykonania o czas opóźnienia organu.
+  status: proposed
+- code: R06.1-K1
+  risk_code: R06.1
+  text: 'Termin wykonania: [X] miesięcy od dnia zawarcia umowy, nie później niż do [data]; wskazanie daty jest uzasadnione terminem kwalifikowalności
+    wydatków wynikającym z umowy o dofinansowanie (obiektywna przyczyna w rozumieniu art. 436 pkt 1 Pzp).'
+  status: proposed
+- code: R06.1-K2
+  risk_code: R06.1
+  text: Wykonawca przedstawi harmonogram rzeczowo-finansowy z wyodrębnionymi kamieniami milowymi; w przypadku opóźnienia przekraczającego [14]
+    dni względem harmonogramu wykonawca w terminie 7 dni przedstawi plan naprawczy (zwiększenie zasobów, praca zmianowa) bez dodatkowego wynagrodzenia.
+  status: proposed
+- code: R06.1-K3
+  risk_code: R06.1
+  text: Zamawiający przewiduje prawo opcji / możliwość ograniczenia zakresu o nie więcej niż [15]% wynagrodzenia (zakres opcjonalny wskazany w
+    załączniku), jeżeli jego wykonanie w terminie zagrażałoby kwalifikowalności wydatków.
+  status: proposed
+- code: R08.1-K1
+  risk_code: R08.1
+  text: 1. Strony przewidują zmianę wysokości wynagrodzenia w przypadku zmiany ceny materiałów lub kosztów związanych z realizacją zamówienia
+    (art. 439 Pzp). 2. Miarą zmiany jest wskaźnik cen produkcji budowlano-montażowej, budowa obiektów inżynierii lądowej i wodnej, ogłaszany
+    w komunikacie Prezesa GUS, liczony narastająco od miesiąca, w którym upłynął termin składania ofert (a gdy umowę zawarto po upływie 180 dni
+    od tego terminu, od dnia otwarcia ofert). 3. Strona może żądać zmiany wynagrodzenia, jeżeli wskaźnik zmieni się o więcej niż 5% (próg); zmiana
+    obejmuje część wynagrodzenia za roboty pozostałe do wykonania, o wartość zmiany wskaźnika ponad próg, nie częściej niż raz na kwartał. 4.
+    Zmiana obejmuje zarówno wzrost, jak i obniżenie cen. 5. Maksymalna łączna wartość zmiany wynagrodzenia wynosi [10–15]% wynagrodzenia pierwotnego.
+    6. Wykonawca zmienia wynagrodzenie podwykonawców zgodnie z art. 439 ust. 5 Pzp.
+  status: proposed
+- code: R09.2-K1
+  risk_code: R09.2
+  text: 'Ilekroć w dokumentacji wskazano znak towarowy lub producenta, dopuszcza się rozwiązania równoważne o parametrach nie gorszych niż: [wykaz
+    parametrów]; wykonawca wykazuje równoważność przed wbudowaniem, a zamawiający rozpatruje wniosek w terminie 7 dni.'
+  status: proposed
+- code: R10.1-K1
+  risk_code: R10.1
+  text: Rozruch technologiczny trwa nie krócej niż [3] miesiące. Odbiór końcowy następuje po potwierdzeniu parametrów ścieków oczyszczonych wymaganych
+    pozwoleniem wodnoprawnym w co najmniej [4] próbach średniodobowych pobranych i zbadanych przez laboratorium akredytowane. W przypadku dopływu
+    ścieków niższego niż [X]% przepływu projektowego strony sporządzają protokół odbioru warunkowego, a próby powtarza się w terminie [6] miesięcy
+    w ramach rękojmi.
+  status: proposed
+- code: R10.2-K1
+  risk_code: R10.2
+  text: 'Warunkiem odbioru końcowego jest przedłożenie: protokołów prób szczelności, raportu z inspekcji TV kanałów grawitacyjnych wraz z nagraniem,
+    inwentaryzacji geodezyjnej powykonawczej przyjętej do PZGiK.'
+  status: proposed
+- code: R12.1-K1
+  risk_code: R12.1
+  text: Wykonawca niezwłocznie, nie później niż w terminie 3 dni, informuje zamawiającego o złożeniu wniosku o ogłoszenie upadłości lub otwarcie
+    postępowania restrukturyzacyjnego. Zamawiający może odstąpić od umowy w terminie 30 dni od powzięcia wiadomości o przerwaniu robót przez wykonawcę
+    na okres dłuższy niż 21 dni lub o konieczności dokonania bezpośrednich zapłat podwykonawcom na sumę większą niż 5% wartości umowy (art. 465
+    ust. 7 Pzp).
+  status: proposed
+- code: R12.1-K2
+  risk_code: R12.1
+  text: W razie odstąpienia strony w terminie 7 dni sporządzają protokół inwentaryzacji robót; wykonawca przekazuje dokumentację budowy, karty
+    gwarancyjne i prawa z umów z dostawcami urządzeń.
+  status: proposed
+- code: R12.2-K1
+  risk_code: R12.2
+  text: Wykonawca w terminie 30 dni od zawarcia umowy przedstawi potwierdzenie złożenia zamówień na urządzenia o czasie dostawy dłuższym niż 8
+    tygodni. Dopuszcza się zastosowanie urządzeń równoważnych o parametrach nie gorszych niż wymagane, bez zmiany wynagrodzenia, po akceptacji
+    zamawiającego i operatora.
+  status: proposed
+- code: R13.1-K1
+  risk_code: R13.1
+  text: Odbiory częściowe i płatności następują zgodnie z harmonogramem rzeczowo-finansowym skorelowanym z wnioskami o płatność; wykonawca przekazuje
+    dokumenty rozliczeniowe w terminie 7 dni od odbioru. Zmiana umowy o dofinansowanie w zakresie terminów lub zakresu stanowi podstawę zmiany
+    umowy przewidzianą w art. 455 ust. 1 pkt 1 Pzp.
+  status: proposed
+- code: R15.2-K1
+  risk_code: R15.2
+  text: Wykonawca gwarantuje osiągnięcie parametrów ścieków oczyszczonych określonych w pozwoleniu wodnoprawnym i załączniku nr [X] przez okres
+    [24] miesięcy od odbioru; w razie ich nieosiągnięcia wykonawca na własny koszt wykona niezbędne zmiany technologiczne w terminie [60] dni.
+  status: proposed
+- code: R16-K1
+  risk_code: R16
+  text: Okolicznością uzasadniającą zmianę terminu są warunki atmosferyczne uniemożliwiające prowadzenie robót zgodnie z technologią (np. temperatura
+    powietrza poniżej [−5] °C lub opad powyżej [10] mm/dobę według najbliższej stacji IMGW), trwające łącznie dłużej niż [średnia wieloletnia
+    dla danego miesiąca + 5] dni, potwierdzone wpisem do dziennika budowy i zaakceptowane przez inspektora nadzoru; termin przedłuża się o liczbę
+    dni ponad ten próg.
+  status: proposed

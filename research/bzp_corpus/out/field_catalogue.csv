@@ -1,0 +1,381 @@
+noticeType,code,label,n_label_variants,label_variants_top3,n_with_code,pct_of_type,pct_filled_when_present,pct_present_2021,pct_present_2022,pct_present_2023,pct_present_2024,pct_present_2025,pct_present_2026
+AgreementUpdateNotice,1.1,Nazwa zamawiającego,1,,5079,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+AgreementUpdateNotice,1.2,Oddział zamawiającego,1,,423,8.33,100.0,3.96,7.72,7.85,9.38,8.64,8.85
+AgreementUpdateNotice,1.3,Krajowy Numer Identyfikacyjny,1,,5079,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+AgreementUpdateNotice,1.4,Adres zamawiającego,1,,5079,100.0,0.0,100.0,100.0,100.0,100.0,100.0,100.0
+AgreementUpdateNotice,1.4.1,Ulica,1,,5079,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+AgreementUpdateNotice,1.4.2,Miejscowość,1,,5079,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+AgreementUpdateNotice,1.4.3,Kod pocztowy,1,,5079,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+AgreementUpdateNotice,1.4.4,Województwo,1,,5079,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+AgreementUpdateNotice,1.4.5,Kraj,1,,5079,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+AgreementUpdateNotice,1.4.6,Lokalizacja NUTS 3,1,,5079,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+AgreementUpdateNotice,1.4.7,Numer telefonu,1,,2959,58.26,100.0,78.22,66.0,60.32,58.46,53.57,48.36
+AgreementUpdateNotice,1.4.8,Numer faksu,1,,1403,27.62,100.0,47.52,37.25,28.8,26.56,23.03,18.3
+AgreementUpdateNotice,1.4.9,Adres poczty elektronicznej,1,,5079,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+AgreementUpdateNotice,1.4.10,Adres strony internetowej zamawiającego,1,,5079,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+AgreementUpdateNotice,1.5,Rodzaj zamawiającego,1,,5079,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+AgreementUpdateNotice,2.1,Ogłoszenie dotyczy zmiany,1,,5079,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+AgreementUpdateNotice,2.2,Identyfikator postępowania,1,,5079,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+AgreementUpdateNotice,2.3,Numer ogłoszenia,1,,5079,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+AgreementUpdateNotice,2.4,Wersja ogłoszenia,1,,5079,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+AgreementUpdateNotice,2.5,Data ogłoszenia,1,,5079,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+AgreementUpdateNotice,3.1,Zamówienie/umowa ramowa było poprzedzone ogłoszeniem o zamówieniu/ogłoszeniem o zamiarze zawarcia umowy,1,,5079,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+AgreementUpdateNotice,3.1.1,Numer ogłoszenia,1,,4961,97.68,100.0,96.04,97.32,97.48,96.97,98.51,98.55
+AgreementUpdateNotice,3.2,Czy zamówienie albo umowa ramowa dotyczy projektu lub programu współfinansowanego ze środków Unii Europejskiej,1,,5079,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+AgreementUpdateNotice,3.3,Nazwa projektu lub programu,1,,853,16.79,100.0,14.85,16.44,15.11,12.04,17.46,25.09
+AgreementUpdateNotice,3.4,Tryb udzielenia zamówienia/zawarcia umowy ramowej wraz z podstawą prawną,1,,5079,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+AgreementUpdateNotice,3.5,Rodzaj zamówienia,1,,5079,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+AgreementUpdateNotice,3.6,Nazwa zamówienia albo umowy ramowej,1,,5079,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+AgreementUpdateNotice,3.7,Krótki opis przedmiotu zamówienia,1,,5077,99.96,100.0,99.5,99.89,100.0,100.0,100.0,100.0
+AgreementUpdateNotice,3.8,Główny kod CPV,1,,5077,99.96,100.0,99.5,99.89,100.0,100.0,100.0,100.0
+AgreementUpdateNotice,3.9,Dodatkowy kod CPV,1,,4833,95.16,100.0,92.08,95.19,95.87,95.4,94.43,95.64
+AgreementUpdateNotice,4.1,Data zawarcia umowy/umowy ramowej,1,,5079,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+AgreementUpdateNotice,4.2,Okres realizacji zamówienia/umowy ramowej,1,,5079,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+AgreementUpdateNotice,4.3,"Dane wykonawcy, z którym zawarto umowę/umowę ramową",1,,5079,100.0,0.0,100.0,100.0,100.0,100.0,100.0,100.0
+AgreementUpdateNotice,4.3.1,"Nazwa (firma) wykonawcy, któremu udzielono zamówienia (w przypadku wykonawców ubiegających się wspólnie o udzielenie zamówienia – dotyczy pełnomocnika, o którym",1,,5079,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+AgreementUpdateNotice,4.3.1.1,Dane wykonawców wspólnie ubiegających się o udzielenie zamówienia,1,,422,8.31,100.0,8.42,7.27,8.76,10.29,9.1,5.21
+AgreementUpdateNotice,4.3.2,Krajowy Numer Identyfikacyjny,1,,4811,94.72,100.0,40.1,92.73,91.94,99.82,100.0,100.0
+AgreementUpdateNotice,4.3.3,Ulica,1,,4275,84.17,100.0,85.15,89.93,87.92,83.64,78.83,80.85
+AgreementUpdateNotice,4.3.4,Miejscowość,1,,5079,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+AgreementUpdateNotice,4.3.5,Kod pocztowy,1,,4593,90.43,100.0,98.02,97.2,94.16,89.34,84.77,85.58
+AgreementUpdateNotice,4.3.6,Województwo,1,,5077,99.96,100.0,100.0,99.89,100.0,99.91,100.0,100.0
+AgreementUpdateNotice,4.3.7,Kraj,1,,5079,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+AgreementUpdateNotice,4.4,Wartość umowy/umowy ramowej,1,,5079,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+AgreementUpdateNotice,4.5,Numer ogłoszenia o wyniku postępowania w BZP,1,,5079,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+AgreementUpdateNotice,5.1,Data zmiany umowy/umowy ramowej),1,,5079,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+AgreementUpdateNotice,5.2,Podstawa prawna zmiany umowy/umowy ramowej,1,,5079,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+AgreementUpdateNotice,5.3,Przyczyny dokonania zmian umowy/umowy ramowej,1,,5079,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+AgreementUpdateNotice,5.4,Krótki opis zmiany umowy/umowy ramowej,1,,5079,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+AgreementUpdateNotice,5.5,Wartość zmiany umowy,1,,5079,100.0,0.0,100.0,100.0,100.0,100.0,100.0,100.0
+AgreementUpdateNotice,5.5.1,Wartość zmiany,1,,3774,74.31,100.0,66.34,70.92,77.04,73.44,76.6,74.79
+AgreementUpdateNotice,5.5.2,Kod waluty,1,,3780,74.42,100.0,64.36,72.26,78.55,72.7,75.77,74.79
+AgreementUpdateNotice,5.5.3,Wzrost ceny w związku ze zmianą umowy/umowy ramowej,1,,5079,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+AgreementUpdateNotice,5.6,"Wcześniejsze zmiany umowy/umowy ramowej, obligujące do zamieszczenia ogłoszenia o zmianie umowy",1,,5079,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+AgreementUpdateNotice,5.7,Numer ogłoszenia w BZP o zmianie umowy,1,,1456,28.67,100.0,3.96,23.38,29.2,33.73,30.18,31.15
+AgreementUpdateNotice,<Umowa dla części nr 1>,Umowa dla części nr 1,1,,378,7.44,0.0,4.95,7.16,9.26,8.36,7.71,4.61
+AgreementUpdateNotice,<Umowa dla części nr 2>,Umowa dla części nr 2,1,,296,5.83,0.0,4.95,4.7,7.25,6.53,4.74,6.06
+AgreementUpdateNotice,<Umowa dla części nr 3>,Umowa dla części nr 3,1,,107,2.11,0.0,4.46,1.01,3.42,2.39,0.93,2.3
+AgreementUpdateNotice,<Umowa dla części nr 4>,Umowa dla części nr 4,1,,32,0.63,0.0,1.49,0.22,1.71,0.28,0.0,0.85
+AgreementUpdateNotice,<Umowa dla części nr 5>,Umowa dla części nr 5,1,,15,0.3,0.0,0.5,0.11,0.7,0.18,0.28,0.12
+AgreementUpdateNotice,<Umowa dla części nr 6>,Umowa dla części nr 6,1,,5,0.1,0.0,0.0,0.0,0.2,0.18,0.0,0.12
+AgreementUpdateNotice,<Umowa dla części nr 7>,Umowa dla części nr 7,1,,1,0.02,0.0,0.0,0.0,0.0,0.0,0.0,0.12
+AgreementUpdateNotice,<Umowa dla części nr 9>,Umowa dla części nr 9,1,,1,0.02,0.0,0.0,0.0,0.0,0.09,0.0,0.0
+ContractNotice,1.1,Rola zamawiającego,1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,1.2,Nazwa zamawiającego,1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,1.3,Oddział zamawiającego,1,,3563,8.71,100.0,8.8,8.29,8.93,8.79,8.61,9.01
+ContractNotice,1.4,Krajowy Numer Identyfikacyjny,1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,1.5,Adres zamawiającego,1,,40904,100.0,0.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,1.5.1,Ulica,1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,1.5.2,Miejscowość,1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,1.5.3,Kod pocztowy,1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,1.5.4,Województwo,1,,40896,99.98,100.0,99.94,99.94,100.0,100.0,100.0,100.0
+ContractNotice,1.5.5,Kraj,1,,40903,100.0,100.0,100.0,99.99,100.0,100.0,100.0,100.0
+ContractNotice,1.5.6,Lokalizacja NUTS 3,1,,40898,99.99,100.0,99.88,100.0,100.0,100.0,100.0,100.0
+ContractNotice,1.5.7,Numer telefonu,1,,21807,53.31,100.0,67.45,58.17,53.82,50.06,47.31,44.01
+ContractNotice,1.5.8,Numer faksu,1,,10201,24.94,100.0,37.35,30.84,25.93,21.35,19.07,15.18
+ContractNotice,1.5.9,Adres poczty elektronicznej,1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,1.5.10,Adres strony internetowej zamawiającego,1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,1.6,Rodzaj zamawiającego,1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,1.7,Przedmiot działalności zamawiającego,1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,1.8,Informacje o pozostałych zamawiających działających wspólnie,1,,237,0.58,0.0,0.78,0.7,0.44,0.56,0.57,0.44
+ContractNotice,1.9,Podział obowiązków – zamówienie wspólne,1,,237,0.58,100.0,0.78,0.7,0.44,0.56,0.57,0.44
+ContractNotice,1.10,Właściwe przepisy w przypadku wspólnego udzielania zamówień z zamawiającymi z innych państw członkowskich UE,1,,2,0.0,100.0,0.0,0.01,0.0,0.0,0.02,0.0
+ContractNotice,1.11,"Dane podmiotu, któremu zamawiający powierzył przeprowadzenie postępowania.",1,,681,1.66,0.0,1.56,1.38,1.38,1.7,1.95,2.19
+ContractNotice,1.11.1,Nazwa podmiotu prowadzącego postępowanie,1,,681,1.66,100.0,1.56,1.38,1.38,1.7,1.95,2.19
+ContractNotice,1.11.2,Krajowy Numer Identyfikacyjny,1,,681,1.66,100.0,1.56,1.38,1.38,1.7,1.95,2.19
+ContractNotice,1.11.3,Ulica,1,,681,1.66,100.0,1.56,1.38,1.38,1.7,1.95,2.19
+ContractNotice,1.11.4,Miejscowość,1,,681,1.66,100.0,1.56,1.38,1.38,1.7,1.95,2.19
+ContractNotice,1.11.5,Kod pocztowy,1,,681,1.66,100.0,1.56,1.38,1.38,1.7,1.95,2.19
+ContractNotice,1.11.6,Województwo,1,,681,1.66,100.0,1.56,1.38,1.38,1.7,1.95,2.19
+ContractNotice,1.11.7,Kraj,1,,681,1.66,100.0,1.56,1.38,1.38,1.7,1.95,2.19
+ContractNotice,1.11.8,Lokalizacja NUTS 3,1,,681,1.66,100.0,1.56,1.38,1.38,1.7,1.95,2.19
+ContractNotice,1.11.9,Numer telefonu,1,,228,0.56,100.0,0.92,0.57,0.54,0.4,0.54,0.46
+ContractNotice,1.11.10,Numer faksu,1,,56,0.14,100.0,0.34,0.07,0.28,0.01,0.08,0.1
+ContractNotice,1.11.11,Adres poczty elektronicznej,1,,681,1.66,100.0,1.56,1.38,1.38,1.7,1.95,2.19
+ContractNotice,1.11.12,Adres strony internetowej,1,,681,1.66,100.0,1.56,1.38,1.38,1.7,1.95,2.19
+ContractNotice,2.1,Ogłoszenie dotyczy,1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,2.2,Ogłoszenie dotyczy usług społecznych i innych szczególnych usług,1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,2.3,Nazwa zamówienia albo umowy ramowej,1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,2.4,Identyfikator postępowania,1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,2.5,Numer ogłoszenia,1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,2.6,Wersja ogłoszenia,1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,2.7,Data ogłoszenia,1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,2.8,Zamówienie albo umowa ramowa zostały ujęte w planie postępowań,1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,2.9,Numer planu postępowań w BZP,1,,36398,88.98,100.0,88.7,90.88,88.96,89.26,87.08,88.1
+ContractNotice,2.10,Identyfikator pozycji planu postępowań,1,,36400,88.99,99.99,88.7,90.91,88.96,89.26,87.08,88.1
+ContractNotice,2.11,"O udzielenie zamówienia mogą ubiegać się wyłącznie wykonawcy, o których mowa w art. 94 ustawy",1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,2.12,"Rodzaj wykonawców, którzy mogą ubiegać się o udzielenie zamówienia",1,,15,0.04,100.0,0.02,0.04,0.03,0.04,0.05,0.03
+ContractNotice,2.13,"O zamówienie mogą ubiegać się wyłącznie wykonawcy, którzy spełniają warunki określone w art. 361 ustawy – usługi społeczne",1,,130,0.32,100.0,0.3,0.24,0.51,0.35,0.29,0.21
+ContractNotice,2.14,Czy zamówienie albo umowa ramowa dotyczy projektu lub programu współfinansowanego ze środków Unii Europejskiej,1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,2.15,Nazwa projektu lub programu,1,,6327,15.47,100.0,16.8,9.87,14.37,10.9,22.34,22.21
+ContractNotice,2.16,Tryb udzielenia zamówienia wraz z podstawą prawną,1,,40884,99.95,100.0,99.98,99.94,99.99,99.94,99.89,99.97
+ContractNotice,2.17,Tryb zawarcia umowy ramowej wraz z podstawą prawną,1,,20,0.05,100.0,0.02,0.06,0.01,0.06,0.11,0.03
+ContractNotice,3.1,Adres strony internetowej prowadzonego postępowania,1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,3.2,Zamawiający zastrzega dostęp do dokumentów zamówienia,1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,3.3,Informacje na temat sposobu udostępnienia zastrzeżonych dokumentów zamówienia,1,,42,0.1,100.0,0.16,0.04,0.11,0.06,0.19,0.1
+ContractNotice,3.4,"Wykonawcy zobowiązani są do składania ofert, wniosków o dopuszczenie do udziału w postępowaniu, oświadczeń oraz innych dokumentów wyłącznie przy użyciu środków ",1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,3.5,"Informacje o środkach komunikacji elektronicznej, przy użyciu których zamawiający będzie komunikował się z wykonawcami - adres strony internetowej",1,,40895,99.98,100.0,99.98,99.97,99.96,99.97,100.0,100.0
+ContractNotice,3.6,Wymagania techniczne i organizacyjne dotyczące korespondencji elektronicznej,1,,40886,99.96,100.0,99.98,99.93,99.89,99.96,100.0,100.0
+ContractNotice,3.7,"Adres strony internetowej, pod którym są dostępne narzędzia, urządzenia lub formaty plików, które nie są ogólnie dostępne",1,,2069,5.06,100.0,9.94,5.4,4.77,4.37,3.42,3.39
+ContractNotice,3.8,"Zamawiający wymaga sporządzenia i przedstawienia ofert przy użyciu narzędzi elektronicznego modelowania danych budowlanych lub innych podobnych narzędzi, które ",1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,3.9,Sposób dostępu do narzędzi elektronicznego modelowania danych budowlanych,1,,27,0.07,100.0,0.06,0.13,0.07,0.03,0.05,0.03
+ContractNotice,3.10,Przyczyny odstąpienia od komunikacji elektronicznej,1,,49,0.12,100.0,0.1,0.18,0.16,0.14,0.03,0.07
+ContractNotice,3.11,"Sposób nieelektronicznego składania ofert, wniosków, oświadczeń oraz innych dokumentów",1,,49,0.12,100.0,0.1,0.18,0.16,0.14,0.03,0.07
+ContractNotice,3.12,Oferta - katalog elektroniczny,1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,3.13,Zamawiający przewiduje pobranie ze złożonych katalogów elektronicznych danych potrzebnych do sporządzenia ofert dostosowanych do wymagań danego zamówienia,1,,20,0.05,100.0,0.02,0.06,0.01,0.06,0.11,0.03
+ContractNotice,3.14,"Języki, w jakich mogą być sporządzane dokumenty składane w postępowaniu",1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,3.15,RODO (obowiązek informacyjny),1,,37917,92.7,100.0,93.42,93.93,92.77,92.21,91.76,91.74
+ContractNotice,3.16,RODO (ograniczenia stosowania),1,,17383,42.5,100.0,37.61,42.09,43.06,43.35,42.71,45.2
+ContractNotice,4.1,Informacje ogólne odnoszące się do przedmiotu zamówienia.,1,,40904,100.0,0.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,4.1.1,Przed wszczęciem postępowania przeprowadzono konsultacje rynkowe,1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,4.1.2,Numer referencyjny,1,,40437,98.86,100.0,98.96,98.69,98.62,98.76,99.25,99.01
+ContractNotice,4.1.3,Rodzaj zamówienia,1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,4.1.4,"Zamawiający udziela zamówienia w częściach, z których każda stanowi przedmiot odrębnego postępowania",1,,40884,99.95,100.0,99.98,99.94,99.99,99.94,99.89,99.97
+ContractNotice,4.1.5,Wartość zamówienia,2,Łączna wartość poszczególnych części zamówienia (361),3995,9.77,100.0,14.7,11.02,9.44,8.22,7.8,8.14
+ContractNotice,4.1.6,Wartość zamówienia stanowiącego przedmiot tego postępowania (bez VAT),1,,366,0.89,100.0,1.5,1.03,0.89,0.81,0.57,0.64
+ContractNotice,4.1.7,Wartość umowy ramowej (bez VAT),1,,7,0.02,100.0,0.0,0.01,0.01,0.01,0.06,0.0
+ContractNotice,4.1.8,Możliwe jest składanie ofert częściowych,1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,4.1.9,Liczba części,1,,4778,11.68,100.0,10.68,11.71,13.58,12.89,10.57,9.87
+ContractNotice,4.1.10,Ofertę można składać na wszystkie części,3,Ofertę można składać na kilka części (233) || Ofertę można składać na jedną część (163),4779,11.68,0.0,10.7,11.71,13.58,12.89,10.57,9.87
+ContractNotice,4.1.11,"Zamawiający ogranicza liczbę części zamówienia, którą można udzielić jednemu wykonawcy",1,,4778,11.68,100.0,10.68,11.71,13.58,12.89,10.57,9.87
+ContractNotice,4.1.12,"Maksymalna liczba części, jaka może zostać udzielona jednemu wykonawcy",1,,218,0.53,100.0,0.12,0.37,0.94,1.11,0.3,0.16
+ContractNotice,4.1.13,"Zamawiający uwzględnia aspekty społeczne, środowiskowe lub etykiety w opisie przedmiotu zamówienia",1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,4.1.14,"Określenie aspektów społecznych, środowiskowych lub etykiet w opisie przedmiotu zamówienia",1,,6914,16.9,100.0,10.38,15.42,17.04,19.1,18.06,20.5
+ContractNotice,4.2,Informacje szczegółowe odnoszące się do przedmiotu zamówienia,1,,40904,100.0,0.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,4.2.2,Krótki opis przedmiotu zamówienia,1,,40886,99.96,100.0,99.86,99.96,99.97,99.99,100.0,99.93
+ContractNotice,4.2.3,Opis potrzeb Zamawiającego,1,,5,0.01,100.0,0.04,0.01,0.01,0.01,0.0,0.0
+ContractNotice,4.2.4,"Zapotrzebowanie na innowacyjny produkt, usługę lub roboty budowlane",1,,13,0.03,100.0,0.1,0.03,0.01,0.0,0.0,0.07
+ContractNotice,4.2.5,Wartość części,1,,451,1.1,100.0,1.46,1.44,1.07,0.93,0.98,0.69
+ContractNotice,4.2.6,Główny kod CPV,1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,4.2.7,Dodatkowy kod CPV,1,,37832,92.49,99.98,91.48,92.4,92.21,92.45,92.04,94.32
+ContractNotice,4.2.8,Zamówienie obejmuje opcje,1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,4.2.9,Rodzaj i maksymalna wartość opcji oraz okoliczności skorzystania z opcji,1,,558,1.36,100.0,0.84,0.65,1.36,1.85,1.78,1.85
+ContractNotice,4.2.10,Okres realizacji zamówienia albo umowy ramowej,1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,4.2.11,Zamawiający przewiduje wznowienia,1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,4.2.12,Opis wznowienia,1,,95,0.23,100.0,0.26,0.2,0.36,0.28,0.22,0.05
+ContractNotice,4.2.13,Zamawiający przewiduje udzielenie dotychczasowemu wykonawcy zamówień na podobne usługi lub roboty budowlane,1,,40894,99.98,100.0,99.96,100.0,99.97,100.0,99.97,99.93
+ContractNotice,4.2.14,"Przedmiot, wielkość lub zakres oraz warunki zamówień na podobne usługi lub roboty budowlane",1,,6548,16.01,100.0,21.3,15.72,15.06,15.34,15.12,14.94
+ContractNotice,4.3,Kryteria oceny ofert,1,,40904,100.0,0.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,4.3.1,Sposób oceny ofert,1,,28501,69.68,100.0,72.59,72.37,71.73,68.87,66.69,64.87
+ContractNotice,4.3.2,Sposób określania wagi kryteriów oceny ofert,1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,4.3.3,Stosowane kryteria oceny ofert,1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,4.3.4,Rodzaj kryterium,1,,38336,93.72,100.0,94.44,94.88,94.94,93.89,91.88,91.65
+ContractNotice,4.3.5,Nazwa kryterium,1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,4.3.6,Waga,1,,40629,99.33,100.0,99.26,99.56,99.39,99.29,99.16,99.18
+ContractNotice,4.3.7,Kolejność kryterium,1,,200,0.49,100.0,0.48,0.37,0.35,0.54,0.65,0.61
+ContractNotice,4.3.10,"Zamawiający określa aspekty społeczne, środowiskowe lub innowacyjne, żąda etykiet lub stosuje rachunek kosztów cyklu życia w odniesieniu do kryterium oceny ofer",1,,40891,99.97,100.0,99.9,99.97,99.99,100.0,100.0,99.93
+ContractNotice,4.3.11,"Określenie aspektów społecznych, środowiskowych lub innowacyjnych, etykiet lub rachunku kosztów cyklu życia w odniesieniu do kryteriów oceny ofert",1,,375,0.92,100.0,0.76,0.62,0.39,0.75,1.32,1.91
+ContractNotice,5.1,Zamawiający przewiduje fakultatywne podstawy wykluczenia,1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,5.2,Fakultatywne podstawy wykluczenia,1,,26089,63.78,100.0,65.69,63.53,63.07,62.75,64.62,63.8
+ContractNotice,5.3,Warunki udziału w postępowaniu,1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,5.4,Nazwa i opis warunków udziału w postępowaniu.,1,,38904,95.11,100.0,94.86,95.25,95.09,95.44,94.9,94.97
+ContractNotice,5.5,"Zamawiający wymaga złożenia oświadczenia, o którym mowa w art.125 ust. 1 ustawy",1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,5.6,Wykaz podmiotowych środków dowodowych na potwierdzenie niepodlegania wykluczeniu,1,,31644,77.36,100.0,79.5,79.67,77.39,76.3,76.17,74.66
+ContractNotice,5.7,Wykaz podmiotowych środków dowodowych na potwierdzenie spełniania warunków udziału w postępowaniu,1,,37198,90.94,100.0,92.5,92.49,90.1,90.68,89.95,89.73
+ContractNotice,5.8,Wykaz przedmiotowych środków dowodowych,1,,11579,28.31,100.0,33.79,29.7,28.0,27.02,25.97,26.07
+ContractNotice,5.9,Zamawiający przewiduje uzupełnienie przedmiotowych środków dowodowych,1,,16743,40.93,100.0,55.49,45.08,41.03,37.73,34.12,33.6
+ContractNotice,5.10,Przedmiotowe środki dowodowe podlegające uzupełnieniu po złożeniu oferty,1,,2077,5.08,100.0,4.64,4.87,4.98,5.4,5.31,5.26
+ContractNotice,5.11,Wykaz innych wymaganych oświadczeń lub dokumentów,1,,23101,56.48,100.0,56.03,56.31,56.99,57.05,56.25,56.02
+ContractNotice,6.1,Zamawiający wymaga albo dopuszcza oferty wariantowe,1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,6.2,Oferty wariantowe wraz ze złożeniem ofert podstawowej albo zamiast oferty podstawowej,1,,21,0.05,100.0,0.12,0.06,0.01,0.07,0.05,0.02
+ContractNotice,6.3,Zamawiający przewiduje aukcję elektroniczną,1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,6.3.1,Adres internetowy aukcji,1,,30,0.07,100.0,0.16,0.08,0.07,0.04,0.03,0.08
+ContractNotice,6.3.2,Opis aukcji elektronicznej,1,,30,0.07,100.0,0.16,0.08,0.07,0.04,0.03,0.08
+ContractNotice,6.4,Zamawiający wymaga wadium,1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,6.4.1,Informacje dotyczące wadium,1,,26749,65.39,100.0,66.69,68.17,66.33,65.87,62.4,61.66
+ContractNotice,6.5,Zamawiający wymaga zabezpieczenia należytego wykonania umowy,1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,6.6,Wymagania dotyczące składania oferty przez wykonawców wspólnie ubiegających się o udzielenie zamówienia,1,,36761,89.87,100.0,92.44,91.56,89.19,89.69,88.65,87.59
+ContractNotice,6.7,"Zamawiający przewiduje unieważnienie postępowania, jeśli środki publiczne, które zamierzał przeznaczyć na sfinansowanie całości lub części zamówienia nie został",1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,7.1,Zamawiający przewiduje udzielenia zaliczek,1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,7.2,Informacje na temat zaliczek,1,,2778,6.79,100.0,2.1,11.26,9.03,10.99,2.24,1.12
+ContractNotice,7.3,Zamawiający przewiduje zmiany umowy,1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,7.4,Rodzaj i zakres zmian umowy oraz warunki ich wprowadzenia,1,,40285,98.49,100.0,98.12,98.25,98.29,98.76,98.53,99.01
+ContractNotice,7.5,"Zamawiający uwzględnił aspekty społeczne, środowiskowe, innowacyjne lub etykiety związane z realizacją zamówienia",1,,40904,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,7.6,Zamawiający przewiduje następujące wymagania związane z realizacją zamówienia,1,,23103,56.48,100.0,44.93,53.85,56.02,59.19,60.78,62.75
+ContractNotice,8.1,Termin składania ofert,1,,40891,99.97,100.0,99.9,99.97,99.99,100.0,100.0,99.93
+ContractNotice,8.2,Miejsce składania ofert,1,,40891,99.97,100.0,99.9,99.97,99.99,100.0,100.0,99.93
+ContractNotice,8.3,Termin otwarcia ofert,1,,40891,99.97,100.0,99.9,99.97,99.99,100.0,100.0,99.93
+ContractNotice,8.4,Termin związania ofertą,1,,40886,99.96,100.0,99.86,99.96,99.97,99.99,100.0,99.93
+ContractNotice,8.5,Zamawiający przewiduje wybór najkorzystniejszej oferty z możliwością negocjacji,1,,8149,19.92,100.0,14.06,16.72,20.14,21.82,22.78,23.97
+ContractNotice,8.6,"Maksymalna liczba wykonawców, którzy zostaną zaproszeni do negocjacji",1,,2838,6.94,100.0,5.84,5.84,6.84,7.64,8.04,7.61
+ContractNotice,8.7,"Kryteria oceny ofert, które zamawiający zamierza stosować w celu ograniczenia liczby wykonawców",1,,2746,6.71,100.0,5.88,5.9,6.51,7.32,7.64,7.17
+ContractNotice,8.8,"Krótki opis minimalnych wymagań dotyczących przedmiotu zamówienia lub realizacji zamówienia, niepodlegających negocjacjom, które muszą spełnić wszystkie oferty",1,,5,0.01,100.0,0.04,0.01,0.01,0.01,0.0,0.0
+ContractNotice,8.9,Termin składania wniosków o dopuszczenie do udziału w postępowaniu,1,,13,0.03,100.0,0.1,0.03,0.01,0.0,0.0,0.07
+ContractNotice,8.10,Miejsce składania wniosków o dopuszczenie do udziału w postępowaniu,1,,13,0.03,100.0,0.1,0.03,0.01,0.0,0.0,0.07
+ContractNotice,8.11,Termin otwarcia wniosków o dopuszczenie do udziału w postępowaniu,1,,13,0.03,100.0,0.1,0.03,0.01,0.0,0.0,0.07
+ContractNotice,8.12,"Zamawiający zamierza ograniczyć liczbę wykonawców, których zaprosi do składania ofert wstępnych",1,,13,0.03,100.0,0.1,0.03,0.01,0.0,0.0,0.07
+ContractNotice,8.18,Zamawiający przewiduje podział negocjacji na etapy w celu ograniczenia liczby ofert,1,,13,0.03,100.0,0.1,0.03,0.01,0.0,0.0,0.07
+ContractNotice,8.19,Umowa ramowa,1,,20,0.05,100.0,0.02,0.06,0.01,0.06,0.11,0.03
+ContractNotice,8.20,Przewiduje się ograniczenie liczby uczestników umowy ramowej,1,,20,0.05,100.0,0.02,0.06,0.01,0.06,0.11,0.03
+ContractNotice,8.21,"Maksymalna liczba wykonawców, z którymi zamawiający zawrze umowę ramową",1,,17,0.04,100.0,0.0,0.03,0.01,0.06,0.11,0.03
+ContractNotice,8.22,"Zamawiający udziela zamówień na podstawie art. 314 ust. 1 pkt 1, 2 albo 3 ustawy",1,,2,0.0,100.0,0.0,0.0,0.01,0.0,0.02,0.0
+ContractNotice,8.23,Uzasadnienie zawarcia umowy ramowej na okres wykraczający poza wskazany w art. 311 ust. 3 ustawy,1,,1,0.0,100.0,0.0,0.0,0.0,0.0,0.02,0.0
+ContractNotice,<4.3.9 ) Minimalne wymagania oraz kryteria oceny ofert niepod>,4.3.9 ) Minimalne wymagania oraz kryteria oceny ofert niepodlegające negocjacjom,1,,13,0.03,100.0,0.1,0.03,0.01,0.0,0.0,0.07
+ContractNotice,<Adres podmiotu prowadzącego postępowanie>,Adres podmiotu prowadzącego postępowanie,1,,681,1.66,0.0,1.56,1.38,1.38,1.7,1.95,2.19
+ContractNotice,<Część N>,Część 1,1,,4778,11.68,0.0,10.68,11.71,13.58,12.89,10.57,9.87
+ContractNotice,<Kryterium N>,Kryterium 1,1,,40904,100.0,0.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractNotice,<Podmiot>,Podmiot,1,,681,1.66,100.0,1.56,1.38,1.38,1.7,1.95,2.19
+ContractNotice,<Zamawiający>,Zamawiający,1,,237,0.58,100.0,0.78,0.7,0.44,0.56,0.57,0.44
+ContractPerformingNotice,1.1,Nazwa zamawiającego,1,,26842,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractPerformingNotice,1.2,Oddział zamawiającego,1,,2379,8.86,100.0,8.52,10.22,8.5,8.82,8.74,8.41
+ContractPerformingNotice,1.3,Krajowy Numer Identyfikacyjny,1,,26842,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractPerformingNotice,1.4,Adres zamawiającego,1,,26842,100.0,0.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractPerformingNotice,1.4.1,Ulica,1,,26842,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractPerformingNotice,1.4.2,Miejscowość,1,,26842,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractPerformingNotice,1.4.3,Kod pocztowy,1,,26842,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractPerformingNotice,1.4.4,Województwo,1,,26841,100.0,100.0,100.0,100.0,100.0,100.0,100.0,99.98
+ContractPerformingNotice,1.4.5,Kraj,1,,26842,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractPerformingNotice,1.4.6,Lokalizacja NUTS 3,1,,26841,100.0,100.0,100.0,100.0,100.0,100.0,100.0,99.98
+ContractPerformingNotice,1.4.7,Numer telefonu,1,,15090,56.22,100.0,76.84,64.69,58.58,55.08,53.31,47.33
+ContractPerformingNotice,1.4.8,Numer faksu,1,,7093,26.43,100.0,45.16,34.88,28.63,25.31,23.58,18.04
+ContractPerformingNotice,1.4.9,Adres poczty elektronicznej,1,,26842,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractPerformingNotice,1.4.10,Adres strony internetowej zamawiającego,1,,26842,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractPerformingNotice,1.5,Rodzaj zamawiającego,1,,26842,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractPerformingNotice,2.1,Identyfikator postępowania,1,,26842,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractPerformingNotice,2.2,Numer ogłoszenia,1,,26842,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractPerformingNotice,2.3,Wersja ogłoszenia,1,,26842,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractPerformingNotice,2.4,Data ogłoszenia,1,,26842,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractPerformingNotice,3.1,Charakter zamówienia,1,,26842,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractPerformingNotice,3.2,Zamówienie było poprzedzone ogłoszeniem o zamówieniu albo ogłoszeniem o zamiarze zawarcia umowy w BZP lub Dz. Urz. UE,1,,26842,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractPerformingNotice,3.2.1,Numer ogłoszenia w BZP lub Dz. Urz. UE,1,,25942,96.65,100.0,95.3,95.85,96.65,97.03,97.16,96.48
+ContractPerformingNotice,3.3,Czy zamówienie dotyczy projektu lub programu współfinansowanego ze środków Unii Europejskiej,1,,26842,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractPerformingNotice,3.4,Nazwa projektu lub programu,1,,4089,15.23,100.0,10.03,13.88,13.37,11.26,16.93,21.95
+ContractPerformingNotice,3.5,Tryb udzielenia zamówienia wraz z podstawą prawną,2,Tryb zawarcia umowy ramowej wraz z podstawą prawną (33),26842,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractPerformingNotice,3.6,Rodzaj zamówienia,1,,26842,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractPerformingNotice,3.7,Nazwa zamówienia,1,,26842,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractPerformingNotice,3.8,Krótki opis przedmiotu zamówienia,1,,26667,99.35,100.0,99.73,99.49,99.38,99.33,99.08,99.49
+ContractPerformingNotice,3.9,Główny kod CPV,1,,26667,99.35,100.0,99.73,99.49,99.38,99.33,99.08,99.49
+ContractPerformingNotice,3.10,Dodatkowy kod CPV,1,,24088,89.74,100.0,86.51,87.58,89.73,90.68,89.94,90.87
+ContractPerformingNotice,4.1,Data zawarcia umowy,1,,26842,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractPerformingNotice,4.2,Okres realizacji zamówienia,1,,26842,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractPerformingNotice,4.3,"Dane wykonawcy, z którym zawarto umowę",1,,26842,100.0,0.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractPerformingNotice,4.3.1,"Nazwa (firma) wykonawcy, któremu udzielono zamówienia (w przypadku wykonawców ubiegających się wspólnie o udzielenie zamówienia – dotyczy pełnomocnika, o którym",1,,26842,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractPerformingNotice,4.3.1.1,Dane wykonawców wspólnie ubiegających się o udzielenie zamówienia,1,,1830,6.82,100.0,5.15,6.02,7.76,7.99,6.15,6.38
+ContractPerformingNotice,4.3.2,Krajowy Numer Identyfikacyjny,1,,26584,99.04,100.0,97.34,98.43,98.71,99.45,99.3,99.42
+ContractPerformingNotice,4.3.3,Ulica,1,,21804,81.23,100.0,88.64,86.32,83.36,79.96,78.86,77.85
+ContractPerformingNotice,4.3.4,Miejscowość,1,,26842,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractPerformingNotice,4.3.5,Kod pocztowy,1,,24389,90.86,100.0,99.29,95.5,92.68,90.65,87.85,87.47
+ContractPerformingNotice,4.3.6,Województwo,1,,26831,99.96,100.0,100.0,99.97,100.0,99.95,99.94,99.94
+ContractPerformingNotice,4.3.7,Kraj,1,,26842,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractPerformingNotice,4.4,Wartość umowy,1,,26842,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractPerformingNotice,4.5,Numer ogłoszenia o wyniku postępowania zamieszczonego w BZP lub numer ogłoszenia o udzieleniu zamówienia opublikowanego w Dzienniku Urzędowym Unii Europejskiej,2,Numer ogłoszenia o wyniku postępowania w BZP lub Dz. Urz. UE (11825),26842,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractPerformingNotice,5.1,Czy umowa została wykonana,1,,26842,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractPerformingNotice,5.2,Termin wykonania umowy,1,,26057,97.08,100.0,96.98,97.04,96.88,97.25,96.94,97.29
+ContractPerformingNotice,5.3,Czy umowę wykonano w pierwotnie określonym terminie,1,,26795,99.82,100.0,99.82,99.67,99.79,99.9,99.97,99.71
+ContractPerformingNotice,5.4,Informacje o zmianach umowy,1,,26842,100.0,0.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractPerformingNotice,5.4.1,Liczba zmian,1,,26842,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractPerformingNotice,5.4.2,Numer zmiany,1,,12744,47.48,100.0,30.26,41.86,45.77,48.56,49.51,53.81
+ContractPerformingNotice,5.4.3,Podstawa prawna zmiany,1,,12744,47.48,100.0,30.26,41.86,45.77,48.56,49.51,53.81
+ContractPerformingNotice,5.4.4,Przyczyny dokonania zmian,1,,12744,47.48,100.0,30.26,41.86,45.77,48.56,49.51,53.81
+ContractPerformingNotice,5.4.5,Krótki opis zamówienia po zmianie,1,,12744,47.48,100.0,30.26,41.86,45.77,48.56,49.51,53.81
+ContractPerformingNotice,5.4.6,Wartość zmiany,1,,9645,35.93,100.0,21.92,30.63,34.81,37.3,37.62,40.79
+ContractPerformingNotice,5.4.7,Kod waluty,1,,9424,35.11,100.0,21.47,29.97,34.39,36.39,36.67,39.61
+ContractPerformingNotice,5.4.8,Wzrost ceny w związku ze zmianą umowy/umowy ramowej,1,,12744,47.48,100.0,30.26,41.86,45.77,48.56,49.51,53.81
+ContractPerformingNotice,5.5,Łączna wartość wynagrodzenia wypłacona z tytułu zrealizowanej umowy,1,,26842,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractPerformingNotice,5.6,Czy umowa została wykonana należycie,1,,26842,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractPerformingNotice,5.7,Podczas realizacji zamówienia zamawiający kontrolował przewidziane w zawartej umowie wymagania,1,,26842,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+ContractPerformingNotice,<Umowa dla części nr 10>,Umowa dla części nr 10,1,,40,0.15,0.0,0.0,0.28,0.33,0.03,0.08,0.12
+ContractPerformingNotice,<Umowa dla części nr 11>,Umowa dla części nr 11,1,,23,0.09,0.0,0.0,0.13,0.19,0.02,0.08,0.06
+ContractPerformingNotice,<Umowa dla części nr 12>,Umowa dla części nr 12,1,,20,0.07,0.0,0.0,0.08,0.15,0.02,0.08,0.08
+ContractPerformingNotice,<Umowa dla części nr 13>,Umowa dla części nr 13,1,,16,0.06,0.0,0.0,0.05,0.15,0.07,0.02,0.04
+ContractPerformingNotice,<Umowa dla części nr 14>,Umowa dla części nr 14,1,,11,0.04,0.0,0.0,0.05,0.1,0.03,0.03,0.0
+ContractPerformingNotice,<Umowa dla części nr 15>,Umowa dla części nr 15,1,,7,0.03,0.0,0.0,0.03,0.06,0.02,0.02,0.02
+ContractPerformingNotice,<Umowa dla części nr 16>,Umowa dla części nr 16,1,,7,0.03,0.0,0.0,0.03,0.06,0.02,0.02,0.02
+ContractPerformingNotice,<Umowa dla części nr 17>,Umowa dla części nr 17,1,,4,0.01,0.0,0.0,0.0,0.04,0.0,0.02,0.02
+ContractPerformingNotice,<Umowa dla części nr 18>,Umowa dla części nr 18,1,,2,0.01,0.0,0.0,0.0,0.0,0.0,0.02,0.02
+ContractPerformingNotice,<Umowa dla części nr 19>,Umowa dla części nr 19,1,,1,0.0,0.0,0.0,0.0,0.0,0.0,0.02,0.0
+ContractPerformingNotice,<Umowa dla części nr 1>,Umowa dla części nr 1,1,,2638,9.83,0.0,12.87,11.0,10.33,9.56,9.21,8.78
+ContractPerformingNotice,<Umowa dla części nr 22>,Umowa dla części nr 22,1,,1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.02
+ContractPerformingNotice,<Umowa dla części nr 2>,Umowa dla części nr 2,1,,2489,9.27,0.0,13.84,9.94,9.77,8.75,8.29,9.07
+ContractPerformingNotice,<Umowa dla części nr 3>,Umowa dla części nr 3,1,,1048,3.9,0.0,5.86,4.65,4.01,3.52,3.38,3.87
+ContractPerformingNotice,<Umowa dla części nr 4>,Umowa dla części nr 4,1,,542,2.02,0.0,3.19,2.2,2.39,1.72,1.69,2.02
+ContractPerformingNotice,<Umowa dla części nr 5>,Umowa dla części nr 5,1,,308,1.15,0.0,0.98,1.57,1.43,0.91,1.02,1.01
+ContractPerformingNotice,<Umowa dla części nr 6>,Umowa dla części nr 6,1,,180,0.67,0.0,0.98,1.04,1.02,0.53,0.38,0.49
+ContractPerformingNotice,<Umowa dla części nr 7>,Umowa dla części nr 7,1,,103,0.38,0.0,0.44,0.61,0.64,0.24,0.3,0.21
+ContractPerformingNotice,<Umowa dla części nr 8>,Umowa dla części nr 8,1,,68,0.25,0.0,0.53,0.3,0.42,0.24,0.16,0.12
+ContractPerformingNotice,<Umowa dla części nr 9>,Umowa dla części nr 9,1,,52,0.19,0.0,0.18,0.28,0.4,0.14,0.1,0.12
+TenderResultNotice,1.1,Rola zamawiającego,1,,40453,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+TenderResultNotice,1.2,Nazwa zamawiającego,1,,40453,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+TenderResultNotice,1.3,Oddział zamawiającego,1,,3433,8.49,100.0,8.17,8.27,8.62,8.52,8.41,8.9
+TenderResultNotice,1.4,Krajowy Numer Identyfikacyjny,1,,40453,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+TenderResultNotice,1.5,Adres zamawiającego,1,,40453,100.0,0.0,100.0,100.0,100.0,100.0,100.0,100.0
+TenderResultNotice,1.5.1,Ulica,1,,40453,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+TenderResultNotice,1.5.2,Miejscowość,1,,40453,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+TenderResultNotice,1.5.3,Kod pocztowy,1,,40453,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+TenderResultNotice,1.5.4,Województwo,1,,40446,99.98,100.0,99.95,99.95,100.0,100.0,100.0,99.98
+TenderResultNotice,1.5.5,Kraj,1,,40453,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+TenderResultNotice,1.5.6,Lokalizacja NUTS 3,1,,40450,99.99,100.0,99.95,100.0,100.0,100.0,100.0,99.98
+TenderResultNotice,1.5.7,Numer telefonu,1,,21704,53.65,100.0,68.75,58.54,54.65,50.7,47.69,44.37
+TenderResultNotice,1.5.8,Numer faksu,1,,10094,24.95,100.0,38.55,30.76,26.15,21.68,19.29,15.26
+TenderResultNotice,1.5.9,Adres poczty elektronicznej,1,,40453,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+TenderResultNotice,1.5.10,Adres strony internetowej zamawiającego,1,,40453,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+TenderResultNotice,1.6,Adres strony internetowej prowadzonego postępowania,1,,39399,97.39,100.0,97.56,97.04,97.42,97.55,97.29,97.68
+TenderResultNotice,1.7,Rodzaj zamawiającego,1,,40453,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+TenderResultNotice,1.8,Przedmiot działalności zamawiającego,1,,40453,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+TenderResultNotice,1.9,Informacje o pozostałych zamawiających działających wspólnie,1,,236,0.58,0.0,0.8,0.73,0.42,0.55,0.5,0.53
+TenderResultNotice,2.1,Ogłoszenie dotyczy,1,,40453,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+TenderResultNotice,2.2,Ogłoszenie dotyczy usług społecznych i innych szczególnych usług,1,,40453,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+TenderResultNotice,2.3,Nazwa zamówienia albo umowy ramowej,1,,40453,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+TenderResultNotice,2.4,Identyfikator postępowania,1,,40453,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+TenderResultNotice,2.5,Numer ogłoszenia,1,,40453,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+TenderResultNotice,2.6,Wersja ogłoszenia,1,,40453,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+TenderResultNotice,2.7,Data ogłoszenia,1,,40453,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+TenderResultNotice,2.8,Zamówienie albo umowa ramowa zostały ujęte w planie postępowań,1,,40453,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+TenderResultNotice,2.9,Numer planu postępowań w BZP,1,,35856,88.64,100.0,88.89,90.13,89.2,88.43,87.09,87.49
+TenderResultNotice,2.10,Identyfikator pozycji planu postępowań,1,,35855,88.63,100.0,88.87,90.13,89.2,88.43,87.09,87.49
+TenderResultNotice,2.11,Czy zamówienie albo umowa ramowa dotyczy projektu lub programu współfinansowanego ze środków Unii Europejskiej,1,,40453,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+TenderResultNotice,2.12,Nazwa projektu lub programu,1,,6135,15.17,100.0,15.94,10.41,14.3,9.86,20.88,23.28
+TenderResultNotice,2.13,Zamówienie/umowa ramowa było poprzedzone ogłoszeniem o zamówieniu/ogłoszeniem o zamiarze zawarcia umowy,1,,40453,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+TenderResultNotice,2.14,Numer ogłoszenia,1,,38696,95.66,100.0,93.2,94.38,96.3,96.54,96.3,96.73
+TenderResultNotice,3.1,Tryb udzielenia zamówienia wraz z podstawą prawną,2,Tryb zawarcia umowy ramowej wraz z podstawą prawną (18),40453,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+TenderResultNotice,3.1.1,Uzasadnienie faktyczne i prawne wyboru trybu negocjacji bez ogłoszenia albo zamówienia z wolnej ręki,1,,1610,3.98,100.0,4.08,4.19,3.84,3.67,4.6,3.5
+TenderResultNotice,3.1.2,Identyfikator wcześniejszego postępowania,1,,411,1.02,100.0,0.78,1.09,1.01,0.98,1.51,0.62
+TenderResultNotice,4.1,Numer referencyjny,1,,40014,98.91,100.0,99.11,98.74,98.63,98.78,99.23,99.2
+TenderResultNotice,4.2,"Zamawiający udziela zamówienia w częściach, z których każda stanowi przedmiot odrębnego postępowania",1,,40435,99.96,100.0,99.98,99.97,99.99,99.97,99.86,99.97
+TenderResultNotice,4.3,Wartość zamówienia,2,Łączna wartość poszczególnych części zamówienia (982),17978,44.44,100.0,61.43,46.49,43.67,40.37,39.92,39.95
+TenderResultNotice,4.3.1,Wartość zamówienia stanowiącego przedmiot tego postępowania (bez VAT),1,,3558,8.8,100.0,8.94,8.46,8.98,8.18,9.3,9.2
+TenderResultNotice,4.3.2,Szacunkowa maksymalna wartość umowy ramowej (bez VAT),1,,8,0.02,100.0,0.02,0.01,0.01,0.01,0.06,0.0
+TenderResultNotice,4.4,Rodzaj zamówienia,1,,40453,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+TenderResultNotice,4.5.1,Krótki opis przedmiotu zamówienia,1,,40448,99.99,100.0,99.98,99.98,99.99,100.0,100.0,99.98
+TenderResultNotice,4.5.2,"Zapotrzebowanie na innowacyjny produkt, usługę lub roboty budowlane",1,,5,0.01,100.0,0.02,0.02,0.01,0.0,0.0,0.02
+TenderResultNotice,4.5.3,Główny kod CPV,1,,40453,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0
+TenderResultNotice,4.5.4,Dodatkowy kod CPV,1,,37162,91.86,99.99,90.53,91.6,91.92,92.33,91.09,93.38
+TenderResultNotice,4.5.5,Wartość części,1,,4777,11.81,100.0,10.06,11.75,13.76,12.78,11.06,10.36
+TenderResultNotice,5.1,Postępowanie zakończyło się zawarciem umowy albo unieważnieniem postępowania,1,,40407,99.89,100.0,99.86,99.54,100.0,100.0,100.0,100.0
+TenderResultNotice,5.2,Podstawa prawna unieważnienia postępowania,1,,10168,25.14,100.0,28.08,35.69,28.17,21.6,16.05,18.03
+TenderResultNotice,5.2.1,Przyczyna unieważnienia postępowania,1,,10168,25.14,100.0,28.08,35.69,28.17,21.6,16.05,18.03
+TenderResultNotice,6.1,Liczba otrzymanych ofert lub wniosków,1,,36510,90.25,100.0,92.91,88.87,88.81,90.58,90.87,91.03
+TenderResultNotice,6.1.1,Liczba otrzymanych ofert wariantowych,1,,25154,62.18,100.0,69.16,65.14,61.71,61.62,58.62,57.83
+TenderResultNotice,6.1.2,Liczba ofert dodatkowych,1,,25470,62.96,100.0,69.05,65.44,62.9,62.64,59.64,58.91
+TenderResultNotice,6.1.3,Liczba otrzymanych od MŚP,1,,36116,89.28,100.0,91.74,87.44,87.89,89.72,90.12,90.4
+TenderResultNotice,6.1.4,Liczba ofert wykonawców z siedzibą w państwach EOG innych niż państwo zamawiającego,1,,35637,88.09,100.0,89.92,85.67,86.63,88.83,89.46,89.69
+TenderResultNotice,6.1.5,Liczba ofert wykonawców z siedzibą w państwie spoza EOG,1,,35619,88.05,100.0,89.76,85.6,86.65,88.83,89.38,89.68
+TenderResultNotice,6.1.6,"Liczba ofert odrzuconych, w tym liczba ofert zawierających rażąco niską cenę lub koszt",1,,35527,87.82,100.0,89.83,85.33,86.17,88.67,89.18,89.49
+TenderResultNotice,6.1.7,Liczba ofert zawierających rażąco niską cenę lub koszt,1,,35210,87.04,100.0,88.91,84.39,85.2,88.03,88.64,88.81
+TenderResultNotice,6.2,Cena lub koszt oferty z najniższą ceną lub kosztem,1,,35001,86.52,100.0,87.64,83.89,84.94,87.43,88.38,88.36
+TenderResultNotice,6.3,Cena lub koszt oferty z najwyższą ceną lub kosztem,1,,34801,86.03,100.0,86.88,83.03,84.46,87.1,88.11,88.11
+TenderResultNotice,6.4,"Cena lub koszt oferty wykonawcy, któremu udzielono zamówienia",1,,30825,76.2,100.0,75.59,67.2,73.7,79.26,82.95,81.76
+TenderResultNotice,6.5,Do wyboru najkorzystniejszej oferty zastosowano aukcję elektroniczną,1,,31897,78.85,100.0,78.95,71.1,76.68,81.5,84.31,83.54
+TenderResultNotice,6.6,Oferta wybranego wykonawcy jest ofertą wariantową,1,,31826,78.67,100.0,78.76,70.77,76.49,81.36,84.31,83.39
+TenderResultNotice,6.7,"Wskazanie, czy najkorzystniejsza oferta wykonawcy, któremu udzielono zamówienia uwzględnia określone w kryteriach",1,,483,1.19,98.76,2.05,1.03,0.89,1.04,1.15,1.43
+TenderResultNotice,7.1,Czy zamówienie zostało udzielone wykonawcom wspólnie ubiegającym się o udzielenie zamówienia,1,,30985,76.6,100.0,73.68,66.0,74.07,80.31,85.29,83.31
+TenderResultNotice,7.2,Wielkość przedsiębiorstwa wykonawcy,1,,27016,66.78,100.0,66.61,58.75,65.91,70.32,72.13,69.52
+TenderResultNotice,7.3,"Dane (firmy) wykonawcy, któremu udzielono zamówienia",1,,30985,76.6,0.0,73.68,66.0,74.07,80.31,85.29,83.31
+TenderResultNotice,7.3.1,"Nazwa (firma) wykonawcy, któremu udzielono zamówienia",2,"Nazwa (firma) wykonawcy, któremu udzielono zamówienia (dotyczy pełnomocnika, o którym mowa w art. 58 ust. 2 ustawy) (1887)",30985,76.6,100.0,73.68,66.0,74.07,80.31,85.29,83.31
+TenderResultNotice,7.3.2,Krajowy Numer Identyfikacyjny,1,,30944,76.49,100.0,72.74,66.0,74.07,80.31,85.29,83.31
+TenderResultNotice,7.3.3,Ulica,1,,24954,61.69,100.0,64.94,55.51,60.5,64.12,64.55,63.63
+TenderResultNotice,7.3.4,Miejscowość,1,,30985,76.6,100.0,73.68,66.0,74.07,80.31,85.29,83.31
+TenderResultNotice,7.3.5,Kod pocztowy,1,,27767,68.64,100.0,72.24,61.44,66.88,70.93,72.75,71.39
+TenderResultNotice,7.3.6,Województwo,1,,28795,71.18,100.0,70.48,62.04,69.34,74.53,77.82,75.95
+TenderResultNotice,7.3.7,Kraj,1,,30985,76.6,100.0,73.68,66.0,74.07,80.31,85.29,83.31
+TenderResultNotice,7.3.8,Czy wykonawca przewiduje powierzenie wykonania części zamówienia podwykonawcom?,1,,3863,9.55,100.0,7.98,8.46,10.68,10.85,9.6,9.2
+TenderResultNotice,7.3.9,"Informacja o częściach zamówienia, których wykonanie zamierza powierzyć podwykonawcom, oraz nazwy ewentualnych podwykonawców, jeżeli są już znani",1,,763,1.89,100.0,1.23,1.49,2.69,2.5,1.4,1.7
+TenderResultNotice,7.4,Czy wykonawca przewiduje powierzenie wykonania części zamówienia podwykonawcom?,1,,27122,67.05,100.0,65.69,57.54,63.4,69.46,75.69,74.1
+TenderResultNotice,7.4.1,"Informacja o częściach zamówienia, których wykonanie zamierza powierzyć podwykonawcom, oraz nazwy ewentualnych podwykonawców, jeżeli są już znani",1,,5545,13.71,100.0,12.66,12.15,14.17,15.19,14.02,13.96
+TenderResultNotice,8.1,Data zawarcia umowy,1,,30985,76.6,100.0,73.68,66.0,74.07,80.31,85.29,83.31
+TenderResultNotice,8.2,Wartość umowy/umowy ramowej,1,,30985,76.6,100.0,73.68,66.0,74.07,80.31,85.29,83.31
+TenderResultNotice,8.3,Okres realizacji zamówienia albo umowy ramowej,1,,30985,76.6,100.0,73.68,66.0,74.07,80.31,85.29,83.31
+TenderResultNotice,8.4,Zamawiający przewiduje następujące wymagania związane z realizacją zamówienia,1,,17948,44.37,100.0,37.48,36.37,43.89,48.91,50.18,49.71
+TenderResultNotice,<Część N>,Część 1,1,,4777,11.81,0.0,10.06,11.75,13.76,12.78,11.06,10.36
+TenderResultNotice,<Wykonawca>,Wykonawca,1,,3863,9.55,0.0,7.98,8.46,10.68,10.85,9.6,9.2
+TenderResultNotice,<Zamawiający>,Zamawiający,1,,236,0.58,100.0,0.8,0.73,0.42,0.55,0.5,0.53

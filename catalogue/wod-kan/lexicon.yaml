@@ -1,0 +1,91 @@
+# Sector pack wod-kan: edit in the panel or here; loaded by `riskminer seed-catalogue`.
+# Source: docs/research/03_domain_methodology.md (+ expert materials). status: approved | proposed.
+components:
+  WOD:
+  - wodociąg
+  - sie[ćc]i? wodociągow
+  - magistral\w* wod
+  - przyłącz\w* wodociągow
+  - hydrant
+  - rurociąg\w* (wody|wodociągow)
+  KAN:
+  - kanalizac\w* sanitarn
+  - sie[ćc]i? kanalizac
+  - kanał\w* sanitarn
+  - kolektor\w* sanitarn
+  - tłoczn
+  - rurociąg\w* tłoczn
+  - przepompowni\w* ścieków
+  - pompowni\w* ścieków
+  - przykanalik
+  - sięgacz
+  - kanalizac\w* (ciśnieniow|podciśnieniow|grawitacyjn)
+  - tranzyt\w* (przesyłow|kanaliz)
+  OCZ:
+  - oczyszczalni\w* ścieków
+  - oczyszczani\w* ścieków
+  - \bSBR\b
+  - osad\w* czynn
+  - reaktor\w* biologiczn
+  - \bRLM\b
+  - osadnik
+  - stacj\w* zlewn
+  - przydomow\w* oczyszczal
+  UZD:
+  - stacj\w* uzdatniania
+  - \bSUW\b
+  - ujęci\w* wody
+  - studni\w* (głębinow|wierconej)
+  - zbiornik\w* (wody czystej|retencyjn\w* wody pitnej)
+  - hydroforni
+  - pompowni\w* wody
+  - odżelazian
+  - odmanganian
+  - wież\w* ciśnień
+  DESZ:
+  - kanalizac\w* deszczow
+  - wód opadowych
+  - odwodnieni\w* (drogi|ulicy|terenu)
+  - zbiornik\w* retencyjn
+  - retencj
+  - separator
+  - kolektor\w* deszczow
+  - ogólnospławn
+  - rozdział\w* kanalizacji
+  - studni\w* chłonn
+  INNE:
+  - telemetri
+  - SCADA
+  - stacj\w* zlewn
+  - punkt\w* zlewn
+works_type:
+  budowa_rozbudowa:
+  - \bbudow
+  - rozbudow
+  - wykonani\w* (sieci|kanalizacji|wodociągu)
+  - dobudow
+  - nowe?j? (sieci|odcink)
+  przebudowa_renowacja:
+  - przebudow
+  - moderniz
+  - remont
+  - renowac
+  - wymian
+  - rekonstrukc
+  - relining
+  - bezwykopow\w* renowac
+  - rozdział\w* kanalizacji
+  - zwiększeni\w* (przepustowości|wydajności)
+formula:
+  zaprojektuj_i_wybuduj:
+  - zaprojektuj
+  - projektuj i (wy)?buduj
+  - zaprojektowani\w* i (wykonani|wybudowani|budow)
+  - program\w* funkcjonalno
+quantities:
+  length: (\d+(?:[.,]\d+)?)\s*(km|mb|m)\b(?!\s*[²³23])
+  diameter: \bDN\s?(\d{2,4})\b|\bø\s?(\d{2,4})
+  connections: (\d+)\s*(?:szt\.?\s*)?(?:przyłącz|odgałęzie|sięgacz|przykanalik)
+  pumps: (\d+)\s*(?:szt\.?\s*)?(?:przepompowni|pompowni|tłoczni)
+  pe: (\d[\d\s]*)\s*RLM
+  flow_day: (\d[\d\s,.]*)\s*m3?\s*/\s*d(ob)?

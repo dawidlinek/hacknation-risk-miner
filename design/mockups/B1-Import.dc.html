@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Import i źródła</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0A0A0A}a:hover{color:#404040}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{outline:2px solid #0A0A0A;outline-offset:2px}
+</style>
+</helmet>
+<div style="min-height:100vh;background:#FFFFFF;font-family:'Geist',system-ui,sans-serif;color:#0A0A0A">
+<header style="border-bottom:1px solid #F0F0F0">
+<div style="max-width:1240px;margin:0 auto;padding:14px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px">
+<a href="{{home}}" style="display:inline-flex;align-items:baseline;text-decoration:none;color:#0A0A0A;font-size:19px;font-weight:700;letter-spacing:-.04em">{{brandA}}<span style="margin-left:3px;padding:0 6px 2px;border-radius:8px;background:#0A0A0A;color:#FFFFFF;letter-spacing:-.02em">{{brandB}}</span></a>
+<nav aria-label="Moduły" style="display:flex;gap:4px;flex-wrap:wrap;align-items:center">
+<sc-for list="{{nav}}" as="n" hint-placeholder-count="6"><a href="{{n.href}}" style="{{n.style}}">{{n.label}}<sc-if value="{{n.count}}" hint-placeholder-val="{{false}}"><span style="margin-left:6px;font:600 11px 'Geist Mono',monospace;padding:1px 6px;border-radius:999px;{{n.cs}}">{{n.count}}</span></sc-if></a></sc-for>
+<sc-if value="{{auth}}" hint-placeholder-val="{{false}}"><details style="position:relative"><summary style="list-style:none;min-height:36px;display:inline-flex;align-items:center;padding:0 12px;border-radius:999px;font:500 14px 'Geist',sans-serif;color:#404040;cursor:pointer">Więcej</summary><div style="position:absolute;right:0;top:42px;z-index:5;background:#FFFFFF;border:1px solid #E5E5E5;border-radius:18px;padding:6px;min-width:200px;box-shadow:0 12px 32px rgba(10,10,10,.14);display:flex;flex-direction:column"><sc-for list="{{more}}" as="m" hint-placeholder-count="3"><a href="{{m.href}}" style="padding:10px 12px;border-radius:12px;text-decoration:none;font:500 14px 'Geist',sans-serif;color:#0A0A0A">{{m.label}}</a></sc-for></div></details></sc-if>
+</nav>
+<div style="display:flex;align-items:center;gap:10px"><a href="A6-Czat.dc.html" style="min-height:40px;display:inline-flex;align-items:center;gap:8px;padding:0 14px;border-radius:999px;border:1px solid #E5E5E5;text-decoration:none;color:#0A0A0A;font:500 14px 'Geist',sans-serif"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"></path></svg>Zapytaj</a><sc-if value="{{auth}}" hint-placeholder-val="{{false}}"><button type="button" aria-label="Konto: ekspert" style="width:40px;height:40px;border-radius:999px;border:1px solid #E5E5E5;background:#F5F5F5;font:600 14px 'Geist',sans-serif">E</button></sc-if><sc-if value="{{anon}}" hint-placeholder-val="{{false}}"><a href="Main.dc.html" style="min-height:40px;display:inline-flex;align-items:center;padding:0 16px;border-radius:999px;background:#0A0A0A;color:#FFFFFF;text-decoration:none;font:600 14px 'Geist',sans-serif">Zaloguj się</a></sc-if></div>
+</div>
+</header>
+<div style="max-width:1240px;margin:0 auto;padding:36px 24px 72px;display:flex;flex-wrap:wrap;gap:36px;align-items:flex-start">
+<main style="flex:999 1 600px;min-width:0;display:flex;flex-direction:column;gap:20px">
+<h1 style="margin:0;font-size:36px;font-weight:600;letter-spacing:-.035em;line-height:1.1">Import i źródła</h1>
+
+<div style="border:1.5px dashed #D4D4D4;border-radius:22px;padding:14px 16px;display:flex;flex-wrap:wrap;gap:8px;align-items:center">
+<sc-for list="{{files}}" as="f" hint-placeholder-count="2"><span style="display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:#F6F6F6;font-size:13px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6v18h12V7z"></path><path d="M14 3v4h4"></path></svg>{{f.n}}<span style="font:500 11.5px 'Geist Mono',monospace;color:#6B6B6B">{{f.d}}</span></span></sc-for>
+<button type="button" style="margin-left:auto;min-height:36px;padding:0 14px;border-radius:999px;border:1px solid #E5E5E5;background:#FFFFFF;font:500 13px 'Geist',sans-serif">Wrzuć kolejne pliki</button>
+</div>
+
+<div style="display:flex;gap:14px;align-items:flex-start">
+<span style="width:38px;height:38px;flex:none;border-radius:12px;background:#0A0A0A;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7l8-4 8 4v10l-8 4-8-4z"></path><path d="M4 7l8 4 8-4M12 11v10"></path></svg></span>
+<div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:10px;padding-top:2px">
+<span style="font-size:14px;font-weight:600">Agent importu&nbsp;</span>
+
+<div style="display:flex;flex-direction:column;gap:6px;max-width:640px"><sc-for list="{{tools}}" as="t" hint-placeholder-count="4"><div style="display:grid;grid-template-columns:22px minmax(0,1fr) auto;gap:10px;align-items:center;padding:8px 12px;border-radius:14px;background:#F6F6F6"><span style="width:16px;height:16px;border-radius:999px;background:#0A0A0A;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><code style="font:500 12.5px 'Geist Mono',monospace;color:#262626;overflow-wrap:anywhere">{{t.call}}</code><span style="font-size:13px;color:#525252;text-align:right">{{t.out}}</span></div></sc-for></div>
+</div>
+</div>
+
+<div style="display:flex;gap:14px;align-items:flex-start">
+<span style="width:38px;height:38px;flex:none"></span>
+<div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:10px">
+<p style="margin:0;font-size:16px;line-height:1.55">Plik pasuje do formatu „zestaw organizatora” w 16 z 18 kolumn. Tak mapuję resztę:</p>
+<div style="border:1px solid #E5E5E5;border-radius:18px;overflow:hidden;max-width:720px">
+<table style="width:100%;border-collapse:collapse;font-size:14px">
+<thead><tr style="background:#F6F6F6;text-align:left;font-size:12px;color:#525252"><th style="padding:10px 14px;font-weight:600">Kolumna w pliku</th><th style="padding:10px 14px;font-weight:600">Pole w bazie</th><th style="padding:10px 14px;font-weight:600">Reguła</th><th style="padding:10px 14px;font-weight:600;text-align:right">Stan</th></tr></thead>
+<tbody><sc-for list="{{map}}" as="m" hint-placeholder-count="5"><tr style="border-top:1px solid #F0F0F0"><td style="padding:10px 14px;font-weight:500">{{m.col}}</td><td style="padding:10px 14px;font:500 12.5px 'Geist Mono',monospace">{{m.field}}</td><td style="padding:10px 14px;color:#525252">{{m.rule}}</td><td style="padding:10px 14px;text-align:right;font:500 12px 'Geist Mono',monospace;white-space:nowrap;color:{{m.c}}">{{m.st}}</td></tr></sc-for></tbody>
+</table>
+</div>
+<sc-if value="{{ask}}" hint-placeholder-val="{{true}}">
+<div style="border-radius:18px;background:#FFF3EB;padding:14px 16px;display:flex;flex-direction:column;gap:10px;max-width:720px">
+<span style="display:flex;gap:10px;align-items:center"><span style="width:22px;height:22px;flex:none;box-sizing:border-box;border-radius:999px;border:2px solid #EA580C;display:inline-flex;align-items:center;justify-content:center"><span style="width:8px;height:8px;border-radius:999px;background:#EA580C"></span></span><span style="font-size:15px;font-weight:600">Kolumna „Kwota”: netto czy brutto?</span></span>
+<span style="font-size:14px;color:#404040">W 7 wierszach kwota dzieli się bez reszty przez 1,23, w pozostałych nie. Nie zgaduję, bo porównujemy tylko kwoty tego samego rodzaju.</span>
+<span style="display:flex;gap:8px;flex-wrap:wrap"><button type="button" onClick="{{gross}}" style="min-height:38px;padding:0 16px;border-radius:999px;border:0;background:#0A0A0A;color:#FFFFFF;font:600 14px 'Geist',sans-serif;cursor:pointer">Brutto</button><button type="button" onClick="{{net}}" style="min-height:38px;padding:0 16px;border-radius:999px;border:1px solid #E5E5E5;background:#FFFFFF;font:500 14px 'Geist',sans-serif;cursor:pointer">Netto</button><button type="button" style="min-height:38px;padding:0 16px;border-radius:999px;border:1px solid #E5E5E5;background:#FFFFFF;font:500 14px 'Geist',sans-serif">Pokaż te 7 wierszy</button></span>
+</div>
+</sc-if>
+</div>
+</div>
+
+<sc-if value="{{answered}}" hint-placeholder-val="{{false}}">
+<div style="display:flex;justify-content:flex-end"><div style="max-width:420px;padding:12px 16px;border-radius:22px 22px 6px 22px;background:#0A0A0A;color:#FFFFFF;font-size:15px">{{answer}}</div></div>
+<div style="display:flex;gap:14px;align-items:flex-start">
+<span style="width:38px;height:38px;flex:none;border-radius:12px;background:#0A0A0A"></span>
+<div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:10px">
+<p style="margin:0;font-size:16px;line-height:1.55">Napisałem importer i sprawdziłem go w piaskownicy na 50 wierszach: 47 bez błędów, 3 z NIP o złej sumie kontrolnej. Te 3 nie wejdą do bazy, trafią do Przeglądu jako rozbieżności.</p>
+<details style="max-width:720px;border:1px solid #E5E5E5;border-radius:18px;padding:12px 14px"><summary style="cursor:pointer;font-size:14px;font-weight:600">import_zestaw_v2.py <span style="font:500 12px 'Geist Mono',monospace;color:#6B6B6B;font-weight:500">64 linie, wersja 2 importera</span></summary><pre style="margin:10px 0 0;background:#0A0A0A;color:#E5E5E5;border-radius:12px;padding:12px 14px;font:400 12px/1.6 'Geist Mono',monospace;overflow-x:auto">for row in read_xlsx("projekty_2026.xlsx", sheet="Projekty"):
+    nip = normalize_nip(row["NIP odbiorcy"])      # reguła: suma kontrolna
+    bzp = parse_bzp_number(row["Nr ogłoszenia"])  # reguła: RRRR/BZP NNNNNNNN/VV
+    amount = Money(row["Kwota"], basis="{{basis}}")
+    if not nip.valid:
+        to_review(row, reason="NIP: zła suma kontrolna")
+        continue
+    upsert_project(nip=nip, bzp=bzp, amount=amount, source=row.ref)</pre></details>
+<div style="border-radius:18px;background:#F6F6F6;padding:16px;display:flex;flex-direction:column;gap:10px;max-width:720px">
+<span style="font-size:15px;font-weight:600">Uruchomić importer na całości?</span>
+<span style="font-size:14px;color:#404040;line-height:1.5">312 wierszy i 2 341 plików. Reguły sprawdza kod, nie model. Dokumenty trafią do kolejki parsowania, a model zobaczy tylko fragmenty potrzebne do analiz. Czas ok. 12 min, koszt modelu ok. [kwota] zł.</span>
+<sc-if value="{{running}}" hint-placeholder-val="{{false}}"><div style="display:flex;flex-direction:column;gap:6px"><div style="height:8px;border-radius:999px;background:#E5E5E5"><div style="width:34%;height:100%;border-radius:999px;background:#0A0A0A"></div></div><span style="font:500 12px 'Geist Mono',monospace;color:#525252">import #44 w toku, 106 z 312 wierszy</span></div></sc-if>
+<sc-if value="{{idle}}" hint-placeholder-val="{{true}}"><span style="display:flex;gap:8px;flex-wrap:wrap"><button type="button" onClick="{{run}}" style="min-height:42px;padding:0 18px;border-radius:999px;border:0;background:#0A0A0A;color:#FFFFFF;font:600 14px 'Geist',sans-serif;cursor:pointer">Zatwierdź i importuj</button><button type="button" style="min-height:42px;padding:0 16px;border-radius:999px;border:1px solid #E5E5E5;background:#FFFFFF;font:500 14px 'Geist',sans-serif">Najpierw tylko 50 wierszy</button><button type="button" onClick="{{reset}}" style="min-height:42px;padding:0 16px;border-radius:999px;border:1px solid #E5E5E5;background:#FFFFFF;font:500 14px 'Geist',sans-serif;cursor:pointer">Zmień regułę</button></span></sc-if>
+</div>
+</div>
+</div>
+</sc-if>
+
+<form style="display:flex;align-items:center;gap:8px;padding:6px 6px 6px 18px;border-radius:999px;border:1px solid #E5E5E5;box-shadow:0 1px 2px rgba(0,0,0,.04),0 12px 32px rgba(0,0,0,.06)">
+<label for="ag" style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)">Napisz do agenta</label>
+<input id="ag" type="text" placeholder="Napisz do agenta, np. „pomiń arkusz Archiwum”" style="flex:1;min-width:0;min-height:44px;border:none;outline:none;background:transparent;font:400 15px 'Geist',sans-serif">
+<button type="button" aria-label="Wyślij" style="width:44px;height:44px;border-radius:999px;border:none;background:#0A0A0A;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"></path></svg></button>
+</form>
+</main>
+
+<aside style="flex:1 1 340px;max-width:100%;min-width:0;display:flex;flex-direction:column;gap:16px">
+<section aria-labelledby="r1" style="background:#F6F6F6;border-radius:28px;padding:22px;display:flex;flex-direction:column;gap:8px">
+<div style="display:flex;flex-direction:column;gap:2px;padding:2px 4px 8px"><h2 id="r1" style="margin:0;font-size:18px;font-weight:600;letter-spacing:-.015em">Reguły, których agent nie obejdzie</h2></div>
+<sc-for list="{{rules}}" as="r" hint-placeholder-count="5"><div style="background:#FFFFFF;border-radius:16px;padding:10px 12px;font-size:14px;line-height:1.4">{{r}}</div></sc-for>
+</section>
+<section aria-labelledby="r2" style="border:1px solid #F0F0F0;border-radius:28px;padding:22px;display:flex;flex-direction:column;gap:8px">
+<h2 id="r2" style="margin:0 0 4px;font-size:18px;font-weight:600;letter-spacing:-.015em">Zapisane importery</h2>
+<sc-for list="{{importers}}" as="i" hint-placeholder-count="3"><div style="display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-top:1px solid #F0F0F0"><span style="display:flex;flex-direction:column;gap:1px"><span style="font-size:14px;font-weight:600">{{i.n}}</span><span style="font-size:12px;color:#6B6B6B">{{i.d}}</span></span><span style="font:500 12px 'Geist Mono',monospace;color:#6B6B6B;white-space:nowrap">{{i.v}}</span></div></sc-for>
+</section>
+<section aria-labelledby="r3" style="border:1px solid #F0F0F0;border-radius:28px;padding:22px;display:flex;flex-direction:column;gap:8px">
+<h2 id="r3" style="margin:0 0 4px;font-size:18px;font-weight:600;letter-spacing:-.015em">Ostatnie uruchomienia</h2>
+<sc-for list="{{runs}}" as="r" hint-placeholder-count="4"><div style="display:flex;gap:10px;align-items:center;padding:6px 0"><span style="width:9px;height:9px;flex:none;border-radius:999px;background:{{r.dot}}"></span><span style="flex:1;font-size:14px">{{r.n}}</span><span style="font:500 12px 'Geist Mono',monospace;color:#6B6B6B">{{r.d}}</span></div></sc-for>
+<a href="D3-Historia.dc.html" style="font-size:13px;font-weight:500;padding-top:4px">Pełny dziennik w Historii</a>
+</section>
+</aside>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"brandA":{"editor":"text","default":"ex"},"brandB":{"editor":"text","default":"ante"},"$preview":{"width":1440,"height":1800}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { basis: '', running: false }; }
+  renderVals() {
+    const active = '';
+    const AUTH = true;
+    const NAV = [['Pulpit','Main.dc.html','',1],['Monitoring','D2-Monitoring.dc.html','12',0],['Nowa inwestycja','A1-Start.dc.html','',0],['Projekty','B2-Projekty.dc.html','',0],['Przegląd','C1-Przeglad.dc.html','37',1],['Katalog','C2-Katalog.dc.html','',1]];
+    const nav = NAV.filter((x) => AUTH || !x[3]).map(([label, href, count]) => ({ label, href, count: AUTH ? count : '', cs: label === active ? 'background:#FFFFFF;color:#0A0A0A' : 'background:#F0F0F0;color:#404040', style: "min-height:36px;display:inline-flex;align-items:center;padding:0 12px;border-radius:999px;text-decoration:none;font:500 14px 'Geist',sans-serif;" + (label === active ? 'background:#0A0A0A;color:#FFFFFF' : 'color:#404040') }));
+    const more = [['Import i źródła','B1-Import.dc.html'],['Historia','D3-Historia.dc.html'],['Ustawienia','D4-Ustawienia.dc.html']].map(([label, href]) => ({ label, href }));
+    const files = [{ n: 'paczka_powiat.zip', d: '1,8 GB, 2 341 plików' }, { n: 'projekty_2026.xlsx', d: '312 wierszy' }];
+    const tools = [
+      { call: 'list_archive("paczka_powiat.zip")', out: '2 341 plików, 14 typów' },
+      { call: 'sample_rows("projekty_2026.xlsx", n=20)', out: '18 kolumn, arkusz Projekty' },
+      { call: 'match_schema(known_formats)', out: '„zestaw organizatora”, 16 z 18' },
+      { call: 'classify_docs(sample=40)', out: 'SWZ 12, PFU 9, PPU 8, protokoły 11' }
+    ];
+    const { basis, running } = this.state;
+    const ok = '#166534', q = '#C2410C';
+    const map = [
+      { col: 'Nr ogłoszenia', field: 'procedure.bzp_number', rule: 'format RRRR/BZP NNNNNNNN/VV', st: 'zgodne', c: ok },
+      { col: 'NIP odbiorcy', field: 'organization.nip', rule: 'suma kontrolna', st: '309 z 312', c: ok },
+      { col: 'Numer KPO', field: 'project.kpo_id', rule: 'format KPOD.03.15-IW.nn-nnnn/nn', st: 'zgodne', c: ok },
+      { col: 'Kwota', field: 'project.value', rule: 'kwota z rodzajem: netto lub brutto', st: basis ? basis : 'pytanie', c: basis ? ok : q },
+      { col: 'Uwagi', field: 'project.note', rule: 'tekst, bez analizy', st: 'propozycja', c: '#525252' }
+    ];
+    const rules = ['Każdy NIP i REGON przechodzi sumę kontrolną.', 'Numery BZP, KPO i TED tylko w znanym formacie.', 'Kwota zawsze z rodzajem: netto albo brutto.', 'Ten sam plik po sha256 nie wchodzi dwa razy.', 'Import nigdy nie nadpisuje danych zatwierdzonych przez eksperta.'];
+    const importers = [{ n: 'zestaw organizatora', d: 'XLSX, 23 kolumny, użyty 3 razy', v: 'v2' }, { n: 'kopia BZP (paczka)', d: 'JSON, 113 278 ogłoszeń', v: 'v1' }, { n: 'lista projektów KPO', d: '[do napisania przez agenta]', v: 'brak' }];
+    const runs = [{ n: 'BZP: API (mirror)', d: '21.11 12:41', dot: '#16A34A' }, { n: 'BZP: brak ogłoszenia Wolin', d: '21.11 12:40', dot: '#EA580C' }, { n: 'BZP: kopia ogłoszeń', d: '21.11 12:15', dot: '#16A34A' }, { n: 'Zestaw organizatora', d: '21.11 12:05', dot: '#EA580C' }];
+    return { auth: AUTH, anon: !AUTH, home: AUTH ? 'Main.dc.html' : 'D2-Monitoring.dc.html', 
+      brandA: this.props.brandA ?? 'ex', brandB: this.props.brandB ?? 'ante', nav, more, files, tools, map, rules, importers, runs,
+      ask: !basis, answered: !!basis, answer: basis === 'brutto' ? 'Brutto, z VAT.' : 'Netto, bez VAT.', basis: basis === 'brutto' ? 'gross' : 'net',
+      running, idle: !running,
+      gross: () => this.setState({ basis: 'brutto' }), net: () => this.setState({ basis: 'netto' }),
+      run: () => this.setState({ running: true }), reset: () => this.setState({ basis: '', running: false })
+    };
+  }
+}
+</script>
+</body>
+</html>

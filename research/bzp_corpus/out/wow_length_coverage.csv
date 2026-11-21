@@ -1,0 +1,8 @@
+subsector_name,n,any_length,net_length,conn_only
+Inne obiekty wod-kan,4,0.0,0.0,0.0
+Kanalizacja deszczowa i retencja,1088,0.31,0.305,0.025
+Kanalizacja sanitarna,4298,0.48,0.467,0.088
+Oczyszczalnia ścieków,832,0.094,0.091,0.002
+Sieć wodociągowa,4038,0.54,0.531,0.073
+Uzdatnianie i zaopatrzenie w wodę,994,0.122,0.122,0.007
+ALL,11254,0.425,0.416,0.063

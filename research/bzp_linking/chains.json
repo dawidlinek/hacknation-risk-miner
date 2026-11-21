@@ -1,0 +1,4858 @@
+[
+ {
+  "project_id": "RM-2026-001",
+  "lp": "1",
+  "flags": [],
+  "method": "bzp-number",
+  "bzp_normalised": [
+   "2022/BZP 00058537",
+   "01"
+  ],
+  "org_fragment": [
+   "Oława",
+   "Gmina Oława"
+  ],
+  "org_notices": 105,
+  "tenderId": "ocds-148610-386e6a91-8d90-11ec-94c8-de8df8ed9da1",
+  "notices": [
+   {
+    "number": "2022/BZP 00058537/01",
+    "date": "2022-02-16",
+    "title": "Budowa rurociągu tłocznego kanalizacji sanitarnej Godzikowice – Jaczkowice, gmina Oława",
+    "procedure_mode": "Zamówienie udzielane jest w trybie podstawowym na podstawie: art. 275 pkt 1 ustawy",
+    "parts_count": null,
+    "submission_deadline": "2022-03-04 10:00",
+    "eu_funded": "Nie",
+    "parts": {
+     "0": {
+      "description": "1. Przedmiotem zamówienia jest wykonanie robót budowlanych polegających na budowie rurociągu tłocznego kanalizacji sanitarnej Godzikowice – Jaczkowice w ramach zadania inwestycyjnego pod nazwą „Budowa rurociągu tłocznego kanalizacji sanitarnej Godzikowice – Jaczkowice ”.\n2. Przedmiot zamówienia obejmuje:",
+      "period": "12 miesiące",
+      "cpv_main": "45232410-9 - Roboty w zakresie kanalizacji ściekowej"
+     }
+    },
+    "type": "ContractNotice",
+    "linked_by": "tenderId",
+    "objectId": "08dc2f58-0052-3135-8219-c30001c86aa1",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dc2f58-0052-3135-8219-c30001c86aa1",
+    "orgName": "Gmina Oława",
+    "province": "PL02"
+   },
+   {
+    "number": "2022/BZP 00115288/01",
+    "date": "2022-04-08",
+    "estimate_net": null,
+    "cn_ref": "2022/BZP 00058537/01",
+    "eu_funded": "Nie",
+    "procedureResult": "zawarcieUmowy",
+    "parts": {
+     "0": {
+      "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+      "cancel_reason": null,
+      "offers": "4",
+      "price_min": 2107348.39,
+      "price_max": 4079410.03,
+      "price_awarded": 2107348.39,
+      "contractor": "Przedsiębiorstwo Budowlane COMPLEX-BUD Leon Szuturma",
+      "contractor_id": "9120005157",
+      "contract_date": "2022-04-06",
+      "contract_value": 2107348.39,
+      "period": "12 miesiące",
+      "part_estimate_net": null
+     }
+    },
+    "type": "TenderResultNotice",
+    "linked_by": "tenderId",
+    "objectId": "08dc2f6a-9987-aa10-a270-4c0001bee963",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dc2f6a-9987-aa10-a270-4c0001bee963",
+    "orgName": "Gmina Oława",
+    "province": "PL02"
+   },
+   {
+    "number": "2026/BZP 00147223/01",
+    "date": "2026-03-10",
+    "cn_ref": "2022/BZP 00058537/01",
+    "trn_ref": "2022/BZP 00115288/01",
+    "contract_date": "2022-04-06",
+    "period": "12 miesiące",
+    "contractor": "Przedsiębiorstwo Budowlane COMPLEX-BUD Leon Szuturma",
+    "contractor_id": "9120005157",
+    "contract_value": 2107348.39,
+    "executed": "Tak",
+    "end_date": "2023-06-22",
+    "on_time": "Nie",
+    "changes_count": "6",
+    "changes": [
+     {
+      "no": "1",
+      "legal_basis": "art. 455 ust. 1 pkt 1 ustawy",
+      "reason": "zmiana harmonogramu rzeczowo-finansowego",
+      "after_change": "zmiana harmonogramu rzeczowo-finansowego",
+      "value": null,
+      "price_increase": "Nie"
+     },
+     {
+      "no": "2",
+      "legal_basis": "art. 455 ust. 1 pkt 1 ustawy",
+      "reason": "zmiana harmonogramu rzeczowo-finansowego",
+      "after_change": "zmiana harmonogramu rzeczowo-finansowego",
+      "value": null,
+      "price_increase": "Nie"
+     },
+     {
+      "no": "3",
+      "legal_basis": "art. 455 ust. 2 ustawy",
+      "reason": "roboty uzupełniające - zmiany o niskiej wartości, na podstawie protokołu - konieczność wykonania robót polegających na wyburzeniu murów ceglano -betonowych wraz z transportem koparki i młota oraz załadunkiem i wywozem gruzu o wartości kosztorysowej brutto: 9 337,83",
+      "after_change": "\"Wartość kosztorysowa robót strony ustalają na kwotę: netto 1 720 883,10 z, brutto: 2 116 686,22 zł, w tym podatek od towarów i usług w wysokości 23% co stanowi kwotę 395 803,12 zł\"",
+      "value": 9337.83,
+      "price_increase": "Tak"
+     },
+     {
+      "no": "4",
+      "legal_basis": "art. 455 ust. 1 pkt 1 ustawy",
+      "reason": "protokół",
+      "after_change": "\"Strony ustalają, że przedmiot umowy zostanie wykonany w terminie 14 m-cy\"",
+      "value": null,
+      "price_increase": "Nie"
+     },
+     {
+      "no": "5",
+      "legal_basis": "art. 455 ust. 1 pkt 1 ustawy",
+      "reason": "protokół",
+      "after_change": "\"Strony ustalają, że przedmiot umowy zostanie wykonany w terminie 14 m-cy i 17 dni\"",
+      "value": null,
+      "price_increase": "Nie"
+     },
+     {
+      "no": "6",
+      "legal_basis": "art. 455 ust. 1 pkt 1 ustawy",
+      "reason": "porozumienie",
+      "after_change": "\"Wartość kosztorysowa robót strony ustalają na kwotę: netto 1 826 160,70; brutto 2 246 177,66 zł, w tym podatek od towarów i usług w wysokości 23% co stanowi kwotę 420 016,96 zł\"",
+      "value": 129491.44,
+      "price_increase": "Tak"
+     }
+    ],
+    "paid_total": 2246177.66,
+    "properly_performed": "Tak",
+    "not_executed_reason": null,
+    "extra_info": null,
+    "type": "ContractPerformingNotice",
+    "linked_by": "tenderId",
+    "objectId": "08de7e88-bd39-dafb-056e-e50001ac5cf9",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de7e88-bd39-dafb-056e-e50001ac5cf9",
+    "orgName": "Gmina Oława",
+    "province": "PL02"
+   }
+  ],
+  "referenced_cn": [
+   "2022/BZP 00058537"
+  ],
+  "title_similarity": 1.0,
+  "summary": {
+   "cn": "2022/BZP 00058537/01",
+   "cn_date": "2022-02-16",
+   "parts_count": null,
+   "trn": [
+    "2022/BZP 00115288/01"
+   ],
+   "estimate_net": null,
+   "parts": {
+    "0": {
+     "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+     "cancel_reason": null,
+     "offers": "4",
+     "price_min": 2107348.39,
+     "price_max": 4079410.03,
+     "price_awarded": 2107348.39,
+     "contractor": "Przedsiębiorstwo Budowlane COMPLEX-BUD Leon Szuturma",
+     "contractor_id": "9120005157",
+     "contract_date": "2022-04-06",
+     "contract_value": 2107348.39,
+     "period": "12 miesiące",
+     "part_estimate_net": null
+    }
+   },
+   "aun": [],
+   "cpn": [
+    "2026/BZP 00147223/01"
+   ]
+  },
+  "contracts": [
+   {
+    "part": 0,
+    "outcome": "umowa",
+    "offers": "4",
+    "estimate_part_net": null,
+    "price_awarded": 2107348.39,
+    "contractor": "Przedsiębiorstwo Budowlane COMPLEX-BUD Leon Szuturma",
+    "contractor_id": "9120005157",
+    "contract_date": "2022-04-06",
+    "contract_value": 2107348.39,
+    "planned_end": "~2023-04-06",
+    "planned_period": "12 miesiące",
+    "aun": 0,
+    "aun_bases": [],
+    "cpn": "2026/BZP 00147223/01",
+    "actual_end": "2023-06-22",
+    "on_time": "Nie",
+    "changes_count": "6",
+    "paid_total": 2246177.66,
+    "properly": "Tak",
+    "change_bases": [
+     "art. 455 ust. 1 pkt 1 ustawy",
+     "art. 455 ust. 2 ustawy"
+    ]
+   }
+  ]
+ },
+ {
+  "project_id": "RM-2026-002",
+  "lp": "2",
+  "flags": [],
+  "method": "name+NIP+CPV+date",
+  "org_fragment": [
+   "Zagrod"
+  ],
+  "org_notices": 23,
+  "candidates": [
+   {
+    "tenderId": "ocds-148610-7ae14583-9ae6-40e4-bbf5-11c0fdbdaff8",
+    "score": 1.2,
+    "overlap": [
+     "kanali",
+     "modlik",
+     "sanita",
+     "zagrod"
+    ],
+    "first": "2026-02-02",
+    "title": "Budowa kanalizacji sanitarnej na terenie  Gminy Zagrodno w  miejscowości Modlikowice",
+    "types": [
+     "ContractNotice",
+     "ContractPerformingNotice",
+     "TenderResultNotice"
+    ]
+   },
+   {
+    "tenderId": "ocds-148610-0b554813-cf8d-11ed-b70f-ae2d9e28ec7b",
+    "score": 0.6,
+    "overlap": [
+     "modlik",
+     "oczysz",
+     "realiz",
+     "scieko"
+    ],
+    "first": "2023-04-04",
+    "title": "\"Budowa oczyszczalni ścieków w Modlikowicach\" - realizowana w systemie zaprojektuj i wybuduj",
+    "types": [
+     "ContractNotice",
+     "ContractPerformingNotice",
+     "TenderResultNotice"
+    ]
+   },
+   {
+    "tenderId": "ocds-148610-be095f56-98dc-4b1a-83c9-8e5c748e23c7",
+    "score": 0.414,
+    "overlap": [
+     "modlik",
+     "oczysz",
+     "scieko"
+    ],
+    "first": "2025-10-15",
+    "title": "Budowa linii kablowej SN-20 kV wraz ze słupową stacją transformatorową 20/0,4KV na potrzeby zasilania oczyszczalni ściek",
+    "types": [
+     "ContractNotice",
+     "ContractPerformingNotice",
+     "TenderResultNotice"
+    ]
+   }
+  ],
+  "confidence": 1.2,
+  "tenderId": "ocds-148610-7ae14583-9ae6-40e4-bbf5-11c0fdbdaff8",
+  "notices": [
+   {
+    "number": "2026/BZP 00089794/01",
+    "date": "2026-02-02",
+    "title": "Budowa kanalizacji sanitarnej na terenie  Gminy Zagrodno w  miejscowości Modlikowice",
+    "procedure_mode": "Zamówienie udzielane jest w trybie podstawowym na podstawie: art. 275 pkt 2 ustawy",
+    "parts_count": null,
+    "submission_deadline": "2026-02-17 10:00",
+    "eu_funded": "Tak",
+    "parts": {
+     "0": {
+      "description": "1. Przedmiotem zamówienia jest wykonanie robót budowlanych na podstawie projektu, dla zadania inwestycyjnego pn.: „Budowa kanalizacji sanitarnej na terenie Gminy Zagrodno w miejscowości Modlikowice”.\n2. Na realizację przedmiotu zamówienia Zamawiający uzyskał dofinansowanie w ramach inwestycji B3.1.1 „Inwestycje w zrównoważoną gospodarkę wodno-ściekową na terenach wiejskich”, objętej Krajowym Plane",
+      "period": "2 miesiące",
+      "cpv_main": "45000000-7 - Roboty budowlane"
+     }
+    },
+    "type": "ContractNotice",
+    "linked_by": "tenderId",
+    "objectId": "08de6251-d7ab-b2c7-4c32-fc0001f13660",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de6251-d7ab-b2c7-4c32-fc0001f13660",
+    "orgName": "GMINA ZAGRODNO",
+    "province": "PL02"
+   },
+   {
+    "number": "2026/BZP 00143366/01",
+    "date": "2026-03-06",
+    "estimate_net": 4350229.8,
+    "cn_ref": "2026/BZP 00089794",
+    "eu_funded": "Tak",
+    "procedureResult": "zawarcieUmowy",
+    "parts": {
+     "0": {
+      "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+      "cancel_reason": null,
+      "offers": "2",
+      "price_min": 5350782.65,
+      "price_max": 5350782.65,
+      "price_awarded": 5350782.65,
+      "contractor": "Przedsiębiorstwo Transportowo Budowlane Sp. z o.o.",
+      "contractor_id": "8992507768",
+      "contract_date": "2026-03-05",
+      "contract_value": 5350782.65,
+      "period": "2 miesiące",
+      "part_estimate_net": null
+     }
+    },
+    "type": "TenderResultNotice",
+    "linked_by": "tenderId",
+    "objectId": "08de7b6b-19d6-a289-056e-e50001ac42fc",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de7b6b-19d6-a289-056e-e50001ac42fc",
+    "orgName": "GMINA ZAGRODNO",
+    "province": "PL02"
+   },
+   {
+    "number": "2026/BZP 00277648/01",
+    "date": "2026-06-08",
+    "cn_ref": "2026/BZP 00089794",
+    "trn_ref": "2026/BZP 00143366/01",
+    "contract_date": "2026-03-05",
+    "period": "3 miesiące",
+    "contractor": "Przedsiębiorstwo Transportowo Budowlane Sp. z o.o.",
+    "contractor_id": "8992507768",
+    "contract_value": 5350782.65,
+    "executed": "Tak",
+    "end_date": "2026-06-01",
+    "on_time": "Nie",
+    "changes_count": "1",
+    "changes": [
+     {
+      "no": "1",
+      "legal_basis": "art. 455 ust. 1 pkt 1 ustawy",
+      "reason": "zmiana terminu wykonania umowy",
+      "after_change": "Zmiana zakończenia terminu wykonania umowy o miesiąc bez zwiększania wynagrodzenia.",
+      "value": 0.0,
+      "price_increase": "Nie"
+     }
+    ],
+    "paid_total": 5350782.65,
+    "properly_performed": "Tak",
+    "not_executed_reason": null,
+    "extra_info": null,
+    "type": "ContractPerformingNotice",
+    "linked_by": "tenderId",
+    "objectId": "08dec528-4925-88ea-5fad-9500015c65f4",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dec528-4925-88ea-5fad-9500015c65f4",
+    "orgName": "GMINA ZAGRODNO",
+    "province": "PL02"
+   },
+   {
+    "number": "2026/BZP 00285691/01",
+    "date": "2026-06-11",
+    "cn_ref": "2026/BZP 00089794",
+    "trn_ref": "2026/BZP 00143366/01",
+    "contract_date": "2026-03-05",
+    "period": "2 miesiące",
+    "contractor": "Przedsiębiorstwo Transportowo Budowlane Sp. z o.o.",
+    "contractor_id": "8992507768",
+    "contract_value": 5350782.65,
+    "executed": "Tak",
+    "end_date": "2026-06-01",
+    "on_time": "Nie",
+    "changes_count": "1",
+    "changes": [
+     {
+      "no": "1",
+      "legal_basis": "art. 455 ust. 1 pkt 1 ustawy",
+      "reason": "zmiana terminu wykonania umowy",
+      "after_change": "zmiana terminu ze względu na kolizję na budowie",
+      "value": 5350782.65,
+      "price_increase": "Nie"
+     }
+    ],
+    "paid_total": 5350782.65,
+    "properly_performed": "Tak",
+    "not_executed_reason": null,
+    "extra_info": null,
+    "type": "ContractPerformingNotice",
+    "linked_by": "tenderId",
+    "objectId": "08dec7a5-add3-9ae4-5fad-950001d1b535",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dec7a5-add3-9ae4-5fad-950001d1b535",
+    "orgName": "GMINA ZAGRODNO",
+    "province": "PL02"
+   }
+  ],
+  "referenced_cn": [
+   "2026/BZP 00089794"
+  ],
+  "title_similarity": 1.0,
+  "summary": {
+   "cn": "2026/BZP 00089794/01",
+   "cn_date": "2026-02-02",
+   "parts_count": null,
+   "trn": [
+    "2026/BZP 00143366/01"
+   ],
+   "estimate_net": 4350229.8,
+   "parts": {
+    "0": {
+     "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+     "cancel_reason": null,
+     "offers": "2",
+     "price_min": 5350782.65,
+     "price_max": 5350782.65,
+     "price_awarded": 5350782.65,
+     "contractor": "Przedsiębiorstwo Transportowo Budowlane Sp. z o.o.",
+     "contractor_id": "8992507768",
+     "contract_date": "2026-03-05",
+     "contract_value": 5350782.65,
+     "period": "2 miesiące",
+     "part_estimate_net": null
+    }
+   },
+   "aun": [],
+   "cpn": [
+    "2026/BZP 00277648/01",
+    "2026/BZP 00285691/01"
+   ]
+  },
+  "contracts": [
+   {
+    "part": 0,
+    "outcome": "umowa",
+    "offers": "2",
+    "estimate_part_net": null,
+    "price_awarded": 5350782.65,
+    "contractor": "Przedsiębiorstwo Transportowo Budowlane Sp. z o.o.",
+    "contractor_id": "8992507768",
+    "contract_date": "2026-03-05",
+    "contract_value": 5350782.65,
+    "planned_end": "~2026-05-05",
+    "planned_period": "2 miesiące",
+    "aun": 0,
+    "aun_bases": [],
+    "cpn": "2026/BZP 00285691/01",
+    "actual_end": "2026-06-01",
+    "on_time": "Nie",
+    "changes_count": "1",
+    "paid_total": 5350782.65,
+    "properly": "Tak",
+    "change_bases": [
+     "art. 455 ust. 1 pkt 1 ustawy"
+    ]
+   }
+  ],
+  "kpo_value": {
+   "kpo": 5350782.65,
+   "closest": "sum contract values",
+   "value": 5350782.65,
+   "diff_pct": 0.0
+  }
+ },
+ {
+  "project_id": "RM-2026-003",
+  "lp": "3",
+  "flags": [],
+  "method": "bzp-number",
+  "bzp_normalised": [
+   "2024/BZP 00349631",
+   "01"
+  ],
+  "org_fragment": [
+   "Czerniko",
+   "Gmina Czernikowo"
+  ],
+  "org_notices": 33,
+  "tenderId": "ocds-148610-6b092479-223f-11ef-87ba-8eb060fd7bb8",
+  "notices": [
+   {
+    "number": "2024/BZP 00349631/01",
+    "date": "2024-06-04",
+    "title": "Budowa oczyszczalni ścieków w miejscowości Steklin w formule „zaprojektuj i wybuduj”.",
+    "procedure_mode": "Zamówienie udzielane jest w trybie podstawowym na podstawie: art. 275 pkt 1 ustawy",
+    "parts_count": null,
+    "submission_deadline": "2024-06-21 09:00",
+    "eu_funded": "Nie",
+    "parts": {
+     "0": {
+      "description": "1. Przedmiotem zamówienia jest wykonanie w formule „zaprojektuj i wybuduj” zadania inwestycyjnego pn. „Budowa oczyszczalni ścieków w miejscowości Steklin”.\n2. W ramach zamówienia Wykonawca zobowiązany będzie w szczególności do:\n• opracowania kompletnej dokumentacji projektowej w zakresie określonym przez Zamawiającego w Programach Funkcjonalno-Użytkowych (PFU), obejmującym budowę:\n- biologicznej o",
+      "period": "13 miesiące",
+      "cpv_main": "45231300-8 - Roboty budowlane w zakresie budowy wodociągów i rurociągów do odprowadzania ścieków"
+     }
+    },
+    "type": "ContractNotice",
+    "linked_by": "tenderId",
+    "objectId": "08dc846b-60bd-458e-1a46-3000018a35eb",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dc846b-60bd-458e-1a46-3000018a35eb",
+    "orgName": "Gmina Czernikowo",
+    "province": "PL04"
+   },
+   {
+    "number": "2024/BZP 00418711/01",
+    "date": "2024-07-18",
+    "estimate_net": 2602091.26,
+    "cn_ref": "2024/BZP 00349631",
+    "eu_funded": "Nie",
+    "procedureResult": "zawarcieUmowy",
+    "parts": {
+     "0": {
+      "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+      "cancel_reason": null,
+      "offers": "2",
+      "price_min": 2131590.0,
+      "price_max": 2797975.71,
+      "price_awarded": 2131590.0,
+      "contractor": "Zakład Usług Melioracyjnych i Geodezyjnych Piotr Rojek",
+      "contractor_id": "870113012",
+      "contract_date": "2024-07-18",
+      "contract_value": 2131590.0,
+      "period": "do 2025-08-18",
+      "part_estimate_net": null
+     }
+    },
+    "type": "TenderResultNotice",
+    "linked_by": "tenderId",
+    "objectId": "08dca708-fd21-83c3-ba4f-e10001de327b",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dca708-fd21-83c3-ba4f-e10001de327b",
+    "orgName": "Gmina Czernikowo",
+    "province": "PL04"
+   },
+   {
+    "number": "2024/BZP 00554831/01",
+    "date": "2024-10-21",
+    "cn_ref": "2024/BZP 00349631",
+    "trn_ref": "2024/BZP 00418711/01",
+    "contract_title": "Budowa oczyszczalni ścieków w miejscowości Steklin w formule „zaprojektuj i wybuduj”.",
+    "contractor": "Zakład Usług Melioracyjnych i Geodezyjnych Piotr Rojek",
+    "contract_value": 2131590.0,
+    "period": "do 2025-08-18",
+    "change_date": "2024-10-09",
+    "legal_basis": "art. 455 ust. 1 pkt 3 ustawy",
+    "reason": "W związku ze zwiększeniem zakresu robót w stosunku do przedmiotu zamówienia opisanego w Programie Funkcjonalno Użytkowym, zaszła konieczność dokonania zmian w zakresie przedmiotu zamówienia, co przedkłada się na zwiększenie wartości umowy.",
+    "description": "W § 1 ust. 2 dodaje się pkt 3) w brzmieniu:\nwykonania robót dodatkowych nieprzewidzianych w PFU, a niezbędnych do prawidłowej realizacji przedmiotu Umowy oraz mających na celu zmniejszenie kosztów eksploatacji przedmiotu Umowy, polegających w szczególności na wymianie odcinków kanalizacji sanitarnej wraz z montażem studni, wymianie pokryw wraz z włazami na istniejących studniach kanalizacji sanitarnej, wymianie hydrantu, montażu dodatkowych studni wodomierzowych wraz z uzbrojeniem oraz montażu instalacji fotowoltaicznej (szczegółowy zakres robót dodatkowych określa załącznik nr 1).\n2. § 6 ust.",
+    "change_value": 758084.56,
+    "price_increase": "Tak",
+    "type": "AgreementUpdateNotice",
+    "linked_by": "tenderId",
+    "objectId": "08dcf1a8-45f7-79a7-985c-bb0001c794c0",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dcf1a8-45f7-79a7-985c-bb0001c794c0",
+    "orgName": "Gmina Czernikowo",
+    "province": "PL04"
+   },
+   {
+    "number": "2024/BZP 00618384/01",
+    "date": "2024-11-27",
+    "cn_ref": "2024/BZP 00349631",
+    "trn_ref": "2024/BZP 00418711/01",
+    "contract_title": "Budowa oczyszczalni ścieków w miejscowości Steklin w formule „zaprojektuj i wybuduj”.",
+    "contractor": "Zakład Usług Melioracyjnych i Geodezyjnych Piotr Rojek",
+    "contract_value": 2131590.0,
+    "period": "do 2025-08-18",
+    "change_date": "2024-11-25",
+    "legal_basis": "art. 455 ust. 1 pkt 3 ustawy",
+    "reason": "W związku ze zwiększeniem zakresu robót w stosunku do przedmiotu zamówienia opisanego w Programie Funkcjonalno Użytkowym, zaszła konieczność dokonania zmian w zakresie przedmiotu zamówienia, co przedkłada się na zwiększenie wartości umowy.",
+    "description": "W § 1 ust. 2 dodaje się pkt 4) w brzmieniu:\nwykonania robót dodatkowych nieprzewidzianych w PFU, a niezbędnych do prawidłowej realizacji przedmiotu Umowy polegających w szczególności na wymianie odcinków sieci wodociągowej wykonanych z rur azbestowych na sieć wodociągową wykonaną z rur polimerowych wraz z robotami towarzyszącymi (szczegółowy zakres robót dodatkowych określa załącznik nr 1).\n2. § 6 ust. 1 umowy otrzymuje brzmienie:\nZa wykonanie przedmiotu Umowy Zamawiający zapłaci Wykonawcy wynagrodzenie ryczałtowe w wysokości 2 990 000,00 zł brutto (słownie złotych: dwa miliony dziewięćset dzi",
+    "change_value": 100325.44,
+    "price_increase": "Tak",
+    "type": "AgreementUpdateNotice",
+    "linked_by": "tenderId",
+    "objectId": "08dd0ec6-aa87-c6a2-985c-bb0001354954",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd0ec6-aa87-c6a2-985c-bb0001354954",
+    "orgName": "Gmina Czernikowo",
+    "province": "PL04"
+   },
+   {
+    "number": "2026/BZP 00276065/01",
+    "date": "2026-06-03",
+    "cn_ref": "2024/BZP 00349631",
+    "trn_ref": "2024/BZP 00418711/01",
+    "contract_date": "2024-07-18",
+    "period": "do 2025-08-18",
+    "contractor": "Zakład Usług Melioracyjnych i Geodezyjnych Piotr Rojek",
+    "contractor_id": "870113012",
+    "contract_value": 2131590.0,
+    "executed": "Tak",
+    "end_date": "2026-05-22",
+    "on_time": "Nie",
+    "changes_count": "3",
+    "changes": [
+     {
+      "no": "1",
+      "legal_basis": "art. 455 ust. 1 pkt 3 ustawy",
+      "reason": "W związku ze zwiększeniem zakresu robót w stosunku do przedmiotu zamówienia opisanego w Programie Funkcjonalno Użytkowym, zaszła konieczność dokonania zmian w zakresie przedmiotu zamówienia, co przedkłada się na zwiększenie wartości umowy.",
+      "after_change": "Wykonanie robót dodatkowych nieprzewidzianych w Programie Funkcjonalno Użytkowym, a niezbędnych do prawidłowej realizacji przedmiotu zamówienia oraz mających na celu zmniejszenie kosztów eksploatacji przedmiotu zamówienia, polegających w szczególności na wymianie odcinków kanalizacji sanitarnej wraz z montażem studni, wymianie pokryw wraz z włazami na istniejących studniach kanalizacji sanitarnej,",
+      "value": 758084.56,
+      "price_increase": "Tak"
+     },
+     {
+      "no": "2",
+      "legal_basis": "art. 455 ust. 1 pkt 3 ustawy",
+      "reason": "W związku ze zwiększeniem zakresu robót w stosunku do przedmiotu zamówienia opisanego w Programie Funkcjonalno Użytkowym, zaszła konieczność dokonania zmian w zakresie przedmiotu zamówienia, co przedkłada się na zwiększenie wartości umowy.",
+      "after_change": "Wykonanie robót dodatkowych nieprzewidzianych w Programie Funkcjonalno Użytkowym, a niezbędnych do prawidłowej realizacji przedmiotu Umowy, polegających w szczególności na wymianie odcinków sieci wodociągowej wykonanych z rur azbestowych na sieć wodociągową wykonaną z rur polimerowych wraz z robotami towarzyszącymi (szczegółowy zakres robót dodatkowych określa załącznik nr 1 do Aneksu nr 2).",
+      "value": 100325.44,
+      "price_increase": "Tak"
+     },
+     {
+      "no": "3",
+      "legal_basis": "art. 455 ust. 1 pkt 1 ustawy",
+      "reason": "Przedłużające się postępowanie administracyjne prowadzone przez Państwowe Gospodarstwo Wodne Wody Polskie w sprawie udzielenia pozwolenia wodnoprawnego na usługę wodną obejmującą wprowadzanie oczyszczonych ścieków bytowych pochodzących z oczyszczalni ścieków w Steklinie do urządzenia wodnego w postaci czterech złóż gruntowo-roślinnych i dalej do wód jeziora Steklin oraz wykonanie wylotu ścieków do",
+      "after_change": "W związku z koniecznością oczekiwania na wydanie przez Państwowe Gospodarstwo Wodne Wody Polskie pozwolenia wodnoprawnego na usługę wodną obejmującą wprowadzanie oczyszczonych ścieków bytowych pochodzących z oczyszczalni ścieków w Steklinie do urządzenia wodnego w postaci czterech złóż gruntowo-roślinnych i dalej do wód jeziora Steklin oraz wykonanie wylotu ścieków do jeziora Steklin termin wykona",
+      "value": null,
+      "price_increase": "Nie"
+     }
+    ],
+    "paid_total": 2990000.0,
+    "properly_performed": "Tak",
+    "not_executed_reason": null,
+    "extra_info": " INFORMACJE DODATKOWE\n Pozwolenie na użytkowanie oczyszczalni ścieków znak: PINB.5121.29.2026.AK z dnia 22.05.2026 r. \nProtokół z końcowego odbioru technicznego robót – odbioru obiektu z dnia 28.05.2026 r. \n2026-06-03 Biuletyn Zamówień PublicznychOgłoszenie o wykonaniu umowy - Zamówienie udzielane jest w trybie podstawowym na podstawie: art. 275 pkt 1 ustawy - Roboty budowlane",
+    "type": "ContractPerformingNotice",
+    "linked_by": "tenderId",
+    "objectId": "08dec172-3030-00de-5fad-9500015c599a",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dec172-3030-00de-5fad-9500015c599a",
+    "orgName": "Gmina Czernikowo",
+    "province": "PL04"
+   }
+  ],
+  "referenced_cn": [
+   "2024/BZP 00349631"
+  ],
+  "title_similarity": 1.0,
+  "summary": {
+   "cn": "2024/BZP 00349631/01",
+   "cn_date": "2024-06-04",
+   "parts_count": null,
+   "trn": [
+    "2024/BZP 00418711/01"
+   ],
+   "estimate_net": 2602091.26,
+   "parts": {
+    "0": {
+     "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+     "cancel_reason": null,
+     "offers": "2",
+     "price_min": 2131590.0,
+     "price_max": 2797975.71,
+     "price_awarded": 2131590.0,
+     "contractor": "Zakład Usług Melioracyjnych i Geodezyjnych Piotr Rojek",
+     "contractor_id": "870113012",
+     "contract_date": "2024-07-18",
+     "contract_value": 2131590.0,
+     "period": "do 2025-08-18",
+     "part_estimate_net": null
+    }
+   },
+   "aun": [
+    "2024/BZP 00554831/01",
+    "2024/BZP 00618384/01"
+   ],
+   "cpn": [
+    "2026/BZP 00276065/01"
+   ]
+  },
+  "contracts": [
+   {
+    "part": 0,
+    "outcome": "umowa",
+    "offers": "2",
+    "estimate_part_net": null,
+    "price_awarded": 2131590.0,
+    "contractor": "Zakład Usług Melioracyjnych i Geodezyjnych Piotr Rojek",
+    "contractor_id": "870113012",
+    "contract_date": "2024-07-18",
+    "contract_value": 2131590.0,
+    "planned_end": "2025-08-18",
+    "planned_period": "do 2025-08-18",
+    "aun": 2,
+    "aun_bases": [
+     "art. 455 ust. 1 pkt 3 ustawy"
+    ],
+    "cpn": "2026/BZP 00276065/01",
+    "actual_end": "2026-05-22",
+    "on_time": "Nie",
+    "changes_count": "3",
+    "paid_total": 2990000.0,
+    "properly": "Tak",
+    "change_bases": [
+     "art. 455 ust. 1 pkt 1 ustawy",
+     "art. 455 ust. 1 pkt 3 ustawy"
+    ]
+   }
+  ]
+ },
+ {
+  "project_id": "RM-2026-004",
+  "lp": "4",
+  "flags": [],
+  "method": "bzp-number",
+  "bzp_normalised": [
+   "2025/BZP 00569258",
+   "01"
+  ],
+  "org_fragment": [
+   "Czerniko",
+   "Gmina Czernikowo"
+  ],
+  "org_notices": 33,
+  "tenderId": "ocds-148610-7a870ddc-987c-458c-b435-1decc430d54b",
+  "notices": [
+   {
+    "number": "2025/BZP 00569258/01",
+    "date": "2025-12-02",
+    "title": "Modernizacja Stacji Uzdatniania Wody w Czernikowie.",
+    "procedure_mode": "Zamówienie udzielane jest w trybie podstawowym na podstawie: art. 275 pkt 1 ustawy",
+    "parts_count": null,
+    "submission_deadline": "2025-12-18 09:00",
+    "eu_funded": "Tak",
+    "parts": {
+     "0": {
+      "description": "1. Przedmiotem zamówienia jest wykonanie robót budowlanych związanych z przebudową i rozbudową stacji uzdatniania wody wraz z niezbędną infrastrukturą oraz elementami zagospodarowania terenu, przewidzianych do realizacji na działkach numer ewidencyjny 259/7 i 259/8, obręb ewidencyjny Czernikowo.\n2. Szczegółowy opis przedmiotu zamówienia oraz warunki jego realizacji zawiera:\n• Projekt Zagospodarowa",
+      "period": "6 miesiące",
+      "cpv_main": "45252126-7 - Roboty budowlane w zakresie zakładów uzdatniania wody pitnej"
+     }
+    },
+    "type": "ContractNotice",
+    "linked_by": "tenderId",
+    "objectId": "08de3189-2f42-42d2-0560-490001c5802f",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de3189-2f42-42d2-0560-490001c5802f",
+    "orgName": "Gmina Czernikowo",
+    "province": "PL04"
+   },
+   {
+    "number": "2026/BZP 00061193/01",
+    "date": "2026-01-23",
+    "estimate_net": 3844328.45,
+    "cn_ref": "2025/BZP 00569258",
+    "eu_funded": "Tak",
+    "procedureResult": "zawarcieUmowy",
+    "parts": {
+     "0": {
+      "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+      "cancel_reason": null,
+      "offers": "13",
+      "price_min": 3918954.08,
+      "price_max": 5845910.47,
+      "price_awarded": 3918954.08,
+      "contractor": "Instalcompact Sp. z o.o.",
+      "contractor_id": "004780325",
+      "contract_date": "2026-01-22",
+      "contract_value": 3918954.08,
+      "period": "do 2026-07-22",
+      "part_estimate_net": null
+     }
+    },
+    "type": "TenderResultNotice",
+    "linked_by": "tenderId",
+    "objectId": "08de5a49-38b5-16ef-d6d3-f500016aff87",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de5a49-38b5-16ef-d6d3-f500016aff87",
+    "orgName": "Gmina Czernikowo",
+    "province": "PL04"
+   },
+   {
+    "number": "2026/BZP 00514691/01",
+    "date": "2026-11-02",
+    "cn_ref": "2025/BZP 00569258",
+    "trn_ref": "2026/BZP 00061193/01",
+    "contract_date": "2026-01-22",
+    "period": "do 2026-07-22",
+    "contractor": "Instalcompact Sp. z o.o.",
+    "contractor_id": "004780325",
+    "contract_value": 3918954.08,
+    "executed": "Tak",
+    "end_date": "2026-10-28",
+    "on_time": "Nie",
+    "changes_count": "4",
+    "changes": [
+     {
+      "no": "1",
+      "legal_basis": "art. 455 ust. 1 pkt 1 ustawy",
+      "reason": "• Protokół konieczności nr 1 sporządzony w dniu 29 kwietnia 2026 r.\nDocieplenie ścian fundamentowych jest kluczowym elementem, wpływającym na efektywność energetyczną i trwałość budynku. Ocieplenie fundamentów zmniejsza straty ciepła w strefie przyziemia, które mogą stanowić nawet 20% całkowitych strat ciepła w budynku. Izolacja zapobiega „wyciąganiu” ciepła z wnętrza budynku przez ławy i ściany f",
+      "after_change": "Wykonanie następujących robót dodatkowych i zamiennych:\n• wykonanie docieplenia fundamentów budynku SUW,\n• naprawa istniejących zbiorników wody czystej poprzez uszczelnienie membraną PVC.\nTermin wykonania przedmiotu umowy został wydłużony do dnia 31 sierpnia 2026 r.",
+      "value": 215966.14,
+      "price_increase": "Tak"
+     },
+     {
+      "no": "2",
+      "legal_basis": "art. 455 ust. 1 pkt 1 ustawy",
+      "reason": "Brak dostosowania obiektu do wymagań zmodernizowanej stacji uzdatniania wody w zakresie mocy przyłączeniowej sieci elektroenergetycznej.",
+      "after_change": "W związku ze koniecznością oczekiwania na wykonanie przez Energa-Operator S.A., w ramach zawartej z Inwestorem umowy, zwiększenia mocy przyłącza energetycznego zasilającego stację uzdatniania wody wydłużony został termin realizacji zadania do dnia 28 września 2026 r.",
+      "value": null,
+      "price_increase": "Nie"
+     },
+     {
+      "no": "3",
+      "legal_basis": "art. 455 ust. 1 pkt 1 ustawy",
+      "reason": "W trakcie prowadzonych prac stwierdzono nieszczelność dwóch istniejących zasuw DN150, zlokalizowanych na rurociągach napełniających dwa istniejące zbiorniki retencyjne – zbiornik nr 3 i nr 4. Jednocześnie ze względu na brak możliwości wykonania prac remontowych wewnątrz istniejących zbiorników retencyjnych, w szczególności prac spawalniczych, nie jest możliwe przeprowadzenie niezbędnych prac w spo",
+      "after_change": "Termin wykonania przedmiotu umowy został wydłużony do dnia 16 października 2026 r.",
+      "value": null,
+      "price_increase": "Nie"
+     },
+     {
+      "no": "4",
+      "legal_basis": "art. 455 ust. 1 pkt 1 ustawy",
+      "reason": "W trakcie prowadzonych prac stwierdzono nieszczelność dwóch istniejących zasuw DN150, zlokalizowanych na rurociągach napełniających dwa istniejące zbiorniki retencyjne – zbiornik nr 3 i nr 4. Dokonano usunięcia stwierdzonej nieszczelności. Niestety, w trakcie dalszej realizacji robót doszło do ponownego wystąpienia nieszczelności przedmiotowych zasuw. Obecny stan techniczny zasuw uniemożliwia ich ",
+      "after_change": "Termin wykonania przedmiotu umowy został wydłużony do dnia 28 października 2026 r.",
+      "value": null,
+      "price_increase": "Nie"
+     }
+    ],
+    "paid_total": 4134920.22,
+    "properly_performed": "Tak",
+    "not_executed_reason": null,
+    "extra_info": " INFORMACJE DODATKOWE\n Protokół z końcowego odbioru technicznego robót – odbioru obiektu z dnia 28.10.2026 r. \n2026-11-02 Biuletyn Zamówień PublicznychOgłoszenie o wykonaniu umowy - Zamówienie udzielane jest w trybie podstawowym na podstawie: art. 275 pkt 1 ustawy - Roboty budowlane",
+    "type": "ContractPerformingNotice",
+    "linked_by": "tenderId",
+    "objectId": "08df38af-e99d-b27a-e2d6-6b000120bf64",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08df38af-e99d-b27a-e2d6-6b000120bf64",
+    "orgName": "Gmina Czernikowo",
+    "province": "PL04"
+   }
+  ],
+  "referenced_cn": [
+   "2025/BZP 00569258"
+  ],
+  "title_similarity": 1.0,
+  "summary": {
+   "cn": "2025/BZP 00569258/01",
+   "cn_date": "2025-12-02",
+   "parts_count": null,
+   "trn": [
+    "2026/BZP 00061193/01"
+   ],
+   "estimate_net": 3844328.45,
+   "parts": {
+    "0": {
+     "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+     "cancel_reason": null,
+     "offers": "13",
+     "price_min": 3918954.08,
+     "price_max": 5845910.47,
+     "price_awarded": 3918954.08,
+     "contractor": "Instalcompact Sp. z o.o.",
+     "contractor_id": "004780325",
+     "contract_date": "2026-01-22",
+     "contract_value": 3918954.08,
+     "period": "do 2026-07-22",
+     "part_estimate_net": null
+    }
+   },
+   "aun": [],
+   "cpn": [
+    "2026/BZP 00514691/01"
+   ]
+  },
+  "contracts": [
+   {
+    "part": 0,
+    "outcome": "umowa",
+    "offers": "13",
+    "estimate_part_net": null,
+    "price_awarded": 3918954.08,
+    "contractor": "Instalcompact Sp. z o.o.",
+    "contractor_id": "004780325",
+    "contract_date": "2026-01-22",
+    "contract_value": 3918954.08,
+    "planned_end": "2026-07-22",
+    "planned_period": "do 2026-07-22",
+    "aun": 0,
+    "aun_bases": [],
+    "cpn": "2026/BZP 00514691/01",
+    "actual_end": "2026-10-28",
+    "on_time": "Nie",
+    "changes_count": "4",
+    "paid_total": 4134920.22,
+    "properly": "Tak",
+    "change_bases": [
+     "art. 455 ust. 1 pkt 1 ustawy"
+    ]
+   }
+  ]
+ },
+ {
+  "project_id": "RM-2026-005",
+  "lp": "5",
+  "flags": [],
+  "method": "name+NIP+CPV+date",
+  "org_fragment": [
+   "Zławi"
+  ],
+  "org_notices": 44,
+  "candidates": [
+   {
+    "tenderId": "ocds-148610-178b5ecf-5d3b-4d67-8a10-2a0d1597c00d",
+    "score": 1.2,
+    "overlap": [
+     "kanali",
+     "mala",
+     "modern",
+     "pedzew",
+     "sanita",
+     "stacji",
+     "uzdatn",
+     "wielka",
+     "wody",
+     "zlawie"
+    ],
+    "first": "2025-05-23",
+    "title": "Budowa sieci kanalizacji sanitarnej w miejscowości Zławieś Wielka i Zławieś Mała wraz z modernizacją stacji uzdatniania ",
+    "types": [
+     "ContractNotice",
+     "ContractPerformingNotice",
+     "TenderResultNotice"
+    ]
+   },
+   {
+    "tenderId": "ocds-148610-96be25d7-3fce-11ed-9171-f6b7c7d59353",
+    "score": 0.6,
+    "overlap": [
+     "stacji",
+     "uzdatn",
+     "wielka",
+     "wody",
+     "zlawie"
+    ],
+    "first": "2022-09-29",
+    "title": "„Rozbudowa stacji uzdatniania wody w miejscowości Zławieś Wielka”.",
+    "types": [
+     "ContractNotice",
+     "TenderResultNotice"
+    ]
+   },
+   {
+    "tenderId": "ocds-148610-bd806095-1d5b-11ed-acbd-46d0480cd9c4",
+    "score": 0.6,
+    "overlap": [
+     "stacji",
+     "uzdatn",
+     "wielka",
+     "wody",
+     "zlawie"
+    ],
+    "first": "2022-08-16",
+    "title": "„Rozbudowa stacji uzdatniania wody w miejscowości Zławieś Wielka”.",
+    "types": [
+     "ContractNotice",
+     "TenderResultNotice"
+    ]
+   }
+  ],
+  "confidence": 1.2,
+  "tenderId": "ocds-148610-178b5ecf-5d3b-4d67-8a10-2a0d1597c00d",
+  "notices": [
+   {
+    "number": "2025/BZP 00245492/01",
+    "date": "2025-05-23",
+    "title": "Budowa sieci kanalizacji sanitarnej w miejscowości Zławieś Wielka i Zławieś Mała wraz z modernizacją stacji uzdatniania wody w miejscowości Pędzewo",
+    "procedure_mode": "Zamówienie udzielane jest w trybie podstawowym na podstawie: art. 275 pkt 1 ustawy",
+    "parts_count": null,
+    "submission_deadline": "2025-06-09 10:00",
+    "eu_funded": "Tak",
+    "parts": {
+     "0": {
+      "description": "Budowa sieci kanalizacji sanitarnej w miejscowości Zławieś Wielka i Zławieś Mała wraz z modernizacją stacji uzdatniania wody w miejscowości Pędzewo\n1. Przedmiotem zamówienia jest realizacja zadania inwestycyjnego pn. „Budowa sieci kanalizacji sanitarnej w miejscowości Zławieś Wielka i Zławieś Mała wraz z modernizacją stacji uzdatniania wody w miejscowości Pędzewo”. Przedmiot zamówienia został podz",
+      "period": "do 2025-10-30",
+      "cpv_main": "45000000-7 - Roboty budowlane"
+     }
+    },
+    "type": "ContractNotice",
+    "linked_by": "tenderId",
+    "objectId": "08dd99e7-2629-e986-eaaa-350001a4aa3a",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd99e7-2629-e986-eaaa-350001a4aa3a",
+    "orgName": "Gmina Zławieś Wielka",
+    "province": "PL04"
+   },
+   {
+    "number": "2025/BZP 00342797/01",
+    "date": "2025-07-24",
+    "estimate_net": null,
+    "cn_ref": "2025/BZP 00245492",
+    "eu_funded": "Tak",
+    "procedureResult": "zawarcieUmowy",
+    "parts": {
+     "0": {
+      "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+      "cancel_reason": null,
+      "offers": "5",
+      "price_min": 2936010.0,
+      "price_max": 4831440.0,
+      "price_awarded": 2936010.0,
+      "contractor": "Wimar Spółka z ograniczona odpowiedzialnością",
+      "contractor_id": "9670644141",
+      "contract_date": "2025-07-14",
+      "contract_value": 2936010.0,
+      "period": "do 2025-10-30",
+      "part_estimate_net": null
+     }
+    },
+    "type": "TenderResultNotice",
+    "linked_by": "tenderId",
+    "objectId": "08ddca82-a689-cb77-e769-360001c69fff",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08ddca82-a689-cb77-e769-360001c69fff",
+    "orgName": "Gmina Zławieś Wielka",
+    "province": "PL04"
+   },
+   {
+    "number": "2026/BZP 00021981/01",
+    "date": "2026-01-12",
+    "cn_ref": "2025/BZP 00245492",
+    "trn_ref": "2025/BZP 00342797/01",
+    "contract_date": "2025-07-14",
+    "period": "do 2025-10-30",
+    "contractor": "Wimar Spółka z ograniczona odpowiedzialnością",
+    "contractor_id": "9670644141",
+    "contract_value": 2936010.0,
+    "executed": "Tak",
+    "end_date": "2025-12-05",
+    "on_time": "Nie",
+    "changes_count": "1",
+    "changes": [
+     {
+      "no": "1",
+      "legal_basis": "art. 455 ust. 2 ustawy",
+      "reason": "roboty dodatkowe",
+      "after_change": "Zmienia się termin wykonania umowy zawarty §3 ust. 1, który zostaje wydłużony do dnia 05.12.2025\nZmienia się kwota wynagrodzenia określona w §4 ust. 1 która zostaje zwiększona do kwoty 3087491,54 zł",
+      "value": 151481.54,
+      "price_increase": "Tak"
+     }
+    ],
+    "paid_total": 3087491.54,
+    "properly_performed": "Tak",
+    "not_executed_reason": null,
+    "extra_info": null,
+    "type": "ContractPerformingNotice",
+    "linked_by": "tenderId",
+    "objectId": "08de51bf-3276-0c10-d6d3-f500016a3271",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de51bf-3276-0c10-d6d3-f500016a3271",
+    "orgName": "Gmina Zławieś Wielka",
+    "province": "PL04"
+   }
+  ],
+  "referenced_cn": [
+   "2025/BZP 00245492"
+  ],
+  "title_similarity": 1.0,
+  "summary": {
+   "cn": "2025/BZP 00245492/01",
+   "cn_date": "2025-05-23",
+   "parts_count": null,
+   "trn": [
+    "2025/BZP 00342797/01"
+   ],
+   "estimate_net": null,
+   "parts": {
+    "0": {
+     "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+     "cancel_reason": null,
+     "offers": "5",
+     "price_min": 2936010.0,
+     "price_max": 4831440.0,
+     "price_awarded": 2936010.0,
+     "contractor": "Wimar Spółka z ograniczona odpowiedzialnością",
+     "contractor_id": "9670644141",
+     "contract_date": "2025-07-14",
+     "contract_value": 2936010.0,
+     "period": "do 2025-10-30",
+     "part_estimate_net": null
+    }
+   },
+   "aun": [],
+   "cpn": [
+    "2026/BZP 00021981/01"
+   ]
+  },
+  "contracts": [
+   {
+    "part": 0,
+    "outcome": "umowa",
+    "offers": "5",
+    "estimate_part_net": null,
+    "price_awarded": 2936010.0,
+    "contractor": "Wimar Spółka z ograniczona odpowiedzialnością",
+    "contractor_id": "9670644141",
+    "contract_date": "2025-07-14",
+    "contract_value": 2936010.0,
+    "planned_end": "2025-10-30",
+    "planned_period": "do 2025-10-30",
+    "aun": 0,
+    "aun_bases": [],
+    "cpn": "2026/BZP 00021981/01",
+    "actual_end": "2025-12-05",
+    "on_time": "Nie",
+    "changes_count": "1",
+    "paid_total": 3087491.54,
+    "properly": "Tak",
+    "change_bases": [
+     "art. 455 ust. 2 ustawy"
+    ]
+   }
+  ],
+  "kpo_value": {
+   "kpo": 3087491.54,
+   "closest": "sum paid",
+   "value": 3087491.54,
+   "diff_pct": 0.0
+  }
+ },
+ {
+  "project_id": "RM-2026-006",
+  "lp": "6",
+  "flags": [],
+  "method": "bzp-number",
+  "bzp_normalised": [
+   "2024/BZP 00067908",
+   "01"
+  ],
+  "org_fragment": [
+   "Gościerad",
+   "GMINA GOŚCIERADÓW"
+  ],
+  "org_notices": 20,
+  "tenderId": "ocds-148610-89142c9f-bb81-11ee-b7da-22bd761ba7f3",
+  "notices": [
+   {
+    "number": "2024/BZP 00067908/01",
+    "date": "2024-01-25",
+    "title": "Przebudowa (modernizacja) oczyszczalni ścieków w m. Gościeradów Folwark",
+    "procedure_mode": "Zamówienie udzielane jest w trybie podstawowym na podstawie: art. 275 pkt 1 ustawy",
+    "parts_count": null,
+    "submission_deadline": "2024-02-09 10:00",
+    "eu_funded": "Nie",
+    "parts": {
+     "0": {
+      "description": "Przedmiotem zamówienia jest wykonanie inwestycji pod nazwą „Przebudowa (modernizacja) oczyszczalni ścieków w m.\nGościeradów Folwark“.\nZakres robót obejmuje m.in. wymianę urządzeń i rurociągów osadnika wstępnego, zbiornika retencyjnego, reaktora\nbiologicznego, pompowni osadu powtórnego, komory stabilizacji tlenowej, wymianę kanałów technologicznych, remont\nbudynku dmuchaw, tj. wymianę tynków, podłó",
+      "period": "4 miesiące",
+      "cpv_main": "45252200-0 - Wyposażenie oczyszczalni ścieków"
+     }
+    },
+    "type": "ContractNotice",
+    "linked_by": "tenderId",
+    "objectId": "08dc1da9-9d98-38fc-f72b-3100111c903c",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dc1da9-9d98-38fc-f72b-3100111c903c",
+    "orgName": "GMINA GOŚCIERADÓW",
+    "province": "PL06"
+   },
+   {
+    "number": "2024/BZP 00245620/01",
+    "date": "2024-03-14",
+    "estimate_net": 2031769.99,
+    "cn_ref": "2024/BZP 00067908",
+    "eu_funded": "Nie",
+    "procedureResult": "zawarcieUmowy",
+    "parts": {
+     "0": {
+      "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+      "cancel_reason": null,
+      "offers": "3",
+      "price_min": 2499110.3,
+      "price_max": 6150000.0,
+      "price_awarded": 2499110.3,
+      "contractor": "EKOMELSp. z o.o.",
+      "contractor_id": "8620002084",
+      "contract_date": "2024-03-11",
+      "contract_value": 2499110.3,
+      "period": "4 miesiące",
+      "part_estimate_net": null
+     }
+    },
+    "type": "TenderResultNotice",
+    "linked_by": "tenderId",
+    "objectId": "08dc442f-05d5-6d14-5566-8b00013bf2ce",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dc442f-05d5-6d14-5566-8b00013bf2ce",
+    "orgName": "GMINA GOŚCIERADÓW",
+    "province": "PL06"
+   },
+   {
+    "number": "2024/BZP 00404273/01",
+    "date": "2024-07-09",
+    "cn_ref": "2024/BZP 00067908",
+    "trn_ref": "2024/BZP 00245620/01",
+    "contract_title": "Przebudowa (modernizacja) oczyszczalni ścieków w m. Gościeradów Folwark",
+    "contractor": "EKOMELSp. z o.o.",
+    "contract_value": 2499110.3,
+    "period": "4 miesiące",
+    "change_date": "2024-06-05",
+    "legal_basis": "art. 455 ust. 1 pkt 4 ustawy",
+    "reason": "Zmiana umowy była spowodowana koniecznością wykonania robót dodatkowych, których nie dało się przewidzieć przed zawarciem umowy",
+    "description": "wydłużony został termin wykonania umowy do dnia 5 sierpnia 2024 (o około miesiąc) oraz zwiększyło się wynagrodzenie wykonawcy o 27 060,00 zł brutto",
+    "change_value": 27060.0,
+    "price_increase": "Tak",
+    "type": "AgreementUpdateNotice",
+    "linked_by": "tenderId",
+    "objectId": "08dca019-f36e-b129-9429-150001f15f12",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dca019-f36e-b129-9429-150001f15f12",
+    "orgName": "GMINA GOŚCIERADÓW",
+    "province": "PL06"
+   },
+   {
+    "number": "2024/BZP 00452852/01",
+    "date": "2024-08-09",
+    "cn_ref": "2024/BZP 00067908",
+    "trn_ref": "2024/BZP 00245620/01",
+    "contract_title": "Przebudowa (modernizacja) oczyszczalni ścieków w m. Gościeradów Folwark",
+    "contractor": "EKOMELSp. z o.o.",
+    "contract_value": 2499110.3,
+    "period": "4 miesiące",
+    "change_date": "2024-08-05",
+    "legal_basis": "art. 455 ust. 1 pkt 4 ustawy",
+    "reason": "Zmiana umowy była konieczna z powodu konieczności wykonania robót dodatkowych, których nie można było przewidzieć opisując przedmiot zamówienia ponieważ część oczyszczalni pozostawała w eksploatacji. W czasie prac remontowych okazało się że strop komory reaktora wymaga naprawy z powodu ubytków betonu i korozji stali.",
+    "description": "1. Termin wykonania umowy - termin został wydłużony do 05.10.2024 r.\n2. Wynagrodzenie - zwiększono o kwotę 78 .380,00 zł brutto.",
+    "change_value": 78380.0,
+    "price_increase": "Tak",
+    "type": "AgreementUpdateNotice",
+    "linked_by": "tenderId",
+    "objectId": "08dcb868-9bb0-866a-82a9-4300014507d4",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dcb868-9bb0-866a-82a9-4300014507d4",
+    "orgName": "GMINA GOŚCIERADÓW",
+    "province": "PL06"
+   },
+   {
+    "number": "2024/BZP 00572624/01",
+    "date": "2024-10-30",
+    "cn_ref": "2024/BZP 00067908",
+    "trn_ref": "2024/BZP 00245620/01",
+    "contract_date": "2024-03-11",
+    "period": "4 miesiące",
+    "contractor": "EKOMELSp. z o.o.",
+    "contractor_id": "8620002084",
+    "contract_value": 2499110.3,
+    "executed": "Tak",
+    "end_date": "2024-09-30",
+    "on_time": "Nie",
+    "changes_count": "2",
+    "changes": [
+     {
+      "no": "1",
+      "legal_basis": "art. 455 ust. 2 ustawy",
+      "reason": "Zmiana była konieczna z powodu wystąpienia robót dodatkowych, których nie można było przewidzieć przed zawarciem umowy.",
+      "after_change": "Dodatkowa robota - rozbiórka elementów betonowych posadzki",
+      "value": 27060.0,
+      "price_increase": "Tak"
+     },
+     {
+      "no": "2",
+      "legal_basis": "art. 455 ust. 2 ustawy",
+      "reason": "Zmiana była konieczna z powodu wystąpienia robót dodatkowych, których nie można było przewidzieć przed zawarciem umowy.",
+      "after_change": "Dodatkowa robota - wzmocnienie struktury stropu.",
+      "value": 78380.89,
+      "price_increase": "Tak"
+     }
+    ],
+    "paid_total": 2604551.19,
+    "properly_performed": "Tak",
+    "not_executed_reason": null,
+    "extra_info": null,
+    "type": "ContractPerformingNotice",
+    "linked_by": "tenderId",
+    "objectId": "08dcf8f0-03a6-ed73-985c-bb0001342eb1",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dcf8f0-03a6-ed73-985c-bb0001342eb1",
+    "orgName": "GMINA GOŚCIERADÓW",
+    "province": "PL06"
+   }
+  ],
+  "referenced_cn": [
+   "2024/BZP 00067908"
+  ],
+  "title_similarity": 1.0,
+  "summary": {
+   "cn": "2024/BZP 00067908/01",
+   "cn_date": "2024-01-25",
+   "parts_count": null,
+   "trn": [
+    "2024/BZP 00245620/01"
+   ],
+   "estimate_net": 2031769.99,
+   "parts": {
+    "0": {
+     "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+     "cancel_reason": null,
+     "offers": "3",
+     "price_min": 2499110.3,
+     "price_max": 6150000.0,
+     "price_awarded": 2499110.3,
+     "contractor": "EKOMELSp. z o.o.",
+     "contractor_id": "8620002084",
+     "contract_date": "2024-03-11",
+     "contract_value": 2499110.3,
+     "period": "4 miesiące",
+     "part_estimate_net": null
+    }
+   },
+   "aun": [
+    "2024/BZP 00404273/01",
+    "2024/BZP 00452852/01"
+   ],
+   "cpn": [
+    "2024/BZP 00572624/01"
+   ]
+  },
+  "contracts": [
+   {
+    "part": 0,
+    "outcome": "umowa",
+    "offers": "3",
+    "estimate_part_net": null,
+    "price_awarded": 2499110.3,
+    "contractor": "EKOMELSp. z o.o.",
+    "contractor_id": "8620002084",
+    "contract_date": "2024-03-11",
+    "contract_value": 2499110.3,
+    "planned_end": "~2024-07-11",
+    "planned_period": "4 miesiące",
+    "aun": 2,
+    "aun_bases": [
+     "art. 455 ust. 1 pkt 4 ustawy"
+    ],
+    "cpn": "2024/BZP 00572624/01",
+    "actual_end": "2024-09-30",
+    "on_time": "Nie",
+    "changes_count": "2",
+    "paid_total": 2604551.19,
+    "properly": "Tak",
+    "change_bases": [
+     "art. 455 ust. 2 ustawy"
+    ]
+   }
+  ]
+ },
+ {
+  "project_id": "RM-2026-007",
+  "lp": "7",
+  "flags": [
+   "KPO project value 3,096,863.90 far from BZP amounts (closest sum contract values 1,478,460.00, -52.3%)"
+  ],
+  "method": "name+NIP+CPV+date",
+  "org_fragment": [
+   "Kamion"
+  ],
+  "org_notices": 24,
+  "candidates": [
+   {
+    "tenderId": "ocds-148610-54d2a7cc-2602-4beb-a8f1-f165fa9f5643",
+    "score": 1.2,
+    "overlap": [
+     "kamion",
+     "wodoci"
+    ],
+    "first": "2026-03-04",
+    "title": "\"Rozbudowa sieci wodociągowej w gminie Kamionka\"",
+    "types": [
+     "ContractNotice",
+     "ContractPerformingNotice",
+     "TenderResultNotice"
+    ]
+   },
+   {
+    "tenderId": "ocds-148610-9ced4d1c-09ab-499e-930b-8358a082dc0c",
+    "score": 0.7,
+    "overlap": [
+     "kamion",
+     "scieko"
+    ],
+    "first": "2024-07-11",
+    "title": "Rozbudowa oczyszczalni ścieków w Kamionce",
+    "types": [
+     "ContractNotice",
+     "TenderResultNotice"
+    ]
+   },
+   {
+    "tenderId": "ocds-148610-3ef8bf20-3280-40bb-83c5-cbedb2bbd67f",
+    "score": 0.4,
+    "overlap": [
+     "kamion"
+    ],
+    "first": "2024-07-08",
+    "title": "Modernizacja ujęcia wody w Kamionce",
+    "types": [
+     "ContractNotice",
+     "ContractPerformingNotice",
+     "TenderResultNotice"
+    ]
+   }
+  ],
+  "confidence": 1.2,
+  "tenderId": "ocds-148610-54d2a7cc-2602-4beb-a8f1-f165fa9f5643",
+  "notices": [
+   {
+    "number": "2026/BZP 00139226/01",
+    "date": "2026-03-04",
+    "title": "\"Rozbudowa sieci wodociągowej w gminie Kamionka\"",
+    "procedure_mode": "Zamówienie udzielane jest w trybie podstawowym na podstawie: art. 275 pkt 1 ustawy",
+    "parts_count": null,
+    "submission_deadline": "2026-03-19 10:00",
+    "eu_funded": "Tak",
+    "parts": {
+     "0": {
+      "description": "4.1. Przedmiotem zamówienia są roboty budowlane w ramach zadania inwestycyjnego obejmującego Rozbudowę sieci wodociągowej w gminie Kamionka\n4.2. Przedmiot zamówienia obejmuje w szczególności:",
+      "period": "do 2026-04-30",
+      "cpv_main": "45231300-8 - Roboty budowlane w zakresie budowy wodociągów i rurociągów do odprowadzania ścieków"
+     }
+    },
+    "type": "ContractNotice",
+    "linked_by": "tenderId",
+    "objectId": "08de79e0-79f4-48f8-056e-e50001ac285b",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de79e0-79f4-48f8-056e-e50001ac285b",
+    "orgName": "GMINA KAMIONKA",
+    "province": "PL06"
+   },
+   {
+    "number": "2026/BZP 00204390/01",
+    "date": "2026-04-17",
+    "estimate_net": null,
+    "cn_ref": "2026/BZP 00139226",
+    "eu_funded": "Tak",
+    "procedureResult": "zawarcieUmowy",
+    "parts": {
+     "0": {
+      "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+      "cancel_reason": null,
+      "offers": "4",
+      "price_min": 1389000.0,
+      "price_max": 3286166.4,
+      "price_awarded": 1478460.0,
+      "contractor": "HYDRO-SYSTEM Mateusz Kwiatkowski , Jana Kasprowicza 88 , 20-232 Lublin\nNazwy (firmy) pozostałych wykonawców wspólnie ubiegających się o udzielenie zamówienia: Przedsiębiorstwo Robót Inżynieryjnych „Energopol-Lublin” Sp. z o.o., ul. Jana Kasprowicza 88, 20-232 Lublin",
+      "contractor_id": "946 210 51 81",
+      "contract_date": "2026-04-09",
+      "contract_value": 1478460.0,
+      "period": "do 2026-04-30",
+      "part_estimate_net": null
+     }
+    },
+    "type": "TenderResultNotice",
+    "linked_by": "tenderId",
+    "objectId": "08de9c7a-ebc5-bea6-5fad-95000119c15f",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de9c7a-ebc5-bea6-5fad-95000119c15f",
+    "orgName": "GMINA KAMIONKA",
+    "province": "PL06"
+   },
+   {
+    "number": "2026/BZP 00343684/01",
+    "date": "2026-07-15",
+    "cn_ref": "2026/BZP 00139226",
+    "trn_ref": "2026/BZP 00204390/01",
+    "contract_date": "2026-04-09",
+    "period": "do 2026-04-30",
+    "contractor": "HYDRO-SYSTEM Mateusz Kwiatkowski , Jana Kasprowicza 88 , 20-232 Lublin",
+    "contractor_id": "946 210 51 81",
+    "contract_value": 1478460.0,
+    "executed": "Tak",
+    "end_date": "2026-05-19",
+    "on_time": "Nie",
+    "changes_count": "0",
+    "changes": [],
+    "paid_total": 1468960.0,
+    "properly_performed": "Nie",
+    "not_executed_reason": null,
+    "extra_info": null,
+    "type": "ContractPerformingNotice",
+    "linked_by": "tenderId",
+    "objectId": "08dee254-a57d-4c93-ebd1-650001a85cbf",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dee254-a57d-4c93-ebd1-650001a85cbf",
+    "orgName": "GMINA KAMIONKA",
+    "province": "PL06"
+   }
+  ],
+  "referenced_cn": [
+   "2026/BZP 00139226"
+  ],
+  "title_similarity": 1.0,
+  "summary": {
+   "cn": "2026/BZP 00139226/01",
+   "cn_date": "2026-03-04",
+   "parts_count": null,
+   "trn": [
+    "2026/BZP 00204390/01"
+   ],
+   "estimate_net": null,
+   "parts": {
+    "0": {
+     "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+     "cancel_reason": null,
+     "offers": "4",
+     "price_min": 1389000.0,
+     "price_max": 3286166.4,
+     "price_awarded": 1478460.0,
+     "contractor": "HYDRO-SYSTEM Mateusz Kwiatkowski , Jana Kasprowicza 88 , 20-232 Lublin\nNazwy (firmy) pozostałych wykonawców wspólnie ubiegających się o udzielenie zamówienia: Przedsiębiorstwo Robót Inżynieryjnych „Energopol-Lublin” Sp. z o.o., ul. Jana Kasprowicza 88, 20-232 Lublin",
+     "contractor_id": "946 210 51 81",
+     "contract_date": "2026-04-09",
+     "contract_value": 1478460.0,
+     "period": "do 2026-04-30",
+     "part_estimate_net": null
+    }
+   },
+   "aun": [],
+   "cpn": [
+    "2026/BZP 00343684/01"
+   ]
+  },
+  "contracts": [
+   {
+    "part": 0,
+    "outcome": "umowa",
+    "offers": "4",
+    "estimate_part_net": null,
+    "price_awarded": 1478460.0,
+    "contractor": "HYDRO-SYSTEM Mateusz Kwiatkowski , Jana Kasprowicza 88 , 20-232 Lublin\nNazwy (firmy) pozostałych wykonawców wspólnie ubiegających się o udzielenie zamówienia: Przedsiębiorstwo Robót Inżynieryjnych „Energopol-Lublin” Sp. z o.o., ul. Jana Kasprowicza 88, 20-232 Lublin",
+    "contractor_id": "946 210 51 81",
+    "contract_date": "2026-04-09",
+    "contract_value": 1478460.0,
+    "planned_end": "2026-04-30",
+    "planned_period": "do 2026-04-30",
+    "aun": 0,
+    "aun_bases": [],
+    "cpn": "2026/BZP 00343684/01",
+    "actual_end": "2026-05-19",
+    "on_time": "Nie",
+    "changes_count": "0",
+    "paid_total": 1468960.0,
+    "properly": "Nie",
+    "change_bases": []
+   }
+  ],
+  "kpo_value": {
+   "kpo": 3096863.9,
+   "closest": "sum contract values",
+   "value": 1478460.0,
+   "diff_pct": -52.26
+  }
+ },
+ {
+  "project_id": "RM-2026-008",
+  "lp": "8",
+  "flags": [
+   "dataset says część 1, but project description covers części [1, 2, 3, 4]",
+   "KPO project value 6,188,345.13 far from BZP amounts (closest sum paid 4,955,056.04, -19.9%)"
+  ],
+  "method": "bzp-number",
+  "bzp_normalised": [
+   "2026/BZP 00084760",
+   "01"
+  ],
+  "org_fragment": [
+   "Biecz",
+   "Gmina Biecz"
+  ],
+  "org_notices": 70,
+  "tenderId": "ocds-148610-e7a9ab5f-b563-4052-8061-b7c7f627317f",
+  "notices": [
+   {
+    "number": "2026/BZP 00084760/01",
+    "date": "2026-01-30",
+    "title": "Budowa sieci kanalizacji sanitarnej na terenie Gminy Biecz",
+    "procedure_mode": "Zamówienie udzielane jest w trybie podstawowym na podstawie: art. 275 pkt 1 ustawy",
+    "parts_count": 4,
+    "submission_deadline": "2026-02-16 10:00",
+    "eu_funded": "Tak",
+    "parts": {
+     "1": {
+      "description": "1. Część I - Budowa kanalizacji sanitarnej w miejscowości Libusza \"Ogniwo\"\nZakres obejmuje budowę sieci kanalizacji sanitarnej grawitacyjnej i tłocznej o łącznej długości 4529 m wraz z 2 przepompowniami. Zakres inwestycji posiada aktywne zgłoszenie robót budowlanych.\n2. Szczegółowy opis przedmiotu zamówienia dla części zawiera\na) dokumentacja dla części I stanowiąca załącznik nr 1 do SWZ\nUWAGA! Pr",
+      "period": "do 2026-04-27",
+      "cpv_main": "45000000-7 - Roboty budowlane"
+     },
+     "2": {
+      "description": "1. Część II - Budowa kanalizacji sanitarnej w miejscowości Libusza \"Podwójtowie\"\nZakres obejmuje budowę sieci kanalizacji sanitarnej grawitacyjnej o łącznej długości 3794 m. Zakres inwestycji posiada aktywne zgłoszenie robót budowlanych.\n2. Szczegółowy opis przedmiotu zamówienia dla części zawiera\na) dokumentacja dla części II stanowiąca załącznik nr 1 do SWZ\nUWAGA! Przedmiary robót, które załączy",
+      "period": "do 2026-04-27",
+      "cpv_main": "45000000-7 - Roboty budowlane"
+     },
+     "3": {
+      "description": "1. Część III - Budowa kanalizacji sanitarnej w miejscowości Strzeszyn\nZakres obejmuje budowę sieci kanalizacji sanitarnej grawitacyjnej o łącznej długości 2907m. Zakres inwestycji posiada aktywne zgłoszenie robót budowlanych. W terenie mogą wystąpić nieprzewidziane warunki gruntowe m.in. masyw skały piaskowcowej. W związku z tym istnieje konieczność: zmiany technologii wykonywania wykopów i posado",
+      "period": "do 2026-04-27",
+      "cpv_main": "45000000-7 - Roboty budowlane"
+     },
+     "4": {
+      "description": "1. Część IV - Budowa kanalizacji sanitarnej w miejscowości Biecz \"Przedmieście\"\nZakres obejmuje budowę sieci kanalizacji sanitarnej grawitacyjnej o łącznej długości 641 m. Zakres inwestycji posiada aktywne pozwolenie.\n2. Szczegółowy opis przedmiotu zamówienia dla części zawiera\na) dokumentacja dla części IV stanowiąca załącznik nr 1 do SWZ\nUWAGA! Przedmiary robót, które załączył Zamawiający mają z",
+      "period": "do 2026-04-27",
+      "cpv_main": "45000000-7 - Roboty budowlane"
+     }
+    },
+    "type": "ContractNotice",
+    "linked_by": "tenderId",
+    "objectId": "08de5ff0-9ccb-b0f1-4c32-fc0001f11cf7",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de5ff0-9ccb-b0f1-4c32-fc0001f11cf7",
+    "orgName": "Gmina Biecz",
+    "province": "PL12"
+   },
+   {
+    "number": "2026/BZP 00166534/01",
+    "date": "2026-03-23",
+    "estimate_net": null,
+    "cn_ref": "2026/BZP 00084760",
+    "eu_funded": "Tak",
+    "procedureResult": "zawarcieUmowy;zawarcieUmowy;zawarcieUmowy;zawarcieUmowy",
+    "parts": {
+     "1": {
+      "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+      "cancel_reason": null,
+      "offers": "9",
+      "price_min": 1952120.53,
+      "price_max": 2952000.0,
+      "price_awarded": 1952120.53,
+      "contractor": "Multikop Sp. z o. o.",
+      "contractor_id": "NIP 7380005265",
+      "contract_date": "2026-03-12",
+      "contract_value": 1952120.53,
+      "period": "do 2026-04-27",
+      "part_estimate_net": 2396367.72
+     },
+     "2": {
+      "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+      "cancel_reason": null,
+      "offers": "10",
+      "price_min": 1200000.0,
+      "price_max": 2361600.0,
+      "price_awarded": 1200000.0,
+      "contractor": "Przedsiębiorstwo Budownictwa Wodno-Sanitarnego \"POTOK\" Piotr Potok",
+      "contractor_id": "NIP 7381000991",
+      "contract_date": "2026-03-12",
+      "contract_value": 1200000.0,
+      "period": "do 2026-04-27",
+      "part_estimate_net": 1340783.74
+     },
+     "3": {
+      "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+      "cancel_reason": null,
+      "offers": "12",
+      "price_min": 1113623.55,
+      "price_max": 1783500.0,
+      "price_awarded": 1113623.55,
+      "contractor": "Multikop Sp. z o.o.",
+      "contractor_id": "NIP 7380005265",
+      "contract_date": "2026-03-19",
+      "contract_value": 1113623.55,
+      "period": "do 2026-04-27",
+      "part_estimate_net": 1063770.84
+     },
+     "4": {
+      "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+      "cancel_reason": null,
+      "offers": "11",
+      "price_min": 205000.02,
+      "price_max": 977850.0,
+      "price_awarded": 205000.0,
+      "contractor": "Przedsiębiorstwo Budownictwa Wodno-Sanitarnego \"POTOK\" Piotr Potok",
+      "contractor_id": "NIP 7381000991",
+      "contract_date": "2026-03-12",
+      "contract_value": 205000.02,
+      "period": "do 2026-04-27",
+      "part_estimate_net": 230252.6
+     }
+    },
+    "type": "TenderResultNotice",
+    "linked_by": "tenderId",
+    "objectId": "08de88c8-9521-3c8d-056e-e50001aa99c5",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de88c8-9521-3c8d-056e-e50001aa99c5",
+    "orgName": "Gmina Biecz",
+    "province": "PL12"
+   },
+   {
+    "number": "2026/BZP 00255110/01",
+    "date": "2026-05-21",
+    "cn_ref": "2026/BZP 00084760",
+    "trn_ref": "2026/BZP 00166534/01",
+    "contract_date": "2026-03-12",
+    "period": "do 2026-04-27",
+    "contractor": "Multikop Sp. z o. o.",
+    "contractor_id": "NIP 7380005265",
+    "contract_value": 1952120.53,
+    "executed": "Tak",
+    "end_date": "2026-04-27",
+    "on_time": "Tak",
+    "changes_count": "1",
+    "changes": [
+     {
+      "no": "1",
+      "legal_basis": "art. 455 ust. 1 pkt 1 ustawy",
+      "reason": "Na podstawie § 14 ust 2 pkt 1) lit b) oraz § 14 ust 2 i pkt 2) lit a umowy nr ZP.272.1.2026 część 1 z dnia 12.04.2026 r. w związku z zastosowaniem odmiennych rozwiązań technologicznych w postaci przewiertu sterownego zamiast rozkopu wynikających ze sprzeciwu mieszkańców na wejście w teren ich działek wartość umowna z kwoty 1 952 120,53 zł brutto wzrosła do 2 375 309,26 zł brutto co daje zwiększeni",
+      "after_change": "Strony zgodnie oświadczają,, że zmianie ulega zapis § 7 ust. 1 :\nktóry otrzymuje brzmienie:\n„ 1. Za wykonanie przedmiotu umowy przysługuje Wykonawcy wynagrodzenie ryczałtowe w kwocie\n2 375 309,26 zł brutto (słownie złotych dwa miliony trzysta siedemdziesiąt pięć tysięcy trzysta dziewięć złotych 26/00\nw tym kwota netto 1 931 145,74 zł i podatek VAT (23%).”",
+      "value": 423188.73,
+      "price_increase": "Tak"
+     }
+    ],
+    "paid_total": 2375309.26,
+    "properly_performed": "Tak",
+    "not_executed_reason": null,
+    "extra_info": null,
+    "type": "ContractPerformingNotice",
+    "linked_by": "tenderId",
+    "objectId": "08deb72a-3c2d-0f0d-5fad-9500012ba59e",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08deb72a-3c2d-0f0d-5fad-9500012ba59e",
+    "orgName": "Gmina Biecz",
+    "province": "PL12"
+   },
+   {
+    "number": "2026/BZP 00255135/01",
+    "date": "2026-05-21",
+    "cn_ref": "2026/BZP 00084760",
+    "trn_ref": "2026/BZP 00166534/01",
+    "contract_date": "2026-03-12",
+    "period": "do 2026-04-27",
+    "contractor": "Przedsiębiorstwo Budownictwa Wodno-Sanitarnego \"POTOK\" Piotr Potok",
+    "contractor_id": "NIP 7381000991",
+    "contract_value": 1200000.0,
+    "executed": "Tak",
+    "end_date": "2026-04-27",
+    "on_time": "Tak",
+    "changes_count": "0",
+    "changes": [],
+    "paid_total": 1200000.0,
+    "properly_performed": "Tak",
+    "not_executed_reason": null,
+    "extra_info": null,
+    "type": "ContractPerformingNotice",
+    "linked_by": "tenderId",
+    "objectId": "08deb72a-eec5-1121-5fad-9500012ba5be",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08deb72a-eec5-1121-5fad-9500012ba5be",
+    "orgName": "Gmina Biecz",
+    "province": "PL12"
+   },
+   {
+    "number": "2026/BZP 00255161/01",
+    "date": "2026-05-21",
+    "cn_ref": "2026/BZP 00084760",
+    "trn_ref": "2026/BZP 00166534/01",
+    "contract_date": "2026-03-19",
+    "period": "do 2026-04-27",
+    "contractor": "Multikop Sp. z o.o.",
+    "contractor_id": "NIP 7380005265",
+    "contract_value": 1113623.55,
+    "executed": "Tak",
+    "end_date": "2026-04-27",
+    "on_time": "Tak",
+    "changes_count": "1",
+    "changes": [
+     {
+      "no": "1",
+      "legal_basis": "art. 455 ust. 1 pkt 1 ustawy",
+      "reason": "Na podstawie § 14 ust 2 pkt 1) lit b) oraz § 14 ust 2 i pkt 2) lit a umowy nr ZP.272.1.2026 część 3 z dnia 19.04.2026 r. w związku z zastosowaniem odmiennych rozwiązań technologicznych w postaci przewiertu sterownego zamiast rozkopu wynikających ze sprzeciwu mieszkańców na wejście w teren ich działek wartość umowna z kwoty 1 113 623,55 zł brutto wzrosła do 1 174 746,76 zł brutto co daje zwiększeni",
+      "after_change": "Strony zgodnie oświadczają,, że zmianie ulega zapis § 7 ust. 1 :\nktóry otrzymuje brzmienie:\n„ 1. Za wykonanie przedmiotu umowy przysługuje Wykonawcy wynagrodzenie ryczałtowe w kwocie\n1 174 746,76 zł brutto (słownie złotych: milion sto siedemdziesiąt cztery tysiące siedemset czterdzieści sześć złotych 76/100 w tym kwota netto 955 078,67 i podatek VAT (23%).”",
+      "value": 61123.22,
+      "price_increase": "Tak"
+     }
+    ],
+    "paid_total": 1174746.76,
+    "properly_performed": "Tak",
+    "not_executed_reason": null,
+    "extra_info": null,
+    "type": "ContractPerformingNotice",
+    "linked_by": "tenderId",
+    "objectId": "08deb72b-d152-5222-5fad-9500012ba5df",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08deb72b-d152-5222-5fad-9500012ba5df",
+    "orgName": "Gmina Biecz",
+    "province": "PL12"
+   },
+   {
+    "number": "2026/BZP 00255185/01",
+    "date": "2026-05-21",
+    "cn_ref": "2026/BZP 00084760",
+    "trn_ref": "2026/BZP 00166534/01",
+    "contract_date": "2026-03-12",
+    "period": "do 2026-04-27",
+    "contractor": "Przedsiębiorstwo Budownictwa Wodno-Sanitarnego \"POTOK\" Piotr Potok",
+    "contractor_id": "NIP 7381000991",
+    "contract_value": 205000.02,
+    "executed": "Tak",
+    "end_date": "2026-04-27",
+    "on_time": "Tak",
+    "changes_count": "0",
+    "changes": [],
+    "paid_total": 205000.02,
+    "properly_performed": "Tak",
+    "not_executed_reason": null,
+    "extra_info": null,
+    "type": "ContractPerformingNotice",
+    "linked_by": "tenderId",
+    "objectId": "08deb72c-3170-27e7-5fad-9500012ba5fc",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08deb72c-3170-27e7-5fad-9500012ba5fc",
+    "orgName": "Gmina Biecz",
+    "province": "PL12"
+   }
+  ],
+  "referenced_cn": [
+   "2026/BZP 00084760"
+  ],
+  "title_similarity": 1.0,
+  "summary": {
+   "cn": "2026/BZP 00084760/01",
+   "cn_date": "2026-01-30",
+   "parts_count": 4,
+   "trn": [
+    "2026/BZP 00166534/01"
+   ],
+   "estimate_net": null,
+   "parts": {
+    "1": {
+     "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+     "cancel_reason": null,
+     "offers": "9",
+     "price_min": 1952120.53,
+     "price_max": 2952000.0,
+     "price_awarded": 1952120.53,
+     "contractor": "Multikop Sp. z o. o.",
+     "contractor_id": "NIP 7380005265",
+     "contract_date": "2026-03-12",
+     "contract_value": 1952120.53,
+     "period": "do 2026-04-27",
+     "part_estimate_net": 2396367.72
+    },
+    "2": {
+     "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+     "cancel_reason": null,
+     "offers": "10",
+     "price_min": 1200000.0,
+     "price_max": 2361600.0,
+     "price_awarded": 1200000.0,
+     "contractor": "Przedsiębiorstwo Budownictwa Wodno-Sanitarnego \"POTOK\" Piotr Potok",
+     "contractor_id": "NIP 7381000991",
+     "contract_date": "2026-03-12",
+     "contract_value": 1200000.0,
+     "period": "do 2026-04-27",
+     "part_estimate_net": 1340783.74
+    },
+    "3": {
+     "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+     "cancel_reason": null,
+     "offers": "12",
+     "price_min": 1113623.55,
+     "price_max": 1783500.0,
+     "price_awarded": 1113623.55,
+     "contractor": "Multikop Sp. z o.o.",
+     "contractor_id": "NIP 7380005265",
+     "contract_date": "2026-03-19",
+     "contract_value": 1113623.55,
+     "period": "do 2026-04-27",
+     "part_estimate_net": 1063770.84
+    },
+    "4": {
+     "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+     "cancel_reason": null,
+     "offers": "11",
+     "price_min": 205000.02,
+     "price_max": 977850.0,
+     "price_awarded": 205000.0,
+     "contractor": "Przedsiębiorstwo Budownictwa Wodno-Sanitarnego \"POTOK\" Piotr Potok",
+     "contractor_id": "NIP 7381000991",
+     "contract_date": "2026-03-12",
+     "contract_value": 205000.02,
+     "period": "do 2026-04-27",
+     "part_estimate_net": 230252.6
+    }
+   },
+   "aun": [],
+   "cpn": [
+    "2026/BZP 00255110/01",
+    "2026/BZP 00255135/01",
+    "2026/BZP 00255161/01",
+    "2026/BZP 00255185/01"
+   ],
+   "dataset_part": 1
+  },
+  "part_evidence": {
+   "1": [
+    "ogniwo"
+   ],
+   "2": [
+    "podwoj"
+   ],
+   "3": [
+    "2907m",
+    "strzes",
+    "tym"
+   ],
+   "4": [
+    "biecz"
+   ]
+  },
+  "contracts": [
+   {
+    "part": 1,
+    "outcome": "umowa",
+    "offers": "9",
+    "estimate_part_net": 2396367.72,
+    "price_awarded": 1952120.53,
+    "contractor": "Multikop Sp. z o. o.",
+    "contractor_id": "NIP 7380005265",
+    "contract_date": "2026-03-12",
+    "contract_value": 1952120.53,
+    "planned_end": "2026-04-27",
+    "planned_period": "do 2026-04-27",
+    "aun": 0,
+    "aun_bases": [],
+    "cpn": "2026/BZP 00255110/01",
+    "actual_end": "2026-04-27",
+    "on_time": "Tak",
+    "changes_count": "1",
+    "paid_total": 2375309.26,
+    "properly": "Tak",
+    "change_bases": [
+     "art. 455 ust. 1 pkt 1 ustawy"
+    ]
+   },
+   {
+    "part": 2,
+    "outcome": "umowa",
+    "offers": "10",
+    "estimate_part_net": 1340783.74,
+    "price_awarded": 1200000.0,
+    "contractor": "Przedsiębiorstwo Budownictwa Wodno-Sanitarnego \"POTOK\" Piotr Potok",
+    "contractor_id": "NIP 7381000991",
+    "contract_date": "2026-03-12",
+    "contract_value": 1200000.0,
+    "planned_end": "2026-04-27",
+    "planned_period": "do 2026-04-27",
+    "aun": 0,
+    "aun_bases": [],
+    "cpn": "2026/BZP 00255135/01",
+    "actual_end": "2026-04-27",
+    "on_time": "Tak",
+    "changes_count": "0",
+    "paid_total": 1200000.0,
+    "properly": "Tak",
+    "change_bases": []
+   },
+   {
+    "part": 3,
+    "outcome": "umowa",
+    "offers": "12",
+    "estimate_part_net": 1063770.84,
+    "price_awarded": 1113623.55,
+    "contractor": "Multikop Sp. z o.o.",
+    "contractor_id": "NIP 7380005265",
+    "contract_date": "2026-03-19",
+    "contract_value": 1113623.55,
+    "planned_end": "2026-04-27",
+    "planned_period": "do 2026-04-27",
+    "aun": 0,
+    "aun_bases": [],
+    "cpn": "2026/BZP 00255161/01",
+    "actual_end": "2026-04-27",
+    "on_time": "Tak",
+    "changes_count": "1",
+    "paid_total": 1174746.76,
+    "properly": "Tak",
+    "change_bases": [
+     "art. 455 ust. 1 pkt 1 ustawy"
+    ]
+   },
+   {
+    "part": 4,
+    "outcome": "umowa",
+    "offers": "11",
+    "estimate_part_net": 230252.6,
+    "price_awarded": 205000.0,
+    "contractor": "Przedsiębiorstwo Budownictwa Wodno-Sanitarnego \"POTOK\" Piotr Potok",
+    "contractor_id": "NIP 7381000991",
+    "contract_date": "2026-03-12",
+    "contract_value": 205000.02,
+    "planned_end": "2026-04-27",
+    "planned_period": "do 2026-04-27",
+    "aun": 0,
+    "aun_bases": [],
+    "cpn": "2026/BZP 00255185/01",
+    "actual_end": "2026-04-27",
+    "on_time": "Tak",
+    "changes_count": "0",
+    "paid_total": 205000.02,
+    "properly": "Tak",
+    "change_bases": []
+   }
+  ],
+  "kpo_value": {
+   "kpo": 6188345.13,
+   "closest": "sum paid",
+   "value": 4955056.04,
+   "diff_pct": -19.93
+  }
+ },
+ {
+  "project_id": "RM-2026-009",
+  "lp": "9",
+  "flags": [
+   "dataset says część 2, but project description matches część [1] (exclusive terms [['100', 'natali', 'obreb', 'odcink']])"
+  ],
+  "method": "bzp-number",
+  "bzp_normalised": [
+   "2025/BZP 00307948",
+   "01"
+  ],
+  "org_fragment": [
+   "Zakrz",
+   "Gmina Zakrzew"
+  ],
+  "org_notices": 76,
+  "tenderId": "ocds-148610-3effd421-a978-4e81-abfa-5fa0743da387",
+  "notices": [
+   {
+    "number": "2025/BZP 00307948/01",
+    "date": "2025-07-03",
+    "title": "„Budowa sieci wodociągowej na terenie gminy Zakrzew”",
+    "procedure_mode": "Zamówienie udzielane jest w trybie podstawowym na podstawie: art. 275 pkt 1 ustawy",
+    "parts_count": 2,
+    "submission_deadline": "2025-07-18 11:00",
+    "eu_funded": "Tak",
+    "parts": {
+     "1": {
+      "description": "4.1. Przedmiotem zamówienia są roboty budowlane polegające na budowie sieci wodociągowej (trzy zadania):\na. budowa odcinka sieci wodociągowej na działkach: dz. Nr ew. 740 i 742 (działki drogowe, będące własnością gm. Zakrzew), obręb 0013 Zakrzewska Wola,\nb. budowa odcinka sieci wodociągowej na działkach: dz. Nr ew. 85 (droga gminna), 100/1 i 72 , obręb 0032 Natalin; dz. Nr ew. 59, 61 i 63, obręb 0",
+      "period": "do 2025-11-15",
+      "cpv_main": "45232150-8 - Roboty w zakresie rurociągów do przesyłu wody"
+     },
+     "2": {
+      "description": "Przedmiotem zamówienia są roboty budowlane polegające modernizacja stacji uzdatniania wody w Zakrzewie",
+      "period": "do 2025-11-15",
+      "cpv_main": "45311200-2 - Roboty w zakresie instalacji elektrycznych"
+     }
+    },
+    "type": "ContractNotice",
+    "linked_by": "tenderId",
+    "objectId": "08ddba2f-7b38-e9e4-e769-360001c5cc01",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08ddba2f-7b38-e9e4-e769-360001c5cc01",
+    "orgName": "Gmina Zakrzew",
+    "province": "PL14"
+   },
+   {
+    "number": "2025/BZP 00422149/01",
+    "date": "2025-09-15",
+    "estimate_net": null,
+    "cn_ref": null,
+    "eu_funded": "Tak",
+    "procedureResult": "zawarcieUmowy;zawarcieUmowy",
+    "parts": {
+     "1": {
+      "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+      "cancel_reason": null,
+      "offers": "4",
+      "price_min": 420935.3,
+      "price_max": 806948.15,
+      "price_awarded": 420935.3,
+      "contractor": "INSBUD-KLWÓW Bartłomiej Żułciński",
+      "contractor_id": "6010052935",
+      "contract_date": "2025-09-10",
+      "contract_value": 420935.3,
+      "period": "do 2025-11-15",
+      "part_estimate_net": 1168848.67
+     },
+     "2": {
+      "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+      "cancel_reason": null,
+      "offers": "2",
+      "price_min": 1810533.92,
+      "price_max": 1810533.92,
+      "price_awarded": 1810533.92,
+      "contractor": "AQUA SEEN SP. Z O.O.",
+      "contractor_id": "113-285-55-84",
+      "contract_date": "2025-08-25",
+      "contract_value": 1810533.92,
+      "period": "do 2025-11-15",
+      "part_estimate_net": 1364350.8
+     }
+    },
+    "type": "TenderResultNotice",
+    "linked_by": "tenderId",
+    "objectId": "08ddf422-20e0-3e31-d903-3900014ec36f",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08ddf422-20e0-3e31-d903-3900014ec36f",
+    "orgName": "Gmina Zakrzew",
+    "province": "PL14"
+   },
+   {
+    "number": "2025/BZP 00568576/01",
+    "date": "2025-12-02",
+    "cn_ref": null,
+    "trn_ref": "2025/BZP 00422149/01",
+    "contract_date": "2025-09-10",
+    "period": "do 2025-11-15",
+    "contractor": "INSBUD-KLWÓW Bartłomiej Żułciński ,",
+    "contractor_id": null,
+    "contract_value": 420935.3,
+    "executed": "Tak",
+    "end_date": "2025-12-25",
+    "on_time": "Nie",
+    "changes_count": "1",
+    "changes": [
+     {
+      "no": "1",
+      "legal_basis": "art. 455 ust. 1 pkt 1 ustawy",
+      "reason": "Dokonano zmian terminu wykonania umowy w związku z niekorzystnymi warunkami atmosferycznymi, które spowodowały opóźnienia.",
+      "after_change": "Dokonano zmian terminu wykonania umowy w związku z niekorzystnymi warunkami atmosferycznymi, które spowodowały opóźnienia.",
+      "value": 420935.3,
+      "price_increase": "Nie"
+     }
+    ],
+    "paid_total": 420935.3,
+    "properly_performed": "Tak",
+    "not_executed_reason": null,
+    "extra_info": null,
+    "type": "ContractPerformingNotice",
+    "linked_by": "tenderId",
+    "objectId": "08de3179-4928-2d45-0560-490001c57c97",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de3179-4928-2d45-0560-490001c57c97",
+    "orgName": "Gmina Zakrzew",
+    "province": "PL14"
+   },
+   {
+    "number": "2025/BZP 00568661/01",
+    "date": "2025-12-02",
+    "cn_ref": null,
+    "trn_ref": "2025/BZP 00422149/01",
+    "contract_date": "2025-08-25",
+    "period": "do 2025-11-15",
+    "contractor": "AQUA SEEN SP. Z O.O.",
+    "contractor_id": null,
+    "contract_value": 1810533.92,
+    "executed": "Tak",
+    "end_date": "2025-11-13",
+    "on_time": "Tak",
+    "changes_count": "1",
+    "changes": [
+     {
+      "no": "1",
+      "legal_basis": "art. 455 ust. 1 pkt 1 ustawy",
+      "reason": "Dokonano zmiany umowy w związku z wystąpieniem robót dodatkowych niezbędnych dla właściwego funkcjonowania stacji uzdatniania wody.",
+      "after_change": "Dokonano zmiany umowy w związku z wystąpieniem robót dodatkowych niezbędnych dla właściwego funkcjonowania stacji uzdatniania wody",
+      "value": 1881383.15,
+      "price_increase": "Nie"
+     }
+    ],
+    "paid_total": 1881383.15,
+    "properly_performed": "Tak",
+    "not_executed_reason": null,
+    "extra_info": null,
+    "type": "ContractPerformingNotice",
+    "linked_by": "tenderId",
+    "objectId": "08de317b-5a9a-356c-0560-490001c57d08",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de317b-5a9a-356c-0560-490001c57d08",
+    "orgName": "Gmina Zakrzew",
+    "province": "PL14"
+   }
+  ],
+  "referenced_cn": [],
+  "title_similarity": 1.0,
+  "summary": {
+   "cn": "2025/BZP 00307948/01",
+   "cn_date": "2025-07-03",
+   "parts_count": 2,
+   "trn": [
+    "2025/BZP 00422149/01"
+   ],
+   "estimate_net": null,
+   "parts": {
+    "1": {
+     "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+     "cancel_reason": null,
+     "offers": "4",
+     "price_min": 420935.3,
+     "price_max": 806948.15,
+     "price_awarded": 420935.3,
+     "contractor": "INSBUD-KLWÓW Bartłomiej Żułciński",
+     "contractor_id": "6010052935",
+     "contract_date": "2025-09-10",
+     "contract_value": 420935.3,
+     "period": "do 2025-11-15",
+     "part_estimate_net": 1168848.67
+    },
+    "2": {
+     "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+     "cancel_reason": null,
+     "offers": "2",
+     "price_min": 1810533.92,
+     "price_max": 1810533.92,
+     "price_awarded": 1810533.92,
+     "contractor": "AQUA SEEN SP. Z O.O.",
+     "contractor_id": "113-285-55-84",
+     "contract_date": "2025-08-25",
+     "contract_value": 1810533.92,
+     "period": "do 2025-11-15",
+     "part_estimate_net": 1364350.8
+    }
+   },
+   "aun": [],
+   "cpn": [
+    "2025/BZP 00568576/01",
+    "2025/BZP 00568661/01"
+   ],
+   "dataset_part": 2
+  },
+  "part_evidence": {
+   "1": [
+    "100",
+    "natali",
+    "obreb",
+    "odcink",
+    "wodoci"
+   ],
+   "2": []
+  },
+  "contracts": [
+   {
+    "part": 1,
+    "outcome": "umowa",
+    "offers": "4",
+    "estimate_part_net": 1168848.67,
+    "price_awarded": 420935.3,
+    "contractor": "INSBUD-KLWÓW Bartłomiej Żułciński",
+    "contractor_id": "6010052935",
+    "contract_date": "2025-09-10",
+    "contract_value": 420935.3,
+    "planned_end": "2025-11-15",
+    "planned_period": "do 2025-11-15",
+    "aun": 0,
+    "aun_bases": [],
+    "cpn": "2025/BZP 00568576/01",
+    "actual_end": "2025-12-25",
+    "on_time": "Nie",
+    "changes_count": "1",
+    "paid_total": 420935.3,
+    "properly": "Tak",
+    "change_bases": [
+     "art. 455 ust. 1 pkt 1 ustawy"
+    ]
+   },
+   {
+    "part": 2,
+    "outcome": "umowa",
+    "offers": "2",
+    "estimate_part_net": 1364350.8,
+    "price_awarded": 1810533.92,
+    "contractor": "AQUA SEEN SP. Z O.O.",
+    "contractor_id": "113-285-55-84",
+    "contract_date": "2025-08-25",
+    "contract_value": 1810533.92,
+    "planned_end": "2025-11-15",
+    "planned_period": "do 2025-11-15",
+    "aun": 0,
+    "aun_bases": [],
+    "cpn": "2025/BZP 00568661/01",
+    "actual_end": "2025-11-13",
+    "on_time": "Tak",
+    "changes_count": "1",
+    "paid_total": 1881383.15,
+    "properly": "Tak",
+    "change_bases": [
+     "art. 455 ust. 1 pkt 1 ustawy"
+    ]
+   }
+  ],
+  "kpo_value": {
+   "kpo": 2329043.45,
+   "closest": "sum paid",
+   "value": 2302318.45,
+   "diff_pct": -1.15
+  }
+ },
+ {
+  "project_id": "RM-2026-010",
+  "lp": "10",
+  "flags": [],
+  "method": "name+NIP+CPV+date",
+  "org_fragment": [
+   "Grodzis"
+  ],
+  "org_notices": 16,
+  "candidates": [
+   {
+    "tenderId": "ocds-148610-308b01d6-76cd-4660-ac66-193bc03593ae",
+    "score": 1.2,
+    "overlap": [
+     "dolne",
+     "grodzi",
+     "kanali",
+     "sanita",
+     "zmyslo"
+    ],
+    "first": "2025-04-29",
+    "title": "Budowa kanalizacji sanitarnej w miejscowości Zmysłówka i Grodzisko Dolne, gmina Grodzisko Dolne",
+    "types": [
+     "ContractNotice",
+     "ContractPerformingNotice",
+     "TenderResultNotice"
+    ]
+   },
+   {
+    "tenderId": "ocds-148610-1990cc0b-c02f-436e-bfb9-2e41252f1189",
+    "score": 0.867,
+    "overlap": [
+     "dolne",
+     "grodzi",
+     "kanali",
+     "sanita"
+    ],
+    "first": "2025-05-16",
+    "title": "Rozbudowa sieci kanalizacji sanitarnej i sieci wodociągowej na terenie gminy Grodzisko Dolne.",
+    "types": [
+     "ContractNotice",
+     "TenderResultNotice"
+    ]
+   },
+   {
+    "tenderId": "ocds-148610-ed7b8caf-2236-11ef-87ba-8eb060fd7bb8",
+    "score": 0.7,
+    "overlap": [
+     "dolne",
+     "grodzi",
+     "kanali"
+    ],
+    "first": "2024-06-04",
+    "title": "Rozbudowa sieci wodno-kanalizacyjnych na terenie gminy Grodzisko Dolne",
+    "types": [
+     "ContractNotice",
+     "ContractPerformingNotice",
+     "TenderResultNotice"
+    ]
+   }
+  ],
+  "confidence": 1.2,
+  "tenderId": "ocds-148610-308b01d6-76cd-4660-ac66-193bc03593ae",
+  "notices": [
+   {
+    "number": "2025/BZP 00211437/01",
+    "date": "2025-04-29",
+    "title": "Budowa kanalizacji sanitarnej w miejscowości Zmysłówka i Grodzisko Dolne, gmina Grodzisko Dolne",
+    "procedure_mode": "Zamówienie udzielane jest w trybie podstawowym na podstawie: art. 275 pkt 1 ustawy",
+    "parts_count": null,
+    "submission_deadline": "2025-05-23 10:00",
+    "eu_funded": "Tak",
+    "parts": {
+     "0": {
+      "description": "Przedmiotem zamówienia jest budowa kanalizacji sanitarnej w miejscowości Zmysłówka i Grodzisko Dolne. Lokalizacją inwestycji: Miejscowość Zmysłówka i Grodzisko Dolne , gmina Grodzisko Dolne\nSzczegółowe rozwiązania techniczne oraz zakres robót przedstawiają załączone do SWZ projekty techniczne, przedmiary robót oraz STWIORB",
+      "period": "do 2025-11-15",
+      "cpv_main": "45232440-8 - Roboty budowlane w zakresie budowy rurociągów do odprowadzania ścieków"
+     }
+    },
+    "type": "ContractNotice",
+    "linked_by": "tenderId",
+    "objectId": "08dd8720-71a0-d40f-eaaa-350001a3d560",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd8720-71a0-d40f-eaaa-350001a3d560",
+    "orgName": "Gmina Grodzisko Dolne",
+    "province": "PL18"
+   },
+   {
+    "number": "2025/BZP 00347687/01",
+    "date": "2025-07-28",
+    "estimate_net": 4955553.31,
+    "cn_ref": "2025/BZP 00211437",
+    "eu_funded": "Tak",
+    "procedureResult": "zawarcieUmowy",
+    "parts": {
+     "0": {
+      "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+      "cancel_reason": null,
+      "offers": "9",
+      "price_min": 3348882.44,
+      "price_max": 4901093.22,
+      "price_awarded": 3348882.44,
+      "contractor": "HYDRO-MONT ŻĄDŁO Sp.z o.o.",
+      "contractor_id": "NIP 8181738304",
+      "contract_date": "2025-07-28",
+      "contract_value": 3348882.44,
+      "period": "do 2025-11-15",
+      "part_estimate_net": null
+     }
+    },
+    "type": "TenderResultNotice",
+    "linked_by": "tenderId",
+    "objectId": "08ddcdab-7432-3f76-e769-360001c6bd80",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08ddcdab-7432-3f76-e769-360001c6bd80",
+    "orgName": "Gmina Grodzisko Dolne",
+    "province": "PL18"
+   },
+   {
+    "number": "2026/BZP 00004536/01",
+    "date": "2026-01-05",
+    "cn_ref": "2025/BZP 00211437",
+    "trn_ref": "2025/BZP 00347687/01",
+    "contract_date": "2025-07-28",
+    "period": "do 2025-11-15",
+    "contractor": "HYDRO-MONT ŻĄDŁO Sp.z o.o.",
+    "contractor_id": "NIP 8181738304",
+    "contract_value": 3348882.44,
+    "executed": "Tak",
+    "end_date": "2025-12-30",
+    "on_time": "Nie",
+    "changes_count": "1",
+    "changes": [
+     {
+      "no": "1",
+      "legal_basis": "art. 455 ust. 1 pkt 1 ustawy",
+      "reason": "Wydłużający się proces instalacji rurociągów kanalizacyjnych",
+      "after_change": "Wydłużenie terminu realizacji do 30.12.2025 r.",
+      "value": 3348882.44,
+      "price_increase": "Nie"
+     }
+    ],
+    "paid_total": 3348882.44,
+    "properly_performed": "Tak",
+    "not_executed_reason": null,
+    "extra_info": null,
+    "type": "ContractPerformingNotice",
+    "linked_by": "tenderId",
+    "objectId": "08de4c49-8c9d-0d40-d6d3-f5000169d778",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de4c49-8c9d-0d40-d6d3-f5000169d778",
+    "orgName": "Gmina Grodzisko Dolne",
+    "province": "PL18"
+   }
+  ],
+  "referenced_cn": [
+   "2025/BZP 00211437"
+  ],
+  "title_similarity": 1.0,
+  "summary": {
+   "cn": "2025/BZP 00211437/01",
+   "cn_date": "2025-04-29",
+   "parts_count": null,
+   "trn": [
+    "2025/BZP 00347687/01"
+   ],
+   "estimate_net": 4955553.31,
+   "parts": {
+    "0": {
+     "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+     "cancel_reason": null,
+     "offers": "9",
+     "price_min": 3348882.44,
+     "price_max": 4901093.22,
+     "price_awarded": 3348882.44,
+     "contractor": "HYDRO-MONT ŻĄDŁO Sp.z o.o.",
+     "contractor_id": "NIP 8181738304",
+     "contract_date": "2025-07-28",
+     "contract_value": 3348882.44,
+     "period": "do 2025-11-15",
+     "part_estimate_net": null
+    }
+   },
+   "aun": [],
+   "cpn": [
+    "2026/BZP 00004536/01"
+   ]
+  },
+  "contracts": [
+   {
+    "part": 0,
+    "outcome": "umowa",
+    "offers": "9",
+    "estimate_part_net": null,
+    "price_awarded": 3348882.44,
+    "contractor": "HYDRO-MONT ŻĄDŁO Sp.z o.o.",
+    "contractor_id": "NIP 8181738304",
+    "contract_date": "2025-07-28",
+    "contract_value": 3348882.44,
+    "planned_end": "2025-11-15",
+    "planned_period": "do 2025-11-15",
+    "aun": 0,
+    "aun_bases": [],
+    "cpn": "2026/BZP 00004536/01",
+    "actual_end": "2025-12-30",
+    "on_time": "Nie",
+    "changes_count": "1",
+    "paid_total": 3348882.44,
+    "properly": "Tak",
+    "change_bases": [
+     "art. 455 ust. 1 pkt 1 ustawy"
+    ]
+   }
+  ],
+  "kpo_value": {
+   "kpo": 3373482.44,
+   "closest": "sum contract values",
+   "value": 3348882.44,
+   "diff_pct": -0.73
+  }
+ },
+ {
+  "project_id": "RM-2026-011",
+  "lp": "11",
+  "flags": [],
+  "method": "bzp-number",
+  "bzp_normalised": [
+   "2023/BZP 00271948",
+   "01"
+  ],
+  "org_fragment": [
+   "Sanok",
+   "GMINA SANOK"
+  ],
+  "org_notices": 45,
+  "tenderId": "ocds-148610-b3207930-10ec-11ee-b70f-ae2d9e28ec7b",
+  "notices": [
+   {
+    "number": "2023/BZP 00271948/01",
+    "date": "2023-06-22",
+    "title": "Budowa sieci wodociągowej w miejscowości Czerteż, Zabłotce oraz w części miejscowości Sanoczek",
+    "procedure_mode": "Zamówienie udzielane jest w trybie podstawowym na podstawie: art. 275 pkt 1 ustawy",
+    "parts_count": null,
+    "submission_deadline": "2023-07-07 09:00",
+    "eu_funded": "Nie",
+    "parts": {
+     "0": {
+      "description": "1. Przedmiotem zamówienia są roboty budowlane na zadaniu inwestycyjnym pn. „Budowa sieci wodociągowej w miejscowości Czerteż, Zabłotce oraz w części miejscowości Sanoczek”.\n2. Zakres robót obejmuje między innymi:",
+      "period": "5 miesiące",
+      "cpv_main": "45231300-8 - Roboty budowlane w zakresie budowy wodociągów i rurociągów do odprowadzania ścieków"
+     }
+    },
+    "type": "ContractNotice",
+    "linked_by": "tenderId",
+    "objectId": "08db7316-30e1-6c3d-c22e-ef00102d74d8",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08db7316-30e1-6c3d-c22e-ef00102d74d8",
+    "orgName": "GMINA SANOK",
+    "province": "PL18"
+   },
+   {
+    "number": "2023/BZP 00328063/01",
+    "date": "2023-07-27",
+    "estimate_net": 3563690.63,
+    "cn_ref": "2023/BZP 00271948",
+    "eu_funded": "Nie",
+    "procedureResult": "zawarcieUmowy",
+    "parts": {
+     "0": {
+      "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+      "cancel_reason": null,
+      "offers": "7",
+      "price_min": 2880536.18,
+      "price_max": 3780745.83,
+      "price_awarded": 2880536.18,
+      "contractor": "Zakład Instalacyjno-Budowlany Edward Kwiek",
+      "contractor_id": "8191004590",
+      "contract_date": "2023-07-27",
+      "contract_value": 2880536.18,
+      "period": "5 miesiące",
+      "part_estimate_net": null
+     }
+    },
+    "type": "TenderResultNotice",
+    "linked_by": "tenderId",
+    "objectId": "08db8e84-eb3a-6dcb-9bc9-500012d3b59b",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08db8e84-eb3a-6dcb-9bc9-500012d3b59b",
+    "orgName": "GMINA SANOK",
+    "province": "PL18"
+   },
+   {
+    "number": "2024/BZP 00016072/01",
+    "date": "2024-01-08",
+    "cn_ref": "2023/BZP 00271948",
+    "trn_ref": "2023/BZP 00328063/01",
+    "contract_date": "2023-07-27",
+    "period": "5 miesiące",
+    "contractor": "Zakład Instalacyjno-Budowlany Edward Kwiek",
+    "contractor_id": "8191004590",
+    "contract_value": 2880536.18,
+    "executed": "Tak",
+    "end_date": "2023-12-21",
+    "on_time": "Tak",
+    "changes_count": "1",
+    "changes": [
+     {
+      "no": "1",
+      "legal_basis": "art. 455 ust. 2 ustawy",
+      "reason": "W związku z pojawieniem się w trakcie realizacji robót budowlanych budowy sieci wodociągowej w miejscowości Sanoczek gruntu skalnego na odcinku W150 – T80, tj. w miejscu przekroczenia DP5 drogi powiatowej nr 2212R Sanok – Bukowsko w km 1+925 zaszła konieczność zmiany technologii wykonania sieci pod drogą.\nZmiana technologii wykonania robót polegała na wykonaniu przewiertu sterowanego w technologii",
+      "after_change": "Wprowadzono nową pozycję kalkulacji indywidualnej w kosztorysie ofertowym stanowiącym załącznik nr 5 do umowy nr 320/GKI/122/2023 z dnia 27 lipca 2023 r. o opisie „Przewiert sterowany w technologii SKALNEJ rura przewiertowa PE100 SDR17 PN10 280x16,6mm - przekroczenie DP5\" i wartości jednostkowej 1 400,00 zł netto, jednostka miary: metr.\n2. Zmiana nastąpiła zgodnie z postanowieniami protokołu konie",
+      "value": null,
+      "price_increase": "Tak"
+     }
+    ],
+    "paid_total": 3134219.4,
+    "properly_performed": "Tak",
+    "not_executed_reason": null,
+    "extra_info": null,
+    "type": "ContractPerformingNotice",
+    "linked_by": "tenderId",
+    "objectId": "08dc102e-138b-e297-bee0-df00121394aa",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dc102e-138b-e297-bee0-df00121394aa",
+    "orgName": "GMINA SANOK",
+    "province": "PL18"
+   }
+  ],
+  "referenced_cn": [
+   "2023/BZP 00271948"
+  ],
+  "title_similarity": 1.0,
+  "summary": {
+   "cn": "2023/BZP 00271948/01",
+   "cn_date": "2023-06-22",
+   "parts_count": null,
+   "trn": [
+    "2023/BZP 00328063/01"
+   ],
+   "estimate_net": 3563690.63,
+   "parts": {
+    "0": {
+     "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+     "cancel_reason": null,
+     "offers": "7",
+     "price_min": 2880536.18,
+     "price_max": 3780745.83,
+     "price_awarded": 2880536.18,
+     "contractor": "Zakład Instalacyjno-Budowlany Edward Kwiek",
+     "contractor_id": "8191004590",
+     "contract_date": "2023-07-27",
+     "contract_value": 2880536.18,
+     "period": "5 miesiące",
+     "part_estimate_net": null
+    }
+   },
+   "aun": [],
+   "cpn": [
+    "2024/BZP 00016072/01"
+   ]
+  },
+  "contracts": [
+   {
+    "part": 0,
+    "outcome": "umowa",
+    "offers": "7",
+    "estimate_part_net": null,
+    "price_awarded": 2880536.18,
+    "contractor": "Zakład Instalacyjno-Budowlany Edward Kwiek",
+    "contractor_id": "8191004590",
+    "contract_date": "2023-07-27",
+    "contract_value": 2880536.18,
+    "planned_end": "~2023-12-27",
+    "planned_period": "5 miesiące",
+    "aun": 0,
+    "aun_bases": [],
+    "cpn": "2024/BZP 00016072/01",
+    "actual_end": "2023-12-21",
+    "on_time": "Tak",
+    "changes_count": "1",
+    "paid_total": 3134219.4,
+    "properly": "Tak",
+    "change_bases": [
+     "art. 455 ust. 2 ustawy"
+    ]
+   }
+  ]
+ },
+ {
+  "project_id": "RM-2026-012",
+  "lp": "12",
+  "flags": [],
+  "method": "bzp-number",
+  "bzp_normalised": [
+   "2025/BZP 00119683",
+   "01"
+  ],
+  "org_fragment": [
+   "Kartu",
+   "URZĄD MIEJSKI W KARTUZACH"
+  ],
+  "org_notices": 61,
+  "tenderId": "ocds-148610-33255305-30b2-465f-b54f-adc9c07cb712",
+  "notices": [
+   {
+    "number": "2025/BZP 00119683/01",
+    "date": "2025-02-25",
+    "title": "Budowa tranzytu przesyłowego sieci kanalizacji sanitarnej ze Smętowa Chmieleńskiego do Kos.",
+    "procedure_mode": "Zamówienie udzielane jest w trybie podstawowym na podstawie: art. 275 pkt 1 ustawy",
+    "parts_count": null,
+    "submission_deadline": "2025-03-14 10:00",
+    "eu_funded": "Nie",
+    "parts": {
+     "0": {
+      "description": "1. Przedmiotem zamówienia publicznego jest Budowa tranzytu przesyłowego sieci kanalizacji sanitarnej ze Smętowa Chmieleńskiego do Kos.\n2. Zakres przedmiotu niniejszego zamówienia obejmuje wykonanie między innymi:\na) wykonanie oznakowania czasowej organizacji ruchu;\nb) budowę tranzytu sieci kanalizacji sanitarnej grawitacyjnej;\nc) budowę tranzytu sieci kanalizacji sanitarnej tłocznej;\nd) budowa odg",
+      "period": "160 dni",
+      "cpv_main": "45000000-7 - Roboty budowlane"
+     }
+    },
+    "type": "ContractNotice",
+    "linked_by": "tenderId",
+    "objectId": "08dd5597-e27c-c00f-8f1b-b600017caaa9",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd5597-e27c-c00f-8f1b-b600017caaa9",
+    "orgName": "URZĄD MIEJSKI W KARTUZACH",
+    "province": "PL22"
+   },
+   {
+    "number": "2025/BZP 00245411/01",
+    "date": "2025-05-23",
+    "estimate_net": null,
+    "cn_ref": "2025/BZP 00119683",
+    "eu_funded": "Nie",
+    "procedureResult": "zawarcieUmowy",
+    "parts": {
+     "0": {
+      "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+      "cancel_reason": null,
+      "offers": "7",
+      "price_min": 3616200.0,
+      "price_max": 5904000.0,
+      "price_awarded": 3616200.0,
+      "contractor": "Przedsiębiorstwo Inżynieryjne Drewa – Hydroinstal sp. z o.o.",
+      "contractor_id": "5882257375",
+      "contract_date": "2025-05-19",
+      "contract_value": 3616200.0,
+      "period": "160 dni",
+      "part_estimate_net": null
+     }
+    },
+    "type": "TenderResultNotice",
+    "linked_by": "tenderId",
+    "objectId": "08dd99e5-0daa-83ca-eaaa-350001a4a9cc",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd99e5-0daa-83ca-eaaa-350001a4a9cc",
+    "orgName": "URZĄD MIEJSKI W KARTUZACH",
+    "province": "PL22"
+   },
+   {
+    "number": "2026/BZP 00025187/01",
+    "date": "2026-01-12",
+    "cn_ref": "2025/BZP 00119683",
+    "trn_ref": "2025/BZP 00245411/01",
+    "contract_date": "2025-05-19",
+    "period": "160 dni",
+    "contractor": "Przedsiębiorstwo Inżynieryjne Drewa – Hydroinstal sp. z o.o.",
+    "contractor_id": "5882257375",
+    "contract_value": 3616200.0,
+    "executed": "Tak",
+    "end_date": "2025-12-23",
+    "on_time": "Nie",
+    "changes_count": "2",
+    "changes": [
+     {
+      "no": "1",
+      "legal_basis": "art. 455 ust. 2 ustawy",
+      "reason": "Zmiana wynikająca z propozycji Wykonawcy na wykonanie odejść i otworów w studniach tranzytu oraz wykonanie zamienne przyłącza wraz ze wstawieniem dodatkowej studni co pozwoliłoby na obniżenie kosztów w dalszym etapie. Ponadto wstrzymano roboty w powodu braku ustalenia granic.",
+      "after_change": "Zwiększono przedmiot zamówienia o dodatkowe wykonanie odgałęzienia w studniach, wykonanie dodatkowej studni oraz trójnika. Ponadto, zgodnie z postanowieniami § 13 ust. 1 pkt 1 lit. c) i d) umowy, zwiększono wynagrodzenie Wykonawcy oraz przedłużono termin wykonania umowy do 19.12.2025 r..",
+      "value": 22258.3,
+      "price_increase": "Tak"
+     },
+     {
+      "no": "2",
+      "legal_basis": "art. 455 ust. 2 ustawy",
+      "reason": "Konieczność zmiany strefy przepompowni ze względu na większe gabaryty agregatu o mocy 200VA. Agregat zaprojektowany w 2019 roku nie jest obecnie dostępny.",
+      "after_change": "Powiększono strefę przepompowni aby większy agregat nie kolidował z urządzeniami technologicznymi przepompowni. Dodatkowo zabezpieczono skarpę w celu zapobieżeniu erozji mas ziemnych, dającą trwałą stabilność skarpy. Ponadto zwiększono wynagrodzenie wykonawcy.",
+      "value": 12486.06,
+      "price_increase": "Tak"
+     }
+    ],
+    "paid_total": 3650944.36,
+    "properly_performed": "Nie",
+    "not_executed_reason": null,
+    "extra_info": " INFORMACJE DODATKOWE\n Wykonawca zrealizował przedmiot zamówienia po upływie terminu przewidzianego w umowie. \n2026-01-12 Biuletyn Zamówień PublicznychOgłoszenie o wykonaniu umowy - Zamówienie udzielane jest w trybie podstawowym na podstawie: art. 275 pkt 1 ustawy - Roboty budowlane",
+    "type": "ContractPerformingNotice",
+    "linked_by": "tenderId",
+    "objectId": "08de51f6-f6fb-6bde-d6d3-f500016a40fb",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de51f6-f6fb-6bde-d6d3-f500016a40fb",
+    "orgName": "GMINA KARTUZY - URZĄD MIEJSKI W KARTUZACH",
+    "province": "PL22"
+   }
+  ],
+  "referenced_cn": [
+   "2025/BZP 00119683"
+  ],
+  "title_similarity": 1.0,
+  "summary": {
+   "cn": "2025/BZP 00119683/01",
+   "cn_date": "2025-02-25",
+   "parts_count": null,
+   "trn": [
+    "2025/BZP 00245411/01"
+   ],
+   "estimate_net": null,
+   "parts": {
+    "0": {
+     "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+     "cancel_reason": null,
+     "offers": "7",
+     "price_min": 3616200.0,
+     "price_max": 5904000.0,
+     "price_awarded": 3616200.0,
+     "contractor": "Przedsiębiorstwo Inżynieryjne Drewa – Hydroinstal sp. z o.o.",
+     "contractor_id": "5882257375",
+     "contract_date": "2025-05-19",
+     "contract_value": 3616200.0,
+     "period": "160 dni",
+     "part_estimate_net": null
+    }
+   },
+   "aun": [],
+   "cpn": [
+    "2026/BZP 00025187/01"
+   ]
+  },
+  "contracts": [
+   {
+    "part": 0,
+    "outcome": "umowa",
+    "offers": "7",
+    "estimate_part_net": null,
+    "price_awarded": 3616200.0,
+    "contractor": "Przedsiębiorstwo Inżynieryjne Drewa – Hydroinstal sp. z o.o.",
+    "contractor_id": "5882257375",
+    "contract_date": "2025-05-19",
+    "contract_value": 3616200.0,
+    "planned_end": "~2025-10-26",
+    "planned_period": "160 dni",
+    "aun": 0,
+    "aun_bases": [],
+    "cpn": "2026/BZP 00025187/01",
+    "actual_end": "2025-12-23",
+    "on_time": "Nie",
+    "changes_count": "2",
+    "paid_total": 3650944.36,
+    "properly": "Nie",
+    "change_bases": [
+     "art. 455 ust. 2 ustawy"
+    ]
+   }
+  ]
+ },
+ {
+  "project_id": "RM-2026-013",
+  "lp": "13",
+  "flags": [],
+  "method": "bzp-number",
+  "bzp_normalised": [
+   "2023/BZP 00206497",
+   "01"
+  ],
+  "org_fragment": [
+   "Bestwi",
+   "Gmina Bestwina"
+  ],
+  "org_notices": 48,
+  "tenderId": "ocds-148610-d906b948-eb2f-11ed-9355-06954b8c6cb9",
+  "notices": [
+   {
+    "number": "2023/BZP 00206497/01",
+    "date": "2023-05-09",
+    "title": "„Budowa sieci kanalizacji sanitarnej w Gminie Bestwina – sołectwo Kaniów”",
+    "procedure_mode": "Zamówienie udzielane jest w trybie podstawowym na podstawie: art. 275 pkt 1 ustawy",
+    "parts_count": null,
+    "submission_deadline": "2023-05-24 09:00",
+    "eu_funded": "Tak",
+    "parts": {
+     "0": {
+      "description": "",
+      "period": "16 miesiące",
+      "cpv_main": "45231300-8 - Roboty budowlane w zakresie budowy wodociągów i rurociągów do odprowadzania ścieków"
+     }
+    },
+    "type": "ContractNotice",
+    "linked_by": "tenderId",
+    "objectId": "08db5062-dc62-8f53-ad68-5a00103b6865",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08db5062-dc62-8f53-ad68-5a00103b6865",
+    "orgName": "Gmina Bestwina",
+    "province": "PL24"
+   },
+   {
+    "number": "2023/BZP 00261764/01",
+    "date": "2023-06-15",
+    "estimate_net": 5786485.0,
+    "cn_ref": "2023/BZP 00206497",
+    "eu_funded": "Tak",
+    "procedureResult": "zawarcieUmowy",
+    "parts": {
+     "0": {
+      "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+      "cancel_reason": null,
+      "offers": "9",
+      "price_min": 5991655.95,
+      "price_max": 8844375.27,
+      "price_awarded": 5991655.95,
+      "contractor": "EKOINSTAL Sp. z o.o.",
+      "contractor_id": "070448938",
+      "contract_date": "2023-06-15",
+      "contract_value": 5991655.95,
+      "period": "16 miesiące",
+      "part_estimate_net": null
+     }
+    },
+    "type": "TenderResultNotice",
+    "linked_by": "tenderId",
+    "objectId": "08db6d9c-92ad-b7a1-bcd6-380012b96a6e",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08db6d9c-92ad-b7a1-bcd6-380012b96a6e",
+    "orgName": "Gmina Bestwina",
+    "province": "PL24"
+   },
+   {
+    "number": "2024/BZP 00637524/01",
+    "date": "2024-12-06",
+    "cn_ref": "2023/BZP 00206497",
+    "trn_ref": "2023/BZP 00261764/01",
+    "contract_date": "2023-06-15",
+    "period": "16 miesiące",
+    "contractor": "EKOINSTAL Sp. z o.o.",
+    "contractor_id": "070448938",
+    "contract_value": 5991655.95,
+    "executed": "Tak",
+    "end_date": "2024-11-15",
+    "on_time": "Nie",
+    "changes_count": "2",
+    "changes": [
+     {
+      "no": "1",
+      "legal_basis": "art. 455 ust. 1 pkt 1 ustawy",
+      "reason": "W trakcie budowy sieci kanalizacyjnej wystąpiły w dniach 13-15.09.2024r. ekstremalne warunki pogodowe - bardzo obfite opady deszczu, które spowodowały zniszczenie konstrukcji drogowych, która została wykonana po robotach kanalizacyjnych.",
+      "after_change": "W związku z wystąpieniem okoliczności o charakterze nadzwyczajnym uniemożliwiającej wykonanie przedmiotu umowy w wyznaczonym czasie, termin wykonania całości przedmiotu umowy zostanie przedłużony do dnia 15 listopada 2024 roku.",
+      "value": null,
+      "price_increase": "Nie"
+     },
+     {
+      "no": "2",
+      "legal_basis": "art. 455 ust. 2 ustawy",
+      "reason": "W trakcie budowy sieci kanalizacyjnej wystąpiły w dniach 13-15.09.2024r. ekstremalne warunki pogodowe - bardzo obfite opady deszczu, które spowodowały zniszczenie konstrukcji drogowych (podbudowy kamiennej), która została wykonana po robotach kanalizacyjnych. Stwierdzono, że po intensywnych opadach deszczu, stan podbudowy na drogach: Poziomkowa, Malinowa, Żwirowa, Ludowa wraz z drogami bocznymi do",
+      "after_change": "W związku z powyższym, na w/w odcinkach dróg została przebudowana ich konstrukcja. Podbudowa wynosi min. 55cm z kruszyw łamanych. Łączna powierzchnia przebudowanej konstrukcji dróg wynosi 3278 m2.\nPrzedstawione powyżej roboty były robotami niezbędnymi do wykonania pełnego zakresu przedmiotu umowy. Okoliczności w jakich powstały wymienione roboty, Zamawiający działając z należytą stratnością, nie m",
+      "value": 405895.4,
+      "price_increase": "Tak"
+     }
+    ],
+    "paid_total": 6397551.35,
+    "properly_performed": "Tak",
+    "not_executed_reason": null,
+    "extra_info": null,
+    "type": "ContractPerformingNotice",
+    "linked_by": "tenderId",
+    "objectId": "08dd15d9-408f-821e-a8d2-3c00015817e0",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd15d9-408f-821e-a8d2-3c00015817e0",
+    "orgName": "Gmina Bestwina",
+    "province": "PL24"
+   }
+  ],
+  "referenced_cn": [
+   "2023/BZP 00206497"
+  ],
+  "title_similarity": 1.0,
+  "summary": {
+   "cn": "2023/BZP 00206497/01",
+   "cn_date": "2023-05-09",
+   "parts_count": null,
+   "trn": [
+    "2023/BZP 00261764/01"
+   ],
+   "estimate_net": 5786485.0,
+   "parts": {
+    "0": {
+     "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+     "cancel_reason": null,
+     "offers": "9",
+     "price_min": 5991655.95,
+     "price_max": 8844375.27,
+     "price_awarded": 5991655.95,
+     "contractor": "EKOINSTAL Sp. z o.o.",
+     "contractor_id": "070448938",
+     "contract_date": "2023-06-15",
+     "contract_value": 5991655.95,
+     "period": "16 miesiące",
+     "part_estimate_net": null
+    }
+   },
+   "aun": [],
+   "cpn": [
+    "2024/BZP 00637524/01"
+   ]
+  },
+  "contracts": [
+   {
+    "part": 0,
+    "outcome": "umowa",
+    "offers": "9",
+    "estimate_part_net": null,
+    "price_awarded": 5991655.95,
+    "contractor": "EKOINSTAL Sp. z o.o.",
+    "contractor_id": "070448938",
+    "contract_date": "2023-06-15",
+    "contract_value": 5991655.95,
+    "planned_end": "~2024-10-15",
+    "planned_period": "16 miesiące",
+    "aun": 0,
+    "aun_bases": [],
+    "cpn": "2024/BZP 00637524/01",
+    "actual_end": "2024-11-15",
+    "on_time": "Nie",
+    "changes_count": "2",
+    "paid_total": 6397551.35,
+    "properly": "Tak",
+    "change_bases": [
+     "art. 455 ust. 1 pkt 1 ustawy",
+     "art. 455 ust. 2 ustawy"
+    ]
+   }
+  ]
+ },
+ {
+  "project_id": "RM-2026-014",
+  "lp": "14",
+  "flags": [
+   "KPO project value 1,714,989.00 far from BZP amounts (closest sum paid 1,294,007.90, -24.5%)"
+  ],
+  "method": "bzp-number",
+  "bzp_normalised": [
+   "2026/BZP 00130634",
+   "01"
+  ],
+  "org_fragment": [
+   "Bobrowni",
+   "GMINA BOBROWNIKI"
+  ],
+  "org_notices": 57,
+  "tenderId": "ocds-148610-ce3ed521-c6ce-45c4-b8af-ec1751be1dde",
+  "notices": [
+   {
+    "number": "2026/BZP 00130634/01",
+    "date": "2026-02-26",
+    "title": ",,Budowa sieci kanalizacji sanitarnej ul. Słoneczna w Siemoni”",
+    "procedure_mode": "Zamówienie udzielane jest w trybie podstawowym na podstawie: art. 275 pkt 2 ustawy",
+    "parts_count": null,
+    "submission_deadline": "2026-03-13 08:00",
+    "eu_funded": "Tak",
+    "parts": {
+     "0": {
+      "description": "1. Przedmiotem zamówienia są roboty budowlane polegające na budowie sieci kanalizacji sanitarnej ul. Słoneczna w Siemoni.\n2. Szczegółowy opis przedmiotu zamówienia zawierają załączniki do SWZ tj. Załącznik nr 4 - dokumentacja techniczna tj. dokumentacja projektowa budowlana i wykonawcza, specyfikacja techniczna wykonania i odbioru robót budowlanych, przedmiar robót pełniący wyłącznie funkcję pomoc",
+      "period": "do 2026-05-13",
+      "cpv_main": "45231000-5 - Roboty budowlane w zakresie budowy rurociągów, ciągów komunikacyjnych i linii energetycznych"
+     }
+    },
+    "type": "ContractNotice",
+    "linked_by": "tenderId",
+    "objectId": "08de7536-dd30-696a-056e-e50001abed37",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de7536-dd30-696a-056e-e50001abed37",
+    "orgName": "GMINA BOBROWNIKI",
+    "province": "PL24"
+   },
+   {
+    "number": "2026/BZP 00195507/01",
+    "date": "2026-04-13",
+    "estimate_net": 1304706.85,
+    "cn_ref": "2026/BZP 00130634",
+    "eu_funded": "Tak",
+    "procedureResult": "zawarcieUmowy",
+    "parts": {
+     "0": {
+      "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+      "cancel_reason": null,
+      "offers": "12",
+      "price_min": 1193100.0,
+      "price_max": 1731392.12,
+      "price_awarded": 1193100.0,
+      "contractor": "ALFA Bożena Habrajska",
+      "contractor_id": "6250001699",
+      "contract_date": "2026-04-07",
+      "contract_value": 1193100.0,
+      "period": "do 2026-05-13",
+      "part_estimate_net": null
+     }
+    },
+    "type": "TenderResultNotice",
+    "linked_by": "tenderId",
+    "objectId": "08de994f-071b-0980-5fad-9500011988d3",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de994f-071b-0980-5fad-9500011988d3",
+    "orgName": "GMINA BOBROWNIKI",
+    "province": "PL24"
+   },
+   {
+    "number": "2026/BZP 00331672/01",
+    "date": "2026-07-09",
+    "cn_ref": "2026/BZP 00130634",
+    "trn_ref": "2026/BZP 00195507/01",
+    "contract_date": "2026-04-07",
+    "period": "do 2026-05-13",
+    "contractor": "ALFA Bożena Habrajska",
+    "contractor_id": "6250001699",
+    "contract_value": 1193100.0,
+    "executed": "Tak",
+    "end_date": "2026-06-23",
+    "on_time": "Nie",
+    "changes_count": "2",
+    "changes": [
+     {
+      "no": "1",
+      "legal_basis": "art. 455 ust. 1 pkt 1 ustawy",
+      "reason": "Wystąpienie niesprzyjających warunków gruntowych częściowo odmiennego gruntu, tj. kategorii V i VI (grunt skalny)",
+      "after_change": "Zmianie ulega § 2 ust. 1 Umowy nr IZP.7013.15.2026/2 z dnia 07.04.2026 r., który otrzymuje brzmienie:\n1. Wykonawca wykona Przedmiot umowy w terminie do 10 czerwca 2026 r.",
+      "value": null,
+      "price_increase": "Nie"
+     },
+     {
+      "no": "2",
+      "legal_basis": "art. 455 ust. 2 ustawy",
+      "reason": "Wykonanie dodatkowych robót w zakresie odspojenia częściowo odmiennego gruntu skalnego.",
+      "after_change": "1.\nZmianie ulega § 2 ust. 1 Umowy nr IZP.7013.15.2026/2 z dnia 07.04.2026 r., który otrzymuje brzmienie:\n1. Wykonawca wykona Przedmiot umowy w terminie do 15 czerwca 2026 r.\n2.\nZmianie ulega § 4 ust. 1 Umowy IZP.7013.15.2026/2 z dnia 07.04.2026 r., który otrzymuje brzmienie:\n1. W zamian za wykonanie całego Przedmiotu umowy Zamawiający zapłaci Wykonawcy wynagrodzenie ryczałtowe, zgodnie ze złożoną ",
+      "value": 109379.34,
+      "price_increase": "Tak"
+     }
+    ],
+    "paid_total": 1294007.9,
+    "properly_performed": "Nie",
+    "not_executed_reason": null,
+    "extra_info": " INFORMACJE DODATKOWE\n Dotyczy SEKCJA V PRZEBIEG REALIZACJI UMOWY 5.6.) Czy umowa została wykonana należycie:\n„Prace zostały zrealizowane w całości, jednak z przekroczeniem terminu umownego. Wykonawca realizował obowiązki po dacie wygaśnięcia umowy, co skutkowało naliczeniem kar umownych” \nDotyczy SEKCJA V PRZEBIEG REALIZACJI UMOWY 5.5.) Łączna wartość wynagrodzenia wypłacona z tytułu zrealizowane",
+    "type": "ContractPerformingNotice",
+    "linked_by": "tenderId",
+    "objectId": "08dedd7c-31fb-7cb3-2028-230001af13fc",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dedd7c-31fb-7cb3-2028-230001af13fc",
+    "orgName": "GMINA BOBROWNIKI",
+    "province": "PL24"
+   }
+  ],
+  "referenced_cn": [
+   "2026/BZP 00130634"
+  ],
+  "title_similarity": 1.0,
+  "summary": {
+   "cn": "2026/BZP 00130634/01",
+   "cn_date": "2026-02-26",
+   "parts_count": null,
+   "trn": [
+    "2026/BZP 00195507/01"
+   ],
+   "estimate_net": 1304706.85,
+   "parts": {
+    "0": {
+     "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+     "cancel_reason": null,
+     "offers": "12",
+     "price_min": 1193100.0,
+     "price_max": 1731392.12,
+     "price_awarded": 1193100.0,
+     "contractor": "ALFA Bożena Habrajska",
+     "contractor_id": "6250001699",
+     "contract_date": "2026-04-07",
+     "contract_value": 1193100.0,
+     "period": "do 2026-05-13",
+     "part_estimate_net": null
+    }
+   },
+   "aun": [],
+   "cpn": [
+    "2026/BZP 00331672/01"
+   ]
+  },
+  "contracts": [
+   {
+    "part": 0,
+    "outcome": "umowa",
+    "offers": "12",
+    "estimate_part_net": null,
+    "price_awarded": 1193100.0,
+    "contractor": "ALFA Bożena Habrajska",
+    "contractor_id": "6250001699",
+    "contract_date": "2026-04-07",
+    "contract_value": 1193100.0,
+    "planned_end": "2026-05-13",
+    "planned_period": "do 2026-05-13",
+    "aun": 0,
+    "aun_bases": [],
+    "cpn": "2026/BZP 00331672/01",
+    "actual_end": "2026-06-23",
+    "on_time": "Nie",
+    "changes_count": "2",
+    "paid_total": 1294007.9,
+    "properly": "Nie",
+    "change_bases": [
+     "art. 455 ust. 1 pkt 1 ustawy",
+     "art. 455 ust. 2 ustawy"
+    ]
+   }
+  ],
+  "kpo_value": {
+   "kpo": 1714989.0,
+   "closest": "sum paid",
+   "value": 1294007.9,
+   "diff_pct": -24.55
+  }
+ },
+ {
+  "project_id": "RM-2026-015",
+  "lp": "15",
+  "flags": [],
+  "method": "bzp-number",
+  "bzp_normalised": [
+   "2023/BZP 00135041",
+   "01"
+  ],
+  "org_fragment": [
+   "Elbl",
+   "Gmina Elbląg"
+  ],
+  "org_notices": 110,
+  "tenderId": "ocds-148610-9faadc91-c25f-11ed-8261-62cbbe4d0ca4",
+  "notices": [
+   {
+    "number": "2023/BZP 00135041/01",
+    "date": "2023-03-14",
+    "title": "Przebudowa sieci wodociągowej oraz kanalizacji sanitarnej i deszczowej wraz z przyłączami i modernizacją oczyszczalni ścieków w miejscowości Janów” w formule zaprojektuj i wybuduj",
+    "procedure_mode": "Zamówienie udzielane jest w trybie podstawowym na podstawie: art. 275 pkt 1 ustawy",
+    "parts_count": null,
+    "submission_deadline": "2023-03-29 11:00",
+    "eu_funded": "Tak",
+    "parts": {
+     "0": {
+      "description": "1. Przedmiotem zamówienia jest realizacja zadania pod nazwą: „Przebudowa sieci wodociągowej oraz kanalizacji sanitarnej i deszczowej wraz z przyłączami i modernizacją oczyszczalni ścieków w miejscowości Janów” w formule zaprojektuj i wybuduj w oparciu o dofinansowanie na operacje typu „Gospodarka wodno-ściekowa” w ramach poddziałania „Wsparcie inwestycji związanych z tworzeniem, ulepszaniem lub ro",
+      "period": "24 miesiące",
+      "cpv_main": "45231300-8 - Roboty budowlane w zakresie budowy wodociągów i rurociągów do odprowadzania ścieków"
+     }
+    },
+    "type": "ContractNotice",
+    "linked_by": "tenderId",
+    "objectId": "08db2487-ea23-0129-b3ee-5d00108e628b",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08db2487-ea23-0129-b3ee-5d00108e628b",
+    "orgName": "Gmina Elbląg",
+    "province": "PL28"
+   },
+   {
+    "number": "2023/BZP 00198087/01",
+    "date": "2023-04-28",
+    "estimate_net": 3044159.35,
+    "cn_ref": "2023/BZP 00135041",
+    "eu_funded": "Tak",
+    "procedureResult": "zawarcieUmowy",
+    "parts": {
+     "0": {
+      "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+      "cancel_reason": null,
+      "offers": "2",
+      "price_min": 3744316.0,
+      "price_max": 6848640.0,
+      "price_awarded": 3744316.0,
+      "contractor": "ENERGO-EKO Sp. z o.o.",
+      "contractor_id": "5932607246",
+      "contract_date": "2023-04-28",
+      "contract_value": 3744316.0,
+      "period": "24 miesiące",
+      "part_estimate_net": null
+     }
+    },
+    "type": "TenderResultNotice",
+    "linked_by": "tenderId",
+    "objectId": "08db47d4-1758-8fd5-ad68-5a00103b5f6d",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08db47d4-1758-8fd5-ad68-5a00103b5f6d",
+    "orgName": "Gmina Elbląg",
+    "province": "PL28"
+   },
+   {
+    "number": "2025/BZP 00228324/01",
+    "date": "2025-05-13",
+    "cn_ref": "2023/BZP 00135041",
+    "trn_ref": "2023/BZP 00198087/01",
+    "contract_title": "Przebudowa sieci wodociągowej oraz kanalizacji sanitarnej i deszczowej wraz z przyłączami i modernizacją oczyszczalni ścieków w miejscowości Janów” w formule zaprojektuj i wybuduj",
+    "contractor": "ENERGO-EKO Sp. z o.o.",
+    "contract_value": 3744316.0,
+    "period": "28 miesiące",
+    "change_date": "2025-04-29",
+    "legal_basis": "art. 455 ust. 1 pkt 4 ustawy",
+    "reason": "Przedłużenie terminu realizacji zadania wynika z konieczności zwiększenia zakresu robót, których wykonanie w sposób obiektywny uniemożliwia terminowe zakończenie realizacji przedmiotu umowy tj. zwiększenia przepustowości oczyszczalni ścieków (zmiana parametrów urządzeń wchodzących w skład układu technologicznego oczyszczalni), kolizja z istniejącą niezinwentaryzowaną infrastrukturą podziemną (istniejąca sieć wodociągowa oraz sieć kanalizacji deszczowej), które skutkują koniecznością prowadzenia większej ilości prac z zastosowaniem wykopów ręcznych oraz wysokim poziomem wód gruntowych na tereni",
+    "description": "Zmiana umowy polega na przedłużeniu terminu realizacji robót budowlanych o 4 miesiące, tj. do 28 miesięcy od daty podpisania umowy.",
+    "change_value": null,
+    "price_increase": "Nie",
+    "type": "AgreementUpdateNotice",
+    "linked_by": "tenderId",
+    "objectId": "08dd9208-4613-aee9-eaaa-350001a43ed9",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd9208-4613-aee9-eaaa-350001a43ed9",
+    "orgName": "Gmina Elbląg",
+    "province": "PL28"
+   },
+   {
+    "number": "2025/BZP 00388035/01",
+    "date": "2025-08-22",
+    "cn_ref": "2023/BZP 00135041",
+    "trn_ref": "2023/BZP 00198087/01",
+    "contract_title": "Przebudowa sieci wodociągowej oraz kanalizacji sanitarnej i deszczowej wraz z przyłączami i modernizacją oczyszczalni ścieków w miejscowości Janów” w formule zaprojektuj i wybuduj",
+    "contractor": "ENERGO-EKO Sp. z o.o.",
+    "contract_value": 3744316.0,
+    "period": "28 miesiące",
+    "change_date": "2025-08-12",
+    "legal_basis": "art. 455 ust. 1 pkt 4 ustawy",
+    "reason": "Wykonawca zgłosił konieczność wykonania robót dodatkowych nieobjętych pierwotną dokumentacją PFU i warunkami technicznymi:",
+    "description": "Zmiana umowy polega na:\n1. Zmianie terminu wykonania przedmiotu zamówienia w następującym zakresie: dokumentacja projektowa - do 24 miesięcy od daty podpisania umowy; roboty budowlane – do 28 miesięcy od daty podpisania umowy.\n2. Zmianie wynagrodzenia brutto Wykonawcy za wykonanie robót dodatkowych na kwotę 984 307,50 zł. W związku z powyższym zmienia się umowna wartość wynagrodzenia ryczałtowego na kwotę brutto 4 703 039,50zł.\n3. Zleceniu wykonania koniecznych robót dodatkowych polegających na:",
+    "change_value": 984307.5,
+    "price_increase": "Tak",
+    "type": "AgreementUpdateNotice",
+    "linked_by": "tenderId",
+    "objectId": "08dde179-afc1-9410-e769-360001c7b366",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dde179-afc1-9410-e769-360001c7b366",
+    "orgName": "Gmina Elbląg",
+    "province": "PL28"
+   },
+   {
+    "number": "2025/BZP 00494163/01",
+    "date": "2025-10-24",
+    "cn_ref": "2023/BZP 00135041",
+    "trn_ref": "2023/BZP 00198087/01",
+    "contract_date": "2023-04-28",
+    "period": "28 miesiące",
+    "contractor": "ENERGO-EKO Sp. z o.o.",
+    "contractor_id": "5932607246",
+    "contract_value": 3744316.0,
+    "executed": "Tak",
+    "end_date": "2025-09-25",
+    "on_time": "Tak",
+    "changes_count": "2",
+    "changes": [
+     {
+      "no": "1",
+      "legal_basis": "art. 455 ust. 1 pkt 4 ustawy",
+      "reason": "Przedłużenie terminu realizacji zadania wynika z konieczności zwiększenia zakresu robót, których wykonanie w sposób obiektywny uniemożliwia terminowe zakończenie realizacji przedmiotu umowy tj. zwiększenia przepustowości oczyszczalni ścieków (zmiana parametrów urządzeń wchodzących w skład układu technologicznego oczyszczalni), kolizja z istniejącą niezinwentaryzowaną infrastrukturą podziemną (istn",
+      "after_change": "Zmiana umowy polega na przedłużeniu terminu realizacji robót budowlanych o 4 miesiące, tj. do 28 miesięcy od daty podpisania umowy.",
+      "value": null,
+      "price_increase": "Nie"
+     },
+     {
+      "no": "2",
+      "legal_basis": "art. 455 ust. 1 pkt 4 ustawy",
+      "reason": "Wykonawca zgłosił konieczność wykonania robót dodatkowych nieobjętych pierwotną dokumentacją PFU i warunkami technicznymi:",
+      "after_change": "Zmiana umowy polega na:\n1. Zmianie terminu wykonania przedmiotu zamówienia w następującym zakresie: dokumentacja projektowa - do 24 miesięcy od daty podpisania umowy; roboty budowlane – do 28 miesięcy od daty podpisania umowy.\n2. Zmianie wynagrodzenia brutto Wykonawcy za wykonanie robót dodatkowych na kwotę 958723 307,50 zł. W związku z powyższym zmienia się umowna wartość wynagrodzenia ryczałtowe",
+      "value": 958723.5,
+      "price_increase": "Tak"
+     }
+    ],
+    "paid_total": 4703039.5,
+    "properly_performed": "Tak",
+    "not_executed_reason": null,
+    "extra_info": null,
+    "type": "ContractPerformingNotice",
+    "linked_by": "tenderId",
+    "objectId": "08de12c8-723a-60cb-6f2a-fc0001f5b951",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de12c8-723a-60cb-6f2a-fc0001f5b951",
+    "orgName": "Gmina Elbląg",
+    "province": "PL28"
+   }
+  ],
+  "referenced_cn": [
+   "2023/BZP 00135041"
+  ],
+  "title_similarity": 1.0,
+  "summary": {
+   "cn": "2023/BZP 00135041/01",
+   "cn_date": "2023-03-14",
+   "parts_count": null,
+   "trn": [
+    "2023/BZP 00198087/01"
+   ],
+   "estimate_net": 3044159.35,
+   "parts": {
+    "0": {
+     "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+     "cancel_reason": null,
+     "offers": "2",
+     "price_min": 3744316.0,
+     "price_max": 6848640.0,
+     "price_awarded": 3744316.0,
+     "contractor": "ENERGO-EKO Sp. z o.o.",
+     "contractor_id": "5932607246",
+     "contract_date": "2023-04-28",
+     "contract_value": 3744316.0,
+     "period": "24 miesiące",
+     "part_estimate_net": null
+    }
+   },
+   "aun": [
+    "2025/BZP 00228324/01",
+    "2025/BZP 00388035/01"
+   ],
+   "cpn": [
+    "2025/BZP 00494163/01"
+   ]
+  },
+  "contracts": [
+   {
+    "part": 0,
+    "outcome": "umowa",
+    "offers": "2",
+    "estimate_part_net": null,
+    "price_awarded": 3744316.0,
+    "contractor": "ENERGO-EKO Sp. z o.o.",
+    "contractor_id": "5932607246",
+    "contract_date": "2023-04-28",
+    "contract_value": 3744316.0,
+    "planned_end": "~2025-04-28",
+    "planned_period": "24 miesiące",
+    "aun": 2,
+    "aun_bases": [
+     "art. 455 ust. 1 pkt 4 ustawy"
+    ],
+    "cpn": "2025/BZP 00494163/01",
+    "actual_end": "2025-09-25",
+    "on_time": "Tak",
+    "changes_count": "2",
+    "paid_total": 4703039.5,
+    "properly": "Tak",
+    "change_bases": [
+     "art. 455 ust. 1 pkt 4 ustawy"
+    ]
+   }
+  ]
+ },
+ {
+  "project_id": "RM-2026-016",
+  "lp": "16",
+  "flags": [],
+  "method": "bzp-number",
+  "bzp_normalised": [
+   "2022/BZP 00308854",
+   "01"
+  ],
+  "org_fragment": [
+   "Miłako",
+   "Gmina Miłakowo"
+  ],
+  "org_notices": 26,
+  "tenderId": "ocds-148610-c271f196-1e1f-11ed-b950-8227d40187e8",
+  "notices": [
+   {
+    "number": "2022/BZP 00308854/01",
+    "date": "2022-08-17",
+    "title": "Budowa sieci wodociągowej o długości 22,616 km i sieci kanalizacji sanitarnej na odcinku 18,09 km na obszarach wiejskich Gminy Miłakowo",
+    "procedure_mode": "Zamówienie udzielane jest w trybie podstawowym na podstawie: art. 275 pkt 1 ustawy",
+    "parts_count": null,
+    "submission_deadline": "2022-09-07 10:00",
+    "eu_funded": "Nie",
+    "parts": {
+     "0": {
+      "description": "1. W ramach zadania przewiduje się wykonanie sieci wodociągowej na odcinkach:\n- Boguchwały – Pojezierce\n- Książnik – Mysłaki – Bieniasze (Etap I)\noraz sieci kanalizacyjnej wraz z niezbędną infrastrukturą oraz z przykanalikami do istniejących budynków pomiędzy miejscowościami Boguchwały – Pojezierce i Książnik – Mysłaki – Bieniasze (Etap I)\n2. Realizacja przedmiotu umowy jest podzielona na 2 etapy:",
+      "period": "27 miesiące",
+      "cpv_main": "45231300-8 - Roboty budowlane w zakresie budowy wodociągów i rurociągów do odprowadzania ścieków"
+     }
+    },
+    "type": "ContractNotice",
+    "linked_by": "tenderId",
+    "objectId": "08da8050-a0e2-0c11-b465-6a000dcb1fc9",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08da8050-a0e2-0c11-b465-6a000dcb1fc9",
+    "orgName": "Gmina Miłakowo",
+    "province": "PL28"
+   },
+   {
+    "number": "2022/BZP 00377000/01",
+    "date": "2022-10-04",
+    "estimate_net": null,
+    "cn_ref": "2022/BZP 00308854/01",
+    "eu_funded": "Nie",
+    "procedureResult": "zawarcieUmowy",
+    "parts": {
+     "0": {
+      "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+      "cancel_reason": null,
+      "offers": "3",
+      "price_min": 4879410.0,
+      "price_max": 13412512.55,
+      "price_awarded": 4879410.0,
+      "contractor": "IŁAWSKIE PRZEDSIĘBIORSTWO INSTALACYJNO-BUDOWLANE SP. Z O.O.",
+      "contractor_id": "NIP 7440003354",
+      "contract_date": "2022-10-04",
+      "contract_value": 4879410.0,
+      "period": "27 miesiące",
+      "part_estimate_net": null
+     }
+    },
+    "type": "TenderResultNotice",
+    "linked_by": "tenderId",
+    "objectId": "08daa603-ec49-153d-cfe2-65001113fe8f",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08daa603-ec49-153d-cfe2-65001113fe8f",
+    "orgName": "Gmina Miłakowo",
+    "province": "PL28"
+   },
+   {
+    "number": "2025/BZP 00183165/01",
+    "date": "2025-04-09",
+    "cn_ref": "2022/BZP 00308854/01",
+    "trn_ref": "2022/BZP 00377000/01",
+    "contract_date": "2022-10-04",
+    "period": "27 miesiące",
+    "contractor": "IŁAWSKIE PRZEDSIĘBIORSTWO INSTALACYJNO-BUDOWLANE SP. Z O.O.",
+    "contractor_id": "NIP 7440003354",
+    "contract_value": 4879410.0,
+    "executed": "Tak",
+    "end_date": "2025-02-04",
+    "on_time": "Nie",
+    "changes_count": "2",
+    "changes": [
+     {
+      "no": "1",
+      "legal_basis": "art. 455 ust. 1 pkt 1 ustawy",
+      "reason": "Zmiana terminu wykonani umowy o 1 miesiąc - powodem była konieczność wprowadzenia zmian w dokumentacji technicznej i wdrożenia nowych rozwiązań w zakresie tymczasowego zasilania przepompowni P1 i P2 w miejscowości Pojezierce z wykorzystaniem agregatów prądotwórczych. Powodem tej zmiany było nie wykonanie przyłącza przez Energa Operator - bardzo długi okres realizacji przyłącza.",
+      "after_change": "Termin wykonania przedmiotu zamówienia do 04.02.2025r.",
+      "value": null,
+      "price_increase": "Nie"
+     },
+     {
+      "no": "2",
+      "legal_basis": "art. 455 ust. 1 pkt 1 ustawy",
+      "reason": "Waloryzacja wynagrodzenia",
+      "after_change": "Ryczałtowa wartość przedmiotu umowy 5067267,29",
+      "value": 187857.29,
+      "price_increase": "Tak"
+     }
+    ],
+    "paid_total": 5067267.29,
+    "properly_performed": "Tak",
+    "not_executed_reason": null,
+    "extra_info": null,
+    "type": "ContractPerformingNotice",
+    "linked_by": "tenderId",
+    "objectId": "08dd774d-e96b-b627-8f1b-b600017e3834",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd774d-e96b-b627-8f1b-b600017e3834",
+    "orgName": "Gmina Miłakowo",
+    "province": "PL28"
+   }
+  ],
+  "referenced_cn": [
+   "2022/BZP 00308854"
+  ],
+  "title_similarity": 1.0,
+  "summary": {
+   "cn": "2022/BZP 00308854/01",
+   "cn_date": "2022-08-17",
+   "parts_count": null,
+   "trn": [
+    "2022/BZP 00377000/01"
+   ],
+   "estimate_net": null,
+   "parts": {
+    "0": {
+     "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+     "cancel_reason": null,
+     "offers": "3",
+     "price_min": 4879410.0,
+     "price_max": 13412512.55,
+     "price_awarded": 4879410.0,
+     "contractor": "IŁAWSKIE PRZEDSIĘBIORSTWO INSTALACYJNO-BUDOWLANE SP. Z O.O.",
+     "contractor_id": "NIP 7440003354",
+     "contract_date": "2022-10-04",
+     "contract_value": 4879410.0,
+     "period": "27 miesiące",
+     "part_estimate_net": null
+    }
+   },
+   "aun": [],
+   "cpn": [
+    "2025/BZP 00183165/01"
+   ]
+  },
+  "contracts": [
+   {
+    "part": 0,
+    "outcome": "umowa",
+    "offers": "3",
+    "estimate_part_net": null,
+    "price_awarded": 4879410.0,
+    "contractor": "IŁAWSKIE PRZEDSIĘBIORSTWO INSTALACYJNO-BUDOWLANE SP. Z O.O.",
+    "contractor_id": "NIP 7440003354",
+    "contract_date": "2022-10-04",
+    "contract_value": 4879410.0,
+    "planned_end": "~2025-01-04",
+    "planned_period": "27 miesiące",
+    "aun": 0,
+    "aun_bases": [],
+    "cpn": "2025/BZP 00183165/01",
+    "actual_end": "2025-02-04",
+    "on_time": "Nie",
+    "changes_count": "2",
+    "paid_total": 5067267.29,
+    "properly": "Tak",
+    "change_bases": [
+     "art. 455 ust. 1 pkt 1 ustawy"
+    ]
+   }
+  ]
+ },
+ {
+  "project_id": "RM-2026-017",
+  "lp": "17",
+  "flags": [],
+  "method": "name+NIP+CPV+date",
+  "org_fragment": [
+   "Kleszcze"
+  ],
+  "org_notices": 37,
+  "candidates": [
+   {
+    "tenderId": "ocds-148610-e7f4b839-309a-4602-99cc-b9799d3465f7",
+    "score": 1.2,
+    "overlap": [
+     "kanali",
+     "kleszc",
+     "przyla",
+     "sanita",
+     "tanibo"
+    ],
+    "first": "2025-08-01",
+    "title": "Budowa sieci kanalizacji sanitarnej wraz z przyłączami w miejscowości Tanibórz, Gmina Kleszczewo",
+    "types": [
+     "ContractNotice",
+     "ContractPerformingNotice",
+     "TenderResultNotice"
+    ]
+   },
+   {
+    "tenderId": "ocds-148610-012862aa-632b-11ec-8c2d-66c2f1230e9c",
+    "score": 0.6,
+    "overlap": [
+     "kanali",
+     "kleszc",
+     "sanita"
+    ],
+    "first": "2021-12-22",
+    "title": "Budowa kanalizacji sanitarnej w Komornikach, gm. Kleszczewo",
+    "types": [
+     "AgreementUpdateNotice",
+     "ContractNotice",
+     "ContractPerformingNotice",
+     "TenderResultNotice"
+    ]
+   },
+   {
+    "tenderId": "ocds-148610-eb538fe9-f128-11eb-b885-f28f91688073",
+    "score": 0.529,
+    "overlap": [
+     "kanali",
+     "kleszc",
+     "sanita"
+    ],
+    "first": "2021-07-30",
+    "title": "Budowa kanalizacji sanitarnej Komorniki – Nagradowice gm. Kleszczewo",
+    "types": [
+     "AgreementUpdateNotice",
+     "ContractNotice",
+     "ContractPerformingNotice",
+     "TenderResultNotice"
+    ]
+   }
+  ],
+  "confidence": 1.2,
+  "tenderId": "ocds-148610-e7f4b839-309a-4602-99cc-b9799d3465f7",
+  "notices": [
+   {
+    "number": "2025/BZP 00358528/01",
+    "date": "2025-08-01",
+    "title": "Budowa sieci kanalizacji sanitarnej wraz z przyłączami w miejscowości Tanibórz, Gmina Kleszczewo",
+    "procedure_mode": "Zamówienie udzielane jest w trybie podstawowym na podstawie: art. 275 pkt 1 ustawy",
+    "parts_count": null,
+    "submission_deadline": "2025-08-18 10:00",
+    "eu_funded": "Tak",
+    "parts": {
+     "0": {
+      "description": "W ramach przedmiotu zamówienia realizowana będzie m. in.: budowa kanalizacji sanitarnej wraz z przyłączami w miejscowości Tanibórz w Gminie Kleszczewo.",
+      "period": "4 miesiące",
+      "cpv_main": "45231300-8 - Roboty budowlane w zakresie budowy wodociągów i rurociągów do odprowadzania ścieków"
+     }
+    },
+    "type": "ContractNotice",
+    "linked_by": "tenderId",
+    "objectId": "08ddd128-7540-0c6c-e769-360001c6fdab",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08ddd128-7540-0c6c-e769-360001c6fdab",
+    "orgName": "Gmina Kleszczewo",
+    "province": "PL30"
+   },
+   {
+    "number": "2026/BZP 00000230/01",
+    "date": "2026-01-02",
+    "estimate_net": 8191290.8,
+    "cn_ref": "2025/BZP 00358528",
+    "eu_funded": "Tak",
+    "procedureResult": "zawarcieUmowy",
+    "parts": {
+     "0": {
+      "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+      "cancel_reason": null,
+      "offers": "6",
+      "price_min": 3476240.6,
+      "price_max": 7958438.57,
+      "price_awarded": 3476240.6,
+      "contractor": "COMPLEX INSTAL Marcin Grygier",
+      "contractor_id": "7851634441",
+      "contract_date": "2025-12-23",
+      "contract_value": 4275775.94,
+      "period": "4 miesiące",
+      "part_estimate_net": null
+     }
+    },
+    "type": "TenderResultNotice",
+    "linked_by": "tenderId",
+    "objectId": "08de49d2-fcbe-86a3-d6d3-f50001fddd25",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de49d2-fcbe-86a3-d6d3-f50001fddd25",
+    "orgName": "Gmina Kleszczewo",
+    "province": "PL30"
+   },
+   {
+    "number": "2026/BZP 00325837/01",
+    "date": "2026-07-06",
+    "cn_ref": "2025/BZP 00358528",
+    "trn_ref": "2026/BZP 00000230/01",
+    "contract_date": "2025-12-23",
+    "period": "4 miesiące",
+    "contractor": "COMPLEX INSTAL Marcin Grygier",
+    "contractor_id": "7851634441",
+    "contract_value": 4275775.94,
+    "executed": "Tak",
+    "end_date": "2026-06-15",
+    "on_time": "Nie",
+    "changes_count": "1",
+    "changes": [
+     {
+      "no": "1",
+      "legal_basis": "art. 455 ust. 1 pkt 1 ustawy",
+      "reason": "przedłużenie terminu wykonania przedmiotu umowy ze względu na konieczność wykonania dodatkowego zakresu prac",
+      "after_change": "przedłużenie terminu wykonania przedmiotu umowy z 4 miesięcy do 5 miesięcy i 20 dni,roboty zamienne, roboty dodatkowe, waloryzacja stawek robót związanych z wykonaniem nawierzchni bitumicznych.",
+      "value": 1147057.49,
+      "price_increase": "Tak"
+     }
+    ],
+    "paid_total": 5422833.43,
+    "properly_performed": "Tak",
+    "not_executed_reason": null,
+    "extra_info": null,
+    "type": "ContractPerformingNotice",
+    "linked_by": "tenderId",
+    "objectId": "08dedb62-9382-4255-2028-230001aeefe8",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dedb62-9382-4255-2028-230001aeefe8",
+    "orgName": "Gmina Kleszczewo",
+    "province": "PL30"
+   }
+  ],
+  "referenced_cn": [
+   "2025/BZP 00358528"
+  ],
+  "title_similarity": 1.0,
+  "summary": {
+   "cn": "2025/BZP 00358528/01",
+   "cn_date": "2025-08-01",
+   "parts_count": null,
+   "trn": [
+    "2026/BZP 00000230/01"
+   ],
+   "estimate_net": 8191290.8,
+   "parts": {
+    "0": {
+     "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+     "cancel_reason": null,
+     "offers": "6",
+     "price_min": 3476240.6,
+     "price_max": 7958438.57,
+     "price_awarded": 3476240.6,
+     "contractor": "COMPLEX INSTAL Marcin Grygier",
+     "contractor_id": "7851634441",
+     "contract_date": "2025-12-23",
+     "contract_value": 4275775.94,
+     "period": "4 miesiące",
+     "part_estimate_net": null
+    }
+   },
+   "aun": [],
+   "cpn": [
+    "2026/BZP 00325837/01"
+   ]
+  },
+  "contracts": [
+   {
+    "part": 0,
+    "outcome": "umowa",
+    "offers": "6",
+    "estimate_part_net": null,
+    "price_awarded": 3476240.6,
+    "contractor": "COMPLEX INSTAL Marcin Grygier",
+    "contractor_id": "7851634441",
+    "contract_date": "2025-12-23",
+    "contract_value": 4275775.94,
+    "planned_end": "~2026-04-23",
+    "planned_period": "4 miesiące",
+    "aun": 0,
+    "aun_bases": [],
+    "cpn": "2026/BZP 00325837/01",
+    "actual_end": "2026-06-15",
+    "on_time": "Nie",
+    "changes_count": "1",
+    "paid_total": 5422833.43,
+    "properly": "Tak",
+    "change_bases": [
+     "art. 455 ust. 1 pkt 1 ustawy"
+    ]
+   }
+  ],
+  "kpo_value": {
+   "kpo": 4052494.96,
+   "closest": "sum contract values",
+   "value": 4275775.94,
+   "diff_pct": 5.51
+  }
+ },
+ {
+  "project_id": "RM-2026-018",
+  "lp": "18",
+  "flags": [],
+  "method": "name+NIP+CPV+date",
+  "org_fragment": [
+   "Zduny"
+  ],
+  "org_notices": 30,
+  "candidates": [
+   {
+    "tenderId": "ocds-148610-7e0ea9c9-6750-4265-9084-990373d449f5",
+    "score": 1.2,
+    "overlap": [
+     "baszko",
+     "kanali",
+     "sanita",
+     "zduny"
+    ],
+    "first": "2025-12-23",
+    "title": "Budowa kanalizacji sanitarnej w miejscowości Baszków Gmina Zduny - etap II",
+    "types": [
+     "ContractNotice",
+     "ContractPerformingNotice",
+     "TenderResultNotice"
+    ]
+   },
+   {
+    "tenderId": "ocds-148610-9a12a92f-3d78-4e7f-9c0d-187a87c77b1c",
+    "score": 0.8,
+    "overlap": [
+     "kanali",
+     "sanita",
+     "zduny"
+    ],
+    "first": "2024-07-12",
+    "title": "Budowa kanalizacji sanitarnej dla miasta Zduny",
+    "types": [
+     "ContractNotice"
+    ]
+   },
+   {
+    "tenderId": "ocds-148610-e386a5dc-d0cc-44af-85f4-e3d740ac344d",
+    "score": 0.629,
+    "overlap": [
+     "kanali",
+     "sanita",
+     "zduny"
+    ],
+    "first": "2026-01-05",
+    "title": "Budowa kanalizacji sanitarnej dla miasta Zduny  ul. Masłowskiego, Rynek (część) \"",
+    "types": [
+     "ContractNotice",
+     "ContractPerformingNotice",
+     "TenderResultNotice"
+    ]
+   }
+  ],
+  "confidence": 1.2,
+  "tenderId": "ocds-148610-7e0ea9c9-6750-4265-9084-990373d449f5",
+  "notices": [
+   {
+    "number": "2025/BZP 00620692/01",
+    "date": "2025-12-23",
+    "title": "Budowa kanalizacji sanitarnej w miejscowości Baszków Gmina Zduny - etap II",
+    "procedure_mode": "Zamówienie udzielane jest w trybie podstawowym na podstawie: art. 275 pkt 2 ustawy",
+    "parts_count": null,
+    "submission_deadline": "2026-01-07 09:00",
+    "eu_funded": "Nie",
+    "parts": {
+     "0": {
+      "description": "Przedmiotem zamówienia jest realizacja robót budowlanych polegających na budowie kanalizacji sanitarnej w miejscowości Baszków, Gmina Zduny – etap II, zgodnie z dokumentacją projektową stanowiącą załącznik do Specyfikacji Warunków Zamówienia.\nZakres zamówienia obejmuje wykonanie wszelkich robót budowlanych oraz czynności niezbędnych do prawidłowej, kompletnej i zgodnej z przeznaczeniem realizacji ",
+      "period": "80 dni",
+      "cpv_main": "45231300-8 - Roboty budowlane w zakresie budowy wodociągów i rurociągów do odprowadzania ścieków"
+     }
+    },
+    "type": "ContractNotice",
+    "linked_by": "tenderId",
+    "objectId": "08de4224-9854-9d7c-d6d3-f500016275eb",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de4224-9854-9d7c-d6d3-f500016275eb",
+    "orgName": "GMINA ZDUNY",
+    "province": "PL30"
+   },
+   {
+    "number": "2026/BZP 00194260/01",
+    "date": "2026-04-12",
+    "estimate_net": 3673478.77,
+    "cn_ref": "2025/BZP 00620692",
+    "eu_funded": "Nie",
+    "procedureResult": "zawarcieUmowy",
+    "parts": {
+     "0": {
+      "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+      "cancel_reason": null,
+      "offers": "7",
+      "price_min": 3264311.58,
+      "price_max": 4300080.0,
+      "price_awarded": 3665400.0,
+      "contractor": "Przedsiębiorstwo Wielobranżowe TOR Marian Iberhan",
+      "contractor_id": "6210006578",
+      "contract_date": "2026-02-17",
+      "contract_value": 3665400.0,
+      "period": "80 dni",
+      "part_estimate_net": null
+     }
+    },
+    "type": "TenderResultNotice",
+    "linked_by": "tenderId",
+    "objectId": "08de98d8-0f55-144f-5fad-950001197fcb",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de98d8-0f55-144f-5fad-950001197fcb",
+    "orgName": "GMINA ZDUNY",
+    "province": "PL30"
+   },
+   {
+    "number": "2026/BZP 00324517/01",
+    "date": "2026-07-06",
+    "cn_ref": "2025/BZP 00620692",
+    "trn_ref": "2026/BZP 00194260/01",
+    "contract_date": "2026-02-17",
+    "period": "80 dni",
+    "contractor": "Przedsiębiorstwo Wielobranżowe TOR Marian Iberhan",
+    "contractor_id": "6210006578",
+    "contract_value": 3665400.0,
+    "executed": "Tak",
+    "end_date": "2026-06-17",
+    "on_time": "Nie",
+    "changes_count": "1",
+    "changes": [
+     {
+      "no": "1",
+      "legal_basis": "art. 455 ust. 2 ustawy",
+      "reason": "W toku realizacji umowy wystąpiła potrzeba rozszerzenia zakresu zamówienia , których wykonanie było niezbędne dla prawidłowej i kompletnej realizacji zamówienia. Zmiana nie powoduje zmiany ogólnego charakteru umowy, a jej wartość jest niższa od progów unijnych oraz nie przekracza 15% wartości pierwotnej umowy. W związku z rozszerzeniem zakresu robót odpowiednio przedłużono termin realizacji umowy.",
+      "after_change": "Po zmianie przedmiot zamówienia obejmował wykonanie łącznie 82 podłączeń, w tym 67 podłączeń przewidzianych w zakresie podstawowym oraz 15 dodatkowych podłączeń wykonanych w ramach rozszerzenia zakresu umowy.",
+      "value": 528912.76,
+      "price_increase": "Tak"
+     }
+    ],
+    "paid_total": 4194312.76,
+    "properly_performed": "Tak",
+    "not_executed_reason": null,
+    "extra_info": null,
+    "type": "ContractPerformingNotice",
+    "linked_by": "tenderId",
+    "objectId": "08dedb3f-426c-687a-2028-230001aee96a",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dedb3f-426c-687a-2028-230001aee96a",
+    "orgName": "GMINA ZDUNY",
+    "province": "PL30"
+   }
+  ],
+  "referenced_cn": [
+   "2025/BZP 00620692"
+  ],
+  "title_similarity": 1.0,
+  "summary": {
+   "cn": "2025/BZP 00620692/01",
+   "cn_date": "2025-12-23",
+   "parts_count": null,
+   "trn": [
+    "2026/BZP 00194260/01"
+   ],
+   "estimate_net": 3673478.77,
+   "parts": {
+    "0": {
+     "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+     "cancel_reason": null,
+     "offers": "7",
+     "price_min": 3264311.58,
+     "price_max": 4300080.0,
+     "price_awarded": 3665400.0,
+     "contractor": "Przedsiębiorstwo Wielobranżowe TOR Marian Iberhan",
+     "contractor_id": "6210006578",
+     "contract_date": "2026-02-17",
+     "contract_value": 3665400.0,
+     "period": "80 dni",
+     "part_estimate_net": null
+    }
+   },
+   "aun": [],
+   "cpn": [
+    "2026/BZP 00324517/01"
+   ]
+  },
+  "contracts": [
+   {
+    "part": 0,
+    "outcome": "umowa",
+    "offers": "7",
+    "estimate_part_net": null,
+    "price_awarded": 3665400.0,
+    "contractor": "Przedsiębiorstwo Wielobranżowe TOR Marian Iberhan",
+    "contractor_id": "6210006578",
+    "contract_date": "2026-02-17",
+    "contract_value": 3665400.0,
+    "planned_end": "~2026-05-08",
+    "planned_period": "80 dni",
+    "aun": 0,
+    "aun_bases": [],
+    "cpn": "2026/BZP 00324517/01",
+    "actual_end": "2026-06-17",
+    "on_time": "Nie",
+    "changes_count": "1",
+    "paid_total": 4194312.76,
+    "properly": "Tak",
+    "change_bases": [
+     "art. 455 ust. 2 ustawy"
+    ]
+   }
+  ],
+  "kpo_value": {
+   "kpo": 3847757.34,
+   "closest": "sum contract values",
+   "value": 3665400.0,
+   "diff_pct": -4.74
+  }
+ },
+ {
+  "project_id": "RM-2026-019",
+  "lp": "19",
+  "flags": [],
+  "method": "bzp-number",
+  "bzp_normalised": [
+   "2024/BZP 00354928",
+   "01"
+  ],
+  "org_fragment": [
+   "Wielkopols",
+   "WIELKOPOLSKI ZARZĄD DRÓG WOJEWÓDZKICH W POZNANIU"
+  ],
+  "org_notices": 72,
+  "tenderId": "ocds-148610-6e8c2e8c-23dd-11ef-87ba-8eb060fd7bb8",
+  "notices": [
+   {
+    "number": "2024/BZP 00354928/01",
+    "date": "2024-06-06",
+    "title": "Budowa kanalizacji deszczowej w ciągu drogi wojewódzkiej nr 444 w miejscowości Sulmierzyce.",
+    "procedure_mode": "Zamówienie udzielane jest w trybie podstawowym na podstawie: art. 275 pkt 1 ustawy",
+    "parts_count": null,
+    "submission_deadline": "2024-06-21 12:00",
+    "eu_funded": "Nie",
+    "parts": {
+     "0": {
+      "description": "Budowa kanalizacji deszczowej w ciągu drogi wojewódzkiej nr 444 w miejscowości Sulmierzyce.\nPrzedmiot zamówienia określony został w Tomie III niniejszej Specyfikacji Warunków Zamówienia przy pomocy Szczegółowych Specyfikacji Technicznych Wykonania i Odbioru Robót oraz dokumentacji projektowej.",
+      "period": "134 dni",
+      "cpv_main": "45233220-7 - Roboty w zakresie nawierzchni dróg"
+     }
+    },
+    "type": "ContractNotice",
+    "linked_by": "tenderId",
+    "objectId": "08dc8618-7624-069e-1a46-300001ab6d4c",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dc8618-7624-069e-1a46-300001ab6d4c",
+    "orgName": "WIELKOPOLSKI ZARZĄD DRÓG WOJEWÓDZKICH W POZNANIU",
+    "province": "PL30"
+   },
+   {
+    "number": "2024/BZP 00451447/01",
+    "date": "2024-08-09",
+    "estimate_net": null,
+    "cn_ref": "2024/BZP 00354928",
+    "eu_funded": "Nie",
+    "procedureResult": "zawarcieUmowy",
+    "parts": {
+     "0": {
+      "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+      "cancel_reason": null,
+      "offers": "2",
+      "price_min": 3154932.64,
+      "price_max": 3185614.1,
+      "price_awarded": 3154932.64,
+      "contractor": "Brukarstwo i Handel Włodzimierz Kasprzak",
+      "contractor_id": "6211268694",
+      "contract_date": "2024-07-11",
+      "contract_value": 3154932.64,
+      "period": "do 2024-11-22",
+      "part_estimate_net": null
+     }
+    },
+    "type": "TenderResultNotice",
+    "linked_by": "tenderId",
+    "objectId": "08dcb83b-5338-6174-82a9-430001450137",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dcb83b-5338-6174-82a9-430001450137",
+    "orgName": "WIELKOPOLSKI ZARZĄD DRÓG WOJEWÓDZKICH W POZNANIU",
+    "province": "PL30"
+   },
+   {
+    "number": "2025/BZP 00626318/01",
+    "date": "2025-12-30",
+    "cn_ref": "2024/BZP 00354928",
+    "trn_ref": "2024/BZP 00451447/01",
+    "contract_date": "2024-07-11",
+    "period": "do 2024-11-22",
+    "contractor": "Brukarstwo i Handel Włodzimierz Kasprzak",
+    "contractor_id": "6211268694",
+    "contract_value": 3154932.64,
+    "executed": "Tak",
+    "end_date": "2025-12-22",
+    "on_time": "Nie",
+    "changes_count": "6",
+    "changes": [
+     {
+      "no": "1",
+      "legal_basis": "art. 455 ust. 1 pkt 1 ustawy",
+      "reason": "roboty dodatkowe",
+      "after_change": "Termin zakończenia robót: 151 dni od dnia podpisania Umowy tj. do 9 grudnia 2024 r.\nTermin ostatecznego odbioru robót: 158 dni od dnia podpisania Umowy tj. do 16 grudnia 2024 r.\nWykonawca na 4 dni kalendarzowych przed terminem, o którym mowa w ust. 2 zobowiązany jest przedłożyć Zamawiającemu komplet dokumentów niezbędnych do dokonania odbioru ostatecznego, zgodnie z ST Wymagania Ogólne i w ST.\nWyn",
+      "value": 3648128.71,
+      "price_increase": "Tak"
+     },
+     {
+      "no": "2",
+      "legal_basis": "art. 455 ust. 1 pkt 1 ustawy",
+      "reason": "roboty dodatkowe",
+      "after_change": "Termin zakończenia robót: 165 dni od dnia podpisania Umowy tj. do 23 grudnia 2024 r.\nTermin ostatecznego odbioru robót: 169 dni od dnia podpisania Umowy tj. do 27 grudnia 2024 r.",
+      "value": null,
+      "price_increase": "Nie"
+     },
+     {
+      "no": "3",
+      "legal_basis": "art. 455 ust. 1 pkt 1 ustawy",
+      "reason": "roboty dodatkowe",
+      "after_change": "Termin zakończenia robót: 279 dni od dnia podpisania Umowy tj. do 16 kwietnia 2025 r.\nTermin ostatecznego odbioru robót: 293 dni od dnia podpisania Umowy tj. do 30 kwietnia 2025 r.\nWykonawca na 7 dni kalendarzowych przed terminem, o którym mowa w ust. 2 zobowiązany jest przedłożyć Zamawiającemu komplet dokumentów niezbędnych do dokonania odbioru ostatecznego, zgodnie z ST Wymagania Ogólne i w ST",
+      "value": null,
+      "price_increase": "Nie"
+     },
+     {
+      "no": "4",
+      "legal_basis": "art. 455 ust. 1 pkt 1 ustawy",
+      "reason": "roboty dodatkowe",
+      "after_change": "Termin zakończenia robót: 505 dni od dnia podpisania Umowy tj. do 28 listopada 2025 r.\nTermin ostatecznego odbioru robót: 519 dni od dnia podpisania Umowy tj. do 12.12.2025 r.",
+      "value": null,
+      "price_increase": "Nie"
+     },
+     {
+      "no": "5",
+      "legal_basis": "art. 455 ust. 1 pkt 1 ustawy",
+      "reason": "roboty dodatkowe",
+      "after_change": "Wynagrodzenie za wykonanie Przedmiotu Umowy określonego w § 1 Umowy strony ustalają na kwotę brutto 4 192 921,56 zł.\nKwota netto w wysokości 3 408 879,32 zł.\nPodatek VAT w wysokości 784 042,24 zł.",
+      "value": 4192921.56,
+      "price_increase": "Tak"
+     },
+     {
+      "no": "6",
+      "legal_basis": "art. 455 ust. 1 pkt 1 ustawy",
+      "reason": "roboty dodatkowe",
+      "after_change": "Termin zakończenia robót: 526 dni od dnia podpisania Umowy tj. do 19 grudnia 2025 r.\nTermin ostatecznego odbioru robót: 530 dni od dnia podpisania Umowy tj. do 23 grudnia 2025 r.\nWykonawca na 4 dni kalendarzowych przed terminem, o którym mowa w ust. 2 zobowiązany jest przedłożyć Zamawiającemu komplet dokumentów niezbędnych do dokonania odbioru ostatecznego, zgodnie z ST Wymagania Ogólne i w ST.”",
+      "value": null,
+      "price_increase": "Nie"
+     }
+    ],
+    "paid_total": 4186736.41,
+    "properly_performed": "Tak",
+    "not_executed_reason": null,
+    "extra_info": null,
+    "type": "ContractPerformingNotice",
+    "linked_by": "tenderId",
+    "objectId": "08de4786-207b-c083-d6d3-f50001629607",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de4786-207b-c083-d6d3-f50001629607",
+    "orgName": "WIELKOPOLSKI ZARZĄD DRÓG WOJEWÓDZKICH W POZNANIU",
+    "province": "PL30"
+   }
+  ],
+  "referenced_cn": [
+   "2024/BZP 00354928"
+  ],
+  "title_similarity": 1.0,
+  "summary": {
+   "cn": "2024/BZP 00354928/01",
+   "cn_date": "2024-06-06",
+   "parts_count": null,
+   "trn": [
+    "2024/BZP 00451447/01"
+   ],
+   "estimate_net": null,
+   "parts": {
+    "0": {
+     "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+     "cancel_reason": null,
+     "offers": "2",
+     "price_min": 3154932.64,
+     "price_max": 3185614.1,
+     "price_awarded": 3154932.64,
+     "contractor": "Brukarstwo i Handel Włodzimierz Kasprzak",
+     "contractor_id": "6211268694",
+     "contract_date": "2024-07-11",
+     "contract_value": 3154932.64,
+     "period": "do 2024-11-22",
+     "part_estimate_net": null
+    }
+   },
+   "aun": [],
+   "cpn": [
+    "2025/BZP 00626318/01"
+   ]
+  },
+  "contracts": [
+   {
+    "part": 0,
+    "outcome": "umowa",
+    "offers": "2",
+    "estimate_part_net": null,
+    "price_awarded": 3154932.64,
+    "contractor": "Brukarstwo i Handel Włodzimierz Kasprzak",
+    "contractor_id": "6211268694",
+    "contract_date": "2024-07-11",
+    "contract_value": 3154932.64,
+    "planned_end": "2024-11-22",
+    "planned_period": "do 2024-11-22",
+    "aun": 0,
+    "aun_bases": [],
+    "cpn": "2025/BZP 00626318/01",
+    "actual_end": "2025-12-22",
+    "on_time": "Nie",
+    "changes_count": "6",
+    "paid_total": 4186736.41,
+    "properly": "Tak",
+    "change_bases": [
+     "art. 455 ust. 1 pkt 1 ustawy"
+    ]
+   }
+  ]
+ },
+ {
+  "project_id": "RM-2026-020",
+  "lp": "20",
+  "flags": [],
+  "method": "name+NIP+CPV+date",
+  "org_fragment": [
+   "Nowoga"
+  ],
+  "org_notices": 51,
+  "candidates": [
+   {
+    "tenderId": "ocds-148610-740158c8-9281-4fe9-9f58-59edc56af25c",
+    "score": 1.2,
+    "overlap": [
+     "kanali",
+     "konarz",
+     "nowoga",
+     "oczysz",
+     "sanita",
+     "scieko"
+    ],
+    "first": "2025-02-20",
+    "title": "Budowa kanalizacji sanitarnej wraz z oczyszczalnią ścieków na terenie gminy Nowogard w m. Konarzewo",
+    "types": [
+     "AgreementUpdateNotice",
+     "ContractNotice",
+     "ContractPerformingNotice",
+     "TenderResultNotice"
+    ]
+   },
+   {
+    "tenderId": "ocds-148610-6f3fc261-13ed-4200-88e8-96df31409b2f",
+    "score": 0.508,
+    "overlap": [
+     "infras",
+     "kanali",
+     "niezbe",
+     "nowoga"
+    ],
+    "first": "2025-12-18",
+    "title": "Przebudowa drogi wewnętrznej oraz wykonanie kanalizacji deszczowej wraz z niezbędną infrastrukturą  w miejscowości Świer",
+    "types": [
+     "ContractNotice",
+     "TenderResultNotice"
+    ]
+   },
+   {
+    "tenderId": "ocds-148610-7724b53b-3893-4de1-8aac-824afe7b77f9",
+    "score": 0.414,
+    "overlap": [
+     "kanali",
+     "nowoga",
+     "sanita"
+    ],
+    "first": "2025-08-06",
+    "title": "Zwiększenie odporności hydrologicznej Aglomeracji Nowogard poprzez rozdział kanalizacji sanitarnej na ul. 700-lecia",
+    "types": [
+     "AgreementUpdateNotice",
+     "ContractNotice",
+     "ContractPerformingNotice",
+     "TenderResultNotice"
+    ]
+   }
+  ],
+  "confidence": 1.2,
+  "tenderId": "ocds-148610-740158c8-9281-4fe9-9f58-59edc56af25c",
+  "notices": [
+   {
+    "number": "2025/BZP 00113651/01",
+    "date": "2025-02-20",
+    "title": "Budowa kanalizacji sanitarnej wraz z oczyszczalnią ścieków na terenie gminy Nowogard w m. Konarzewo",
+    "procedure_mode": "Zamówienie udzielane jest w trybie podstawowym na podstawie: art. 275 pkt 2 ustawy",
+    "parts_count": null,
+    "submission_deadline": "2025-03-03 12:00",
+    "eu_funded": "Nie",
+    "parts": {
+     "0": {
+      "description": "Zadanie obejmuje przebudowę lokalnej oczyszczalni ścieków oraz budowę sieci kanalizacji sanitarnej z przyłączami i rozgałęzieni sieci wraz z niezbędną infrastrukturą techniczną w miejscowości Konarzewo gmina Nowogard. Wykonanie czasowej zmiany organizacji ruchu w przypadku jej koniecznościach wraz z jej zatwierdzeniem oraz uzyskanie w imieniu Zamawiającego pozwolenia na użytkowanie po zakończeniu ",
+      "period": "8 miesiące",
+      "cpv_main": "45232421-9 - Roboty w zakresie oczyszczania ścieków"
+     }
+    },
+    "type": "ContractNotice",
+    "linked_by": "tenderId",
+    "objectId": "08dd51ab-134e-2276-8f1b-b600017c84ad",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd51ab-134e-2276-8f1b-b600017c84ad",
+    "orgName": "GMINA NOWOGARD",
+    "province": "PL32"
+   },
+   {
+    "number": "2025/BZP 00206455/01",
+    "date": "2025-04-25",
+    "estimate_net": 2207285.7,
+    "cn_ref": "2025/BZP 00113651",
+    "eu_funded": "Nie",
+    "procedureResult": "zawarcieUmowy",
+    "parts": {
+     "0": {
+      "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+      "cancel_reason": null,
+      "offers": "10",
+      "price_min": 1969611.3,
+      "price_max": 3479874.18,
+      "price_awarded": 1969611.3,
+      "contractor": "Konsorcjum firm: \"Starkan\" Sp.z o.o\nNazwy (firmy) pozostałych wykonawców wspólnie ubiegających się o udzielenie zamówienia: Przedsiębiorstwo Usługowe \"Starkan\"Marcin Pardus",
+      "contractor_id": "369467516, 320468735",
+      "contract_date": "2025-04-24",
+      "contract_value": 1969611.3,
+      "period": "6 miesiące",
+      "part_estimate_net": null
+     }
+    },
+    "type": "TenderResultNotice",
+    "linked_by": "tenderId",
+    "objectId": "08dd83e7-8600-d7d9-eaaa-350001a3b6fb",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd83e7-8600-d7d9-eaaa-350001a3b6fb",
+    "orgName": "GMINA NOWOGARD",
+    "province": "PL32"
+   },
+   {
+    "number": "2025/BZP 00558908/01",
+    "date": "2025-11-27",
+    "cn_ref": "2025/BZP 00113651",
+    "trn_ref": "2025/BZP 00206455/01",
+    "contract_title": "Budowa kanalizacji sanitarnej wraz z oczyszczalnią ścieków na terenie gminy Nowogard w m. Konarzewo",
+    "contractor": "Konsorcjum firm: \"Starkan\" Sp.z o.o",
+    "contract_value": 1969611.3,
+    "period": "6 miesiące",
+    "change_date": "2025-11-03",
+    "legal_basis": "art. 455 ust. 1 pkt 4 ustawy",
+    "reason": "konieczność ustanowienia służebności przesyłu na działce nr 3/39 obręb Konarzewo",
+    "description": "Termin wykonania przedmiotu umowy : 30 listopada 2025 r.",
+    "change_value": null,
+    "price_increase": "Nie",
+    "type": "AgreementUpdateNotice",
+    "linked_by": "tenderId",
+    "objectId": "08de2d85-d74a-a060-0560-49000118fa8c",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de2d85-d74a-a060-0560-49000118fa8c",
+    "orgName": "GMINA NOWOGARD",
+    "province": "PL32"
+   },
+   {
+    "number": "2026/BZP 00280220/01",
+    "date": "2026-06-09",
+    "cn_ref": "2025/BZP 00113651",
+    "trn_ref": "2025/BZP 00206455/01",
+    "contract_title": "Budowa kanalizacji sanitarnej wraz z oczyszczalnią ścieków na terenie gminy Nowogard w m. Konarzewo",
+    "contractor": "Konsorcjum firm: \"Starkan\" Sp.z o.o",
+    "contract_value": 1969611.3,
+    "period": "6 miesiące",
+    "change_date": "2025-12-01",
+    "legal_basis": "art. 455 ust. 1 pkt 4 ustawy",
+    "reason": "W trakcie realizacji prac ziemnych ujawniono niekorzystne warunki gruntowe oraz miejscowy wysoki poziom wód gruntowych. W celu prawidłowego wykonania zamówienia konieczne było wydłużenie terminu realizacji umowy.",
+    "description": "Termin wykonania przedmiotu umowy: 31.12.2025 r.",
+    "change_value": null,
+    "price_increase": "Nie",
+    "type": "AgreementUpdateNotice",
+    "linked_by": "tenderId",
+    "objectId": "08dec5fd-7ce8-b24c-5fad-9500015c76a8",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dec5fd-7ce8-b24c-5fad-9500015c76a8",
+    "orgName": "GMINA NOWOGARD",
+    "province": "PL32"
+   },
+   {
+    "number": "2026/BZP 00291637/01",
+    "date": "2026-06-16",
+    "cn_ref": "2025/BZP 00113651",
+    "trn_ref": "2025/BZP 00206455/01",
+    "contract_date": "2025-04-24",
+    "period": "6 miesiące",
+    "contractor": "Konsorcjum firm: \"Starkan\" Sp.z o.o",
+    "contractor_id": "369467516, 320468735",
+    "contract_value": 1969611.3,
+    "executed": "Tak",
+    "end_date": "2026-04-27",
+    "on_time": "Nie",
+    "changes_count": "2",
+    "changes": [
+     {
+      "no": "1",
+      "legal_basis": "art. 455 ust. 1 pkt 4 ustawy",
+      "reason": "Konieczność ustanowienia służebności przesyłu na działce nr 3/39 obręb Konarzewo",
+      "after_change": "Termin wykonania przedmiotu umowy : 30 listopada 2025 r.",
+      "value": null,
+      "price_increase": "Nie"
+     },
+     {
+      "no": "2",
+      "legal_basis": "art. 455 ust. 1 pkt 4 ustawy",
+      "reason": "W trakcie realizacji prac ziemnych ujawniono niekorzystne warunki gruntowe oraz miejscowy wysoki poziom wód\ngruntowych. W celu prawidłowego wykonania zamówienia konieczne było wydłużenie terminu realizacji umowy.",
+      "after_change": "Termin wykonania przedmiotu umowy: 31.12.2025 r.",
+      "value": null,
+      "price_increase": "Nie"
+     }
+    ],
+    "paid_total": 1719611.3,
+    "properly_performed": "Tak",
+    "not_executed_reason": null,
+    "extra_info": " INFORMACJE DODATKOWE\n Łączna wartość wynagrodzenia została pomniejszona o kary umowne. \n2026-06-16 Biuletyn Zamówień PublicznychOgłoszenie o wykonaniu umowy - Zamówienie udzielane jest w trybie podstawowym na podstawie: art. 275 pkt 2 ustawy - Roboty budowlane",
+    "type": "ContractPerformingNotice",
+    "linked_by": "tenderId",
+    "objectId": "08decb7b-ea1f-9e73-5fad-9500015f50ae",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08decb7b-ea1f-9e73-5fad-9500015f50ae",
+    "orgName": "GMINA NOWOGARD",
+    "province": "PL32"
+   }
+  ],
+  "referenced_cn": [
+   "2025/BZP 00113651"
+  ],
+  "title_similarity": 1.0,
+  "summary": {
+   "cn": "2025/BZP 00113651/01",
+   "cn_date": "2025-02-20",
+   "parts_count": null,
+   "trn": [
+    "2025/BZP 00206455/01"
+   ],
+   "estimate_net": 2207285.7,
+   "parts": {
+    "0": {
+     "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+     "cancel_reason": null,
+     "offers": "10",
+     "price_min": 1969611.3,
+     "price_max": 3479874.18,
+     "price_awarded": 1969611.3,
+     "contractor": "Konsorcjum firm: \"Starkan\" Sp.z o.o\nNazwy (firmy) pozostałych wykonawców wspólnie ubiegających się o udzielenie zamówienia: Przedsiębiorstwo Usługowe \"Starkan\"Marcin Pardus",
+     "contractor_id": "369467516, 320468735",
+     "contract_date": "2025-04-24",
+     "contract_value": 1969611.3,
+     "period": "6 miesiące",
+     "part_estimate_net": null
+    }
+   },
+   "aun": [
+    "2025/BZP 00558908/01",
+    "2026/BZP 00280220/01"
+   ],
+   "cpn": [
+    "2026/BZP 00291637/01"
+   ]
+  },
+  "contracts": [
+   {
+    "part": 0,
+    "outcome": "umowa",
+    "offers": "10",
+    "estimate_part_net": null,
+    "price_awarded": 1969611.3,
+    "contractor": "Konsorcjum firm: \"Starkan\" Sp.z o.o\nNazwy (firmy) pozostałych wykonawców wspólnie ubiegających się o udzielenie zamówienia: Przedsiębiorstwo Usługowe \"Starkan\"Marcin Pardus",
+    "contractor_id": "369467516, 320468735",
+    "contract_date": "2025-04-24",
+    "contract_value": 1969611.3,
+    "planned_end": "~2025-10-24",
+    "planned_period": "6 miesiące",
+    "aun": 2,
+    "aun_bases": [
+     "art. 455 ust. 1 pkt 4 ustawy"
+    ],
+    "cpn": "2026/BZP 00291637/01",
+    "actual_end": "2026-04-27",
+    "on_time": "Nie",
+    "changes_count": "2",
+    "paid_total": 1719611.3,
+    "properly": "Tak",
+    "change_bases": [
+     "art. 455 ust. 1 pkt 4 ustawy"
+    ]
+   }
+  ],
+  "kpo_value": {
+   "kpo": 1749991.33,
+   "closest": "sum paid",
+   "value": 1719611.3,
+   "diff_pct": -1.74
+  }
+ },
+ {
+  "project_id": "RM-2026-021",
+  "lp": "21",
+  "flags": [],
+  "method": "bzp-number",
+  "bzp_normalised": [
+   "2025/BZP 00364116",
+   "01"
+  ],
+  "org_fragment": [
+   "Nowoga",
+   "GMINA NOWOGARD"
+  ],
+  "org_notices": 51,
+  "tenderId": "ocds-148610-7724b53b-3893-4de1-8aac-824afe7b77f9",
+  "notices": [
+   {
+    "number": "2025/BZP 00364116/01",
+    "date": "2025-08-06",
+    "title": "Zwiększenie odporności hydrologicznej Aglomeracji Nowogard poprzez rozdział kanalizacji sanitarnej na ul. 700-lecia",
+    "procedure_mode": "Zamówienie udzielane jest w trybie podstawowym na podstawie: art. 275 pkt 2 ustawy",
+    "parts_count": null,
+    "submission_deadline": "2025-08-22 12:00",
+    "eu_funded": "Nie",
+    "parts": {
+     "0": {
+      "description": "Przedmiotem zamówienia jest:\na) przebudowa i budowa kanałów grawitacyjnych w ulicy 700-Lecia w Nowogardzie w celu rozdziału i połączenia z projektowaną tłocznią ścieków zlokalizowaną na działce nr 248/22 obręb 3 – Nowogard;\nb) budowa odcina kanału grawitacyjnego w ulicy Zamkowej i na terenie oczyszczalni ścieków zlokalizowanego na działce nr 200 obręb 3 – Nowogard;\nc) budowa przesyłowego rurociągu",
+      "period": "14 miesiące",
+      "cpv_main": "45100000-8 - Przygotowanie terenu pod budowę"
+     }
+    },
+    "type": "ContractNotice",
+    "linked_by": "tenderId",
+    "objectId": "08ddd4d7-052f-144b-e769-360001c721c8",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08ddd4d7-052f-144b-e769-360001c721c8",
+    "orgName": "GMINA NOWOGARD",
+    "province": "PL32"
+   },
+   {
+    "number": "2025/BZP 00434530/01",
+    "date": "2025-09-22",
+    "estimate_net": 6692528.51,
+    "cn_ref": "2025/BZP 00364116",
+    "eu_funded": "Nie",
+    "procedureResult": "zawarcieUmowy",
+    "parts": {
+     "0": {
+      "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+      "cancel_reason": null,
+      "offers": "6",
+      "price_min": 5421102.0,
+      "price_max": 8979000.0,
+      "price_awarded": 5421102.0,
+      "contractor": "\"STARKAN\" Sp. z o.o.\nNazwy (firmy) pozostałych wykonawców wspólnie ubiegających się o udzielenie zamówienia: Przedsiebiorstwo Usługowe \"STARKAN\" Pardus Marcin",
+      "contractor_id": "8542420234",
+      "contract_date": "2025-09-22",
+      "contract_value": 5421102.0,
+      "period": "10 miesiące",
+      "part_estimate_net": null
+     }
+    },
+    "type": "TenderResultNotice",
+    "linked_by": "tenderId",
+    "objectId": "08ddf9b9-810c-bae9-d903-3900014f109b",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08ddf9b9-810c-bae9-d903-3900014f109b",
+    "orgName": "GMINA NOWOGARD",
+    "province": "PL32"
+   },
+   {
+    "number": "2026/BZP 00498398/01",
+    "date": "2026-10-21",
+    "cn_ref": "2025/BZP 00364116",
+    "trn_ref": "2025/BZP 00434530/01",
+    "contract_title": "Zwiększenie odporności hydrologicznej Aglomeracji Nowogard poprzez rozdział kanalizacji sanitarnej na ul. 700-lecia",
+    "contractor": "\"STARKAN\" Sp. z o.o.",
+    "contract_value": 5421102.0,
+    "period": "10 miesiące",
+    "change_date": "2026-07-28",
+    "legal_basis": "art. 455 ust. 1 pkt 4 ustawy",
+    "reason": "Zmiana konieczna z powodu okoliczności, których zamawiający działający z należytą starannością nie mógł przewidzieć.\nW związku z z prowadzonymi pracami na terenie ronda (Inwestycji ZZDW)",
+    "description": "Termin wykonania umowy do dnia 31 sierpnia 2026",
+    "change_value": null,
+    "price_increase": "Nie",
+    "type": "AgreementUpdateNotice",
+    "linked_by": "tenderId",
+    "objectId": "08df2f57-a700-f06f-701a-d0000164ad62",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08df2f57-a700-f06f-701a-d0000164ad62",
+    "orgName": "GMINA NOWOGARD",
+    "province": "PL32"
+   },
+   {
+    "number": "2026/BZP 00498447/01",
+    "date": "2026-10-21",
+    "cn_ref": "2025/BZP 00364116",
+    "trn_ref": "2025/BZP 00434530/01",
+    "contract_date": "2025-09-22",
+    "period": "10 miesiące",
+    "contractor": "\"STARKAN\" Sp. z o.o.",
+    "contractor_id": "8542420234",
+    "contract_value": 5421102.0,
+    "executed": "Tak",
+    "end_date": "2026-09-28",
+    "on_time": "Nie",
+    "changes_count": "1",
+    "changes": [
+     {
+      "no": "1",
+      "legal_basis": "art. 455 ust. 1 pkt 4 ustawy",
+      "reason": "Zmiana konieczna z powodu okoliczności, których zamawiający działający z należytą starannością nie mógł przewidzieć.\nW związku z z prowadzonymi pracami na terenie ronda (Inwestycji ZZDW)",
+      "after_change": "Termin wykonania umowy do dnia 31 sierpnia 2026",
+      "value": null,
+      "price_increase": "Nie"
+     }
+    ],
+    "paid_total": 2979983.82,
+    "properly_performed": "Nie",
+    "not_executed_reason": null,
+    "extra_info": " INFORMACJE DODATKOWE\n Protokół końcowy odbioru robót - 12.10.2026 r.\nŁączna wartość wynagrodzenia wypłacona z tytułu zrealizowanej umowy - stan na dzień 21.10.2026 r.\nZamawiający naliczył kary umowne za nieterminowe wykonanie umowy za 28 dni opóźnienia w wysokości 455 372,57 zł. \n2026-10-21 Biuletyn Zamówień PublicznychOgłoszenie o wykonaniu umowy - Zamówienie udzielane jest w trybie podstawowym ",
+    "type": "ContractPerformingNotice",
+    "linked_by": "tenderId",
+    "objectId": "08df2f59-3cff-230a-701a-d0000164ada5",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08df2f59-3cff-230a-701a-d0000164ada5",
+    "orgName": "GMINA NOWOGARD",
+    "province": "PL32"
+   }
+  ],
+  "referenced_cn": [
+   "2025/BZP 00364116"
+  ],
+  "title_similarity": 1.0,
+  "summary": {
+   "cn": "2025/BZP 00364116/01",
+   "cn_date": "2025-08-06",
+   "parts_count": null,
+   "trn": [
+    "2025/BZP 00434530/01"
+   ],
+   "estimate_net": 6692528.51,
+   "parts": {
+    "0": {
+     "outcome": "Postępowanie/cześć postępowania zakończyła się zawarciem umowy",
+     "cancel_reason": null,
+     "offers": "6",
+     "price_min": 5421102.0,
+     "price_max": 8979000.0,
+     "price_awarded": 5421102.0,
+     "contractor": "\"STARKAN\" Sp. z o.o.\nNazwy (firmy) pozostałych wykonawców wspólnie ubiegających się o udzielenie zamówienia: Przedsiebiorstwo Usługowe \"STARKAN\" Pardus Marcin",
+     "contractor_id": "8542420234",
+     "contract_date": "2025-09-22",
+     "contract_value": 5421102.0,
+     "period": "10 miesiące",
+     "part_estimate_net": null
+    }
+   },
+   "aun": [
+    "2026/BZP 00498398/01"
+   ],
+   "cpn": [
+    "2026/BZP 00498447/01"
+   ]
+  },
+  "contracts": [
+   {
+    "part": 0,
+    "outcome": "umowa",
+    "offers": "6",
+    "estimate_part_net": null,
+    "price_awarded": 5421102.0,
+    "contractor": "\"STARKAN\" Sp. z o.o.\nNazwy (firmy) pozostałych wykonawców wspólnie ubiegających się o udzielenie zamówienia: Przedsiebiorstwo Usługowe \"STARKAN\" Pardus Marcin",
+    "contractor_id": "8542420234",
+    "contract_date": "2025-09-22",
+    "contract_value": 5421102.0,
+    "planned_end": "~2026-07-22",
+    "planned_period": "10 miesiące",
+    "aun": 1,
+    "aun_bases": [
+     "art. 455 ust. 1 pkt 4 ustawy"
+    ],
+    "cpn": "2026/BZP 00498447/01",
+    "actual_end": "2026-09-28",
+    "on_time": "Nie",
+    "changes_count": "1",
+    "paid_total": 2979983.82,
+    "properly": "Nie",
+    "change_bases": [
+     "art. 455 ust. 1 pkt 4 ustawy"
+    ]
+   }
+  ]
+ },
+ {
+  "project_id": "RM-2026-022",
+  "lp": "22",
+  "flags": [
+   "BZP number not found in API (any of 4 types)",
+   "2023/BZP 00110672 absent from API as a notice; 2 follow-up notice(s) cite it (tenderId ocds-148610-f193152b-b443-11ed-9236-36fed59ea7dd)"
+  ],
+  "method": "bzp-number via references in follow-up notices",
+  "bzp_normalised": [
+   "2023/BZP 00110672",
+   "01"
+  ],
+  "org_fragment": [
+   "Wolin"
+  ],
+  "org_notices": 40,
+  "tenderId": "ocds-148610-f193152b-b443-11ed-9236-36fed59ea7dd",
+  "notices": [
+   {
+    "number": "2023/BZP 00396503/01",
+    "date": "2023-09-14",
+    "cn_ref": "2023/BZP 00178669",
+    "trn_ref": "2023/BZP 00178669/01",
+    "contract_title": "Budowa sieci wodociągowych i kanalizacji sanitarnej w Gminie Wolin\nUmowa dla części nr 1",
+    "contractor": "PPH Artex sp. z o.o.,",
+    "contract_value": 2230851.0,
+    "period": "5 miesiące",
+    "change_date": "2023-08-16",
+    "legal_basis": "art. 455 ust. 1 pkt 3 ustawy",
+    "reason": "W trakcie realizacji Umowy powstała konieczność wykonania robót dodatkowych (zgodnie z Protokołem konieczności Nr 2/2023 z dnia 28.07.2023r. podpisanym przez Zamawiającego, Wykonawcę i Inspektora Nadzoru branży sanitarnej), polegających na rozbudowie infrastruktury wodociągowej o dodatkowe przyłącza, co jest uzasadnione względami sanitarno-eksploatacyjnymi. Roboty dodatkowe stały się niezbędne dla wykonania zakresu zamówienia podstawowego, a ich zlecenie innemu wykonawcy jest niecelowe z powodów technicznych oraz niedogodności dla Zamawiającego, opisanych w w/w Protokole. Przedmiotowa zmiana u",
+    "description": "Dodatkowy zakres robót obejmuje wykonanie przyłączy wodociągowych z rur polietylenowych o średnicy zewnętrznej 32, 50, 90 mm o łącznej długości: 593,61 m w wykopach otwartych oraz montaż 3 hydrantów nadziemnych.",
+    "change_value": 277384.8,
+    "price_increase": "Tak",
+    "type": "AgreementUpdateNotice",
+    "linked_by": "tenderId",
+    "objectId": "08dbb509-9e6b-f6a6-b525-040012ce9d0a",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dbb509-9e6b-f6a6-b525-040012ce9d0a",
+    "orgName": "GMINA WOLIN",
+    "province": "PL32"
+   },
+   {
+    "number": "2023/BZP 00580488/01",
+    "date": "2023-12-29",
+    "cn_ref": "2023/BZP 00110672",
+    "trn_ref": "2023/BZP 00178669/01",
+    "contract_date": "2023-04-11",
+    "period": "5 miesiące",
+    "contractor": "PPH Artex sp. z o.o.,",
+    "contractor_id": "NIP:PL 6690503086",
+    "contract_value": 2230851.0,
+    "executed": "Tak",
+    "end_date": "2023-08-31",
+    "on_time": "Tak",
+    "changes_count": "2",
+    "changes": [
+     {
+      "no": "1",
+      "legal_basis": "art. 455 ust. 2 ustawy",
+      "reason": "W trakcie realizacji Umowy powstała konieczność wykonania robót dodatkowych, zgodnie z Protokołem konieczności Nr 1/2023 z dnia 03.07.2023 r. Budowa sieci wodociągowej wraz z przyłączami w miejscowości Domysłów była realizowana na podstawie Dokumentacji projektowej z 2019 r. , nieuwzględniającej aktualnego stanu osadnictwa. Ekspansja zabudowy mieszkaniowej i rekreacyjnej na dotychczas dziewiczych ",
+      "after_change": "Rozszerzono zakres robót budowalnych o roboty dodatkowe obejmujące wykonanie przyłączy wodociągowych z rur polietylenowych:\n-DN 90: 500,6 m.b.\n-DN 110 :483 m.b.\nw wykopach otwartych oraz montaż 4 hydrantów",
+      "value": 319316.59,
+      "price_increase": "Tak"
+     },
+     {
+      "no": "2",
+      "legal_basis": "art. 455 ust. 1 pkt 3 ustawy",
+      "reason": "W trakcie realizacji Umowy powstała konieczność wykonania robót dodatkowych, zgodnie z Protokołem konieczności Nr 2/2023 z dnia 28.07.2023r, podpisanym przez Zamawiającego, Wykonawcę i Inspektora Nadzoru branży sanitarnej, polegających na rozbudowie infrastruktury wodociągowej o dodatkowe przyłącza, co jest uzasadnione względami sanitarno- eksploatacyjnymi. Roboty dodatkowe stały się niezbędne dla",
+      "after_change": "Dodatkowy zakres robót obejmuje wykonanie przyłączy wodociągowych z rur polietylenowych o średnicy zewnętrznej 32, 50, 90 mm o łącznej długości: 593,61 m w wykopach otwartych oraz montaż 3 hydrantów nadziemnych.",
+      "value": 277384.8,
+      "price_increase": "Tak"
+     }
+    ],
+    "paid_total": 2827552.39,
+    "properly_performed": "Tak",
+    "not_executed_reason": null,
+    "extra_info": null,
+    "type": "ContractPerformingNotice",
+    "linked_by": "tenderId",
+    "objectId": "08dc086e-d01e-5f27-b62e-d20011751fa3",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dc086e-d01e-5f27-b62e-d20011751fa3",
+    "orgName": "GMINA WOLIN",
+    "province": "PL32"
+   },
+   {
+    "number": "2024/BZP 00621519/01",
+    "date": "2024-11-28",
+    "cn_ref": "2023/BZP 00110672",
+    "trn_ref": "2023/BZP 00178669/01",
+    "contract_date": "2023-04-11",
+    "period": "13 miesiące",
+    "contractor": "ZUBWIT RESKO Sp. z o.o. sp. k.,",
+    "contractor_id": "NIP:PL 8570210827",
+    "contract_value": 7098002.82,
+    "executed": "Tak",
+    "end_date": "2024-05-23",
+    "on_time": "Nie",
+    "changes_count": "2",
+    "changes": [
+     {
+      "no": "1",
+      "legal_basis": "art. 455 ust. 1 pkt 1 ustawy",
+      "reason": "Konieczność zlecenia dodatkowych robót dla prawidłowego wykonania podstawowego zakresu i uzyskania świadczenia zgodnego z potrzebami Zamawiającego.",
+      "after_change": "Zakres zamówienia rozszerzono o wymianę gruntów wysadzinowych w drogach. W toku realizacji prac Wykonawca stwierdził, iż pod nawierzchniami i konstrukcjami dróg znajduje się materiał wysadzinowy – glina, który uniemożliwia osiągnięcie wymaganych parametrów dla powtórnego użycia tj. zageszczenia oraz uzyskania wymaganej nośności dla odbudowy warstw konstrukcyjnych dróg. W związku z powyższym zaszła",
+      "value": 452585.98,
+      "price_increase": "Tak"
+     },
+     {
+      "no": "2",
+      "legal_basis": "art. 455 ust. 2 ustawy",
+      "reason": "Zlecenie dodatkowych (nie planowanych) robót stało się konieczne dla prawidłowego wykonania podstawowego zakresu i uzyskania świadczenia zgodnego z potrzebami zamawiającego",
+      "after_change": "Zakres zamówienia rozszerzono o:",
+      "value": 318976.02,
+      "price_increase": "Tak"
+     }
+    ],
+    "paid_total": 7869564.82,
+    "properly_performed": "Tak",
+    "not_executed_reason": null,
+    "extra_info": null,
+    "type": "ContractPerformingNotice",
+    "linked_by": "tenderId",
+    "objectId": "08dd0f9a-2990-af9e-985c-bb0001355be0",
+    "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd0f9a-2990-af9e-985c-bb0001355be0",
+    "orgName": "GMINA WOLIN",
+    "province": "PL32"
+   }
+  ],
+  "referenced_cn": [
+   "2023/BZP 00110672",
+   "2023/BZP 00178669"
+  ],
+  "title_similarity": 1.0,
+  "summary": {
+   "cn": null,
+   "cn_date": null,
+   "parts_count": null,
+   "trn": [],
+   "estimate_net": null,
+   "parts": {},
+   "aun": [
+    "2023/BZP 00396503/01"
+   ],
+   "cpn": [
+    "2023/BZP 00580488/01",
+    "2024/BZP 00621519/01"
+   ]
+  },
+  "contracts": [
+   {
+    "part": "cpn1",
+    "outcome": "umowa",
+    "offers": null,
+    "estimate_part_net": null,
+    "price_awarded": null,
+    "contractor": "PPH Artex sp. z o.o.,",
+    "contractor_id": "NIP:PL 6690503086",
+    "contract_date": "2023-04-11",
+    "contract_value": 2230851.0,
+    "planned_end": "~2023-09-11",
+    "planned_period": "5 miesiące",
+    "aun": 1,
+    "aun_bases": [
+     "art. 455 ust. 1 pkt 3 ustawy"
+    ],
+    "cpn": "2023/BZP 00580488/01",
+    "actual_end": "2023-08-31",
+    "on_time": "Tak",
+    "changes_count": "2",
+    "paid_total": 2827552.39,
+    "properly": "Tak",
+    "change_bases": [
+     "art. 455 ust. 1 pkt 3 ustawy",
+     "art. 455 ust. 2 ustawy"
+    ]
+   },
+   {
+    "part": "cpn2",
+    "outcome": "umowa",
+    "offers": null,
+    "estimate_part_net": null,
+    "price_awarded": null,
+    "contractor": "ZUBWIT RESKO Sp. z o.o. sp. k.,",
+    "contractor_id": "NIP:PL 8570210827",
+    "contract_date": "2023-04-11",
+    "contract_value": 7098002.82,
+    "planned_end": "~2024-05-11",
+    "planned_period": "13 miesiące",
+    "aun": 0,
+    "aun_bases": [],
+    "cpn": "2024/BZP 00621519/01",
+    "actual_end": "2024-05-23",
+    "on_time": "Nie",
+    "changes_count": "2",
+    "paid_total": 7869564.82,
+    "properly": "Tak",
+    "change_bases": [
+     "art. 455 ust. 1 pkt 1 ustawy",
+     "art. 455 ust. 2 ustawy"
+    ]
+   }
+  ]
+ }
+]

@@ -1,0 +1,1 @@
+{"errors": {"NoticeType": ["Pole 'Notice Type' ma zakres wartości, który nie obejmuje Foo."]}, "type": "https://tools.ietf.org/html/rfc7231#section-6.5.1", "title": "One or more validation errors occurred.", "status": 400}

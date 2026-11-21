@@ -1,0 +1,30 @@
+{
+ "raw_perf_notices": 26842,
+ "dup_notice_versions_removed": 17,
+ "dup_republished_same_contract_removed": 213,
+ "perf_after_dedup": 26612,
+ "wodkan_core_works": 11254,
+ "wodkan_core_works_executed": 11184,
+ "relevance": {
+  "core": 11607,
+  "none": 8943,
+  "component": 6046,
+  "cpv_only": 16
+ },
+ "scope": {
+  "works": 25417,
+  "maintenance": 774,
+  "services": 250,
+  "delivery": 132,
+  "design_only": 38,
+  "supervision": 1
+ },
+ "subsector": {
+  "Kanalizacja sanitarna": 4268,
+  "Sieć wodociągowa": 4019,
+  "Kanalizacja deszczowa i retencja": 1078,
+  "Uzdatnianie i zaopatrzenie w wodę": 988,
+  "Oczyszczalnia ścieków": 827,
+  "Inne obiekty wod-kan": 4
+ }
+}

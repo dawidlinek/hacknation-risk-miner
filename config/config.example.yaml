@@ -1,0 +1,88 @@
+# Risk Miner: sample configuration. Copy to config/config.yaml (gitignored) and adjust.
+# Secrets never go here: they are read from environment variables named by *_env keys (see .env.example).
+# Everything below is switchable without code changes (requirement: model in config, no vendor lock-in).
+
+app:
+  name: Risk Miner
+  language: pl                     # UI copy is Polish
+  sector_default: wod-kan
+
+database:
+  url_env: DATABASE_URL            # postgresql+asyncpg://riskminer:riskminer@localhost:5434/riskminer
+
+api:
+  cors_origins: ["http://localhost:5173", "http://localhost:3000"]
+  basic_auth_env: RISKMINER_BASIC_AUTH   # "user:password" for the public demo (Caddy also enforces it)
+
+# Feature flags: unfinished features are hidden, not broken.
+features:
+  bzp_live_api: true
+  ted: true
+  kio: true
+  nik: true
+  cru: true
+  mapa_dotacji: true
+  docs_22: true
+  docs_sample: false
+  red_pen: false                   # W1 tender-document review
+  unit_cost: false                 # W2
+  backtest: false                  # W3
+  case_graph: false                # W4
+  monte_carlo: false               # W5
+  radar: false                     # W6
+  learning_loop: false             # W7
+  sovereign_switch: false          # W8
+  sector_pack_wizard: false        # W9
+  ask_memory: false                # W12
+
+connectors:
+  user_agent: "RiskMiner-hackathon/0.1 (research prototype; HackNation 2026)"   # no personal data in headers
+  bzp_api:
+    base: https://ezamowienia.gov.pl          # production (≤25 req/min); mirror of the offline copy: https://bzp.cytr.us
+    min_interval_s: 2.5
+    cpv_prefixes: ["452313", "452324", "4523241", "4523242", "452321", "452524", "452521", "452522"]
+    notice_types: [ContractNotice, TenderResultNotice, AgreementUpdateNotice, ContractPerformingNotice, NoticeUpdateNotice]
+  bzp_copy:
+    path: materials/bzp_kopia/risk_miner_bzp_kopia/bzp_kopia/notices.jsonl
+  vat_whitelist: {daily_cap: 100, batch: 30}
+  default_min_interval_s: 1.0
+
+# LLM providers (PLAN §4a): one cloud provider (Gemini, Developer API) + two Polish models self-hosted on WCSS
+# (Bielik, PLLuM). Switching provider/model is a config change, not a code change.
+llm:
+  providers:
+    gemini:      {kind: google_genai,      base_url: https://generativelanguage.googleapis.com/v1beta, api_key_env: GEMINI_API_KEY, data_location: "global (Gemini Developer API)"}
+    # EU-only after enabling Vertex AI for the key: kind google_genai, vertexai: true, project: "114919147642", location: europe-west4 (or eu), data_location: "EU (Vertex AI)"
+    wcss_bielik: {kind: openai_compatible, base_url: http://127.0.0.1:8001/v1, api_key_env: WCSS_VLLM_KEY, data_location: "PL (WCSS Wrocław)"}
+    wcss_pllum:  {kind: openai_compatible, base_url: http://127.0.0.1:8002/v1, api_key_env: WCSS_VLLM_KEY, data_location: "PL (WCSS Wrocław)"}
+    # Supported by config, not used in the demo:
+    # claude:    {kind: anthropic,         api_key_env: ANTHROPIC_API_KEY, data_location: "global (EU via Bedrock/Vertex profile)"}
+    # openai:    {kind: openai_compatible, base_url: https://api.openai.com/v1, api_key_env: OPENAI_API_KEY, data_location: "US"}
+  models:            # alias -> provider:model, per task (verify exact ids before the demo; previews change)
+    fast:      gemini:gemini-3.8-flash
+    strong:    gemini:gemini-3.8-flash
+    best:      gemini:gemini-pro-latest
+    bulk:      gemini:gemini-3.5-flash-lite
+    sovereign: wcss_bielik:speakleash/Bielik-11B-v3.1-Instruct
+    sovereign_alt: wcss_pllum:CYFRAGOVPL/<PLLuM variant, licence-checked>
+  routing:
+    public:       {default: strong, triage: fast, bulk_classify: bulk}   # switch bulk_classify to sovereign once Bielik is served
+    confidential: {default: sovereign}   # enforced: never leaves PL
+  fallback: {wcss_bielik: wcss_pllum}    # sovereign → sovereign; cloud fallback only for public data
+  eval:
+    gold_set: research/bzp_corpus/data/gold_change_reasons.csv
+    models: [strong, sovereign, sovereign_alt]
+
+embeddings:
+  model: BAAI/bge-m3                # MIT; 1024-dim (chunk.embedding)
+  device: cpu
+
+linking:
+  accept_threshold: 0.9
+  review_threshold: 0.6
+  min_fuzzy: 0.21
+
+analytics:
+  min_n_share: 30
+  min_n_tail: 50
+  insufficient_n: 10

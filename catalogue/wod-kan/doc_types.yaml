@@ -1,0 +1,115 @@
+# Sector pack wod-kan: edit in the panel or here; loaded by `riskminer seed-catalogue`.
+# Source: docs/research/03_domain_methodology.md (+ expert materials). status: approved | proposed.
+doc_types:
+- code: ogloszenie_zamowienie
+  name: Ogłoszenie o zamówieniu
+  phase: postepowanie
+  status: approved
+- code: swz
+  name: SWZ
+  phase: postepowanie
+  status: approved
+- code: pfu
+  name: Program funkcjonalno-użytkowy (PFU)
+  phase: przygotowanie
+  status: approved
+- code: opz
+  name: Opis przedmiotu zamówienia (OPZ)
+  phase: postepowanie
+  status: approved
+- code: ppu
+  name: Projektowane postanowienia umowy / wzór umowy
+  phase: postepowanie
+  status: approved
+- code: projekt
+  name: Dokumentacja projektowa
+  phase: przygotowanie
+  status: approved
+- code: stwiorb
+  name: STWiORB
+  phase: przygotowanie
+  status: approved
+- code: przedmiar
+  name: Przedmiar robót
+  phase: przygotowanie
+  status: approved
+- code: kosztorys
+  name: Kosztorys inwestorski
+  phase: przygotowanie
+  status: approved
+- code: geotech
+  name: Badania / opinia geotechniczna
+  phase: przygotowanie
+  status: approved
+- code: qa
+  name: Wyjaśnienia treści SWZ (pytania i odpowiedzi)
+  phase: postepowanie
+  status: approved
+- code: modyfikacja
+  name: Modyfikacja SWZ / zmiana ogłoszenia
+  phase: postepowanie
+  status: approved
+- code: kwota
+  name: Informacja o kwocie (art. 222 ust. 4)
+  phase: postepowanie
+  status: approved
+- code: otwarcie
+  name: Informacja z otwarcia ofert
+  phase: postepowanie
+  status: approved
+- code: wybor
+  name: Informacja o wyborze najkorzystniejszej oferty
+  phase: postepowanie
+  status: approved
+- code: uniewaznienie
+  name: Unieważnienie postępowania
+  phase: postepowanie
+  status: approved
+- code: ogloszenie_wynik
+  name: Ogłoszenie o wyniku postępowania
+  phase: postepowanie
+  status: approved
+- code: umowa
+  name: Umowa (podpisana)
+  phase: realizacja
+  status: approved
+- code: aneks
+  name: Aneks do umowy
+  phase: realizacja
+  status: approved
+- code: ogloszenie_zmiana
+  name: Ogłoszenie o zmianie umowy
+  phase: realizacja
+  status: approved
+- code: ogloszenie_wykonanie
+  name: Ogłoszenie o wykonaniu umowy
+  phase: odbior
+  status: approved
+- code: dsu
+  name: Decyzja o środowiskowych uwarunkowaniach
+  phase: przygotowanie
+  status: approved
+- code: wodnoprawne
+  name: Pozwolenie / zgłoszenie wodnoprawne
+  phase: przygotowanie
+  status: approved
+- code: kio
+  name: Orzeczenie KIO
+  phase: postepowanie
+  status: approved
+- code: nik_informacja
+  name: "NIK: informacja o wynikach kontroli"
+  phase: ewaluacja
+  status: approved
+- code: nik_wystapienie
+  name: "NIK: wystąpienie pokontrolne"
+  phase: ewaluacja
+  status: approved
+- code: wpf
+  name: WPF / uchwała budżetowa
+  phase: przygotowanie
+  status: approved
+- code: inne
+  name: Inne
+  phase: null
+  status: approved

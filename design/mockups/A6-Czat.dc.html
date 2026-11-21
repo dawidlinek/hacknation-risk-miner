@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Zapytaj pamięć</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0A0A0A}a:hover{color:#404040}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{outline:2px solid #0A0A0A;outline-offset:2px}
+</style>
+</helmet>
+<div style="min-height:100vh;background:#FFFFFF;font-family:'Geist',system-ui,sans-serif;color:#0A0A0A">
+<header style="border-bottom:1px solid #F0F0F0">
+<div style="max-width:1240px;margin:0 auto;padding:14px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px">
+<a href="{{home}}" style="display:inline-flex;align-items:baseline;text-decoration:none;color:#0A0A0A;font-size:19px;font-weight:700;letter-spacing:-.04em">{{brandA}}<span style="margin-left:3px;padding:0 6px 2px;border-radius:8px;background:#0A0A0A;color:#FFFFFF;letter-spacing:-.02em">{{brandB}}</span></a>
+<nav aria-label="Moduły" style="display:flex;gap:4px;flex-wrap:wrap;align-items:center">
+<sc-for list="{{nav}}" as="n" hint-placeholder-count="6"><a href="{{n.href}}" style="{{n.style}}">{{n.label}}<sc-if value="{{n.count}}" hint-placeholder-val="{{false}}"><span style="margin-left:6px;font:600 11px 'Geist Mono',monospace;padding:1px 6px;border-radius:999px;{{n.cs}}">{{n.count}}</span></sc-if></a></sc-for>
+<sc-if value="{{auth}}" hint-placeholder-val="{{false}}"><details style="position:relative"><summary style="list-style:none;min-height:36px;display:inline-flex;align-items:center;padding:0 12px;border-radius:999px;font:500 14px 'Geist',sans-serif;color:#404040;cursor:pointer">Więcej</summary><div style="position:absolute;right:0;top:42px;z-index:5;background:#FFFFFF;border:1px solid #E5E5E5;border-radius:18px;padding:6px;min-width:200px;box-shadow:0 12px 32px rgba(10,10,10,.14);display:flex;flex-direction:column"><sc-for list="{{more}}" as="m" hint-placeholder-count="3"><a href="{{m.href}}" style="padding:10px 12px;border-radius:12px;text-decoration:none;font:500 14px 'Geist',sans-serif;color:#0A0A0A">{{m.label}}</a></sc-for></div></details></sc-if>
+</nav>
+<div style="display:flex;align-items:center;gap:10px"><a href="A6-Czat.dc.html" style="min-height:40px;display:inline-flex;align-items:center;gap:8px;padding:0 14px;border-radius:999px;border:1px solid #E5E5E5;text-decoration:none;color:#0A0A0A;font:500 14px 'Geist',sans-serif"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"></path></svg>Zapytaj</a><sc-if value="{{auth}}" hint-placeholder-val="{{false}}"><button type="button" aria-label="Konto: ekspert" style="width:40px;height:40px;border-radius:999px;border:1px solid #E5E5E5;background:#F5F5F5;font:600 14px 'Geist',sans-serif">E</button></sc-if><sc-if value="{{anon}}" hint-placeholder-val="{{false}}"><a href="Main.dc.html" style="min-height:40px;display:inline-flex;align-items:center;padding:0 16px;border-radius:999px;background:#0A0A0A;color:#FFFFFF;text-decoration:none;font:600 14px 'Geist',sans-serif">Zaloguj się</a></sc-if></div>
+</div>
+</header>
+<div style="max-width:1240px;margin:0 auto;padding:32px 24px 72px;display:flex;flex-wrap:wrap;gap:36px;align-items:flex-start">
+<main style="flex:999 1 560px;min-width:0;display:flex;flex-direction:column;gap:22px">
+<div style="display:flex;flex-direction:column;gap:8px">
+<h1 style="margin:0;font-size:36px;font-weight:600;letter-spacing:-.035em;line-height:1.1">Zapytaj pamięć</h1>
+<p style="margin:0;font-size:16px;color:#6B6B6B;max-width:640px">Pytaj o 11 184 wykonane umowy wod-kan i 22 zweryfikowane projekty. Odpowiadam tylko z bazy, pokazuję, jak policzyłem, a każde pytanie możesz zapisać jako rekord.</p>
+</div>
+
+<sc-for list="{{thread}}" as="m" hint-placeholder-count="4">
+<sc-if value="{{m.user}}" hint-placeholder-val="{{true}}">
+<div style="display:flex;justify-content:flex-end"><div style="max-width:520px;padding:14px 18px 16px;border-radius:22px 22px 6px 22px;background:#0A0A0A;color:#FFFFFF;font-size:16px;line-height:1.5">{{m.text}}</div></div>
+</sc-if>
+<sc-if value="{{m.bot}}" hint-placeholder-val="{{true}}">
+<div style="display:flex;gap:14px;align-items:flex-start">
+<span style="width:38px;height:38px;flex:none;border-radius:12px;background:#0A0A0A;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"></path></svg></span>
+<div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:10px;padding-top:2px">
+<span style="font-size:14px;font-weight:600">Pamięć&nbsp;</span>
+<p style="margin:0;font-size:16px;line-height:1.55">{{m.text}}</p>
+<sc-if value="{{m.bars}}" hint-placeholder-val="{{false}}"><div style="background:#F6F6F6;border-radius:18px;padding:14px 16px;display:flex;flex-direction:column;gap:8px;max-width:560px"><sc-for list="{{m.bars}}" as="b" hint-placeholder-count="3"><div style="display:grid;grid-template-columns:150px minmax(0,1fr) 44px;gap:10px;align-items:center"><span style="font-size:13px;color:#404040">{{b.l}}</span><div style="height:18px;border-radius:999px;background:#FFFFFF"><div style="height:100%;border-radius:999px;{{b.s}}"></div></div><span style="font:600 13px 'Geist Mono',monospace;text-align:right">{{b.v}}</span></div></sc-for></div></sc-if>
+<sc-if value="{{m.sql}}" hint-placeholder-val="{{false}}"><details style="max-width:560px"><summary style="cursor:pointer;font-size:13px;font-weight:500;color:#404040">Jak to policzyłem</summary><pre style="margin:8px 0 0;background:#0A0A0A;color:#E5E5E5;border-radius:14px;padding:12px 14px;font:400 12px/1.6 'Geist Mono',monospace;overflow-x:auto;white-space:pre-wrap">{{m.sql}}</pre></details></sc-if>
+<span style="display:flex;flex-wrap:wrap;gap:6px"><sc-for list="{{m.src}}" as="s" hint-placeholder-count="2"><span style="min-height:28px;display:inline-flex;align-items:center;padding:0 10px;border-radius:999px;background:#F6F6F6;font:500 12px 'Geist Mono',monospace;color:#404040">{{s}}</span></sc-for></span>
+<span style="display:flex;flex-wrap:wrap;gap:6px"><sc-for list="{{m.actions}}" as="a" hint-placeholder-count="2"><a href="{{a.href}}" style="min-height:34px;display:inline-flex;align-items:center;padding:0 14px;border-radius:999px;border:1px solid #E5E5E5;text-decoration:none;font:500 13px 'Geist',sans-serif">{{a.l}}</a></sc-for></span>
+</div>
+</div>
+</sc-if>
+</sc-for>
+
+<div style="display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;flex-wrap:wrap;gap:8px"><sc-for list="{{chips}}" as="c" hint-placeholder-count="3"><button type="button" onClick="{{c.ask}}" style="min-height:36px;padding:0 14px;border-radius:999px;border:1px solid #E5E5E5;background:#FFFFFF;font:500 13px 'Geist',sans-serif;color:#404040;cursor:pointer">{{c.l}}</button></sc-for></div>
+<form style="display:flex;align-items:center;gap:8px;padding:6px 6px 6px 18px;border-radius:999px;border:1px solid #E5E5E5;box-shadow:0 1px 2px rgba(0,0,0,.04),0 12px 32px rgba(0,0,0,.06)">
+<label for="q" style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)">Twoje pytanie</label>
+<input id="q" type="text" placeholder="Zapytaj o umowy, gminy, przyczyny opóźnień" style="flex:1;min-width:0;min-height:44px;border:none;outline:none;background:transparent;font:400 15px 'Geist',sans-serif">
+<button type="button" aria-label="Wyślij" style="width:44px;height:44px;border-radius:999px;border:none;background:#0A0A0A;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"></path></svg></button>
+</form>
+
+</div>
+</main>
+
+<aside aria-labelledby="z1" style="flex:1 1 340px;max-width:100%;min-width:0;background:#F6F6F6;border-radius:28px;padding:22px;display:flex;flex-direction:column;gap:8px">
+<div style="display:flex;flex-direction:column;gap:2px;padding:2px 4px 10px"><h2 id="z1" style="margin:0;font-size:18px;font-weight:600;letter-spacing:-.015em">Zapisane pytania</h2></div>
+<sc-for list="{{saved}}" as="s" hint-placeholder-count="3"><a href="#" style="border-radius:18px;background:#FFFFFF;padding:12px 14px;display:flex;flex-direction:column;gap:2px;text-decoration:none;color:#0A0A0A"><span style="font-size:15px;font-weight:600">{{s.t}}</span><span style="font:500 12px 'Geist Mono',monospace;color:#6B6B6B">{{s.id}}, {{s.when}}</span></a></sc-for>
+
+</aside>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"brandA":{"editor":"text","default":"ex"},"brandB":{"editor":"text","default":"ante"},"$preview":{"width":1440,"height":1700}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { extra: [] }; }
+  renderVals() {
+    const active = '';
+    const AUTH = false;
+    const NAV = [['Pulpit','Main.dc.html','',1],['Monitoring','D2-Monitoring.dc.html','12',0],['Nowa inwestycja','A1-Start.dc.html','',0],['Projekty','B2-Projekty.dc.html','',0],['Przegląd','C1-Przeglad.dc.html','37',1],['Katalog','C2-Katalog.dc.html','',1]];
+    const nav = NAV.filter((x) => AUTH || !x[3]).map(([label, href, count]) => ({ label, href, count: AUTH ? count : '', cs: label === active ? 'background:#FFFFFF;color:#0A0A0A' : 'background:#F0F0F0;color:#404040', style: "min-height:36px;display:inline-flex;align-items:center;padding:0 12px;border-radius:999px;text-decoration:none;font:500 14px 'Geist',sans-serif;" + (label === active ? 'background:#0A0A0A;color:#FFFFFF' : 'color:#404040') }));
+    const more = [['Import i źródła','B1-Import.dc.html'],['Historia','D3-Historia.dc.html'],['Ustawienia','D4-Ustawienia.dc.html']].map(([label, href]) => ({ label, href }));
+    const U = (text) => ({ user: true, bot: false, text });
+    const B = (kind, text, extra) => ({ user: false, bot: true, kind, text, bars: null, sql: '', src: [], actions: [], ...extra });
+    const bar = (l, v, pct, hot) => ({ l, v, s: 'width:' + pct + '%;background:' + (hot ? '#EA580C' : '#0A0A0A') });
+    const base = [
+      U('Ile umów wod-kan w wielkopolskim skończyło się po terminie?'),
+      B('obliczenie', 'Po terminie skończyło się 35% z 995 wykonanych umów z lat 2021–2026. To więcej niż średnia krajowa. Gdy umowa się spóźniała, typowo o 61 dni.', {
+        bars: [bar('wielkopolskie', '35%', 35, true), bar('cała Polska', '30%', 30, false)],
+        sql: "SELECT count(*) FILTER (WHERE late) * 100.0 / count(*) AS po_terminie,\n       count(*) AS n\nFROM rc_contract\nWHERE region = 'wielkopolskie' AND relevance = 'core';",
+        src: ['ogłoszenia o wykonaniu umowy, BZP', 'n = 995'],
+        actions: [{ l: 'Zapisz jako rekord', href: '#' }, { l: 'Pokaż 995 umów', href: 'B2-Projekty.dc.html' }, { l: 'Eksportuj CSV', href: '#' }]
+      }),
+      U('A gdzie jest najlepiej?'),
+      B('obliczenie', 'Najmniej spóźnień mają kujawsko-pomorskie (23%), podkarpackie (24%) i lubelskie (25%). Najwięcej lubuskie (43%) i dolnośląskie (40%).', {
+        bars: [bar('kujawsko-pomorskie', '23%', 23, false), bar('podkarpackie', '24%', 24, false), bar('lubelskie', '25%', 25, false), bar('dolnośląskie', '40%', 40, true), bar('lubuskie', '43%', 43, true)],
+        src: ['ogłoszenia o wykonaniu umowy, BZP', 'n = 225–1 698 na województwo'],
+        actions: [{ l: 'Otwórz mapę', href: 'D2-Monitoring.dc.html' }]
+      }),
+      U('Dlaczego Steklin się spóźnił?'),
+      B('wniosek AI z zatwierdzonych zdarzeń', 'Dwa razy dopłacono za roboty, których nie było w PFU (+758 084,56 zł i +100 325,44 zł), a potem termin przesunęło pozwolenie wodnoprawne. Dwa z trzech zdarzeń zatwierdził ekspert, trzecie czeka na przegląd.', {
+        src: ['2024/BZP 00554831/01', '2024/BZP 00618384/01', '2026/BZP 00276065/01'],
+        actions: [{ l: 'Karta projektu', href: 'B3-Karta.dc.html' }, { l: 'Przejrzyj zdarzenie R04', href: 'C1-Przeglad.dc.html' }]
+      })
+    ];
+    const CANNED = {
+      zw: [U('Porównaj „zaprojektuj i wybuduj” z samym wykonaniem'), B('obliczenie', 'W formule „zaprojektuj i wybuduj” po terminie kończy się 47% umów, przy samym wykonaniu 28%. Różnica utrzymuje się w każdym przedziale wartości.', { bars: [bar('zaprojektuj i wybuduj', '47%', 47, true), bar('samo wykonanie', '28%', 28, false)], src: ['n = 1 390 i 9 794'], actions: [{ l: 'Zapisz jako rekord', href: '#' }] })],
+      km: [U('Ile kosztuje kilometr sieci?'), B('obliczenie', 'Mediana to 0,89 mln zł za km kanalizacji sanitarnej i 0,39 mln zł za km wodociągu. W 2022 r. kanalizacja zdrożała o 41% wobec 2021 r.', { bars: [bar('kanalizacja sanitarna', '0,89', 89, false), bar('wodociąg', '0,39', 39, false)], src: ['mln zł/km, ceny nominalne'], actions: [{ l: 'Zapisz jako rekord', href: '#' }] })],
+      gm: [U('Które umowy w powiecie toruńskim są po terminie?'), B('brak danych', 'Nie mam jeszcze przypisania gmin do powiatów, więc nie odpowiem rzetelnie. Mogę pokazać całe kujawsko-pomorskie albo wybraną gminę.', { src: ['brakuje: słownik TERYT powiatów'], actions: [{ l: 'Pokaż kujawsko-pomorskie', href: 'D2-Monitoring.dc.html' }] })]
+    };
+    const used = this.state.extra.map((e) => e.key);
+    const chipsAll = [['zw', 'Porównaj „zaprojektuj i wybuduj” z samym wykonaniem'], ['km', 'Ile kosztuje kilometr sieci?'], ['gm', 'Które umowy w powiecie toruńskim są po terminie?']];
+    const chips = chipsAll.filter(([k]) => used.indexOf(k) < 0).map(([k, l]) => ({ l, ask: () => this.setState({ extra: this.state.extra.concat([{ key: k }]) }) }));
+    const thread = base.concat(...this.state.extra.map((e) => CANNED[e.key]));
+    const saved = [
+      { t: 'Opóźnienia w wielkopolskim', id: 'Q-2026-0003', when: '21.11 13:40' },
+      { t: 'Województwa z najmniejszą liczbą opóźnień', id: 'Q-2026-0002', when: '21.11 13:38' },
+      { t: 'Koszt kilometra kanalizacji, 2021 a 2022', id: 'Q-2026-0001', when: '21.11 12:55' }
+    ];
+    return { auth: AUTH, anon: !AUTH, home: AUTH ? 'Main.dc.html' : 'D2-Monitoring.dc.html',  brandA: this.props.brandA ?? 'ex', brandB: this.props.brandB ?? 'ante', nav, more, thread, chips, saved };
+  }
+}
+</script>
+</body>
+</html>

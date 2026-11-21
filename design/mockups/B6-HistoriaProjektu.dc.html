@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Historia zmian projektu: Steklin</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0A0A0A}a:hover{color:#404040}
+a:focus-visible,button:focus-visible,summary:focus-visible,select:focus-visible{outline:2px solid #0A0A0A;outline-offset:2px}
+</style>
+</helmet>
+<div style="min-height:100vh;background:#FFFFFF;font-family:'Geist',system-ui,sans-serif;color:#0A0A0A">
+<header style="border-bottom:1px solid #F0F0F0">
+<div style="max-width:1240px;margin:0 auto;padding:14px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px">
+<a href="{{home}}" style="display:inline-flex;align-items:baseline;text-decoration:none;color:#0A0A0A;font-size:19px;font-weight:700;letter-spacing:-.04em">{{brandA}}<span style="margin-left:3px;padding:0 6px 2px;border-radius:8px;background:#0A0A0A;color:#FFFFFF;letter-spacing:-.02em">{{brandB}}</span></a>
+<nav aria-label="Moduły" style="display:flex;gap:4px;flex-wrap:wrap;align-items:center">
+<sc-for list="{{nav}}" as="n" hint-placeholder-count="6"><a href="{{n.href}}" style="{{n.style}}">{{n.label}}<sc-if value="{{n.count}}" hint-placeholder-val="{{false}}"><span style="margin-left:6px;font:600 11px 'Geist Mono',monospace;padding:1px 6px;border-radius:999px;{{n.cs}}">{{n.count}}</span></sc-if></a></sc-for>
+<sc-if value="{{auth}}" hint-placeholder-val="{{false}}"><details style="position:relative"><summary style="list-style:none;min-height:36px;display:inline-flex;align-items:center;padding:0 12px;border-radius:999px;font:500 14px 'Geist',sans-serif;color:#404040;cursor:pointer">Więcej</summary><div style="position:absolute;right:0;top:42px;z-index:5;background:#FFFFFF;border:1px solid #E5E5E5;border-radius:18px;padding:6px;min-width:200px;box-shadow:0 12px 32px rgba(10,10,10,.14);display:flex;flex-direction:column"><sc-for list="{{more}}" as="m" hint-placeholder-count="3"><a href="{{m.href}}" style="padding:10px 12px;border-radius:12px;text-decoration:none;font:500 14px 'Geist',sans-serif;color:#0A0A0A">{{m.label}}</a></sc-for></div></details></sc-if>
+</nav>
+<div style="display:flex;align-items:center;gap:10px"><a href="A6-Czat.dc.html" style="min-height:40px;display:inline-flex;align-items:center;gap:8px;padding:0 14px;border-radius:999px;border:1px solid #E5E5E5;text-decoration:none;color:#0A0A0A;font:500 14px 'Geist',sans-serif"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"></path></svg>Zapytaj</a><sc-if value="{{auth}}" hint-placeholder-val="{{false}}"><button type="button" aria-label="Konto: ekspert" style="width:40px;height:40px;border-radius:999px;border:1px solid #E5E5E5;background:#F5F5F5;font:600 14px 'Geist',sans-serif">E</button></sc-if><sc-if value="{{anon}}" hint-placeholder-val="{{false}}"><a href="Main.dc.html" style="min-height:40px;display:inline-flex;align-items:center;padding:0 16px;border-radius:999px;background:#0A0A0A;color:#FFFFFF;text-decoration:none;font:600 14px 'Geist',sans-serif">Zaloguj się</a></sc-if></div>
+</div>
+</header>
+<div style="max-width:1240px;margin:0 auto;padding:36px 24px 72px;display:flex;flex-direction:column;gap:22px">
+<div style="display:flex;flex-direction:column;gap:10px">
+<span style="font:500 13px 'Geist Mono',monospace;color:#6B6B6B"><a href="B2-Projekty.dc.html" style="color:#6B6B6B">Projekty</a> / RM-2026-003, Gmina Czernikowo</span>
+<h1 style="margin:0;font-size:36px;font-weight:600;letter-spacing:-.035em;line-height:1.1">Oczyszczalnia ścieków w Steklinie</h1>
+</div>
+<nav aria-label="Widok projektu" style="display:flex;gap:6px;flex-wrap:wrap"><sc-for list="{{tabs}}" as="t" hint-placeholder-count="5"><a href="{{t.href}}" style="{{t.style}}">{{t.l}}</a></sc-for></nav>
+
+<div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+<sc-for list="{{filters}}" as="f" hint-placeholder-count="4"><button type="button" aria-pressed="{{f.on}}" onClick="{{f.pick}}" style="{{f.s}}">{{f.l}}</button></sc-for>
+<label style="margin-left:auto;display:inline-flex;align-items:center;gap:8px;font-size:13px;color:#525252">Porównaj wersję <select style="min-height:36px;border-radius:999px;border:1px solid #E5E5E5;padding:0 10px;font:500 13px 'Geist',sans-serif;background:#FFFFFF"><option>v1, import 12:05</option><option>v4, po wzbogaceniu</option></select> z bieżącą v7</label>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:8px">
+<sc-for list="{{rows}}" as="r" hint-placeholder-count="7">
+<div style="display:grid;grid-template-columns:110px 38px minmax(0,1fr) auto;gap:14px;align-items:start;padding:14px 16px;border-radius:18px;border:1px solid #F0F0F0">
+<span style="display:flex;flex-direction:column;gap:2px;padding-top:2px"><span style="font:600 13px 'Geist Mono',monospace">{{r.time}}</span><span style="font:500 11.5px 'Geist Mono',monospace;color:#6B6B6B">21.11.2026</span></span>
+<span style="{{r.av}}">{{r.who1}}</span>
+<span style="display:flex;flex-direction:column;gap:6px;min-width:0">
+<span style="font-size:15px"><strong style="font-weight:600">{{r.who}}</strong> {{r.what}}</span>
+<span style="display:flex;gap:6px;flex-wrap:wrap;align-items:center"><span style="font:500 12px 'Geist Mono',monospace;padding:3px 8px;border-radius:8px;background:#F6F6F6;color:#6B6B6B;text-decoration:line-through">{{r.before}}</span><span aria-hidden="true" style="color:#A3A3A3">→</span><span style="font:500 12px 'Geist Mono',monospace;padding:3px 8px;border-radius:8px;background:#F6F6F6;color:#0A0A0A">{{r.after}}</span></span>
+<span style="font-size:13px;color:#525252">{{r.why}}</span>
+</span>
+<span style="display:flex;flex-direction:column;align-items:flex-end;gap:6px"><span style="font:500 12px 'Geist Mono',monospace;color:#6B6B6B">{{r.ver}}</span><sc-if value="{{r.undo}}" hint-placeholder-val="{{false}}"><button type="button" style="min-height:30px;padding:0 12px;border-radius:999px;border:1px solid #E5E5E5;background:#FFFFFF;font:500 12.5px 'Geist',sans-serif">Przywróć</button></sc-if></span>
+</div>
+</sc-for>
+</div>
+<span style="font-size:12px;color:#6B6B6B">Dziennik tylko do dopisywania. Przywrócenie też jest nowym wpisem.</span>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"brandA":{"editor":"text","default":"ex"},"brandB":{"editor":"text","default":"ante"},"$preview":{"width":1440,"height":1300}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { f: 'all' }; }
+  renderVals() {
+    const active = 'Projekty';
+    const AUTH = true;
+    const NAV = [['Pulpit','Main.dc.html','',1],['Monitoring','D2-Monitoring.dc.html','12',0],['Nowa inwestycja','A1-Start.dc.html','',0],['Projekty','B2-Projekty.dc.html','',0],['Przegląd','C1-Przeglad.dc.html','37',1],['Katalog','C2-Katalog.dc.html','',1]];
+    const nav = NAV.filter((x) => AUTH || !x[3]).map(([label, href, count]) => ({ label, href, count: AUTH ? count : '', cs: label === active ? 'background:#FFFFFF;color:#0A0A0A' : 'background:#F0F0F0;color:#404040', style: "min-height:36px;display:inline-flex;align-items:center;padding:0 12px;border-radius:999px;text-decoration:none;font:500 14px 'Geist',sans-serif;" + (label === active ? 'background:#0A0A0A;color:#FFFFFF' : 'color:#404040') }));
+    const more = [['Import i źródła','B1-Import.dc.html'],['Historia','D3-Historia.dc.html'],['Ustawienia','D4-Ustawienia.dc.html']].map(([label, href]) => ({ label, href }));
+    const tabs = [['Przebieg','B3-Karta.dc.html'],['Graf powiązań','B4e-Przeplyw.dc.html'],['Dokumenty (0 z 4)','B7-Dokumenty.dc.html'],['Historia zmian','B6-HistoriaProjektu.dc.html']].map(([l, href], i) => ({ l, href, style: "min-height:36px;display:inline-flex;align-items:center;padding:0 14px;border-radius:999px;text-decoration:none;font:500 14px 'Geist',sans-serif;" + (i === 3 ? 'background:#0A0A0A;color:#FFFFFF' : 'border:1px solid #E5E5E5;color:#404040') }));
+    const stats = [{ l: 'Wersja rekordu', v: 'v7' }, { l: 'Decyzje ekspertów', v: '1' }, { l: 'Propozycje modelu', v: '3' }, { l: 'Zmiany z systemu', v: '5' }];
+    const AV = { e: ['E', 'width:38px;height:38px;border-radius:999px;background:#0A0A0A;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center;font:600 14px Geist,sans-serif'], s: ['S', 'width:38px;height:38px;border-radius:12px;background:#525252;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center;font:600 14px Geist,sans-serif'], m: ['AI', 'width:38px;height:38px;border-radius:12px;background:#7C3AED;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center;font:600 12px Geist,sans-serif'] };
+    const R = [
+      ['13:10', 'e', 'Ekspert', 'zatwierdził zdarzenie R01 „PFU nie opisał całego zakresu”', 'do przeglądu', 'zatwierdzone', 'Cytat z pola 5.3 ogłoszenia 2024/BZP 00554831 zgodny ze źródłem.', 'v7', true],
+      ['12:41', 'm', 'Model Bielik 11B (Polska)', 'zaproponował zdarzenie R04 „Pozwolenie zależało od urzędu”', 'brak', 'R04, pewność 0,32', 'Na podstawie sekcji zmian w ogłoszeniu o wykonaniu umowy.', 'v6', false],
+      ['12:41', 'm', 'Model Bielik 11B (Polska)', 'zaproponował zdarzenie R02 dla zmiany nr 2', 'brak', 'R02, pewność 0,46', 'Opis zmiany: wymiana rur azbestowych na polimerowe.', 'v5', false],
+      ['12:41', 's', 'System', 'dopasował ogłoszenie o wykonaniu do umowy', 'brak', '2026/BZP 00276065/01', 'Pole 4.5 zawiera numer ogłoszenia o wyniku 2024/BZP 00418711. Dopasowanie pewne.', 'v4', false],
+      ['12:41', 's', 'System', 'obliczył opóźnienie i koszt', 'brak', '+277 dni, +40,3%', 'Z pól 4.2, 4.4, 5.2 i 5.5. Suma umowy i dwóch zmian równa kwocie zapłaconej.', 'v3', false],
+      ['12:40', 's', 'System', 'dołączył 2 ogłoszenia o zmianie umowy', 'brak', '00554831, 00618384', 'Ten sam identyfikator postępowania (OCID).', 'v2', false],
+      ['12:05', 's', 'System', 'zaimportował rekord z zestawu organizatora', 'brak', 'RM-2026-003', 'Wiersz 3. NIP 8792466869 przeszedł sumę kontrolną.', 'v1', false]
+    ];
+    const kind = { all: null, e: 'e', m: 'm', s: 's' };
+    const rows = R.filter((r) => !kind[this.state.f] || r[1] === kind[this.state.f]).map(([time, k, who, what, before, after, why, ver, undo]) => ({ time, who1: AV[k][0], av: AV[k][1], who, what, before, after, why, ver, undo }));
+    const fb = "min-height:38px;padding:0 14px;border-radius:999px;font:500 14px 'Geist',sans-serif;cursor:pointer;";
+    const filters = [['all', 'Wszystko'], ['e', 'Decyzje eksperta'], ['m', 'Propozycje modelu'], ['s', 'System']].map(([k, l]) => ({ l, on: String(this.state.f === k), pick: () => this.setState({ f: k }), s: fb + (this.state.f === k ? 'border:0;background:#0A0A0A;color:#FFFFFF' : 'border:1px solid #E5E5E5;background:#FFFFFF;color:#404040') }));
+    return { auth: AUTH, anon: !AUTH, home: AUTH ? 'Main.dc.html' : 'D2-Monitoring.dc.html',  brandA: this.props.brandA ?? 'ex', brandB: this.props.brandB ?? 'ante', nav, more, tabs, stats, filters, rows };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+field,points_to,kind,n,pct,resolves_in_corpus,resolves_same_tenderId
+3.2.1,CN,BZP,24950,93.01,22611,22591
+3.2.1,CN,TED,926,3.45,0,0
+3.2.1,CN,other,53,0.2,0,0
+3.2.1,CN,missing,896,3.34,0,0
+4.5,TR,BZP,25791,96.15,24416,24414
+4.5,TR,TED,981,3.66,0,0
+4.5,TR,other,53,0.2,0,0
+4.5,TR,missing,0,0.0,0,0

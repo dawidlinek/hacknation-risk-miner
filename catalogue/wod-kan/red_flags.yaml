@@ -1,0 +1,98 @@
+# Sector pack wod-kan: edit in the panel or here; loaded by `riskminer seed-catalogue`.
+# Source: docs/research/03_domain_methodology.md (+ expert materials). status: approved | proposed.
+red_flags:
+- code: F1
+  text: Brak badań geotechnicznych przy trasie w terenie o wysokich wodach gruntowych
+  trigger: state(GEOTECH) ∈ {BRAK_W_PACZCE, DOKUMENT_NIE_WSPOMINA} AND (valley/wetland OR R02.1 pattern)
+  risk_codes:
+  - R02.1
+  status: approved
+- code: F2
+  text: Trasa przez grunty prywatne bez potwierdzonego prawa do dysponowania
+  trigger: R03.2 pattern AND state(zgody) ≠ POTWIERDZONO
+  risk_codes:
+  - R03.2
+  status: approved
+- code: F3
+  text: Sieć kanalizacyjna ≥ 1 km, brak informacji o decyzji środowiskowej
+  trigger: length ≥ 1 km AND DŚU state ∈ {BRAK_W_PACZCE, DOKUMENT_NIE_WSPOMINA}
+  risk_codes:
+  - R04.1
+  status: approved
+- code: F4
+  text: Przekroczenie cieku/drogi wyższej kategorii/kolei, uzgodnienia nieznane
+  trigger: R03.3 pattern
+  risk_codes:
+  - R03.3
+  - R04.2
+  status: approved
+- code: F5
+  text: Termin wykonania koliduje z terminem dofinansowania (bufor < 2 mies.)
+  trigger: funding deadline − planned end < 60 d
+  risk_codes:
+  - R06.1
+  - R13.1
+  status: approved
+- code: F6
+  text: Czas realizacji krótszy niż u 75% podobnych inwestycji
+  trigger: planned_duration < P25(reference class) adjusted for length
+  risk_codes:
+  - R06
+  status: approved
+- code: F7
+  text: Umowa > 6 mies. bez klauzuli waloryzacyjnej / limit ≤ 5%
+  trigger: §1.3 rules
+  risk_codes:
+  - R08.1
+  status: approved
+- code: F8
+  text: Ryczałt przy ilościach orientacyjnych
+  trigger: R01.2 + ryczałt
+  risk_codes:
+  - R08.2
+  - R01.2
+  status: approved
+- code: F9
+  text: Kosztorys inwestorski nieaktualny
+  trigger: estimate date older than 6 months AND GUS index change > 5%
+  risk_codes:
+  - R11.1
+  status: approved
+- code: F10
+  text: Zakres bez przyłączy i bez programu przyłączeń
+  trigger: R15.1 rule
+  risk_codes:
+  - R15.1
+  status: approved
+- code: F11
+  text: Efekt zależny od innego zadania
+  trigger: R18 patterns
+  risk_codes:
+  - R18
+  status: approved
+- code: F12
+  text: Formuła ZiW z wymaganymi decyzjami i terminem < 12 mies.
+  trigger: R06.2 rule
+  risk_codes:
+  - R06.2
+  status: approved
+- code: F13
+  text: Brak mierzalnych parametrów technologicznych (OŚ/SUW)
+  trigger: R09.1 rule
+  risk_codes:
+  - R09.1
+  - R10.1
+  status: approved
+- code: F14
+  text: Zimowe roboty ziemne bez rezerwy
+  trigger: R16 rule
+  risk_codes:
+  - R16
+  status: approved
+- code: F15
+  text: PPU z klauzulami ryzykownymi wg art. 433 Pzp
+  trigger: R11.3 rule
+  risk_codes:
+  - R11.3
+  - R05
+  status: approved

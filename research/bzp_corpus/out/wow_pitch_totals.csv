@@ -1,0 +1,12 @@
+,wod-kan core,cały korpus (wszystkie roboty)
+n_contracts,11184.0,26386.0
+contract_value_mln,20734.81,68005.29
+paid_mln,21216.65,69868.63
+paid_above_value_mln (sum of overruns),581.91,2713.33
+net_paid_minus_value_mln,481.85,1863.34
+late_share,0.3,0.32
+delay_days_sum,261350.0,664387.0
+delay_days_median_if_late,58.0,57.0
+change_share,0.41,0.48
+cost_overrun_share,0.21,0.29
+improper_share,0.01,0.01

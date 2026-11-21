@@ -1,0 +1,20 @@
+category,name,n_primary,pct_primary,n_any,pct_any,AU_primary,CP_primary
+R07,Roboty dodatkowe/zamienne (bez wskazanej przyczyny źródłowej),33,22.0,41,27.3,17,16
+R02,"Niedostateczne rozpoznanie stanu istniejącego (grunt, woda gruntowa, stan techniczny, nieznane obiekty)",19,12.7,25,16.7,11,8
+N-UNSPEC,Brak faktycznej przyczyny (formuła ogólna / tylko skutek),16,10.7,18,12.0,7,9
+R03,"Kolizje, dostęp do terenu i prawa do nieruchomości",11,7.3,18,12.0,6,5
+R01,"Niepełny lub niespójny zakres (braki/błędy dokumentacji, przedmiaru)",11,7.3,14,9.3,6,5
+R04,"Decyzje, pozwolenia, uzgodnienia, gestorzy sieci (podmioty trzecie)",9,6.0,15,10.0,4,5
+N-WEATHER,Warunki atmosferyczne,9,6.0,11,7.3,5,4
+N-CLIENT,Zmiana/rozszerzenie zakresu na życzenie zamawiającego,6,4.0,13,8.7,1,5
+R12,"Wykonawca i łańcuch dostaw (materiały, urządzenia, podwykonawcy)",6,4.0,9,6.0,3,3
+N-FORMAL,Zmiany formalne / redakcyjne / personalne (bez wpływu na ryzyko),5,3.3,5,3.3,0,5
+N-COVID,COVID-19,5,3.3,6,4.0,4,1
+R09,Niejednoznaczne wymagania techniczne / zmiana rozwiązania technicznego,5,3.3,8,5.3,3,2
+R08,Model wynagrodzenia / rozliczenie wg obmiaru / harmonogram płatności,5,3.3,8,5.3,3,2
+R13,"Finansowanie, budżet, płatności, dofinansowanie",4,2.7,4,2.7,2,2
+N-PRICE,Waloryzacja / wzrost cen / inflacja / wojna w Ukrainie,2,1.3,5,3.3,1,1
+R10,"Próby, rozruch i odbiór",2,1.3,5,3.3,1,1
+N-SCOPE-RED,Ograniczenie zakresu / roboty zaniechane,2,1.3,3,2.0,1,1
+N-LAW,"Zmiana przepisów (VAT, płaca minimalna, ustawy)",0,0.0,1,0.7,0,0
+R06,Harmonogram / zależności od innych robót i wykonawców,0,0.0,1,0.7,0,0

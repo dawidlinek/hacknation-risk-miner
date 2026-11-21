@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Pulpit</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0A0A0A}a:hover{color:#404040}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #0A0A0A;outline-offset:2px}
+</style>
+</helmet>
+<div style="min-height:100vh;background:#FFFFFF;font-family:'Geist',system-ui,sans-serif;color:#0A0A0A">
+<header style="border-bottom:1px solid #F0F0F0">
+<div style="max-width:1240px;margin:0 auto;padding:14px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px">
+<a href="{{home}}" style="display:inline-flex;align-items:baseline;text-decoration:none;color:#0A0A0A;font-size:19px;font-weight:700;letter-spacing:-.04em">{{brandA}}<span style="margin-left:3px;padding:0 6px 2px;border-radius:8px;background:#0A0A0A;color:#FFFFFF;letter-spacing:-.02em">{{brandB}}</span></a>
+<nav aria-label="Moduły" style="display:flex;gap:4px;flex-wrap:wrap;align-items:center">
+<sc-for list="{{nav}}" as="n" hint-placeholder-count="6"><a href="{{n.href}}" style="{{n.style}}">{{n.label}}<sc-if value="{{n.count}}" hint-placeholder-val="{{false}}"><span style="margin-left:6px;font:600 11px 'Geist Mono',monospace;padding:1px 6px;border-radius:999px;{{n.cs}}">{{n.count}}</span></sc-if></a></sc-for>
+<sc-if value="{{auth}}" hint-placeholder-val="{{false}}"><details style="position:relative"><summary style="list-style:none;min-height:36px;display:inline-flex;align-items:center;padding:0 12px;border-radius:999px;font:500 14px 'Geist',sans-serif;color:#404040;cursor:pointer">Więcej</summary><div style="position:absolute;right:0;top:42px;z-index:5;background:#FFFFFF;border:1px solid #E5E5E5;border-radius:18px;padding:6px;min-width:200px;box-shadow:0 12px 32px rgba(10,10,10,.14);display:flex;flex-direction:column"><sc-for list="{{more}}" as="m" hint-placeholder-count="3"><a href="{{m.href}}" style="padding:10px 12px;border-radius:12px;text-decoration:none;font:500 14px 'Geist',sans-serif;color:#0A0A0A">{{m.label}}</a></sc-for></div></details></sc-if>
+</nav>
+<div style="display:flex;align-items:center;gap:10px"><a href="A6-Czat.dc.html" style="min-height:40px;display:inline-flex;align-items:center;gap:8px;padding:0 14px;border-radius:999px;border:1px solid #E5E5E5;text-decoration:none;color:#0A0A0A;font:500 14px 'Geist',sans-serif"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"></path></svg>Zapytaj</a><sc-if value="{{auth}}" hint-placeholder-val="{{false}}"><button type="button" aria-label="Konto: ekspert" style="width:40px;height:40px;border-radius:999px;border:1px solid #E5E5E5;background:#F5F5F5;font:600 14px 'Geist',sans-serif">E</button></sc-if><sc-if value="{{anon}}" hint-placeholder-val="{{false}}"><a href="Main.dc.html" style="min-height:40px;display:inline-flex;align-items:center;padding:0 16px;border-radius:999px;background:#0A0A0A;color:#FFFFFF;text-decoration:none;font:600 14px 'Geist',sans-serif">Zaloguj się</a></sc-if></div>
+</div>
+</header>
+
+<div style="max-width:1240px;margin:0 auto;padding:36px 24px 72px;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:flex-end">
+<div style="display:flex;flex-direction:column;gap:8px"><h1 style="margin:0;font-size:36px;font-weight:600;letter-spacing:-.035em;line-height:1.1">Pulpit</h1></div>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><a href="B1-Import.dc.html" style="min-height:44px;display:inline-flex;align-items:center;padding:0 18px;border-radius:999px;border:1px solid #E5E5E5;text-decoration:none;font:500 15px 'Geist',sans-serif">Dodaj dane</a><a href="A1-Start.dc.html" style="min-height:44px;display:inline-flex;align-items:center;padding:0 20px;border-radius:999px;background:#0A0A0A;color:#FFFFFF;text-decoration:none;font:600 15px 'Geist',sans-serif">Nowa analiza</a></div>
+</div>
+
+<div style="background:#0A0A0A;color:#FFFFFF;border-radius:22px;padding:24px 26px;display:flex;flex-direction:column;gap:10px">
+
+<p style="margin: 0; font-size: 24px; line-height: 1.4; font-weight: 500; letter-spacing: -.015em; max-width: 900px; width: 1144px; height: 91px">Od 2021 r. 30% z 11 184 wykonanych umów wodno-kanalizacyjnych skończyło się po terminie, łącznie 261 tys. dni opóźnień. Ponad wartość umów zapłacono 582 mln zł.</p>
+
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px">
+<sc-for list="{{tiles}}" as="t" hint-placeholder-count="3">
+<a href="{{t.href}}" style="background:#F6F6F6;border-radius:22px;padding:18px 20px;display:flex;flex-direction:column;gap:6px;text-decoration:none;color:#0A0A0A">
+<span style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:14px;color:#6B6B6B">{{t.label}}</span><sc-if value="{{t.hot}}" hint-placeholder-val="{{false}}"><span style="width:10px;height:10px;border-radius:999px;background:#EA580C"></span></sc-if></span>
+<span style="font-size:34px;font-weight:600;letter-spacing:-.04em;line-height:1">{{t.value}}</span>
+<span style="font-size:13px;color:#525252">{{t.sub}}</span>
+</a>
+</sc-for>
+</div>
+
+<div style="display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start">
+<section aria-labelledby="pc" style="flex:999 1 600px;min-width:0;border:1px solid #E5E5E5;border-radius:28px;padding:22px;display:flex;flex-direction:column;gap:14px;box-shadow:0 1px 2px rgba(0,0,0,.04),0 12px 32px rgba(0,0,0,.05)">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:10px"><div style="display:flex;align-items:center;gap:10px"><span style="width:34px;height:34px;flex:none;border-radius:12px;background:#0A0A0A;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"></path></svg></span><h2 id="pc" style="margin:0;font-size:20px;font-weight:600;letter-spacing:-.02em">Zapytaj pamięć</h2></div><a href="A6-Czat.dc.html" style="font-size:14px;font-weight:500">Pełny widok →</a></div>
+<form style="display:flex;align-items:center;gap:8px;padding:6px 6px 6px 18px;border-radius:999px;border:1px solid #D4D4D4;background:#FFFFFF"><label for="pq" style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)">Pytanie do bazy</label><input id="pq" type="text" placeholder="Zapytaj o umowy, gminy, wykonawców albo koszty" style="flex:1;min-width:0;min-height:44px;border:none;outline:none;background:transparent;font:400 16px 'Geist',sans-serif"><button type="button" aria-label="Wyślij" style="width:44px;height:44px;border-radius:999px;border:none;background:#0A0A0A;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"></path></svg></button></form>
+<div style="display:flex;flex-wrap:wrap;gap:6px"><sc-for list="{{chips}}" as="c" hint-placeholder-count="3"><button type="button" aria-pressed="{{c.on}}" onClick="{{c.ask}}" style="{{c.s}}">{{c.l}}</button></sc-for></div>
+<div style="display:flex;flex-direction:column;gap:10px;padding-top:4px">
+<div style="display:flex;justify-content:flex-end"><div style="max-width:80%;padding:10px 14px;border-radius:18px 18px 6px 18px;background:#0A0A0A;color:#FFFFFF;font-size:14.5px;line-height:1.45">{{ans.q}}</div></div>
+<p style="margin:0;font-size:15px;line-height:1.55;max-width:720px">{{ans.a}}</p>
+<sc-if value="{{ans.hasBars}}" hint-placeholder-val="{{true}}"><div style="display:flex;flex-direction:column;gap:6px;max-width:520px"><sc-for list="{{ans.bars}}" as="b" hint-placeholder-count="2"><div style="display:grid;grid-template-columns:170px minmax(0,1fr) 48px;gap:10px;align-items:center"><span style="font-size:13px;color:#404040">{{b.l}}</span><span style="height:10px;border-radius:999px;background:#F0F0F0;overflow:hidden"><span style="display:block;height:100%;border-radius:999px;{{b.s}}"></span></span><span style="font:600 12.5px 'Geist Mono',monospace;text-align:right">{{b.v}}</span></div></sc-for></div></sc-if>
+<div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap"><span style="font:500 11.5px 'Geist Mono',monospace;color:#6B6B6B">{{ans.src}}</span><a href="{{ans.href}}" style="margin-left:auto;min-height:32px;display:inline-flex;align-items:center;padding:0 12px;border-radius:999px;border:1px solid #E5E5E5;text-decoration:none;font:500 13px 'Geist',sans-serif">{{ans.cta}}</a></div>
+</div>
+</section>
+
+<aside style="flex:1 1 360px;max-width:100%;min-width:0;display:flex;flex-direction:column;gap:16px">
+<section aria-labelledby="p1" style="border:1px solid #F0F0F0;border-radius:28px;padding:20px 22px;display:flex;flex-direction:column;gap:4px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:6px"><h2 id="p1" style="margin:0;font-size:18px;font-weight:600;letter-spacing:-.015em">Źródła danych</h2><a href="B1-Import.dc.html" style="font-size:13px;font-weight:500">Uruchomienia →</a></div>
+<sc-for list="{{sources}}" as="s" hint-placeholder-count="5">
+<div style="display:flex;gap:10px;align-items:center;padding:8px 0;border-top:1px solid #F0F0F0">
+<span style="width:8px;height:8px;flex:none;border-radius:999px;background:{{s.dot}}"></span>
+<span style="flex:1;min-width:0;font-size:14px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="{{s.what}}">{{s.name}}</span>
+<span style="font:500 12px 'Geist Mono',monospace;color:#525252;white-space:nowrap">{{s.count}}</span>
+</div>
+</sc-for>
+</section>
+<section aria-labelledby="p2" style="background:#F6F6F6;border-radius:28px;padding:20px;display:flex;flex-direction:column;gap:8px">
+<div style="display:flex;flex-direction:column;gap:2px;padding:2px 4px 8px"><h2 id="p2" style="margin:0;font-size:18px;font-weight:600;letter-spacing:-.015em">Do wyjaśnienia w danych</h2><span style="font-size:13px;color:#6B6B6B">rozbieżności między zestawem a źródłami</span></div>
+<sc-for list="{{issues}}" as="i" hint-placeholder-count="4">
+<a href="C1-Przeglad.dc.html" style="border-radius:18px;background:#FFFFFF;padding:12px 14px;display:flex;gap:12px;align-items:flex-start;text-decoration:none;color:#0A0A0A">
+<span style="width:22px;height:22px;flex:none;box-sizing:border-box;border-radius:999px;border:2px solid #EA580C;display:inline-flex;align-items:center;justify-content:center;margin-top:1px"><span style="width:8px;height:8px;border-radius:999px;background:#EA580C"></span></span>
+<span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px"><span style="font-size:15px;font-weight:600">{{i.t}}</span><span style="font-size:13px;color:#525252">{{i.d}}</span><span style="font:500 11.5px 'Geist Mono',monospace;color:#6B6B6B">{{i.ref}}</span></span>
+</a>
+</sc-for>
+</section>
+</aside>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"brandA":{"editor":"text","default":"ex"},"brandB":{"editor":"text","default":"ante"},"$preview":{"width":1440,"height":1300}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { k: 'zw' }; }
+  renderVals() {
+    const active = 'Pulpit';
+    const AUTH = true;
+    const NAV = [['Pulpit','Main.dc.html','',1],['Monitoring','D2-Monitoring.dc.html','12',0],['Nowa inwestycja','A1-Start.dc.html','',0],['Projekty','B2-Projekty.dc.html','',0],['Przegląd','C1-Przeglad.dc.html','37',1],['Katalog','C2-Katalog.dc.html','',1]];
+    const nav = NAV.filter((x) => AUTH || !x[3]).map(([label, href, count]) => ({ label, href, count: AUTH ? count : '', cs: label === active ? 'background:#FFFFFF;color:#0A0A0A' : 'background:#F0F0F0;color:#404040', style: "min-height:36px;display:inline-flex;align-items:center;padding:0 12px;border-radius:999px;text-decoration:none;font:500 14px 'Geist',sans-serif;" + (label === active ? 'background:#0A0A0A;color:#FFFFFF' : 'color:#404040') }));
+    const more = [['Import i źródła','B1-Import.dc.html'],['Historia','D3-Historia.dc.html'],['Ustawienia','D4-Ustawienia.dc.html']].map(([label, href]) => ({ label, href }));
+    const tiles = [
+      { label: 'Czeka na Twoją decyzję', value: '37', sub: '16 zdarzeń, 12 powiązań, 3 rozbieżności', href: 'C1-Przeglad.dc.html', hot: true },
+      { label: 'Nowe sygnały w monitoringu', value: '12', sub: 'trwające umowy po terminie bez ogłoszenia o wykonaniu', href: 'D2-Monitoring.dc.html', hot: true },
+      { label: 'Twoje analizy', value: '2', sub: 'AN-2026-0014 szkic, AN-2026-0011 gotowa', href: 'A2-Raport.dc.html', hot: false }
+    ];
+    const sources = [
+      { name: 'BZP: kopia ogłoszeń', what: 'ogłoszenia o zamówieniu, wyniku, zmianie i wykonaniu umowy', count: '113 278 ogłoszeń', when: 'kopia z 12.11.2026', dot: '#16A34A' },
+      { name: 'BZP: API na żywo', what: 'dociąganie nowych ogłoszeń od 12.11.2026', count: '[n] nowych', when: 'dziś [godz.]', dot: '#16A34A' },
+      { name: 'Zestaw organizatora (XLSX)', what: '22 przedsięwzięcia: 13 z numerem BZP, 9 z numerem KPO', count: '22 / 22 powiązane', when: 'import 21.11.2026', dot: '#16A34A' },
+      { name: 'Lista projektów KPO', what: 'rozwiązanie numerów KPOD na postępowania', count: '[n] projektów', when: '[do uruchomienia]', dot: '#A3A3A3' },
+      { name: 'TED, NIK, KIO', what: 'ogłoszenia unijne, kontrole, orzeczenia', count: '[n]', when: '[do uruchomienia]', dot: '#A3A3A3' }
+    ];
+    const issues = [
+      { t: 'Zakrzew: „część 2” w zestawie', d: 'Opis KPO pasuje do części 1 (trzy odcinki wodociągu).', ref: 'RM-2026-009, 2025/BZP 00307948' },
+      { t: 'Biecz: rekord obejmuje 4 części', d: '11,871 km z opisu KPO to suma części 1–4, nie tylko część 1.', ref: 'RM-2026-008, 2026/BZP 00084760' },
+      { t: 'Wolin: brak ogłoszenia w źródle', d: 'Numer jest prawdziwy: cytują go 2 późniejsze ogłoszenia.', ref: 'RM-2026-022, 2023/BZP 00110672' },
+      { t: 'Kamionka: wartość KPO o 52% wyższa', d: 'Umowa 1,48 mln zł wobec 3,10 mln zł w projekcie KPO.', ref: 'RM-2026-007, KPOD.03.15-IW.15-0081/25' }
+    ];
+    const bar = (l, v, w, hot) => ({ l, v, s: 'width:' + w + '%;background:' + (hot ? '#EA580C' : '#0A0A0A') });
+    const A = {
+      zw: { q: 'Porównaj „zaprojektuj i wybuduj” z samym wykonaniem', a: 'W formule „zaprojektuj i wybuduj” po terminie kończy się 47% umów, przy samym wykonaniu 28%. Różnica utrzymuje się w każdym przedziale wartości.', bars: [bar('zaprojektuj i wybuduj', '47%', 47, true), bar('samo wykonanie', '28%', 28, false)], src: 'obliczenie, n = 1 390 i 9 794', cta: 'Zapisz jako rekord', href: 'A6-Czat.dc.html' },
+      km: { q: 'Ile kosztuje kilometr sieci?', a: 'Mediana to 0,89 mln zł za km kanalizacji sanitarnej i 0,39 mln zł za km wodociągu. W 2022 r. kanalizacja zdrożała o 41% wobec 2021 r.', bars: [bar('kanalizacja sanitarna', '0,89', 89, false), bar('wodociąg', '0,39', 39, false)], src: 'obliczenie, mln zł/km, ceny nominalne', cta: 'Zapisz jako rekord', href: 'A6-Czat.dc.html' },
+      wo: { q: 'Gdzie najwięcej umów kończy się po terminie?', a: 'W lubuskim (43%) i dolnośląskim (40%). Najmniej w kujawsko-pomorskim (23%). Średnia krajowa to 30%.', bars: [bar('lubuskie', '43%', 43, true), bar('dolnośląskie', '40%', 40, true), bar('kujawsko-pomorskie', '23%', 23, false)], src: 'obliczenie, 11 184 wykonane umowy wod-kan od 2021 r.', cta: 'Pokaż na mapie', href: 'D2-Monitoring.dc.html' }
+    };
+    const k = this.state.k;
+    const ans = Object.assign({ hasBars: true }, A[k]);
+    const chips = [['zw', 'Zaprojektuj i wybuduj a samo wykonanie'], ['km', 'Ile kosztuje kilometr sieci?'], ['wo', 'Gdzie najwięcej opóźnień?']].map(([id, l]) => ({ l, on: String(id === k), ask: () => this.setState({ k: id }), s: "min-height:34px;padding:0 14px;border-radius:999px;cursor:pointer;font:500 13px 'Geist',sans-serif;" + (id === k ? 'background:#0A0A0A;color:#FFFFFF;border:1px solid #0A0A0A' : 'background:#FFFFFF;color:#404040;border:1px solid #E5E5E5') }));
+    return { auth: AUTH, anon: !AUTH, home: AUTH ? 'Main.dc.html' : 'D2-Monitoring.dc.html',  brandA: this.props.brandA ?? 'ex', brandB: this.props.brandB ?? 'ante', nav, more, tiles, sources, issues, chips, ans };
+  }
+}
+</script>
+</body>
+</html>

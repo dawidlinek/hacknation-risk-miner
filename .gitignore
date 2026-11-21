@@ -1,0 +1,38 @@
+# Raw challenge materials and large data dumps (kept locally, not committed)
+materials/bzp_kopia/
+materials/bzp_kopia_zip/
+*.jsonl
+*.jsonl.xz
+*.jsonl.idx
+*.jsonl.ok
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# Node
+node_modules/
+.next/
+
+# Regenerable research outputs (rebuild with research/bzp_corpus pipeline, ~2 min)
+research/bzp_corpus/data/
+research/sources/nik/*.pdf
+research/sources/dl_kposk/
+
+# Risk Miner runtime data (scrape.md §0.7: data/ stays out of git except tiny fixtures)
+data/*
+!data/fixtures/
+config/config.yaml
+.pytest_cache/
+.ruff_cache/
+
+# Organizer materials: keep only what the code needs (dataset); expert docs, rules and PDFs stay local
+materials/*
+!materials/starter/
+materials/starter/*
+!materials/starter/Risk_Miner_dane_projekty.xlsx
+!materials/text/
+materials/text/*
+!materials/text/05_dane_projekty.txt

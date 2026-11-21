@@ -1,0 +1,17 @@
+# Sector pack wod-kan: edit in the panel or here; loaded by `riskminer seed-catalogue`.
+# Source: docs/research/03_domain_methodology.md (+ expert materials). status: approved | proposed.
+sector: wod-kan
+name: Gospodarka wodno-ściekowa (wod-kan)
+schema_version: 1
+files:
+- checklist.yaml
+- clauses.yaml
+- cpv_map.yaml
+- doc_types.yaml
+- event_types.yaml
+- evidence_states.yaml
+- lexicon.yaml
+- red_flags.yaml
+- risks.yaml
+- similarity.yaml
+- subsectors.yaml

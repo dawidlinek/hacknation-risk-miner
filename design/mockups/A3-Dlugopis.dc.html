@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Czerwony długopis: PFU</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0A0A0A}a:hover{color:#404040}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #0A0A0A;outline-offset:2px}
+</style>
+</helmet>
+<div style="min-height:100vh;background:#FFFFFF;font-family:'Geist',system-ui,sans-serif;color:#0A0A0A">
+<header style="border-bottom:1px solid #F0F0F0">
+<div style="max-width:1240px;margin:0 auto;padding:14px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px">
+<a href="{{home}}" style="display:inline-flex;align-items:baseline;text-decoration:none;color:#0A0A0A;font-size:19px;font-weight:700;letter-spacing:-.04em">{{brandA}}<span style="margin-left:3px;padding:0 6px 2px;border-radius:8px;background:#0A0A0A;color:#FFFFFF;letter-spacing:-.02em">{{brandB}}</span></a>
+<nav aria-label="Moduły" style="display:flex;gap:4px;flex-wrap:wrap;align-items:center">
+<sc-for list="{{nav}}" as="n" hint-placeholder-count="6"><a href="{{n.href}}" style="{{n.style}}">{{n.label}}<sc-if value="{{n.count}}" hint-placeholder-val="{{false}}"><span style="margin-left:6px;font:600 11px 'Geist Mono',monospace;padding:1px 6px;border-radius:999px;{{n.cs}}">{{n.count}}</span></sc-if></a></sc-for>
+<sc-if value="{{auth}}" hint-placeholder-val="{{false}}"><details style="position:relative"><summary style="list-style:none;min-height:36px;display:inline-flex;align-items:center;padding:0 12px;border-radius:999px;font:500 14px 'Geist',sans-serif;color:#404040;cursor:pointer">Więcej</summary><div style="position:absolute;right:0;top:42px;z-index:5;background:#FFFFFF;border:1px solid #E5E5E5;border-radius:18px;padding:6px;min-width:200px;box-shadow:0 12px 32px rgba(10,10,10,.14);display:flex;flex-direction:column"><sc-for list="{{more}}" as="m" hint-placeholder-count="3"><a href="{{m.href}}" style="padding:10px 12px;border-radius:12px;text-decoration:none;font:500 14px 'Geist',sans-serif;color:#0A0A0A">{{m.label}}</a></sc-for></div></details></sc-if>
+</nav>
+<div style="display:flex;align-items:center;gap:10px"><a href="A6-Czat.dc.html" style="min-height:40px;display:inline-flex;align-items:center;gap:8px;padding:0 14px;border-radius:999px;border:1px solid #E5E5E5;text-decoration:none;color:#0A0A0A;font:500 14px 'Geist',sans-serif"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"></path></svg>Zapytaj</a><sc-if value="{{auth}}" hint-placeholder-val="{{false}}"><button type="button" aria-label="Konto: ekspert" style="width:40px;height:40px;border-radius:999px;border:1px solid #E5E5E5;background:#F5F5F5;font:600 14px 'Geist',sans-serif">E</button></sc-if><sc-if value="{{anon}}" hint-placeholder-val="{{false}}"><a href="Main.dc.html" style="min-height:40px;display:inline-flex;align-items:center;padding:0 16px;border-radius:999px;background:#0A0A0A;color:#FFFFFF;text-decoration:none;font:600 14px 'Geist',sans-serif">Zaloguj się</a></sc-if></div>
+</div>
+</header>
+<div style="max-width:1240px;margin:0 auto;padding:28px 24px 72px;display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center">
+<nav aria-label="Sekcje analizy" style="display:flex;gap:6px;flex-wrap:wrap"><sc-for list="{{tabs}}" as="t" hint-placeholder-count="4"><a href="{{t.href}}" style="{{t.style}}">{{t.l}}</a></sc-for></nav>
+
+</div>
+
+<div style="display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start">
+<section aria-label="Dokument" style="flex:999 1 560px;min-width:0;background:#F6F6F6;border-radius:28px;padding:18px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:0 4px">
+<span style="font-size:15px;font-weight:600">PFU_kanalizacja_v2.pdf</span>
+<div style="display:flex;align-items:center;gap:6px"><button type="button" aria-label="Poprzednia strona" style="width:36px;height:36px;border-radius:999px;border:1px solid #E5E5E5;background:#FFFFFF">‹</button><span style="font:500 13px 'Geist Mono',monospace;padding:0 6px">s. 14 / 38</span><button type="button" aria-label="Następna strona" style="width:36px;height:36px;border-radius:999px;border:1px solid #E5E5E5;background:#FFFFFF">›</button><label style="display:inline-flex;align-items:center;gap:8px;margin-left:8px;font-size:13px;color:#404040"><input type="checkbox" checked="" style="width:16px;height:16px;accent-color:#0A0A0A">tylko strony z uwagami</label></div>
+</div>
+<article style="background:#FFFFFF;border-radius:18px;padding:40px 48px;font:400 15px/1.75 Georgia,'Times New Roman',serif;color:#1F1F1F;display:flex;flex-direction:column;gap:14px;box-shadow:0 1px 2px rgba(0,0,0,.04)">
+<span style="font:500 12px 'Geist Mono',monospace;color:#6B6B6B">Program funkcjonalno-użytkowy, strona 14</span>
+<h2 style="margin:0;font:700 16px Georgia,serif">2.4. Warunki gruntowo-wodne</h2>
+<p style="margin:0">Teren inwestycji położony jest w strefie zmiennych warunków gruntowych. Zamawiający nie dysponuje aktualną dokumentacją geotechniczną dla całej trasy kanału.</p>
+<p style="margin:0;position:relative"><mark style="background:#FFEDD5;color:#1F1F1F;box-shadow:inset 0 -2px 0 #EA580C;padding:0 2px">Wykonawca w ramach wynagrodzenia ryczałtowego wykona niezbędne badania podłoża gruntowego na etapie projektowania.</mark> <a href="#u1" aria-label="Uwaga 1" style="display:inline-flex;width:22px;height:22px;border-radius:999px;background:#EA580C;color:#FFFFFF;align-items:center;justify-content:center;font:600 11px 'Geist Mono',monospace;text-decoration:none;vertical-align:middle">1</a></p>
+<p style="margin:0">Roboty prowadzić w sposób zapewniający bezpieczeństwo istniejącej zabudowy oraz obiektów infrastruktury technicznej, zgodnie z dokumentacją projektową wykonaną przez Wykonawcę.</p>
+<h2 style="margin:6px 0 0;font:700 16px Georgia,serif">2.5. Odwodnienie wykopów</h2>
+<p style="margin:0"><mark style="background:#FFEDD5;color:#1F1F1F;box-shadow:inset 0 -2px 0 #EA580C;padding:0 2px">Koszty ewentualnego odwodnienia wykopów Wykonawca uwzględni w cenie ofertowej.</mark> <a href="#u2" aria-label="Uwaga 2" style="display:inline-flex;width:22px;height:22px;border-radius:999px;background:#EA580C;color:#FFFFFF;align-items:center;justify-content:center;font:600 11px 'Geist Mono',monospace;text-decoration:none;vertical-align:middle">2</a></p>
+<p style="margin:0">Sposób odwodnienia uzgodni Wykonawca z właściwym organem i zarządcą cieku.</p>
+</article>
+<span style="font-size:12px;color:#6B6B6B;padding:0 6px">Tekst strony to fragment wgranego projektu PFU (dokument demonstracyjny).</span>
+</section>
+
+<aside style="flex:1 1 380px;max-width:100%;min-width:0;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;justify-content:space-between;align-items:baseline"><h1 style="margin:0;font-size:22px;font-weight:600;letter-spacing:-.02em">Uwagi do dokumentów</h1><span style="font:500 12px 'Geist Mono',monospace;color:#6B6B6B">5 uwag, 2 braki</span></div>
+
+<article id="u1" style="border:1.5px solid #0A0A0A;border-radius:22px;padding:16px 18px;display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;justify-content:space-between;gap:8px;align-items:center"><span style="display:inline-flex;align-items:center;gap:8px"><span style="width:22px;height:22px;border-radius:999px;background:#EA580C;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center;font:600 11px 'Geist Mono',monospace">1</span><span style="font:600 12px 'Geist Mono',monospace;color:#404040">R02, s. 14 pkt 2.4</span></span><span style="font:500 12px 'Geist Mono',monospace;color:#166534">zatwierdzone</span></div>
+<span style="font-size:16px;font-weight:600;line-height:1.35">Badania gruntu dopiero po podpisaniu umowy, przy ryczałcie</span>
+<span style="font-size:14px;color:#404040;line-height:1.5">Wykonawca wyceni ryzyko w ciemno albo później poprosi o zmianę. W 2 z 4 podobnych przypadków nierozpoznany grunt lub sieć skończył się zmianą umowy.</span>
+<div style="display:flex;gap:6px;flex-wrap:wrap"><a href="B3-Karta.dc.html" style="min-height:30px;display:inline-flex;align-items:center;padding:0 12px;border-radius:999px;background:#F6F6F6;text-decoration:none;font-size:13px">Konarzewo, art. 455 ust. 1 pkt 4</a><a href="B3-Karta.dc.html" style="min-height:30px;display:inline-flex;align-items:center;padding:0 12px;border-radius:999px;background:#F6F6F6;text-decoration:none;font-size:13px">Steklin, +100 325,44 zł</a></div>
+<div style="background:#F6F6F6;border-radius:16px;padding:12px 14px;display:flex;flex-direction:column;gap:6px"><span style="font:600 11px 'Geist Mono',monospace;color:#6B6B6B">PROPONOWANY ZAPIS, K-21</span><span style="font-size:14px;line-height:1.55">„Zamawiający przekazuje dokumentację geotechniczną stanowiącą załącznik nr [X] do SWZ. Koszty robót wynikających z warunków gruntowych odmiennych od opisanych w dokumentacji rozlicza się na podstawie protokołu konieczności.”</span></div>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><button type="button" style="min-height:38px;padding:0 14px;border-radius:999px;border:0;background:#0A0A0A;color:#FFFFFF;font:600 14px 'Geist',sans-serif">Dodaj do PPU</button><button type="button" style="min-height:38px;padding:0 14px;border-radius:999px;border:1px solid #E5E5E5;background:#FFFFFF;font:500 14px 'Geist',sans-serif">Popraw zapis</button></div>
+</article>
+
+<sc-for list="{{notes}}" as="u" hint-placeholder-count="4">
+<a href="{{u.href}}" style="display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border-radius:18px;border:1px solid #F0F0F0;text-decoration:none;color:#0A0A0A">
+<span style="{{u.dot}}">{{u.n}}</span>
+<span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px"><span style="font-size:15px;font-weight:600">{{u.t}}</span><span style="font-size:13px;color:#525252">{{u.d}}</span><span style="font:500 11.5px 'Geist Mono',monospace;color:#6B6B6B">{{u.meta}}</span></span>
+</a>
+</sc-for>
+</aside>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"brandA":{"editor":"text","default":"ex"},"brandB":{"editor":"text","default":"ante"},"$preview":{"width":1440,"height":1300}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const active = 'Nowa inwestycja';
+    const AUTH = false;
+    const NAV = [['Pulpit','Main.dc.html','',1],['Monitoring','D2-Monitoring.dc.html','12',0],['Nowa inwestycja','A1-Start.dc.html','',0],['Projekty','B2-Projekty.dc.html','',0],['Przegląd','C1-Przeglad.dc.html','37',1],['Katalog','C2-Katalog.dc.html','',1]];
+    const nav = NAV.filter((x) => AUTH || !x[3]).map(([label, href, count]) => ({ label, href, count: AUTH ? count : '', cs: label === active ? 'background:#FFFFFF;color:#0A0A0A' : 'background:#F0F0F0;color:#404040', style: "min-height:36px;display:inline-flex;align-items:center;padding:0 12px;border-radius:999px;text-decoration:none;font:500 14px 'Geist',sans-serif;" + (label === active ? 'background:#0A0A0A;color:#FFFFFF' : 'color:#404040') }));
+    const more = [['Import i źródła','B1-Import.dc.html'],['Historia','D3-Historia.dc.html'],['Ustawienia','D4-Ustawienia.dc.html']].map(([label, href]) => ({ label, href }));
+    const tabs = [['Podsumowanie','A2-Raport.dc.html'],['Czerwony długopis','A3-Dlugopis.dc.html'],['Symulacja','A4-Symulacja.dc.html'],['Podział ryzyk i pakiet','A5-Podzial.dc.html']].map(([l, href], i) => ({ l, href, style: "min-height:36px;display:inline-flex;align-items:center;padding:0 14px;border-radius:999px;text-decoration:none;font:500 14px 'Geist',sans-serif;" + (i === 1 ? 'background:#0A0A0A;color:#FFFFFF' : 'border:1px solid #E5E5E5;color:#404040') }));
+    const found = "width:22px;height:22px;flex:none;border-radius:999px;background:#EA580C;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center;font:600 11px 'Geist Mono',monospace";
+    const missing = "width:22px;height:22px;flex:none;box-sizing:border-box;border-radius:999px;border:2px dashed #EA580C;color:#C2410C;display:inline-flex;align-items:center;justify-content:center;font:600 11px 'Geist Mono',monospace";
+    const notes = [
+      { n: '2', dot: found, t: 'Odwodnienie wykopów w cenie ryczałtowej', d: 'Bez danych o wodzie gruntowej wykonawca nie wyceni tego rzetelnie.', meta: 'R02, R08, s. 14 pkt 2.5, do przeglądu', href: '#u2' },
+      { n: '3', dot: found, t: 'Ryczałt przy „ok. 6 km” sieci', d: 'Długość ustali dopiero projekt wykonawcy.', meta: 'R08, s. 6 pkt 1.1, do przeglądu', href: '#u3' },
+      { n: '4', dot: found, t: 'Trasa przez prywatne działki', d: 'Nie wiadomo, kto i kiedy uzyska służebności.', meta: 'R03, s. 9 pkt 1.3, do przeglądu', href: '#u4' },
+      { n: 'A', dot: missing, t: 'Brak: klauzula waloryzacyjna w PPU', d: 'Wymagana przy robotach > 6 mies. (art. 439 Pzp). Proponowany zapis K-07.', meta: 'R13, PPU, dokument nie wspomina', href: '#ua' },
+      { n: 'B', dot: missing, t: 'Brak: dokumentacja geotechniczna', d: 'Nie ma jej w paczce. Ogranicza ocenę ryzyka R02.', meta: 'nie ma w paczce', href: '#ub' }
+    ];
+    return { auth: AUTH, anon: !AUTH, home: AUTH ? 'Main.dc.html' : 'D2-Monitoring.dc.html',  brandA: this.props.brandA ?? 'ex', brandB: this.props.brandB ?? 'ante', nav, more, tabs, notes };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+source,label,queries_run,fetched_ok,empty,blocked,errors,bytes,records_loaded,checks,record_kinds,last_run,licence,location
+xlsx,"Zestaw organizatora (XLSX, 22 projekty)",1,1,0,0,0,0,22,,,2026-11-21 11:58 UTC,"organizer dataset (HackNation 2026, MFiPR)",materials/starter/Risk_Miner_dane_projekty.xlsx
+bzp_copy,BZP: kopia krajowa organizatora,1,1,0,0,0,0,113278,,,2026-11-12 11:55 UTC,"public information (organizer copy of the BZP API, records unchanged)",materials/bzp_kopia/risk_miner_bzp_kopia/bzp_kopia/notices.jsonl
+bzp_api,BZP: API e-Zamówienia (delta na żywo),443,384,57,0,2,91301141,1077,found=22,,2026-11-21 13:26:10 UTC,public information,data/raw/bzp_api/
+vat_whitelist,Biała lista VAT,9,9,0,0,0,173766,234,found=234;not_found=2,vat_entity=234,2026-11-21 13:01:54 UTC,public register,data/raw/vat_whitelist/
+teryt,TERYT (TERC),399,399,0,0,0,293755,4360,,teryt_unit=4360,2026-11-21 12:02:25 UTC,public (GUS TERYT),data/raw/teryt/
+geo,Granice administracyjne (GeoJSON),35,35,0,0,0,162199227,2875,,admin_boundary=2875,2026-11-21 12:00:26 UTC,public (PRG GUGiK); see note for mirror licence,data/raw/geo/
+mapa_dotacji,Mapa Dotacji: KPO B3.1.1,695,695,0,0,0,53895627,631,found=24;not_found=6,kpo_project=631,2026-11-21 12:35:38 UTC,public; attribution (mapadotacji.gov.pl),data/raw/mapa_dotacji/
+ted,TED (UE),7380,7380,0,0,0,568566504,18325,found=2;not_found=40,ted_notice=18325,2026-11-21 14:00:39 UTC,EU reuse (Decision 2011/833/EU),data/raw/ted/
+kio,Orzeczenia KIO,6608,6608,0,0,0,456739255,2084,found=17;not_found=25,kio_ruling=2084,2026-11-21 13:17:02 UTC,public; natural persons pseudonymised by KIO,data/raw/kio/
+nik,Wyniki kontroli NIK,1067,1062,0,0,5,591473452,522,found=1;not_found=21,nik_audit=80,2026-11-21 12:39:12 UTC,public information,data/raw/nik/
+cru,Centralny Rejestr Umów,3095,3093,0,2,0,11926163,16982,found=25;not_found=9;partial=8,cru_agreement=16982,2026-11-21 17:31:42 UTC,public (art. 34a u.f.p.),data/raw/cru/
+docs_22,Dokumenty postępowań (22),2687,2259,0,417,11,3253911499,1138,found=6;partial=16,,2026-11-21 17:05:41 UTC,public information,data/raw/docs_22/
+docs_sample,Dokumenty: próba krajowa,19819,19761,14,37,7,18492230409,9403,found=31;not_found=1;partial=173,,2026-11-21 13:17:39 UTC,public information,data/raw/docs_sample/
+kposk,KPOŚK,6,6,0,0,0,20414773,15950,,kposk_agglomeration=7694;kposk_wwtp=8256,2026-11-21 12:38:54 UTC,CC BY 4.0,data/raw/kposk/
+gus_bdl,GUS BDL,455,449,0,0,6,19730508,289873,,bdl_value=289873,2026-11-21 14:42:11 UTC,"GUS open data, attribution",data/raw/gus_bdl/
+gus_price_index,GUS: wskaźnik cen,4,4,0,0,0,2098684,671,,price_index=671,2026-11-21 12:47:54 UTC,"GUS open data, attribution",data/raw/gus_price_index/
+fe_projects,Lista projektów FE,2,2,0,0,0,282296378,2350,found=12;not_found=8,fe_project=2350,2026-11-21 12:43:30 UTC,public,data/raw/fe_projects/
+nfosigw,NFOŚiGW,8,8,0,0,0,2877762,126,,nfosigw_grant=126,2026-11-21 12:49:03 UTC,CC0,data/raw/nfosigw/
+bip_22,BIP (22 gminy),1912,1799,2,0,111,754228313,78,blocked=3;found=9;not_found=9;partial=1,,2026-11-21 13:23:40 UTC,public information,data/raw/bip_22/
+gus_bir,GUS BIR (REGON),81,81,0,0,0,249673,38,found=37;not_found=3,bir_entity=38,2026-11-21 12:53:27 UTC,public register,data/raw/gus_bir/
+krs,KRS,215,108,0,107,0,1554089,107,found=107,krs_entity=107,2026-11-21 14:11:07 UTC,public register,data/raw/krs/
+bk2021,Baza Konkurencyjności,130,130,0,0,0,1592674,110,found=16;not_found=4,bk_announcement=110,2026-11-21 13:05:37 UTC,public; contact persons dropped,data/raw/bk2021/
+bzp_roads,BZP: drogi (pakiet W9),418,418,0,0,0,3643043598,134287,found=20,,2026-11-21 15:20:43 UTC,public information,data/raw/bzp_roads/

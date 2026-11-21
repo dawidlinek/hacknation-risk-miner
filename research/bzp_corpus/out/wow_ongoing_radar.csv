@@ -1,0 +1,3 @@
+population,awarded_contracts(TR rows),with_perf_notice,without_perf_notice,without_any_perf_in_same_tender,without_perf_planned_end_future,without_perf_past_end_0_90d,without_perf_past_end_90_365d,without_perf_past_end_gt_365d,without_perf_with_change_notice,without_perf_past_end_and_change_notice,value_without_perf_mln
+wod-kan core,15812,10939,4873,4574,1138,414,627,2694,253,234,18610.1
+wszystkie,38678,25318,13360,11862,3741,1353,1479,6787,720,654,50194.1

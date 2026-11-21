@@ -1,0 +1,58 @@
+# Sector pack wod-kan: edit in the panel or here; loaded by `riskminer seed-catalogue`.
+# Source: docs/research/03_domain_methodology.md (+ expert materials). status: approved | proposed.
+evidence_states:
+- code: JESZCZE_NIEWYMAGALNY
+  label: jeszcze niewymagalny
+  definition: The document cannot exist yet (e.g. completion notice before planned end + 30 d)
+  effect_on_risk: none
+  effect_on_completeness: excluded from C
+- code: BRAK_W_PACZCE
+  label: brak w paczce
+  definition: 'No document of an expected type is in the package, and the automatic search found nothing. Reason code: `nie_szukano` / `szukano_nie_znaleziono`
+    / `nie_publikowany_z_mocy_prawa` / `wymaga_wniosku_o_informację_publiczną'
+  effect_on_risk: '**none** (unknown ≠ negative)'
+  effect_on_completeness: lowers C
+- code: NIECZYTELNY
+  label: dokument nieczytelny
+  definition: 'Document present but unusable: no text layer, OCR confidence < 0.8, pages missing'
+  effect_on_risk: none
+  effect_on_completeness: lowers C (like missing)
+- code: DOKUMENT_NIE_WSPOMINA
+  label: dokument nie wspomina
+  definition: Document of the right type present, fully parsed, and the topic is expected there (`expected_topics[doc_type]`), but there is no
+    mention
+  effect_on_risk: weak signal; **strong if the topic is mandatory by law** (e.g. waloryzacja in a PPU > 6 months → R08.1 red flag)
+  effect_on_completeness: C unchanged
+- code: BRAK_POTWIERDZENIA
+  label: brak potwierdzenia
+  definition: A claim, intent or plan exists ("decyzja zostanie uzyskana", "zamawiający wystąpi", "planowane…"), or a signal suggests an event,
+    but no document confirms the outcome
+  effect_on_risk: signal per catalogue strength
+  effect_on_completeness: C unchanged
+- code: POTWIERDZONO
+  label: potwierdzono
+  definition: An authoritative source confirms the fact or event (structured notice field, aneks, decyzja, protokół, KIO/NIK)
+  effect_on_risk: event recorded (S = 1 for the occurrence)
+  effect_on_completeness: raises C
+- code: POTWIERDZONO_NIE_WYKONANO
+  label: potwierdzono, że nie wykonano / nie wystąpiło
+  definition: 'An authoritative source explicitly states the negative (5.1 = Nie; 5.3 = Tak with consistent dates; protocol "nie wykonano"; NIK
+    „nie wyegzekwowano”; "Liczba zmian: 0")'
+  effect_on_risk: event recorded as a negative
+  effect_on_completeness: raises C
+- code: SPRZECZNOSĆ
+  label: sprzeczność
+  definition: Two sources disagree and it is not a legitimate later change (check chronology and versions first)
+  effect_on_risk: escalate to expert
+  effect_on_completeness: brak
+document_fetch_states:
+- code: found
+  label: pobrano
+- code: not_in_package
+  label: brak w paczce (platforma dostępna)
+- code: blocked
+  label: zablokowane (zabezpieczenie platformy)
+- code: link_dead
+  label: link nieaktywny
+- code: not_applicable
+  label: nie dotyczy

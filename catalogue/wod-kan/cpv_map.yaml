@@ -1,0 +1,293 @@
+# Sector pack wod-kan: edit in the panel or here; loaded by `riskminer seed-catalogue`.
+# Source: docs/research/03_domain_methodology.md (+ expert materials). status: approved | proposed.
+cpv_map:
+- cpv: '45231300'
+  subsector: null
+  strength: strong
+  label: Roboty budowlane w zakresie budowy wodociągów i rurociągów do odprowadzania ścieków | WOD **or** KAN (ambiguous)
+  status: approved
+- cpv: '45232100'
+  subsector: WOD
+  strength: strong
+  label: Roboty pomocnicze w zakresie wodociągów | WOD
+  status: approved
+- cpv: '45232130'
+  subsector: DESZ
+  strength: strong
+  label: Roboty budowlane w zakresie rurociągów do odprowadzania wody burzowej | DESZ
+  status: approved
+- cpv: '45232150'
+  subsector: WOD
+  strength: strong
+  label: Roboty w zakresie rurociągów do przesyłu wody | WOD
+  status: approved
+- cpv: '45232151'
+  subsector: SUW
+  strength: strong
+  label: Roboty budowlane w zakresie węzłów do przepompowywania wody | WOD/UZD
+  status: approved
+- cpv: '45232152'
+  subsector: SUW
+  strength: strong
+  label: null
+  status: approved
+- cpv: '45232153'
+  subsector: SUW
+  strength: strong
+  label: Roboty budowlane w zakresie wież wodnych | UZD
+  status: approved
+- cpv: '45232154'
+  subsector: SUW
+  strength: strong
+  label: Roboty budowlane w zakresie wysoko umieszczonych zbiorników wody pitnej | UZD
+  status: approved
+- cpv: '45232400'
+  subsector: SAN
+  strength: strong
+  label: Roboty budowlane w zakresie kanałów ściekowych | KAN
+  status: approved
+- cpv: '45232410'
+  subsector: SAN
+  strength: strong
+  label: Roboty w zakresie kanalizacji ściekowej | KAN
+  status: approved
+- cpv: '45232411'
+  subsector: SAN
+  strength: strong
+  label: Roboty budowlane w zakresie rurociągów wody ściekowej | KAN
+  status: approved
+- cpv: '45232420'
+  subsector: OCZ
+  strength: strong
+  label: Roboty w zakresie ścieków | KAN/OCZ (ambiguous)
+  status: approved
+- cpv: '45232421'
+  subsector: OCZ
+  strength: strong
+  label: Roboty w zakresie oczyszczania ścieków | OCZ
+  status: approved
+- cpv: '45232422'
+  subsector: OCZ
+  strength: strong
+  label: Roboty w zakresie uzdatniania osadów | OCZ
+  status: approved
+- cpv: '45232423'
+  subsector: SAN
+  strength: strong
+  label: Roboty budowlane w zakresie przepompowni ścieków | KAN
+  status: approved
+- cpv: '45232424'
+  subsector: SAN
+  strength: strong
+  label: Roboty budowlane w zakresie wylotów kanałów ściekowych | KAN/OCZ
+  status: approved
+- cpv: '45232430'
+  subsector: SUW
+  strength: strong
+  label: Roboty w zakresie uzdatniania wody | UZD
+  status: approved
+- cpv: '45232431'
+  subsector: SAN
+  strength: strong
+  label: Przepompownie wody odpadowej | KAN (despite the name)
+  status: approved
+- cpv: '45232440'
+  subsector: SAN
+  strength: strong
+  label: Roboty budowlane w zakresie budowy rurociągów do odprowadzania ścieków | KAN
+  status: approved
+- cpv: '45232454'
+  subsector: DESZ
+  strength: strong
+  label: Roboty budowlane w zakresie zbiorników wód deszczowych | DESZ
+  status: approved
+- cpv: '45252100'
+  subsector: OCZ
+  strength: strong
+  label: Roboty budowlane w zakresie zakładów oczyszczania ścieków | OCZ
+  status: approved
+- cpv: '45252120'
+  subsector: SUW
+  strength: strong
+  label: Roboty budowlane w zakresie zakładów uzdatniania wody | UZD
+  status: approved
+- cpv: '45252121'
+  subsector: OCZ
+  strength: strong
+  label: null
+  status: approved
+- cpv: '45252122'
+  subsector: OCZ
+  strength: strong
+  label: null
+  status: approved
+- cpv: '45252126'
+  subsector: SUW
+  strength: strong
+  label: Roboty budowlane w zakresie zakładów uzdatniania wody pitnej | UZD
+  status: approved
+- cpv: '45252127'
+  subsector: OCZ
+  strength: strong
+  label: Roboty budowlane w zakresie oczyszczalni ścieków | OCZ
+  status: approved
+- cpv: '45252130'
+  subsector: OCZ
+  strength: strong
+  label: Wyposażenie zakładów odprowadzania ścieków | OCZ
+  status: approved
+- cpv: '45252140'
+  subsector: OCZ
+  strength: strong
+  label: Roboty budowlane w zakresie zakładów odwadniania osadów | OCZ
+  status: approved
+- cpv: '45252200'
+  subsector: OCZ
+  strength: strong
+  label: Wyposażenie oczyszczalni ścieków | OCZ
+  status: approved
+- cpv: '45252210'
+  subsector: SUW
+  strength: strong
+  label: Roboty budowlane w zakresie zakładów oczyszczania wody | UZD
+  status: approved
+- cpv: '45255110'
+  subsector: SUW
+  strength: strong
+  label: Roboty budowlane w zakresie studni | UZD (weak)
+  status: approved
+- cpv: '45255600'
+  subsector: SAN
+  strength: strong
+  label: Roboty w zakresie kładzenia rur w kanalizacji | KAN
+  status: approved
+- cpv: '45259100'
+  subsector: OCZ
+  strength: strong
+  label: null
+  status: approved
+- cpv: '45262200'
+  subsector: SUW
+  strength: strong
+  label: null
+  status: approved
+- cpv: '45262220'
+  subsector: SUW
+  strength: strong
+  label: Wiercenie studni wodnych | UZD
+  status: approved
+- cpv: '45231100'
+  subsector: null
+  strength: weak
+  label: Ogólne roboty budowlane związane z budową rurociągów | WOD/KAN (weak)
+  status: approved
+- cpv: '45231110'
+  subsector: null
+  strength: weak
+  label: Roboty budowlane w zakresie kładzenia rurociągów | WOD/KAN (weak)
+  status: approved
+- cpv: '44162500'
+  subsector: null
+  strength: weak
+  label: Rurociągi wody pitnej (supply) | WOD
+  status: approved
+- cpv: '45232460'
+  subsector: null
+  strength: weak
+  label: Roboty sanitarne | weak
+  status: approved
+- cpv: '42996000'
+  subsector: null
+  strength: weak
+  label: Maszyny do uzdatniania ścieków (supply) | OCZ
+  status: approved
+- cpv: '42912300'
+  subsector: null
+  strength: weak
+  label: Maszyny i aparatura do filtrowania lub oczyszczania wody (supply) | UZD
+  status: approved
+- cpv: '45232450'
+  subsector: null
+  strength: weak
+  label: Roboty budowlane w zakresie budowy upustów | DESZ
+  status: approved
+- cpv: '45232451'
+  subsector: null
+  strength: weak
+  label: Roboty odwadniające i nawierzchniowe | DESZ
+  status: approved
+- cpv: '45232452'
+  subsector: null
+  strength: weak
+  label: Roboty odwadniające | DESZ (also used for roads, needs text)
+  status: approved
+- cpv: '45232453'
+  subsector: null
+  strength: weak
+  label: Roboty budowlane w zakresie upustów | DESZ
+  status: approved
+- cpv: '45247270'
+  subsector: null
+  strength: weak
+  label: Budowa zbiorników | DESZ/UZD (ambiguous)
+  status: approved
+- cpv: '45111240'
+  subsector: null
+  strength: weak
+  label: Roboty w zakresie odwadniania gruntu | **not a subsector**, construction dewatering; tag R02.1
+  status: approved
+- cpv: '45330000'
+  subsector: null
+  strength: weak
+  label: Roboty instalacyjne wodno-kanalizacyjne / wodne i kanalizacyjne / kanalizacyjne | building installations, weak; often in house connections
+  status: approved
+- cpv: '45332000'
+  subsector: null
+  strength: weak
+  label: Roboty instalacyjne wodno-kanalizacyjne / wodne i kanalizacyjne / kanalizacyjne | building installations, weak; often in house connections
+  status: approved
+- cpv: '45332300'
+  subsector: null
+  strength: weak
+  label: Roboty instalacyjne wodno-kanalizacyjne / wodne i kanalizacyjne / kanalizacyjne | building installations, weak; often in house connections
+  status: approved
+- cpv: '71320000'
+  subsector: null
+  strength: weak
+  label: Usługi projektowania (inż. lądowa i wodna, rurociągi) | **formula ZiW** cue when paired with 45*
+  status: approved
+- cpv: '71322000'
+  subsector: null
+  strength: weak
+  label: Usługi projektowania (inż. lądowa i wodna, rurociągi) | **formula ZiW** cue when paired with 45*
+  status: approved
+- cpv: '71322200'
+  subsector: null
+  strength: weak
+  label: Usługi projektowania (inż. lądowa i wodna, rurociągi) | **formula ZiW** cue when paired with 45*
+  status: approved
+- cpv: '71247000'
+  subsector: null
+  strength: weak
+  label: Nadzór nad robotami / projektem / budowlany | supervision contracts, exclude from the works reference class
+  status: approved
+- cpv: '71248000'
+  subsector: null
+  strength: weak
+  label: Nadzór nad robotami / projektem / budowlany | supervision contracts, exclude from the works reference class
+  status: approved
+- cpv: '71520000'
+  subsector: null
+  strength: weak
+  label: Nadzór nad robotami / projektem / budowlany | supervision contracts, exclude from the works reference class
+  status: approved
+- cpv: '90481000'
+  subsector: null
+  strength: weak
+  label: Eksploatacja oczyszczalni / usługi przesyłu wody | operation, exclude (not investment)
+  status: approved
+- cpv: '65100000'
+  subsector: null
+  strength: weak
+  label: Eksploatacja oczyszczalni / usługi przesyłu wody | operation, exclude (not investment)
+  status: approved

@@ -1,0 +1,2132 @@
+LSZ.411.1.1.2024
+
+
+                                                 Pan
+                                                 Piotr Tomczak
+                                                 Prezes Zarządu
+                                                 Dyrektor Naczelny
+
+                                                 Wody Miejskie Stargard Spółka z o.o.
+                                                 w Stargardzie
+                                                 ul. Okrzei 6
+                                                 73-110 Stargard
+
+
+
+
+                    WYSTĄPIENIE
+                   POKONTROLNE
+S/23/003 Realizacja zadań w zakresie gospodarki ściekowej na terenie Gminy Miasto Stargard
+                        I. Dane identyfikacyjne
+          Jednostka     Wody Miejskie Stargard Spółka z o.o. w Stargardzie1
+       kontrolowana
+                        ul. Okrzei 6, 73-110 Stargard
+
+  Kierownik jednostki   Piotr Tomczak, Prezes Zarządu – Dyrektor Naczelny od 1 czerwca 2021 r.2
+       kontrolowanej
+                        W okresie objętym kontrolą pełnił on także funkcję Prezesa Zarządu – Dyrektora
+                        Naczelnego Miejskiego Przedsiębiorstwa Gospodarki Komunalnej Spółka z o.o.
+                        w Stargardzie3 od 28 czerwca 2018 r. do 31 maja 2021 r.
+Zakres przedmiotowy     Realizacja zadań w zakresie gospodarki ściekowej
+             kontroli
+
+Okres objęty kontrolą   Lata 2021-2023 z wykorzystaniem dowodów sporządzonych przed i po tym okresie,
+                        mających znaczenie dla badanej działalności
+
+   Podstawa prawna      Artykuł 2 ust. 2 ustawy z dnia 23 grudnia 1994 r. o Najwyższej Izbie Kontroli4
+    podjęcia kontroli
+
+          Jednostka     Najwyższa Izba Kontroli
+   przeprowadzająca     Delegatura w Szczecinie
+            kontrolę
+
+         Kontrolerzy          Marzanna Wierzbicka, doradca techniczny, upoważnienie do kontroli
+                              nr LSZ/1/2024 z 5 stycznia 2024 r.
+                              Anna Jończyk, starszy inspektor kontroli państwowej, upoważnienie do kontroli
+                              nr LSZ/2/2024 z 5 stycznia 2024 r.
+                                                                                  (akta kontroli str. 1-2, 5-7)
+
+                        II. Ocena ogólna5 kontrolowanej działalności
+      OCENA OGÓLNA      Wody Miejskie realizowały zadania w zakresie gospodarki ściekowej, jednak nie
+                        wszystkie z nich prawidłowo i rzetelnie. Podejmowane działania w celu
+                        wyeliminowania zrzutów nieoczyszczonych ścieków do rzeki Iny, także przed 2021 r.,
+                        nie były skuteczne. Zrzuty mieszaniny wód opadowych i ścieków nadal następowały,
+                        pomimo braku wymaganych pozwoleń wodnoprawnych, a do 4 sierpnia 2022 r. także
+                        decyzji Wód Polskich dopuszczającej wprowadzanie do wód ścieków z przelewów
+                        burzowych komunalnej kanalizacji ogólnospławnej, o której mowa w art. 80 ustawy
+                        z dnia 20 lipca 2017 r. Prawo wodne6.
+                        Działalność w zakresie zbiorowego odprowadzania ścieków na terenie Gminy Miasto
+                        Stargard7, przedsiębiorstwo prowadziło w oparciu o wymagane zezwolenie
+                        Prezydenta Miasta Stargard8. Spółka podejmowała działania planistyczne w zakresie
+                        gospodarki ściekowej, w tym w 2021 r. zleciła opracowanie koncepcji dotyczącej m.in.
+                        ograniczenia częstotliwości działania przelewów nadmiarowych przed oczyszczalnią,
+                        a także podejmowała starania o zapewnienie środków finansowych na wykonanie
+                        zaplanowanych przedsięwzięć i realizowała je w miarę możliwości finansowych.
+                        Wykonywano remonty obiektów, urządzeń i sieci oraz czyszczenie sieci, co m.in.
+                        1 Dalej: Wody Miejskie lub Spółka albo Przedsiębiorstwo.
+                        2 Dalej: Prezes Zarządu.
+                        3 Dalej: MPGK.
+                        4 Dz. U. z 2022 r. poz. 623, dalej: ustawa o NIK.
+                        5 Najwyższa Izba Kontroli formułuje ocenę ogólną jako ocenę pozytywną, ocenę negatywną albo ocenę w formie opisowej.
+                        6 Dz. U. z 2023 r. poz. 1478, ze zm., dalej: ustawa Prawo wodne.
+                        7 Dalej: Miasto.
+                        8 Dalej: Prezydent lub Prezydent Miasta.
+
+                                                                                     1
+wpływało za zwiększenie retencji w systemie kanalizacji. Z wyjątkiem jednego
+sprawdzonego obiektu (podziemnego zbiornika do gromadzenia ścieków)
+prowadzono wymagane książki obiektów budowlanych i zapewniono
+przeprowadzenie okresowych kontroli, o których mowa w art. 62 ust. 1 pkt 1 i pkt 2
+ustawy z dnia 7 lipca 1994 r. Prawo budowlane9. Nie objęto natomiast okresowymi
+pięcioletnimi kontrolami budowlanymi sprawdzonych przez NIK odcinków sieci
+kanalizacji sanitarnej. Stwierdzone nieprawidłowości dotyczyły także braku
+w książkach obiektów budowlanych części wymaganych zapisów, niezrealizowania
+zaleceń z rocznych kontroli budowlanych dla jednego sprawdzonego obiektu oraz
+wytwarzania i magazynowania na terenie oczyszczalni ścieków odpadów
+z czyszczenia studzienek kanalizacyjnych, pomimo braku wymaganego zezwolenia.
+Spółka nie wykonywała obowiązków określonych w decyzji Regionalnego Dyrektora
+Ochrony Środowiska w Szczecinie10 z 18 sierpnia 2021 r.11 w zakresie pomiaru
+rzeczywistej ilości ścieków odprowadzanych poprzez przelew burzowy przy
+ul. Brzozowej w Stargardzie po jego uruchomieniu12 oraz nie wykonała pomiarów
+zawartości substancji w wodach rzeki Iny i kanału burzowego (ulgi) przy ul. Brzozowej
+po uruchomieniu przelewu 17 czerwca 2023 r. W 2023 r. została przekroczona dla
+dwóch przelewów burzowych13 maksymalna ilość ścieków zrzuconych bez
+oczyszczenia do rzeki Iny, określona w decyzji Wód Polskich z 4 sierpnia 2022 r.
+W latach 2021-2022, realizując umowy zawarte z Miastem na obsługę sieci kanalizacji
+deszczowej, Spółka nie zapewniła wykonania badań oczyszczonych wód opadowych
+dwukrotnie w ciągu roku, tj. z częstotliwością określoną w dwóch spośród
+sprawdzonych pozwoleń wodnoprawnych14.
+W umowach o zaopatrzenie w wodę i odprowadzanie ścieków Spółka wprowadziła
+zapisy mające na celu zabezpieczenie przed odprowadzaniem do urządzeń
+kanalizacyjnych substancji, które mogłyby je uszkodzić lub powodować zagrożenie
+dla środowiska naturalnego, jednak nie prowadziła regularnych kontroli ilości i jakości
+odprowadzanych ścieków bytowych i ścieków przemysłowych oraz kontroli
+przestrzegania warunków wprowadzania ścieków do urządzeń kanalizacyjnych,
+pomimo takiego obowiązku określonego w art. 9 ust. 3 ustawy z dnia 7 czerwca
+2001 r. o zbiorowym zaopatrzeniu w wodę i zbiorowym odprowadzaniu ścieków15.
+Natomiast w przypadku przeprowadzonej kontroli, nieprawidłowo wyliczono stawkę
+opłaty za przekroczenie warunków wprowadzania ścieków przemysłowych
+do urządzeń kanalizacyjnych. W celu uregulowania jakościowego i ilościowego
+nieczystości ciekłych wprowadzanych do stacji zlewnej od 2022 r. regularnie
+przeprowadzano kontrole nieczystości ciekłych dostarczanych do stacji zlewnej oraz
+naliczano opłaty dodatkowe za przekroczenie parametrów nieczystości ciekłych
+dostarczanych do tej stacji.
+Struktura organizacyjna Spółki była dostosowana do realizacji zadań z zakresu
+zbiorowego odprowadzania i oczyszczania ścieków. W regulaminach
+organizacyjnych wskazano komórki organizacyjne odpowiedzialne za realizację
+zadań związanych z odprowadzaniem i oczyszczaniem ścieków. Dla pracowników
+realizujących zadania związane bezpośrednio z odprowadzaniem i oczyszczaniem
+ścieków określono pisemne zakresy obowiązków, uprawnień i odpowiedzialności, lub
+pracownicy zostali w formie ustnej zaznajomieni z zakresem obowiązków i sposobem
+wykonywania powierzonych zadań.
+
+9 Dz.U. z 2023 r. poz. 682, ze zm.; dalej: ustawa Prawo budowlane.
+10 Dalej: RDOŚ.
+11 Nr WONS-NS.512.20.2020.MR, dalej: decyzja RDOŚ z 18 sierpnia 2021 r.
+12 Nie zapewniono pomiaru rzeczywistej ilości ścieków wprowadzanych do wód rzeki Iny także poprzez pozostałe przelewy
+
+burzowe.
+13 W1 przy ul. Brzozowej i W2 przy ul. Konopnickiej.
+14 CS.6341.11.4.2013.LG1 z 10 kwietnia 2013 r. i CS.6341.91.3.2016.SW3 z 9 stycznia 2017 r.
+15 Dz. U. z 2023 r. poz. 537, ze zm.; dalej: ustawa o odprowadzaniu ścieków.
+
+                                                             2
+               III. Opis ustalonego stanu faktycznego
+     OBSZAR
+               Realizacja zadań w zakresie gospodarki ściekowej
+  Opis stanu   1. Wody Miejskie powstały w wyniku przekształcenia 1 lipca 2022 r. MPGK. Wszystkie
+faktycznego    udziały w Spółce posiadała Gmina Miasto Stargard16. W kontrolowanym okresie,
+               przedmiotem działalności Spółki było odprowadzanie i oczyszczanie ścieków, a także:
+               pobór, uzdatnianie i dostarczanie wody; zbieranie odpadów innych niż niebezpieczne,
+               roboty związane z budową rurociągów przesyłowych i sieci rozdzielczych,
+               wykonywanie       instalacji     wodnokanalizacyjnych,          cieplnych,    gazowych
+               i klimatyzacyjnych, a od 1 lipca 2022 r.17 również: wytwarzanie energii elektrycznej,
+               wykonywanie instalacji elektrycznych, wykonywanie pozostałych instalacji
+               budowlanych, transport drogowy towarów, wynajem i zarządzanie nieruchomościami
+               własnymi lub dzierżawionymi. Wody Miejskie nie prowadziły działalności
+               wykraczającej poza przedmiot określony w umowie Spółki. Przychody związane
+               z odprowadzaniem i oczyszczaniem ścieków wyniosły w: 2021 r. – 20 356,00 zł
+               (44,91% udział w działalności), 2022 r. – 21 804,00 zł (60,48%) i 2023 r. – 25 278,00 zł
+               (68,06%).
+                                                        (akta kontroli str. 14-31, 587-590, 1928-1930)
+               W latach 2021-2023 w Spółce obowiązywały trzy regulaminy organizacyjne przyjęte
+               uchwałami Rady Nadzorczej Wód Miejskich18. Realizacją zadań związanych
+               bezpośrednio z odprowadzaniem i oczyszczaniem ścieków zajmowało się według
+               stanu na koniec roku: 2021 - 34 pracowników, 2022 – 31 i 2023 – 27. Dla tych
+               pracowników      określono        pisemne     zakresy    obowiązków,     uprawnień
+               i odpowiedzialności oraz pracownicy byli w formie ustnej zaznajamiani z zakresem
+               obowiązków i sposobem wykonywania pracy na wyznaczonych stanowiskach.
+                              (akt kontroli str. 81-168, 203-298, 1760-1762, 1789-1794,1833-1923)
+               Wody Miejskie posiadały ważną decyzję Prezydenta Miasta z 19 grudnia 2002 r.
+               udzielającą zezwolenia na prowadzenie zbiorowego zaopatrzenia w wodę
+               i odprowadzania ścieków na terenie Miasta19. Warunki zezwolenia na zbiorowe
+               odprowadzanie ścieków odpowiadały rzeczywistemu obszarowi działania Spółki
+               wynikającemu z lokalizacji posiadanych urządzeń kanalizacyjnych. Przedsiębiorstwo
+               przedkładało Prezydentowi w terminie do 31 stycznia 2022 r., 2023 r. i 2024 r.20
+               informacje wymagane ww. zezwoleniem dotyczące częstotliwości, przyczyn
+               i sposobu załatwiania skarg i wniosków wniesionych przez odbiorców usług,
+               częstotliwości, przyczyn i czasu usuwania awarii, a także wniosków pokontrolnych
+               z przeprowadzonych kontroli zewnętrznych.
+                                          (akta kontroli str. 481-486, 546-590, 967-982, 1924-1936)
+               W latach 2021-2023 Spółka zarządzała w szczególności:
+                siecią kanalizacji sanitarnej rozdzielczej i sieci ogólnospławnej, tj. łączącej ścieki
+                   komunalne oraz wody opadowe/burzowe lub roztopowe. Łączna długość sieci
+                   rozdzielczej wynosiła: w 2021 r. - 74,5 km, w 2022 r. 76,5 km, w 2023 r. 78,1 km,
+                   a łączna długość sieci ogólnospławnej wynosiła w latach 2021-2023: 105,3 km21;
+                16 przelewami burzowymi22.
+               16 Dalej: Miasto Stargard lub Miasto.
+               17 Monitor Sądowy i Gospodarczy nr 137/2022, wpis nr 67.
+               18 Przed przekształceniem MPGK uchwała nr 06/VIII/20 z 30 kwietnia 2020 r. oraz nr 12/IX/22 z 25 kwietnia 2022 r. w sprawie
+
+               zatwierdzenia Regulaminu Organizacyjnego MPGK, a także uchwała nr 15/IX/22 z 19 lipca 2022 r. w sprawie zatwierdzenia
+               Regulaminu Organizacyjnego Wód Miejskich.
+               19 Przed 1 stycznia 2016 r. Stargard Szczeciński.
+               20 28 stycznia 2022 r., 24 stycznia 2023 r. oraz 30 stycznia 2024 r.
+               21 Według sprawozdań z działalności Spółki łączna długość sieci kanalizacyjnej wynosiła na 31 grudnia:
+
+               2021 r. 179,8 km (bez przyłączy kanalizacyjnych). W 2021 roku przybyło 2,94 km sieci kanalizacyjnej;
+               2022 r, wynosiła 181,8 km (bez przyłączy kanalizacyjnych). W 2022 roku przybyło 2,0 km sieci kanalizacyjnej;
+               2023 r. wynosiła 183,6 km (bez przyłączy kanalizacyjnych) W 2023 r. przybyło 1,8 km sieci kanalizacyjnej.
+               22 Urządzeniami samoczynnie odprowadzającymi do odbiornika np. rzeki nadmiar wody deszczowej, zmieszanej ze ściekami.
+
+               Z wylotami skierowanymi do rzeki Iny (przelew Bydgoska-Robotnicza – miejsce skierowania wylotu to kanał), zlokalizowanymi
+                                                                           3
+Ponadto Spółka posiadała oczyszczalnię ścieków (na terenie której zlokalizowane
+były zbiorniki retencyjne o łącznej pojemności 4 200 m³), 49 sztuk przepompowni
+ścieków na terenie Miasta oraz przyłącza kanalizacyjne o łącznych długościach:
+w 2021 r. - 57,2 km, 2022 r. - 57,4 km, 2023 r. - 57,6 km oraz jeden punkt zlewny
+nieczystości płynnych zlokalizowany na terenie oczyszczalni ścieków.
+                     (akta kontroli str. 57, 73, 587-592, 1704,1799-1801, 1925-1936)
+Ilość ścieków wytworzonych i odprowadzonych do oczyszczalni zbiorczym systemem
+kanalizacji23 wynosiła: w 2021 r. 4 655 796 m3, w 2022 r. 4 709 124 m3 i w 2023 r.
+4 956 004 m3, a taborem asenizacyjnym do stacji zlewczej w tych latach odpowiednio:
+72 320,05 m3, 91 009,70 m3 i 92 170,16 m3.
+Łączna ilość zafakturowanych ścieków dla odbiorców ze Stargardu w ww. latach
+wyniosła odpowiednio: 2 790 158 m3, 2 786 973 m3 i 2 932 125 m3, a ścieków
+hurtowych: 345 228 m3, 357 744 m3 i 398 597 m3.
+                                            (akta kontroli str. 57, 73, 984-985, 1704)
+Na podstawie umów zawieranych z Miastem Spółka zarządzała także siecią
+kanalizacji deszczowej i urządzeniami przeznaczonymi do odprowadzania wód
+opadowych i roztopowych24. Powierzone do realizacji prace związane z konserwacją
+i eksploatacją sieci obejmowały w szczególności: bieżące monitorowanie sieci
+kanalizacji deszczowej oraz związanego z nią uzbrojenia wraz z uzupełnieniem
+brakujących lub zniszczonych elementów uzbrojenia sieci oraz elementów
+ogrodzenia zbiorników i przepompowni, czyszczenie wpustów deszczowych
+wskazanych w załącznikach do umów oraz wpustów zlokalizowanych w pasach
+drogowych ulic należących do Miasta, czyszczenie kanałów deszczowych, studni
+rewizyjnych, separatorów i osadników, bieżącą konserwację rowów i kanałów
+odpływowych od odbiorników wód opadowych i kanalizacji deszczowej do miejsc
+odprowadzenia wód opadowych po oczyszczeniu, wykonywanie zgodnie z wydanymi
+pozwoleniami wodnoprawnymi analizy ścieków (wód opadowych) w zakresie
+zawiesiny ogólnej i substancji ropopochodnych25.
+                       (akta kontroli str. 176-202, 1791-1794, 1810-1818, 1924-1936)
+W sprawie dysponowania ww. pozwoleniami wodnoprawnymi wydanymi dla Miasta
+starszy specjalista ds. sieci kanalizacyjnej wskazany w umowach jako przedstawiciel
+Spółki zeznał: W 2016 r. otrzymaliśmy część pozwoleń wodnoprawnych
+na korzystanie z wód dotyczące odbiorników kanalizacji deszczowej. I chyba
+w 2017 r. drogą elektroniczną jedno pozwolenie wodnoprawne uzupełniające. Nie
+mam wiedzy, czy takie zezwolenia były przekazywane później. (…) Dokumenty
+odszukałem w związku z wyjaśnieniami dla NIK. (…). Przekazywanie Spółce
+pozwoleń wodnoprawnych przez Wydział Inżynierii Urzędu Miejskiego w Stargardzie
+(drogą elektroniczną lub osobiście) potwierdził w wyjaśnieniach Prezes. W trakcie
+kontroli przedłożono kopie 28 pozwoleń.
+                      (akta kontroli str. 176-202, 1791-1794, 1829, 2138-2155, 2464)
+
+
+przy ul.: Brzozowej – kanał ulgi, Drzymały – Oczyszczalnia Ścieków, Drzymały, Światopełka, Skłodowskiej-Curie (dwa),
+Krzywoustego – most (dwa), Krzywoustego – park, Bydgoska – Robotnicza, Portowa – Chrobrego, Limanowskiego, Popiela,
+Żeglarska, Basztowa – archiwum, Konopnickiej.
+23 Ilość ścieków ustalona na podstawie urządzenia pomiarowego zainstalowanego na oczyszczalni ścieków.
+24 Pomiędzy Miastem a Spółką zostały zawarte w kontrolowanym okresie trzy umowy na wykonanie obsługi sieci kanalizacji
+
+deszczowej na terenie Miasta: nr 6/MI.I.1/2021 z 18 lutego 2021 r.; nr 6/MI.II.4.2022 z 3 lutego 2022 r. oraz nr 4/MI.I.4/2023
+z 2 lutego 2023 r. (aneksowana 18 października 2023 r.).
+25 W 2021 r. przy następujących odbiornikach wód opadowych: a) piaskownik na Osiedlu Pyrzyckim, wylot do rowu przy zbiorniku
+
+retencyjnym wód opadowych w Kluczewie, zbiorniki retencyjne wód opadowych: przy rondzie 15 Południk, ul. Skandynawskiej,
+ul. Nasiennej, ul. Przedwiośnie, przy fabryce Cargotec, przy skrzynkach rozsączających przy rondzie Lotników oraz
+na ul. Skarbowej (5 zestawów), przy separatorze na ul. Gdańskiej, przy dwóch wylotach do Gowienicy, przy separatorze
+na ul. Rzemieślniczej (1 szt.) przy separatorze na ul. Spokojnej (3 szt. ), przy separatorze na ul. Spółdzielczej (1 szt.) oraz przy
+skrzynkach rozsączających na ul. Spokojnej (2 szt.). W 2022 r. poza ww. także przy ul. Metalowej (3 szt.), ul. Grudziądzkiej oraz
+obwodnicy Staromiejskiej (2 szt.) Zwiększeniu uległa także do trzech liczba zbiorników retencyjnych przy wylotach do Gowienicy.
+W 2023 r. obsługa miała odejmować poza ww. także wyloty z separatorów znajdujących się przy ul. Warszawskiej (1 szt.),
+Niklowej (1 szt.) oraz Limanowskiego 1 szt.
+                                                                 4
+Według wyników przedłożonych badań, Spółka w latach 2021-2022 wykonywała raz
+w roku badania ścieków/wód opadowych w zakresie zawiesiny ogólnej i substancji
+ropopochodnych, a w 2021 r. także badania temperatury. W przypadku urządzeń
+wodnych wskazanych w dwóch objętych badaniem pozwoleniach wodnoprawnych
+(spośród sześciu sprawdzonych26), badania nie były wykonywane w latach 2021-2022
+dwa razy w roku wiosną i jesienią, pomimo takiego wymogu określonego w tych
+pozwoleniach27. Zagadnienie to opisano w sekcji Stwierdzone nieprawidłowości.
+                          (akta kontroli str. 841-857, 1822-1823, 2133, 2147-2152)
+Spośród 27 badań odprowadzanych wód deszczowych przeprowadzonych w 2022 r.,
+jedno wskazywało na przekroczenie maksymalnych wartości zawiesiny ogólnej,
+określonych w pozwoleniu wodnoprawnym, a w 2023 r. przekroczenia zawiesiny
+ogólnej stwierdzono w 14 spośród 33 wykonanych badań (42,4%). Prezes wyjaśnił,
+że po otrzymaniu wyników wskazujących na przekroczenie w 2022 r., Spółka
+przystąpiła do powtórnego przeczyszczenia kanalizacji deszczowej. W 2023 r.
+po otrzymaniu wyników Spółka sukcesywnie ponownie przeczyściła wszystkie
+separatory, na których stwierdzono przekroczenie. Spółka w porozumieniu
+z inspektorem Urzędu zleciła wykonanie powtórnych badań. 19 września 2023 r.
+ponownie pobrano 33 próbki wód opadowych do badań. Według otrzymanych
+wyników w żadnej z prób zawiesina ogólna nie przekraczała 100 mg/dm3,
+a węglowodory ropopochodne nie przekraczały 15 mg/dm3, tj. wielkości określonych
+w pozwoleniach wodnoprawnych.
+                                        (akta kontroli str. 1822-1823, 2133,2137)
+Po przeprowadzeniu - na wniosek pełnomocnika Wód Miejskich – postępowania28
+w przedmiocie udzielenia pozwolenia wodnoprawnego na wprowadzanie
+oczyszczonych ścieków do wód powierzchniowych z komunalnej oczyszczalni
+ścieków położonej przy ul. Drzymały w Stargardzie (odbiornik: rzeka Ina), decyzją
+z 10 maja 2019 r. Dyrektor Regionalnego Zarządu Gospodarki Wodnej29 w Szczecinie
+Państwowego Gospodarstwa Wodnego Wody Polskie30 udzielił Spółce na dziesięć lat
+ww. pozwolenia31.
+                                                      (akta kontroli str. 456-462)
+Według ustaleń kontroli przeprowadzonej od 21 czerwca do 30 lipca 2021 r. przez
+inspektorów Wojewódzkiego Inspektoratu Ochrony Środowiska w Szczecinie32,
+w okresie pomiędzy 1 stycznia 2021 r. a 10 czerwca 2021 r. Spółka nie wykonywała
+badań zanieczyszczeń ścieku oczyszczonego i surowego w zakresie wskaźników
+chrom+6 i węglowodory ropopochodne, pomimo iż była do tego zobowiązana w pkt 4
+lit. d pozwolenia wodnoprawnego z 10 maja 2019 r.
+                           (akta kontroli str. 456-462, 1289-1297, 1311-1312, 1344)
+Przeprowadzona przez NIK analiza przestrzegania przez Wody Miejskie od 31 lipca
+2021 r. do 31 grudnia 2023 r. realizacji obowiązków w zakresie badań wskaźników
+chrom+6 i węglowodory ropopochodne, wykazała, że badania ww. parametrów były
+przez Spółkę wykonywane. Ponadto w oparciu o ww. próbę ustalono, iż wyniki
+pomiarów stężenia zanieczyszczeń BZT533, ChZTcr34, zawiesina ogólna, azot ogólny,
+
+
+26 W pozostałych pozwoleniach nie określono wymogu przeprowadzania badań dwa razy w roku.
+27 Pozostałe pozwolenia nie zawierały takiego wymogu.
+28 Zawiadomienie o wszczęciu z 12 marca 2019 r.
+29 Dalej: RZGW.
+30 Dalej: PGW WP.
+31 Dalej: decyzja lub pozwolenie wodnoprawne z 10 maja 2019 r.
+32 Dalej: WIOŚ.
+33 Biochemiczne zapotrzebowanie tlenu. Wskaźnik określający zapotrzebowanie na tlen niezbędny do utlenienia związków
+
+organicznych zawartych w wodzie lub ściekach.
+34 Chemiczne zapotrzebowanie tlenu. Wskaźnik określający ilość tlenu niezbędną do utlenienia zawartych w wodzie lub ściekach
+
+związków organicznych i nieorganicznych
+                                                             5
+fosfor ogólny w ściekach oczyszczonych, nie przekraczały dopuszczalnych wartości
+wskazanych w decyzji z 10 maja 2019 r.
+                      (akta kontroli str. 456-462, 1972-2067, 2186-2188, 2461-2462)
+Spółka nie posiadała pozwoleń wodnoprawnych na odprowadzanie mieszaniny
+ścieków i wód opadowych przez 15 przelewów burzowych35. 8 stycznia 2021 r. zleciła
+podmiotowi zewnętrznemu36 wykonanie dokumentacji (w tym operatu
+wodnoprawnego) wraz ze wszystkimi opiniami i uzgodnieniami oraz uzyskanie decyzji
+o pozwoleniu wodnoprawnym w zakresie odprowadzania ścieków dla siedmiu
+przelewów burzowych z sieci kanalizacji ogólnospławnej za pomocą wylotów do rzeki
+Iny wraz z ich legalizacją: wylot przy ul. Brzozowej, przy ul. Brzozowej – zrzut
+z Konopnickiej i Wojska Polskiego, ul. Strażniczej (Park Popiela), ul. Szewskiej,
+ul. Curie-Skłodowskiej, ul. Drzymały, ul. Światopełka. Pełnomocnik Spółki 9 lipca
+2021 r. złożył do Dyrektora Zarządu Zlewni w Stargardzie PGW WP siedem wniosków
+o wydanie pozwoleń wodnoprawnych na usługi wodne polegające na wprowadzaniu
+ścieków będących mieszaniną ścieków oraz wód opadowych lub roztopowych
+pochodzących z kanalizacji ogólnospławnej do wód rzeki Iny, za pomocą siedmiu
+wylotów ww. przelewów. Pismem z 12 sierpnia 2021 r. ww. organ wezwał
+do uzupełnienia braków we wnioskach, a ponadto pismami z 13 sierpnia 2021 r. –
+do przedłożenia ostatecznej decyzji wydanej w oparciu o art. 80 ustawy Prawo wodne.
+W odpowiedzi na wezwanie organu z 12 sierpnia 2021 r. pełnomocnik wnioskodawcy
+złożył 14 września 2021 r. uzupełnienia wniosków. Dyrektor Zarządu Zlewni
+w Stargardzie PGW WP zawiadomieniami z 15 listopada 2021 r. wszczął
+postępowanie administracyjne w sprawie udzielenia pozwoleń wodnoprawnych.
+24 listopada 2021 r. do organu wpłynął wniosek pełnomocnika o zawieszenie
+ww. postępowań administracyjnych do czasu wydania ostatecznej decyzji z art. 80
+ustawy Prawo wodne. Dyrektor Zarządu Zlewni w Stargardzie PGW WP
+postanowieniami z 26 stycznia 2022 r. zawiesił przedmiotowe postępowania.
+25 listopada 2022 r. wpłynęły wnioski pełnomocnika wnioskodawcy o podjęcie
+ww. postępowań i w rezultacie postanowieniami z 14 grudnia 2022 r. Dyrektor Zarząd
+Zlewni w Stargardzie PGW WP podjął zawieszone postępowania. 3 sierpnia 2023 r.
+organ ponownie wezwał pełnomocnika wnioskodawcy do złożenia wyjaśnień
+i uzupełnień, a odpowiedź na wezwanie została dostarczona organowi 13 września
+2023 r. Według informacji udzielonej NIK przez Dyrektora Zarządu Zlewni
+w Stargardzie37: Organ przygotował koleje wezwanie dla wnioskodawcy (…).
+Jednakże wezwanie na dzień dzisiejszy nie zostało wystosowane do wnioskodawcy
+z uwagi na fakt, iż 7 października 2023 r. weszła w życie ustawa z 13 lipca 2023 r.
+o rewitalizacji rzeki Odry (Dz. U. z 2023 r., poz. 1963), gdzie w art. 16 wskazano, że
+zakłady wprowadzające ścieki do wód lub ziemi, z uwzględnieniem wprowadzania
+ścieków z przelewów burzowych kanalizacji ogólnospławnej, są obowiązane do
+wystąpienia z wnioskiem o zmianę pozwoleń wodnoprawnych na wprowadzanie
+ścieków do wód lub ziemi przez uzupełnienie warunków w zakresie wprowadzania
+ścieków z przelewów burzowych kanalizacji ogólnospławnej do 1 lipca 2024 r.
+W związku z powyższym organ wystąpił o pomoc w interpretacji ww. przepisu (…).
+                                              (akta kontroli str. 1418-1419, 1673-1697)
+Spółka nie uzyskała pozwoleń do dnia zakończenia czynności kontrolnych przez NIK,
+tj. 7 maja 2024 r. Pomimo nieposiadania wymaganych pozwoleń wodnoprawnych
+osiem przelewów burzowych w latach 2021-2023 było uruchamianych według
+ewidencji prowadzonej przez Spółkę 25 krotnie38, co opisano w sekcji Stwierdzone
+nieprawidłowości. Oszacowana przez Spółkę ilość nieoczyszczonych ścieków, jaka
+35 Posiadała pozwolenie wodnoprawne dotyczące odprowadzania oczyszczonych ścieków z oczyszczalni przy ul. Drzymały
+
+w Stargardzie.
+36 Umowa TZ-50-15/2020.
+37 Na podstawie art. 29 ust. 1 pkt 2 lit f. ustawy o NIK.
+38 Z tego: w 2021 r. siedem przelewów ogółem ośmiokrotnie, w 2022 r. jeden przelew sześciokrotnie, i w 2023 r. dwa przelewy
+
+ogółem jedenastokrotnie. Ponadto dokonywano zrzutu ścieków poprzez przelew technologiczny na oczyszczalni ścieków
+w ww. latach odpowiednio jednokrotnie, pięciokrotnie i czterokrotnie.
+                                                            6
+została odprowadzona poprzez wszystkie przelewy burzowe w tych latach wyniosła
+ogółem 292,8 tys. metrów sześciennych39.
+  (akta kontroli str. 538-541, 593-606, 545a-545b, 901,1799-1801, 1954-1971, 2072-
+                                                       2076, 2127-2130, 2183-2185)
+Prezes wyjaśnił, że na terenie Stargardu dominującą siecią kanalizacyjną jest sieć
+kanalizacji ogólnospławnej i w przypadku gwałtownych opadów deszczu, w celu
+uniknięcia zalania miasta mieszaniną ścieków socjalno-bytowych i wód opadowych
+dochodzi do bezpośredniego zrzutu ścieku nieoczyszczonego do rzeki Iny przy
+udziale przelewów burzowych wzdłuż rzeki Iny. Nie jest możliwe oczyszczenie ścieku
+komunalnego, który przekracza możliwości technologiczne oczyszczalni ścieków
+i instalacji sieci kanalizacji ogólnospławnej.
+                             (akta kontroli str. 498-533, 901, 964-966, 1041-1045, 1466)
+Dyrektor Zarządu Zlewni w Stargardzie PGW WP - po rozpatrzeniu wniosku
+z 6 września 2021 r. - decyzją z 19 października 2021 r. dopuścił wprowadzanie przez
+Spółkę do wód rzeki Iny ścieków z siedmiu przelewów burzowych komunalnej
+kanalizacji ogólnospławnej w Stargardzie tj. ul. Brzozowa; ul. Brzozowa – zrzut
+z ul. Konopnickiej i ul. Wojska Polskiego, ul. Skłodowskiej-Curie, ul. Drzymały,
+ul. Strażnicza, ul. Szewska, ul. Światopełka. W decyzji określono dopuszczalną
+roczną liczbę zrzutów ścieków do dziewięciu razy w ciągu roku. Zgodnie z warunkami
+decyzji, pierwszą najbardziej zanieczyszczoną falę ścieków należało w całości
+odprowadzić do oczyszczalni ścieków przy ul. Drzymały w Stargardzie. Na skutek
+rozpatrzenia złożonego odwołania przez Okręg Polskiego Związku Wędkarskiego
+w Szczecinie, decyzją z 13 stycznia 2022 r. ww. decyzja została uchylona w całości
+i sprawa przekazana do ponownego rozpatrzenia przez organ I instancji. 4 sierpnia
+2022 r. decyzją Dyrektora Zlewni Zarządu Zlewni w Stargardzie PGW WP
+dopuszczono wprowadzanie do wód rzeki Iny ścieków z siedmiu przelewów
+burzowych komunalnej kanalizacji ogólnospławnej w Stargardzie tj. ul. Brzozowa;
+ul. Brzozowa – zrzut z ul. Konopnickiej i ul. Wojska Polskiego, ul. Skłodowskiej-Curie,
+ul. Drzymały, ul. Strażnicza, ul. Szewska, ul. Światopełka. W decyzji określono
+dopuszczalną roczną liczbę zrzutów ścieków do dziewięciu razy w ciągu roku oraz
+dopuszczalną ilość ścieków, jaka mogła być odprowadzania przez poszczególne
+przelewy. Mimo złożenia przez Okręgowy Polski Związek Wędkarski w Szczecinie
+odwołania, przedmiotowa decyzja została utrzymana w mocy decyzją Dyrektora
+RZGW w Szczecinie PGW WP z 25 października 2022 r. W okresie od 1 stycznia
+2021 r. do 4 sierpnia 2022 r., bez decyzji dopuszczającej wprowadzanie do wód
+ścieków z przelewów burzowych komunalnej kanalizacji ogólnospławnej, Spółka
+dokonała 11 krotnie zrzutu ścieków poprzez siedem przelewów burzowych,
+co opisano w sekcji Stwierdzone nieprawidłowości.
+ (akta kontroli str. 463-480, 593-606, 1378-1382, 1418-1419, 1799-1801, 1954-1971,
+                                                   2072-2076, 2127-2130, 2183-2185)
+Analiza przestrzegania warunków określonych w ww. decyzji z 4 sierpnia 2022 r.
+w odniesieniu do przelewów burzowych uruchamianych po wydaniu tej decyzji,
+wykazała, że liczba zrzutów ścieków dla poszczególnych przelewów burzowych
+w danym roku nie przekraczała liczby zrzutów określonych ww. decyzją. W oparciu
+o podaną przez Spółkę szacunkową ilość zrzutu ścieków w 2023 r. stwierdzono, iż
+w przypadku przelewu ul. Brzozowa (wylot W1, działka o nr ewid. 414 obr. 2 miasto
+Stargard) oraz przelewu ul. Konopnickiej (wylot W2, działka o nr ewid. działka nr 141/1
+w obr. 2 miasto Stargard) nastąpiło przekroczenie dopuszczalnej rocznej wielkości
+zrzutu. Zagadnienie to opisano w sekcji Stwierdzone nieprawidłowości.
+                                            (akta kontroli str. 2183-2185, 2458-2459)
+
+
+39 Z tego: w 2021 r. 151 948,2 m3, w 2022 r. 39 426 m3 i w 2023 r. 101 418 m3. W sprawozdaniach o wodociągach i kanalizacji
+
+M-06 za 2021 r., 2022 r. i 2023 r. wskazano, że w ww. latach ilość ścieków nieoczyszczonych wyniosła odpowiednio: 152 tys.
+m3, 39,4 tys. m3 i 101,4 tys. m3.
+                                                            7
+Do Dyrektora Zarządu Zlewni w Stargardzie PGW WP, 14 listopada 2023 r. wpłynął
+wniosek pełnomocnika40 Wód Miejskich o wydanie decyzji z art. 80 ustawy Prawo
+wodne dla ośmiu przelewów burzowych przy ul. Bydgoskiej, Basztowej, Żeglarskiej,
+Popiela, Limanowskiego, Chrobrego i Portowej, Krzywoustego (lewa strona)
+i Krzywoustego prawa strona. Organ 14 grudnia 2023 r. wezwał do złożenia
+niezbędnych wyjaśnień i uzupełnień w terminie 30 dni od dnia otrzymania wezwania.
+1 lutego 2024 r. pełnomocnik Spółki wniósł uzupełnienie wniosku. Do czasu
+zakończenia czynności kontrolnych, tj. 7 maja 2024 r. postępowanie nie zostało
+zakończone.
+                                          (akta kontroli str. 1673-1697, 2072-2080)
+Pełnomocnik Spółki 19 stycznia 2024 r. złożył do Dyrektora Zarządu Zlewni
+w Stargardzie PGW WP osiem wniosków o wydanie pozwoleń wodnoprawnych
+na usługi wodne polegające na wprowadzaniu do wód – ścieków pochodzących
+z kanalizacji ogólnospławnej za pomocą: przelewu przy ul. Bydgoskiej – do wód
+kanału; wylotu przy Basztowej – do wód Kanału Młyńskiego; wylotu przy Żeglarskiej
+– do wód rzeki Ina; wylotu przy ul. Popiela – do wód rzeki Ina; wylotu przy
+Limanowskiego – do wód Kanału Młyńskiego; wylotu przy ul. Chrobrego i Portowej –
+do wód Kanału Młyńskiego; wylotu – przelew przy ul. Krzywoustego – do wód rzeki
+Ina i wylotu – przelew przy ul. Krzywoustego – do wód rzeki Ina. Według informacji
+uzyskanej w trakcie kontroli przez NIK41 od Dyrektora Zarządu Zlewni w Stargardzie
+PGW WP, z uwagi na fakt, iż ww. wnioski zawierają szereg braków, m.in. brak jest
+decyzji wydanej z art. 80 ustawy Prawo wodne, wnioskodawca zostanie wezwany
+do ich uzupełnienia.
+                                                       (akta kontroli str. 1673-1697)
+Spółka podjęła następujące działania w celu minimalizowania uruchamiania
+przelewów burzowych:
+ od 2021 r. (tj. od dnia obowiązywania ustawy o zbiorowym odprowadzaniu
+    ścieków) nie wyrażała zgody na odprowadzanie wód opadowych z nowych
+    obiektów do kanalizacji ogólnospławnej;
+ wykonała I etap modernizacji oczyszczalni ścieków, podczas którego
+    wykorzystano istniejące obiekty do stworzenia retencji 4 200 m3, celem ich
+    późniejszego oczyszczenia (zadanie zakończone w 2015 r.);
+ wybudowała nowy odcinek sieci kanalizacyjnej oraz przeprowadziła renowację
+    syfonu pod rzeką Iną42 (miało to na celu odciążenie działania przelewu burzowego
+    oraz poprawy funkcjonowania systemu kanalizacji43, zadanie zakończono
+    w 2016 r.);
+ corocznie prowadziła systematyczne renowacje kanałów ogólnospławnych44
+    (uszczelnienie i poprawa właściwości fizycznych rury oraz odmulenie kanałów,
+    poprawa hydrauliki kanałów), co wpływało na zwiększenie retencji w systemie
+    kanalizacji podczas nawalnych deszczy;
+
+
+
+40 5 lipca 2023 r. Spółka zleciła (umowa TA-ZR-43/2023) podmiotowi zewnętrznemu wykonanie dokumentacji (w tym operatu
+
+wodnoprawnego) wraz ze wszystkimi opiniami i uzgodnieniami oraz uzyskanie decyzji o pozwoleniu wodnoprawnym w zakresie
+odprowadzania ścieków dla ośmiu przelewów burzowych z sieci kanalizacji ogólnospławnej za pomocą wylotów do rzeki Ina
+wraz z ich legalizacją: wyloty do kanału w rejonie i ul. Bydgoska/Rzemieślnicza, do rzeki Ina w rejonie ul. Basztowa - przy
+archiwum-kanał, do rzeki Ina w rejonie ul. Żeglarskiej przy moście, do rzeki Ina w rejonie ul. Popiela przy moście, do rzeki Ina
+w rejonie ul. Limanowskiego, do rzeki Ina w rejonie ul. Chrobrego/Portowa - kanał przy moście, do rzeki Ina w rejonie
+ul. Krzywoustego/Kazimierza Wielkiego most lewa strona, do rzeki Ina w rejonie ul. Krzywoustego/Kazimierza Wielkiego most
+prawa strona.
+41 Na podstawie art. 29 ust. 1 pkt 2 lit. f ustawy o NIK.
+42 Roboty obejmowały renowację nieczynnego syfonu o średnicy 700 i 800 i łącznej długości 72 m, wymieniono fragment starego
+
+kanału na nowy o średnicy 1 000 o łącznej długości 65 m, znajdującego się na terenie oczyszczalni oraz wybudowano nowe
+odcinki sieci kanalizacyjnej o średnicy 1 000 i łącznej długości 207 m oraz średnicy 800 i łącznej długości 54 m wraz
+z przebudową trzech komór.
+43 Dzięki tym działaniom do oczyszczalni doprowadzana była większa ilość ścieków opadowych, która była retencjonowana
+
+celem późniejszego ich oczyszczenia.
+44 Spółka wykonała łącznie renowację 4 827 m kanałów, w tym w okresie objętym kontrolą 2 038 m.
+
+                                                               8
+ zmodernizowała komorę przelewową w ul. Marii Konopnickiej w Stargardzie oraz
+  wybudowała nowy odcinek sieci łączącej komorę z istniejącą kanalizacją
+  o długości 25 m;
+ w 2021 r. zleciła: opracowanie ekspertyzy technicznej mającej na celu ocenę
+  możliwości       wykorzystania     otwartych    zbiorników    fermentacyjnych45
+  zlokalizowanych na terenie oczyszczalni ścieków w Stargardzie
+  (po przeprowadzeniu robót adaptacyjnych istnieje możliwość retencjonowania
+  wód opadowych w ilości ok. 28 000 m3) oraz opracowanie koncepcji pn. „Budowa
+  przepompowni nadmiarowych ścieków z obiektami towarzyszącymi” (która
+  zakłada zwiększenie retencji przy wykorzystaniu ww. zbiorników OBF oraz
+  zwiększenie o kolejne 10 000 m³);
+ w 2023 r. Miasto pozyskało środki w wysokości 20 mln zł z Rządowego Funduszu
+  Polski Ład Program Inwestycji Strategicznych na zadanie Budowa przepompowni
+  nadmiarowej ścieków wraz z adaptacją obiektów kubaturowych i wykonaniem
+  niezbędnych urządzeń na terenie oczyszczalni ścieków w Stargardzie46. Spółka
+  będzie inwestorem zastępczym, który przeprowadzi postępowanie przetargowe
+  na wyłonienie wykonawcy w formule zaprojektuj i wybuduj. Czas realizacji od
+  wyłonienia wykonawcy to 36 miesięcy. Spółka była w posiadaniu Programu
+  Funkcjonalno-Użytkowego. Dokumentacja ta posłużyć ma jako załącznik do
+  postępowania o udzielenie zamówienia, które zostanie ogłoszone w drugim
+  kwartale 2024 r.
+   (akta kontroli str. 607-622, 961-966, 1006-1040, 1041-1045, 1221-1222a, 1383-
+                                                                1388, 1466-1468)
+W sprawie innych działań prowadzonych przez Spółkę w ramach nadzoru nad
+prowadzeniem gospodarki ściekowej, w tym nad jakością i ilością ścieków oraz wód
+opadowych i roztopowych wprowadzanych do rzeki Iny Prezes wyjaśnił, że
+prowadzony jest bieżący monitoring stanu przelewów burzowych, odzwierciedlony
+raportami miesięcznymi47. Jego celem jest wizualna ocena stanu technicznego
+przelewów burzowych, jak również ocena stanu technicznego klap zwrotnych,
+a w szczególności zamkniecie klap tak, aby przy wysokim stanie rzeki woda nie
+dostawała się do kanalizacji oraz usunięcie ewentualnych zanieczyszczeń, które
+zakłócałyby pracę przelewów burzowych. Ponadto na bazie własnych obserwacji
+i wykorzystując pomiar wypełnienia kanałów, Spółka podwyższyła próg przelewowy
+na przelewie burzowym przy ul. Brzozowej, co przyczyniło się do zmniejszenia
+częstotliwości jego działania.
+                                      (akta kontroli str. 985, 995-1040,1468, 1733)
+                                                                   (akta kontroli str.)
+Realizując obowiązek określony w art. 236b ust. 1 ustawy z dnia 27 kwietnia 2001 r.
+Prawo ochrony środowiska48 Spółka terminowo przekazała WIOŚ sprawozdania
+zawierające dane o przekroczeniu wartości progowych dla uwolnień i transferów
+zanieczyszczeń, o których mowa w załączniku II do rozporządzenia 166/200649, oraz
+transferów odpadów określonych w art. 5 ust. 1 lit. b tego rozporządzenia,
+z uwzględnieniem wielkości produkcji (tzw. sprawozdania PRTR) za 2021 r., 2022 r.
+i 2023 r. Sprawozdania zostały sporządzone zgodnie ze wzorami określonymi
+w rozporządzeniach: Ministra Środowiska z dnia 14 sierpnia 2009 r. w sprawie
+sprawozdania do tworzenia Krajowego Rejestru Uwalniania i Transferu
+
+45 Dalej: OBF.
+46 Zadanie przewiduje budowę wysokowydajnej przepompowni, adaptację istniejących obiektów kubaturowych umożliwiających
+
+przyjęcie ok. 28 tys. m3 dodatkowych ścieków nadmiarowych oraz budowę czwartego syfonu pod rzeką Iną. Celem zadania jest
+dodatkowa ochrona wód rzeki Iny przed zanieczyszczeniami. Realizacja inwestycji ma przyczynić się do zminimalizowania
+zrzutów ścieków deszczowych do rzeki Iny podczas nawalnych lub długotrwałych opadów atmosferycznych.
+47 Według harmonogramów przeglądy prowadzone były raz w miesiącu i obejmowały wszystkie przelewy burzowe.
+48 Dz.U. z 2024 r. poz. 54, dalej: ustawa Prawo ochrony środowiska.
+49 Rozporządzenie (WE) z dnia 18 stycznia 2006 r. nr 166/2006 Parlamentu Europejskiego i Rady z dnia 18 stycznia 2006 r.
+
+w sprawie ustanowienia Europejskiego Rejestru Uwalniania i Transferu Zanieczyszczeń, zmieniające dyrektywę Rady
+91/689/EWG I 96/61/WE (Dz.Urz.UE.L Nr 33, str. 1, ze zm.).
+                                                           9
+zanieczyszczeń50 oraz Ministra Klimatu i Środowiska z dnia 22 lutego 2022 r
+w sprawie danych objętych Krajowym Rejestrem Uwalniania i Transferu
+Zanieczyszczeń51.
+                                                    (akta kontroli str. 926-937)
+Decyzją z 18 sierpnia 2021 r. RDOŚ nałożył na Wody Miejskie obowiązek
+wykonywania pomiarów zawartości substancji w wodach rzeki Iny i kanału burzowego
+(ulgi) przy ul. Brzozowej w Stargardzie oraz ilości ścieków odprowadzanych poprzez
+przelew burzowy po jego uruchomieniu. Spółka nie wykonywała pomiarów
+rzeczywistej ilości ścieków odprowadzanych poprzez ww. przelew po jego
+uruchomieniu. Zagadnienie to opisano w sekcji Stwierdzone nieprawidłowości.
+   (akta kontroli str. 463-469, 1221-1222a, 1624-1629,1733-1734, 1795-1798, 1954-
+                                                         1971, 2068-2071, 2183-2185)
+NIK poddała analizie realizację obowiązku pomiarów zawartości substancji w wodach
+rzeki Iny i kanału burzowego, określonego w decyzji RDOŚ z 18 sierpnia 2021 r.
+po uruchomieniu przelewu burzowego przy ul. Brzozowej (działka nr 414 w obrębie 2
+miasta Stargard): 17 czerwca 2023 r., 29 lipca 2023 r., 6 i 15 sierpnia 2023 r., 25
+października 2023 r. i 23 listopada 2023 r. Z przedłożonej przez Spółkę dokumentacji
+wynikało, że w przypadku pięciu z sześciu ww. uruchomień przelewu badane były
+(zgodnie z obowiązkiem określonym w ww. decyzji) parametry: ChZT, BZT5,
+zawiesiny ogólne, azot ogólny, azot amonowy, azot azotanowy, azot azotynowy, azot
+Kjeldahla, fosfor ogólny, fosforany, miedź, ołów, kadm, rtęć, chrom ogólny, indeks
+oleju mineralnego (C10-C40), indeks fenolowy, żelazo ogólne, substancje
+powierzchniowo czynne anionowe. Nie wykonano badań jakości ścieków w kanale
+burzowym oraz wody rzeki Iny po uruchomieniu ww. przelewu burzowego 17 czerwca
+2023 r., co opisano w sekcji Stwierdzone nieprawidłowości.
+Zgodnie z obowiązkiem wynikającym z ww. decyzji RDOŚ, Spółka w związku
+uruchomieniem przelewów burzowych 29 lipca 2023 r., 6 i 15 sierpnia 2023 r.,
+25 października 2023 r., 23 listopada 2023 r., w ciągu tygodnia od wystąpienia
+zdarzenia przesłała RDOŚ informację o czasie, który upłynął od momentu zadziałania
+przelewu burzowego do czasu poboru próbek, wraz z materiałem zdjęciowym
+z poboru próbek. Pismem z 20 czerwca 2023 r. Wody Miejskie poinformowały RDOŚ
+o przyczynie niepobrania próbek po uruchomieniu przelewu 17 czerwca 2023 r.
+ (akta kontroli str. 1221-1222a, 1737, 1760-1768, 1799-1801,1937-2067, 2068-2071)
+Spółka nie wdrożyła pisemnych procedur dotyczących monitorowania uruchomienia
+przelewów burzowych oraz poboru prób ścieków i wody z rzeki Iny po uruchomieniu
+przelewów. Pełniący dyżur 17 czerwca 2023 r. monter sieci kanalizacyjnej
+w złożonych zeznaniach potwierdził znajomość zasad pobierania, oznaczania,
+dokumentowania i przekazywania próbek ścieków i wód z rzeki Iny do badań,
+zgodnych z wymaganiami określonymi w decyzji RDOŚ z 18 sierpnia 2021 r.
+                   (akta kontroli str. 1624-1629,1733-1734, 1760-1762, 1795-1798)
+W sprawie sposobu monitorowania uruchomienia się poszczególnych przelewów
+burzowych i źródła danych o uruchomieniu przelewów Prezes wyjaśnił: W latach
+2021-2023 zobowiązana do monitorowania przelewów burzowych była osoba
+pełniąca dyżur domowy (nadzorujący), która wizualnie w oparciu o obserwację
+pogody uruchamiała osoby odpowiedzialne za potwierdzenie faktu uruchomienia się
+przelewów burzowych, a po wydanej decyzji RDOŚ pobranie prób i przekazanie ich
+do laboratorium w celu wykonania badań. Każde uruchomienie przelewu było
+przekazywane Kierownikowi Zakładu, który przygotowywał pismo o zadziałaniu
+przelewów burzowych do WIOŚ i RDOŚ.
+                                                   (akta kontroli str. 1822-1823)
+
+
+50 Dz.U. Nr 141, poz. 1154.
+51 Dz.U. z 2023 r. poz. 857.
+
+                                         10
+Według informacji RDOŚ uzyskanej w trakcie kontroli52, każdorazowo po przesłaniu
+przez Spółkę zawiadomienia o zrzucie, pracownik merytoryczny analizował
+otrzymane informacje. Z analizy przekazywanych wyników badań wody
+po uruchomieniu przelewu wynikało, że wartości większości parametrów
+charakteryzujących warunki tlenowe i biogenne rzeki Ina poniżej zrzutu mieszaniny
+ścieków z przelewu, każdorazowo przekraczały (nawet kilkadziesiąt razy) wartości
+graniczne dla klas jakości wód powierzchniowych oraz wymagania dla parametrów
+charakteryzujących cel środowiskowy JCWP53 o nazwie Ina od Krąpieli do dopływu
+spod Marszewa. W związku z powyższym 25 lipca 2023 r. zwrócono się do PGW WP
+RZGW w Szczecinie z prośbą o pomoc w ocenie merytorycznej wyników badań wody
+rzeki Iny i ścieków zrzucanych po uruchomieniu przelewu, szczególnie w kontekście
+wpływu przedmiotowych zrzutów na osiągnięcie celów środowiskowych. Z uwagi na
+złożony charakter sprawy oraz konieczność pozyskania danych z innych instytucji,
+RZGW nadal analizuje otrzymane materiały. RDOŚ wystąpił do Sądu Rejonowego
+w Stargardzie z wnioskiem o ukaranie Spółki grzywną, za brak wykonywania
+17 czerwca 2023 r. obowiązku wynikającego z decyzji RDOŚ.
+                                                      (akta kontroli str.1566-1568)
+Spółka otrzymała 6 lipca 2023 r. postanowienie RDOŚ54 o wszczęciu postępowania
+administracyjnego w sprawie wydania decyzji na podstawie art. 15 ust. 1 i 2 ustawy
+z dnia 13 kwietnia 2007 r. o zapobieganiu szkodom w środowisku i ich naprawie55,
+zobowiązującej podmiot korzystający ze środowiska do przeprowadzenia działań
+zapobiegawczych i/lub naprawczych. W uzasadnieniu postanowienia wskazano na
+otrzymane przez RDOŚ zgłoszenia wskazujące na dokonanie 17 i 26 czerwca 2023 r.
+zrzutów do rzeki Iny nieoczyszczonych ścieków z terenu Stargardu poprzez kanał
+burzowy przy ul. Brzozowej oraz zaobserwowanych 19 czerwca na terenie gminy
+Goleniów spływających z nurtem rzeki śniętych rybach (odłowiono 350 kg martwych
+ryb). Wskazano również, że niekontrolowane zrzuty ścieków ww. kanałem burzowym
+oraz sześcioma innymi na terenie Miasta obserwowane były od kilku lat,
+co spowodowane było niewydolnością systemu odbierającego wodę poopadową.
+Zazwyczaj w tym samym czasie w rzece Inie notowano zatrucia i śnięcie ryb.
+W wyjaśnieniach złożonych RDOŚ w związku z ww. postępowaniem 25 sierpnia
+2023 r. Spółka wskazała, że bezpośrednią przyczyną śnięcia ryb w rejonie Goleniowa
+nie było uruchomienie się przelewów burzowych na terenie Miasta 17 czerwca
+2023 r., powołując się na opinię naukową dołączoną do wyjaśnień i wynikające z niej
+wnioski. Jednocześnie Spółka poinformowała, że zamierza wprowadzić dodatkowe
+przekroje pomiarowe na trasie od rejonu ujęcia wody w Stargardzie do mostu
+w Klępinie oraz dodatkowe pomiary laboratoryjne w stosunku do wykonywanych
+obecnie pomiarów dla rzeki Iny. Poinformowała także o zamiarze wprowadzenia
+własnego pomiaru natężenia opadów deszczu. Według informacji RDOŚ, uzyskanej
+w trakcie kontroli56, postępowanie nadal było w toku.
+                                 (akta kontroli str. 955-960, 1221-1222a, 1566-1568)
+Na podstawie zlecenia Spółki z 12 lipca 2023 r. opracowana została opinia
+pt. „Określenie wpływu eksploatacji obiektów kanalizacyjnych przedsiębiorstwa Wody
+Miejskie na okresowe zjawisko śnięcia ryb w rzece Inie ze szczególnym
+uwzględnieniem postanowienia RDOŚ w Szczecinie z 30 czerwca 2023 r.”
+Na podstawie m.in. pomiarów przeprowadzonych przez WIOŚ w Szczecinie
+19 czerwca 2023 r. i lustracji przeprowadzonej przez przedstawiciela Zarządu Zlewni
+w Stargardzie PGW WP 20 czerwca 2023 r., opiniujący stwierdził, iż nie jest możliwym
+jednoznaczne potwierdzenie, aby szkoda w środowisku wodnym rzeki Iny nastąpiła
+z wyłącznej przyczyny w postaci odprowadzenia 17 czerwca 2023 r. zrzutu
+
+52 Na podstawie art. 29 ust. 1 pkt 2 lit f ustawy o NIK.
+53 Jednolita część wód powierzchniowych.
+54 WONS.512.7.2023.MR z 30 czerwca 2023 r.
+55 Dz.U. z 2020 r. poz. 2187, dalej: ustawa o zapobieganiu szkodom w środowisku i ich naprawie.
+56 Na podstawie art. 29 ust. 1 pkt 2 lit f ustawy o NIK.
+
+                                                            11
+burzowego ścieków ogólnospławnych do rzeki Iny, który trwał 2,5 h i był
+spowodowany nawalnym deszczem w Stargardzie. Jako argumenty wskazano m.in.
+iż każdy zrzut ścieków przelewami burzowymi obniża krótkotrwale i znacząco
+parametry jakościowe wód w rejonie zrzutu, jednak negatywny wpływ na parametry
+fizykochemiczne i życie biologiczne rzeki drastycznie maleje po kilku lub maksymalnie
+kilkunastu kilometrach od przekroju doprowadzonych zanieczyszczeń, zatem doszło
+prawdopodobnie do niekontrolowanego odprowadzenia57 przez nieznany podmiot
+ścieków z relatywnie bardzo dużą zawartością substancji powierzchniowo czynnych,
+dodatkowo wystąpiły niekorzystne warunki termiczno-tlenowe rzeki Iny sprzyjające
+zjawisku śnięcia ryb. Według opiniującego, przy dyspozycyjnej pojemności
+retencyjnej na ścieki nadmiarowe z kanalizacji ogólnospławnej, która wynosi
+4 200 m³, istnieje konieczność okresowego i krótkotrwałego odprowadzania ścieków
+do rzeki Iny poprzez przelewy burzowe podczas intensywnych opadów
+atmosferycznych. Przelewy chronią oczyszczalnię przed nadmiarowym dopływem
+ścieków w czasie opadów nawalnych lub długotrwałych opadów o znacznym
+natężeniu, jak również chronią przed podtopieniem nisko położonych obiektów
+i budynków mieszkalnych w mieście.
+                                                           (akta kontroli str. 607-622)
+Spółka przekazywała do Urzędu informacje i wyjaśnienia w związku z kierowanymi
+do Prezydenta przez WIOŚ oraz Komendę Powiatową Policji w Stargardzie pismami
+dotyczącymi uruchamiania przelewów burzowych i zanieczyszczenia rzeki Iny. Urząd
+nie był informowany o poszczególnych uruchomieniach przelewów burzowych.
+                    (akta kontroli str. 961-966, 1221-1222a, 1398-1402, 1409-1414)
+2. W latach 2021-2023 w Spółce obowiązywały trzy wieloletnie plany rozwoju
+i modernizacji urządzeń wodociągowych i urządzeń kanalizacyjnych58 przyjęte
+uchwałami Rady Miejskiej w Stargardzie (uchwały weszły w życie z dniem podjęcia):
+ nr XLI/441/2018 z 24 kwietnia 2018 r. w sprawie uchwalenia wieloletniego planu
+    rozwoju oraz modernizacji urządzeń wodociągowych i kanalizacyjnych MPGK
+    na lata 2018-202159;
+ nr XXX/321/2021 z 31 sierpnia 2021 r. w sprawie uchwalenia wieloletniego planu
+    rozwoju oraz modernizacji urządzeń wodociągowych i kanalizacyjnych MPGK
+    na lata 2022-202460;
+ nr LVII/563/2023 z 28 listopada 2023 r. w sprawie uchwalenia wieloletniego planu
+    rozwoju oraz modernizacji urządzeń wodociągowych i kanalizacyjnych Wód
+    Miejskich Stargard Sp. z o.o. na lata 2024-2026.
+Opracowane przez Spółkę projekty planów zawierały elementy wymagane przepisami
+art. 21 ust. 2 ustawy o zbiorowym odprowadzaniu ścieków. Zgłaszane przez Spółkę
+propozycje w projektach planów zostały zaakceptowane.
+                                               (akta kontroli str. 498-533, 2108-2124)
+Prezes wyjaśnił: Spółka planując i opracowując wieloletnie plany (…) w zakresie
+gospodarki ściekowej przede wszystkim kieruje się otrzymanymi wnioskami
+przyłączeniowymi lub planami rozbudowy terenów pod budownictwo mieszkalne oraz
+rozbudowy miejskich stref przemysłowych tak, aby stworzyć techniczne możliwości
+przyłączenia potencjalnych odbiorców do miejskiej sieci kanalizacyjnej. Ponadto
+bierzemy pod uwagę plany modernizacji dróg zaplanowane przez zarządców dróg,
+
+57 W bliskim sąsiedztwie lub powyżej przekroju miejscowości Bącznik, Łęsko – 28 km rzeki Iny (gm. Goleniów) lub powyżej tych
+
+miejscowości.
+58 Dalej: wieloletnie plany.
+59 Uchwała nr 331/17 Zarządu MPGK z 27 grudnia 2017 r. w sprawie zatwierdzenia wieloletniego planu rozwoju oraz modernizacji
+
+urządzeń wodociągowych i kanalizacyjnych MPGK na lata 2018-2021. Uchwała nr 2/VIII/18 Rady Nadzorczej MPGK
+z 25 stycznia 2018 r. w sprawie zaopiniowania wieloletniego planu rozwoju oraz modernizacji urządzeń wodociągowych
+i kanalizacyjnych MPGK na lata 2018-2021.
+60 Uchwała nr 97/21 Zarządu MPGK z 1 czerwca 2021 r. w sprawie zatwierdzenia wieloletniego planu rozwoju oraz modernizacji
+
+urządzeń wodociągowych i kanalizacyjnych MPGK na lata 2022-2024. Uchwała nr 17/IX/21 Rady Nadzorczej MPGK
+z 24 czerwca 2021 r. w sprawie zaopiniowania wieloletniego planu rozwoju oraz modernizacji urządzeń wodociągowych
+i kanalizacyjnych MPGK na lata 2022-2024.
+                                                            12
+w których zlokalizowana jest nasza infrastruktura kanalizacyjna tak, aby
+z wyprzedzeniem wykonać prace na naszych sieciach, eliminując w ten sposób
+powstanie potencjalnych awarii, a co za tym idzie wysokich kosztów odtworzenia
+terenu (nawierzchni).
+                                                    (akta kontroli str. 2131-2132)
+Działalność inwestycyjna i remontowa Spółki była także ujmowana corocznie
+w Planach Techniczno-Ekonomicznych61, które zostały opracowane w oparciu
+o: aktualne potrzeby wynikające z bieżącej eksploatacji posiadanego majątku,
+wieloletnie plany.
+                                                    (akta kontroli str. 299-455)
+W ramach przygotowania wieloletnich planów nie opracowano ani nie zlecano
+opracowania analiz/ekspertyz/specjalistycznych opinii dotyczących zagadnień
+związanych z odprowadzaniem ścieków poprzez przelewy burzowe i dotyczących
+zanieczyszczania wód rzeki Iny. Zgodnie z wyjaśnieniami Prezesa: Z uwagi na
+uruchomienie się przelewów burzowych w okresie nawalnych lub długotrwałych
+opadów atmosferycznych Spółka w 2021 r. zleciła wykonanie koncepcji w zakresie
+zwiększenia retencji wód opadowych. Mając na uwadze zgłoszenie do Prokuratury
+(…) Spółka zleciła w 2023 r. wykonanie ekspertyzy w zakresie wpływu zrzutu
+mieszaniny ścieków socjalno-bytowych i wód opadowych do rzeki Iny.
+                                                (akta kontroli str. 680-682, 1926)
+Według informacji uzyskanych w trakcie kontroli przez NIK62, postanowieniem
+z 20 grudnia 2023 r. zostało umorzone - prowadzone przez ww. Prokuraturę -
+śledztwo w sprawie mającego miejsce w bliżej nieustalonym miejscu na terenie gminy
+Goleniów zanieczyszczania wody w rzece Inie, które mogło zagrozić życiu lub zdrowiu
+człowieka, spowodować istotne obniżenie jakości wody lub zanieczyszczenie
+w świecie roślinnym lub zwierzęcym w znacznych rozmiarach.
+        (akta kontroli str. 607-622, 1041-1220, 1221-1222a, 1265-1353, 1420-1431)
+Według koncepcji z grudnia 2021 r. (opracowanej na podstawie zlecenia Spółki
+z 15 września 2021 r.), celami inwestycji były:
+ zadanie I – budowa nowoczesnego układu stabilizacji osadów ściekowych
+    w oparciu o zamknięte komory fermentacyjne i dodatkową stabilizację wapnem
+    wysokoreaktywnym wraz z budową zbiornika gazu i instalacji do odzysku energii;
+ zadanie II – ograniczenie częstotliwości działania przelewów nadmiarowych
+    przed oczyszczalnią poprzez skierowanie pierwszej fali ścieków przelewowych
+    do nowych zbiorników retencyjnych na terenie oczyszczalni oraz zwiększenie
+    retencji ścieków dopływających w pogodzie deszczowej - do oczyszczalni
+    w Stargardzie. Zwiększenie retencji na terenie oczyszczalni zrealizowane miało
+    być poprzez: przystosowanie istniejącej otwartej komory fermentacyjnej
+    do pełnienia funkcji zbiornika retencyjnego ścieków przelewowych;
+    przystosowanie istniejących otwartych basenów fermentacyjnych do pełnienia
+    funkcji zbiorników retencyjnych ścieków przelewowych; przystosowanie
+    istniejących otwartych basenów fermentacyjnych do pełnienia funkcji zbiorników
+    retencyjnych ścieków przelewowych. Zwiększenie kubatury zbiorników
+    retencyjnych na terenie oczyszczalni miało umożliwić przyjęcie i oczyszczenie
+
+61 W latach 2021-2023 Zarząd Spółki podjął następujące uchwały (które weszły w życie z dniem podjęcia):
+
+     nr 199/20 z 1 grudnia 2020 r. w sprawie uchwalenia Planu Techniczno-Ekonomicznego na rok 2021, który został
+      pozytywnie zaopiniowany uchwałą Rady Nadzorczej nr 14/IX/20 z 17 grudnia 2020 r. Zarząd Spółki przyjął korektę Planu
+      na rok 2021: uchwałą nr 181/21 z 19 października 2021 r. (korekta zatwierdzona uchwałą Rady Nadzorczej nr 20/IX/21
+      z 28 października 2021 r.),
+     nr 65/22 z 7 października 2022 r. w sprawie uchwalenia Planu Techniczno-Ekonomicznego na rok 2022, który został
+      pozytywnie zaopiniowany uchwałą Rady Nadzorczej nr 23/IX/22 z 13 października 2022 r.,
+     nr 2/23 z 18 stycznia 2023 r. w sprawie uchwalenia Planu Techniczno-Ekonomicznego na rok 2023, który został
+      pozytywnie zaopiniowany uchwałą Rady Nadzorczej nr 1/IX/23 z 26 stycznia 2023 r. Zarząd Spółki przyjął korektę Planu
+      na rok 2023: uchwałą 15/2023 z 21 sierpnia 2023 r. (korekta zatwierdzona uchwałą Rady Nadzorczej nr 16/IX/23
+      z 7 września 2023 r.).
+62 Na podstawie art. 29 ust. 1 pkt 2 lit f. ustawy o NIK.
+
+                                                            13
+    dodatkowej ilości ścieków przelewowych, które dotychczas systemem
+    przelewowym odprowadzane były bezpośrednio do odbiornika. Inwestycja
+    pozwolić miała na dodatkową ochronę wód rzeki Iny.
+                                                       (akta kontroli str. 737-859)
+Prezes wyjaśnił, że projektanci zaproponowali rozwiązanie, które uwzględnia budowę
+przepompowni ścieków na terenie oczyszczalni z wykorzystaniem istniejących
+zbiorników i wykonaniem czwartego syfonu pod rzeką Iną. Z uwagi na wysokie koszty
+opracowania samego projektu, jak również późniejszej budowy całej infrastruktury
+Spółka cały czas poszukiwała środków na sfinansowanie tego zadania, którego
+łączny koszt na dzień opracowania koncepcji wynosił ponad 60 mln zł.
+W sprawie działań dotyczących realizacji przedsięwzięć wskazanych w koncepcji
+opracowanej w 2021 r. Prezes wyjaśnił: (…) Spółka od kilku lat prowadzi szereg
+działań finalnie zmierzających do jej zrealizowania. W wyjaśnieniach podał także:
+Spółka była w stałym kontakcie z Miastem w sprawie realizacji retencji na terenie OŚ.
+6 sierpnia 2021 r. na wniosek Spółki Miasto jako jednostka samorządu terytorialnego
+i beneficjent złożyło wniosek w ramach Polskiego Ładu - Przedsięwzięcie nie uzyskało
+dofinansowania. Następnie w wyniku przeprowadzania kilku spotkań w tym również
+z przedstawicielami parlamentarzystów (…) oraz przedstawicielami PGW WP, RDOŚ
+doszło do złożenia w dniu 16 sierpnia 2023 r. w ramach Polskiego Ładu wniosku
+o dofinansowanie przez Miasto jako beneficjenta Programu. Przedsięwzięcie
+uzyskało dofinansowanie. Obecnie został wykonany Program Funkcjonalno-
+Użytkowy i rozpoczęto procedurę wyłonienia wykonawcy w trybie zaprojektuj
+i wybuduj. Spółka na mocy umowy z Miastem będzie inwestorem zastępczym tego
+zadania. (…) Zastosowanie tego rozwiązania pozwoli, że pierwsza „fala” mieszaniny
+ścieków nie trafi do rzeki, tylko na retencję na oczyszczalni. Maksymalnie może to być
+dodatkowe 28 tys. m3, co wynika z opracowanych dwóch ekspertyz (…). Są to
+zbiorniki zlokalizowane na oczyszczalni, które wcześniej służyły do zagęszczania
+osadów i nieużywane są od roku 2000. Można jeszcze zwiększyć na oczyszczalni
+retencję o kolejne 10 tys. m3, ale w tym przypadku należałoby zrealizować kolejną
+inwestycję (…), a mianowicie drugi etap modernizacji oczyszczalni, polegający na
+wykonaniu pełnej fermentacji wraz z węzłem zagospodarowania osadów oraz
+zwolnieniem zbiornika na zwiększenie retencji dla poprawy gospodarki wodami
+opadowymi. (…).
+                   (akta kontroli str. 1043, 1221-1222a, 2105-2107, 2131, 2189-2194)
+W piśmie nr DT/TS/4068/2022 z 10 stycznia 2023 r. Prezes wyraził gotowość
+spotkania z RDOŚ w celu ustalenia możliwości pozyskania środków na zrealizowanie
+zadań oraz poprosił o wsparcie Spółki w możliwości pozyskania środków
+zewnętrznych. Prezes wyjaśnił: W związku z koniecznymi potrzebami inwestycyjnymi
+Spółki zmierzającymi do podniesienia standardów jakości świadczonych usług, w tym
+uwzględnienia występowania zdarzeń dotyczących zrzutu ścieków bezpośrednio do
+rzeki Iny z pominięciem procesu technologicznego (…) wymagany jest szereg
+nakładów o kilkudziesięciomilionowej wartości. Z tego tytułu Spółka ustawicznie
+poszukuje środków na wsparcie realizacji przywołanych powyżej inwestycji, aby
+z jednej strony zminimalizować ich koszt do poziomu możliwego do poniesienia przez
+Spółkę na rzecz mieszkańców. Pismo (…) było jedną z prób uzyskania możliwego
+wsparcia zarówno w charakterze bezpośrednim, a więc uzyskania dotacji od adresata
+pisma, jak również pośrednio, poprzez możliwość wpływu przywołanego powyżej
+organu na wsparcie działań objętych wsparciem finansowym przez jakiekolwiek
+instytucje rządowe. Niestety wbrew oczekiwaniom Spółki RDOŚ nie podjął działań,
+które w jakikolwiek sposób mogłyby ułatwić Spółce pozyskanie zewnętrznego źródła
+finansowania. (…).
+                                                            (akta kontroli str. 1629)
+W wieloletnim planie na lata 2018-2021 Spółka ujęła następujące przedsięwzięcia
+rozwojowo-modernizacyjne dot. sieci kanalizacyjnej: budowa sieci kanalizacji
+                                          14
+sanitarnej DN250L-405m, tłoczny DN90L-2x75m wraz z przepompownią PPNT63
+(2018: 40 tys. zł64); budowa dwóch odcinków sieci kanalizacji tłocznej w ulicy Sadowej
+wraz z modernizacją przepompowni P8 i P9 (2020: 115 tys. zł65); budowa sieci
+kanalizacyjnej DN300 L-950m na terenie PSSE 2018: 250 tys. zł66 (nakłady
+poniesione w latach wcześniejszych: 17,99 tys. zł); budowa sieci kanalizacyjnej
+DN200 w ulicy Tańskiego-Śniadeckiego (2018: 30 tys. zł67); modernizacja
+przepompowni P1 ul. Warszawska (nakłady poniesione we wcześniejszych latach:
+25,38 tys. zł68); przebudowa włączenia kolektora DN1000 w układ kanalizacji w ulicy
+Piłsudskiego-Konopnickiej (2021: 220 tys. zł69); rozbudowa sieci kanalizacyjnej
+na terenie Miasta70 (2020: 100 tys. zł, 2021: 50 tys. zł); budowa sieci kanalizacyjnej
+w ulicy Nowowiejskiej wraz z przepompownią, kanalizacja grawitacyjna DN200 L-
+674m i kanalizacja tłoczna DN90 L-463m71 (2019: 300 tys. zł, 2020: 100 tys. zł,
+nakłady poniesione we wcześniejszych latach: 83,15 tys. zł); budowa sieci
+kanalizacyjnej DN200 w ulicy Morskiej, Szosie Maszewskiej i w ulicy Wiśniowej72
+(skrzyżowanie) (2019: 70 tys. zł, nakłady poniesione we wcześniejszych latach:
+3,5 tys. zł); budowa sieci kanalizacyjnej DN200 w ulicy Grudziądzkiej (2018: 40 tys.
+zł73). Suma zaplanowanych kosztów w poszczególnych latach wyniosła: 1 010 tys. zł
+w 2018 r., 1 100 tys. zł w 2019 r., 935 tys. zł w 2020 r., 495 tys. zł w 2021 r. W planie
+wskazano jako źródła finansowania środki własne. Podana w planie data zakończenia
+realizacji: 2021 r.
+Pośród zadań racjonalizujących odprowadzanie i oczyszczanie ścieków wymieniono:
+dokończenie wykonania układów do przesyłania stanów alarmowych i zdalnego
+sterowania przepompowni ścieków ze sprowadzeniem sygnału na oczyszczalnię
+ścieków i do bazy Zakładu Wodociągów i Kanalizacji; zakup urządzenia
+specjalistycznego do inspekcji TV kanałów; dostosowanie jednostek kanalizacyjnych
+pod planowane inwestycje miejskie; monitoring sieci kanalizacyjnej (pomiar
+wypełnienia kolektorów wraz z zakupem deszczomierzy).
+                                                   (akta kontroli str. 511, 513, 515, 674)
+W wieloletnim planie na lata 2022-2024 ujęto poniższe przedsięwzięcia rozwojowo-
+modernizacyjne dot. rozbudowy sieci kanalizacji sanitarnej na ternie miasta: budowa
+sieci kanalizacyjnej na osiedlu Pyrzyckim kanalizacja grawitacyjna DN200 L-900m
+I etap DN200 L-700m II etap (2022 r. - 700 tys. zł; 2024 r. – 600 tys. zł)74; budowa
+sieci kanalizacyjnej DN200 L-200m w ulicy Śniadeckiego (2023 r. – 200 tys. zł)75;
+budowa sieci kanalizacyjnej DN200 L-200m w ulicy Nowowiejskiej (2023 r. – 200 tys.
+zł)76; modernizacja przepompowni przy ul. Warszawskiej (2022 r. – 1 500 tys. zł)77;
+budowa sieci kanalizacyjnej w ulicy Aleja Dębowa wraz z przepompownią, kanalizacja
+grawitacyjna DN200 L-320m i kanalizacja tłoczna DN90 L-170m (2024 r. – 700 tys.)78.
+Planowane źródło finansowania: środki własne. Wskazana w planie data zakończenia
+realizacji: 2024. Z kolei w ramach zadania „Opracowanie dokumentacji projektowej
+dotyczącej Budowy instalacji przetwarzania osadów ściekowych wraz z przebudową
+i rozbudową OŚ w Stargardzie” zaplanowano: budowę instalacji przetwarzania
+osadów ściekowych w oparciu o proces fermentacji metanowej w zamkniętych
+
+63 Park Przemysłowy Nowoczesnych Technologii.
+64 Wykonanie 124,76 tys. zł. Zadanie zakończone.
+65 Wykonanie 2019-2021 łącznie 536 tys. zł. Zadanie zakończone.
+66 Wykonanie 2018-2019 łącznie 376,46 tys. zł. Zadanie zakończone.
+67 Wykonanie 2019 53,78 tys. zł. Zadanie zakończone.
+68 Zadanie przesunięte na kolejne lata.
+69 Wykonanie 2019-2020 łącznie 375 tys. zł. Zadanie zakończone.
+70 Rezygnacja z zadania.
+71 Zadanie przesunięte na kolejne lata.
+72 Wykonanie 2018 72 tys. zł. Zadanie zakończone.
+73 Wykonanie 54,90 tys. zł. Zadanie zakończone.
+74 Wykonanie lata 2022-2023 łącznie 572 tys. zł. Zadanie wykonano w zakresie przesłanych wniosków przyłączeniowych od
+
+osób prywatnych, kontynuacja w kolejnych latach 2024-2026.
+75 Zadanie zostało przesunięte do realizacji po 2026 r.
+76 Wykonanie 2022 r. 60 tys. zł. Zadanie zrealizowane.
+77 Zadanie przesunięte do realizacji po 2026 r.
+78 Zadanie zostało przesunięte do realizacji po 2026 r.
+
+                                                             15
+komorach fermentacyjnych z wykorzystaniem biogazu, układem kogeneracji oraz
+instalacją przetwarzania przefermentowanych osadów ściekowych w nawóz
+na terenie oczyszczalni ścieków w Stargardzie (2023 r. – 1 000 tys. zł)79; przebudowę
+i rozbudowę oczyszczalni ścieków w Stargardzie poprzez rozbudowę układu
+doprowadzania ścieków do oczyszczalni w rejonie rzeki Iny wraz z budową
+przepompowni ścieków – wód deszczowych dopływających w pogodzie deszczowej
+do oczyszczalni oraz adaptacją istniejących obiektów na cele retencyjne i budową
+instalacji do odbioru (2023 r. – 200 tys. zł dokumentacja projektowa)80. Planowane
+źródła finansowania: środki własne, pożyczki i dotacje. Zaplanowana data
+zakończenia realizacji: 2024.
+                                                 (akta kontroli str. 528-531, 675-676)
+Według wyjaśnień Prezesa: W (…) planie wieloletnim na lata 2018-2021 do zadań
+które bezpośrednio przyczyniają się na rzecz ograniczenia zanieczyszczenia rzeki Iny
+to zadanie przebudowa włączenia kolektora DN1000 w układ kanalizacji w ulicy
+Piłsudskiego – Konopnickiej. Zadanie to przyczyniło się do wyeliminowania wąskiego
+gardła na sieci kanalizacyjne,j co z kolei spowodowało ograniczenie zadziałania
+przelewu burzowego w ulicy Konopnickiej – wylot przy ulicy Brzozowej.
+W opracowanym planie wieloletnim na lata 2022-2024 do zadań, które bezpośrednio
+przyczyniają się na rzecz ograniczenia zanieczyszczenia rzeki Iny to zadanie
+Przebudowa i rozbudowa oczyszczalni (…) Po realizacji tego zadania nadmiar wód
+opadowych zamiast do rzeki trafi do zbiorników retencyjnych ograniczając w ten
+sposób zrzut ścieków komunalnych do rzeki, który niekorzystnie oddziałuje na jej
+ekosystem.
+                                                             (akta kontroli str. 2132)
+Zadania na sieci kanalizacyjnej zrealizowane przez Spółkę poza wieloletnim planem
+na lata 2018-2021 obejmowały81: budowę sieci kanalizacyjnej DN300L - ok. 2 400 m
+wraz z przepompownią na terenie PPNT82; budowę sieci kanalizacyjnej w ulicy Na
+Grobli83; budowę sieci kanalizacyjnej DN200L-70m w ulicy Podmiejskiej84; budowę
+sieci kanalizacyjnej DN250/200, tłoczny DN90 wraz z przepompownią w ulicy
+Różanej85; budowę sieci kanalizacji sanitarnej DN250 ul. Szarych Szeregów (KZ2)86;
+budowę sieci kanalizacji sanitarnej DN200 ul. Łąkowa87; budowę sieci kanalizacji
+sanitarnej DN200 ul. Mazurska88. W roku 2023 Spółka zrealizowała przedsięwzięcie
+nieujęte w wieloletnim planie na lata 2022-2024, a mianowicie wymianę sieci
+kanalizacyjnej w ulicy Włosienniczej o dł. ok 74 m za kwotę 152 tys. zł. Powyższe
+zadania finansowane były ze środków własnych. Zadania nieujęte w wieloletnich
+planach znalazły odzwierciedlenie w planach inwestycyjnych:
+                                              (akta kontroli str. 672-676, 2105-2106)
+Wśród kierunków rozwoju Spółki podanych w sprawozdaniach Spółki za 2022 r.
+i 2023 r. podano m.in. budowę i wymianę sieci kanalizacyjnej na terenie miasta oraz
+w parkach przemysłowych i zwiększenie retencji ścieków dopływających w pogodzie
+deszczowej do oczyszczalni ścieków. Wskazano również, że Spółka będzie
+realizowała jako inwestor zastępczy zadanie Miasta pn. „Budowa przepompowni
+nadmiarowej ścieków wraz z adaptacją obiektów kubaturowych i wykonaniem
+niezbędnych urządzeń na terenie oczyszczalni ścieków w Stargardzie”. W latach
+
+
+
+79 Zadanie ujęte do realizacji na lata 2024-2026.
+80 Zadanie ujęte do realizacji na lata 2024-2026.
+81 Ponadto zadanie Budowa przepompowni na terenie Miasta – ul. Grudziądzka przesunięto na kolejne lata.
+82 Plan: 2019 r. – 32,70 tys. zł, 2020 r. – 300 tys. zł, 2021 r. – 15 tys. zł. Wykonanie lata 2019-2021 łącznie 436,45 tys. zł.
+83 Plan i wykonanie 2020 r. 15 tys. zł.
+84 Plan 2019 r. – 60 tys. zł. Wykonanie 2019 r. – 44,31 tys. zł.
+85 Plan 2019 r. – 149,80 zł. Wykonanie 2020 r. – 152,37 tys. zł.
+86 Plan 2019 r. - 7 tys. zł (wykonanie 7 tys. zł), 2020 – 450 tys. zł (wykonanie 363,75 tys. zł).
+87 Plan 2020 r. – 10 tys. zł (wykonanie 4,60 tys. zł), 2021 r. – 485 tys. zł (wykonanie 382,64 tys. zł).
+88 Plan 2021 r. 50 tys. zł (wykonanie 40 tys. zł).
+
+                                                                   16
+2021-2023 Spółka nie była wykonawcą przedsięwzięć Miasta89 dotyczących
+gospodarki ściekowej.
+                                  (akta kontroli str. 80, 680-682, 1711,1926)
+3. Planowane i poniesione przez Spółkę w latach 2021-2023 wydatki dot. gospodarki
+ściekowej wynosiły:
+ wydatki remontowe ogółem: 2021 r. – plan 908,19 tys. zł (wykonanie 1 243,06 tys.
+    zł), 2022 r. – plan 692,61 tys. zł (wykonanie 715,93 tys. zł), 2023 r. – plan
+    3 437,19 (wykonanie 3 578,36 tys. zł);
+ wydatki remontowe dot. kanalizacji i oczyszczania ścieków: 2021 r. – plan
+    737,49 tys. zł (wykonanie 770,72 tys. zł90), 2022 r. – plan 692,61 tys. zł
+    (wykonanie 714,64 tys. zł91), 2023 r. – plan 1 656,19 zł (wykonanie 1 822,21 tys.
+    zł92);
+ wydatki inwestycyjne ogółem: 2021 r. – plan 3 934,22 tys. zł (wykonanie 3 882,5
+    tys. zł), 2022 r. – plan 2 619,51 tys. zł (wykonanie 2 163,96 tys. zł), 2023 r. – plan
+    3 063,44 tys. zł (wykonanie 2 021,86 tys. zł);
+ wydatki inwestycyjne dot. kanalizacji i oczyszczania: 2021 r. – plan
+    2 012,67 tys. zł (wykonanie 1 769,08 tys. zł93), 2022 r. – plan 1 378,16 tys. zł
+    (wykonanie 1 146,53 tys. zł94), 2023 r. – plan 1 919,44 tys. zł (wykonanie
+    904,86 tys. zł95).
+Źródłami finansowania ww. wydatków były środki własne Spółki.
+    (akta kontroli str. 51-80, 547-548, 569-570, 680-682, 967-970, 1698-1711, 1930)
+W latach 2021-2023 przeprowadzano remonty bieżące sprzętu, urządzeń i obiektów
+budowlanych będących w posiadaniu Spółki w celu utrzymania ich należytej
+sprawności. Obiekty do remontów kwalifikowano w oparciu o diagnozę ich stanu
+technicznego oraz zgłaszane informacje o usterkach. Prace remontowe wykonywane
+były we własnym zakresie oraz zlecane firmom specjalistycznym. W ww. latach
+wystąpiło 20 awarii96 mieszadeł na oczyszczalni ścieków oraz odpowiednio: pięć, 12
+i 13 awarii sieci kanalizacyjnej (wskaźniki awaryjności wyniosły odpowiednio
+0,03/1km/rok, 0,07/1km/rok oraz 0,07/1 km/rok)97. W latach 2021-2023 średni czas
+usuwania awarii wyniósł 6-8 godzin. Prezes wyjaśnił, że nie było przerw
+w świadczeniu usług kanalizacyjnych, które przekraczałyby 12 godzin. Podczas
+
+89 Przedsięwzięć realizowanych i finansowanych przez Miasto, których wykonawcą była Spółka.
+90 Wyremontowano ogółem 2 084 m sieci kanalizacyjnej. Na terenie oczyszczalni wyremontowano: wyeksploatowane stopnie
+
+sprężania dmuchaw GM 7L (3 szt.) i GM 60S (4 szt.), wyeksploatowane wirniki w pompach w pompowni głównej (2 szt.) oraz
+wyeksploatowane belki zgarniające w osadniku.
+91 Wyremontowano 252 m sieci kanalizacyjnej metodą bezwykopową oraz wymieniono 10 włazów nastudziennych.
+92 Wymieniono pięć włazów nastudziennych, wyremontowano 604 m sieci kanalizacyjnej metodą bezwykopową, na terenie
+
+oczyszczalni wykonano remonty urządzeń zapewniające prawidłową pracę w zakresie technologii i odbioru ścieków.
+93 Wybudowano ogółem 2 938,51 m sieci kanalizacji sanitarnej grawitacyjnej, zmodernizowano przepompownię ścieków przy
+
+ul. Sadowej wraz z budową nowego przewodu tłocznego o długości 142 m. Wybudowano przepompownie ścieków: przy
+ul. Nowowiejskiej, ul. Łąkowej i ul. Metalowej wraz z przewodami tłoczącymi o długości odpowiednio: 462,5 m, 129,9 mi 156,63
+m. Opracowano dokumentację kosztorysowo-projektową na budowę sieci kanalizacyjnej w rejonie ul. Powstańców Warszawy,
+dokumentację projektową przedsięwzięcia „Budowa sieci kanalizacji sanitarnej w rejonie osiedla Pyrzyckiego”. Wybudowano
+sieci kanalizacyjne: w ul. Łąkowej, w ul. Nowowiejskiej, w ul. Mazurskiej, ul. Metalowej oraz odkupiono od inwestorów prywatnych
+1 813,4 m sieci kanalizacji sanitarnej. Wymieniono 61 włazów nastudziennych w pasach drogowych. Kontynuując rozpoczęte w
+2020 r. prace, zainstalowano monitoring wypełnienia kanałów oraz uzupełniono monitoring przepompowni i tłoczni na terenie
+Miasta. Opracowano koncepcję dla zadania dotyczącego budowy zamkniętych komór fermentacyjnych oraz budowy
+przepompowni nadmiarowej ścieków z obiektami towarzyszącymi. Ponadto w ramach wspólnych zadań z Miastem Spółka
+zakończyła rozbudowę sieci wodociągowo-kanalizacyjnej na terenie PPNT oraz w drodze KZ2.
+94 Wybudowano ogółem 1 000 m sieci kanalizacji sanitarnej grawitacyjnej oraz wykupiono od inwestorów prywatnych 1 034 m
+
+sieci kanalizacji sanitarnej. W ramach kontynuacji prac w zakresie monitoringu wypełnienia kanałów, zamontowane zostały
+kolejne trzy punkty pomiarowe umieszczone w studniach kanalizacyjnych.
+95 Wybudowano ogółem 136 m sieci kanalizacji sanitarnej grawitacyjnej. Zainstalowano dwa punkty pomiarowe do monitoringu
+
+wypełnienia kanałów. Rozbudowano monitoring przepompowni i tłoczni na terenie miasta o trzy kolejne obiekty. Odkupiono
+od inwestorów prywatnych 1 579 m sieci kanalizacji sanitarnej. Wymieniono 74 m sieci kanalizacji sanitarnej grawitacyjnej.
+Opracowano dokumentację projektową na budowę sieci kanalizacyjnej grawitacyjnej i tłocznej wraz z przepompownią w ul.
+Kobaltowej, Metalowej i Śniadeckiego. Kontynuowano montaż monitoringu wypełnienia kanałów (rozpoczęty w 2020 r.).
+96 Z tego: cztery w 2021 r. i po osiem w 2022 r. i w 2023 r. Od daty wystąpienia awarii do jej usunięcia upływało w tych latach
+
+odpowiednio: od 45 dni do 51 dni (średnio 48), od 21 dni do 68 dni (średnio 41) oraz od 36 dni do 97 dni (średnio 71).
+97 Przyczyną awarii w 2021 r. były przede wszystkim rozszczelnienia na łączeniach, które doprowadziły do wymycia podbudowy
+
+i zapadnięcia pasa drogowego. Przyczyną awarii w 2022 r. i 2023 r. był przede wszystkim zły stan techniczny górnej części
+kanału – pęknięcie punktowe. W wyniku erozji górna część zapadła się wymywając podbudowę i doprowadzając do ugięcia
+asfaltu.
+                                                              17
+usuwania awarii zapewniony był ciągły odbiór ścieków, w związku z tym nie było
+konieczności przekazywania Prezydentowi informacji, o których mowa w dziale III pkt
+4 zezwolenia na zbiorowe odprowadzanie ścieków. Kierownik Pionu Techniczno-
+Eksploatacyjnego98 wyjaśnił, że w kontrolowanym przez NIK okresie nie wydarzyła
+się żadna awaria, która zagrażałaby w płynnym odbiorze ścieków i ich jakości. Także
+żadna awaria na przepompowniach jak i na sieciach nie wstrzymała świadczenia
+usługi w zakresie odbioru ścieków.
+(akta kontroli str. 57, 73, 546-547, 568-569, 677-683, 685-685a, 967-970, 983, 1704)
+
+
+4. W wyniku badania dokumentacji dotyczącej siedmiu obiektów budowlanych99
+stwierdzono, że:
+a) dla wszystkich obiektów założono w 2015 r. i prowadzono książki obiektów
+    budowlanych, zgodne ze wzorem określonym w załączniku do rozporządzenia
+    Ministra Infrastruktury z dnia 3 lipca 2003 r. w sprawie książki obiektu
+    budowlanego100, w których odnotowano przeprowadzone okresowe kontrole
+    roczne i pięcioletnie tych obiektów101;
+b) każdy ze sprawdzonych obiektów poddawany był okresowym kontrolom
+    budowlanym rocznym i pięcioletnim, o których mowa w art. 62 ust. 1 pkt 1 i 2
+    ustawy Prawo budowlane. Kontrole przeprowadziły osoby posiadające
+    wymagane uprawnienia budowlane odpowiedniej specjalności;
+c) w protokołach z kontroli pięciu obiektów wskazano, że znajdują się one
+    w należytym stanie technicznym, zapewniającym ich dalsze bezpieczne
+    użytkowanie i nie sformułowano zaleceń pokontrolnych. W przypadku dwóch
+    obiektów102 stwierdzono, że pomimo iż nie znajdują się w należytym stanie
+    technicznym, to nie zagrażają życiu lub zdrowiu, bezpieczeństwu mienia bądź
+    środowiska, jednak wymagają niezbędnych remontów. Dla OBF zalecono
+    wykonanie kapitalnego remontu w przypadku podjęcia decyzji o korzystaniu
+    z obiektu (w czasie kontroli NIK obiekt nie był wykorzystywany). Dla zbiornika
+    retencyjnego wód deszczowych (obiekt nr 13A) w protokołach z kontroli rocznych
+    z 12 sierpnia 2022 r. i 18 sierpnia 2023 r. zalecono naprawić spękania dna i ścian
+    bocznych zbiornika retencyjnego oraz podnieść posadzkę przy wylocie, celem
+    umożliwienia odpływu wszystkich wód ze zbiornika. Zalecenia te nie zostały
+    wykonane, co opisano w sekcji Stwierdzone nieprawidłowości.
+                             (akta kontroli str. 663, 1630-1635, 1636-172, 2134-2136)
+
+W wyniku sprawdzenia dokumentacji 18 obiektów budowlanych103 stwierdzono, że nie
+zapewniono przeprowadzania okresowych kontroli pięcioletnich dla wszystkich 10
+objętych badaniem sieci kanalizacji sanitarnej posiadanych przez Spółkę
+i podziemnego zbiornika do gromadzenia ścieków, położonego przy ul. Mazowieckiej
+w Stargardzie104. Dla zbiornika tego nie prowadzono również kontroli rocznych
+i książki obiektu budowlanego. W skontrolowanych książkach obiektów budowlanych
+nie wskazano osoby upoważnionej do dokonywania wpisów oraz wpisy do książek
+dotyczące kontroli rocznych nie obejmowały danych identyfikujących osoby, które
+
+
+98 Dalej: PTE.
+99 Stacja zlewcza ścieków dowożonych (obiekt nr 4), zbiornik retencyjny wód deszczowych (obiekt nr 13A), OBF Nr 2 (obiekt nr
+
+50), zbiornik retencyjny ścieków surowych (obiekt nr 8), komora przelewowa (obiekt nr 1), wylot ścieków nadmiarowych (obiekt
+nr 46), wylot ścieków oczyszczonych (obiekt nr 45).
+100 Dz. U. Nr 120, poz. 1134, dalej: rozporządzenie w sprawie książki obiektu budowlanego.
+101 Wpisy zawierały dane identyfikujące dokumenty będące przedmiotem wpisu, a w przypadku kontroli pięcioletnich także dane
+
+identyfikujące osobę, która dokument wystawiła.
+102 Zbiornik retencyjny wód
+103 Stacja zlewcza ścieków dowożonych (obiekt nr 4), zbiornik retencyjny wód deszczowych (obiekt nr 13A), OBF Nr 2 (obiekt nr
+
+50), zbiornik retencyjny ścieków surowych (obiekt nr 8), komora przelewowa (obiekt nr 1), wylot ścieków nadmiarowych (obiekt
+nr 46), wylot ścieków oczyszczonych (obiekt nr 45) oraz sieci kanalizacji sanitarnych w ul. Sadowej, Grottgera, Brzozowej,
+Słowackiego, Szczecińskiej, Limanowskiego, Metalowej, Słonecznej, Piłsudskiego i Park Przemysłowy w Stargardzie.
+104 Nr inw. 2-10004.
+
+                                                             18
+sporządziły protokoły z tych kontroli. Powyższe zagadnienia opisano w sekcji
+Stwierdzone nieprawidłowości.
+                                          (akta kontroli str. 663, 1630-1635, 1636-1672, 2134-2136)
+5. Plany kontroli wewnętrznych Spółki na lata 2021- 2023 nie obejmowały zagadnień
+dotyczących gospodarki ściekowej. W 2023 r. poza planem kontroli przeprowadzona
+została kontrola wewnętrzna dotycząca zagospodarowania komunalnych osadów
+ściekowych pochodzących z oczyszczalni ścieków w Stargardzie w latach 2020-2023.
+Wnioski pokontrolne dotyczyły m.in. sposobu realizacji umowy na transport osadów
+oraz usługę zagospodarowania osadów w związku ze wzrostem kosztów
+zagospodarowania, a także podjęcia działań w celu pozyskiwania odbiorców
+indywidualnych osadów.
+                   (akta kontroli str. 92, 97-98, 124, 138-139, 147-148, 160, 169-175)
+W maju 2022 r. przeprowadzony został w Spółce na jej zlecenie audyt zewnętrzny,
+w zakresie wypełniania wymogów wynikających z przepisów dotyczących ochrony
+środowiska w 2021 r. i 2022 r., który obejmował gospodarkę odpadami i gospodarkę
+wodno-ściekową. W wyniku audytu stwierdzono m.in, że: na terenie oczyszczalni
+ścieków zbierany był bez zezwolenia na przetwarzanie odpadów materiał
+z czyszczenia studzienek kanalizacyjnych (klasyfikowany jako odpad 20 03 06).
+Odpad ten wylewany był na otwarty nieuszczelniony plac magazynowy. Przy placu
+zlokalizowana była studzienka kanalizacyjna, do której w sposób niezorganizowany
+spływała część płynna osadu. Przetwarzanie odpadów następowało w sposób
+powodujący powstanie uciążliwości zapachowych oraz w sposób mogący
+powodować zagrożenia dla wody, powietrza i gleby105. Nie stwierdzono
+nieprawidłowości dotyczących spełnienia wymagań wynikających z posiadanego
+przez Spółkę pozwolenia wodnoprawnego na odprowadzanie ścieków.
+W wyniku audytu sformułowano zalecania dotyczące m.in. wykonania instalacji
+do przetwarzania odpadów 20 03 06 wraz z uzyskaniem zezwolenia na ich
+przetworzenie oraz zmiany pozwolenia na wytwarzanie odpadów.
+Zalecenia z audytu dotyczące wyeliminowania stwierdzonych nieprawidłowości
+nie zostały w pełni zrealizowane i Spółka nadal wytwarzała i magazynowała odpady
+z czyszczenia studzienek kanalizacyjnych bez wymaganego zezwolenia, co opisano
+w sekcji Stwierdzone nieprawidłowości.
+                              (akta kontroli str. 861-877, 985,1248-1264, 2170-2177)
+Wody Polskie przeprowadziły w Spółce 25 października 2022 r. kontrolę, której zakres
+obejmował: wykonywanie urządzeń wodnych, korzystanie z wód oraz ochronę
+zasobów wodnych, przestrzeganie warunków ustalonych w decyzjach wydanych na
+podstawie ustawy Prawo wodne oraz utrzymanie wód i urządzeń wodnych.
+W protokole z kontroli nie wskazano nieprawidłowości.
+Według informacji uzyskanej w trakcie prowadzonej kontroli106 od Dyrektora Zarządu
+Zlewni w Stargardzie PGW WP, 18 lipca 2023 r. przeprowadzono oględziny wylotów
+przelewów burzowych kanalizacji ogólnospławnej w Stargardzie, zlokalizowanych
+przy ul. Brzozowej (zrzut z ul. Konopnickiej i ul. Wojska Polskiego), z którego
+następuje największy zrzut ścieków przy deszczach nawalnych i przy ul. Drzymały 65.
+Podczas oględzin stwierdzono, że zarówno wyloty, jak i kanał doprowadzający ścieki
+do wód rzeki Iny utrzymywane były w należytym stanie.
+                                   (akta kontroli str. 1221-1222a, 1320-1329, 1685)
+W okresie od 16 maja do 19 czerwca 2023 r. Spółka została skontrolowana przez
+WIOŚ przy udziale pracowników PGW WP RZGW w Szczecinie. Stwierdzono, że
+Spółka eksploatowała przelewy burzowe (16) bez wymaganego pozwolenia
+wodnoprawnego na usługę wodną obejmującą wprowadzanie nieoczyszczonych
+
+105 Art. 16 i art. 30 ust. 1 ustawy z dnia 14 grudnia 2012 r. o odpadach (Dz.U. z 2023 r. poz. 1587, ze zm.), dalej: ustawa
+
+o odpadach.
+106 Na podstawie art. 29 ust. 1 pkt 2 lit f ustawy o NIK.
+
+                                                            19
+ścieków do wód rzeki Iny. Ponadto stwierdzono brak pomiarów ilości ścieków
+odprowadzanych po uruchomieniu przelewu burzowego przy ul. Brzozowej
+w Stargardzie, co stanowiło naruszenie decyzji RDOŚ z 18 sierpnia 2021 r. oraz
+niewykonanie badań po uruchomieniu 17 czerwca 2023 r. ww. przelewu burzowego,
+do których Spółka była zobowiązana na podstawie tej decyzji.
+                                                    (akta kontroli str. 986, 989-994)
+Odbiorcy usług nie wnieśli w latach 2021-2023 skarg i wniosków dotyczących
+kanalizacji i oczyszczania ścieków107. Do Spółki nie wpłynęły również skargi
+dotyczące odprowadzania ścieków, wprowadzania do wód lub do ziemi ścieków lub
+mieszaniny ścieków oraz wód opadowych i roztopowych ani zagospodarowania wód
+opadowych i roztopowych.
+                                     (akta kontroli str. 546-586, 901-903, 967-969)
+6. W umowach o zaopatrzenie w wodę i odprowadzanie ścieków Spółka, określiła
+obowiązki odbiorców usług dotyczące m.in. nieodprowadzania do urządzeń Spółki
+substancji, które wskutek swojego składu chemicznego lub temperatury mogłyby
+uszkodzić urządzenia kanalizacyjne, powodować zagrożenie pożarowe lub
+wybuchowe, oddziaływać szkodliwie na bezpieczeństwo i zdrowie osób
+obsługujących lub powodować zagrożenie środowiska naturalnego. Wymieniono
+substancje i odpady, których wprowadzanie do urządzeń kanalizacyjnych jest
+zabronione. Określono także, w jakich przypadkach Spółka może zamknąć przyłącze
+kanalizacyjne108. W przypadku odbioru ścieków przemysłowych lub innych niż
+socjalno-bytowe wskazywano maksymalne wartości stężeń zanieczyszczeń oraz
+temperatury odprowadzanych ścieków, a także określono zakaz rozcieńczania
+ścieków wodą w celu uzyskania dopuszczalnych wartości wskaźników
+zanieczyszczeń. Określono uprawnienia Spółki do kontroli składu ścieków
+wprowadzanych do miejskiej sieci kanalizacyjnej, zasady poboru prób i ponoszenia
+kosztów przeprowadzenia analiz oraz sytuacje, w których Spółka może odmówić
+przyjęcia ścieków ze skutkiem natychmiastowym. Określono również zasady
+ustalania opłaty za przekroczenia warunków wprowadzania ścieków przemysłowych.
+                                                        (akta kontroli str. 1514-1554)
+W latach 2021-2024 nie było przypadków odmowy przez Spółkę przyjęcia ścieków ze
+skutkiem natychmiastowym, tj. zamknięcia przyłącza, w wyniku stwierdzenia, że
+ścieki zawierają substancje trujące lub szkodliwe dla otoczenia i obsługi. Spółka nie
+była również powiadamiania przez podmioty odprowadzające do sieci kanalizacyjnej
+ścieki przemysłowe o awariach powodujących zrzut niebezpiecznych substancji
+do urządzeń kanalizacyjnych.
+                                                                (akta kontroli str. 987)
+Kontrole ilości i jakości ścieków bytowych i przemysłowych oraz kontrole
+przestrzegania warunków wprowadzania ścieków do urządzeń kanalizacyjnych nie
+były prowadzone przez Spółkę regularnie, pomimo takiego obowiązku określonego
+w art. 9 ust. 3 ustawy o zbiorowym odprowadzaniu ścieków, co opisano w sekcji
+Stwierdzone nieprawidłowości.
+                                                 (akta kontroli str. 683-736, 941-954)
+Analiza dokumentacji z kontroli dostawcy ścieków przemysłowych (z 8 czerwca
+2022 r.), podczas której stwierdzono przekroczenie wykazała, że zgodnie z § 11 ust. 2
+rozporządzenia Ministra Budownictwa z dnia 14 lipca 2006 r. w sprawie sposobu
+realizacji obowiązków dostawców ścieków przemysłowych oraz warunków
+wprowadzania ścieków do urządzeń kanalizacyjnych109 poboru próbek dokonano po
+zawiadomieniu dostawcy ścieków przemysłowych i w obecności przedstawiciela
+dostawcy. W umowie nr I/58559/2019 zawartej z przedsiębiorcą 30 lipca 2019 r.
+
+107 Wniesione wnioski dotyczyły korekty faktur z uwagi na wystąpienie awarii na wewnętrznej instalacji wodociągowej oraz
+
+sprawdzenia wskazań wodomierzy głównych.
+108 Gdy jakość ścieków nie spełni wymogów określonych w umowie.
+109 Dz.U. z 2016 r., poz. 1757, dalej: rozporządzenie w sprawie obowiązków dostawców ścieków.
+
+                                                           20
+Spółka określiła wartości stężeń zanieczyszczeń, których nie mogą przekraczać
+ścieki przemysłowe wprowadzane do urządzeń kanalizacyjnych, zasady
+przeprowadzania kontroli i poboru prób, a w załączniku do umowy ustalono zakres
+wykonywanych badań laboratoryjnych. Według raportu akredytowanego laboratorium
+z 22 czerwca 2022 r. stwierdzono w pobranych próbkach przekroczenie dla parametru
+fosfor ogólny110. Spółka wezwała przedsiębiorcę do usunięcia przyczyn zaistniałego
+przekroczenia i zgodnie z § 10 ust. 2 ww. umowy obciążyła go kosztem
+laboratoryjnego badania ścieku, w którym stwierdzono przekroczenie. Jednocześnie
+poinformowała przedsiębiorcę, że zgodnie z § 14 ust. 5 umowy od dnia
+przeprowadzenia kontroli do dnia poprawy parametru ścieku naliczane będą opłaty
+dodatkowe. W wyniku ponownego pobrania prób 21 września 2022 r. (po
+zawiadomieniu przedsiębiorcy), nie stwierdzono przekroczeń. Działając na podstawie
+§ 14 ust. 5 ww. umowy Spółka naliczyła 28 października 2022 r. opłatę za
+przekroczenie warunków wprowadzania ścieków przemysłowych w kwocie 806,88 zł.
+Opłata została uregulowana przez przedsiębiorcę w ustalonym terminie. Opłatę
+obliczono według wskazań wodomierza w okresie od 26 maja 2022 r. do 21 września
+2022 r., pomimo iż pierwszą kontrolę, w której pobrane próby wskazały przekroczenie
+przeprowadzono 8 czerwca 2022 r., co opisano w sekcji Stwierdzone
+nieprawidłowości.
+                                               (akta kontroli str. 683-727, 1464-1466)
+W latach 2021-2022 Spółka przeprowadziła w każdym z tych lat po dwie kontrole
+ścieków bytowych płynących z gmin ościennych w ramach umów na hurtowy odbiór
+ścieków. Kontrola odbywała się na podstawie zawartych umów i polegała na poborze
+prób chwilowych ścieków płynących przez studzienki określone w umowach jako
+punkty kontrolne. Kontrole prowadzone były głównie ze względu na monitorowanie
+jakości ścieku z gmin ościennych i w przypadku stwierdzonych przekroczeń
+parametrów, wzywano operatora sieci do ich usunięcia. Przekroczenia pojedynczych
+parametrów stwierdzono: w 2021 r. w ośmiu próbach, w 2022 r. w pięciu i w 2023 r.
+w czterech.
+                                                            (akta kontroli str. 986)
+Uchwałą nr 93/21 z 1 czerwca 2021 r. Zarząd Spółki zatwierdził procedurę nawiązania
+współpracy pomiędzy MPGK, a podmiotem gospodarczym świadczącym usługi
+opróżniania zbiorników bezodpływowych i transportu nieczystości ciekłych
+(asenizacyjne) w zakresie przyjęcia i oczyszczania ścieków przez oczyszczalnię
+ścieków w Stargardzie. Przyjęcie procedury miało na względzie zapewnienie
+prawidłowego funkcjonowania instalacji oczyszczalni ścieków, jak również utrzymanie
+właściwych parametrów produktów końcowych procesu oczyszczania ścieków,
+poprzez podjęcie działań mających na celu uregulowanie jakościowe i ilościowe
+nieczystości ciekłych wprowadzanych do stacji zlewnej111. Regulamin odbioru
+nieczystości ciekłych przez stację zlewną określał zasady i warunki przyjmowania
+nieczystości ciekłych, bytowo-gospodarczych i przemysłowych do stacji zlewnej
+Spółki112 i stanowił załącznik do umów na odbiór ścieków, w których zleceniodawcy
+110 Wyniósł 51 mgP/l, przy dopuszczalnej wartości 20 mgP/l.
+111 Procedura określała działania, jakie powinien podjąć podmiot ubiegający się o możliwość zrzutu nieczystości ciekłych do stacji
+
+zlewnej znajdującej się na terenie oczyszczalni ścieków. Załączniki do procedury stanowiły wzory wniosków: o wydanie zgody
+na przyjęcie nieczystości ciekłych do stacji zlewnej, o zawarcie (lub zmianę) umowy w zakresie przyjęcia i oczyszczania ścieków
+przez oczyszczalnię, wzór umowy na świadczenie usług w zakresie przyjmowania i oczyszczania ścieków, której integralną
+częścią był regulamin odbioru nieczystości ciekłych przez stację zlewną posadowioną na terenie oczyszczalni ścieków
+w Stargardzie (dalej: Regulamin odbioru nieczystości ciekłych przez stację zlewną) oraz wniosek o dopisanie pojazdów
+wskazanych we wniosku o zawarcie umowy do bazy systemu monitorowania obiektu oczyszczalni wraz ze wzorem protokołu
+przekazania kart chipowych do stacji zlewnej.
+112 W szczególności wskazywał jakich ścieków zabrania się wprowadzać do stacji zlewnych, warunki wprowadzania do stacji
+
+zlewnej ścieków przemysłowych, prawa i obowiązki odbiorcy nieczystości ciekłych, w tym prawo do kontroli jakości
+wprowadzanych ścieków pod względem ich zgodności z dopuszczalnymi stężeniami zanieczyszczeń, do obciążenia dostawcy
+opłatami określonymi w umowie, prawo do nie przyjęcia ścieków od dostawcy w przypadku nieprzestrzegania zasad lub
+wstrzymania odbioru ścieków w przypadku niedotrzymania przez dostawcę warunków umowy lub gdy jest to uzasadnione
+procesami technologicznymi związanymi z oczyszczaniem ścieków, a także przypadki w których wstrzymany zostanie dostawcy
+dostęp do stacji zlewnej. Regulamin określał także zasady kontroli jakości nieczystości ciekłych wprowadzanych do stacji zlewnej
+(§ 8).
+                                                               21
+zobowiązywali się do jego przestrzegania. W umowach zawarto zobowiązanie
+dostawców nieczystości ciekłych m.in. do umożliwienia pobrania próby na analizę
+kontrolną podczas rozładunku ścieków oraz wskazano wartości stężeń
+zanieczyszczeń jakich nie mogą przekraczać dowożone ścieki. Podano także jakiego
+rodzaju nieczystości oraz odpady nie mogą być wprowadzane do stacji zlewnej
+i określono sytuacje, w których zleceniobiorca ma prawo wstrzymać przyjęcie ścieków
+oraz rozwiązać umowę w trybie natychmiastowym. Zawarto również uprawnienie
+zleceniodawcy do obciążenia zleceniobiorcy dodatkowymi opłatami oraz sposób ich
+wyliczenia.
+W 2021 r. Spółka poddała wyrywkowej kontroli zrzuty nieczystości ciekłych
+realizowane w ciągu 121 dni. Kontrolą objęci zostali wszyscy dostarczający w tym
+czasie nieczystości do stacji zlewnej113. W latach 2022-2023 Spółka przeprowadziła
+ogółem 1 050 kontroli parametrów nieczystości ciekłych dostarczanych do stacji
+zlewnej114. Przekroczenia stwierdzono w przypadku 680 próbek z 2022 r. (69,5%)
+i 370 z 2023 r. (97,4%)115. Wielkość naliczonych opłat dodatkowych, które zostały
+w całości uiszczone wyniosła 185 979,65 zł w 2022 r. i 279 850,31 w 2023 r.116
+                                    (akta kontroli str. 683, 728-736, 1464, 1472-1561)
+W wyniku analizy dokumentacji z jednej losowo wybranej kontroli117stwierdzono, że
+w związku z wynikami badań przeprowadzonymi przez akredytowane laboratorium,
+w których stwierdzono przekroczenie ChZT oraz azotu, Spółka prawidłowo118 ustaliła
+opłatę dodatkową za przekroczenie dopuszczalnych wartości wskaźników
+zanieczyszczeń nieczystości ciekłych, dostarczonych do stacji zlewnej Spółki przez
+firmę asenizacyjną w kwocie 904,98 zł netto. Przedsiębiorca wniósł opłatę dodatkową
+wraz z opłatą za przywóz ścieków.
+                                        (akta kontroli str. 878-897, 925, 1464-1468)
+W sprawie kontroli podłączeń do miejskiej sieci kanalizacyjnej pod kątem wykrywania
+nielegalnych przyłączy, zobowiązany do realizacji tego zadania w zakresie czynności
+Kierownik PTE wyjaśnił, że z uwagi, iż infrastruktura kanalizacyjna jest infrastrukturą
+podziemną Spółka nie prowadzi kontroli w zakresie nielegalnych przyłączy
+kanalizacyjnych. Nie oznacza to, że temat był zaniechany. Podczas prac
+eksploatacyjnych na sieciach pracownicy sprawdzali poprawność przyjmowanych
+ścieków i o każdej nieprawidłowości informowali przełożonego. Ponadto kontrolę
+nielegalnych przyłączy sprawdzano poprzez prowadzenie inspekcji TV kolektorów
+kanalizacyjnych (miejskich sieci). Inspekcje takie nie wykazały w podanym okresie
+nielegalnych przyłączy. W wyjaśnieniach podał także, że każde nowe podłączenie do
+sieci kanalizacji odbywa się w obecności pracownika Spółki (na otwartym wykopie),
+co gwarantuje, że instalacja została wykonana i wpięta zgodnie z wcześniejszymi
+wytycznymi. Na taką okoliczność powstaje protokół odbioru119.
+                                            (akta kontroli str. 248-252, 941-942, 987)
+
+113 Kontrola polegała na pobraniu od dwóch do pięciu prób, z których utworzono próbkę uśrednioną i poddawano ją roboczemu
+
+badaniu na urządzeniu pomiarowym znajdującym się na terenie oczyszczalni w zakresie podstawowych parametrów.
+Prowadzona kontrola wskazała na konieczność szczegółowej kontroli zrzutów nieczystości ciekłych dokonywanych przez firmy
+asenizacyjne. Wyrywkowe kontrole obejmowały kluczowe parametry technologiczne tj. azot ogólny, fosfor i ChZT.
+114 978 w 2022 r. i 380 w 2023 r. Stacja zlewna wyposażona była w urządzenie pomiarowe, na podstawie którego określana była
+
+ilość zrzuconych ścieków i urządzenie do automatycznego pobierania próby podczas zrzutu.
+115 W okresie od stycznia – marca 2022 r. (kiedy to rozpoczęta została kontrola indywidualnych prób) pobrane do badania próby
+
+poddane były analizie dla parametrów azot ogólny, BZT5, ChZT, fosfor oraz zawiesina ogólna. W wyniku przeprowadzonych
+kontroli stwierdzono, iż ścieki, które są zrzucane do stacji zlewnej największe przekroczenia dopuszczalnych parametrów mają
+dla dwóch parametrów – azot ogólny oraz ChZT. Badanie pozostałych paramentów było ekonomicznie nieuzasadnione do tego
+rodzaju ścieku dlatego też odstąpiono od ich badania i od kwietnia 2022 r. badanie wykonywane jest dla dwóch parametrów.
+W przypadku pojawienia się chęci zrzutu ścieków przez firmy asenizacyjne z nowego źródła są one badane w szerszym zakresie
+celem ustalenia charakteru ścieku i ewentualne dopłaty przy kolejnych zrzutach są za te parametry, które są przekroczone
+a mieszczą się w katalogu określonym w umowie.
+116 W 2021 r. nie naliczano opłat dodatkowych.
+117 Przeprowadzonej 3 lipca 2023 r.
+118 Zgodnie z zasadami określonymi w § 8 ust. 2 rozporządzenia Rady Ministrów z dnia 27 grudnia 2017 r. w sprawie ustalenia
+
+opłat podwyższonych za przekroczenie warunków wprowadzania ścieków do wód lub do ziemi (Dz.U. poz. 2501) oraz w § 3
+umowy nr 19/D/2022 z 13 października 2022 r., ze zm. na świadczenie usług w zakresie przyjmowania i oczyszczania ścieków.
+119 W 2021 r. podłączono 37 obiektów, w 2022 r. 34 i w 2023 r. 22.
+
+                                                             22
+     Stwierdzone   W działalności kontrolowanej jednostki w przedstawionym wyżej zakresie stwierdzono
+nieprawidłowości   następujące nieprawidłowości:
+                   1. Spółka w latach 2021-2023:
+                   a) bez posiadania wymaganych pozwoleń wodnoprawnych na usługę zrzutu ścieków,
+                   dokonała 25 zrzutów mieszaniny ścieków i wód opadowych z przelewów burzowych.
+                   I tak:
+                   w 2021 r.
+                    poprzez przelew na ul. Brzozowej (działka nr 414 w obrębie 2 miasta Stargard)
+                        dokonano zrzutów 30 czerwca i 4 listopada 2021 r.;
+                    poprzez przelewy przy ul. Drzymały (działka nr 180 w obrębie 3 miasta Stargard),
+                        Światopełka (działka nr 154/1 w obrębie 11 miasta Stargard), Skłodowskiej-Curie
+                        (działka nr 176/3 w obrębie 11 miasta Stargard), Skłodowskiej-Curie (działka
+                        nr 154/1 w obrębie miasta Stargard), Krzywoustego park (prawa strona, działka
+                        nr 154/1 w obrębie 11 miasta Stargard) i Bydgoska-Robotnicza (działka nr 290
+                        w obrębie 13 miasta Stargard) dokonano zrzutu 30 czerwca 2021 r.;
+                    w 2022 r.
+                     poprzez przelew na ul. Brzozowej (działka nr 414 w obrębie 2 miasta Stargard)
+                         dokonano zrzutów 1 i 21czerwca 2022 r., 1 lipca 2022 r., 18 i 20 sierpnia 2022 r.
+                         oraz 19 września 2022 r.;
+                    w 2023 r.
+                     poprzez przelew na ul. Brzozowej (działka nr 414 w obrębie 2 miasta Stargard)
+                         dokonano zrzutów 17 czerwca 2023 r., 29 lipca 2023 r., 6 i 15 sierpnia 2023 r.,
+                         25 października 2023 r., 23 listopada 2023 r.;
+                     poprzez przelew na ul. Konopnickiej (działka nr 141/1 w obrębie 2 miasta
+                         Stargard) – dokonano zrzutów 17 i 26 czerwca 2023 r., 6 sierpnia 2023 r.,
+                         25 października 2023 r. oraz 23 listopada 2023 r.
+                               (akta kontroli str. 593-606, 1799-1801, 1954-1971, 2072-2076, 2127-2130,
+                                                                                              2183-2185)
+                   Ogółem w związku z ww. zrzutami odprowadzono bez oczyszczenia w 2021 r.
+                   62 625,2 m3 ścieków; w 2022 r. 19 782 m3 i w 2023 r. 78 378 m3.
+                                                                         (akta kontroli str. 2183-2185)
+                   Zgodnie z art. 389 pkt. 1 ustawy Prawo wodne, jeżeli ustawa nie stanowi inaczej,
+                   pozwolenie wodnoprawne jest wymagane m.in. na usługi wodne. Według art. 35 ust.
+                   3 ww. ustawy usługi wodne obejmują m.in. odbiór i oczyszczanie ścieków (pkt 3);
+                   wprowadzanie ścieków do wód lub do ziemi, obejmujące także wprowadzanie
+                   ścieków do urządzeń wodnych (pkt 4); odprowadzanie do wód lub do urządzeń
+                   wodnych - wód opadowych lub roztopowych, ujętych w otwarte lub zamknięte systemy
+                   kanalizacji deszczowej służące do odprowadzania opadów atmosferycznych albo
+                   w systemy kanalizacji zbiorczej w granicach administracyjnych miast (pkt 7).
+                   Korzystanie przez Spółkę z usług wodnych polegających na wprowadzaniu ścieków
+                   do rzeki Iny bez wymaganego pozwolenia wodnoprawnego albo pozwolenia
+                   zintegrowanego skutkowało poniesieniem przez Spółkę w latach 2021-2023 opłat
+                   podwyższonych w kwocie ogółem 161 515,00 zł, z tego: w 2021 r. 59 590zł, 2022 r.
+                   51 560 zł (z czego Spółka uzyskała zwrot kwoty 4 700 zł na skutek wniesionych
+                   środków zaskarżenia) i 2023 r. 50 365 zł.
+                                                                         (akta kontroli str. 2195-2457)
+                   b) bez wymaganej przepisami art. 80 ustawy Prawo wodne decyzji, dokonała
+                   11 zrzutów ścieków poprzez przelewy burzowe I tak:
+                   w 2021 r.
+                    poprzez przelew na ul. Brzozowej (działka nr 414 w obrębie 2 miasta Stargard) –
+                       dokonano zrzutów 30 czerwca i 4 listopada 2021 r. (decyzję uzyskano 4 sierpnia
+                       2022 r.),
+
+                                                             23
+ poprzez przelew na ul. Drzymały (działka nr 180 w obrębie 3 miasta Stargard),
+    Światopełka (działka nr 154/1 w obrębie 11 miasta Stargard), Skłodowskiej-Curie
+    (działka nr 176/3 w obrębie 11 miasta Stargard), Skłodowskiej-Curie (działka nr
+    154/1 w obrębie miasta Stargard) dokonano zrzutu 30 czerwca 2021 r. (decyzję
+    uzyskano 4 sierpnia 2022 r.),
+ poprzez przelew na ul. Krzywoustego park (prawa strona, działka nr 154/1
+    w obrębie 11 miasta Stargard) i Bydgoska-Robotnicza (działka nr 290 w obrębie
+    13 miasta Stargard) dokonano zrzutu 30 czerwca 2021 r. (wniosek o wydanie
+    decyzji złożono 14 listopada 2023 r).
+ w 2022 r.
+ poprzez przelew na ul. Brzozowej kanał ulgi (działka nr 414 w obrębie 2 miasta
+    Stargard) dokonano zrzutów1 czerwca 2022 r., 21 czerwca 2022 r., 1 lipca 2022 r.
+    (decyzję uzyskano 4 sierpnia 2022 r.).
+           (akta kontroli str. 593-606, 1799-1801, 1954-1971, 2072-2076, 2127-2130,
+                                                                         2183-2185)
+Według art. 80 ww. ustawy, dopuszcza się wprowadzanie do wód lub do ziemi wód
+opadowych lub roztopowych z przelewów kanalizacji deszczowej lub ścieków
+z przelewów burzowych komunalnej kanalizacji ogólnospławnej na warunkach
+określonych w przepisach wydanych na podstawie art. 99 ust. 1 pkt 2, o ile właściwy
+organ Wód Polskich ustali, w drodze decyzji, że takie dopuszczenie nie koliduje
+z celami środowiskowymi dla wód lub wymaganiami jakościowymi dla wód.
+Prezes wyjaśnił: przelewy burzowe objęte prowadzonym postępowaniem nigdy nie
+były na stanie Spółki, a Spółka tylko zajmowała się ich utrzymaniem. 8 stycznia 2021
+r. (…) chcąc uregulować prawnie ich status zleciła podmiotowi zewnętrznemu
+wybranemu w drodze przetargu opracowanie operatów i uzyskanie pozwolenia
+wodnoprawnego dla siedmiu przelewów (…) (Brzozowa, Drzymały, Światopełka,
+Szewska, Skłodowskiej, Konopnickiej, Strażniczej). Były to wszystkie przelewy, które
+miały rzeczywistą i potencjalną możliwość uruchomienia się. Spółka dokonując oceny
+możliwości prowadzonego postępowania założyła, iż terminem zakończenia realizacji
+zadania tj. uzyskania pozwoleń wodnoprawnych powinien trwać nie dłużej niż osiem
+miesięcy od daty zawarcia umowy. Do dnia złożenia niniejszej odpowiedzi
+postępowanie nie zakończyło się nawet na etapie I instancji. (…) Wody Miejskie są
+w posiadaniu decyzji z 4 sierpnia 2022 r. (…) na podstawie której organ dopuścił
+wprowadzanie do wód rzeki Iny ścieków z przelewów burzowych komunalnej
+kanalizacji ogólnospławnej. (…) postępowanie o uzyskanie pozwolenia
+wodnoprawnego na przelewy burzowe toczy się przed Dyrektorem Zarządu Zlewni
+PGW WP w Stargardzie od lipca 2021 r., a więc już ponad 2 lata. Głównym powodem
+wydłużenia tego postępowania jest zaskarżanie zapadających rozstrzygnięć
+właściwego organu PGW WP przez organizacje pozarządowe posiadające przymiot
+strony w przedmiotowych postępowaniach, a także przewlekłe w ocenie Spółki
+prowadzenie postepowania przez organ właściwy, czego najdobitniejszym dowodem
+jest fakt braku jakichkolwiek rozstrzygnięć organu I instancji po ostatnim uzupełnieniu
+13 września 2023 r., czyli ponad pięć miesięcy. (…) Spółka złożyła również wnioski
+o wydanie pozwoleń wodnoprawnych na przelewy burzowe zlokalizowane:
+Bydgoska/Rzemieślnicza, Basztowa, Żeglarska, Popiela, Limanowskiego,
+Chrobrego/Portowa, Kaźmierza Wielkiego/Krzywoustego (prawa i lewa strona
+mostu). Jednak są to przelewy burzowe, z których część z racji ukształtowania terenu
+i zaistniałych procesów infrastrukturalnych nie posiadają możliwości uruchomienia, co
+potwierdza fakt, że Spółka na przełomie kilku lat nie odnotowała ich uruchomienia.
+Ponadto w sprawie przyczyn niepodejmowania przed 8 stycznia 2021 r. działań na
+rzecz uzyskania pozwoleń wodnoprawnych i decyzji zezwalających na uruchamianie
+przelewów oraz uruchamiania przelewów pomimo braku posiadania stosownych
+decyzji oraz pozwoleń wodnoprawnych wyjaśnił: (…) System kanalizacji
+                                          24
+ogólnospławny, jak i same przelewy były w większości wykonane przed II wojną
+światową. Spółka zajęła się ich eksploatacją mimo, że część ich znajdowała się na
+terenie zarządzanym przez Zarząd Melioracji, a po utworzeniu PGW WP przez ten
+podmiot. W 2021 r. Spółka chcąc uporządkować sprawy przelewów zwróciła się
+o uzyskanie pozwoleń wodnoprawnych. Część z tych przelewów – mniejszych –
+została fizycznie zamknięta. Pozostała część z uwagi na niedopuszczenie do sytuacji
+podtopienia Miasta i stworzenia zagrożenia sanitarno-epidemiologicznego, jest
+używana bez pozwoleń wodnoprawnych. Zwrócić należy uwagę, że usytuowanie,
+schemat działania przelewów burzowych jest wypadkową istniejącej infrastruktury
+kanalizacji ogólnospławnej, która efektywnie jest ograniczana, jednakże
+kompleksowa wymiana kanalizacji ogólnospławnej na rozdzielczą jest ze względu na
+jej usytuowanie historyczne, kilkuset milionowy koszt pełnej wymiany i fakt zamknięcia
+Miasta na kilka miesięcy praktycznie niemożliwe. Alternatywą nieuruchomienia
+przelewów burzowych jest zalanie Miasta mieszaniną deszczu i ścieku,
+co prowadziłoby nie tylko do potężnych strat majątkowych mieszkańców i instytucji,
+ale także niosłoby zagrożenie epidemiologiczne. (…) O hipotetycznym założeniu
+działania przelewów burzowych jest odgórne założenie ustawodawcy, iż pozwolenie
+wodnoprawne obejmuje jedynie dziesięć uruchomień przelewów w ciągu roku. Każde
+kolejne byłoby w tym rozumieniu niezgodne z prawem, a przecież ilość deszczów
+nawalnych w ostatnim okresie stale się zwiększa, a przedsiębiorstwa wodno-
+kanalizacyjne nie mają możliwości ograniczenia liczby opadów, aby odpowiadały one
+woli ustawodawcy. (…)
+                                 (akta kontroli str. 2072-2076, 2081-2083, 2129-2130)
+Zdaniem NIK, nawet uwzględniając czas prowadzenia postępowań administracyjnych
+przez organ wydający wymagane pozwolenia wodnoprawne i decyzje, o których
+mowa w art. 80 ustawy Prawo wodne, do powstania nieprawidłowości dotyczącej
+dokonywania zrzutów ścieków do rzeki Iny przez przelewy burzowe bez wymaganych
+ww. dokumentów, przyczyniło się niepodejmowanie do 8 stycznia 2021 r. działań
+w celu ich uzyskania. Pomimo uwarunkowań funkcjonującej ogólnospławnej
+kanalizacji sanitarnej oraz długoletniego wykorzystywania przelewów burzowych,
+wniosek o wydanie pozwolenia wodnoprawnego na usługę wodną polegającą na
+wprowadzaniu do wód – ścieków pochodzących z kanalizacji ogólnospławnej
+dotyczący siedmiu przelewów został złożony dopiero 9 lipca 2021 r., a wniosek
+dotyczący ośmiu przelewów 19 stycznia 2024 r. Ponadto wniosek, na podstawie
+którego Spółka 4 sierpnia 2022 r. uzyskała zgodę Dyrektora Zarządu Zlewni
+w Stargardzie PGW WP na wprowadzanie do wód rzeki Iny ścieków z przelewów
+burzowych komunalnej kanalizacji ogólnospławnej w Stargardzie (zrzut z siedmiu
+wylotów z częstotliwością do dziewięciu razy w ciągu roku; ul. Brzozowa; ul. Brzozowa
+– zrzut z ul. Konopnickiej i ul. Wojska Polskiego, ul. Skłodowskiej-Curie, ul. Drzymały,
+ul. Strażnicza, ul. Szewska, ul. Światopełka) został złożony dopiero 6 września
+2021 r., a wniosek o wydanie decyzji na pozostałe przelewy, w tym przelew
+Krzywoustego park, dopiero 14 listopada 2023 r.
+                    (akta kontroli str. 1418-1419, 1673-1697, 2072-2076, 2129-2130)
+2. Nieprzestrzeganie postanowień decyzji RDOŚ z 18 sierpnia 2021 r. w zakresie
+pomiarów rzeczywistej ilości ścieków odprowadzanych przez przelew burzowy przy
+ul. Brzozowej oraz niedokonanie pomiarów zawartości substancji w wodach rzeki Iny
+i kanału burzowego (ulgi) przy ul. Brzozowej po uruchomieniu przelewu burzowego
+17 czerwca 2023 r.
+Stwierdzono, że:
+a) Spółka nie wykonywała pomiarów ilości ścieków odprowadzanych
+po uruchomieniu przelewu burzowego przy ul. Brzozowej w dniach: 17 czerwca
+2023 r., 29 lipca 2023 r., 6 i 15 sierpnia 2023 r., 25 października 2023 r. i 23 listopada
+                                           25
+2023 r., w sposób umożliwiający określenie rzeczywistej ilości odprowadzanych
+ścieków. Także wyniki kontroli120 planowej prowadzonej przez inspektorów WIOŚ
+w okresie 16 maja-19 czerwca 2023 r. (obejmującej okres 1 stycznia 2020 r. –
+19 czerwca 2023 r.) wykazały, iż Spółka nie prowadziła takich pomiarów
+po uruchomieniu ww. przelewu burzowego: 4 listopada 2021 r., 1 czerwca 2022 r.,
+21 czerwca 2022 r., 1 lipca 2022 r., 18 sierpnia 2022 r., 20 sierpnia 2022 r.,
+19 września 2022 r.
+Zgodnie z decyzją RDOŚ z 18 sierpnia 2021 r. Spółka była zobowiązana
+każdorazowo po uruchomieniu przelewu burzowego przy ul. Brzozowej
+do przeprowadzenia m.in. monitoringu ilości ścieków odprowadzonych do rzeki Iny
+w czasie jego działania. Według § 6 pkt 1 rozporządzenia Ministra Gospodarki
+Morskiej i Żeglugi Śródlądowej z 12 lipca 2019 r. w sprawie substancji szczególnie
+szkodliwych dla środowiska wodnego oraz warunków, jakie należy spełnić przy
+wprowadzaniu do wód lub do ziemi ścieków, a także przy odprowadzaniu wód
+opadowych lub roztopowych do wód lub do urządzeń wodnych121, pomiaru ilości
+ścieków wprowadzanych do wód lub do ziemi dokonuje się (…) w okresach zrzutu
+ścieków, w sposób umożliwiający określenie rzeczywistej ilości odprowadzanych
+ścieków. Dopuszczalna ilość ścieków, która mogła zostać odprowadzona
+z poszczególnych przelewów, w tym z przelewu przy ul. Brzozowej oraz innych
+sześciu przelewów została określona w decyzji z 4 sierpnia 2022 r.
+W złożonych wyjaśnieniach Prezes podał, że ilości ścieków zrzucanych przez Spółkę
+poprzez przelewy burzowe określane były szacunkowo, na podstawie czasu
+uruchomienia przelewu (który także określany był szacunkowo, na bazie
+dotychczasowych doświadczeń Spółki dotyczących nawalnych deszczy lub
+długotrwałych opadów deszczu), wypełnienia kanału i prędkości przepływu. Jak
+wyjaśnił Prezes, wszystkie działania podejmowane były w ramach bezpośrednich
+czynności pracowników Spółki opartych na wydawanych poleceniach, bądź
+zakresach czynności. Z uwagi na prowadzony dyżur dyspozytorski, obowiązki kontroli
+przelewów burzowych podczas długotrwałych i intensywnych opadów
+atmosferycznych          powierzono    grupie   kanalizacyjnej   pełniącej   dyżur
+na przepompowniach ścieków. Prezes wyjaśnił: (…) Na wstępie wskazać należy, iż
+zgodnie z art. 36 ust. 4 ustawy (…) Prawo wodne PGW WP posiadają obowiązek
+wyposażenia Spółki w przyrządy pomiarowe umożliwiające pomiar ilości pobranych
+wód lub pomiar ilości i temperatury wprowadzonych ścieków. Spółka już w roku 2020
+informowała PGW WP o braku urządzeń pomiarowych na istniejących przelewach.
+Spółka ze względu na prowadzoną przez (…) Wody Polskie polityką zatwierdzania
+taryf, nie posiadała środków pozwalających na poniesienie kosztu dokonania zakupu
+i montażu urządzeń pomiarowych, co w sposób bezpośredni powinno znaleźć swoje
+odzwierciedlenie we wzroście ceny za usługi wodne świadczone na rzecz
+mieszkańców (…).
+    (akta kontroli str. 463-469, 1221-1222a, 1624-1629,1733-1734, 1795-1798, 1954-
+                                                       1971, 2068-2071, 2183-2185)
+Przepis art. 36 ustawy Prawo wodne obejmuje m.in. podmioty korzystające z usług
+wodnych wprowadzających ścieki do wód lub do ziemi w ramach tych usług i dotyczy
+ustalania wysokości opłaty za usługi wodne. Wprawdzie art. 36 ust. 4 ustawy Prawo
+wodne nakłada na Wody Polskie obowiązek wyposażenia podmiotów, o których
+mowa w ust. 2, na własny koszt w przyrządy pomiarowe umożliwiające pomiar m.in.
+ilości wprowadzonych ścieków, to w ust. 5 dopuszczono możliwość wyposażenia
+przez te podmioty, na własny koszt, w przyrządy pomiarowe umożliwiające pomiar
+ilości wprowadzonych ścieków, za zgodą Wód Polskich. Natomiast obowiązek
+wykonywania pomiarów ilości ścieków odprowadzanych poprzez przelew burzowy na
+ul. Brzozowej po jego uruchomieniu, został nałożony na Spółkę na podstawie
+
+120 Protokół kontroli nr WIOS-SZ 144/2023.
+121 Dz. U. poz. 1311, dalej: rozporządzenie w sprawie substancji szczególnie szkodliwych dla środowiska wodnego.
+
+                                                            26
+przepisów art. 20 ust. 1 ustawy o zapobieganiu szkodom w środowisku i ich naprawie.
+Przyjęte przez Spółkę szacunkowe określanie ilości ścieków odprowadzanych
+poprzez przelew burzowy nie umożliwiało określenia rzeczywistej ilości
+odprowadzanych ścieków, o której mowa w § 6 pkt 1 rozporządzenia w sprawie
+substancji szczególnie szkodliwych dla środowiska wodnego.
+          (akta kontroli str. 463-469, 1733-1734, 1795-1798, 2068-2071, 2183-2185)
+b) nie pobrano prób i nie wykonywano badań jakości ścieków w kanale burzowym
+oraz wody rzeki Iny po uruchomieniu przelewu burzowego przy ul. Brzozowej 17
+czerwca 2023 r.
+Zgodnie z decyzją RDOŚ z 18 sierpnia 2021 r. próbki mieszanin ścieków z kanału
+burzowego oraz wody z rzeki Iny powinny być pobierane każdorazowo
+po uruchomieniu przelewu burzowego przy ul. Brzozowej w Stargardzie122. Decyzją
+tą na Spółkę został nałożony obowiązek wykonywania każdorazowo po uruchomieniu
+ww. przelewu badań i pomiarów próbek mieszaniny ścieków z kanału burzowego oraz
+wody z rzeki Iny przez laboratorium, o którym mowa w art. 147a ust. 1 pkt 1 lub ust.
+1a ustawy Prawo ochrony środowiska. Według ewidencji uruchomienia przelewów
+burzowych prowadzonej przez Spółkę, przelew przy ul. Brzozowej uruchomił się m.in.
+17 czerwca 2023 r.
+(akta kontroli str. 1221-1222a, 1737, 1760-1768, 1799-1801,1937-2067, 2068-2071)
+Odpowiedzialny za powiadomienie pracowników o konieczności pobrania prób J.G.
+starszy specjalista ds. sieci kanalizacyjnej, pełniący dyżur dyspozytorski 17 czerwca
+2023 r. zeznał: Tego dnia miałem dyżur dyspozytorski (telefoniczny domowy).
+Zauważyłem opad atmosferyczny przez okno w domu pomiędzy godz. 13-15. Nic nie
+wskazywało, że jest tak intensywny, żeby spowodował otwarcie klapy przelewu
+burzowego. W związku z tym nie powiadamiałem osób pełniących dyżur o potrzebie
+pobrania prób. O tym, że przelewy otworzyły się dowiedziałem się w poniedziałek
+19 czerwca 2023 r. Próby nie były wówczas pobierane, ponieważ nie było już sensu
+ich poboru, ze względu na ustabilizowanie się pogody. Po tym zdarzeniu doszliśmy
+do wniosku podczas odprawy, że odpowiedniejszą osobą do monitorowania
+uruchamiania przelewów będzie pracownik oczyszczalni, aktualnie wykonujący
+pracę, który ma dostęp do informacji na temat zwiększenia ilości ścieków
+dopływających do oczyszczalni i powyżej jakiej ilości jest ryzyko uruchomienia
+przelewu burzowego oraz po godzinie 15 będzie powiadamiał pełniącego dyżur
+o takiej sytuacji, w celu podjęcia decyzji w tej sprawie. Zaproponowałem takie
+rozwiązanie, jako bardziej skuteczne, dla monitorowania uruchomienia przelewu
+burzowego. Obecnie jak pełnię dyżur dyspozytorski i wystąpi taka sytuacja, jestem
+powiadamiany przez pracownika oczyszczalni i podejmuję decyzję o wysłaniu
+pracowników do pobrania prób. Przypominam pracownikom oczyszczalni o takim
+obowiązku. Na podstawie obserwacji opadów nie jestem bowiem w stanie stwierdzić
+czy jest to intensywny opad i stwierdzić z całą pewnością, czy opad spowoduje
+otwarcie przelewów burzowych, ponieważ zdarza się, że intensywność opadów
+w różnych częściach miasta, jest różna. Podczas, gdy w jednej części miasta jest
+ulewa, w innej części może być tylko niewielki deszcz. Poza tym opady mogą wystąpić
+także w porze nocnej lub w okresie mojego odpoczynku (dyżur jest pełniony od godz.
+15.00 do 7.00 następnego dnia, a w dni wolne 24 godziny na dobę), wówczas
+monitorowanie dopływających do oczyszczalni ścieków prowadzi pracownik
+oczyszczalni, która pracuje całodobowo.
+                                     (akta kontroli str. 4, 1712-1718, 1769, 1789-1794)
+Prezes wyjaśnił, że: w celu zwiększenia skuteczności reakcji przedstawicieli Spółki na
+gwałtowne działania atmosferyczne oraz aby zminimalizować ryzyko wystąpienia
+122 Jako miejsce poboru próbek w kanale burzowym przy ul. Brzozowej w Stargardzie wyznaczono punkt usytuowany około 20
+
+m powyżej ujścia przedmiotowego kanału do rzeki Ina; jako miejsce poboru próbek wody z koryta rzeki Ina wyznaczono punkt
+usytuowany około 100 m poniżej ujścia kanału burzowego przy ul. Brzozowej w Stargardzie. Pobór próbek powinien być
+udokumentowany poprzez materiał zdjęciowy, który wraz z informacją o czasie, który upłynął od momentu zadziałania przelewu
+burzowego a poborem próbek, powinien być przesłany do RDOŚ w ciągu tygodnia od wystąpienia zdarzenia.
+                                                           27
+braku niezwłocznej reakcji na występujące zdarzenia przeprowadzono z osobami
+odpowiedzialnymi za realizację procedury poboru prób w związku z uruchomieniem
+się przelewów szkolenie, na którym zwrócono szczególny nacisk na bieżące
+obserwowanie pogody również z uwzględnieniem dostępnych aplikacji i programów
+pozwalających na przewidywanie zjawisk atmosferycznych oraz bieżący monitoring
+pogody w czasie rzeczywistym. Zwrócono również uwagę na posiłkowanie się
+informacjami, które są dostępne na dyspozytorni oczyszczalni, gdzie prowadzony jest
+24h monitoring napływu ścieków na oczyszczalnię. Na podstawie danych
+otrzymanych od dyspozytora i aktualnych warunków pogodowych, dyżurny
+nadzorujący wie jaka jest tendencja napływu (spadkowa, wzrostowa) w kanałach, co
+ułatwia proces podjęcia decyzji w wysłaniu grupy w celu poboru prób z odpowiednim
+wyprzedzeniem, które jest uzależnione jednakże od gwałtowności wystąpienia
+zjawiska atmosferycznego. (…) Spółka rozważała zamontowanie na przelewach
+burzowych urządzeń technicznych sygnalizujących uruchomienie przelewów, ale ze
+względu na posadowienie na otwartym i rozległym terenie, wysokie
+prawdopodobieństwo kradzieży lub dewastacji urządzeń elektronicznych
+i przesyłowych oraz zawodność przesyłu danych GSM i brak dostępu do instalacji
+elektrycznych, temat został zawieszony i odłożony na później.
+                                                 (akta kontroli str. 1822-1823, 1832)
+Po uruchomieniach przelewu burzowego, które miały miejsce w II półroczu 2023 r.
+każdorazowo zapewniono pobranie prób i przeprowadzenie ich badań.
+                                              (akta kontroli str. 1937-1971, 2188)
+3. Nieprzestrzeganie postanowień decyzji z 4 sierpnia 2022 r. w zakresie
+dopuszczalnej rocznej ilości ścieków odprowadzanych przez dwa przelewy burzowe.
+Według szacunkowej ilość zrzutu ścieków podanej przez Spółkę w 2023 r. z przelewu
+przy ul. Brzozowej (wylot W1, działka o nr ewid. 414 obr. 2 miasto Stargard) nastąpił
+zrzut ścieków w ilości ogółem 48 426 m3, podczas gdy określona w decyzji z 4 sierpnia
+2022 r. dopuszczalna roczna ilość ścieków, jaka mogła być odprowadzona z tego
+przelewu wynosiła 11 298,6 m3/rok, natomiast z przelewu ul. Konopnickiej (wylot W2,
+działka o nr ewid. działka nr 141/1 w obr. 2 miasto Stargard) nastąpił zrzut ścieków
+w ilości ogółem 29 952 m3, podczas gdy określona w decyzji z 4 sierpnia 2022 r.
+dopuszczalna roczna ilość ścieków, jaka mogła być odprowadzona z tego przelewu
+wynosiła 21 105 m3/rok.
+                                            (akta kontroli str. 2183-2185, 2458-2459)
+Prezes wyjaśnił: przygotowując dane dotyczące szacowanych ilości wprowadzanych
+ścieków do rzeki Iny z przelewów burzowych dla przelewu (…) brała pod uwagę
+natężenie deszczu w trakcie 15 minutowego deszczu nawalnego z uwzględnieniem
+ilości zrzutów z lat ubiegłych. Zmiany warunków atmosferycznych doprowadziły
+do rozbieżności pomiędzy przyjętymi założeniami projektowymi a rzeczywistymi
+okresami deszczów nawalnych. Zwrócić należy uwagę, iż z momentem ujawnienia
+dotychczasowych rozbieżności Spółka z jednej strony kontynuowała prowadzenie
+postępowań w zakresie uzyskania pozwolenia wodnoprawnego, ponieważ
+równocześnie zaczęły się potwierdzać informacje o konieczności modyfikacji
+dotychczasowych decyzji wydanych w oparciu o art. 80 Prawa wodnego w związku
+z wejściem w życie przepisu art. 16 ust. 1 ustawy o rewitalizacji rzeki Odry.
+Ze względu na konieczność uzyskania pozwoleń wodnoprawnych oraz uwzględniając
+przewlekłość postępowania prowadzonego przez PGW WP Spółka równocześnie
+realizuje obecne postępowanie, jak równocześnie przygotowuje się do złożenia
+nowych wniosków w określonym przez ustawodawcę terminie.
+                                                   (akta kontroli str. 2460, 2463)
+4. Spółka nie prowadziła regularnych kontroli ilości i jakości odprowadzanych
+ścieków bytowych i ścieków przemysłowych oraz kontroli przestrzegania warunków
+wprowadzania ścieków do urządzeń kanalizacyjnych, z wyjątkiem prowadzenia
+                                         28
+od stycznia 2022 r. regularnych kontroli zrzutu nieczystości ciekłych dostarczanych
+do stacji zlewnej wozami asenizacyjnymi. W trakcie kontroli NIK przedłożono
+dokumentację z jednej kontroli przedsiębiorcy przeprowadzonej 8 czerwca 2022 r.
+oraz z badań: trzech prób pobranych 14 października 2022 r., jednej próby pobranej
+31 stycznia 2023 r. i trzech 9 marca 2023 r. 123
+Zgodnie z art. 9 ust. 3 ustawy o zbiorowym odprowadzaniu ścieków, przedsiębiorstwo
+wodociągowo-kanalizacyjne jest obowiązane do prowadzenia regularnej kontroli ilości
+i jakości odprowadzanych ścieków bytowych i ścieków przemysłowych oraz kontroli
+przestrzegania warunków wprowadzania ścieków do urządzeń kanalizacyjnych.
+Procedura prowadzenia kontroli jakości ścieków określona została w taryfach dla
+zbiorowego zaopatrzenia w wodę i zbiorowego odprowadzania ścieków124.
+W regulaminach organizacyjnych Spółki (obowiązujących w latach 2021-2023)
+w zadaniach komórek organizacyjnych odpowiedzialnych za gospodarkę wodno-
+ściekową i eksploatację kanalizacji wskazano m.in. zlecanie do wykonania analiz
+ścieków, odprowadzanych do miejskiej sieci kanalizacyjnej (analizy fizyko-chemiczne
+i bakteriologiczne) oraz przeprowadzanie kontroli zakładów przemysłowych i innych
+jednostek gospodarczych odprowadzających ścieki do miejskiej sieci kanalizacyjnej
+w zakresie przestrzegania przez nie wymogów określonych przepisami dotyczącymi
+ilości i jakości odprowadzanych ścieków. Według karty uprawnień, obowiązków
+i odpowiedzialności do obowiązków Kierownika PTE należało m.in. wykonywanie
+analizy ścieków odprowadzanych do miejskiej sieci kanalizacyjnej oraz kontrola
+jakości ścieków zrzucanych do kanalizacji miejskiej przez różne kategorie
+usługobiorców w ramach zawartych umów.
+                                         (akta kontroli str.81-168, 248-252, 686-727)
+Kierownik PTE wyjaśnił, że zgodnie z pozwoleniem wodnoprawnym wydanym przez
+Wody Polskie, Spółka dokonuje systematycznej kontroli zarówno ścieków surowych
+wpływających do oczyszczalni, jak i ścieków oczyszczonych wprowadzanych do rzeki
+Iny. W latach 2021-2023 w żadnym z otrzymanych wyników badań nie wystąpiły
+przekroczenia ich dopuszczalnych parametrów. Natomiast przeprowadzone kontrole
+ścieków dowożonych do oczyszczalni wzbudziły wątpliwości, co do ich jakości oraz
+wpływu na technologię oczyszczalni ścieków. Mając na uwadze próby kontrolne
+pobrane w 2021 r. Spółka zwiększyła kontrole przyjmowanych ścieków dowożonych.
+W 2022 r. rozpoczęto 100% kontrolę każdego zrzutu nieczystości ciekłych
+dostarczanych do stacji zlewnej wozami asenizacyjnymi, co przyniosło efekty
+w postaci unormowania parametrów przyjmowanych ścieków. W wyjaśnieniach
+podał, że Spółka skontrolowała pod względem jakości wprowadzanych ścieków
+do miejskiej sieci kanalizacyjnej rejon ulic Broniewskiego i Głównej. Z uwagi na brak
+napływu z przyłączy kanalizacyjnych odstąpiono od dalszej kontroli w tym rejonie.
+Przeprowadzone w 2023 r. badania ścieku w strefie przemysłowej (ul. Metalowa,
+ul. Stalowa) nie wykazały przekroczeń w otrzymanych wynikach.
+                                                            (akta kontroli str. 941-942)
+Prezes wyjaśnił, że Spółka prowadziła wyrywkowe kontrole dostawców ścieków
+socjalno-bytowych oraz przemysłowych na terenie Miasta. Niemniej jednak
+ewidencjonowała tylko te, w których stwierdzone zostały przekroczenia. W okresie
+objętym kontrolą NIK stwierdzono tylko jedno przekroczenie podczas kontroli.
+Założono, że kontrole zostaną przeprowadzone w pierwszej kolejności w podmiotach
+prowadzących myjnie samoobsługowe.
+                                          (akta kontroli str. 683-684, 686-727, 986)
+
+
+
+
+123 Badania dotyczyły jakości wprowadzanych ścieków do miejskiej sieci kanalizacyjnej w rejonie ulic Broniewskiego-Głównej.
+
+9 marca 2023 r. badania dotyczyły ścieku w strefie przemysłowej przy ul. Metalowej i Stalowej.
+124 Zatwierdzone decyzjami Dyrektora RZGW w Szczecinie SZ.RZT.070.4.99.2018.RN, SZ.RZT.70.061.2022.RaN oraz
+
+SZ.RZT.70.079.2023.KSz. (opublikowane na stronie https://wodypolskie.bip.gov.pl/rzgw-w-szczecinie-taryfy/).
+                                                            29
+Według informacji udzielonych NIK w trakcie kontroli przez WIOŚ125 w latach 2021-
+2023 Inspekcja ta przeprowadziła na terenie Stargardu tylko dwie kontrole
+przedsiębiorców w zakresie przestrzegania warunków dotyczących ilości i jakości
+ścieków wprowadzanych do wód i do ziemi określonych w pozwoleniach
+wodnoprawnych oraz w pozwoleniach zintegrowanych. W oparciu o przepisy art. 9
+ust. 3 ustawy o zbiorowym odprowadzaniu ścieków, przedsiębiorstwo wodociągowo-
+kanalizacyjne odgrywa rolę organu kontrolnego i egzekwującego wypełnianie
+określonych obowiązków przez odbiorcę usług. W przypadku wykrycia
+nieprawidłowości wyciągnięte przez przedsiębiorstwo konsekwencje powinny być
+zgodne z warunkami zapisanymi w umowie. Może się także zdarzyć przeniesienie
+odpowiedzialności w sytuacji, gdy np. niewłaściwy skład ścieków przemysłowych
+wprowadzonych do kanalizacji (przez dostawcę ścieków przemysłowych)
+spowodował zaburzenia w funkcjonowaniu oczyszczalni ścieków i w efekcie
+odprowadzanie (przez przedsiębiorstwo wodociągowo-kanalizacyjne) do odbiornika
+ścieków o parametrach przekraczających wartości zapisane w pozwoleniu
+wodnoprawnym wydanym przez właściwy organ126. Z powyższych względów zdaniem
+NIK niezbędne jest zwiększenie nadzoru Spółki nad ilością i jakością
+odprowadzanych ścieków bytowych i ścieków przemysłowych oraz przestrzeganiem
+warunków wprowadzania ścieków do urządzeń kanalizacyjnych określonych
+m.in. w zawartych umowach na odprowadzanie ścieków.
+                                                       (akta kontroli str. 1570-1582)
+5. Spółka wytwarzała i magazynowała na terenie oczyszczalni ścieków odpady
+z czyszczenia studzienek kanalizacyjnych, pomimo braku zezwolenia wymaganego
+przepisami art. 180a pkt 1 ustawy Prawo ochrony środowiska.
+Według kart ewidencji odpadu 20 03 06 (odpady ze studzienek kanalizacyjnych)
+w latach 2021-2023 Spółka wytworzyła odpowiednio: 842,46 ton, 172,06 ton,
+i 595,50 ton tego odpadu. Daty i wielkości odpadów wytworzonych w 2021 r. i części
+wytworzonych w 2023 r. nie pokrywały się z datami ich przekazania, co wskazuje na
+ich magazynowanie. Posiadane przez Spółkę pozwolenie na wytwarzanie odpadów
+nie obejmowało tego rodzaju odpadów. Spółka nie posiadała także zezwolenia na
+magazynowanie i przetwarzanie ww. odpadów.
+Jak wykazał przeprowadzony w Spółce audyt zewnętrzny, odpad z czyszczenia
+studzienek kanalizacyjnych wylewany był na nieuszczelniony plac magazynowy. Przy
+placu zlokalizowana była studzienka kanalizacyjna, do której spływała część płynna
+odpadu. Stwierdzono m.in. że postępowanie z odpadami ze studzienek
+kanalizacyjnych następuje bez zezwolenia poza instalacją. Ponadto następuje
+w sposób prowadzący do uciążliwości zapachowej oraz mogący powodować
+zagrożenia dla wody, powietrza, gleby, co stanowiło naruszenie przepisów
+m.in. art. 16 pkt 1 i 2 ustawy o odpadach. Zalecono m.in. wykonanie instalacji
+do przetwarzania odpadów 20 03 06 wraz z uzyskaniem zezwolenia na ich
+przetworzenie, zmianę pozwolenia na wytwarzanie odpadów. Przeprowadzone
+w trakcie kontroli w dniu 25 kwietnia 2024 r. oględziny potwierdziły gromadzenie nadal
+na terenie oczyszczalni odpadów pochodzących z czyszczenia studzienek
+kanalizacyjnych oraz odpływ części płynnej odpadu do kratki ściekowej. Obszar na
+którym gromadzone były odpady nie był oznakowany i w miejscu tym wyczuwalny był
+zapach charakterystyczny dla ścieków komunalnych.
+                                    (akta kontroli str. 874-877, 1248-1264, 2170-2172)
+W sprawie gromadzenia odpadów z czyszczenia studzienek kanalizacyjnych na
+terenie oczyszczalni Kierownik Działu Eksploatacji Kanalizacji wyjaśnił: na chwilę
+obecną Spółka nie ma innych możliwości technicznych oraz nie dysponuje środkami
+
+125 Na podstawie art. 29 ust. 1 pkt 2 lit f ustawy o NIK.
+126 P. Michalski (red.), ustawa o zbiorowym zaopatrzeniu w wodę i zbiorowym odprowadzaniu ścieków. Komentarz, Warszawa
+
+2022.
+                                                            30
+finansowymi na wykonanie instalacji do odbioru i magazynowania tych odpadów.
+Takie rozwiązania są zaplanowane w II etapie modernizacji oczyszczalni. W kwestii
+dalszego postępowania z ww. odpadami wyjaśnił, że są one przekazywane
+na składowisko odpadów w Łęczycy, prowadzonej przez Bio Star Spółka z o.o.,
+po przeprowadzeniu badań tych odpadów. Przedłożył jednocześnie kopię
+przykładowej karty przekazania odpadu oraz sprawozdanie z badań.
+                                                    (akta kontroli str. 2170-2177)
+Prezes wyjaśnił, że w kwestii zagospodarowania odpadu o kodzie 20 03 06 Spółka
+do czasu wykonania inwestycji polegającej na budowie punktu zrzutu odpadów
+z oczyszczania kanalizacji, magazynuje odpad na terenie oczyszczalni i następnie
+wywozi na składowisko odpadów. Zgodnie z planem inwestycja ma się rozpocząć
+w połowie 2024 r. i zakończyć do końca 2027 r. (inwestycja jest częścią zadania
+zwiększenia retencji wód opadowych na terenie oczyszczalni ścieków).
+W wyjaśnieniach podał: Spółka jest na etapie przygotowania dokumentacji
+niezbędnej do złożenia wniosku o nowe pozwolenie na wytwarzanie odpadów, które
+zawierać będzie prawidłowe zapisy.
+                                                           (akta kontroli str. 985)
+6. W latach 2021-2022 nie zapewniono wykonania badań oczyszczonych wód
+opadowych zgodnie z częstotliwością określoną w objętych badaniem pozwoleniach
+wodnoprawnych       nr CS.6341.11.4.2013.LG1          z    10     kwietnia    2013 r.
+i nr CS.6341.91.3.2016.SW3 z 9 stycznia 2017 r.
+Według § 1 pkt 5 umowy na wykonanie obsługi sieci kanalizacji deszczowej na terenie
+Miasta w 2021 r. oraz § 1 ust. 2 pkt 5 umowy na 2022 r., Spółka zobowiązana była
+do wykonywania analizy ścieków/wód opadowych zgodnie z wydanymi pozwoleniami
+wodnoprawnymi w zakresie zawiesiny ogólnej i substancji ropopochodnych we
+wskazanych lokalizacjach, m.in. przy odbiornikach wód na ul. Spółdzielczej127 oraz
+przy zbiorniku retencyjnym wód opadowych w Kluczenie (była oczyszczalnia
+ścieków)128. Według pozwoleń wodnoprawnych nr CS.6341.11.4.2013.LG1
+i CS.6341.91.3.2016.SW3, analizy oczyszczonych ścieków deszczowych miały być
+wykonywane co najmniej dwa razy w roku, w okresie wiosny i jesieni. W latach 2021-
+2022 Spółka wykonała badania wód pobranych przy tych odbiornikach jednokrotnie
+w roku.
+                                 (akta kontroli str. 186-202, 2133, 2137, 2141-2155)
+Odpowiedzialny za realizację umów z ramienia Spółki J.G. starszy specjalista ds. sieci
+kanalizacyjnej zeznał: Uważałem, że wiążące są umowy zawarte z Urzędem na
+obsługę kanalizacji deszczowej na terenie miasta Stargardu. Nie brałem przy ich
+realizacji pod uwagę pozwoleń wodnoprawnych. Uważałem, że podejmowane przeze
+mnie czynności są wystarczające i zgodne z umową.
+                                                             (akta kontroli str. 1829)
+Prezes w wyjaśnieniach nie podał przyczyny niewykonania badań dwukrotnie
+i potwierdził, że Spółka wykonywała badania tylko raz w roku.
+                                                       (akta kontroli str. 2181-2182)
+7. W wyniku sprawdzenia dokumentacji 18 obiektów budowlanych129 stwierdzono, że
+a) nie zapewniono przeprowadzania okresowych kontroli:
+
+
+
+127 Pozwolenie wodnoprawne nr CS.6341.11.4.2013.LG1.
+128 Pozwolenie wodnoprawne CS.6341.91.3.2016.SW3.
+129 Stacja zlewcza ścieków dowożonych (obiekt nr 4), zbiornik retencyjny wód deszczowych (obiekt nr 13A), OBF Nr 2 (obiekt
+
+nr 50), zbiornik retencyjny ścieków surowych (obiekt nr 8), komora przelewowa (obiekt nr 1), wylot ścieków nadmiarowych (obiekt
+nr 46), wylot ścieków oczyszczonych (obiekt nr 45) oraz sieci kanalizacji sanitarnych w ul. Sadowej, Grottgera, Brzozowej,
+Słowackiego, Szczecińskiej, Limanowskiego, Metalowej, Słonecznej, Piłsudskiego i Park Przemysłowy w Stargardzie oraz
+zbiornik podziemny do gromadzenia ścieków zlokalizowany w Stargardzie przy ul. Mazowieckiej.
+                                                              31
+ o których mowa w art. 62 ust. 1 pkt 2130 ustawy Prawo budowlane dla wszystkich
+    10 objętych badaniem sieci kanalizacji sanitarnej i podziemnego zbiornika
+    do gromadzenia ścieków, położonego przy ul. Mazowieckiej w Stargardzie131;
+ o których mowa w art. 62 ust. 1 pkt 1 lit a132 ustawy Prawo budowlane
+    podziemnego zbiornika do gromadzenia ścieków, położonego przy
+    ul. Mazowieckiej w Stargardzie;
+b) nie założono książki obiektu budowlanego dla zbiornika podziemnego
+do gromadzenia ścieków zlokalizowanego w Stargardzie przy ul. Mazowieckiej,
+pomimo takiego obowiązku wynikającego z art. 60b ust. 1 pkt 2 oraz art. 60c ustawy
+Prawo budowlane.
+                                    (akta kontroli str. 663, 1630-1632, 2134-2136)
+Według art. 62 ust. 1 pkt 1 lit a i pkt 2 ustawy Prawo budowlane obiekty budowlane
+powinny być w czasie ich użytkowania poddawane przez właściciela lub zarządcę
+kontroli okresowej, co najmniej raz w roku, polegającej na sprawdzeniu stanu
+technicznego elementów budowli narażonych na szkodliwe wpływy atmosferyczne
+i niszczące działania czynników występujących podczas użytkowania obiektu oraz
+okresowej, co najmniej raz na pięć lat, polegającej na sprawdzeniu stanu
+technicznego i przydatności do użytkowania obiektu budowlanego.
+Artykuł 62 ust. 2 pkt 2 lit. b ustawy Prawo budowlane zwalnia z obowiązku
+wykonywania kontroli, o której mowa w art. 62 ust. 1 pkt 1 lit. a (kontrole coroczne)
+właścicieli i zarządców obiektów budowlanych wymienionych w art. 29 ust. 1 i ust. 2,
+m.in. sieci kanalizacyjnych. Przepis ten nie zwalnia jednak z obowiązku wykonywania
+okresowych kontroli sieci kanalizacyjnych co najmniej raz na pięć lat, o którym mowa
+w art. 62 ust. 1 pkt 2 ustawy Prawo budowlane.
+Prezes wyjaśnił: Spółka na bieżąco prowadzi wewnętrzne kontrole kanałów
+kanalizacyjnych (…) na terenie miasta. Na tej podstawie oraz na podstawie
+przeprowadzonych inspekcji TV co roku wytypowane są odcinki sieci, które z uwagi
+na swój stan techniczny należy poddać renowacji lub wymianie. Spółka nie
+wykonywała formalnych zadań wynikających z przeprowadzania okresowych kontroli,
+o których mowa w art. 62 ust. 1 pkt 2 ustawy (…) Prawo budowlane, co nie oznacza
+jednak, że sieć nie jest przedmiotem nadzoru zarówno w zakresie jej stanu
+technicznego, jak również zapewnienia możliwości dostarczania wody w standardach
+określonych obowiązującymi przepisami prawa.
+W sprawie zbiornika podziemnego do gromadzenia ścieków zlokalizowanego
+w Stargardzie przy ul. Mazowieckiej wyjaśnił: zbiornik (…) został wybudowany
+w latach 60-tych ubiegłego wieku, a przeprowadzona inwentaryzacja w latach
+późniejszych nie wykazała go jako obiektu objętego obowiązkiem wynikającym
+z ustawy (…) Prawo budowlane.
+                                                         (akta kontroli str. 1734, 1774)
+NIK wskazuje, że jako kontrole okresowe w rozumieniu ustawy Prawo budowlane,
+mogą być kwalifikowane tylko kontrole, które są przeprowadzane zgodnie
+z przepisami tej ustawy, przez osoby posiadające uprawnienia budowlane
+w odpowiedniej specjalności i które zostały udokumentowane w formie stosownych
+protokołów.
+8. Do dnia przeprowadzenia oględzin podczas kontroli NIK, tj. 23 marca 2024 r. nie
+zrealizowano robót remontowych zbiornika retencyjnego wód deszczowych (obiekt
+nr 13A), wskazanych w protokołach okresowej kontroli rocznej stanu technicznego
+
+
+
+
+130 Kontroli okresowej, co najmniej raz na 5 lat, polegającej na sprawdzeniu stanu technicznego i przydatności do użytkowania
+
+obiektu budowlanego.
+131 Nr inw. 2-10004.
+132 Co najmniej raz w roku, polegającej na sprawdzeniu stanu technicznego elementów budowli narażonych na szkodliwe wpływy
+
+atmosferyczne i niszczące działania czynników występujących podczas użytkowania obiektu.
+                                                             32
+tego obiektu budowlanego, przeprowadzonych 12 sierpnia 2022 r. i 18 sierpnia
+2023 r.133
+Według art. 61 pkt 1 ustawy Prawo budowlane właściciel lub zarządca obiektu
+budowlanego jest obowiązany utrzymywać i użytkować obiekt zgodnie z zasadami,
+o których mowa w art. 5 ust. 2. W myśl przepisów art. 5 ust. 2 tej ustawy, obiekt
+budowlany należy użytkować w sposób zgodny z jego przeznaczeniem
+i wymaganiami ochrony środowiska oraz utrzymywać w należytym stanie
+technicznym i estetycznym, nie dopuszczając do nadmiernego pogorszenia jego
+właściwości użytkowych i sprawności technicznej, w szczególności w zakresie
+związanym z wymaganiami, o których mowa w ust. 1 pkt 1-7.
+                                            (akta kontroli str. 1633-1635, 1657-1672)
+Prezes wyjaśnił, że z uwagi na wydłużający się proces zatwierdzenia taryfy,
+spowodowany w głównej mierze działaniami Wód Polskich oraz zatwierdzeniem taryfy
+w wysokości pozwalającej na uzyskanie tylko przychodów minimalnych, Spółka nie
+zrealizowała wszystkich zadań remontowo-eksploatacyjnych. Dopiero w momencie
+zatwierdzenia taryfy (w lutym 2024 r.) planowany wynik finansowy Spółki pozwoli na
+przeprowadzenie robót remontowych na ww. obiekcie.
+                                                                (akta kontroli str. 1774)
+9. W objętych badaniem NIK książkach siedmiu obiektów budowlanych134:
+a) na str. 2 tablica nr 1 nie wskazano osób upoważnionych do dokonywania wpisów,
+pomimo iż wzór książki obiektu budowlanego, określony w załączniku
+do rozporządzenia w sprawie książki obiektu budowlanego przewidywał wskazanie
+takiej osoby w tablicy nr 1. Zgodnie z art. 60d ustawy Prawo budowlane, który wszedł
+w życie 1 stycznia 2023 r.135, właściciel lub zarządca obiektu budowlanego wskazuje
+w książce obiektu budowlanego osobę fizyczną do prowadzenia tej książki.
+Za prowadzenie książki obiektu budowlanego odpowiada wskazana w tej książce
+osoba fizyczna.
+                                               (akta kontroli str.1631-1632,1636- 1656)
+Prezes wyjaśnił, że wpisów do książek budowlanych dokonuje osoba z uprawnieniami
+budowlanymi wybrana w drodze przetargu. W Spółce nie ma osoby, która posiada
+uprawnienia budowlane.
+                                                      (akta kontroli str. 1773-1775)
+Obowiązek prowadzenia książki obiektu budowlanego co do zasady obejmuje
+właściciela lub zarządcę obiektu budowlanego. Jednak za prowadzenie książki
+obiektu budowlanego odpowiada osoba fizyczna wskazana w książce obiektu
+budowlanego. W praktyce może to być pracownik lub inna osoba zatrudniona przez
+właściciela lub zarządcę nieruchomości, przy czym przepisy nie określają kwalifikacji,
+które powinna posiadać osoba prowadząca książkę obiektu budowlanego.
+Powierzenie czynności prowadzenia książki obiektu budowlanego może nastąpić
+na podstawie umowy cywilnoprawnej lub umowy o pracę136.
+W tablicy nr 1 na str. 2 książek obiektów budowlanych prowadzonych w Spółce była
+możliwość wpisania osób z podaniem okresu od do, w którym powierzono im
+dokonywanie wpisów na podstawie zawartych umów. Ponadto w książce może być
+podana osoba upoważniona do dokonywania wpisów, które nie zostały w przepisach
+budowlanych powierzone wyłącznie osobom dokonującym okresowych kontroli
+
+133 Nie naprawiono spękań dna i ścian bocznych tego zbiornika oraz nie podniesiono posadzki przy wylocie, celem umożliwienia
+
+odpływu wód ze zbiornika. Jakkolwiek w ww. protokołach wskazano, że obiekt nie zagraża życiu lub zdrowiu, bezpieczeństwu
+mienia bądź środowiska, to stwierdzono, że wymaga wykonania niezbędnego remontu.
+134 Stacja zlewcza ścieków dowożonych (obiekt nr 4), zbiornik retencyjny wód deszczowych (obiekt nr 13A), OBF Nr 2 (obiekt nr
+
+50), zbiornik retencyjny ścieków surowych (obiekt nr 8), komora przelewowa (obiekt nr 1), wylot ścieków nadmiarowych (obiekt
+nr 46), wylot ścieków oczyszczonych (obiekt nr 45).
+135 Dodany przez art. 1 ustawy z dnia 7 lipca 2022 r. o zmianie ustawy - Prawo budowlane oraz niektórych innych ustaw (Dz. U.
+
+poz. 1557).
+136 D. Sypniewski [w:] R. Godlewski, M. Goss, J. Góralski, W. Ł. Gunia, D. Sypniewski, Prawo budowlane. Komentarz, Warszawa
+
+2022, art. 60(d).
+                                                             33
+budowlanych. Zakres wpisów, do dokonywania których uprawniony jest właściciel lub
+zarządca obiektu budowanego oraz osoba wskazana w książce obiektu budowlanego
+do jej prowadzenia, określa art. 60e ust. 2 ustawy Prawo budowlane.
+                                             (akta kontroli str. 1636-1655, 1802-1809)
+b) w wykazie protokołów kontroli okresowych stanu technicznego obiektu,
+przeprowadzonych co najmniej jeden raz w roku (tablica nr 4), nie zapewniono
+podania danych identyfikujących osoby, które sporządziły protokół w kontroli rocznej.
+Według § 6 ust 2 rozporządzenia w sprawie książki obiektu budowlanego, wpis
+do książki powinien: zawierać dane identyfikujące dokument będący przedmiotem
+wpisu, określać ważne ustalenia w nim zawarte oraz dane identyfikujące osobę, która
+dokument wystawiła. W latach 2021-2022 Spółka powierzyła wykonawcy okresowych
+kontroli budowlanych dokonanie wpisów w książkach obiektów budowlanych. W myśl
+przepisów art. 62b ust. 1 ustawy Prawo budowlane, który wszedł w życie od 1 stycznia
+2023 r. w terminie siedmiu dni od dnia zakończenia kontroli obiektu budowlanego, dla
+którego istnieje obowiązek prowadzenia książki obiektu budowlanego, osoba
+przeprowadzająca kontrolę, o której mowa w art. 62 ust. 1, dokonuje wpisu o kontroli
+w książce obiektu budowlanego.
+                           (akta kontroli str. 1631-1632, 1636-1656, 1802-1809, 1827)
+Prezes wyjaśnił: w związku z faktem, iż przedmiot umowy był wykonywany przez
+osobę, która kilkukrotnie wykonywała usługi w przedmiotowym zakresie na rzecz
+Spółki, oraz że Spółka jest w posiadaniu dokumentów pozwalających zidentyfikować
+osobę z podpisem ujawnionym w książce obiektu (np. umowa nr NT-50-1-2022)
+odstąpiono od wyraźnej bezpośredniej identyfikacji podmiotu w treści książki obiektu
+budowlanego.
+                                                      (akta kontroli str. 1827-1828)
+Najwyższa Izba Kontroli nie może uwzględnić powyższych wyjaśnień. Umowy na
+wykonanie rocznego przeglądu stanu technicznego obiektów budowlanych137
+obejmowały m.in. dokonanie wpisów do książek obiektów. Przedmiot umowy miał być
+wykonany zgodnie ustawą Prawo budowlane, przepisami wykonawczymi do tej
+ustawy oraz Polskimi Normami, zatem wpisy powinny być dokonane zgodnie
+z wymogami określonymi w § 6 ust 2 rozporządzenia w sprawie książki obiektu
+budowlanego, który nakazuje podanie danych identyfikujących osobę, która
+dokument sporządziła (w tym przypadku protokół z kontroli okresowej). Ponadto
+w latach 2021-2022 umowy zostały zawarte z firmą i przedsiębiorcą, a protokoły
+z kontroli okresowej sporządziły inne osoby.
+                                            (akta kontroli str. 1657-1672, 1802-1809)
+10. Przy obliczaniu dla skontrolowanego przedsiębiorcy138 stawki opłaty
+za przekroczenie warunków wprowadzania ścieków przemysłowych do urządzeń
+kanalizacyjnych w kwocie 806,88 zł, przyjęto jako początkowy odczyt z 26 maja
+2022 r. (16 117 m3), a nie odczyt z dnia kontroli tj. 8 czerwca 2022 r. Pomimo tego
+w piśmie skierowanym do przedsiębiorcy139 wskazano, że opłata dodatkowa z tytułu
+przekroczenia dopuszczalnych wskaźników zanieczyszczeń w ściekach
+przemysłowych została ustalona za okres od 8 czerwca do 21 września 2022 r.
+Według obowiązujących w okresie naliczenia opłat taryf dla zbiorowego zaopatrzenia
+w wodę i zbiorowego odprowadzania ścieków140 opłaty za przekroczenie
+dopuszczalnego stanu ścieków i/lub dopuszczalnych wartości wskaźników
+zanieczyszczeń we wprowadzanych ściekach, miały być naliczane od dnia poboru
+ścieków, w którym stwierdzono przekroczenia do dnia ustania przekroczeń
+potwierdzonego badaniami ścieków wykonanymi przez laboratorium akredytowane
+
+137 Z 28 lipca 2021 r. nr EZ-ZR-54/012021 i z 29 lipca 2022 r. nr NT-50-1/2022.
+138 Z którym Spółka zawarła 30 lipca 2019 r. umowę o zaopatrzenie w wodę i odprowadzanie ścieków innych niż socjalno-bytowe
+
+nr I/58559/2019.
+139 TW-PW-50/507/225C/2022 z 28 października 2022 r.
+140 Zatwierdzonych decyzjami Dyrektora RZGW w Szczecinie nr SZ.RZT.070.4.99.2018.RN i SZ.RZT.70.061.2022.RaN.
+
+                                                              34
+          na zlecenie dostawcy ścieków. Także § 14 ust. 5 umowy zawartej z przedsiębiorcą
+          wskazano, że w przypadku przekroczenia dopuszczalnych wskaźników
+          zanieczyszczeń w ściekach przemysłowych, określonych w § 8 ust. 1 tej umowy,
+          Spółka naliczy stawkę opłaty za przekroczenia warunków wprowadzania ścieków
+          przemysłowych zgodnie z obowiązującą taryfą od stanu urządzenia pomiarowego lub
+          wodomierza głównego odczytanego w dniu dokonania kontroli.
+                                                            (akta kontroli str. 690-727, 1465)
+          Prezes wyjaśnił: Mając na uwadze, iż poprawa parametrów ścieków pochodzących
+          z myjni miała miejsce w związku z modyfikacją stosowanej technologii stwierdzić
+          należy, iż stan przekroczeń możliwy był do określenia z momentem ostatniego
+          pomiaru przed dokonaniem poboru próby tj. 26.05.2022 r. ponieważ w wyniku
+          przeprowadzonej kontroli ustalono iż na dzień dokonania pomiaru technologia ta
+          miała zastosowanie co przekładało się bezpośrednio na uzyskiwane wyniku stężeń
+          środków chemicznych zrzucanych do infrastruktury sieci kanalizacyjnej.
+                                                                      (akta kontroli str. 1466)
+          Najwyższa Izba Kontroli, mając na uwadze regulacje zawarte w taryfach zbiorowego
+          zaopatrzenia w wodę i zbiorowego odprowadzania ścieków oraz zapisy umowy
+          zawartej z przedsiębiorcą, nie może uwzględnić powyższych wyjaśnień. Wskazane
+          dokumenty jednoznacznie określają, iż opłata powinna być naliczana od dnia kontroli,
+          w którym dokonano poboru prób, których wyniki badań wykazały przekroczenia
+          ustalonych warunków wprowadzania ścieków przemysłowych.
+                                                                 (akta kontroli str. 695, 1465)
+
+          IV. Uwagi i wnioski
+          W związku ze stwierdzonymi nieprawidłowościami, Najwyższa Izba Kontroli
+          uwzględniając podjęte przez kontrolowaną jednostkę działania, na podstawie art. 53
+          ust. 1 pkt 5 ustawy o NIK, przedstawia następujące wnioski:
+Wnioski        Zintensyfikowanie działań celem uzyskania wymaganych przepisami ustawy
+               Prawo wodne decyzji oraz pozwoleń wodnoprawnych na usługę wodną zrzutu
+               ścieków z kanalizacji ogólnospławnej przez przelewy burzowe.
+               Zapewnienie przestrzegania zapisów postanowień decyzji RDOŚ z 18 sierpnia
+               2021 r. w przedmiocie wykonywania pomiarów zawartości substancji w wodach
+               rzeki Iny i kanału burzowego (ulgi) przy ul. Brzozowej w Stargardzie oraz pomiaru
+               rzeczywistej ilości ścieków odprowadzanych poprzez przelew burzowy przy
+               ul. Brzozowej po jego uruchomieniu.
+               Podjęcie działań w celu zapewnienia zgodności maksymalnych rocznych
+               wielkości dokonywanych zrzutów ścieków do rzeki Iny z poszczególnych
+               przelewów burzowych i określonych w decyzji wydanej na podstawie art. 80
+               ustawy Prawo wodne.
+               Przeprowadzanie regularnych kontroli ilości i jakości odprowadzanych ścieków
+               bytowych i ścieków przemysłowych oraz kontroli przestrzegania warunków
+               wprowadzania ścieków do urządzeń kanalizacyjnych, o których mowa w art. 9
+               ust. 3 ustawy o zbiorowym odprowadzaniu ścieków.
+               Uzyskanie wymaganych zezwoleń i zapewnienie postępowania z odpadami
+               z czyszczenia studzienek kanalizacyjnych, zgodnie z wymaganiami dotyczącymi
+               tego rodzaju odpadu.
+               Zapewnienie przeprowadzania badań wód opadowych zgodnie z warunkami
+               określonymi w umowie na wykonanie obsługi sieci kanalizacji deszczowej na
+               terenie miasta Stargard, tj. z uwzględnieniem wymogów dotyczących
+               częstotliwości wykonywania badań, określonych w pozwoleniach
+               wodnoprawnych.
+
+                                                    35
+                            Zapewnienie przeprowadzania okresowych kontroli sieci kanalizacji sanitarnej,
+                            o których mowa w art. 62 ust. 1 pkt 2 ustawy Prawo budowlane, założenie książki
+                            obiektu budowlanego dla podziemnego zbiornika do gromadzenia ścieków
+                            położonego przy ul. Mazowieckiej w Stargardzie oraz zapewnienie
+                            przeprowadzania okresowych kontroli budowlanych tego obiektu.
+                            Przeprowadzenie robót remontowych zbiornika retencyjnego wód deszczowych
+                            (obiekt nr 13A), wskazanych w protokołach okresowej kontroli rocznej stanu
+                            technicznego tego obiektu budowlanego.
+                            Rzetelne prowadzenie książek obiektów budowlanych w zakresie wskazania
+                            osoby upoważnionej do ich prowadzenia oraz egzekwowania podania przez
+                            dokonujących wpisów danych identyfikujących osoby, które sporządziły protokoły
+                            z okresowych kontroli budowlanych obiektów.
+                            Naliczanie stawki opłaty za przekroczenie warunków wprowadzania ścieków
+                            przemysłowych do urządzeń kanalizacyjnych od dnia poboru próbek ścieków,
+                            w których    stwierdzono      przekroczenia     dopuszczalnych     wskaźników
+                            zanieczyszczeń.
+                 Uwagi   Najwyższa Izba Kontroli nie formułuje uwag.
+                         11.
+
+
+
+
+                         V. Pozostałe informacje i pouczenia
+                         Wystąpienie pokontrolne zostało sporządzone w dwóch egzemplarzach; jeden dla
+                         kierownika jednostki kontrolowanej, drugi do akt kontroli.
+    Prawo zgłoszenia     Zgodnie z art. 54 ust. 1 i 2 ustawy o NIK kierownikowi jednostki kontrolowanej
+          zastrzeżeń     przysługuje prawo zgłoszenia na piśmie umotywowanych zastrzeżeń do wystąpienia
+                         pokontrolnego, w terminie 21 dni od dnia jego przekazania. Zastrzeżenia zgłasza się
+                         do dyrektora Delegatury NIK w Szczecinie. Prawo zgłaszania zastrzeżeń, zgodnie
+                         z art. 61b ust. 2 ustawy o NIK, nie przysługuje do wystąpienia pokontrolnego
+                         zmienionego zgodnie z treścią uchwały w sprawie zastrzeżeń.
+           Obowiązek     Zgodnie z art. 62 ustawy o NIK należy poinformować Najwyższą Izbę Kontroli,
+      poinformowania     w terminie 30 dni od otrzymania wystąpienia pokontrolnego o sposobie wykonania
+       NIK o sposobie    wniosków pokontrolnych oraz o podjętych działaniach lub przyczynach niepodjęcia
+   wykorzystania uwag    tych działań.
+i wykonania wniosków     W przypadku wniesienia zastrzeżeń do wystąpienia pokontrolnego, termin
+                         przedstawienia informacji liczy się od dnia otrzymania uchwały o oddaleniu
+                         zastrzeżeń w całości lub zmienionego wystąpienia pokontrolnego.
+                         Szczecin, 16 maja 2024 r.
+                                                                               Najwyższa Izba Kontroli
+                                       Kontrolerzy                            Delegatura w Szczecinie
+                                  Marzanna Wierzbicka                                z up. Dyrektora
+                                   doradca techniczny                               p.o. Wicedyrektor
+                                                                                    Bogusław Wójcik
+                               ........................................................
+                                                      podpis
+
+
+                                                                                                   ........................................................
+                                                                                                                          podpis
+                                          Anna Jończyk
+                                      starszy inspektor k.p.
+
+                               ........................................................
+                                                                                               Dokument podpisany elektronicznie
+                                                      podpis
+                                                                                          36
+

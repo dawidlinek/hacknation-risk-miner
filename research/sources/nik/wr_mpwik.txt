@@ -1,0 +1,1670 @@
+LWR.410.026.05.2020
+
+
+                                              Pan
+                                              Witold Ziomek
+                                              Prezes Zarządu
+                                              Miejskiego Przedsiębiorstwa
+                                              Wodociągów i Kanalizacji S.A.
+                                              Miejskie Przedsiębiorstwo
+                                              Wodociągów i Kanalizacji S.A.
+                                              ul. Na Grobli 19
+                                              50-421 Wrocław
+
+
+
+
+                  WYSTĄPIENIE
+                 POKONTROLNE
+         zmienione zgodnie z treścią uchwały nr KPK-KPO.443.083.2021
+     Zespołu Orzekającego Komisji Rozstrzygającej w Najwyższej Izbie Kontroli
+                           z dnia 21 czerwca 2021 r.
+
+                  P/20/046 – „Zbieranie i oczyszczanie ścieków komunalnych”
+                        I. Dane identyfikacyjne
+          Jednostka     Miejskie Przedsiębiorstwo Wodociągów i Kanalizacji Spółka Akcyjna we Wrocławiu
+       kontrolowana     (dalej: MPWiK, Przedsiębiorstwo)
+
+  Kierownik jednostki   Witold Ziomek, Prezes Zarządu MPWiK, od dnia 14 kwietnia 2017 r.
+       kontrolowanej
+
+Zakres przedmiotowy     1. Planowanie, monitorowanie, koordynowanie i nadzorowanie realizacji zadań
+             kontroli      w zakresie gospodarki ściekowej.
+                        2. Zbieranie ścieków komunalnych.
+                        3. Oczyszczanie ścieków komunalnych i zagospodarowanie osadów ściekowych.
+                        4. Finansowanie zbierania i oczyszczania ścieków komunalnych.
+
+Okres objęty kontrolą   Od 1 stycznia 2018 r. do 30 września 2020 r., z wykorzystaniem dowodów
+                        powstałych przed/po tym okresie.
+
+   Podstawa prawna      Art. 2 ust. 2 ustawy z dnia 23 grudnia 1994 r. o Najwyższej Izbie Kontroli1
+    podjęcia kontroli
+
+          Jednostka     Najwyższa Izba Kontroli
+   przeprowadzająca     Delegatura we Wrocławiu
+            kontrolę
+
+
+
+            Kontroler   Rafał Sudnik, starszy inspektor kontroli państwowej, upoważnienie do kontroli
+                        nr LWR/158/2020 z 23 października 2020 r.
+                                                                                        (akta kontroli str. 1 Tom I, 204-205 Tom IV)
+
+
+
+
+                        1 Dz. U. z 2020 r. poz. 1200, ze zm. Dalej: ustawa o NIK.
+
+
+                                                                                    2
+               II. Ocena ogólna2 kontrolowanej działalności
+OCENA OGÓLNA   Działalność MPWiK zapewniała kompleksowe zbieranie ścieków komunalnych i ich
+               oczyszczanie.
+               Planowanie i monitorowanie zadań w MPWiK w zakresie gospodarki ściekowej
+               przebiegało prawidłowo, jednak nie umożliwiło podjęcia realizacji wszystkich
+               przedsięwzięć inwestycyjnych. Ograniczenia w możliwości uzyskania finansowania
+               dla każdego z przedsięwzięć spowodowały, że część zaplanowanych zadań zostało
+               przesuniętych do realizacji na kolejne lata lub wstrzymano się z ich realizacją.
+               W ocenie NIK Przedsiębiorstwo prawidłowo reagowało na zgłoszenia awarii sieci
+               kanalizacyjnej, a do naprawy przystępowano niezwłocznie. MPWiK przyjmowało do
+               Wrocławskiej Oczyszczalni Ścieków (dalej: WOŚ) nieczystości pochodzące z terenu
+               aglomeracji Wrocław3 oraz spoza tej aglomeracji. Pomimo to MPWiK nie prowadziło
+               ewidencji ilości tych ścieków w podziale na ich pochodzenie.
+               Oczyszczone ścieki komunalne były odprowadzane zgodnie z obowiązującymi
+               przepisami. Stan techniczny urządzeń technologicznych WOŚ zapewniał uzyskanie
+               parametrów odprowadzonych ścieków zgodnych z warunkami pozwolenia
+               wodnoprawnego. Powstałe w procesie oczyszczania komunalne osady ściekowe
+               (dalej: koś) zagospodarowano w sposób określony w pozwoleniu na wytwarzanie
+               odpadów.
+               W kontrolowanej działalności stwierdzono nieprawidłowości, polegające
+               w szczególności na tym, że: [1] nie przeprowadzano okresowych kontroli stanu
+               technicznego sieci kanalizacyjnej, o których mowa w art. 62 ust. 1 pkt 2 ustawy
+               z dnia 7 lipca 1994 r. Prawo budowlane4; [2] działanie stacji zlewnych nieczystości
+               ciekłych w zakresie przyjmowania i ewidencjonowania nieczystości ciekłych
+               naruszało przepisy rozporządzenia Ministra Infrastruktury z dnia 17 października
+               2002 r. w sprawie warunków wprowadzania nieczystości ciekłych do stacji
+               zlewnych5; [3] zlecenie badań komunalnych osadów ściekowych, w oparciu
+               o przyjęty harmonogram, nie zapewniało przeprowadzenia tych badań
+               z częstotliwością wymaganą przez przepisy rozporządzenia Ministra Środowiska
+               z dnia 6 lutego 2015 r. w sprawie komunalnych osadów ściekowych6; [4] nie
+               przeprowadzano okresowych kontroli stanu technicznego obiektów i urządzeń
+               technologicznych WOŚ z częstotliwością i w zakresie określonym w art. 62 ust. 1
+               pkt 2 i 3 Prawa budowlanego; [5] przekazano do Prezydenta Wrocławia nierzetelne
+               informacje z realizacji piątej aktualizacji Krajowego Programu Oczyszczania
+               Ścieków Komunalnych7 (dalej: AKPOŚK 2017).
+
+
+
+
+               2 Najwyższa Izba Kontroli formułuje ocenę ogólną jako ocenę pozytywną, ocenę negatywną albo ocenę w formie opisowej.
+               3 Uchwałą Nr IX/131/15 Sejmiku Województwa Dolnośląskiego z dnia 30 kwietnia 2015 r. w sprawie wyznaczenia aglomeracji
+
+               Wrocław wyznaczono aglomerację Wrocław w skład której wchodzi: miasto Wrocław oraz z terenu Gminy Czernica powiat
+               wrocławski, miejscowości: Dobrzykowice, Gajków, Jeszkowice, Kamieniec Wrocławski, Krzyków, Łany, Nadolice Małe,
+               Nadolice Wielkie; z terenu Gminy Kobierzyce powiat wrocławski, miejscowości: Bielany Wrocławskie, Biskupice Podgórne,
+               Tyniec Mały, Domasław, Ślęza, Wysoka; z terenu Gminy Miękinia powiat średzki, miejscowości: Miękina, Mrozów, Wojnowice,
+               Brzezina, Brzezinka Średzka, Wilkszyn, Pisarzowice, Krępice, Żurawiniec, Źródła, Błonie, Wróblowice, Lutynia, Gałów;
+               z terenu Gminy Siechnice powiat wrocławski, miejscowości: Radomierzyce, Iwiny, Żerniki Wrocławskie, Mokry Dwór; z terenu
+               Gminy Wisznia Mała powiat trzebnicki, miejscowości: Krzyżanowice, Szymanów, Psary i część Kryniczna (wyłącznie osiedle
+               Toya). Dalej: uchwała o wyznaczeniu aglomeracji.
+               4 Dz. U. z 2020 r. poz. 1333, ze zm. Dalej: Prawo budowlane.
+               5 Dz. U. z 2020 r. poz. 939. Dalej: rozporządzenie w sprawie wprowadzania nieczystości ciekłych do stacji zlewnych.
+               6 Dz. U. poz. 257. Dalej: rozporządzenie w sprawie koś.
+               7 Zatwierdzona przez Radę Ministrów w dniu 31 lipca 2017 r.
+
+
+                                                                          3
+               III. Opis ustalonego stanu faktycznego oraz oceny
+                    cząstkowe8 kontrolowanej działalności
+     OBSZAR
+               1. Planowanie,      monitorowanie,        koordynowanie
+                  i nadzorowanie realizacji zadań w zakresie gospodarki
+                  ściekowej
+               1.1 Planowanie gospodarki ściekowej
+  Opis stanu   MPWiK powstało w wyniku przekształcenia spółki pod firmą Miejskie
+faktycznego    Przedsiębiorstwo Wodociągów i Kanalizacji spółka z ograniczoną
+               odpowiedzialnością w spółkę pod firmą Miejskie Przedsiębiorstwo Wodociągów
+               i Kanalizacji Spółka Akcyjna na podstawie aktu notarialnego z dnia 22 czerwca
+               2011 r. (Repertorium A numer 7460/2011). W Krajowym Rejestrze Sądowym9
+               (numer 0000391028) jako jedynego akcjonariusza wskazano Gminę Wrocław. Jako
+               przedmiot przeważającej działalności wskazano pobór, uzdatnianie i dostarczanie
+               wody, a pozostałej m.in. odprowadzanie i oczyszczanie ścieków oraz obróbka
+               i usuwanie odpadów innych niż niebezpieczne.
+                                                                                               (akta kontroli str. 149 Tom I)
+               Długość sieci kanalizacyjnej zarządzanej przez Przedsiębiorstwo, zlokalizowanej
+               w aglomeracji Wrocław na dzień 31 grudnia 2018 r., wynosiła 1 228,6 km (w tym:
+               w Gminie Wrocław 1 226,3 km, w Gminie Miękinia 0,7 km, w Gminie Siechnice
+               1,6 km), na dzień 31 grudnia 2019 r. wynosiła 1 248,6 km (zwiększeniu o 20 km
+               uległa sieć zlokalizowana w Gminie Wrocław), a na dzień 30 września 2020 r.
+               1 256,5 km (zwiększeniu o 7,9 km uległa sieć zlokalizowana w Gminie Wrocław).
+               Długość sieci kanalizacyjnej będącej własnością Przedsiębiorstwa, zlokalizowanej
+               poza aglomeracją na dzień 31 grudnia 2018 r., wynosiła 6,4 km, a na dzień
+               31 grudnia 2019 r. 6,5 km i do dnia 30 września 2020 r. nie uległa zwiększeniu.
+               Odcinki sieci w Gminie Miękinia i Gminie Siechnice służyły do obsługi aglomeracji.
+               Tytuł prawny do sieci kanalizacyjnej jaki posiadało Przedsiębiorstwo to własność
+               oraz dzierżawa na podstawie umowy dzierżawy zawartej z Gminą Wrocław w dniu
+               10 grudnia 2015 r. Długość sieci kanalizacyjnej będącej przedmiotem dzierżawy
+               wynosi 142,796 km, co stanowi 11,31% całkowitej długości sieci zarządzanej przez
+               Przedsiębiorstwo.
+                                       (akta kontroli str. 7-8, 69-75 Tom I, 128-132, 142-239 Tom III, 197-199 Tom IV)
+               Według stanu na dzień 30 września 2020 r. Przedsiębiorstwo eksploatowało
+               i zarządzało 60 pompowniami ścieków, dwiema tłoczniami ścieków oraz jedną
+               oczyszczalnią ścieków. W okresie objętym kontrolą wybudowano cztery pompownie
+               ścieków (trzy w 2018 r., jedną w 2019 r.).
+               Poza aglomeracją, ale na terenie Gminy Wrocław, znajduje się pompownia
+               „Widawa”. Poza aglomeracją i poza obszarem Gminy Wrocław zlokalizowana jest
+               pompownia „Wilczyce”. Poza terenem miasta Wrocławia Przedsiębiorstwo zarządza
+               pompownią „Mokry Dwór”, która znajduje się w obrębie aglomeracji. MPWiK
+               zarządza wszystkimi wybudowanymi przez siebie lub Gminę Wrocław urządzeniami
+               kanalizacyjnymi na terenie miasta Wrocławia. Przedsiębiorstwo posiada prawo
+               własności do tych urządzeń, z wyłączeniem ośmiu pompowni10 ścieków, którymi
+               zarządza na podstawie umowy dzierżawy.
+
+               8 Oceny   cząstkowe to oceny działalności w poszczególnych obszarach badań kontrolnych. Ocena cząstkowa może być
+                  sformułowana jako ocena pozytywna, ocena negatywna albo ocena w formie opisowej.
+               9 Na dzień 30 września 2020 r.
+               10 O nazwie: Stabłowice I, Wojszyce, Stabłowice II, Złotniki I, Złotniki II, Złotniki III, Ołtaszyn, Brochów II.
+
+
+                                                                      4
+                   Z tytułu dzierżawy sieci i urządzeń kanalizacyjnych Przedsiębiorstwo w okresie
+                   objętym kontrolą poniosło koszty w wysokości 13 266,13 tys. zł.
+                   Menedżer Działu Inżynieryjnego wyjaśnił, że przepompownia ścieków w Wilczycach
+                   oraz odcinek sieci tłocznej o długości około 0,6 km, które zlokalizowane są poza
+                   aglomeracją, służą do przesyłu ścieków od mieszkańców osiedla mieszkaniowego
+                   znajdującego się poza obszarem aglomeracji na podstawie umowy świadczenia
+                   hurtowego odbioru ścieków. Sieć ta została wybudowana z uwagi na to, że obszar
+                   osiedla w zamierzeniach miał się charakteryzować znaczną liczbą osób
+                   zamieszkałych i wymagających podłączenia do systemu kanalizacyjnego. Ponadto
+                   poza aglomeracją, ale w granicach Gminy Wrocław, zlokalizowana jest pompownia
+                   ścieków Widawa wraz z odcinkiem sieci kanalizacyjnej o długości około 0,7 km.
+                   Urządzenie to i sieć kanalizacyjna służy do obsługi mieszkańców aglomeracji.
+                   Pozostałe odcinki sieci kanalizacyjnej, o łącznej długości około 5,2 km, które są
+                   zlokalizowane poza aglomeracją, służą do obsługi mieszkańców aglomeracji.
+                                             (akta kontroli str. 69-100, 106 Tom I, 142-239 Tom III, 137-146, 197-199 Tom IV)
+                   MPWiK posiadało cztery punkty zlewne nieczystości płynnych zlokalizowane na
+                   obszarze11 miasta Wocław, w tym jeden na terenie WOŚ.
+                   Menedżer Działu Inżynieryjnego MPWiK wyjaśnił, że stacja zlewna na terenie WOŚ
+                   nie stanowi osobnego budynku. Jest to instalacja zlokalizowana przy
+                   komorze rozdziału (A5) na wlocie do oczyszczalni. Stacja zlewna, zwana punktem
+                   zlewczym fekaliów, umożliwia dowożonym, ciekłym nieczystościom bytowym,
+                   grawitacyjny spływ do komory rozdziału (A5). W skład punktu zlewczego wchodzi
+                   wąż Dn110 z szybkozłączką wraz z instalacją wody wodociągowej. Punkt zlewczy
+                   fekaliów przyjmuje pojazdy asenizacyjne dostarczające ścieki bytowe z toalet
+                   przenośnych (dostawy o objętości kilku metrów sześciennych) i nie przyjmuje
+                   wozów asenizacyjnych.
+                                                                              (akta kontroli str. 69-74, 100 Tom I, 137-146 Tom IV)
+                   W badanym okresie Przedsiębiorstwo posiadało zezwolenie na prowadzenie
+                   zbiorowego zaopatrzenia w wodę i zbiorowego odprowadzania ścieków, o którym
+                   mowa w art. 16 ust. 1 ustawy z dnia 7 czerwca 2001 r. o zbiorowym zaopatrzeniu
+                   w wodę i zbiorowym odprowadzaniu ścieków12, wydane na czas nieokreślony13.
+                   Przedmiot i obszar działalności objętej niniejszym zezwoleniem stanowiła
+                   działalność gospodarcza polegająca na ujmowaniu, uzdatnianiu i zbiorowym
+                   dostarczaniu wody oraz zbiorowym odprowadzaniu i oczyszczaniu ścieków na
+                   terenie Gminy Wrocław, tj. w obszarze działania Przedsiębiorstwa.
+                                                                                                          (akta kontroli str. 9-15 Tom I)
+     Stwierdzone   W działalności kontrolowanej jednostki w przedstawionym wyżej zakresie nie
+nieprawidłowości   stwierdzono nieprawidłowości
+                   1.2 Planowanie realizacji przedsięwzięć w zakresie gospodarki
+                   ściekowej
+      Opis stanu   Przedsiębiorstwo, stosownie do art. 21 uzzw, opracowało Wieloletni Plan Rozwoju
+    faktycznego    i Modernizacji Urządzeń Wodociągowych i Urządzeń Kanalizacyjnych we Wrocławiu
+                   na lata 2018-2022 (dalej: Plan Wodno-Kanalizacyjny), który w dniu 29 listopada
+                   2017 r. przedłożyło Prezydentowi Wrocławia. Rada Miejska Wrocławia Uchwałą
+                   Nr XLIX/117/17 z dnia 21 grudnia 2017 r. przyjęła plan bez dokonania w nim zmian.
+
+
+                   11 Dwie przy ul. Janowskiej (w tym jedna na terenie WOŚ) oraz przy ul. Krakowskiej i Bora-Komorowskiego.
+                   12 Dz. U. z 2020 r. poz. 2028. Dalej: uzzw.
+                   13 Decyzja nr 7/02 Zarządu Miasta Wrocławia z dnia 22 października 2002 r.
+
+
+                                                                                5
+W okresie objętym kontrolą Przedsiębiorstwo nie przedkładało Prezydentowi
+Wrocławia aktualizacji ww. planu.
+Menedżer Działu Inżynieryjnego wyjaśnił, że Przedsiębiorstwo nie jest zobligowane
+do przedłożenia ww. dokumentu innym jednostkom i nie przedłożyło Planu
+pozostałym burmistrzom/wójtom wchodzącym w skład aglomeracji. W zakresie
+kooperacji z aglomeracyjnymi gminami ościennymi MPWiK praktykowało zawieranie
+porozumień ramowo wskazujących obszar objęty współpracą z zakresu odbioru
+ścieków/lub dostawy wody na rzecz danej gminy. Porozumienie to wskazywało
+również warunki niezbędne do zainicjowania owej współpracy (proces inwestycyjny),
+jak i ramowe warunki przyszłej współpracy handlowej.
+W porozumieniach tych określano wolę współpracy w obszarze dostaw wody
+i odprowadzania ścieków, a warunki tej współpracy określały umowy.
+Dane, w oparciu o które opracowano projekt Planu Wodno-Kanalizacyjnego były
+zgodne z danymi dotyczącymi aglomeracji zawartymi w uchwale o wyznaczeniu
+aglomeracji.
+                                                                               (akta kontroli str. 7-8, 36-74 Tom I)
+Plan Wodno-Kanalizacyjny obejmował 55 przedsięwzięć przedstawionych
+w grupach zadań w podziale na sfery działalności Przedsiębiorstwa, tj. ujmowanie
+wody surowej, produkcja wody, dystrybucja wody, odbiór ścieków oraz oczyszczanie
+ścieków. Tabelaryczne zestawienie zadań inwestycyjnych określało okres ich
+realizacji oraz planowany poziom nakładów finansowych.
+Jednocześnie plan ten uwzględniał 24 (z 35) przedsięwzięć ujętych w AKPOŚK
+2017 dla aglomeracji Wrocław. Planowane koszty, rozpoczęcie i zakończenie tych
+przedsięwzięć było rozbieżne z przewidzianymi w AKPOŚK 2017. Pozostałych
+przedsięwzięć nie ujęto w Planie Wodno-Kanalizacyjnym z uwagi na zakończenie
+realizacji zadań przed okresem uchwalenia Planu Wodno-Kanalizacyjnego
+(osiem przedsięwzięć) oraz brak możliwości realizacji zadań z uwagi na zależność
+i konieczność koordynowania ich z innymi jednostkami zewnętrznymi (Wrocławskie
+Inwestycje Sp. z o.o. i Zarząd Dróg i Utrzymania Miasta – trzy przedsięwzięcia). Na
+dzień 31 września 2016 r. aglomeracja Wrocław spełniała warunki dyrektywy
+91/271/EWG14 dotyczące jakości i wydajności oczyszczalni oraz zagwarantowała
+wyposażenie w sieć kanalizacyjną, co najmniej na poziomie 98% (wymaganego dla
+aglomeracji o RLM15 ≥ 100 000).
+Menedżer Działu Inżynieryjnego wyjaśnił, że rozbieżności w kosztach i terminach
+realizacji przedsięwzięć ujętych w AKPOŚK 2017, a przyjętych w Planie Wodno-
+Kanalizacyjnym, są podyktowane aktualizacją stanu realizacji inwestycji. Zadania
+przyjęte w AKPOŚK 2017 były wybierane na podstawie planów inwestycyjnych
+przyjętych na lata 2016-2020 lub w oparciu o wiedzę w zakresie przyszłych potrzeb
+inwestycyjnych. Plan Wodno-Kanalizacyjny natomiast stanowi odzwierciedlenie
+planów inwestycyjnych na lata 2018-2022. Uaktualnienie kosztów i terminów ujętych
+w ww. planie wynika m.in. z takich czynników jak: proces postępowań
+przetargowych, wyższe koszty inwestycyjne niż szacowano, wzrost kosztów
+(kosztorysy, wyniki przetargów, wzrost kosztów materiałów budowlanych), brak
+możliwości wnioskowania o dofinansowanie zewnętrzne, przedłużające się terminy
+uzyskiwania decyzji administracyjnych (np. decyzja środowiskowa) i uzgodnienia,
+weryfikacja i uaktualnienie zakresu rzeczowego, uzależnienie realizacji
+przedsięwzięć od jednostek zewnętrznych (zadania realizowane w koordynacji).
+                                                 (akta kontroli str. 36-74 Tom I, 328-334 Tom III, 137-146 Tom IV)
+
+14 Dz. Urz. WE L 135 z 30.05.1991 r., str. 40.
+15 Równoważna liczba mieszkańców – ładunek substancji organicznych biologicznie rozkładalnych, wyrażonych jako wskaźnik
+
+pięciodobowego zapotrzebowania tlenu (BZT) w ilości 60 gram tlenu na dobę.
+
+                                                              6
+                   W Planie Wodno-Kanalizacyjnym ujęto jedno zadanie, którego odcinek
+                   zlokalizowano poza obszarem aglomeracji, pn. Budowa sieci kanalizacyjnej na
+                   osiedlu Świniary, realizowane na terenie Gminy Wrocław. Zadanie przewiduje
+                   budowę sieci kanalizacji sanitarnej o łącznej długości 4,9 km i kanalizacji tłocznej
+                   o długości 2,5 km wraz z budową dwóch tłoczni ścieków, z czego 380 m sieci
+                   (w ul. Zajączkowskiej) przewidziano poza obszarem aglomeracji Wrocław. Odcinek
+                   ten będzie wykorzystywany do obsługi aglomeracji. Zadanie to finansowane było ze
+                   środków własnych Przedsiębiorstwa. W okresie objętym kontrolą na realizacje tego
+                   zadania poniesiono nakłady w wysokości 4 400 tys. zł.
+                                                                               (akta kontroli str. 328-334 Tom III)
+     Stwierdzone   W działalności kontrolowanej jednostki w przedstawionym wyżej zakresie nie
+nieprawidłowości   stwierdzono nieprawidłowości.
+                   1.3 Monitorowanie realizacji zadań w zakresie gospodarki
+                   ściekowej
+                   Przedsiębiorstwo nie prowadziło ewidencji ilości ścieków w podziale na
+                   odprowadzane systemem kanalizacji do oczyszczalni ścieków z terenu aglomeracji
+                   oraz odrębnie z terenu nieobjętego aglomeracją, a także dowożonych z terenu
+                   aglomeracji oraz odrębnie z terenu nieobjętego aglomeracją.
+                   MPWiK posiadało informację o łącznej ilości ścieków zebranych i poddanych
+                   oczyszczeniu oraz o ilości ścieków odprowadzanych systemem kanalizacji do
+                   oczyszczalni z terenu nieobjętego aglomeracją w poszczególnych latach okresu
+                   objętego kontrolą. Ilość ścieków odprowadzanych systemem kanalizacji z terenu
+                   nieobjętego aglomeracją określano na podstawie odczytów z przepływomierzy
+                   wygenerowanych z systemu bilingowego. Odczytów dokonywali pracownicy MPWiK
+                   i wprowadzali ręcznie do systemu bilingowego.
+                   Menedżer Działu Inżynieryjnego MPWiK wyjaśnił, że w ramach prowadzonej
+                   działalności i oczyszczania ścieków ewidencjonowanie ścieków w podziale na
+                   pochodzące z terenu aglomeracji i te spoza aglomeracji nie jest konieczne, ani
+                   istotne. Wskazał, że wartości danych, przygotowanych w tym zakresie na potrzeby
+                   kontroli, mogą być obarczone błędem ze względu na brak informacji mogących
+                   dokładnie wskazać miejsce pochodzenia ścieków. Z analizy posiadanych
+                   dokumentów oszacowano, że ilość ścieków pochodzących z terenów nieobjętych
+                   granicami aglomeracji stanowi około 0,1% ogólnej ilości przyjętych ścieków do
+                   oczyszczalni, co może być uznane nawet jako błąd pomiarowy. Dalej wskazał, że
+                   ilość ścieków z terenów aglomeracji została wyliczona z różnicy ścieków ogółem
+                   przyjętych na oczyszczalnię (dane z przepływomierza) i ścieków pochodzących
+                   z terenów nieobjętych granicami aglomeracji (dane z faktur wystawionych na
+                   podstawie odczytów z przepływomierzy dla gmin nieobjętych terenem aglomeracji).
+                   Dowodem na ilość ścieków dowożonych do stacji zlewnych były raporty z ilości
+                   ścieków przepompowanych i odprowadzanych na oczyszczalnię. W dotychczas
+                   opracowywanych zestawieniach statystycznych nie ujmowano i nie prowadzono
+                   ewidencji miejsc, z których ścieki były przywożone.
+                                                   (akta kontroli str. 69-79, 107-108 Tom I, 128-133, 136 Tom III)
+                   W ramach gospodarki ściekowej MPWiK, w okresie objętym kontrolą, realizowało
+                   zadania: [1] obejmujące rozbudowę Wrocławskiej Oczyszczalni Ścieków (jedno
+                   przedsięwzięcie), [2] poprawiające efektywność działania WOŚ (sześć
+                   przedsięwzięć), [3] modernizujące sieć i obiekty kanalizacyjne (dziewięć
+                   przedsięwzięć), [4] rozbudowujące system kanalizacyjny (43 przedsięwzięcia),
+                   [5] polegające na budowie systemu retencji na sieci kanalizacyjnej (dwa
+                   przedsięwzięcia).
+
+                                                             7
+Szczegółowym badaniem objęto sześć przedsięwzięć16. Analiza umów
+o dofinansowanie, umów na realizację oraz harmonogramów rzeczowych
+i finansowych wykazała opóźnienie w realizacji dwóch przedsięwzięć. Umowę na
+wykonanie analizy techniczno-ekonomicznej, dokumentacji projektowej, specyfikacji
+technicznych wykonania i odbioru robót budowlanych oraz kosztorysu
+inwestorskiego dla zadania „Rozbudowa Wrocławskiej Oczyszczalni Ścieków”
+podpisano z opóźnieniem 400 dni względem terminu realizacji tego przedsięwzięcia
+określonym w AKPOŚK 2017. Planowana data zakończenia realizacji
+przedsięwzięcia to 30 kwietnia 2022 r.
+Dyrektor Centrum Nowych Technologii i Inwestycji wyjaśnił, że przygotowanie opisu
+przedmiotu zamówienia rozpoczęło się w 2016 r. zgodnie z planem. Jednak
+opracowanie tak obszernego materiału i potem przeprowadzenie przetargu
+spowodowało, że umowę na wykonanie analizy techniczno-ekonomicznej i Projektu
+rozbudowy WOŚ podpisano w połowie 2017 r.
+Opóźnienie stwierdzono również w inwestycji dotyczącej przebudowy kanalizacji
+sanitarnej w ul. Osobowickiej. Inwestycja realizowana wspólnie z Gminą Wrocław
+w imieniu i na rzecz której działają Wrocławskie Inwestycje Sp. z o.o. obejmowała
+wykonanie robót budowlanych związanych z rozbudową ul. Osobowickiej (droga
+wojewódzka nr 327), a także budowy kanalizacji sanitarnej i sieci wodociągowej
+wraz z nawierzchnią drogową w drodze wewnętrznej. Pomimo rozpoczęcia
+inwestycji z wyprzedzeniem, jej ukończenie zaplanowano na 30 kwietnia 2021 r.,
+tj. 486 dni później względem daty zakończenia realizacji przedsięwzięcia określonej
+w AKPOŚK 2017. Rozpoczęcie robót budowlanych obejmujących rozbudowę sieci
+kanalizacyjnej możliwe było po rozpoczęciu/wykonaniu zakresu prac związanych
+z rozbudową drogi.
+Dyrektor Centrum Nowych Technologii i Inwestycji jako przyczynę opóźnienia
+wskazał zmianę terminu realizacji przez Wrocławskie Inwestycje Sp. z o.o.
+                                                                                  (akta kontroli str. 190-463 Tom V)
+Przedsiębiorstwo przekazało do Wydziału Środowiska i Rolnictwa Urzędu
+Miejskiego Wrocławia (dalej: WŚiR UM) dane wymagane do sporządzenia
+sprawozdania z realizacji Krajowego Programu Oczyszczania Ścieków
+Komunalnych (dalej: KPOŚK), w czasie umożliwiającym Gminie terminowe
+sporządzenie tego sprawozdania17. Sprawozdanie, wypełnione w zakresie informacji
+będących w posiadaniu Przedsiębiorstwa, za 2018 r. przekazano w dniu 17 stycznia
+2019 r., a za 2019 r. w dniu 11 lutego 2020 r.
+Przekazane przez MPWiK dane podlegały wyjaśnieniom i korekcie. W dniu
+19 lutego 2019 r. WŚiR UM, w związku z otrzymaniem (drogą e-mailową)
+z Regionalnego Zarządu Gospodarki Wodnej we Wrocławiu uwag do sprawozdania,
+wystąpił do MPWiK (drogą e-mailową) o wyjaśnienie przekazanych w sprawozdaniu
+za 2018 r. danych. W prowadzonej z WŚiR UM korespondencji e-mailowej,
+Przedsiębiorstwo dokonało sprostowań i wyjaśnień, w wyniku których sporządzono
+korektę sprawozdania z KPOŚK za 2018 r., przekazaną do WŚiR UM w dniu
+27 lutego 2019 r. Korekta dotyczyła m.in. długości zmodernizowanej sieci
+kanalizacyjnej oraz kosztów poniesionych na modernizację sieci. W przypadku
+danych za 2019 r. wyjaśnieniom podlegała wysokość kosztów poniesionych na
+modernizację sieci kanalizacyjnej.
+
+16 [1] Rozbudowa Wrocławskiej Oczyszczalni Ścieków; [2] Modernizacja układu transportu osadu wysuszonego na WOŚ;
+
+[3] Przebudowa sieci kanalizacyjnej w ul. Osobowickiej; [4] Budowa sieci kanalizacji na osiedlu Świniary; [5] Budowa
+kanalizacji sanitarnej w ul. Warciańskiej i ul. Noteckiej; [6] Opomiarowanie i sterowanie pracą przelewów burzowych.
+17 Zgodnie z art. 89 ustawy z dnia 20 lipca 2017 r. Prawo wodne (Dz. U. z 2020 r. poz. 310, ze zm.) gminy mają obowiązek
+
+przedkładać Państwowemu Gospodarstwu Wodnemu Wody Polskie, corocznie sprawozdanie z realizacji krajowego programu
+oczyszczania ścieków komunalnych za rok ubiegły – za 2018 r. do 31 stycznia 2019 r., a za 2019 r. do dnia 28 lutego 2020 r.
+
+                                                            8
+                   Analiza ostatecznych (skorygowanych) danych dotyczących realizacji KPOŚK
+                   przekazanych przez MPWiK do WŚiR wykazała, że nie były one w pełni zgodne
+                   z ustalonym w toku kontroli NIK stanem faktycznym, co zostało szerzej opisane
+                   w sekcji Stwierdzone nieprawidłowości.
+                   Menedżer Działu Inżynieryjnego wyjaśnił, że w okresie objętym kontrolą MPWiK nie
+                   było kontrolowane przez Prezydenta Wrocławia w zakresie zbiorowego
+                   odprowadzania ścieków i związanych z tym zagadnień finansowych.
+                                                        (akta kontroli str. 69-74, 109-148 Tom I, 371-372 Tom III)
+     Stwierdzone   W działalności kontrolowanej jednostki w przedstawionym wyżej zakresie
+nieprawidłowości   stwierdzono następującą nieprawidłowość:
+                   Przedsiębiorstwo przekazało Prezydentowi Wrocławia niezgodne ze stanem
+                   faktycznym dane, na podstawie których Prezydent sporządził sprawozdania
+                   z realizacji KPOŚK.
+                   Przekazane za lata 2018-2019 informacje o długości sieci kanalizacyjnej ogółem
+                   (sanitarnej i ogólnospławnej), oddanej do użytku kolejno w 2018 r. i 2019 r. oraz
+                   ilości ścieków komunalnych powstających w aglomeracji Wrocław były rozbieżne
+                   z danymi uzyskanymi w toku kontroli NIK. I tak: [1] całkowita długość sieci
+                   kanalizacyjnej uwzględniła odcinki sieci leżącej poza obszarem aglomeracji Wrocław
+                   o łącznej długości 6,4 km w informacji za 2018 r. i o długości 6,5 km w informacji za
+                   2019 r.; [2] podana długość sieci wybudowanej i odebranej w roku sprawozdawczym
+                   w informacji za 2018 r. była mniejsza o 8,15 km, a w informacji za 2019 r. większa
+                   o 7,83 km; [3] ilość ścieków powstających w aglomeracji Wrocław ogółem
+                   (w zakresie ilości oczyszczonych we Wrocławskiej Oczyszczalni Ścieków)
+                   uwzględniała ścieki spoza aglomeracji dostarczane siecią kanalizacyjną oraz
+                   dowożone do stacji zlewnych.
+                   Prezes Zarządu MPWiK wyjaśnił, że długość sieci poza granicami aglomeracji
+                   wykorzystywana do obsługi mieszkańców aglomeracji wynosiła w 2018 r. 5,8 km
+                   oraz 5,9 km w 2019 r., co stanowiło 0,5% długości sieci ogółem. Ponadto w długości
+                   sieci kanalizacyjnej wykazywanej w sprawozdaniu ujmuje się dodatkowo odcinek
+                   ok. 0,6 km, służący do obsługi osiedla graniczącego z obszarem aglomeracji.
+                   Obszar ten spełnia kryterium wskaźnika koncentracji przy wyznaczaniu aglomeracji,
+                   a udział tego odcinka w sieci ogółem wynosi 0,05%. Są to dane o marginalnym
+                   znaczeniu dla wartości sprawozdawczej na poziomie odstępstwa rzędu 0,5%.
+                   W sprawozdaniu nie wyodrębniono ścieków pochodzących spoza aglomeracji
+                   dostarczanych siecią kanalizacyjną w ilości 20 000 m³/rok, tj. około 0,04% ścieków
+                   ogółem oraz dowożonych do stacji zlewnych, których ilość szacuje się na 0,1%
+                   ścieków ogółem. Biorąc pod uwagę udział tych ścieków ogółem wartości te
+                   traktowane były jako nieistotne statystycznie.
+                   Ponadto Prezes Zarządu MPWiK wskazał, że zgodnie z wcześniejszymi
+                   wyjaśnieniami dane w zakresie długości sieci kanalizacyjnej wybudowanej
+                   i odebranej w danym roku sprawozdawczym podawane są zgodnie ze stanem
+                   aktualnym na dzień sporządzenia sprawozdania. W związku z tym, że proces
+                   gromadzenia danych o długościach sieci wybudowanych i odebranych wykracza
+                   poza termin w jakim należy sporządzić sprawozdanie KPOŚK, mogą powstać
+                   tymczasowe rozbieżności w danych. Aby zachować pełen obraz sprawozdawczy,
+                   informacja w zakresie sieci wybudowanej w poprzednim roku, a nieuwzględnionej
+                   w sprawozdaniu, podawana jest w kolejnym okresie sprawozdawczym łącznie
+                   z długością sieci aktualną dla danego roku sprawozdawczego. Podawane wartości
+                   nie były zatem podawane w sposób nierzetelny, a przy przyjętych założeniach, które
+                   nie wpływają w sposób istotny na informację sprawozdawczą, pozwalając na
+
+
+                                                             9
+                    zachowanie istoty skali rozwoju i funkcjonowania aglomeracji oraz wypełnienia
+                    wymogów KPOŚK.
+                    NIK wskazuje, że skala odstępstwa nie ma znaczenia dla sformułowania
+                    nieprawidłowości. Przedsiębiorstwo posiadało zakres informacji i zasoby
+                    umożliwiające rzetelne przedstawienie tych danych, tym bardziej, że na potrzeby
+                    kontroli NIK zostały one przygotowane z należytą starannością.
+                                                                 (akta kontroli str. 69-79, 101-105, 110-148 Tom I, 26-37 Tom VII)
+OCENA CZĄSTKOWA     Przedsiębiorstwo w prawidłowy sposób planowało realizację przedsięwzięć
+                    w zakresie gospodarki ściekowej. Przedłożyło Prezydentowi Wrocławia wieloletni
+                    plan rozwoju i modernizacji urządzeń wodociągowych i urządzeń kanalizacyjnych.
+                    Niewystarczające środki finansowe spowodowały, że realizacja części zadań została
+                    przesunięta na kolejne lata lub wstrzymana. MPWiK nie posiadało danych o ilości
+                    ścieków dowożonych z terenu nieobjętego aglomeracją. To z kolei przekładało się
+                    na nierzetelną sprawozdawczość z realizacji AKPOŚK 2017.
+
+         OBSZAR
+                    2. Zbieranie ścieków komunalnych
+                    2.1 Zbieranie ścieków komunalnych
+       Opis stanu   Liczba mieszkańców obszaru objętego działalnością Przedsiębiorstwa (tj. miasto
+     faktycznego    Wrocław) wynosiła na dzień 31 grudnia 2018 r. – 603 189 mieszkańców18, na dzień
+                    31 grudnia 2019 r. – 604 139 mieszkańców, a na dzień 30 września 2020 r. –
+                    603 370 mieszkańców. Według stanu na dzień 31 grudnia 2018 r. z sieci
+                    kanalizacyjnej korzystało 594 718 mieszkańców (tj. 98,6% ogółu mieszkańców),
+                    z przydomowych oczyszczalni ścieków 533 mieszkańców (tj. 0,1% ogółu
+                    mieszkańców), a ze zbiorników bezodpływowych korzystało 7 938 mieszkańców,
+                    (tj. 1,3% ogółu mieszkańców). Na dzień 31 grudnia 2019 r. z sieci kanalizacyjnej
+                    korzystało 594 602 mieszkańców (tj. 98,4% ogółu mieszkańców), z przydomowych
+                    oczyszczalni ścieków 544 mieszkańców (tj. 0,1% ogółu mieszkańców), a ze
+                    zbiorników bezodpływowych 8 993 mieszkańców (tj. 1,5% ogółu mieszkańców).
+                    Na dzień 30 września 2020 r. z sieci kanalizacyjnej korzystało 593 396
+                    mieszkańców (tj. 98,3% ogółu mieszkańców), z przydomowych oczyszczalni
+                    ścieków 553 mieszkańców (tj. 0,1% ogółu mieszkańców), a ze zbiorników
+                    bezodpływowych 9 248 mieszkańców (tj. 1,5% ogółu mieszkańców).
+                    Menedżer Działu Inżynieryjnego MPWiK wyjaśnił, że źródłem tych informacji są
+                    dane przekazane MPWiK przez WŚiR UM. Ponadto wskazał, że Przedsiębiorstwo
+                    nie występowało do Prezydenta Wrocławia, nadzorującego obowiązek przyłączenia
+                    nieruchomości do sieci, z wnioskiem o podjęcie działań w celu zapewnienia
+                    podłączenia do istniejącej sieci kanalizacyjnej wszystkich nieruchomości.
+                                                                                         (akta kontroli str. 150-154, 230-231 Tom I)
+                    MPWiK świadczyło usługi hurtowego odbioru ścieków pochodzących z gmin
+                    ościennych, tj. miejscowości i obszaru wchodzącego w skład aglomeracji Wrocław.
+                    Odbiór ścieków odbywał się w oparciu o umowy hurtowego odbioru. Umowy
+                    zawierano z przedsiębiorstwem świadczącym usługi zbiorowego zaopatrzenia
+                    w wodę i zbiorowego odprowadzania ścieków działającym na terenie gminy,
+                    tj.: Zakładem Gospodarki Komunalnej Czernica19 działającym na terenie Gminy
+                    Czernica, Kobierzyckim Przedsiębiorstwem Wodociągów i Kanalizacji Sp. z o.o.20
+                    działającym na terenie Gminy Kobierzyce, Zakładem Usług Komunalnych
+
+
+                    18 Zameldowanych na pobyt stały i czasowy.
+                    19 Umowa nr 025816/0002/2014 o odprowadzanie ścieków z dnia 27 listopada 2014 r.
+                    20 Umowa nr 033458/FOU02/2016 o odprowadzanie ścieków z dnia 1 kwietnia 2016 r.
+
+
+                                                                              10
+Sp. z o.o.21 działającym na terenie Gminy Miękinia, Zakładem Gospodarki
+Komunalnej Sp. z o. o.22 działającym na terenie Gminy Siechnice oraz
+Przedsiębiorstwem Gospodarki Komunalnej Sp. z o.o. w Wiszni Małej23 działającym
+na terenie Gminy Wisznia Mała.
+W toku kontroli NIK ustalono, że Przedsiębiorstwo zawarło dwie umowy na odbiór
+ścieków spoza aglomeracji. Umowę z Zakładem Gospodarki Komunalnej Sp. z o.o.
+(dalej: ZGK) będącym wykonawcą statutowego obowiązku Gminy Kąty Wrocławskie
+w zakresie zaopatrzenia w wodę i odprowadzania ścieków, zawarto w dniu
+12 kwietnia 2019 r. Umowę zawarto z uwagi na fakt, że zasoby własne ZGK, tak
+infrastrukturalne, jak i technologiczne, były niewystarczające do realizacji ww.
+obowiązku. Odbiór ścieków z Gminy Kąty Wrocławskie odbywał się za
+pośrednictwem rurociągu tłocznego i zainstalowanej w nim infrastruktury technicznej
+stanowiącej własność ZGK.
+Drugą umowę MPWiK zawarło w dniu 20 grudnia 2013 r. z BNM – 1 spółką
+z ograniczoną odpowiedzialnością z siedzibą we Wrocławiu na odbiór ścieków
+z systemu kanalizacji sanitarnej firmy BNM – 1 (os. mieszkaniowe w Wilczycach,
+gm. Długołęka). Ścieki odbierane były przy użyciu urządzenia kanalizacyjnego
+(tłocznia Wilczyce) oraz odcinka sieci kanalizacyjnej zlokalizowanych na obszarze
+Gminy Długołęka i stanowiących własność Przedsiębiorstwa.
+                                                             (akta kontroli str. 137-146 Tom IV, 109-139 Tom V)
+Umowy na świadczenie odbioru nieczystości ciekłych bytowych z wozów
+asenizacyjnych, dowożonych do stacji zlewnych, zawierane były z przedsiębiorcami
+działającymi na terenie miasta Wrocławia i okolicznych miejscowości, w tym
+leżących poza aglomeracją. W siedmiu umowach nie określono miesięcznej
+objętości dowożonych do stacji zlewnych nieczystości ciekłych, co stanowiło
+naruszenie rozporządzenia w sprawie warunków wprowadzania nieczystości
+ciekłych do stacji zlewnych, a każdorazowe przyjęcie nieczystości nie było
+potwierdzane pełnymi danymi określonymi w załączniku nr 1 do ww.
+rozporządzenia. Stwierdzono również, że stacja zlewna (punkt zlewczy fekaliów)
+zlokalizowana na WOŚ nie zapewniała pomiaru dowożonych nieczystości ciekłych,
+co naruszało § 3 pkt 1 tego rozporządzenia. Szerszy opis nieprawidłowości zawarto
+w sekcji Stwierdzone nieprawidłowości.
+                                                                                      (akta kontroli str. 246 Tom VII)
+MPWiK prowadziło ewidencję awarii sieci kanalizacyjnej w formie elektronicznej.
+Działania eksploatacyjne i naprawcze służb MPWiK rejestrowane były
+w elektronicznej bazie danych SONET24, która stanowi element przestrzennej bazy
+danych GIS25 w Przedsiębiorstwie. W badanym okresie doszło łącznie do 262 awarii
+sieci kanalizacyjnej (sanitarnej i ogólnospławnej), w tym w 2018 r. – 107, w 2019 r. –
+72, w 2020 r. (do 30 września) – 83. Były one związane z nieszczelnością
+
+21 Umowa nr 022737/FOU02/2013 o odprowadzanie ścieków z dnia 23 grudnia 2013 r.
+22 Umowa nr 1311/RKU02/2008 o odprowadzanie ścieków z dnia 14 sierpnia 2008 r.
+23 Umowa hurtowego odbioru ścieków nr 051075/KOO02/2020 z dnia 31 grudnia 2020 r.
+24 SONET stanowi element przestrzennej bazy danych GIS w Przedsiębiorstwie – aplikacją służąca m.in. do przeglądania
+
+i edycji systemu GIS (System Informacji Geograficznej) oraz rejestracji danych o działaniach eksploatacyjnych i naprawczych
+służb MPWiK. Poprzez aplikację SONET następuje uzupełnianie bazy danych GIS, wprowadzenie informacji o czynnościach
+wykonanych w ramach prac eksploatacyjnych, wraz z rejestrowaniem dokładnych godzin, podpinaniem multimediów
+i fotografii. Służy on także do raportowania informacji z bazy danych GIS.
+25 System GIS został wdrożony w Przedsiębiorstwie w 2011 r. Jest wykorzystywany do gromadzenia, przetwarzania,
+
+wizualizacji oraz analizowania informacji o infrastrukturze wodociągowo-kanalizacyjnej. System GIS wykorzystuje dane
+zawarte w relacyjnej bazie danych ORACLE, na które składają się tabele i warstwy integrujące dane opisowe i geograficzne.
+Podstawowym efektem gromadzenia danych w przestrzennej bazie jest możliwość zaprezentowania ich w postaci mapy. Baza
+GIS zawiera wiele zbiorów danych, z czego najważniejsze to: odcinki sieci wodociągowej, odcinki sieci kanalizacyjnej
+(sanitarnej, ogólnospławnej i deszczowej), rowy, punktowe obiekty i urządzenia wodociągowe (hydranty, armatura
+zamykająco-regulująca, węzły, studzienki), punktowe obiekty i urządzenia kanalizacyjne (studnie, armatura kanalizacyjna,
+węzły), obiekty i działki będące w Zarządzie Przedsiębiorstwa.
+
+                                                            11
+przewodów kanalizacyjnych, obniżeniem nośności konstrukcji rurociągów
+spowodowanych zapadnięciem się jezdni lub chodnika, nieprawidłowym
+przepływem ścieków czy zatorem na przyłączach. Awarie te nie powodowały
+skutków w zakresie ciągłości odbioru ścieków.
+Menedżer Działu Inżynieryjnego MPWiK wyjaśnił, że Przedsiębiorstwo na bieżąco
+kontroluje stan sieci kanalizacyjnych będących w jego zarządzie, badając ich
+drożność oraz stan techniczny. Oprócz tego MPWiK przeprowadza kontrole
+doraźne, każdorazowo w przypadku zgłoszenia awarii bądź stwierdzenia
+niedrożności na odcinku sieci, będącej w jego zarządzie. W razie konieczności
+podejmowane są czynności dla uzyskania ponownego udrożnienia sieci. Kontrola
+stanu technicznego kanalizacji wykonywana jest przy użyciu samojezdnych lub
+ręcznych kamer do inspekcji TV kanalizacji. W przypadku wykrycia uszkodzeń
+mogących powodować nieprawidłową pracę kanału lub uszkodzeń mechanicznych
+mogących prowadzić do uszkodzeń przewodu, przeprowadzana jest analiza
+dotycząca sposobu naprawy uszkodzonego odcinka. Główną przyczyną pojawienia
+się stanów awaryjnych w kanalizacji jest wiek kanalizacji, gruntowe warunki pracy
+kanału, obciążenie ruchem kołowym kanału, historyczne zastosowanie materiałów
+(przewodów) niedostosowanych do zmieniających się z czasem parametrów
+ścieków (korozja betonu), uszkodzenia mechaniczne kanałów przez podmioty
+zewnętrzne (uszkodzenie kanałów poprzez przewiert sterowany lub przecisk),
+przerastanie nieszczelnych złącz przez korzenie, nienormatywne spadki kanalizacji
+uniemożliwiające samooczyszczenie się kanalizacji, historyczne błędy
+w projektowaniu i wykonawstwie. W przypadku wykrycia stanów awaryjnych
+pracownicy MPWiK przeprowadzają szczegółową analizę sposobu naprawy
+uszkodzenia. W zależności od zakresu i charakteru stanów awaryjnych odcinki sieci
+poddawane są naprawom punktowym, liniowym bądź odcinki zostają wytypowane
+do przebudowy w ramach zadań inwestycyjnych lub remontów w ramach zadań
+remontowych.
+                                              (akta kontroli str. 150-160 Tom I, 3-8 Tom IV)
+W trakcie awarii skutkujących koniecznością wyłączenia z ruchu odcinka sieci
+kanalizacyjnej ścieki były przesyłane do oczyszczalni ścieków. W zależności od
+miejsca wystąpienia awarii ścieki były kierowane by-passem lub przewożone
+wozami asenizacyjnymi do najbliższego punktu odbioru (zlewnia lub studzienka
+kanalizacyjna). Niemniej jednak w okresie objętym kontrolą doszło do pięciu awarii
+(uszkodzeń) skutkujących wyłączeniem z ruchu odcinka sieci kanalizacyjnej
+i odprowadzeniem (wyciekiem) nieoczyszczonych ścieków do rzeki lub gruntów.
+I tak w 2019 r. doszło do awarii: rurociągu tłocznego przy ul. Fieldorfa skutkującej
+zrzutem 50 m³ ścieków do gruntu, kanalizacji sanitarnej (dwa miejsca) skutkującej
+zrzutem ścieków do kanalizacji deszczowej i dalej wylotem w ul. Czeskiej do Odry
+(nie oszacowano ilości nieoczyszczonych ścieków, które trafiły do środowiska) oraz
+awarii syfonu kanału ogólnospławnego pod rzeką Odrą na wysokości Mostów
+Mieszczańskich skutkującej zrzutem 280 m³ ścieków do rzeki. W 2020 r. awarii uległ
+rurociąg tłoczny z pompowni Brochów II przy ul. Sygnałowej, co skutkowało zrzutem
+150 m³ ścieków do gruntu oraz rurociąg tłoczny z pompowni Sołtysowice przy
+ul. Lekcyjnej skutkującej zrzutem 50 m³ ścieków do gruntu. Do rozpoznania awarii
+przystępowano niezwłocznie po otrzymaniu zgłoszenia. W jednym przypadku awarię
+usunięto tego samego dnia (przy ul. Sygnałowej), w dwóch innych – dzień po
+otrzymaniu zgłoszenia (przy ul. Fieldorfa, ul. Lekcyjnej oraz na wysokości Mostów
+Mieszczańskich – położenie by-passa i wyłączenie uszkodzonego syfonu pod
+rzeką). Przy ul. Czeskiej zlokalizowano dwie awarie. Jedną z nich usunięto po
+14 dniach od otrzymania zgłoszenia, a miejsce drugiej zabezpieczono.
+
+
+                                         12
+Menedżer Działu Inżynieryjnego wyjaśnił, że w przypadku awarii przy ul. Czeskiej
+nie oszacowano ilości ścieków nieoczyszczonych, które trafiły do środowiska,
+ponieważ wypływ ścieków sanitarnych w kanalizacji deszczowej był związany
+z uszkodzeniem przewodu kanalizacji sanitarnej. Ze względu na charakter
+uszkodzenia i niewielkie ilości ścieków niemożliwe było rzetelne oszacowanie ilości
+ścieków, które przedostały się do kanalizacji deszczowej. Uszkodzona była rura
+kanalizacji sanitarnej przechodząca przez kanał deszczowy.
+                                                         (akta kontroli str. 150-154, 236-245 Tom I, 3-8 Tom IV)
+Przedsiębiorstwo poddawało okresowym kontrolom stanu technicznego, o których
+mowa w art. 62 ust. 1 pkt 1 i 2 Prawa budowlanego, urządzenia kanalizacyjne
+i stacje zlewne zlokalizowane poza terenem WOŚ. Nie przeprowadzało kontroli
+bezpiecznego ich użytkowania, gdyż nie wystąpiły okoliczności, o których mowa
+w art. 61 pkt 2 ww. ustawy, tj. wyładowania atmosferyczne, silne wiatry, intensywne
+opady atmosferyczne, osuwiska w wyniku których mogło dojść do uszkodzenia tych
+urządzeń.
+MPWiK nie przeprowadzało okresowej kontroli stanu technicznego i przydatności do
+użytkowania sieci kanalizacyjnej, co zostało szerzej opisane w sekcji Stwierdzone
+nieprawidłowości.
+Szczegółowym badaniem w zakresie sprawowania przez Przedsiębiorstwo nadzoru
+nad stanem utrzymania obiektów budowlanych objęto wszystkie (trzy) stacje zlewne
+oraz sześć przepompowni ścieków26. Analiza protokołów okresowych kontroli
+wykazała, że stan techniczny poszczególnych elementów urządzeń kanalizacyjnych
+był dobry (stopień zużycia do 15%) lub zadowalający (stopień zużycia od 16% do
+30%). Zalecenia pokontrolne dotyczyły bieżącej konserwacji, uszkodzeń rynny oraz
+rury spustowej, a także drobnych ubytków powłoki tynkarskiej, złuszczenia powłoki
+malarskiej i korozji drzwi do rozdzielni. W wyniku przeprowadzonych przeglądów
+obiektów nie stwierdzono istotnych nieprawidłowości mogących spowodować
+zagrożenie bezpieczeństwa użytkownika. Obiekty mogły być eksploatowane.
+                                                                     (akta kontroli str.150-154 Tom I, 246 Tom VII)
+W badanym okresie MPWiK wykonało 330 remontów eksploatacyjnych elementów
+sieci kanalizacyjnej, które zostały wykonane metodą rozkopową. Prace te polegały
+na wymianie uszkodzonego/niesprawnego elementu sieci kanalizacyjnej lub
+wymianie podlegał uszkodzony odcinek sieci kanalizacyjnej wytypowany podczas
+kontroli do wymiany. Renowacją długim rękawem objęto sieć kanalizacyjną na
+długości 7,9 km na odcinkach sieci kanalizacyjnej, wytypowanych podczas kontroli
+do renowacji metodą bezrozkopową.
+Prace remontowe stacji zlewnych, w związku z zaleceniami okresowych kontroli,
+były realizowane na zlewni Pracze Odrzańskie i zlewni Ciążyn. Prace remontowe
+w zlewni Pracze Odrzańskie obejmowały zabezpieczenie korozyjne opaski przy
+kominie oraz oznakowanie i naprawę progu w związku z wymianą drzwi
+wejściowych na obiekt. W zlewni Ciążyn wykonana została konserwacja rury
+spustowej i rynny siłami własnymi pracowników MPWiK.
+                                                                                     (akta kontroli str. 68-89 Tom VII)
+W okresie od 1 stycznia 2018 r. do 30 września 2020 r. do MPWiK wpłynęło 6 063
+wniosków o wydanie warunków przyłączenia do sieci kanalizacyjnej (w 2018 r. –
+
+26 Przepompownia ścieków BTL – komora pomiarów i zasuw, która obsługuje około 0,25 km zakładowej instalacji
+kanalizacyjnej służącej obsłudze budynku; Budynek hala krat i piaskowników przepompownia „Stary Port” i Przepompownia
+ścieków Port Północny obsługujące zakres zlewni sieci grawitacyjnej, w której długość sieci kanalizacyjnej wynosi około 90 km;
+Przepompownia ścieków „Sępolno” obsługująca zlewnię grawitacyjną, w której długość sieci kanalizacyjnej wynosi około
+27 km; Przepompownia ścieków przy ul. Długiej obsługująca zlewnię grawitacyjną, w której długość sieci kanalizacyjnej wynosi
+około 324 km oraz Przepompownia ścieków „Mokry Dwór”, która obsługuje około 5,8 km zakładowej instalacji kanalizacyjnej.
+
+                                                             13
+                   2 288, w 2019 r. – 2 109, a w 2020 r. – 1 666). Zgodnie z Regulaminem
+                   dostarczania wody i odprowadzania ścieków na obszarze Wrocławia27 (dalej:
+                   Regulamin) proces przyłączenia do sieci wodociągowej i sieci kanalizacyjnej składał
+                   się z trzech etapów, tj.: uzyskania warunków podłączenia do sieci, uzgodnienia
+                   dokumentacji technicznej oraz złożenia wniosku o przyłączenie do sieci. Według
+                   stanu na dzień 30 września 2020 r. dla 5 334 wniosków wydano warunki
+                   przyłączenia (rozpatrzono je pozytywnie), a wobec 1 262 nieruchomości
+                   zakończono proces przyłączenia (zawarto umowę na odprowadzanie ścieków).
+                   Menedżer Działu Inżynieryjnego MPWiK wyjaśnił, że o wydanie warunków
+                   technicznych przyłączenia może wystąpić każdy podmiot, niekoniecznie będący
+                   właścicielem (np. w celu oceny czy warto kupić nieruchomość). Ponadto podmiot
+                   może wystąpić kilkukrotnie o te warunki, np. z uwagi na zmianę swoich planów
+                   inwestycyjnych. Jednocześnie wnioski o wydanie warunków przyłączenia składane
+                   są bardzo często na działki, gdzie nie ma nadanych numerów porządkowych,
+                   a czasem i nazw ulic, natomiast umowa zawierana jest z uwzględnieniem nazwy
+                   ulicy i numeru porządkowego. Stąd też bezpośrednie porównanie liczby złożonych
+                   wniosków z liczbą później zawartych umów nie jest miarodajne. Ustalenie faktycznej
+                   liczby umów zawartych z wybranej puli wniosków złożonych w 2018 r., 2019 r.
+                   i 2020 r. wymagałoby ręcznego sprawdzania w odniesieniu do map (weryfikacja
+                   numerów działek, które także ulegają podziałom) i wykazu umów zawartych dla
+                   zmienionych nazw.
+                   MPWiK odmawiało wydania warunków przyłączenia do sieci kanalizacyjnej
+                   w przypadku braku technicznych możliwości świadczenia usług z uwagi na brak
+                   infrastruktury kanalizacyjnej w pobliżu nieruchomości oraz lokalizacji nieruchomości
+                   poza obszarem działania Przedsiębiorstwa (teren innej gminy). W 2018 r. wydano
+                   274 takich informacji, w 2019 r. – 339, a w 2020 r. (do 30 września) – 116. Badanie
+                   zasadności odmowy podłączenia nieruchomości do sieci kanalizacyjnej
+                   przeprowadzono na próbie pięciu przypadków. W każdym z nich Przedsiębiorstwo
+                   uzasadniło odmowę wskazując na brak istniejącej/projektowanej sieci kanalizacyjnej
+                   lub wskazując inny organ uprawniony miejscowo do zapewnienia odbioru ścieków.
+                   W przypadku podłączenia nieruchomości do sieci kanalizacyjnej każdorazowo
+                   zawierana jest umowa na odprowadzanie ścieków.
+                                                (akta kontroli str. 150-155 Tom I, 328-334 Tom III, 197-200, 220-234 Tom IV)
+     Stwierdzone   W działalności kontrolowanej jednostki w przedstawionym wyżej zakresie
+nieprawidłowości   stwierdzono następujące nieprawidłowości:
+                   1. Nie przeprowadzono okresowej (pięcioletniej) kontroli stanu technicznego sieci
+                   kanalizacyjnej, co było niezgodne art. 62 ust. 1 pkt 2 Prawa budowlanego.
+                   Przedsiębiorstwo nie przeprowadzało okresowych kontroli stanu technicznego sieci
+                   z częstotliwością co najmniej raz na pięć lat, w zakresie polegającym na
+                   sprawdzeniu stanu technicznego i przydatności do użytkowania.
+                   Prezes Zarządu MPWiK wyjaśnił, że Przedsiębiorstwo przeprowadzało okresowe
+                   kontrole mające na celu sprawdzenie stanu technicznego i przydatności do
+                   użytkowania sieci kanalizacyjnej będącej w jego zarządzie. Obowiązek w zakresie
+                   dbałości o te urządzenia wynika jednak nie z przepisów Prawa budowlanego, ale
+                   z przepisów uzzw. Zgodnie z art. 5 ust. 1 przywołanej ustawy, przedsiębiorstwo
+                   wodociągowo-kanalizacyjne ma obowiązek zapewnić zdolność posiadanych
+                   urządzeń wodociągowych i urządzeń kanalizacyjnych do realizacji dostaw wody
+                   w wymaganej ilości i pod odpowiednim ciśnieniem oraz dostaw wody
+                   i odprowadzania ścieków w sposób ciągły i niezawodny, a także zapewnić należytą
+
+                   27 Przyjętych uchwałą Nr VI/114/19 Rady Miejskiej Wrocławia z dnia 21 marca 2019 r.
+
+
+                                                                               14
+jakość dostarczania wody i odprowadzania ścieków. Dalej wskazał, że uprawniony
+jest również pogląd, że obowiązek kontroli tych urządzeń nie wynika z przepisów
+Prawa budowanego, ponieważ w okresie kontrolowanym obiekty budowlane jakimi
+są sieci kanalizacyjne, ujęte były w katalogu określonym w art. 29 ust. 1 Prawa
+budowlanego. Ponadto należy stwierdzić, że zgodnie z art. 64 ust. 1 Prawa
+budowlanego obowiązek prowadzenia książki obiektu budowlanego dotyczy jedynie
+obiektu budowlanego niebędącego budynkiem, którego projekt architektoniczno-
+budowlany lub techniczny jest objęty obowiązkiem sprawdzenia, o którym mowa
+w art. 20 ust. Prawa budowlanego. Tymczasem należy stwierdzić, że większość
+sieci kanalizacyjnej to obiekty, co do których nie ma obowiązku posiadania
+dokumentacji budowy oraz dokumentacji powykonawczej, gdyż są to obiekty
+wybudowane przed 2 stycznia 1995 r. (por. wyrok NSA z 27 lutego 2007 r., II OSK
+394/06, CBOSA).
+W ocenie NIK obowiązek przeprowadzenia okresowej, co najmniej raz na pięć lat,
+kontroli stanu technicznego sieci kanalizacyjnej wynika bezpośrednio z art. 62 ust. 1
+pkt 2 Prawa budowalnego. Przepis ten wskazuje, że okresowej kontroli stanu
+technicznego i przydatności do użytkowania podlegają obiekty budowlane,
+a zgodnie z art. 3 pkt 3a tej ustawy należą do nich m.in. sieci kanalizacyjne
+(wodociągi).
+NIK wskazuje, że przywołany art. 5 ust. 1 uzzw wskazuje na obowiązek zapewnienia
+zdolności posiadanych urządzeń wodociągowych i urządzeń kanalizacyjnych do
+realizacji dostaw wody w wymaganej ilości i pod odpowiednim ciśnieniem oraz
+dostaw wody i odprowadzania ścieków w sposób ciągły i niezawodny, a także
+zapewnienia należytej jakości dostarczanej wody i odprowadzania ścieków.
+Obowiązek ten spoczywa na Przedsiębiorstwie niezależnie od wymogów
+określonych w przepisach Prawa budowlanego i nie zwalnia z konieczności
+przeprowadzenia okresowych kontroli stanu technicznego sieci kanalizacyjnej. Brak
+obowiązku prowadzenia książki obiektu budowlanego również nie stanowi
+przesłanki do odstąpienia od przeprowadzenia okresowych kontroli.
+W ocenie NIK zakres i skala prowadzonych przez MPWiK działań kontrolnych sieci
+kanalizacyjnej niewątpliwie przyczynia się do zapewnienia ciągłości w dostawie
+wody i odprowadzania nieczystości ciekłych z obszaru miasta Wrocławia. Niemniej,
+kontrole te nie zostały przeprowadzone w oparciu o przepisy Prawa budowlanego.
+                                                        (akta kontroli str. 150-154 Tom I, 328-334 Tom III)
+2. W siedmiu28 umowach na świadczenie usług odbioru nieczystości ciekłych
+bytowych z wozów asenizacyjnych nie określono miesięcznych objętości
+dowożonych do stacji zlewnych nieczystości, co było niezgodne z § 7 ust. 1 pkt 1
+rozporządzenia w sprawie warunków wprowadzania nieczystości ciekłych do stacji
+zlewnych.
+Prezes Zarządu MPWiK wyjaśnił, że w dwóch spośród wymienionych umów,
+zawarto informację o objętości dowożonych do stacji zlewnych nieczystości.
+Wartości te wskazane zostały w zezwoleniach Prezydenta Wrocławia na
+opróżnianie zbiorników bezodpływowych i transport nieczystości z terenu miasta
+Wrocławia, które zgodnie z § 10 ust. 2 umowy nr 0002/KOO BB/2020 z 27 lutego
+2020 r. oraz umowy nr 0004/FOU BB/2016 z 14 października 2006 r. stanowią
+integralna część tych umów. Ilości te określono kolejno na poziomie 700m3/miesiąc
+oraz 3000m3/miesiąc. W pozostałych pięciu przypadkach umowy zawierane były na
+podstawie decyzji zezwalających na prowadzenie działalności w zakresie
+
+28 Umowa nr 0001/KOO BB/2020 z dnia 26 lutego 2020 r., umowa nr 0002/KOO BB/2020 z dnia 27 lutego 2020 r., umowa
+
+nr 0004/FOU BB/2016 z dnia 14 października 2016 r., umowa nr 0003/FOU BP/2016 z dnia 1 sierpnia 2016 r., umowa
+nr 0345/RK/BB/2011 z dnia 15 lutego 2011 r., umowa nr 0533/RK/BB/2011 z dnia 23 marca 2011 r., umowa
+nr 0768/FO/BB/2012 z dnia 18 kwietnia 2012 r.
+
+                                                      15
+opróżniania zbiorników bezodpływowych i transportu nieczystości ciekłych
+wydawanych w latach 2011 i 2012, w których to organ wydający decyzję
+(wójt/burmistrz/prezydent miasta) nie określił maksymalnej objętości jakie mogą być
+dowożone do stacji zlewnej. Tym samym Przedsiębiorstwo nie mogło ustanowić
+bardziej rygorystycznych warunków niż zawarte w decyzji wydanej w drodze
+postępowania administracyjnego.
+NIK wskazuje, że limity ilości nieczystości ciekłych określone w zezwoleniach na
+opróżnianie zbiorników bezodpływowych dotyczą bezpośrednio działalności
+podmiotu, na rzecz którego organ wydał decyzję. W ocenie NIK to właściciel stacji
+zlewnej określa miesięczną objętość i rodzaj dowożonych do stacji zlewnych
+nieczystości ciekłych, która powinna uwzględniać moce przerobowe oczyszczalni
+ścieków, do której trafiają te nieczystości.
+                                                    (akta kontroli str. 26-37, 246 Tom VI)
+3. Nie zapewniono opomiarowania punktu zlewczego fekaliów, znajdującego się na
+stacji zlewnej WOŚ, co było niezgodne z § 3 rozporządzenia w sprawie warunków
+wprowadzania nieczystości ciekłych do stacji zlewnych. Stosownie do tego przepisu
+stacje zlewne zapewniają: pomiar dowożonych nieczystości ciekłych, hermetyczny
+zrzut nieczystości ciekłych oraz separowanie zanieczyszczań stałych.
+Prezes Zarządu MPWiK wyjaśnił, że stacja zlewna zlokalizowana na terenie WOŚ
+nie posiada automatycznego pomiaru ilości dowożonych nieczystości ciekłych.
+Objętość dowożonych nieczystości ciekłych określna jest na podstawie deklaracji
+złożonej przez dostawcę. Jest to weryfikowane przez właściwego dyspozytora
+oczyszczani, który w danym czasie znajduje się na miejscu pracy, na podstawie
+obowiązujących umów, w których znajduje się zapis o ilości nieczystości ciekłych
+przypisanych do konkretnego auta. Przyczyną braku automatycznego pomiaru
+dowożonych nieczystości jest sposób opróżniania dostaw. Nieczystości ciekłe
+zrzucane są do punktu zlewczego fekaliów grawitacyjnie i dopływają do komory
+rozdziału, co wyklucza montaż urządzenia pomiarowego, np. przepływomierza.
+W ocenie NIK określanie objętości dowożonych nieczystości ciekłych na podstawie
+deklaracji złożonej przez dostawcę nie zapewnia precyzyjnego pomiaru ilości tych
+ścieków. Określone w rozporządzeniu warunki wprowadzania nieczystości ciekłych
+do stacji zlewnych obowiązują już od 2002 r.
+                                                        (akta kontroli str. 68-76 Tom VII)
+4. Odbiór nieczystości ciekłych przyjmowanych do stacji zlewnych niezgodnie
+z warunkami określonymi w rozporządzeniu w sprawie warunków wprowadzania
+nieczystości ciekłych do stacji zlewnych.
+Zgodnie z § 8 ust. 1 ww. rozporządzenia odbiór nieczystości ciekłych przez
+właściciela stacji zlewnej dokumentuje „Potwierdzenie odbioru nieczystości ciekłych
+na stacji zlewnej” (w formie papierowej), w którym określano m.in. numer i datę
+zawarcia umowy na wprowadzenie nieczystości ciekłych, numer i datę umowy na
+odbiór nieczystości ciekłych z nieruchomości wyposażonej w zbiornik
+bezodpływowy, adres nieruchomości wyposażonej w zbiornik bezodpływowy
+i numer rejestracyjny pojazdu asenizacyjnego. Warunek ten (wzór dokumentu)
+został również określony w umowach na świadczenie usług odbioru nieczystości
+ciekłych bytowych z wozów asenizacyjnych. W toku kontroli NIK stwierdzono, że
+nieczystości ciekłe były przyjmowano do stacji zlewnych pomimo, że ich dostawcy
+nie przedłożyli pełnych informacji określonych w tym dokumencie, w tym m.in.
+adresu nieruchomości wyposażonej w zbiornik bezodpływowy. Uniemożliwiało to
+określenie miejsca pochodzenia tych nieczystości ciekłych, co przekładało się na
+
+
+                                        16
+                    brak wiedzy o ilości nieczystości ciekłych przyjmowanych spoza aglomeracji
+                    Wrocław.
+                    Prezes Zarządu MPWiK wyjaśnił, że przyjęcie nieczystości ciekłych do stacji
+                    zlewnych jest potwierdzane dokumentem pn. „Potwierdzenie odbioru nieczystości
+                    ciekłych na stacji zlewnej”, który stanowi załącznik nr 2 do umowy na świadczenie
+                    usług odbioru nieczystości ciekłych bytowych z wozów asenizacyjnych. Dokument
+                    ten stanowi odzwierciedlenie załącznika nr 1 do rozporządzenia w sprawie
+                    warunków wprowadzania nieczystości ciekłych do stacji zlewnych. Bardzo duża
+                    ilość przyjmowanych dostaw nieczystości ciekłych w skali miesiąca, niski standard
+                    postępowania i przygotowania dokumentów przez kierowców wozów
+                    asenizacyjnych, zaawansowany wiek pracowników na zlewni oraz występujące
+                    rotacje lub zastępstwa sprawiły, że jakość przygotowanego wyżej wymienionego
+                    załącznika nr 2 i jego weryfikacja pod kątem adresów była obarczona błędami.
+                    Z uwagi na to oraz na konieczność usprawnienia i zinformatyzowania obsługi
+                    dostawców, Przedsiębiorstwo podjęło decyzję o wprowadzeniu automatyzacji
+                    systemu przyjmowania i potwierdzania przyjęcia nieczystości ciekłych. Proces ten
+                    odbywa się bez bezpośredniego udziału i bez stałej obecności pracownika na stacji
+                    zlewnej i jest w toku wdrażania.
+                    W ocenie NIK bardzo duże ilości przyjmowanych dostaw nieczystości czy niski
+                    standard przygotowania dokumentów przez kierowców wozów asenizacyjnych nie
+                    może stanowić uzasadnienia dla ww. naruszenia. Przedsiębiorstwo nie podjęło
+                    działań w celu wyegzekwowania wymaganych rozporządzeniem informacji. NIK
+                    wskazuje również, że zgodnie z § 8 ust. 2 rozporządzenia w sprawie warunków
+                    wprowadzania nieczystości ciekłych do stacji zlewnych, jeżeli nieczystości ciekłe
+                    wprowadzane są do bezobsługowej, zautomatyzowanej stacji zlewnej, dostawca
+                    nieczystości ciekłych pozostawia i odbiera informacje, o których mowa w załączniku
+                    do rozporządzenia, w miejscu wyznaczonym przez właściciela stacji zlewnej. Tym
+                    samym automatyzacja stacji zlewnych nie zwalnia z obowiązków określonych w ww.
+                    rozporządzeniu.
+                                                                          (akta kontroli str. 378-380 Tom IV)
+OCENA CZĄSTKOWA     Przedsiębiorstwo zapewniło zbieranie ścieków komunalnych na obszarze swojego
+                    działania. Prowadzono ewidencję awarii sieci kanalizacyjnej, a reakcja na ich
+                    zgłoszenie była natychmiastowa – do usunięcia awarii przystępowano niezwłocznie.
+                    Niemniej stwierdzono nieprawidłowości w zakresie organizacji przyjmowania
+                    i ewidencjonowania nieczystości ciekłych do stacji zlewnych. MPWiK nie
+                    przeprowadzało nadto okresowych kontroli sieci kanalizacyjnej w oparciu o wymogi
+                    Prawa budowlanego.
+         OBSZAR     3. Oczyszczanie         ścieków         komunalnych
+                       i zagospodarowanie komunalnych osadów ściekowych
+                    3.1 Zapewnienie właściwego oczyszczania ścieków komunalnych
+       Opis stanu   Stosownie do wymagań art. 389 pkt 1 w zw. z art. 35 ust. 3 pkt 5 ustawy z dnia
+     faktycznego    20 lipca 2017 r. Prawo wodne29, Przedsiębiorstwo w okresie objętym kontrolą
+                    posiadało ważne pozwolenie wodnoprawne na usługę wodną obejmującą
+                    wprowadzanie ścieków do wód.
+                    W okresie do 21 września 2020 r. obowiązywała decyzja Wojewody Dolnośląskiego
+                    z dnia 8 października 2007 r. udzielająca Przedsiębiorstwu pozwolenia
+                    wodnoprawnego na szczególne korzystanie z wód, tj. wprowadzanie do rzeki Odry
+
+
+                    29 Dalej: uPW.
+
+
+                                                            17
+w km 267+700 ścieków komunalnych z miasta Wrocławia i okolicznych
+miejscowości oczyszczonych na Wrocławskiej Oczyszczalni Ścieków30 w ilości:
+      Q max rok = 56 730 000 m³/rok31;
+      Q śd = 155 000 m³/d;
+      Q max h = 8 000 m³/h;
+      Q max h dla pogody deszczowej = 9 500 m³/h
+ o stanie i składzie:
+      odczyn = 6,5 ÷ 8,5 pH;
+      BZT532 ≤ 15 mg O2/dm³;
+      ChZT33 ≤ 125 mg O2 /dm³;
+      azot ogólny ≤ 10 mg N/dm³;
+      fosfor ogólny ≤ 1 mg P/dm³;
+      zawiesiny ogólne ≤ 35 mg/dm³;
+      węglowodory ropopochodne ≤ 15 mg/dm³;
+      cynk ≤ 2 mg Zn/dm³;
+      miedź ≤ 0,5 mg CU/dm³;
+      ołów ≤ 0,5 mg Pb/dm³;
+      nikiel ≤ 0,5 mg Ni/dm³.
+Pozwolenie to wydano na czas określony, tj. od dnia rozpoczęcia rozruchu
+technologicznego zmodernizowanej i rozbudowanej Wrocławskiej Oczyszczalni
+Ścieków34 na okres 10 lat kalendarzowych, jednak nie dłużej niż do 31 grudnia
+2020 r.
+W okresie od 22 września 2020 r. obowiązywała decyzja Dyrektora Regionalnego
+Zarządu Gospodarki Wodnej we Wrocławiu Państwowego Gospodarstwa Wodnego
+Wody Polskie (dalej: RZGW) z dnia 7 września 2020 r., zgodnie z którą organ
+wygasił obowiązujące pozwolenie wodnoprawne i wydał MPWiK pozwolenie
+wodnoprawne na usługę wodną obejmującą wprowadzenie ścieków do wód,
+tj. wprowadzenie ścieków komunalnych, stanowiących mieszaninę ścieków
+bytowych ze ściekami przemysłowymi i wodami opadowymi lub roztopowymi,
+z aglomeracji Wrocław o RLM aglomeracji 1 050 000, do rzeki Odry za pomocą
+istniejącego na działce nr 6, AM 3, obręb 0043 Pracze Odrzańskie, Miasto Wrocław,
+o współrzędnych PL-ETRF2000, strefa 6: X=5674781.86; Y=6423795.34 w ilości:
+      Qmaxs = 2,22 m³/s przez ok 335 dnia w ciągu roku dla pogody
+         bezdeszczowej;
+      Qmaxs = 2,64 m³/s przez ok 30 dnia w ciągu roku dla pogody deszczowej;
+      Qmaxh = 8 000 m³/h dla pogody bezdeszczowej;
+      Qmaxh = 9 500 m³/h dla pogody deszczowej;
+      Qśrd = 155 000 m³/d;
+      Qdop. roczne = 56 730 000 m³/rok
+o składzie substancji zanieczyszczających w odprowadzanych ściekach:
+      odczyn = 6,5 ÷ 8,5 pH;
+      zawiesiny ogólne ≤ 35 mg/dm³;
+      BZT5 ≤ 15 mg O2/dm³;
+      ChZT ≤ 125 mg O2 /dm³;
+
+30 Zmienione za zgodą stron decyzją Marszałka Województwa Dolnośląskiego z dnia 26 czerwca 2017 r.
+31 Zmienione za zgodą stron decyzją Marszałka Województwa Dolnośląskiego z dnia 26 czerwca 2017 r. (uprzednio
+obowiązywało Q max d = 170 000 m³/d).
+32 Umowny wskaźnik określający biochemiczne zapotrzebowanie tlenu, czyli ilość tlenu wymaganą do utlenienia związków
+
+organicznych przez mikroorganizmy.
+33 Wskaźnik ilości zanieczyszczeń wód i ścieków.
+34 Rozruch przeprowadzono w terminie od 30 października 2010 r. do 30 września 2013 r.
+
+
+                                                          18
+      azot ogólny ≤ 10 mg N/dm³;
+      fosfor ogólny ≤ 1,0 mg P/dm³;
+      miedź ≤ 0,5 mg CU/dm³;
+      ołów ≤ 0,5 mg Pb/dm³;
+      nikiel ≤ 0,5 mg Ni/dm³;
+      cynk ≤ 2 mg Zn/dm³;
+      węglowodory ropopochodne ≤ 15 mg/dm³.
+Termin obowiązywania pozwolenia wodnoprawnego ustalono na okres 10 lat,
+liczony od dnia, w którym decyzja stała się ostateczna.
+W pozwoleniu wodnoprawnym na usługę wodną obejmującą wprowadzanie ścieków
+do wód, obowiązującym od 22 września 2020 r., określono, że będą to ścieki
+„z aglomeracji Wrocław”, a nie jak zostało to określone w uchylonej decyzji „z miasta
+Wrocławia i okolicznych miejscowości”. Powyższe, w ocenie NIK, skutkować może
+ograniczeniem w przyjmowaniu nieczystości ciekłych spoza obszaru aglomeracji.
+MPWiK, w toku kontroli NIK, wystąpiło do RZGW z wnioskiem o sprostowanie
+postanowień tej decyzji.
+Menedżer Działu Inżynieryjnego wyjaśnił, że aktualnie MPWiK prowadzi
+uzgodnienia z RZGW dotyczące sposobu sprostowania tej decyzji. Wskazał
+również, że operat wodnoprawny dla Wrocławskiej Oczyszczalni Ścieków
+sporządzony został na zlecenie MPWiK przez Biuro Projektów Budownictwa
+Komunalnego we Wrocławiu (dalej: BPBK). BPBK jako pełnomocnik MPWiK
+wystąpił do Państwowego Gospodarstwa Wodnego Wody Polskie z wnioskiem
+o wydanie pozwolenia wodnoprawnego dla MPWiK we Wrocławiu na
+odprowadzanie ścieków do rzeki Odry. W pkt 40 operatu „Zakres wnioskowanych
+uprawnień” MPWiK jest zapis: „Na podstawie przedstawionych w operacie danych
+wnosi się o wydanie decyzji pozwolenia wodnoprawnego dla MPWiK S.A. we
+Wrocławiu na usługę wodną obejmującą wprowadzanie do rzeki Odry w km
+267+700, ścieków komunalnych z miasta Wrocławia i okolicznych miejscowości,
+Oczyszczonych na Wrocławskiej Oczyszczalni Ścieków zlokalizowanej przy
+ul. Janowskiej we Wrocławiu, składającej się z obiektów (…)”.
+RZGW potwierdził, że pismem z dnia 23 listopada 2020 r. MPWiK wystąpiło
+z wnioskiem o sprostowanie w drodze postanowienia zapisu w dziale II decyzji,
+tj. zapisu w brzmieniu: „z aglomeracji Wrocław o RLM aglomeracji 1 050 000” na
+zapis: „z miasta Wrocławia i okolicznych miejscowości”. Organ wskazał również, że
+w operacie wodnoprawnym, jak i zgromadzonym materiale dowodowym,
+Wnioskodawca (MPWiK) nie wskazał z jakich okolicznych miejscowości
+przyjmowane są ścieki na Wrocławską Oczyszczalnie Ścieków, jak również brak jest
+informacji, iż do WOŚ dopływają lub są dowożone ścieki spoza aglomeracji
+Wrocław. Do dnia zakończenia czynności kontrolnych RZGW nie rozpatrzył wniosku
+MPWiK o sprostowanie decyzji.
+                                                                     (akta kontroli str. 16-35 Tom I, 1-6 Tom VII)
+Wojewódzki Inspektor Ochrony Środowiska we Wrocławiu (dalej: WIOŚ)
+w przeprowadzonej od 3 listopada do 30 grudnia 2020 r. na zlecenie NIK kontroli,
+zweryfikował zgodność pozwolenia wodnoprawnego z przepisami rozporządzenia35
+wydanymi na podstawie art. 99 ust. 1 uPW oraz realizację przez Przedsiębiorstwo
+warunków określonych w tym rozporządzeniu.
+
+
+35 Rozporządzenie Ministra Gospodarki Morskiej i Żeglugi Śródlądowej z dnia 12 lipca 2019 r. w sprawie substancji
+szczególnie szkodliwych dla środowiska wodnego oraz warunków, jakie należy spełnić przy wprowadzaniu do wód lub do
+ziemi ścieków, a także przy odprowadzaniu wód opadowych lub roztopowych do wód lub do urządzeń wodnych (Dz. U.
+poz. 1311). Dalej: rozporządzenie w sprawie warunków, jakie należy spełnić przy wprowadzaniu do wód lub do ziemi ścieków.
+
+                                                           19
+Organ ten stwierdził, że liczba pobranych średnich dobowych próbek ścieków
+komunalnych wprowadzanych do wód lub do ziemi, do celów oznaczenia wartości
+substancji zanieczyszczających, dla RLM oczyszczalni równej 50 000 i większej, nie
+mogła być mniejsza niż 24 próbki w okresie roku. Pomiary ilości i jakości ścieków
+powinny być wykonane w regularnych odstępach czasu w okresie roku oraz stale
+w tym samym miejscu, w którym ścieki są wprowadzane do wód lub do ziemi, lub
+w innym miejscu reprezentatywnym dla jakości tych ścieków, a jeżeli z pozwolenia
+wodnoprawnego albo pozwolenia zintegrowanego wynika, że poboru próbek
+ścieków dokonuje się w miejscach, w których ścieki dopływają do oczyszczalni
+ścieków, również stale w tych samych miejscach.
+WIOŚ potwierdził, że Przedsiębiorstwo spełnia ww. wymagania. W okresie od
+1 stycznia 2019 r. do 30 września 2020 r. wykonano 44 analizy jakości ścieków.
+Wyniki badań przekazywane do WIOŚ we Wrocławiu za rok 2019 obejmowały
+analizy jakości ścieków surowych oraz ścieków oczyszczonych, natomiast wyniki
+badań za rok 2020 obejmowały tylko analizy jakości ścieków oczyszczonych.
+Zarówno pobór próbek, jak i badania jakości ścieków, zostały wykonane przez
+akredytowane laboratorium, tj. Ośrodek Badań i Kontroli Środowiska Sp. z o.o.,
+zgodnie z metodykami referencyjnymi. Zakres badań obejmował wszystkie
+parametry określone w pozwoleniach wodnoprawnych. Zgodnie z pozwoleniem
+wodnoprawnym obowiązującym do 21 września 2020 r., badania powinny
+obejmować następujące oznaczenia: odczyn, BZT5, ChZT, azot ogólny, fosfor
+ogólny, zawiesiny ogólne, węglowodory ropopochodne, cynk, miedź, ołów, nikiel.
+Pozwolenie wodnoprawne obowiązujące od dnia 22 września 2020 r. nakłada na
+kontrolowany podmiot obowiązek wykonywania badań w takim samym zakresie.
+                                                                                      (akta kontroli str. 98-206 Tom VII)
+Ścieki dopływające do WOŚ są oczyszczane w układzie technologicznym
+realizującym procesy mechanicznego, chemicznego i biologicznego oczyszczania.
+Podczas mechanicznego oczyszczania ścieków następuje usuwanie ze ścieków ciał
+stałych (pływających, wleczonych i zawieszonych), zawiesiny ziarnistej (piasek itp.),
+tłuszczów, benzyn i olejów oraz usuwanie zawiesin opadających. Chemiczne
+oczyszczanie sprowadza się między innymi do strącania fosforanów (metodą
+strącania wstępnego) z wykorzystaniem soli żelaza oraz opcjonalnie do
+wspomagania sedymentacji36 zawiesin w osadnikach wstępnych.
+Oczyszczone wstępnie na kratach rzadkich, kratach gęstych i w piaskownikach
+przedmuchiwanych ścieki pompowane są do komory rozdziału ścieków przed
+osadnikami wstępnymi. Do komory rozdziału może być dozowany koagulant37
+w celu zwiększenia sprawności usuwania zanieczyszczeń w osadnikach wstępnych.
+Oczyszczone w osadnikach ścieki kierowane są poprzez komorę odbiorczą do
+bloków biologicznych. W komorze odbiorczej znajduje się także przelew do kanału
+omijającego część biologiczną oczyszczalni. W blokach biologicznych następuje
+biologiczne     oczyszczanie   ścieków     wielofazowym      osadem        czynnym
+z podwyższonym usuwaniem związków azotu i fosforu z denitryfikacją azotanów
+                                                                       38
+
+z osadu powrotnego (predenitryfikacja) oraz wzmożoną biologiczną defosfatacją39
+i sedymentacją osadu czynnego w osadnikach wtórnych.
+Po procesie biologicznego oczyszczania ścieki kierowane są do osadników
+wtórnych, gdzie następuje oddzielenie zawiesiny osadu czynnego od ścieków.
+W przypadku niewystarczającego usuwania fosforu na drodze biologicznej do
+ścieków przed osadnikami wtórnymi może być dozowany koagulant do
+
+36 Opadanie zawiesiny ciała stałego w cieczy w wyniku działania siły grawitacji lub sił bezwładności.
+37 Środek powodujący wytracanie się osadu.
+38 Reakcja chemiczna polegająca na redukcji azotanów do azotu.
+39 Proces redukcji związków fosforu przy pomocy mikroorganizmów wbudowujących fosfor w swoją masę komórkową.
+
+
+                                                               20
+chemicznego strącania fosforanów. Ścieki oczyszczone kierowane są kanałem
+wylotowym do rzeki Odry.
+                                                             (akta kontroli str. 246-299 Tom III)
+Inspektorzy WIOŚ w trakcie oględzin nie stwierdzili nieprawidłowości w zakresie
+funkcjonowania urządzeń do oczyszczania ścieków. Ustalili, że MPWiK prowadziło
+zeszyt eksploatacji obiektu w wersji papierowej. Zweryfikowano wybrane zapisy
+z dnia: 31 października 2020 r., 1 listopada 2020 r. oraz 2 listopada 2020 r., a także
+z dnia: 1 i 2 września 2020 r. (w okresie obowiązywania poprzedniego pozwolenia
+wodnoprawnego). Inspektorzy WIOŚ ustalili, że w zeszycie eksploatacji odnotowuje
+się informacje dotyczące wykonywanych czynności związanych np. z wywozem
+komunalnych osadów ściekowych oraz zmianą parametrów urządzeń.
+Inspektorzy WIOŚ zweryfikowali raporty z analiz incydentów, które wystąpiły na
+terenie zakładu w 2020 r. Zgodnie z informacją przekazaną przez przedstawiciela
+MPWiK, zdarzenia mogące mieć wpływ na prawidłowe funkcjonowanie oczyszczalni
+ścieków odnotowywane są w formie raportu z analizy incydentu, zawierającego
+m.in. informację o:
+     usługach, na które naruszenie miało wpływ,
+     elementach infrastruktury, na które naruszenie wywarło wpływ,
+     wpływie naruszenia, w tym czas trwania niedostępności usługi lub
+         ograniczenia jej dostępności,
+     przyczynach naruszenia.
+W okresie tym miało miejsce siedem zdarzeń opisanych raportami, które wystąpiły
+w dniach 21 lutego, 23 lutego, 20 marca, 1 kwietnia, 1 maja, 4 lipca oraz 7 lipca.
+Incydenty dotyczyły:
+     w sześciu przypadkach – zaników zasilania na obiektach WOŚ, w tym
+       w czterech z nich skutkiem naruszenia był wzrost ładunku zanieczyszczeń
+       (azotu amonowego) na wyjściu z bloków biologicznych, spowodowany
+       zaburzeniem procesu;
+     w jednym przypadku – błędu ludzkiego, wynikającego z decyzji opartej
+       o nieprawidłowe dane, który wpłynął na: proces suszenia osadu – brak
+       wody technologicznej, proces dostawy wody technologicznej, biologiczne
+       oczyszczanie ścieków na bloku F2/5, pompowanie osadu nadmiernego
+       G5/2, zagęszczenie i odwodnienie osadu J5/m2.
+Inspektorzy WIOŚ, w ramach przeprowadzonych w dniu 3 listopada 2020 r. oględzin
+stwierdzili, że stan obu wylotów ścieków do odbiorników, tj. rzeki Odry i rzeki
+Bystrzycy, a także terenu w ich rejonie nie budził zastrzeżeń.
+                                                             (akta kontroli str. 98-206 Tom VII)
+Przedmiotem kontroli WIOŚ było również spełnianie przez MPWiK warunków
+odprowadzania ścieków określonych w pozwoleniu wodnoprawnym. I tak, na
+zlecenie Dolnośląskiego Wojewódzkiego Inspektora Ochrony Środowiska
+pracownicy Centralnego Laboratorium Badawczego GIOŚ Oddział we Wrocławiu
+(dalej: CLB GIOŚ) w dniach 3-4 listopada 2020 r. dokonali poboru próbek w miejscu
+wskazanym w pozwoleniu wodnoprawnym w celu przeprowadzenia analizy jakości
+ścieków. Próbki średniodobowe ścieków oczyszczonych pobrano z komory
+przepływowej zlokalizowanej na rurociągu odpływowym z oczyszczalni40.
+Temperaturę oraz pH mierzono w dwugodzinnych odstępach. Wartość zmierzonej
+temperatury wahała się w zakresie od 18,9 ºC do 19,1 ºC, natomiast wartość pH od
+7,1 do 7,3.
+
+40 Współrzędne punktu poboru: 50.79226 N; 17.08518 E.
+
+
+                                                        21
+Na podstawie badań wykonanych przez CLB GIOŚ inspektorzy WIOŚ ustalili, że
+przekroczenie wystąpiło wyłącznie w zakresie stężenia azotu ogólnego, którego
+średniodobowa wartość wyniosła 17,7 mg/l. Wartość dopuszczalna określona
+w pozwoleniu wodnoprawnym wynosiła 10 mg/l. Stwierdzili dalej, że spełnienie
+warunków w zakresie stężenia azotu ogólnego określa się na podstawie wartości
+średniorocznej41. Analiza spełnienia wymagań określonych w pozwoleniu
+wodnoprawnym udzielonym decyzją Dyrektora RZGW z dnia 7 września 2020 r.
+będzie możliwe dopiero po zakończeniu pełnego roku obowiązywania tego
+pozwolenia wodnoprawnego.
+Osobne badanie jakości ścieków oczyszczonych inspektorzy WIOŚ przeprowadzili
+w oparciu o wyniki badań otrzymanych w latach 2019-2020 (do 30 września)
+z MPWiK. Analiza wyników pomiarów przeprowadzonych przez Przedsiębiorstwo
+wykazała przekroczenie średniodobowych wartości stężenia azotu ogólnego
+w trzech z 44 próbek ścieków odprowadzanych z oczyszczalni (próbki z dnia:
+9 marca 2020 r., 23 marca 2020 r. oraz 29 września 2020 r.), w porównaniu do
+wartości dopuszczalnych w pozwoleniach wodnoprawnych. Nie stwierdzono
+przekroczeń pozostałych wskaźników w porównaniu do dopuszczalnych wartości
+średniodobowych. Wyniki badań w ujęciu średniorocznym (za okres od
+8 października 2019 r. do 21 września 2020 r.) wykazały, że wartość stężenia azotu
+ogólnego wynosiła 8,94 mg/l i nie przekraczała dopuszczalnego stężenia
+określonego w pozwoleniu wodnoprawnym (10 mg/l).
+                                                                                  (akta kontroli str. 98-206 Tom VII)
+MPWiK przeprowadzało okresowe kontrole stanu technicznego obiektów
+technologicznych WOŚ służących ochronie środowiska, zgodnie z art. 62 ust. 1
+pkt 1 lit. b Prawa budowlanego.
+Szczegółowym badaniem w zakresie dotyczącym sprawowania nadzoru nad
+utrzymaniem obiektów budowlanych objęto 10 obiektów mających kluczowe
+znaczenie dla pracy oczyszczalni42. Na dziewięciu obiektach przeprowadzana była
+coroczna kontrola elementów budynku, budowli i instalacji narażonych na szkodliwe
+wpływy atmosferyczne i niszczące działania czynników występujących podczas
+użytkowania obiektu oraz instalacji gazowych i przewodów kominowych, zgodnie
+z art. 62 ust. 1 Prawa budowlanego.
+Okresową kontrolę stanu technicznego budynku hali krat i hali piaskowników
+przeprowadzano w latach 2018-2019 z naruszeniem art. 62 ust. 1 pkt 3 Prawa
+budowlanego, co zostało opisane w sekcji Stwierdzone nieprawidłowości.
+W latach 2018-2020 (do 30 września) na ww. obiektach nie przeprowadzano
+okresowej kontroli stanu technicznego, o której mowa w art. 62 ust. 1 pkt 2 Prawa
+budowlanego (co najmniej raz na pięć lat). Kontrole te zostały przeprowadzone
+w latach 2016-2017. Ich analiza wykazała, że okresowa kontrola stanu technicznego
+i przydatności do użytkowania budynku hali pomp i bloku biologicznego F2/1 i F2/2
+nie obejmowała swym zakresem przeglądu instalacji elektrycznej i odgromowej.
+Opis tej nieprawidłowości zawarto w sekcji Stwierdzone nieprawidłowości.
+
+41 Na podstawie § 8 ust. 1 pkt 3 rozporządzenia Ministra Gospodarki Morskiej i Żeglugi Śródlądowej z dnia 12 lipca 2019 r.
+
+w sprawie substancji szczególnie szkodliwych dla środowiska wodnego oraz warunków, jakie należy spełnić przy
+wprowadzaniu do wód lub do ziemi ścieków, a także przy odprowadzaniu wód opadowych lub roztopowych do wód lub do
+urządzeń wodnych (Dz. U. poz. 1311) ścieki bytowe oraz ścieki komunalne, wprowadzane do wód lub do ziemi, spełniają
+wymagane warunki, jeżeli wartości azotu ogólnego i fosforu ogólnego w średnich rocznych próbkach nie przekraczają
+najwyższych dopuszczalnych wartości substancji zanieczyszczających. Zgodnie z § 10 ust. 3 ww. rozporządzenia, średnią
+roczną wartość azotu ogólnego i fosforu ogólnego ustala się na podstawie średniej arytmetycznej ze wszystkich średnich
+dobowych wartości azotu ogólnego i fosforu ogólnego z okresu roku.
+42 [1] Rurociąg dopływowy ścieków fi 1000; [2] Budynek mechanicznego odwadniania z zagęszczaniem osadu; [3] Budynek
+
+hali pomp; [4] Budynek hali krat i hali piaskowników; [5] Wydzielone komory fermentacyjne K3/1 i K3/2 z trzonem
+technologiczno-komunikacyjnym i stacją wymienników ciepła; [6] Blok biologiczny F2/1 F2/2; [7] Osadniki wtórne G2/1, G2/2,
+G2/4, G2/4; [8] Blok biologiczny F2/3 z komorami towarzyszącymi: F2/IIa, F2/IIb, F4/IIa, F4/IIc, F4/IId; [9] Budynek stacji
+dmuchaw; [10] Automatyczna stacja pomiarowo-kontrolna.
+
+                                                            22
+W okresie objętym kontrolą MPWiK nie przeprowadzało kontroli bezpiecznego
+użytkowania obiektów, o której mowa w art. 61 pkt 2 Prawa budowalnego,
+w przypadku wystąpienia okoliczności, o których mowa w art. 61 pkt 2 Prawa
+ budowlanego.
+                                                              (akta kontroli str. 9-11 tom IV)
+W wyniku przeprowadzonych przeglądów nie stwierdzono istotnych
+nieprawidłowości mogących spowodować zagrożenie bezpieczeństwa użytkowania.
+W obiektach tych stan techniczny poszczególnych elementów budynku określono
+głównie jako dobry i zadowalający. Stwierdzone uszkodzenia wymagające remontu
+lub konserwacji dotyczyły m.in. obluzowania listwy okapowej zbiornika K3-2 od
+strony K3-3 (w obiekcie Wydzielone komory fermentacyjne K 3/1 i K 3/2), spękania
+przy słupach środkowych w galerii wewnętrznej i środkowej okładziny z płytek
+ceramicznych, odparzenia płytek, zanieczyszczenia mchem, spękania płytek
+(Budynek hali pomp), spękania kafli posadzki, oznaczenia wyłączników ppoż.
+wyblakłe/zardzewiałe (Budynek mechanicznego odwadniania z zagęszczaniem
+osadu), porastanie mchu na elementach betonowych podestów bloku biologicznego
+(Blok biologiczny F 2/1 i F 2/2).
+                                                              (akta kontroli str. 246 Tom VII)
+Przedsiębiorstwo przeprowadzało prace remontowo-inwestycyjne obiektów WOŚ.
+Wynikały one bezpośrednio z zaleceń zawartych w wynikach kontroli okresowych,
+jak również z bieżących potrzeb eksploatacyjnych. Zakres prac remontowych
+obejmował m.in.: uszczelnienie metodą iniekcji spękań betonu ścian zewnętrznych
+bloku biologicznego F2/2, F3/1 w celu zatrzymania istniejących przecieków
+i niedopuszczenie do powstania nowych w miejscach istniejących pęknięć ścian
+betonowych na WOŚ, wymiana stolarki drzwiowej w rozdzielniach elektrycznych,
+remont powierzchni betonowych kopuł i ciągu komunikacyjnego wydzielonej komory
+fermentacyjnej, wykonanie remontu części hali pompowni głównej, prac
+konserwacyjno-remontowych       w    Budynku       mechanicznego     odwaniania
+z zagęszczaniem osadu.
+                                                 (akta kontroli str. 246-253, 293-332 Tom I)
+MPWiK zgodnie z art. 304 uPW przekazywało do WIOŚ we Wrocławiu wyniki
+pomiarów ilości i jakości wprowadzonych ścieków do wód lub do ziemi. Wyniki
+analiz ścieków odprowadzanych z WOŚ przekazywane były w terminie 30 dni od
+dnia zakończenia kwartału, w którym pomiary zostały wykonane. Poboru prób
+ścieków oraz ich analizy dokonywało akredytowane laboratorium w rozumieniu
+przepisów ustawy z dnia 30 sierpnia 2002 r. o systemie oceny zgodności43.
+Laboratorium to posiadało akredytację Polskiego Centrum Akredytacji o nr AB 213.
+Menedżer Działu Inżynieryjnego wyjaśnił, że w okresie objętym kontrolą nie
+wystąpiły przypadki, kiedy to WIOŚ nie uznał przedłożonych przez Przedsiębiorstwo
+wyników pomiarów ilości, stanu i składu ścieków. Przedsiębiorstwo nie otrzymało
+z WIOŚ decyzji o ustaleniu opłaty podwyższonej ani zawiadomienia o wszczęciu
+postępowania w sprawie o ustalenie opłaty podwyższonej za odprowadzanie
+ścieków.
+                                            (akta kontroli str. 246-250 Tom I, 61-293 Tom II)
+MPWiK w związku z korzystaniem z usług wodnych polegających na wprowadzeniu
+ścieków do wód lub do ziemi bez wymaganego pozwolenia wodnoprawnego albo
+pozwolenia zintegrowanego otrzymało od Państwowego Gospodarstwa Wodnego
+Wody Polskie Zarząd Zlewni we Wrocławiu informacje o ustaleniu opłaty
+
+43 Dz. U. z 2019 r. poz. 155, ze zm.
+
+
+                                       23
+                   podwyższonej za usługi wodne. Opłaty te dotyczyły sytuacji awaryjnych jakie miały
+                   miejsce na sieci kanalizacyjnej w 2019 r. i 2020 r., skutkujące zrzutem
+                   nieoczyszczonych ścieków do środowiska, a ich wysokość określona została na
+                   podstawie oświadczenia podmiotu obowiązanego do ponoszenia opłat za usługi
+                   wodne. Za okres III kwartału 2019 r. opłata podwyższona wyniosła 135 zł, za okres
+                   IV kwartału 2019 r. – 1 065 zł, a za okres II kwartału 2020 r. – 510 zł. Do dnia
+                   zakończenia kontroli Przedsiębiorstwo nie otrzymało informacji o naliczeniu opłaty
+                   podwyższonej która wystąpiła w III kwartale 2020 r. i została wykazana
+                   w oświadczeniu podmiotu obowiązanego do ponoszenia opłat za usługi wodne.
+                   Opłaty podwyższone zostały wniesione na rachunek Państwowego Gospodarstwa
+                   Wodnego Wody Polskie w terminie wyznaczonym w Informacjach ustalających
+                   wysokość opłaty podwyższonej za usługi wodne.
+                                                                       (akta kontroli str. 246-250, 333-412 Tom I, 13-42 Tom IV)
+     Stwierdzone   W działalności kontrolowanej jednostki w przedstawionym wyżej zakresie
+nieprawidłowości   stwierdzono następujące nieprawidłowości:
+                   1. Nie przeprowadzono (z wyłączeniem 2020 r.) okresowej kontroli stanu
+                   technicznego budynku (hali krat i hali piaskowników) co najmniej dwa razy w roku,
+                   tj. w terminie do 31 maja oraz do 30 listopada, co było niezgodne z art. 62 ust. 1
+                   pkt 3 Prawa budowlanego.
+                   W toku kontroli NIK ustalono, że obie części budynku (hala krat oraz hala
+                   piaskowników) mają zapewnioną komunikację wewnętrzną i stanowią jeden
+                   budynek w rozumieniu przepisów Prawa budowlanego44. Budynek ten spełnia
+                   przesłanki określone w art. 62 ust. 1 pkt 3 Prawa budowlanego, zgodnie z którymi
+                   w przypadku budynków o powierzchni zabudowy przekraczającej 2000 m² oraz
+                   innych obiektów budowlanych o powierzchni dachu przekraczającej 1000 m²
+                   okresowe kontrole stanu technicznego obiektu budowlanego, instalacji i przewodów
+                   przeprowadza się co o najmniej dwa razy w roku. Łączna powierzchnia zabudowy
+                   budynku wynosi 2 948 m², a powierzchnia dachu 3 401 m².
+                   Prezes Zarządu MPWiK wyjaśnił, że budynek piaskowników i budynek hali krat
+                   miały wykonywane okresowe przeglądy raz w roku, jako budynki o powierzchni
+                   zabudowy < 2000 m² i nie kwalifikujące się również do obiektów o powierzchni
+                   dachu < 1000 m². W związku z powyższym żaden z budynków nie spełniał
+                   wymogów określonych w art. 62 ust. 1 pkt 3 ustawy Prawo budowlane i nie wymagał
+                   przeprowadzenia okresowej kontroli stanu technicznego co najmniej dwa razy do
+                   roku. Zgodnie z przywołaną interpretacją Głównego Urzędu Nadzoru Budowlanego
+                   z dnia 26 maja 2015 r. w sprawie obowiązku prowadzenia książki obiektu
+                   budowlanego dla budynków połączonych łącznikiem: (…) istnienie łącznika między
+                   kilkoma segmentami – czyli konstrukcji łączącej co najmniej dwa segmenty –
+                   oznacza, że każdy z tych segmentów nie może być kwalifikowany jako samodzielna
+                   konstrukcyjnie całość. Tym samym zespół segmentów (pawilonów) – trwale
+                   związanych z gruntem, wydzielonych z przestrzeni za pomocą przegród
+                   budowlanych praz posiadających fundamenty i dach – należy traktować jako jeden
+                   budynek, jeżeli wchodzące w jego skład części są połączone ww. łącznikiem. Jak
+                   wynika z powyższego, obowiązek przeprowadzania okresowych kontroli, o których
+                   mowa w art. 62 ust. 1 Prawa budowlanego co najmniej dwa razy w roku, w terminie
+                   do 31 maja i do 30 listopada, obejmuje te budynki, które spełniają określone
+
+                   44 Zgodnie z interpretacją Głównego Urzędu Budowlanego z dnia 26 maja 2015 r. w sprawie obowiązku prowadzenia książki
+
+                   obiektu budowlanego dla budynków połączonych łącznikiem (…) istnienie łącznika pomiędzy kilkoma segmentami – czyli
+                   konstrukcji łączącej co najmniej dwa segmenty, przeznaczonej do przemieszczania się ludzi między tymi segmentami –
+                   oznacza, że każdy z tych segmentów nie może być traktowany jako samodzielna konstrukcyjnie całość (…). Należy również
+                   zaznaczyć, że budynki składające się z kilku segmentów (pawilonów) połączonych łącznikiem, których powierzchnia zabudowy
+                   przekracza 2000 m² podlegają m.in. obowiązkowi przeprowadzania okresowych kontroli, o którym mowa w art. 62 ust. 1 Prawa
+                   budowlanego, co najmniej dwa razy w roku, w terminach do 31 maja oraz do 30 listopada (art. 62 ust. 1 pkt 3 ww. ustawy).
+
+                                                                             24
+wymagania co do powierzchni zabudowy/powierzchni dachu, a w przypadku dwóch
+oddzielnych budynków (które samodzielnie nie spełniają tych wymogów), niezbędne
+jest istnienie konstrukcji łączącej oba te budynki. Tymczasem pomiędzy budynkiem
+hali krat i budynkiem piaskowników nie ma konstrukcyjnego łącznika, natomiast
+istnieje możliwość komunikacji wewnętrznej. Z tego względu, w stosunku do tych
+budynków brak jest obowiązku przeprowadzania okresowych kontroli, o których
+mowa w art. 62 ust. 1 Prawa budowalnego co najmniej dwa razy w roku.
+Niezależnie jednak od powyższego, MPWiK od 2020 r. prowadzi okresowe kontrole
+tych budynków dwa razy w roku, w terminie do 31 maja i do 30 listopada, do czego
+jest uprawniona (mimo że budynki te nie są budynkami wielkopowierzchniowymi
+zgodnie z przywołaną interpretacją GUNB).
+NIK wskazuje, że rysunek planu zagospodarowania terenu WOŚ stanowiący
+załącznik do operatu wodnoprawnego oraz wyciąg z operatu geodezyjnego
+wskazują, że budynek hali krat i budynek hali piaskowników stanowią jeden obiekt
+budowlany w rozumieniu przepisów Prawa budowlanego. Pomiędzy obiema
+częściami obiektu zapewniona jest komunikacja wewnętrzna. Hala krat posiada
+powierzchnię zabudowy 1 592 m² oraz powierzchnię dachu 2 043 m², a hala
+piaskowników powierzchnię zabudowy 1 356 m² oraz powierzchnię dachu 1 358 m².
+Wobec powyższego parametry (powierzchni zabudowy/powierzchnia dachu), które
+determinują obowiązek przeprowadzania tych kontroli co najmniej dwa razy w roku,
+należy uwzględniać łącznie dla całego obiektu budowlanego.
+Przywołana opinia Głównego Urzędu Nadzoru Budowlanego odnosi się do sytuacji,
+w której istnienie łącznika między kilkoma segmentami (budynkami), czyli konstrukcji
+łączącej co najmniej dwa segmenty, przeznaczonej do przemieszczania się ludzi
+między tymi segmentami oznacza, że każdy z tych segmentów nie może być
+traktowany jako samodzielnie konstrukcyjnie całość. Tym samym w przypadku
+dwóch budynków połączonych łącznikiem, lub budynku składającego się z dwóch
+części zapewniającego komunikacje wewnętrzną, których powierzchnia zabudowy
+przekracza 2000 m² wymagane jest przeprowadzenie kontroli co najmniej dwa razy
+w roku.
+W ocenie NIK działania MPWiK polegające na przeprowadzaniu od 2020 r.
+okresowych kontroli stanu technicznego budynku hali krat i hali piaskowników
+z częstotliwością co najmniej dwa razy w roku, przy założeniu braku takiego
+obowiązku, nie miałoby uzasadnienia. Zlecone przez MPWiK w 2020 r. zamówienie
+na wykonanie okresowych kontroli budynków i obiektów budowlanych zaliczało
+budynek hali krat i hali piaskowników do budynków o powierzchni zabudowy
+powyżej 2000 m² oraz innych budowli o powierzchni dachu przekraczające
+1000 m². Powyższe skutkuje brakiem rzetelnej informacji o stanie technicznym
+budynku, w tym także o potrzebie wykonania ewentualnych prac konserwacyjnych.
+            (akta kontroli str. 328-334, 383 Tom III, 137-146, 150, 454-500 Tom IV, 26-37 Tom VII)
+2. Okresowe kontrole stanu technicznego budynku hali pomp i bloku biologicznego
+F2/1 i F2/2 nie obejmowały swym zakresem przeglądu instalacji elektrycznej
+i odgromowej, co było niezgodne z art. 62 ust. 1 pkt 2 Prawa budowlanego.
+Prezes Zarządu MPWiK wyjaśnił, że brak przeglądu instalacji elektrycznej
+i odgromowej, podczas przeprowadzonej w 2016 r. (raz na pięć lat) okresowej
+kontroli stanu technicznego i przydatności do użytkowania, hali pomp oraz bloku
+biologicznego F2/1 i F2/2 spowodowany był przeoczeniem pracownika, który
+w ówczesnym czasie, w wyniku zmian organizacyjnych w Przedsiębiorstwie, przejął
+ten zakres odpowiedzialności. W kolejnych latach przeglądy instalacji elektrycznej
+i odgromowej dla ww. obiektów były przeprowadzone częściej niż wymagany
+pięcioletni okres, tzn. w roku 2017, 2018, 2019 i 2020.
+
+                                              25
+                                                         (akta kontroli str. 137-146 Tom IV, 154-187 Tom V)
+
+3.2 Zagospodarowanie komunalnych osadów ściekowych
+W latach 2018-2020 (do 30 września) MPWiK wytworzyło 14,508 Mg odpadów
+niebezpiecznych oraz 189 985,10 Mg odpadów innych niż niebezpieczne45. Ilości te
+przekraczały progi określone w art. 180a ustawy z dnia 27 kwietnia 2001 r. Prawo
+ochrony środowiska46, dla których wymagane było uzyskanie pozwolenia na
+wytwarzanie odpadów.
+                                                               (akta kontroli str. 453-548 Tom I, 1-59 Tom II)
+Decyzją Nr P 99/2012 z dnia 27 sierpnia 2012 r.47 Marszałek Województwa
+Dolnośląskiego udzielił Przedsiębiorstwu pozwolenia na wytwarzanie odpadów
+niebezpiecznych i innych niż niebezpieczne na terenie WOŚ, w tym wytwarzanie
+odpadów o kodzie 19 08 05 – ustabilizowane komunalne osady ściekowe w ilości
+100 000 Mg/rok. Wytworzona masa koś w 2018 r. wynosiła 25 139 Mg, w 2019 r. –
+25 179 Mg, a w 2020 r. (do 30 września) – 13 962 Mg. Osady te nie zostały
+zakwalifikowane jako odpady niebezpieczne.
+Menedżer Działu Inżynieryjnego wyjaśnił, że w okresie objętym kontrolą MPWiK nie
+przekazywało komunalnych osadów ściekowych w celu ich odzysku w procesie R10
+– Obróbka na powierzchni ziemi przynosząca korzyść dla rolnictwa lub poprawę
+stanu środowiska, w związku z czym nie podejmowano żadnych specjalnych
+czynności, które miałyby być związane z takim przekazaniem odpadów.
+                                                    (akta kontroli str. 246-250, 415-453 Tom I, 1-59 Tom II)
+Sposób postępowania z koś był zgodny ze sposobem określonym w pozwoleniu na
+wytwarzanie odpadów, tj. obejmował odzysk lub unieszkodliwianie we własnym
+zakresie bądź przekazanie podmiotom posiadającym stosowne zezwolenie w celu
+odzysku lub unieszkodliwiania. Powstające w procesie oczyszczania ścieków koś
+były przekazywane podmiotom zewnętrznym wyłącznie w celu zagospodarowania
+w procesach:
+R1 – wykorzystywanie głównie jako paliwa i innego środka wytwarzania energii:
+     paliwo;
+R3 – Recykling lub odzysk substancji organicznych, które nie są stosowane jako
+rozpuszczalniki (w tym kompostowanie i inne procesy przekształcenia):
+     rekultywacja składowiska (tworzenie warstwy okrywy rekultywacyjnej –
+        biologicznej);
+     produkcja pelletu, granulatu, brykietu;
+     produkcja polepszacza glebowego.
+MPWiK nie przekazywało koś do stosowania w celach odzysku, o których mowa
+w art. 96 ust. 1 ustawy z dnia 14 grudnia 2012 r. o odpadach48. Koś nie był
+stosowany poza obszarem województwa, na terenie którego zostały wytworzone.
+                                                              (akta kontroli str. 26-37 Tom VII, 246 Tom VII)
+Badania koś49, wykorzystywanych do wykonywania okrywy rekultywacyjnej
+składowisk odpadów, przeprowadzane były przez akredytowane laboratorium,
+45 W 2018 r. 3,2680 Mg odpadów niebezpiecznych i 77 042,68 Mg odpadów innych niż niebezpieczne; w 2019 r. 5,6600 Mg
+
+odpadów niebezpiecznych i 84 941,28 Mg odpadów innych niż niebezpieczne, a w 2020 r. (do 30 września) 5,5800 Mg
+odpadów niebezpiecznych i 28 001,14 Mg odpadów innych niż niebezpieczne.
+46 Dz. U. z 2020 r. poz. 1219, ze zm.
+47 Zmienione decyzją Marszałka Województwa Dolnośląskiego Nr P 99.1/2015 z dnia 10 grudnia 2015 r.
+48 Dz. U. z 2020 r. poz. 797, ze zm. Dalej: ustawa o odpadach.
+49 Zgodnie z rozporządzeniem Ministra Środowiska z dnia 30 kwietnia 2013 r. w sprawie składowisk odpadów (Dz. U.
+
+poz. 523) ustabilizowane komunalne osady ściekowe wykorzystywane do wykonywania okrywy rekultywacyjnej nie mogą
+przekraczać warunków dla komunalnych osadów ściekowych, określonych w przepisach wydanych na podstawie art. 96
+ustawy o odpadach dla stosowania komunalnych osadów ściekowych przy dostosowaniu gruntów do określonych potrzeb
+
+                                                        26
+                   posiadające akredytację Polskiego Centrum Akredytacji o nr AB 1232. W toku
+                   kontroli NIK ustalono, że częstotliwość zleconych harmonogramem badań określono
+                   naruszeniem rozporządzenia w sprawie koś, co zostało opisane w sekcji
+                   Stwierdzone nieprawidłowości.
+                                                                                                   (akta kontroli str. 246 Tom VII)
+                   W okresie objętym kontrolą, koś przekazywane były, na podstawie zawartych umów,
+                   podmiotom posiadającym stosowne zezwolenia na przetwarzanie koś50.
+                                                              (akta kontroli str. 246-250 Tom I, 294-408 Tom II, 246 Tom VII)
+                   Dane o ilości suchej masy powstającej na oczyszczalni wraz ze sposobem
+                   zagospodarowania osadu przekazane Prezydentowi Wrocławia w celu wykazania
+                   w sprawozdaniu z realizacji AKPOŚK 2017 były zgodne z danymi posiadanymi
+                   przez Przedsiębiorstwo.
+                                                                       (akta kontroli str. 111-148, 453-548 Tom I, 1-56 Tom II)
+                   W ramach kontroli zleconej przez NIK, inspektorzy WIOŚ w trakcie oględzin
+                   przeprowadzonych w dniu 3 listopada 2020 r. stwierdzili, że ustabilizowane
+                   komunalne osady ściekowe były kierowane bezpośrednio na pojazdy należące do
+                   kontrolowanego Przedsiębiorstwa, skąd odpady te były następnie przewożone do
+                   miejsc zagospodarowania. Nie stwierdzono magazynowania odpadów w postaci
+                   komunalnych osadów ściekowych na terenie placu przy budynku gospodarki
+                   osadowej.
+                                                                                               (akta kontroli str. 98-206 Tom VII)
+                   Menedżer Działu Inżynieryjnego wyjaśnił, że ostateczne zagospodarowanie osadów
+                   ściekowych powstających na terenie wrocławskiej oczyszczalni, w okresie objętym
+                   kontrolą, odbywało się poprzez przekazywanie koś podmiotom zewnętrznym w celu
+                   odzysku w procesie R3 przy wykonywaniu warstwy rekultywacyjnej oraz R1
+                   w procesie wykorzystywania jako paliwo. Zagospodarowanie koś w ramach
+                   wewnętrznych procesów technologicznych gospodarki osadowej odbywało się na
+                   urządzeniach, które w ww. okresie nie uległy awarii.
+                                                                                                (akta kontroli str. 246-250 Tom I)
+     Stwierdzone   W działalności kontrolowanej jednostki w przedstawionym wyżej zakresie
+nieprawidłowości   stwierdzono następującą nieprawidłowość:
+                   Przyjęty przez MPWiK harmonogram zleceń badań komunalnych osadów
+                   ściekowych nie zapewniał wymaganej częstotliwości przeprowadzania tych badań.
+                   Zgodnie z § 5 ust. 2 rozporządzenia w sprawie koś częstotliwość tych badań,
+                   zależna od obciążenia oczyszczalni ścieków wyrażoną równoważną liczbą
+                   mieszkańców (przy równoważnej liczbie mieszkańców powyżej > 100 000) wynosi
+                   nie rzadziej niż raz na dwa miesiące. W okresie objętym kontrolą badania koś (po
+                   higienizacji) z naruszeniem ww. przepisu wykonano w terminach pomiędzy:
+                   5 kwietnia 2018 r. a 13 czerwca 2018 r. (opóźnienie wyniosło osiem dni), 8 sierpnia
+                   2018 r. a 31 października 2018 r. (opóźnienie wyniosło 23 dni), 4 kwietnia 2019 r.
+                   a 7 czerwca 2019 r. (opóźnienie wyniosło trzy dni), 7 czerwca 2019 r. a 21 września
+                   2019 r. (opóźnienie wyniosło 69 dni) oraz 31 grudnia 2019 r. a 8 maja 2020 r.
+                   (opóźnienie wyniosło 69 dni).
+
+
+
+                   wynikających z planów gospodarki odpadami, planów zagospodarowania przestrzennego lub decyzji o warunkach zabudowy
+                   i zagospodarowania terenu.
+                   50 Umowa nr ZB/11/2014 z 25 lutego 2014 r., Umowa nr 1315/NOZ/U/2018 z 13 sierpnia 2018 r., Umowa nr ZP/OŚ/1/2019
+
+                   z 1 lutego 2019 r., Umowa nr 1255/FZ/U/2019 z 30 sierpnia 2019 r., Umowa nr 0308/TS/U/2019 z dnia 7 lutego 2019 r.,
+                   Umowa nr PN/0226/U/2020/1/A z 31 lipca 2020 r.
+
+                                                                           27
+                    Prezes Zarządu MPWiK wyjaśnił, że badania komunalnych osadów ściekowych
+                    w kontrolowanym okresie były realizowane na podstawie umów zawartych
+                    z akredytowanymi laboratoriami. Załącznikiem do przedmiotowych umów jest
+                    harmonogram poboru prób komunalnych osadów ściekowych, który przewidywał
+                    zgodnie z OPZ m.in. następujące daty: 04.2018, 06.2018, 08.2018, 12.2018,
+                    02.2019, 04.2019, 06.2019, 08.2019, 10.2019. Rzeczywiste daty poboru prób
+                    wynikają wyłącznie z problemów po stronie laboratorium, polegających na
+                    trudnościach w skoordynowaniu i synchronizacji przyjazdów próbobiorcy w tym
+                    samym dniu każdego dwumiesięcznego okresu prowadzenia poboru.
+                    Dalej wyjaśnił, że brak badań koś przeprowadzonych metodami referencyjnymi
+                    w pierwszych miesiącach 2020 r. wynika z sytuacji rozpowszechniania się wirusa
+                    SARS-CoV-2 w Polsce oraz ograniczeniami wstępu na WOŚ w związku z epidemią.
+                    Sytuacja ta miała również przełożenie na czynniki kadrowe skutkujące opóźnionym
+                    zawarciem nowej umowy ze stałym harmonogramem poboru prób.
+                    NIK wskazuje, że harmonogram poboru prób koś powinien określać częstotliwość
+                    badań w taki sposób, by nie naruszać przepisów rozporządzenia w sprawie koś.
+                    Natomiast zawarcie umowy na przeprowadzanie badań koś w 2020 r. powinno
+                    nastąpić z wyprzedzeniem umożliwiając zachowanie ciągłości tych badań
+                    z uwzględnieniem ich częstotliwości.
+                                                                     (akta kontroli str. 26-37, 246 Tom VII)
+
+OCENA CZĄSTKOWA     MPWiK dotrzymywało warunków odprowadzania ścieków komunalnych określonych
+                    w pozwoleniu wodnoprawnym. Stan techniczny urządzeń technologicznych
+                    oczyszczalni ścieków nie budził zastrzeżeń. Przedsiębiorstwo dotrzymywało
+                    warunków decyzji określającej sposób postepowania z koś.
+                    Niemniej jednak nie zapewniono wymaganej częstotliwości badań koś. Nadto
+                    analiza protokołów z okresowych kontroli stanu technicznego obiektów WOŚ
+                    wykazała naruszenie polegające na nieprzeprowadzeniu kontroli w wymaganych
+                    Prawem budowlanym terminach i wymaganym zakresie.
+
+          OBSZAR
+                    4. Finansowanie           zbierania        i   oczyszczania              ścieków
+                       komunalnych
+                    4.1 Zapewnienie środków na finansowanie zbierania i oczyszczania
+                    ścieków komunalnych
+       Opis stanu   Planowane wydatki na realizację zadań w zakresie zbiorowego odprowadzania
+     faktycznego    ścieków wynosiły: w 2018 r. – 30 204,21 tys. zł, w 2019 r. – 43 961,00 tys. zł,
+                    a w 2020 r. (do 30 września) – 62 495,35 tys. zł. Źródłem ich finansowania były
+                    środki własne Przedsiębiorstwa oraz środki unijne pozyskane w ramach Programu
+                    Operacyjnego Infrastruktura i Środowisko 2014-2020 (dalej: POIŚ).
+                    MPWiK zapewniło środki finansowe na realizację przedsięwzięć realizowanych
+                    w okresie objętym kontrolą, ujętych w AKPOŚK 2017, z wyjątkiem inwestycji
+                    obejmującej rozbudowę WOŚ. MPWiK w dniu 4 sierpnia 2017 r. podpisało z Biurem
+                    Projektów Budownictwa Komunalnego we Wrocławiu Sp. z o.o. umowę na
+                    wykonanie analizy techniczno-ekonomicznej (etap I), dokumentacji projektowej,
+                    specyfikacji technicznej wykonania i odbioru robót budowlanych oraz kosztorysu
+                    inwestorskiego (etap II) dla zadania „Dostosowanie Wrocławskiej Oczyszczalni
+                    Ścieków do przejęcia ścieków nadmiarowych pogody deszczowej”. W dniu 3 grudnia
+                    2018 r. Przedsiębiorstwo poinformowało wykonawcę, że nie posiada środków
+                    finansowych na rozbudowę oczyszczalni w żadnym z zaproponowanych w analizie
+                    techniczno-ekonomicznej wariantów. MPWiK poinformowało wykonawcę
+
+                                                          28
+                   o konieczności przewidzenia etapowania rozbudowy oczyszczalni w projekcie
+                   budowlanym lub rozważenie wprowadzenia innego rozwiązania oczyszczania
+                   ścieków i porównania szacunkowych kosztów takiego zadania z kosztami
+                   wybranego wariantu. Przyczyną, dla której nie uzyskano finansowania dla ww.
+                   zadania był brak możliwości uzyskania dodatkowego wsparcia ze środków unijnych.
+                   Menadżer Działu Inżynieryjnego wyjaśnił, że po opracowaniu AKPOŚK 2017
+                   ogłoszony został tylko jeden konkurs na udzielenie wsparcia finansowego z POIŚ.
+                   W latach 2018-2020 nie zostały ogłoszone żadne nowe konkursy na działania
+                   w ramach gospodarki wodno-ściekowej, tym samym MPWiK nie miało możliwości
+                   uzyskania dofinansowania na realizację kolejnych zadań. Zadania były finansowane
+                   ze środków własnych w miarę możliwości.
+                   MPWiK w lutym 2017 r. złożyło do Narodowego Funduszu Ochrony Środowiska
+                   i Gospodarki Wodnej wniosek o dofinansowanie ze środków Funduszu Spójności
+                   w ramach POIŚ, Priorytet II Ochrona środowiska, w tym adaptacja do zmian klimatu,
+                   Działanie 2.3 Gospodarka wodno-ściekowa w aglomeracjach projektu pn. Docelowe
+                   rozwiązanie gospodarki ściekowej dla miasta Wrocławia – Faza I. Umowę
+                   o dofinansowanie podpisano w dniu 30 października 2017 r. Całkowita wartość
+                   projektu wyniosła 197 197,57 tys. zł, w tym kwota dofinansowania wyniosła
+                   102 206,06 tys. zł. Projekt obejmował zarówno działania z zakresu gospodarki
+                   ściekowej, jak i gospodarki wodnej. Według umowy o dofinansowanie wsparciem
+                   objęto przedsięwzięcia z zakresu gospodarki ściekowej, w tym: modernizację sieci
+                   i obiektów kanalizacyjnych w kwocie 4 881,78 tys. zł, rozbudowę systemu
+                   kanalizacyjnego w kwocie 25 032,24 tys. zł oraz systemu retencji na sieci
+                   kanalizacyjnej w kwocie 43 058,26 tys. zł.
+                   Menedżer Działu Inżynieryjnego wyjaśnił, że zaplanowane przez MPWiK wydatki
+                   zapewniały realizację części zadań, które były zaplanowane na najbliższe lata.
+                   Natomiast zadania, których na czas tworzenia zakresu rzeczowego AKPOŚK 2017
+                   ówczesny plan inwestycyjny nie obejmował (zadania do realizacji od 2021 r.) nie
+                   miały zapewnionego finansowania. Niemniej zadania te, po weryfikacji zasadności
+                   ich realizacji, zostały uwzględnione w kolejnych planach inwestycyjnych. Należy
+                   również wskazać, że zakres rzeczowy AKPOŚK 2017 obejmował inwestycje służące
+                   utrzymaniu pełnej zgodności z dyrektywą 91/271/EWG i maksymalizacji celów w niej
+                   określonych, nie zaś zapewnieniu jej osiągnięcia, tym samym zaplanowane wydatki
+                   nie wpływały w sposób krytyczny na osiągnięcie celów AKPOŚK 2017. Realizacja
+                   ich będzie jednak zależała od pozyskania zewnętrznych środków finansowych oraz
+                   inwestycji dokonanych przez PGW Wody Polskie na ich majątku.
+                                                       (akta kontroli str. 409-417, 422-599 Tom II, 1-125 Tom III)
+     Stwierdzone   W działalności kontrolowanej jednostki w przedstawionym wyżej zakresie nie
+nieprawidłowości   stwierdzono nieprawidłowości.
+                   4.2 Finansowanie zbierania i oczyszczania ścieków komunalnych
+                   MPWiK na realizację zadań w zakresie zbiorowego odprowadzania ścieków, w tym
+                   na przedsięwzięcia ujęte w AKPOŚK 2017 poniosło wydatki w wysokości: w 2018 r.
+                   – 18 218, 34 tys. zł, w 2019 r. – 18 278,17 tys. zł, a w 2020 r. (do dnia 30 września
+                   2020 r.) – 38 171,69 tys. zł. Źródłem finansowania tych wydatków były środki własne
+                   Przedsiębiorstwa oraz środki unijne pozyskane w ramach POIŚ.
+                   Zidentyfikowano trzy projekty realizowane w ramach AKPOŚK 2017, w których
+                   stwierdzono opóźnienia w realizacji zakresu rzeczowego, a tym samym realizacji
+                   wydatków zgodnie z harmonogramami finansowym. I tak: [1] przesuniecie czasowe
+                   w realizacji przedsięwzięcia dotyczącego Rozbudowy WOŚ spowodowane było
+                   wydłużeniem procesu przygotowania i przeprowadzenia przetargu na realizację
+                   m.in. analizy techniczno-ekonomicznej inwestycji, a także wydłużająca się
+                                                            29
+                   procedurą uzyskania decyzji o środowiskowych uwarunkowaniach w Regionalnej
+                   Dyrekcji Ochrony Środowiska we Wrocławiu51; [2] przyczyną opóźnienia w realizacji
+                   przedsięwzięcia pn. „Budowa kanalizacji sanitarnej w osiedlach Jerzmanowo
+                   i Jarnołtów” była m.in. zmiana zakresu rzeczowego zadania, jak i technologii
+                   odtworzenia nawierzchni drogowej, co skutkowało koniecznością opracowania
+                   nowej dokumentacji projektowej i uzyskania zamiennego pozwolenia na budowę.
+                   Ponadto postępowanie przetargowe objęte zostało kontrolą Prezesa Urzędu
+                   Zamówień Publicznych, która trwała 41 dni; [3] w odniesieniu do zadania pn.
+                   „Budowa sieci kanalizacji sanitarnej na osiedlu Świniary” opóźnienie wynikało
+                   z konieczności wstrzymania robót do czasu zakończenia prac w drodze
+                   wojewódzkiej nr 342, których przeprowadzenie wymagało poprowadzenia objazdu
+                   przez drogi osiedlowe.
+                   Menedżer Działu Inżynieryjnego wyjaśnił, że zasadniczo wydatki dla
+                   poszczególnych przedsięwzięć zostały poniesione zgodnie z harmonogramem.
+                   W przypadku części zadań nastąpiły przesunięcia czasowe będące konsekwencją
+                   m.in.: postępowań przetargowych, wyższych kosztów inwestycyjnych niż
+                   szacowano, wzrostu kosztów (kosztorysy, wyniki przetargów, wzrost kosztów
+                   materiałów budowlanych), braku możliwości wnioskowania o dofinansowanie
+                   zewnętrzne, przedłużających się terminów uzyskania decyzji administracyjnych
+                   (np. decyzja środowiskowa), sytuacji epidemicznej COVID-19.
+                   W okresie objętym kontrolą nie wystąpiły przypadki wydatkowania zaplanowanych
+                   środków bez uzyskania zaplanowanych efektów.
+                   Przedsiębiorstwo nie podało Prezydentowi Wrocławia realnej kwoty poniesionych
+                   wydatków na realizację przedsięwzięć ujętych w AKPOŚK 2017, co zostało szerzej
+                   opisane w sekcji Stwierdzone nieprawidłowości.
+                                                                                                  (akta kontroli str. 409-417 Tom II)
+     Stwierdzone   W działalności kontrolowanej jednostki w przedstawionym wyżej zakresie
+nieprawidłowości   stwierdzono następującą nieprawidłowość:
+                   Wartości kwot wydatkowanych w latach 2018-2019, które Przedsiębiorstwo
+                   przekazało Prezydentowi Wrocławia w celu sporządzenia przez ten organ
+                   sprawozdania z realizacji KPOŚK, nie odpowiadały faktycznie poniesionym
+                   wydatkom na realizację AKPOŚK 2017. Nakłady poniesione w roku
+                   sprawozdawczym na realizację przedsięwzięć określonych w AKPOŚK 17 wyniosły
+                   kolejno: w 2018 r. – 7 570,8 tys. zł, a w 2019 r. – 8 713,0 tys. zł. Wykazane przez
+                   Przedsiębiorstwo kwoty wynosiły kolejno: 12 426,0 tys. zł oraz 17 195,0 tys. zł.
+                   Prezes Zarządu MPWiK wyjaśnił, że Przedsiębiorstwo aktualizuje corocznie
+                   potrzeby inwestycyjne w zakresie gospodarki ściekowej, co skutkuje
+                   wprowadzeniem nowych zadań do planów inwestycyjnych. Zadania te realizują cele
+                   KPOŚK. Tym samym w sprawozdaniach KPOŚK podawane są łącznie nakłady na
+                   aktualnie realizowane inwestycje, nie tylko ujęte w planie bazowym AKPOŚK 2017.
+                   NIK wskazuje, że informacje jakie Przedsiębiorstwo przekazuje Prezydentowi
+                   Wrocławia wykorzystywane są do sporządzenia sprawozdania, o którym mowa
+                   w art. 89 ust. 2 uPW. Zgodnie z art. 89 ust. 1 pkt 2 ww. ustawy, sprawozdanie to
+                   zawiera informacje o postępie przedsięwzięć określonych w KPOŚK.
+
+
+                   51 Zawiadomieniem z dnia 24 czerwca 2019 r. Regionalny Dyrektor Ochrony Środowiska we Wrocławiu poinformował
+                   Przedsiębiorstwo, że organ nie ma możliwości wydania w ustawowym terminie decyzji o środowiskowych uwarunkowaniach
+                   dla przedmiotowego przedsięwzięcia, ze względu na konieczność wykonania niezbędnych czynności w prowadzonym
+                   postępowaniu, obejmujących m.in. wystąpienie o opinię do organów opiniujących o ustalenie zakresu raportu oddziaływania
+                   przedsięwzięcia na środowisko, wydanie postanowienia o ustaleniu zakresu tego raportu, uzgodnienie warunków realizacji
+                   przedsięwzięcia, przystąpienie do procedury udziału społeczeństwa oraz prawidłowe skompletowanie materiału dowodowego,
+                   a także konieczność przeprowadzenia dalszych czynności administracyjnych wynikających z przepisów obowiązującego
+                   prawa.
+
+                                                                             30
+                  Wobec powyższego Przedsiębiorstwo powinno przedstawiać kwotę wydatków
+                  poniesionych bezpośrednio na ten cel.
+                                                      (akta kontroli str. 409-417 Tom II, 26-37, 68-76 Tom VII)
+OCENA CZĄSTKOWA   MPWiK podejmowało działania w celu uzyskania środków na realizację
+                  przedsięwzięć w zakresie gospodarki finansowej, w tym ujętych w AKPOŚK 2017.
+                  Niemniej jednak Przedsiębiorstwo nie uzyskało finansowania dla każdego
+                  z przedsięwzięć, a poniesione wydatki były niższe od zaplanowanych.
+                  Sprawozdawczość finansowa w zakresie wydatków poniesionych w związku
+                  z realizacją przedsięwzięć ujętych w AKPOŚK 2017 prowadzona była nierzetelnie.
+
+                  IV. Uwagi i wnioski
+                  W związku ze stwierdzonymi nieprawidłowościami, Najwyższa Izba Kontroli, na
+                  podstawie art. 53 ust. 1 pkt 5 ustawy o NIK, przedstawia następujące uwagi
+                  i wnioski:
+         Uwagi    Najwyższa Izba Kontroli nie formułuje uwag.
+        Wnioski   1. Przeprowadzanie okresowych kontroli stanu technicznego sieci kanalizacyjnej
+                     i obiektów budowlanych w zakresie i terminach przewidzianych w przepisach
+                     Prawa budowlanego.
+                  2. Dostosowanie treści umów na świadczenie odbioru nieczystości ciekłych
+                     bytowych z wozów asenizacyjnych do wymogów rozporządzenia w sprawie
+                     warunków wprowadzania nieczystości ciekłych do stacji zlewnych.
+                  3. Wyegzekwowanie od dostawców nieczystości ciekłych pełnych informacji
+                     o pochodzeniu ścieków przyjmowanych do stacji zlewnych.
+                  4. Zapewnienie opomiarowania punktu zlewczego fekaliów, znajdującego się na
+                     terenie WOŚ.
+                  5. Przekazanie Prezydentowi Wrocławia rzetelnych danych z realizacji AKPOŚK
+                     2017.
+                  6. Zapewnienie wykonywania badań koś z częstotliwością określoną
+                     w rozporządzeniu w sprawie koś.
+
+
+
+
+                                                          31
+                        V. Pozostałe informacje i pouczenia
+                        Wystąpienie pokontrolne zostało sporządzone w dwóch egzemplarzach; jeden dla
+                        kierownika jednostki kontrolowanej, drugi do akt kontroli.
+    Prawo zgłoszenia    Zgodnie z art. 54 ustawy o NIK kierownikowi jednostki kontrolowanej przysługuje
+          zastrzeżeń    prawo zgłoszenia na piśmie umotywowanych zastrzeżeń do wystąpienia
+                        pokontrolnego, w terminie 21 dni od dnia jego przekazania. Zastrzeżenia zgłasza się
+                        do dyrektora Delegatury NIK we Wrocławiu. Prawo zgłaszania zastrzeżeń, zgodnie
+                        z art. 61b ust. 2 ustawy o NIK, nie przysługuje do wystąpienia pokontrolnego
+                        zmienionego zgodnie z treścią uchwały w sprawie zastrzeżeń.
+           Obowiązek    Zgodnie z art. 62 ustawy o NIK należy poinformować Najwyższą Izbę Kontroli,
+      poinformowania    w terminie 21 od otrzymania wystąpienia pokontrolnego, o sposobie wykonania
+       NIK o sposobie
+   wykorzystania uwag
+                        wniosków pokontrolnych oraz o podjętych działaniach lub przyczynach niepodjęcia
+i wykonania wniosków    tych działań.
+                        W przypadku wniesienia zastrzeżeń do wystąpienia pokontrolnego, termin
+                        przedstawienia informacji liczy się od dnia otrzymania uchwały o oddaleniu
+                        zastrzeżeń w całości lub zmienionego wystąpienia pokontrolnego.
+
+                        Wrocław, 9 kwietnia 2021 r.
+                                                                                    Najwyższa Izba Kontroli
+                                                                                    Delegatura we Wrocławiu
+                                       Kontroler:                                               p.o. Dyrektor
+                                     Rafał Sudnik                                                         /-/
+                         starszy inspektor kontroli państwowej
+                                                                                              Marcin Kaliński
+                                          /-/
+
+                        Zmian w wystąpieniu pokontrolnym dokonał:
+
+                                                                          p.o. Dyrektor
+                                                                 Delegatury Najwyższej Izby Kontroli
+                                                                           we Wrocławiu
+                                                                          Marcin Kaliński
+
+                                                             ................................................................................
+                                                                                             podpis
+
+
+
+
+                                                                   32
+33
+

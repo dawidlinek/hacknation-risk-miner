@@ -1,0 +1,13 @@
+metric,reference_class,n_train,n_test,share_in_P10_P90,share_le_P80,share_le_P90,share_above_P90,pinball_loss_P90,brier,pred_mean,obs_mean
+delay_days_rec,subsector+value,4432,6101,0.85,0.764,0.85,0.15,16.93,,,
+delay_days_rec,subsector,4432,6101,0.847,0.744,0.847,0.153,17.902,,,
+delay_days_rec,global,4432,6101,0.847,0.743,0.847,0.153,18.318,,,
+delay_pct_rec,subsector+value,4432,6101,0.881,0.773,0.881,0.119,10.46,,,
+delay_pct_rec,subsector,4432,6101,0.886,0.754,0.886,0.114,10.352,,,
+delay_pct_rec,global,4432,6101,0.889,0.752,0.889,0.111,10.385,,,
+cost_dev_pct,subsector+value,4518,6289,0.795,0.795,0.873,0.127,1.563,,,
+cost_dev_pct,subsector,4518,6289,0.79,0.776,0.868,0.132,1.629,,,
+cost_dev_pct,global,4518,6289,0.789,0.754,0.873,0.127,1.618,,,
+late (prob.),subsector+value,4579,6335,,,,,,0.217,0.274,0.334
+late (prob.),subsector,4579,6335,,,,,,0.225,0.269,0.334
+late (prob.),global,4579,6335,,,,,,0.228,0.262,0.334

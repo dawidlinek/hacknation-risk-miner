@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Karta projektu: Steklin</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0A0A0A}a:hover{color:#404040}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #0A0A0A;outline-offset:2px}
+</style>
+</helmet>
+<div style="min-height:100vh;background:#FFFFFF;font-family:'Geist',system-ui,sans-serif;color:#0A0A0A">
+<header style="border-bottom:1px solid #F0F0F0">
+<div style="max-width:1240px;margin:0 auto;padding:14px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px">
+<a href="{{home}}" style="display:inline-flex;align-items:baseline;text-decoration:none;color:#0A0A0A;font-size:19px;font-weight:700;letter-spacing:-.04em">{{brandA}}<span style="margin-left:3px;padding:0 6px 2px;border-radius:8px;background:#0A0A0A;color:#FFFFFF;letter-spacing:-.02em">{{brandB}}</span></a>
+<nav aria-label="Moduły" style="display:flex;gap:4px;flex-wrap:wrap;align-items:center">
+<sc-for list="{{nav}}" as="n" hint-placeholder-count="6"><a href="{{n.href}}" style="{{n.style}}">{{n.label}}<sc-if value="{{n.count}}" hint-placeholder-val="{{false}}"><span style="margin-left:6px;font:600 11px 'Geist Mono',monospace;padding:1px 6px;border-radius:999px;{{n.cs}}">{{n.count}}</span></sc-if></a></sc-for>
+<sc-if value="{{auth}}" hint-placeholder-val="{{false}}"><details style="position:relative"><summary style="list-style:none;min-height:36px;display:inline-flex;align-items:center;padding:0 12px;border-radius:999px;font:500 14px 'Geist',sans-serif;color:#404040;cursor:pointer">Więcej</summary><div style="position:absolute;right:0;top:42px;z-index:5;background:#FFFFFF;border:1px solid #E5E5E5;border-radius:18px;padding:6px;min-width:200px;box-shadow:0 12px 32px rgba(10,10,10,.14);display:flex;flex-direction:column"><sc-for list="{{more}}" as="m" hint-placeholder-count="3"><a href="{{m.href}}" style="padding:10px 12px;border-radius:12px;text-decoration:none;font:500 14px 'Geist',sans-serif;color:#0A0A0A">{{m.label}}</a></sc-for></div></details></sc-if>
+</nav>
+<div style="display:flex;align-items:center;gap:10px"><a href="A6-Czat.dc.html" style="min-height:40px;display:inline-flex;align-items:center;gap:8px;padding:0 14px;border-radius:999px;border:1px solid #E5E5E5;text-decoration:none;color:#0A0A0A;font:500 14px 'Geist',sans-serif"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"></path></svg>Zapytaj</a><sc-if value="{{auth}}" hint-placeholder-val="{{false}}"><button type="button" aria-label="Konto: ekspert" style="width:40px;height:40px;border-radius:999px;border:1px solid #E5E5E5;background:#F5F5F5;font:600 14px 'Geist',sans-serif">E</button></sc-if><sc-if value="{{anon}}" hint-placeholder-val="{{false}}"><a href="Main.dc.html" style="min-height:40px;display:inline-flex;align-items:center;padding:0 16px;border-radius:999px;background:#0A0A0A;color:#FFFFFF;text-decoration:none;font:600 14px 'Geist',sans-serif">Zaloguj się</a></sc-if></div>
+</div>
+</header>
+<div style="max-width:1240px;margin:0 auto;padding:36px 24px 72px;display:flex;flex-direction:column;gap:22px">
+<div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:flex-end">
+<div style="display:flex;flex-direction:column;gap:10px">
+<span style="font:500 13px 'Geist Mono',monospace;color:#6B6B6B"><a href="B2-Projekty.dc.html" style="color:#6B6B6B">Projekty</a> / RM-2026-003, Gmina Czernikowo, NIP 879 246 68 69</span>
+<h1 style="margin:0;font-size:36px;font-weight:600;letter-spacing:-.035em;line-height:1.1">Oczyszczalnia ścieków w Steklinie</h1>
+
+</div>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><button type="button" style="min-height:42px;padding:0 16px;border-radius:999px;border:1px solid #E5E5E5;background:#FFFFFF;font:500 14px 'Geist',sans-serif">Wzbogać ponownie</button><button type="button" style="min-height:42px;padding:0 16px;border-radius:999px;border:1px solid #E5E5E5;background:#FFFFFF;font:500 14px 'Geist',sans-serif">Eksportuj</button></div>
+</div>
+<nav aria-label="Widok projektu" style="display:flex;gap:6px;flex-wrap:wrap"><sc-for list="{{tabs}}" as="t" hint-placeholder-count="4"><a href="{{t.href}}" style="{{t.style}}">{{t.l}}</a></sc-for></nav>
+
+<div style="display:flex;flex-wrap:wrap;gap:36px;align-items:flex-start">
+<main style="flex:999 1 560px;min-width:0;display:flex;flex-direction:column;gap:24px">
+<div style="background:#0A0A0A;color:#FFFFFF;border-radius:22px;padding:22px 24px;display:flex;flex-direction:column;gap:8px">
+<span style="font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#A3A3A3">Co się stało</span>
+<p style="margin:0;font-size:20px;line-height:1.45;font-weight:500;letter-spacing:-.01em">277 dni po terminie i 40,3% drożej. Dwa razy dopłacano za roboty, których nie było w PFU; potem termin przesunęło pozwolenie wodnoprawne.</p>
+
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px">
+<sc-for list="{{pva}}" as="p" hint-placeholder-count="2">
+<div style="background:#F6F6F6;border-radius:22px;padding:18px 20px;display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-size:14px;color:#6B6B6B">{{p.label}}</span><span style="font-size:28px;font-weight:600;letter-spacing:-.04em">{{p.delta}}</span></div>
+<div style="height:10px;border-radius:999px;background:#E5E5E5;position:relative;overflow:hidden"><div style="position:absolute;top:0;bottom:0;left:0;border-radius:999px;background:#0A0A0A;{{p.planW}}"></div><div style="position:absolute;top:0;bottom:0;border-radius:0 999px 999px 0;background:#EA580C;{{p.overW}}"></div></div>
+<span style="font:500 12px 'Geist Mono',monospace;color:#6B6B6B">{{p.note}}</span>
+</div>
+</sc-for>
+</div>
+
+<section aria-labelledby="k1" style="display:flex;flex-direction:column;gap:6px">
+<h2 id="k1" style="margin:0 0 8px;font-size:20px;font-weight:600;letter-spacing:-.02em">Przebieg</h2>
+<sc-for list="{{steps}}" as="s" hint-placeholder-count="7">
+<div style="display:flex;gap:14px;align-items:flex-start;padding:12px 14px;border-radius:18px;border:1px solid #F0F0F0">
+<sc-if value="{{s.done}}" hint-placeholder-val="{{true}}"><span style="width:22px;height:22px;flex:none;border-radius:999px;background:#0A0A0A;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span></sc-if>
+<sc-if value="{{s.now}}" hint-placeholder-val="{{false}}"><span style="width:22px;height:22px;flex:none;box-sizing:border-box;border-radius:999px;border:2px solid #EA580C;display:inline-flex;align-items:center;justify-content:center"><span style="width:8px;height:8px;border-radius:999px;background:#EA580C"></span></span></sc-if>
+<sc-if value="{{s.miss}}" hint-placeholder-val="{{false}}"><span style="width:22px;height:22px;flex:none;box-sizing:border-box;border-radius:999px;border:2px dashed #A3A3A3"></span></sc-if>
+<span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px"><span style="font-size:15px;font-weight:600">{{s.title}}</span><span style="font-size:14px;color:#525252">{{s.text}}</span></span>
+<span style="display:flex;flex-direction:column;align-items:flex-end;gap:2px;font:500 12px 'Geist Mono',monospace;color:#6B6B6B;text-align:right"><span style="color:#0A0A0A">{{s.date}}</span><a href="{{s.href}}" style="color:#6B6B6B">{{s.ref}}</a></span>
+</div>
+</sc-for>
+</section>
+
+<section aria-labelledby="kc" style="border:1px solid #E5E5E5;border-radius:28px;padding:20px 22px;display:flex;flex-direction:column;gap:12px;box-shadow:0 1px 2px rgba(0,0,0,.04),0 12px 32px rgba(0,0,0,.05)">
+<div style="display:flex;align-items:center;gap:10px"><span style="width:30px;height:30px;flex:none;border-radius:10px;background:#0A0A0A;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"></path></svg></span><h2 id="kc" style="margin:0;font-size:16px;font-weight:600">Zapytaj o ten projekt</h2></div>
+<div style="display:flex;justify-content:flex-end"><div style="max-width:90%;padding:10px 14px;border-radius:18px 18px 6px 18px;background:#0A0A0A;color:#FFFFFF;font-size:14px;line-height:1.45">Czy wykonawca miał wtedy inne umowy?</div></div>
+<div style="display:flex;flex-direction:column;gap:6px">
+<p style="margin:0;font-size:14px;line-height:1.5">Tak. Od 07.2024 do 09.2025 ten sam wykonawca modernizował też infrastrukturę wodno-ściekową w Gminie Osiek (3,51 mln zł). Tamta umowa skończyła się 147 dni po terminie. To kontekst, nie dowód przyczyny.</p>
+<span style="font:500 11.5px 'Geist Mono',monospace;color:#6B6B6B">źródło: BZP, 8 umów wykonawcy od 2024 r.</span>
+<a href="B2-Projekty.dc.html" style="align-self:flex-start;min-height:32px;display:inline-flex;align-items:center;padding:0 12px;border-radius:999px;border:1px solid #E5E5E5;text-decoration:none;font:500 13px 'Geist',sans-serif">Pokaż umowy wykonawcy</a>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:6px"><button type="button" style="min-height:30px;padding:0 12px;border-radius:999px;border:1px solid #E5E5E5;background:#FFFFFF;font:500 12.5px 'Geist',sans-serif;color:#404040">Co mogło temu zapobiec?</button><button type="button" style="min-height:30px;padding:0 12px;border-radius:999px;border:1px solid #E5E5E5;background:#FFFFFF;font:500 12.5px 'Geist',sans-serif;color:#404040">Podobne projekty</button></div>
+<form style="display:flex;align-items:center;gap:6px;padding:4px 4px 4px 14px;border-radius:999px;border:1px solid #E5E5E5"><label for="kq" style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)">Pytanie o projekt</label><input id="kq" type="text" placeholder="Zapytaj o Steklin" style="flex:1;min-width:0;min-height:36px;border:none;outline:none;background:transparent;font:400 14px 'Geist',sans-serif"><button type="button" aria-label="Wyślij" style="width:36px;height:36px;border-radius:999px;border:none;background:#0A0A0A;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"></path></svg></button></form>
+</section>
+</main>
+
+<aside style="flex:1 1 360px;max-width:100%;min-width:0;display:flex;flex-direction:column;gap:16px">
+<section aria-labelledby="k5" style="border:1px solid #F0F0F0;border-radius:28px;padding:20px;display:flex;flex-direction:column;gap:6px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:6px"><h2 id="k5" style="margin:0;font-size:18px;font-weight:600;letter-spacing:-.015em">Podobne przypadki</h2></div>
+<sc-for list="{{sims}}" as="c" hint-placeholder-count="3">
+<a href="B3-Karta.dc.html" style="display:flex;align-items:center;gap:12px;padding:10px 4px;border-top:1px solid #F0F0F0;text-decoration:none;color:#0A0A0A">
+<span style="width:40px;height:40px;flex:none;border-radius:12px;background:#F6F6F6;display:inline-flex;align-items:center;justify-content:center;font:600 14px 'Geist Mono',monospace">{{c.score}}</span>
+<span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px"><span style="font-size:15px;font-weight:600">{{c.title}}</span><span style="font-size:13px;color:#525252">{{c.why}}</span></span>
+<span style="display:flex;flex-direction:column;align-items:flex-end;gap:2px;font:500 13px 'Geist Mono',monospace"><span>{{c.delay}}</span><span style="color:#6B6B6B">{{c.cost}}</span></span>
+</a>
+</sc-for>
+</section>
+<section aria-labelledby="k2" style="background:#F6F6F6;border-radius:28px;padding:22px;display:flex;flex-direction:column;gap:8px">
+<h2 id="k2" style="margin:0 0 6px;font-size:18px;font-weight:600;letter-spacing:-.015em">Lekcje z tej umowy</h2>
+<sc-for list="{{events}}" as="e" hint-placeholder-count="3">
+<a href="C1-Przeglad.dc.html" style="background:#FFFFFF;border-radius:18px;padding:12px 14px;display:flex;flex-direction:column;gap:3px;text-decoration:none;color:#0A0A0A">
+<span style="display:flex;justify-content:space-between;gap:8px"><span style="font-size:15px;font-weight:600">{{e.title}}</span><span style="font:500 11.5px 'Geist Mono',monospace;color:{{e.stColor}};white-space:nowrap">{{e.status}}</span></span>
+<span style="font-size:13px;color:#525252">{{e.text}}</span>
+<span style="font:500 11.5px 'Geist Mono',monospace;color:#6B6B6B">{{e.code}}</span>
+</a>
+</sc-for>
+</section>
+<section aria-labelledby="k3" style="border:1px solid #F0F0F0;border-radius:28px;padding:22px;display:flex;flex-direction:column;gap:10px">
+<h2 id="k3" style="margin:0 0 4px;font-size:18px;font-weight:600;letter-spacing:-.015em">Czego nie wiemy</h2>
+<sc-for list="{{gaps}}" as="g" hint-placeholder-count="4"><div style="display:flex;flex-direction:column;gap:2px;padding-bottom:10px;border-bottom:1px solid #F0F0F0"><span style="font-size:14px;font-weight:600">{{g.doc}} <span style="font:500 11.5px 'Geist Mono',monospace;color:#6B6B6B">({{g.state}})</span></span><span style="font-size:13px;color:#525252">{{g.limits}}</span></div></sc-for>
+<a href="B1-Import.dc.html" style="min-height:40px;display:inline-flex;align-items:center;justify-content:center;border-radius:999px;border:1px solid #E5E5E5;text-decoration:none;font:500 14px 'Geist',sans-serif">Dodaj brakujący dokument</a>
+</section>
+<section aria-labelledby="k4" style="border:1px solid #F0F0F0;border-radius:28px;padding:22px;display:flex;flex-direction:column;gap:6px">
+<h2 id="k4" style="margin:0 0 4px;font-size:18px;font-weight:600;letter-spacing:-.015em">Identyfikatory</h2>
+<sc-for list="{{ids}}" as="i" hint-placeholder-count="4"><div style="display:grid;grid-template-columns:62px minmax(0,1fr);gap:10px;font-size:13px"><span style="color:#6B6B6B">{{i.k}}</span><span style="font:500 12px 'Geist Mono',monospace;overflow-wrap:anywhere">{{i.v}}</span></div></sc-for>
+</section>
+</aside>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"brandA":{"editor":"text","default":"ex"},"brandB":{"editor":"text","default":"ante"},"$preview":{"width":1440,"height":2000}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const active = 'Projekty';
+    const AUTH = true;
+    const NAV = [['Pulpit','Main.dc.html','',1],['Monitoring','D2-Monitoring.dc.html','12',0],['Nowa inwestycja','A1-Start.dc.html','',0],['Projekty','B2-Projekty.dc.html','',0],['Przegląd','C1-Przeglad.dc.html','37',1],['Katalog','C2-Katalog.dc.html','',1]];
+    const nav = NAV.filter((x) => AUTH || !x[3]).map(([label, href, count]) => ({ label, href, count: AUTH ? count : '', cs: label === active ? 'background:#FFFFFF;color:#0A0A0A' : 'background:#F0F0F0;color:#404040', style: "min-height:36px;display:inline-flex;align-items:center;padding:0 12px;border-radius:999px;text-decoration:none;font:500 14px 'Geist',sans-serif;" + (label === active ? 'background:#0A0A0A;color:#FFFFFF' : 'color:#404040') }));
+    const more = [['Import i źródła','B1-Import.dc.html'],['Historia','D3-Historia.dc.html'],['Ustawienia','D4-Ustawienia.dc.html']].map(([label, href]) => ({ label, href }));
+    const tabs = [['Przebieg','B3-Karta.dc.html'],['Graf powiązań','B4e-Przeplyw.dc.html'],['Dokumenty (0 z 4)','B7-Dokumenty.dc.html'],['Historia zmian','B6-HistoriaProjektu.dc.html']].map(([l, href], i) => ({ l, href, style: "min-height:36px;display:inline-flex;align-items:center;padding:0 14px;border-radius:999px;text-decoration:none;font:500 14px 'Geist',sans-serif;" + (i === 0 ? 'background:#0A0A0A;color:#FFFFFF' : 'border:1px solid #E5E5E5;color:#404040') }));
+    const pva = [
+      { label: 'Termin', delta: '+277 dni', planW: 'width:58.8%', overW: 'left:58.8%;right:0', note: 'plan 396 dni, faktycznie 673' },
+      { label: 'Koszt', delta: '+40,3%', planW: 'width:71.3%', overW: 'left:71.3%;right:0', note: '2 131 590,00 → 2 990 000,00 zł brutto' }
+    ];
+    const D = { done: true, now: false, miss: false }, N = { done: false, now: true, miss: false }, M = { done: false, now: false, miss: true };
+    const steps = [
+      { ...D, title: 'Ogłoszenie o zamówieniu', text: 'Tryb podstawowy, „zaprojektuj i wybuduj”.', date: '04.06.2024', ref: '2024/BZP 00349631/01', href: 'B4e-Przeplyw.dc.html' },
+      { ...D, title: 'Umowa: 2 131 590,00 zł', text: 'ZUMiG Piotr Rojek, termin do 18.08.2025.', date: '18.07.2024', ref: '2024/BZP 00418711/01', href: 'B4e-Przeplyw.dc.html' },
+      { ...D, title: 'Dopłata +758 084,56 zł', text: 'Roboty nieprzewidziane w PFU: wymiana odcinków kanalizacji. Art. 455 ust. 1 pkt 3.', date: '09.10.2024', ref: '2024/BZP 00554831/01', href: 'B4e-Przeplyw.dc.html' },
+      { ...D, title: 'Dopłata +100 325,44 zł', text: 'Rury azbestowe w wodociągu wymienione na polimerowe. Art. 455 ust. 1 pkt 3.', date: '25.11.2024', ref: '2024/BZP 00618384/01', href: 'C1-Przeglad.dc.html' },
+      { ...M, title: 'Termin z umowy minął', text: 'Bez odbioru robót.', date: '18.08.2025', ref: 'obliczenie', href: 'B4e-Przeplyw.dc.html' },
+      { ...N, title: 'Nowy termin: 26.05.2026', text: 'Pozwolenie wodnoprawne trwało dłużej. Wniosek AI do przeglądu.', date: 'po 08.2025', ref: 'ogł. o wykonaniu, zmiany', href: 'C1-Przeglad.dc.html' },
+      { ...D, title: 'Odbiór: zapłacono 2 990 000,00 zł', text: 'Należyte wykonanie: tak. Suma umowy i dopłat zgadza się co do grosza.', date: '22.05.2026', ref: '2026/BZP 00276065/01', href: 'B4e-Przeplyw.dc.html' }
+    ];
+    const events = [
+      { title: 'PFU nie opisał całego zakresu', text: 'Dopłata 758 tys. zł za roboty spoza PFU.', code: 'R01, źródło: BZP', status: 'zatwierdzone', stColor: '#166534' },
+      { title: 'Nikt nie sprawdził starych rur', text: 'Azbest w trasie wodociągu: +100 tys. zł.', code: 'R02, źródło: BZP', status: 'do przeglądu', stColor: '#C2410C' },
+      { title: 'Pozwolenie zależało od urzędu', text: 'Termin przesunięty o ok. 9 miesięcy.', code: 'R04, AI', status: 'do przeglądu', stColor: '#C2410C' }
+    ];
+    const gaps = [
+      { doc: 'PFU', state: 'nie ma w paczce', limits: 'Nie potwierdzimy, czego w nim brakowało.' },
+      { doc: 'Podpisana umowa', state: 'nie ma w paczce', limits: 'Warunki znamy tylko z ogłoszeń.' },
+      { doc: 'Decyzja wodnoprawna', state: 'brak potwierdzenia', limits: 'Nie wiemy, ile trwało postępowanie.' },
+      { doc: 'Protokół odbioru', state: 'nie ma w paczce', limits: 'Nie ocenimy wad przy odbiorze.' }
+    ];
+    const ids = [
+      { k: 'rekord', v: 'RM-2026-003, zestaw organizatora' },
+      { k: 'BZP', v: '2024/BZP 00349631/01' },
+      { k: 'OCID', v: 'ocds-148610-6b092479-223f-11ef-87ba-8eb060fd7bb8' },
+      { k: 'NIP', v: '8792466869, suma kontrolna ✓' }
+    ];
+    const sims = [
+      { score: '0,74', title: 'Sieć wod.-kan. z oczyszczalnią, Janów', why: 'też „zaprojektuj i wybuduj”, modernizacja oczyszczalni', delay: '+150 dni', cost: '+25,6%' },
+      { score: '0,66', title: 'Kanalizacja z oczyszczalnią, Konarzewo', why: 'oczyszczalnia w zakresie, podobna wartość', delay: '+185 dni', cost: '−12,7%' },
+      { score: '0,52', title: 'Modernizacja SUW w Czernikowie', why: 'ten sam zamawiający, rok później', delay: '+98 dni', cost: '+5,5%' }
+    ];
+    return { auth: AUTH, anon: !AUTH, home: AUTH ? 'Main.dc.html' : 'D2-Monitoring.dc.html',  brandA: this.props.brandA ?? 'ex', brandB: this.props.brandB ?? 'ante', nav, more, tabs, pva, steps, events, gaps, ids, sims };
+  }
+}
+</script>
+</body>
+</html>

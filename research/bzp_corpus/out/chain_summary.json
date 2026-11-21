@@ -1,0 +1,120 @@
+{
+ "notices_total": 113278,
+ "tenderId_missing": 0,
+ "versions_gt1_by_type": {
+  "AgreementUpdateNotice": 6,
+  "ContractNotice": 2666,
+  "ContractPerformingNotice": 31,
+  "TenderResultNotice": 106
+ },
+ "same_bzpNumber_multiple_versions_rows": 772,
+ "after_dedup": 112886,
+ "tenders": 45069,
+ "tenders_with": {
+  "CN": 40590,
+  "TR": 40094,
+  "AU": 3262,
+  "CP": 23191
+ },
+ "full_chain_CN_TR_CP": 19353,
+ "full_chain_CN_TR_AU_CP": 2368,
+ "CP_tenders_with_CN_and_TR_pct": 83.45,
+ "CP_tenders_with_TR_pct": 91.51,
+ "CP_tenders_with_CN_pct": 86.21,
+ "AU_tenders_with_CP_pct": 82.71,
+ "CN_tenders_with_TR_pct": 91.07,
+ "CN_tenders_with_CP_pct": 49.25,
+ "CN_year_coverage": {
+  "2021": {
+   "n": 4832,
+   "pct_TR": 0.833,
+   "pct_awarded": 0.611,
+   "pct_CP": 0.544
+  },
+  "2022": {
+   "n": 8777,
+   "pct_TR": 0.947,
+   "pct_awarded": 0.62,
+   "pct_CP": 0.501
+  },
+  "2023": {
+   "n": 7417,
+   "pct_TR": 0.877,
+   "pct_awarded": 0.653,
+   "pct_CP": 0.565
+  },
+  "2024": {
+   "n": 7188,
+   "pct_TR": 0.975,
+   "pct_awarded": 0.783,
+   "pct_CP": 0.596
+  },
+  "2025": {
+   "n": 6307,
+   "pct_TR": 0.97,
+   "pct_awarded": 0.829,
+   "pct_CP": 0.573
+  },
+  "2026": {
+   "n": 6069,
+   "pct_TR": 0.823,
+   "pct_awarded": 0.674,
+   "pct_CP": 0.143
+  }
+ },
+ "CP_per_tender_dist": {
+  "1": 21114,
+  "2": 1336,
+  "3": 395,
+  "4": 164,
+  "5": 94,
+  "6": 30,
+  "7": 10,
+  "8": 18,
+  "9": 11,
+  "10": 6
+ },
+ "TR_per_tender_dist": {
+  "1": 39833,
+  "2": 239,
+  "3": 20,
+  "4": 1,
+  "17": 1
+ },
+ "AU_per_tender_dist": {
+  "1": 2200,
+  "2": 661,
+  "3": 229,
+  "4": 101,
+  "5": 34,
+  "6": 17,
+  "7": 6,
+  "8": 3,
+  "9": 6,
+  "11": 1
+ },
+ "perf_4.5_BZP_not_TR_but_other_type": 0,
+ "perf_3.2.1_points_to_TR_instead_of_CN": 153,
+ "perf_not_preceded_by_notice(3.2=Nie)": 905,
+ "perf_aboveEU(belowEU=False)": 1039,
+ "perf_notices_tenders_with_gt1_perf": 2077,
+ "perf_notices_in_tenders_with_gt1_perf": 5711,
+ "perf_with_part_markers": 6185,
+ "perf_part_markers_count_dist": {
+  "1": 5339,
+  "2": 593,
+  "3": 146,
+  "4": 52,
+  "5": 28,
+  "6": 13,
+  "7": 3,
+  "8": 1
+ },
+ "perf_n_4_1_dist": {
+  "1": 26825
+ },
+ "perf_duplicate_contract_key_rows": 508,
+ "perf_duplicate_contract_key_extra": 264,
+ "AU_4.5_resolves_TR": 94.09,
+ "AU_tender_has_CP_pct": 83.11
+}

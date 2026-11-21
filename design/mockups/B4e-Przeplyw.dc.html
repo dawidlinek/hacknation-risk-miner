@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Graf powiązań: skąd wiemy</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0A0A0A}a:hover{color:#404040}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #0A0A0A;outline-offset:2px}
+</style>
+</helmet>
+<div style="min-height:100vh;background:#FFFFFF;font-family:'Geist',system-ui,sans-serif;color:#0A0A0A">
+<header style="border-bottom:1px solid #F0F0F0">
+<div style="max-width:1240px;margin:0 auto;padding:14px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px">
+<a href="{{home}}" style="display:inline-flex;align-items:baseline;text-decoration:none;color:#0A0A0A;font-size:19px;font-weight:700;letter-spacing:-.04em">{{brandA}}<span style="margin-left:3px;padding:0 6px 2px;border-radius:8px;background:#0A0A0A;color:#FFFFFF;letter-spacing:-.02em">{{brandB}}</span></a>
+<nav aria-label="Moduły" style="display:flex;gap:4px;flex-wrap:wrap;align-items:center">
+<sc-for list="{{nav}}" as="n" hint-placeholder-count="6"><a href="{{n.href}}" style="{{n.style}}">{{n.label}}<sc-if value="{{n.count}}" hint-placeholder-val="{{false}}"><span style="margin-left:6px;font:600 11px 'Geist Mono',monospace;padding:1px 6px;border-radius:999px;{{n.cs}}">{{n.count}}</span></sc-if></a></sc-for>
+<sc-if value="{{auth}}" hint-placeholder-val="{{false}}"><details style="position:relative"><summary style="list-style:none;min-height:36px;display:inline-flex;align-items:center;padding:0 12px;border-radius:999px;font:500 14px 'Geist',sans-serif;color:#404040;cursor:pointer">Więcej</summary><div style="position:absolute;right:0;top:42px;z-index:5;background:#FFFFFF;border:1px solid #E5E5E5;border-radius:18px;padding:6px;min-width:200px;box-shadow:0 12px 32px rgba(10,10,10,.14);display:flex;flex-direction:column"><sc-for list="{{more}}" as="m" hint-placeholder-count="3"><a href="{{m.href}}" style="padding:10px 12px;border-radius:12px;text-decoration:none;font:500 14px 'Geist',sans-serif;color:#0A0A0A">{{m.label}}</a></sc-for></div></details></sc-if>
+</nav>
+<div style="display:flex;align-items:center;gap:10px"><a href="A6-Czat.dc.html" style="min-height:40px;display:inline-flex;align-items:center;gap:8px;padding:0 14px;border-radius:999px;border:1px solid #E5E5E5;text-decoration:none;color:#0A0A0A;font:500 14px 'Geist',sans-serif"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"></path></svg>Zapytaj</a><sc-if value="{{auth}}" hint-placeholder-val="{{false}}"><button type="button" aria-label="Konto: ekspert" style="width:40px;height:40px;border-radius:999px;border:1px solid #E5E5E5;background:#F5F5F5;font:600 14px 'Geist',sans-serif">E</button></sc-if><sc-if value="{{anon}}" hint-placeholder-val="{{false}}"><a href="Main.dc.html" style="min-height:40px;display:inline-flex;align-items:center;padding:0 16px;border-radius:999px;background:#0A0A0A;color:#FFFFFF;text-decoration:none;font:600 14px 'Geist',sans-serif">Zaloguj się</a></sc-if></div>
+</div>
+</header>
+<div style="max-width:1240px;margin:0 auto;padding:36px 24px 72px;display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;flex-direction:column;gap:10px">
+<span style="font:500 13px 'Geist Mono',monospace;color:#6B6B6B"><a href="B2-Projekty.dc.html" style="color:#6B6B6B">Projekty</a> / RM-2026-003, Gmina Czernikowo</span>
+<h1 style="margin:0;font-size:36px;font-weight:600;letter-spacing:-.035em;line-height:1.1">Oczyszczalnia ścieków w Steklinie</h1>
+</div>
+<nav aria-label="Widok projektu" style="display:flex;gap:6px;flex-wrap:wrap"><sc-for list="{{tabs}}" as="t" hint-placeholder-count="4"><a href="{{t.href}}" style="{{t.style}}">{{t.l}}</a></sc-for></nav>
+
+
+<div style="display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start">
+<section aria-label="Przepływ dowodów" style="flex:999 1 680px;min-width:0;background:#F6F6F6;border-radius:28px;padding:16px;display:flex;flex-direction:column;gap:12px">
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;padding:2px 8px;font:600 12px 'Geist',sans-serif;color:#525252"><span>Źródła</span><span style="text-align:center">Fakty w bazie</span><span style="text-align:right">Wnioski</span></div>
+<div style="overflow-x:auto;background:#FFFFFF;border-radius:18px">
+<div style="position:relative;width:1060px;height:440px">
+<svg width="1060" height="440" aria-hidden="true" style="position:absolute;left:0;top:0">
+<sc-for list="{{links}}" as="l" hint-placeholder-count="16"><path d="{{l.d}}" fill="{{l.c}}" fill-opacity="{{l.op}}"></path></sc-for>
+<sc-for list="{{nodes}}" as="n" hint-placeholder-count="16"><rect x="{{n.x}}" y="{{n.y}}" width="12" height="{{n.h}}" rx="3" fill="{{n.c}}"></rect></sc-for>
+</svg>
+<sc-for list="{{labels}}" as="b" hint-placeholder-count="16"><button type="button" onClick="{{b.pick}}" aria-pressed="{{b.on}}" style="{{b.s}}"><span style="font:600 13px 'Geist',sans-serif">{{b.t}}</span><span style="font:500 11px 'Geist Mono',monospace;color:{{b.sc}}">{{b.sub}}</span></button></sc-for>
+</div>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:16px;font-size:12px;color:#525252;padding:0 4px">
+<span style="display:inline-flex;align-items:center;gap:6px"><span style="width:16px;height:10px;border-radius:3px;background:#525252"></span>źródło</span>
+<span style="display:inline-flex;align-items:center;gap:6px"><span style="width:16px;height:10px;border-radius:3px;background:#7C3AED"></span>odczyt modelu</span>
+<span style="display:inline-flex;align-items:center;gap:6px"><span style="width:16px;height:10px;border-radius:3px;background:#0F766E"></span>obliczenie</span>
+<span>kliknij wniosek, żeby zobaczyć jego drogę</span>
+</div>
+</section>
+<aside aria-labelledby="gd" style="flex:1 1 320px;max-width:100%;min-width:0;border:1px solid #F0F0F0;border-radius:28px;padding:22px;display:flex;flex-direction:column;gap:10px">
+<span style="font:500 12px 'Geist Mono',monospace;color:#6B6B6B">{{det.kind}}</span>
+<h2 id="gd" style="margin:0;font-size:20px;font-weight:600;letter-spacing:-.02em">{{det.t}}</h2>
+<sc-for list="{{det.rows}}" as="r" hint-placeholder-count="3"><div style="display:flex;flex-direction:column;gap:2px;padding:8px 0;border-top:1px solid #F0F0F0"><span style="font-size:12px;color:#6B6B6B">{{r.k}}</span><span style="font-size:14px;line-height:1.45">{{r.v}}</span></div></sc-for>
+<sc-if value="{{det.href}}" hint-placeholder-val="{{false}}"><a href="{{det.href}}" style="min-height:42px;display:inline-flex;align-items:center;justify-content:center;border-radius:999px;background:#0A0A0A;color:#FFFFFF;text-decoration:none;font:600 14px 'Geist',sans-serif;margin-top:4px">{{det.cta}}</a></sc-if>
+</aside>
+</div>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"brandA":{"editor":"text","default":"ex"},"brandB":{"editor":"text","default":"ante"},"$preview":{"width":1440,"height":1300}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = {"sel": "r4"}; }
+  renderVals() {
+    const active = 'Projekty';
+    const AUTH = true;
+    const NAV = [['Pulpit','Main.dc.html','',1],['Monitoring','D2-Monitoring.dc.html','12',0],['Nowa inwestycja','A1-Start.dc.html','',0],['Projekty','B2-Projekty.dc.html','',0],['Przegląd','C1-Przeglad.dc.html','37',1],['Katalog','C2-Katalog.dc.html','',1]];
+    const nav = NAV.filter((x) => AUTH || !x[3]).map(([label, href, count]) => ({ label, href, count: AUTH ? count : '', cs: label === active ? 'background:#FFFFFF;color:#0A0A0A' : 'background:#F0F0F0;color:#404040', style: "min-height:36px;display:inline-flex;align-items:center;padding:0 12px;border-radius:999px;text-decoration:none;font:500 14px 'Geist',sans-serif;" + (label === active ? 'background:#0A0A0A;color:#FFFFFF' : 'color:#404040') }));
+    const more = [['Import i źródła','B1-Import.dc.html'],['Historia','D3-Historia.dc.html'],['Ustawienia','D4-Ustawienia.dc.html']].map(([label, href]) => ({ label, href }));
+    const tabs = [['Przebieg','B3-Karta.dc.html'],['Graf powiązań','B4e-Przeplyw.dc.html'],['Dokumenty (0 z 4)','B7-Dokumenty.dc.html'],['Historia zmian','B6-HistoriaProjektu.dc.html']].map(([l, href], i) => ({ l, href, style: "min-height:36px;display:inline-flex;align-items:center;padding:0 14px;border-radius:999px;text-decoration:none;font:500 14px 'Geist',sans-serif;" + (i === 1 ? 'background:#0A0A0A;color:#FFFFFF' : 'border:1px solid #E5E5E5;color:#404040') }));
+    const { sel } = this.state;
+    const COLX = [170, 520, 870], U = 19, GAP = 16, TOP = 24;
+    const L = [['zs', 'Zestaw organizatora', 'XLSX, 1 wiersz', '#0A0A0A'], ['bzp', 'Ogłoszenia BZP', '5 ogłoszeń', '#525252'], ['ai', 'Odczyt modelu', 'tekst ogłoszeń', '#7C3AED'], ['calc', 'Obliczenia', 'z faktów powyżej', '#0F766E']];
+    const MID = [['id', 'Identyfikacja', 'numer, NIP'], ['um', 'Umowa', 'wartość, wykonawca, termin'], ['zm', 'Zmiany', '2 dopłaty'], ['wy', 'Wykonanie', 'zapłata, nowy termin'], ['pr', 'Przyczyny', 'uzasadnienia zmian'], ['wn', 'Wyniki', 'dni i procenty']];
+    const R = [['proj', 'Projekt powiązany', 'pewne', '#166534'], ['late', 'Opóźnienie +277 dni', 'obliczenie', '#0F766E'], ['cost', 'Koszt +40,3%', 'obliczenie', '#0F766E'], ['r1', 'R01 zakres spoza PFU', 'zatwierdzone', '#166534'], ['r2', 'R02 stan istniejący', 'do przeglądu', '#C2410C'], ['r4', 'R04 decyzja organu', 'wniosek AI', '#7C3AED']];
+    const E1 = [['zs', 'id', 2], ['bzp', 'id', 1], ['bzp', 'um', 3], ['bzp', 'zm', 2], ['bzp', 'wy', 1], ['ai', 'wy', 1], ['bzp', 'pr', 2], ['ai', 'pr', 2], ['calc', 'wn', 2]];
+    const E2 = [['id', 'proj', 3], ['um', 'proj', 1], ['um', 'late', 1], ['um', 'cost', 1], ['zm', 'cost', 2], ['wy', 'late', 1], ['wy', 'cost', 1], ['pr', 'r1', 1], ['pr', 'r2', 1], ['pr', 'r4', 2], ['wn', 'late', 1], ['wn', 'cost', 1]];
+    const tot = (id, es, side) => es.filter((e) => e[side] === id).reduce((a, e) => a + e[2], 0);
+    const stack = (ids, sizes) => { const H = sizes.reduce((a, b) => a + b, 0) * U + GAP * (ids.length - 1); let y = TOP + (400 - H) / 2; const o = {}; ids.forEach((id, i) => { o[id] = y; y += sizes[i] * U + GAP; }); return o; };
+    const lS = L.map((n) => tot(n[0], E1, 0)), mS = MID.map((n) => Math.max(tot(n[0], E1, 1), tot(n[0], E2, 0))), rS = R.map((n) => tot(n[0], E2, 1));
+    const yL = stack(L.map((n) => n[0]), lS), yM = stack(MID.map((n) => n[0]), mS), yR = stack(R.map((n) => n[0]), rS);
+    const off = {};
+    const take = (key, y0, n) => { const k = key; off[k] = off[k] || 0; const y = y0 + off[k] * U; off[k] += n; return y; };
+    const band = (x1, y1, x2, y2, h) => { const xm = (x1 + x2) / 2; return 'M' + x1 + ' ' + y1 + ' C' + xm + ' ' + y1 + ' ' + xm + ' ' + y2 + ' ' + x2 + ' ' + y2 + ' L' + x2 + ' ' + (y2 + h) + ' C' + xm + ' ' + (y2 + h) + ' ' + xm + ' ' + (y1 + h) + ' ' + x1 + ' ' + (y1 + h) + ' Z'; };
+    const feeds = new Set(E2.filter((e) => e[1] === sel).map((e) => e[0]));
+    const SRC = { zs: '#0A0A0A', bzp: '#525252', ai: '#7C3AED', calc: '#0F766E' };
+    const links = E1.map(([a, b, n]) => ({ d: band(COLX[0] + 12, take('L' + a, yL[a], n), COLX[1], take('Mi' + b, yM[b], n), n * U), c: SRC[a], op: !sel ? 0.28 : feeds.has(b) ? 0.5 : 0.08 }))
+      .concat(E2.map(([a, b, n]) => { const c = (R.find((r) => r[0] === b) || [])[3]; return { d: band(COLX[1] + 12, take('Mo' + a, yM[a], n), COLX[2], take('R' + b, yR[b], n), n * U), c: b === 'r4' ? '#7C3AED' : b === 'r2' ? '#EA580C' : '#525252', op: !sel ? 0.22 : b === sel ? 0.55 : 0.06 }; }));
+    const nodes = L.map((n, i) => ({ x: COLX[0], y: yL[n[0]], h: lS[i] * U, c: n[3] })).concat(MID.map((n, i) => ({ x: COLX[1], y: yM[n[0]], h: mS[i] * U, c: '#0A0A0A' }))).concat(R.map((n, i) => ({ x: COLX[2], y: yR[n[0]], h: rS[i] * U, c: n[3] })));
+    const lab = (x, y, h, t, sub, sc, align, id) => ({ t, sub, sc, on: String(sel === id), pick: id ? () => this.setState({ sel: sel === id ? '' : id }) : () => {}, s: 'position:absolute;top:' + (y + h / 2 - 19) + 'px;' + (align === 'r' ? 'right:' + (1060 - x + 8) + 'px;align-items:flex-end;' : 'left:' + (x + 20) + 'px;align-items:flex-start;') + 'display:flex;flex-direction:column;gap:0;padding:2px 10px;border-radius:12px;border:' + (sel && sel === id ? '2px solid #0A0A0A' : '1px solid transparent') + ';background:rgba(255,255,255,.92);cursor:' + (id ? 'pointer' : 'default') + ';text-align:left;color:#0A0A0A;white-space:nowrap' });
+    const labels = L.map((n, i) => lab(COLX[0], yL[n[0]], lS[i] * U, n[1], n[2], '#6B6B6B', 'r')).concat(MID.map((n, i) => lab(COLX[1], yM[n[0]], mS[i] * U, n[1], n[2], '#6B6B6B', 'l'))).concat(R.map((n, i) => lab(COLX[2], yR[n[0]], rS[i] * U, n[1], n[2], n[3], 'l', n[0])));
+    const DET = {
+      r4: { kind: 'wniosek, odczyt modelu', t: 'R04: decyzja organu przesunęła termin', rows: [{ k: 'skąd', v: '2 z 2 faktów pochodzą z odczytu tekstu sekcji zmian ogłoszenia o wykonaniu.' }, { k: 'czego brakuje', v: 'Decyzji wodnoprawnej. Bez niej to zostaje wnioskiem modelu.' }, { k: 'pewność', v: '0,32, do przeglądu' }] },
+      r1: { kind: 'wniosek, zatwierdzony', t: 'R01: zakres spoza PFU', rows: [{ k: 'skąd', v: 'Pole 5.3 ogłoszenia o zmianie 1 (źródło).' }, { k: 'czego brakuje', v: 'PFU, które potwierdziłoby, czego nie opisano.' }] },
+      r2: { kind: 'wniosek, do przeglądu', t: 'R02: stan istniejący', rows: [{ k: 'skąd', v: 'Pole 5.3 ogłoszenia o zmianie 2, model przypisał kategorię.' }] },
+      cost: { kind: 'obliczenie', t: 'Koszt +40,3%', rows: [{ k: 'skąd', v: 'Wartość umowy z ogłoszenia o wyniku, 2 dopłaty z ogłoszeń o zmianie i zapłata z ogłoszenia o wykonaniu.' }, { k: 'sprawdzenie', v: 'suma zgodna co do grosza' }] },
+      late: { kind: 'obliczenie', t: 'Opóźnienie +277 dni', rows: [{ k: 'skąd', v: 'Termin z ogłoszenia o wyniku i data odbioru z ogłoszenia o wykonaniu.' }] },
+      proj: { kind: 'połączenie', t: 'Projekt powiązany z ogłoszeniami', rows: [{ k: 'skąd', v: 'Numer BZP z zestawu, ten sam OCID w 5 ogłoszeniach, zgodny NIP.' }] }
+    };
+    const d = DET[sel] || { kind: 'podsumowanie', t: '16 faktów, 6 wniosków', rows: [{ k: 'ze źródeł', v: '11 faktów z zestawu i ogłoszeń BZP' }, { k: 'z odczytu modelu', v: '3 fakty, wszystkie do przeglądu' }, { k: 'z obliczeń', v: '2 fakty' }] };
+    const toReview = sel === 'r2' || sel === 'r4';
+    const det = { ...d, cta: 'Sprawdź w Przeglądzie', href: toReview ? 'C1-Przeglad.dc.html' : '' };
+    return { auth: AUTH, anon: !AUTH, home: AUTH ? 'Main.dc.html' : 'D2-Monitoring.dc.html',  brandA: this.props.brandA ?? 'ex', brandB: this.props.brandB ?? 'ante', nav, more, tabs, links, nodes, labels, det };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+# Sector pack wod-kan: edit in the panel or here; loaded by `riskminer seed-catalogue`.
+# Source: docs/research/03_domain_methodology.md (+ expert materials). status: approved | proposed.
+checklists:
+- code: WOD-PREP
+  name: Zbiorcza checklista przygotowania inwestycji wodociągowej
+  source: Risk_Miner_material_ekspercki_przygotowanie_inw_wodociagowej.docx §8
+  items:
+  - code: WOD-PREP-1
+    text: Konkretny problem zaopatrzenia w wodę i oczekiwany efekt inwestycji.
+    refs: 1.1–1.2
+    status: approved
+  - code: WOD-PREP-2
+    text: Obszar obsługi oraz przybliżona liczba i charakter odbiorców.
+    refs: 1.3–1.4
+    status: approved
+  - code: WOD-PREP-3
+    text: Przewidywani odbiorcy początkowi i wiarygodne przesłanki dalszego przyłączania nieruchomości.
+    refs: 2.1–2.3
+    status: approved
+  - code: WOD-PREP-4
+    text: Orientacyjny przebieg i długość sieci oraz zakres przewidywanych przyłączy.
+    refs: 3.1–3.4
+    status: approved
+  - code: WOD-PREP-5
+    text: Przewidywane miejsce zasilania i wstępne stanowisko operatora o możliwości dostawy wody.
+    refs: 4.1–4.4
+    status: approved
+  - code: WOD-PREP-6
+    text: Wstępna trasa sieci, rodzaj własności gruntów i znane trudności z dostępem.
+    refs: 5.1–5.4
+    status: approved
+  - code: WOD-PREP-7
+    text: Główne przeszkody lokalizacyjne i zależności od innych inwestycji.
+    refs: 5.4; 6.1–6.2
+    status: approved
+  - code: WOD-PREP-8
+    text: Wstępne rozpoznanie potrzeby decyzji środowiskowej i ograniczeń ochrony przyrody.
+    refs: 6.3–6.5
+    status: approved
+  - code: WOD-PREP-9
+    text: Podział odpowiedzialności za przygotowanie, projekt, nieruchomości, decyzje i eksploatację oraz główne ryzyka.
+    refs: 7.1–7.5
+    status: approved

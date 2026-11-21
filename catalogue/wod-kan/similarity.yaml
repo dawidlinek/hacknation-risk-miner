@@ -1,0 +1,65 @@
+# Sector pack wod-kan: edit in the panel or here; loaded by `riskminer seed-catalogue`.
+# Source: docs/research/03_domain_methodology.md (+ expert materials). status: approved | proposed.
+similarity:
+  version: 1
+  min_similarity: 0.55
+  min_coverage: 0.5
+  top_k: 30
+  weight_gamma: 3
+  max_per_beneficiary_top10: 2
+  features:
+    subsector_main:
+      w: 0.2
+      family_bonus: 0.3
+      secondary_match: 0.6
+    subsectors_all:
+      w: 0.05
+      fn: jaccard
+    works_type:
+      w: 0.07
+      mixed: 0.5
+    formula:
+      w: 0.08
+    value:
+      w: 0.12
+      fn: log_gauss
+      sigma_ln: 0.693
+      deflator: GUS_ILW
+    physical_size:
+      w: 0.1
+      fn: log_gauss
+      sigma_ln: 0.693
+    tech_tags:
+      w: 0.07
+      fn: jaccard
+    period:
+      w: 0.06
+      tau_years: 3
+      regime_penalty: 0.7
+      regimes:
+      - - 0
+        - 2021
+      - - 2022
+        - 2023
+      - - 2024
+        - 9999
+    funding:
+      w: 0.04
+      family:
+        EU:
+        - KPO
+        - FENIKS
+        - POIIS
+        - FEP
+        - RPO
+        - PROW
+    beneficiary_type:
+      w: 0.03
+    region:
+      w: 0.05
+      neighbour: 0.5
+      other: 0.2
+    text:
+      w: 0.13
+      dense: 0.7
+      bm25: 0.3

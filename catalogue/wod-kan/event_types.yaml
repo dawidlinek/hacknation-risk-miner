@@ -1,0 +1,128 @@
+# Sector pack wod-kan: edit in the panel or here; loaded by `riskminer seed-catalogue`.
+# Source: docs/research/03_domain_methodology.md (+ expert materials). status: approved | proposed.
+event_types:
+- code: EV_LATE_COMPLETION
+  name: Wykonanie po pierwotnym terminie
+  rule: 5.3 == "Nie"` OR `(5.2 − planned_end) > 7 d
+  fields: completion notice 4.2, 5.2, 5.3; PPU/SWZ term
+  status: approved
+- code: EV_TERM_EXTENSION
+  name: Zmiana terminu
+  rule: change with reason/description matching `termin\
+  fields: przedłuż\
+  status: approved
+- code: EV_PRICE_INCREASE
+  name: Wzrost wynagrodzenia
+  rule: 5.4.8 == "Tak"` OR change notice `5.5.3 == "Tak"` OR `5.5 > 4.4 × 1.001
+  fields: completion/change notice
+  status: approved
+- code: EV_PAID_BELOW_CONTRACT
+  name: Wypłata niższa niż wartość umowy
+  rule: 5.5 < 4.4 × 0.99
+  fields: completion notice
+  status: approved
+- code: EV_ADDITIONAL_WORKS
+  name: Roboty dodatkowe
+  rule: basis `455 ust.1 pkt 3` OR reason `dodatkow
+  fields: change/completion notice
+  status: approved
+- code: EV_UNFORESEEN_CHANGE
+  name: Zmiana z okoliczności nieprzewidywalnych
+  rule: basis `455 ust.1 pkt 4
+  fields: change/completion notice
+  status: approved
+- code: EV_DEMINIMIS_CHANGE
+  name: Zmiana de minimis
+  rule: basis `455 ust.2
+  fields: completion notice
+  status: approved
+- code: EV_SCOPE_REDUCTION
+  name: Ograniczenie/zaniechanie zakresu
+  rule: reason `zaniecha\
+  fields: ograniczeni\
+  status: approved
+- code: EV_CONTRACTOR_REPLACED
+  name: Zmiana wykonawcy
+  rule: basis `455 ust.1 pkt 2 lit. a/b/c
+  fields: completion notice
+  status: approved
+- code: EV_NOT_PERFORMED
+  name: Umowa niewykonana / rozwiązana / odstąpienie
+  rule: 5.1 == "Nie"
+  fields: completion notice; BIP
+  status: approved
+- code: EV_IMPROPER_PERFORMANCE
+  name: Nienależyte wykonanie
+  rule: 5.6 == "Nie"
+  fields: completion notice
+  status: approved
+- code: EV_COMPLETION_TENDER
+  name: Postępowanie na dokończenie robót
+  rule: same zamawiający, title `dokończeni\
+  fields: pozostał\w* zakres\
+  status: approved
+- code: EV_TENDER_CANCELLED_BUDGET
+  name: 'Unieważnienie: cena > kwota'
+  rule: 5.2 ~ art. 255 pkt 3
+  fields: result notice
+  status: approved
+- code: EV_TENDER_NO_OFFERS
+  name: 'Unieważnienie: brak ofert'
+  rule: art. 255 pkt 1
+  fields: result notice
+  status: approved
+- code: EV_TENDER_ALL_REJECTED
+  name: 'Unieważnienie: oferty odrzucone'
+  rule: art. 255 pkt 2
+  fields: result notice
+  status: approved
+- code: EV_TENDER_DEFECT
+  name: 'Unieważnienie: wada postępowania'
+  rule: art. 255 pkt 6
+  fields: result notice
+  status: approved
+- code: EV_REPEAT_TENDER
+  name: Powtórzone postępowanie
+  rule: same NIP + title similarity > 0.8 + CPV overlap after any cancellation
+  fields: BZP
+  status: approved
+- code: EV_SINGLE_OFFER
+  name: Jedna oferta
+  rule: 6.1 == 1
+  fields: result notice
+  status: approved
+- code: EV_LOW_PRICE_FLAG
+  name: Cena ≥ 30% poniżej szacunku+VAT
+  rule: 6.4 < 0.7 × 4.3 × 1.23` OR `6.1.7 > 0
+  fields: result notice
+  status: approved
+- code: EV_PRICE_OVER_BUDGET_AWARDED
+  name: Udzielono mimo ceny > kwoty
+  rule: 6.4 > kwota (222 ust.4)` and contract signed
+  fields: platform + result notice
+  status: approved
+- code: EV_KIO_APPEAL
+  name: Odwołanie do KIO (wynik)
+  rule: KIO ruling linked by zamawiający + subject + date
+  fields: KIO portal
+  status: approved
+- code: EV_NIK_FINDING
+  name: Nieprawidłowość w kontroli
+  rule: NIK/RIO document mentioning the project
+  fields: NIK/RIO
+  status: approved
+- code: EV_FUNDING_CHANGE
+  name: Zmiana finansowania / WPF
+  rule: 'WPF item: Δ nakłady or Δ okres; aneks to funding agreement'
+  fields: BIP uchwały
+  status: approved
+- code: EV_LATE_NOTICE
+  name: Opóźniona publikacja ogłoszenia o wykonaniu
+  rule: pub_date − 5.2 > 30 d
+  fields: completion notice (compliance signal)
+  status: approved
+- code: EV_LOW_CONNECTION
+  name: Niski stopień przyłączeń / nieosiągnięty wskaźnik
+  rule: indicator achieved < target; NIK finding
+  fields: funding reports, NIK, BIP
+  status: approved

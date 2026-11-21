@@ -1,0 +1,817 @@
+                                  Łódzka Delegatura w Łodzi
+
+
+
+
+DLO.411.1.11.2025
+
+
+
+
+                                                Pan
+                                                Sylwester Topolski
+                                                Prezes Zarządu
+                                                Zakładu Usług Komunalnych Sp. z o.o.
+                                                w Zelowie
+
+
+
+
+                       Wystąpienie pokontrolne
+
+
+                    I/25/001
+  Realizacja obowiązków w zakresie zbiorowego
+zaopatrzenia w wodę i odprowadzania ścieków na
+   terenach gmin wiejskich i miejsko-wiejskich
+             w województwie łódzkim
+
+
+
+
+                                  NAJWYŻSZA IZBA KONTROLI
+                                  Łódzka Delegatura w Łodzi
+                               ul. Kilińskiego 210 | 93-106 Łódź
+                    Tel. +48 42 239 32 00 | llo@nik.gov.pl | www.nik.gov.pl
+I. Dane identyfikacyjne
+Jednostka kontrolowana
+
+Zakład Usług Komunalnych Sp. z o.o. w Zelowie1, ul. Żeromskiego 28, 97-425 Zelów.
+
+Kierownik jednostki kontrolowanej
+
+Sylwester Topolski, Prezes Zarządu Spółki2, od 22 listopada 2024 r.
+
+W okresie objętym kontrolą funkcję Prezesa Zarządu Spółki poprzednio pełnili:
+
+     -    Ewelina Woźniak, od 20 czerwca 2024 r. do 21 listopada 2024 r.
+
+     -    Michał Michałek, od 27 kwietnia 2021 r. do 20 listopada 2024 r.
+
+Zakres przedmiotowy kontroli
+
+Realizacja zadań w zakresie zbiorowego zaopatrzenia w wodę i zbiorowego odprowadzania
+ścieków.
+
+Okres objęty kontrolą
+
+Lata 2022-2025, z uwzględnieniem dowodów sporządzonych przed tym okresem, jeżeli miały
+wpływ na działalność kontrolowanej jednostki w okresie objętym kontrolą.
+
+Podstawa prawna podjęcia kontroli
+
+Art. 2 ust. 2 ustawy z dnia 23 grudnia 1994 r. o Najwyższej Izbie Kontroli3.
+
+Jednostka przeprowadzająca kontrolę
+
+Najwyższa Izba Kontroli Łódzka Delegatura w Łodzi
+
+Kontroler
+
+Ryszard Lewiński, gł. specjalista k.p.,
+upoważnienie do kontroli nr LLO/99/2025 z dnia 10 października 2025 r.
+
+                                                                               (akta kontroli str. 1 - 18)
+
+
+
+
+1 Dalej również: „Spółka”.
+2 Dalej również „Prezes”.
+3 Dz. U. z 2022 r. poz. 623 ze zm., dalej: ustawa o NIK.
+
+
+                                                           strona 2 z 16
+II. Ocena ogólna4 kontrolowanej działalności
+W latach 2022-2025 Spółka zapewniała dostawę wody i odbiór ścieków mieszkańcom
+i przedsiębiorcom w sposób ciągły i niezawodny, za wyjątkiem dziewięciu przypadków, w których
+wystąpiły awarie sieci wodociągowej. W przypadku awarii trwających powyżej 24 godzin Spółka
+zapewniała zastępczy punkt poboru wody. Spółka wydawała terminowo warunki techniczne na
+przyłącza do sieci wodociągowej i kanalizacyjnej oraz dokonywała ich odbiorów technicznych.
+W przypadku dwóch nieruchomości stwierdzono, iż wystąpiły pobór wody i odprowadzanie
+ścieków bez uprzednio zawartej umowy ze Spółką.
+
+Prezes Zarządu Spółki podejmował również działania w celu zabezpieczenia urządzeń i sieci
+wodociągowo-kanalizacyjnej            na    wypadek       sytuacji     kryzysowych,        w    tym     w    zakresie
+cyberbezpieczeństwa, podejmując działania w celu pozyskania finansowania z zewnętrznych
+źródeł.
+
+Spółka nie opracowała projektu wieloletniego planu rozwoju i modernizacji urządzeń
+wodociągowych i kanalizacyjnych, ponieważ działania planistyczne w tym zakresie wykonywał
+Burmistrz Miasta Zelowa.
+
+Spółka prowadziła regularną wewnętrzną kontrolę jakości wody i podejmowała działania
+w przypadku pogorszenia jej jakości. Regularne kontrole urzędowe jakości wody prowadzone były
+również przez Państwowego Powiatowego Inspektora Sanitarnego5 w Bełchatowie.
+
+W latach 2022-2025 Spółka na podstawie art. 8 ust. 1 pkt 1-4 ustawy z dnia 7 czerwca 2001 r.
+o zbiorowym zaopatrzeniu w wodę i zbiorowym odprowadzaniu ścieków6 (dalej: zzw) dokonała
+odcięcia wody dla jednej nieruchomości z powodu nieuiszczenia przez właściciela nieruchomości
+należności za dostarczanie wody za pełne dwa okresy obrachunkowe.
+
+Nałożone na Spółkę obowiązki w zakresie zbiorowego zaopatrzenia w wodę i zbiorowego
+odprowadzania ścieków nie zawsze były realizowane w sposób prawidłowy i rzetelny, a NIK
+stwierdziła następujące nieprawidłowości:
+
+    -     nieprowadzenie kontroli jakości odprowadzanych ścieków bytowych i przemysłowych oraz
+          warunków wprowadzania ścieków do urządzeń kanalizacyjnych, do czego zobowiązywał
+          art. 9 ust. 3 ustawy o zzw,
+
+    -     nieuwzględnienie w trzech umowach zawartych z dostawcami ścieków przemysłowych
+          postanowień pozwoleń wodnoprawnych odnoszących się do dopuszczalnych wartości
+          niektórych zanieczyszczeń ścieków, co było wbrew obowiązkowi wynikającemu z § 12 ust 1
+          rozporządzenia Ministra Budownictwa w sprawie sposobu realizacji obowiązków
+          dostawców ścieków przemysłowych oraz warunków wprowadzania ścieków do urządzeń
+          kanalizacyjnych7 (dalej: rozporządzenie w sprawie sposobu realizacji obowiązków dostawców
+          ścieków),
+
+
+
+
+4  Najwyższa Izba Kontroli formułuje ocenę ogólną jako ocenę pozytywną albo ocenę negatywną. Jeśli nie zostały spełnione
+   warunki do sformułowania oceny pozytywnej bądź negatywnej, Najwyższa Izba Kontroli formułuje ocenę w formie
+   opisowej.
+5 Dalej: „PPIS”.
+
+6 Dz. U. z 2024 r. poz. 757.
+
+7 Dz. U. z 2016 r. poz. 1757 t.j.
+
+
+                                                     strona 3 z 16
+       -    nieokreślenie w czterech umowach zawartych z dostawcami ścieków przemysłowych ilości
+            i rodzaju wprowadzanych ścieków, co było wbrew obowiązkowi wynikającemu z art. 6 ust.
+            3 pkt 1 ustawy zzw,
+
+       -    w jednym przypadku Spółka świadczyła usługi odbioru ścieków przemysłowych wytwórcy
+            ścieków przemysłowych również w okresie, w którym wytwórca nie posiadał pozwolenia
+            wodnoprawnego, co było działaniem nierzetelnym.
+
+
+
+
+III. Opis ustalonego stanu faktycznego
+
+1.         Realizacja zadań w zakresie zbiorowego zaopatrzenia w
+           wodę i zbiorowego odprowadzania ścieków
+
+Opis stanu faktycznego
+
+1.1.       W okresie objętym kontrolą liczba odbiorców usług dostarczania wody wzrosła z 3.805
+w 2022 r. do 3.982 w I półroczu 2025 r. Łączna ilość dostarczanej wody wynosiła w poszczególnych
+latach okresu 2022-2025 (I półrocze) odpowiednio (w tys. m3 ):
+- SUW8 Zelów – 479,910; 502,950; 494,590; 237,140;
+- ujęcie Kociszew – 45,868; 52,960; 59,214; 27,120.
+Liczba odbiorców usług odprowadzania ścieków bytowych wzrosła z 2.135 w 2022 r. do 2.260
+w I półroczu 2025 r. Liczba odbiorców usług odprowadzenia ścieków przemysłowych w badanym
+okresie była stała i wynosiła sześć. Ilość odprowadzonych ścieków bytowych w okresie od 2022 r.
+do 2025 r. (I półrocze) wynosiła w poszczególnych latach odpowiednio (w tys. m3 ): 193,6604;
+196,0037; 202,0215 i 99,6494. Natomiast ilość odprowadzonych ścieków przemysłowych wynosiła
+odpowiednio (w tys. m3): 12,724; 13,456; 15,532; 9,912.
+
+                                                                              (akta kontroli str. 80)
+
+1.2.       W Regulaminie dostarczania wody i odprowadzania ścieków wskazano m.in., iż woda
+dostarczana będzie w sposób ciągły pod ciśnieniem nie mniejszym niż 0,05 MPa (0,5 bara), odbiór
+ścieków do urządzeń kanalizacyjnych będzie prowadzony również w sposób ciągły o stanie
+i składzie zgodnym z aktualnie obowiązującymi przepisami i zawartymi umowami. W Regulaminie
+określono: warunki i tryb zawierania umów z odbiorcami usług, sposób rozliczeń za świadczone
+usługi, warunki przyłączenia do sieci, warunki techniczne określające możliwości dostępu do usług
+wodociągowo-kanalizacyjnych, sposób dokonywania odbioru przyłączy wodno-kanalizacyjnych,
+sposób postępowania w przypadku niedotrzymania ciągłości usług i odpowiednich parametrów
+dostarczonej wody i wprowadzanych do sieci kanalizacyjnej ścieków, sposób załatwiania reklamacji
+oraz wymiany informacji, warunki dostarczania wody na cele przeciwpożarowe.
+
+                                                                       (akta kontroli str. 105 - 115)
+
+W okresie objętym kontrolą wystąpiło dziewięć przypadków niedotrzymania ciągłości dostaw wody,
+w tym:
+
+
+
+
+8   Stacja Uzdatniania Wody.
+
+                                             strona 4 z 16
+- w czterech przypadkach były to nieszczelności na rurach, w tym w dwóch sytuacjach była to awaria
+trwająca poniżej 24 godzin i nie wystąpiła konieczność udostępnienia zastępczego punktu poboru
+wody, w pozostałych dwóch sytuacjach udostępniono zastępczy punkt poboru wody – zbiornik
+magazynujący wodę w środkach transportu lądowego. Na stronie internetowej Spółki
+zamieszczono informację o zaistniałych sytuacjach;
+
+- w dwóch przypadkach nastąpił przeciek, w tym w jednej sytuacji na trójniku, w drugim na zgrzewie
+rury wodociągowej. Awaria trwała poniżej 24 godzin i nie udostępniono zastępczego punktu
+poboru wody, powiadomiono dwóch odbiorców wody w jednym przypadku i w drugim
+zamieszczono informacje na stronie internetowej Spółki;
+
+- w jednym przypadku nastąpił wyciek na zgrzewie rury wodociągowej. Awaria trwała poniżej
+24 godzin i nie udostępniono zastępczego punktu poboru wody, zamieszczono informacje
+na stronie internetowej Spółki;
+
+- w jednym przypadku doszło do pęknięcia rury wodociągowej. Awaria trwała poniżej 24 godzin i
+nie udostępniono zastępczego punktu poboru wody;
+
+- w jednym przypadku doszło do uszkodzenia rury wodociągowej. Awaria trwała poniżej 24 godzin
+i nie udostępniono zastępczego punktu poboru wody, zamieszczono informacje na stronie
+internetowej Spółki.
+
+                                                                                (akta kontroli str. 81)
+
+Zarząd Spółki przyjął uchwałę9 w sprawie procedury postępowania na wypadek pogorszenia jakości
+wody przeznaczonej do spożycia przez ludzi. Celem ww. procedury było zapewnienie szybkiego
+i skutecznego sposobu eliminowania zagrożeń zdrowia i życia ludzi, powstałych na skutek
+pogorszenia się jakości wody dostarczanej przez Spółkę, eliminowanie przyczyn powodujących
+pogarszanie stanu wody oraz zapewnienie awaryjnych dostaw wody. Procedura obejmowała
+zagadnienia oceny jakości wody (w tym: nadzór nad jakością wody, ocenę przydatności wody,
+ograniczenie ryzyka pogorszenia jakości wody) oraz sposoby postępowania w przypadku skażenia
+wody lub pogorszenia jej jakości (w tym: potencjalne przyczyny pogorszenia jakości wody,
+przyjmowanie zgłoszeń o zaistniałych awariach oraz pogorszenia jakości wody, zasady
+postępowania w przypadku pogorszenia jakości wody oraz jej skażenia, informowanie odbiorców
+wody o jej jakości, zapewnienie awaryjnych źródeł dostaw wody, schemat postępowania w
+przypadku skażenia wody). Z procedurą zapoznano pracowników Spółki. W procedurze
+wymieniono jej uczestników, którymi byli: PSSE10 w Bełchatowie, Burmistrz Miasta i Gminy Zelów,
+Gminny Zespół Zarządzania Kryzysowego, konserwatorzy ujęć wody, sołtysi, OSP.
+
+                                                                          (akta kontroli str. 82 - 104)
+
+W celu zabezpieczenia urządzeń i sieci wodociągowo-kanalizacyjnej na wypadek sytuacji
+kryzysowych, w tym potencjalnych działań o charakterze hybrydowym, Spółka podpisała umowę
+z firmą zewnętrzna, w ramach której otrzymała raport, w którym ustalono stan faktyczny obecnych
+rozwiązań cyberbezpieczeństwa oraz koncepcję docelowej architektury cyberbezpieczeństwa. Na
+
+
+
+
+9   Uchwała Zarządu nr 3/11/2025 z 24 listopada 2025 r.
+10  Powiatowa Stacja Sanitarno-Epidemiologiczna.
+
+                                                          strona 5 z 16
+podstawie ww. raportu Spółka złożyła wniosek o grant „Cyberbezpieczny Wodociąg”. Wniosek
+uzyskał pozytywną ocenę formalną i został przekazany do oceny merytorycznej.
+
+                                                                                 (akta kontroli str. 434 - 440)
+
+1.3.    Spółka     nie   opracowała      wieloletniego      planu    rozwoju     i   modernizacji     urządzeń
+wodociągowych i kanalizacyjnych, ponieważ – zgodnie z art. 21 ust. 7 ustawy o zzw nie planowała
+budowy takich urządzeń. Prezes wyjaśnił, iż urządzenia wodociągowe i kanalizacyjne stanowią
+w całości własność Gminy Zelów, w które Spółka została wyposażona umową dzierżawy.
+
+                                                           (akta kontroli str. p27.10/3, umowa dzierżawy)
+
+1.4.    Spółka wydawała terminowo i na podstawie kompletnych wniosków warunki techniczne na
+przyłącza do sieci wodociągowej i kanalizacyjnej oraz dokonywała odbiorów technicznych
+przyłączy11 poprzez sporządzenie zgodnie z § 14 ust. 1 pkt 7 regulaminu organizacyjnego Spółki,
+protokołów odbioru przyłączy stanowiących potwierdzenie prawidłowości ich wykonania.
+
+                                                                            (akta kontroli str. 120, 448 - 463)
+
+1.5.    Spółka prowadziła regularną wewnętrzną kontrolę jakości wody przeznaczonej do spożycia
+przez ludzi i podejmowała działania w przypadku jej nienależytej jakości. Kontrola odbywała się
+zgodnie z zaakceptowanymi corocznie przez PPIS w Bełchatowie harmonogramami badania wody.
+Laboratoria wykonujące badania na zlecenie Spółki miały wdrożone system jakości badań wody,
+zatwierdzane corocznie przez właściwego miejscowo PPIS. Parametry wody objęte kontrolą
+wewnętrzną jakości wody były zgodne z częścią A i B załącznika nr 2 do rozporządzenia Ministra
+Zdrowia z 7 grudnia 2017 r. w sprawie jakości wody przeznaczonej do spożycia przez ludzi12 (dalej:
+rozporządzenie w sprawie jakości wody). Wykonywane one były zgodnie z częstotliwością nie
+mniejszą niż określona w załączniku nr 3 do ww. rozporządzenia. Dodatkowe badania Spółka
+wykonywała w przypadku pogorszenia jakości wody, po podjęciu działań naprawczych, realizując
+tym samym dyspozycję § 6 pkt 1c. ww. rozporządzenia.
+
+                                                                     (akta kontroli str. 154 – 183, 226 - 238)
+
+W 2022 r. Spółka wykonała badania promieniotwórczości wody przeznaczonej do spożycia
+ze wszystkich ujęć wody, zgodnie z § 15 ust. 1 rozporządzenia w sprawie jakości wody. W próbkach
+ze studni nr 1, 2, 13b, 14a wykryto przekroczenia dopuszczalnych wartości izotopu radu
+i po poinformowaniu o tych wynikach PPIS w Bełchatowie, PPIS zalecił dokonanie ponownej
+kontroli za 6 miesięcy dla studni 1 i 2 oraz za dwa lata dla studni 13b i 14a. Spółka w 2023 r. i 2024 r.
+wykonała zlecone badania promieniotwórczości wody i wyniki badań nie przekraczały granic
+wykrywalności określonych w załączniku nr 6, pkt C rozporządzenia.
+
+                                                                                 (akta kontroli str. 226 - 238)
+
+1.6.    Spółka nie prowadziła kontroli jakości odprowadzanych ścieków bytowych i przemysłowych
+oraz kontroli przestrzegania warunków wprowadzania ścieków do urządzeń kanalizacyjnych,
+co stanowiło naruszenie art. 9 ust. 3 ustawy o zzw (szczegółowy opis znajduje się w sekcji
+„Stwierdzone nieprawidłowości”). Kontrola ilości ścieków bytowych i przemysłowych odbywała się
+
+
+
+
+11 Ustaleń dokonano na podstawie 12 losowo zbadanych wniosków o przyłącze wodociągowe i 12 wniosków o przyłącze
+kanalizacyjne.
+12 Dz. U. z 2017 r. poz. 2294.
+
+
+                                                  strona 6 z 16
+na podstawie ilości zużytej wody (z uwzględnieniem wody bezzwrotnie zużytej) albo w oparciu
+o wskazania urządzeń pomiarowych.
+
+                                                                                         (akta kontroli str. 441 - 447)
+
+W wyniku kontroli sześciu umów zawartych z dostarczycielami ścieków przemysłowych NIK
+stwierdziła, iż:
+
+a)          Trzy umowy z dostawcami ścieków przemysłowych były niezgodne z pozwoleniami
+wodnoprawnymi, ponieważ w tych umowach nie uwzględniono dopuszczalnych wartości
+parametrów wskaźników zanieczyszczeń określonych w pozwoleniach wodnoprawnych. Powyższe
+działanie było niezgodne z § 12 ust. 1 rozporządzenia w sprawie sposobu realizacji obowiązków
+dostawców ścieków w brzmieniu: „Zakres wskaźników zanieczyszczeń i ich dopuszczalne wartości oraz
+maksymalną wartość strumienia objętości ścieków przemysłowych, w zależności od specyfiki tych
+ścieków, ustala przedsiębiorstwo wodociągowo-kanalizacyjne, uwzględniając warunki pozwoleń
+wodnoprawnych, o których mowa w § 8 pkt 1 i 2”. (szczegółowy opis znajduje się w sekcji
+„Stwierdzone nieprawidłowości”).
+
+b)          W czterech umowach z dostawcami ścieków przemysłowych13, nie określono ilości i rodzaju
+wprowadzanych ścieków. Powyższe było wbrew dyspozycji art. 6 ust. 3 pkt 1 ustawy zzw.
+(szczegółowy opis znajduje się w sekcji „Stwierdzone nieprawidłowości”).
+
+c)          W jednym przypadku Spółka świadczyła usługi w zakresie odbioru ścieków przemysłowych
+w okresie, w którym przedsiębiorca nie dysponował pozwoleniem wodnoprawnym (szczegółowy
+opis znajduje się w sekcji „Stwierdzone nieprawidłowości”).
+
+                                                                                         (akta kontroli str. 284 - 362)
+
+1.7.        Spółka skorzystała z uprawnień wskazanych w art. 8 ust. 1 pkt 1 – 4 ustawy o zzw i odcięła
+dostawę wody do nieruchomości. Zamknięcie przyłącza wodociągowego odbyło się w dniu
+24.06.2024 r. i do dnia zakończenia czynności kontrolnych nie zostało przywrócone dostarczanie
+wody. Przyczyną odcięcia dostarczania wody było nieuiszczenie przez właściciela nieruchomości
+należności za dostarczanie wody za pełne dwa okresy obrachunkowe. Właściciel nieruchomości
+został powiadomiony przez Spółkę o zamiarze odcięcia dostawy wody i o lokalizacji zastępczego
+punktu poboru wody. O zamiarze odcięcia dostawy wody zostali powiadomieni Burmistrz Zelowa i
+PPIS w Bełchatowie.
+
+                                                                                         (akta kontroli str. 441 - 447)
+
+1.8.        Spółka nie kierowała zawiadomień do organów ścigania w związku z podejrzeniem
+popełnienia wykroczenia bądź przestępstwa, o których mowa w art. 28 ust. 1-4a ustawy o zzw,
+pomimo, iż w przypadku dwóch nieruchomości14 stwierdzono, że wystąpiły pobór wody
+i odprowadzanie ścieków bez uprzednio zawartej umowy ze Spółką. Jak wyjaśnił Prezes,
+w pierwszym przypadku właściciel składał formalne wnioski, uzyskiwał warunki techniczne
+(2006/2017), a następnie wystąpił o odbiór (2022 r.). Taki przebieg zdarzeń mógł być przez Spółkę
+oceniony jako wskazujący na dążenie do legalizacji, a nie na jednoznaczny zamiar bezumownego
+korzystania. Skoro w orzecznictwie akcentuje się umyślność czynu z art. 28 ust. 4 ustawy o zzw,
+
+
+
+13   Umowy nr: 1814/2023 z 18.10.2023 r., 3414/2019 z 01.04.2019 r., 4018/2022 z 31.05.2022 r., 4006/2022 z 05.04.2022 r.
+14   Dokonano kontroli dokumentów 12 losowo wybranych nieruchomości.
+
+                                                        strona 7 z 16
+Spółka mogła uznać, że przy stanie dowodowym opartym głównie na oświadczeniach
+i domniemaniach okresu korzystania, brak jest podstaw do kategorycznego formułowania
+zawiadomienia o przestępstwie.
+
+Spółka w oparciu o przeciętne normy zużycia wody określone w rozporządzeniu Ministra
+Infrastruktury15 określiła odszkodowanie w wysokości 8.026,52 zł. Po uregulowaniu ww.
+odszkodowania oraz po złożeniu wniosku o odbiór przyłączy wodociągowego i kanalizacyjnego
+Spółka zamontowała wodomierz, dokonała odbioru technicznego przyłączy w dniu 09.08.2022 r.
+i zawarła umowę na dostawę wody i odprowadzanie ścieków.
+
+Natomiast w przypadku drugiej nieruchomości Prezes wyjaśnił, że ujawniono co prawda
+wbudowane przyłącze wodociągowe, które jednak nie było podłączone do sieci wodociągowej. Przy
+braku podłączenia nie zachodziło zatem pobieranie wody z urządzeń wodociągowych
+w rozumieniu art. 28 ust. 1 ustawy o zzw. W konsekwencji, Spółka mogła uznać, że brak było
+przedmiotu zawiadomienia w zakresie art. 28 ust. 1 ustawy, ponieważ znamiona czynu nie były
+spełnione. Natomiast ujawnienie wprowadzania ścieków od czerwca 2018 r. nastąpiło dopiero przy
+czynnościach odbiorowych w 2023 r. Spółka - przy braku wcześniejszej kontroli i odczytów urządzeń
+pomiarowych i przy wieloletnim okresie - mogła ocenić, że materiał dowodowy był niewystarczający
+do jednoznacznego wykazania elementu umyślności oraz precyzyjnego okresu realizacji znamion.
+Spółka dokonała legalizacji protokołem z 13 lipca 2023 r., zawarła umowę oraz - za zgodą właścicieli
+- obciążyła ich kwotą kompensacyjną za okres bezumownego odprowadzania ścieków16.
+Z perspektywy funkcjonalnej przedsiębiorstwa wod.-kan. działanie to przerwało czyn trwały
+i usunęło stan naruszenia.
+
+                                                                     (akta kontroli str. 120, 434 – 440, 448 - 463)
+
+1.9.     Do książki kontroli Zakładu, w okresie objętym kontrolą i w zakresie przedmiotu kontroli
+NIK, zostały dokonane dwa wpisy. Pierwszy przez Państwowy Inspektorat Nadzoru Budowlanego
+w dniu 29.04.2024 r. w związku z kontrolą utrzymania i eksploatacji sieci wodociągowej
+w miejscowości Kociszew, Dąbrowa, Grabostów, zlokalizowanych na terenie gminy Zelów. Drugi
+wpis został dokonany w związku z kontrolą przeprowadzoną przez Państwowy Powiatowy
+Inspektorat Sanitarny w Bełchatowie. PPIS w Bełchatowie w dniu 13.08.2025 r. sporządził protokoły
+z kontroli, których przedmiotem były: ocena stanu sanitarnego ujęcia wody wodociągu Zelów,
+ocena ujęcia wody wodociągu Kociszew, będących w dyspozycji Zakładu Usług Komunalnych Sp.
+z o.o. w Zelowie. W protokołach z obu ujęć wody PPIS nie zawarł uwag, zaleceń i wniosków. Ponadto
+PPIS w Bełchatowie przeprowadził kontrole:
+
+a)       PPIS pismami z dni 03.02.2023 r., 22.02.2023 r. i 31.03.2023 r., poinformował Spółkę
+o przekroczeniach dopuszczalnej zawartościach manganu w wodzie z wodociągu Zelów
+w próbkach pobranych odpowiednio w dniach 30.01.2023 r.17, 21.02.2023 r.18, i 27.03.2023 r.19 We
+
+
+
+15 Rozporządzenie z dnia 14 stycznia 2002 r. Ministra Infrastruktury w sprawie określenia przeciętnych norm zużycia wody
+Dz.U. z 2002 r. nr 8 poz. 70.
+16 W kwocie 3.992,40 zł.
+
+17 W pobranych próbkach wody stwierdzono przekroczenie manganu: SUW Zelów – 76 µg/l, Szkoła podstawowa w
+
+Łobudzicach 54 - 66 µg/l. Dopuszczalna wartość to 50 µg/l.
+18 W pobranych próbkach wody stwierdzono przekroczenie manganu: SUW Zelów – 69 µg/l. Dopuszczalna wartość to 50
+
+µg/l.
+19 W pobranej próbce wody w SUW Zelów – woda wychodząca do sieci zawierała 73 µg/l manganu. Dopuszczalna wartość
+
+to 50 µg/l.
+
+                                                     strona 8 z 16
+wszystkich ww. pismach PPIS wydał zalecenia: podjąć skuteczne działania naprawcze w celu
+doprowadzenia          wody     z   wodociągu       Zelów     do     składu    odpowiadającego        wymaganiom
+rozporządzenia Ministra Zdrowia z 7 grudnia 2017 r. (Dz. U. z 2017 r. poz. 2294); niezwłocznie
+wykonać badanie wody w ramach kontroli wewnętrznej w kierunku przekroczonego parametru,
+o wynikach badania poinformować PPIS w Bełchatowie. Spółka pismami z dnia 09.03.2023 r.,
+12.04.2023 r., i 15.05.2023 r. poinformowała PPIS o wynikach badań wody pobranych odpowiednio
+w dniach 13.02.2023 r.20, 15.03.2023 r.21, i 19.04.2023 r.22.
+Spółka pismem z dnia 16.06.2023 r. zwróciła się z prośbą do PPIS o możliwość stwierdzenia
+warunkowej przydatności wody do spożycia z ujęcia wody w Zelowie na okres 1,5 roku ze względu
+na przekroczenia wartości parametrów wskaźnikowych manganu w próbkach wody z ww.
+wodociągu oraz braku możliwości usunięcia nieprawidłowości w wyniku doraźnie podjętych
+działań. Spółka wskazała, iż zaplanowała modernizację SUW Zelów w okresie 29 miesięcy.
+W związku z prośbą Spółki w dniu 14.07.2023 r. PPIS wydał decyzję stwierdzającą warunkową
+przydatność wody do spożycia z wodociągu Zelów ze względu na przekroczenie wartości
+parametrycznej manganu i określił dopuszczalną wartość parametryczną manganu ≤100 µg/l do
+dnia 31.12.2024 r. i nakazał Spółce: niezwłocznie rozpowszechnić komunikat opracowany przez
+PPIS zawierający informacje o zaleceniach wykorzystania wody, w sposób umożliwiający
+zapoznanie się z komunikatem przez konsumentów z obszaru, dla którego wydano komunikat;
+niezwłocznie przekazać odbiorcom usług pisemnej informacji o podejmowanych oraz planowanych
+działaniach naprawczych;            wyznaczenie miejsc, częstotliwości i zakresu badania jakości wody
+w uzgodnieniu z PPIS. W ramach realizacji ww. zaleceń Spółka dokonała pomiaru zawartości wody
+w próbkach pobranych w dniach: 24.08.2023 r.23, 26.10.2023 r.24, 30.01.2024 r.25, 29.04.2024 r.26.
+Wyniki badań Spółka przesyłała do PPIS.
+PPIS pismem z dnia 04.06.2024 r. przekazał Spółce komunikat i zobowiązał ją do powiadomienia
+odbiorców wodociągu Zelów o tym, że w badaniach wody z wodociągu Zelów stwierdzono
+obniżenie wartości parametrycznej manganu i PPIS w Bełchatowie stwierdza przydatność wody
+spożycia.
+                                                                                      (akta kontroli str. 367 - 403)
+
+Jak wyjaśnił Prezes Zarządu Spółki, Spółka przekazywała komunikaty otrzymywane od PPIS
+odbiorcom wody poprzez:
+       -    umieszczenie komunikatu na stronie internetowej Spółki,
+
+
+
+
+20 W pobranych próbkach wody w SUW Zelów, Oczyszczalni, Szkoła Podstawowa w Łobudzicach, Szkoła Podstawowa nr 4
+w Zelowie, zawartość manganu była poniżej 50 µg/l.
+21 W pobranych próbkach wody w SUW Zelów, Oczyszczalni, Szkoła Podstawowa w Łobudzicach, Szkoła Podstawowa nr 4
+
+w Zelowie, zawartość manganu była poniżej 50 µg/l.
+22 W pobranych próbkach wody w SUW Zelów (ul. Dzielna), Mauryców 1A, Szkoła Podstawowa w Zelowie Ul. Żeromskiego
+
+51, Szkoła Podstawowa Łobudzice zawartość manganu była poniżej 50 µg/l.
+23 W pobranych próbkach wody zawartość manganu wynosiła: Szkoła Podstawowa w Zelowie ul. Żeromskiego 51 – 27 µg/l,
+
+
+Szkoła Podstawowa Łobudzice 54 – 28 µg/l, Mauryców 1A - <5 µg/l, SUW Zelów, ul. Dzielna – 143 µg/l.
+24   W pobranych próbkach wody zawartość manganu wynosiła: Szkoła Podstawowa w Zelowie ul. Żeromskiego 51 – <5 µg/l,
+Szkoła Podstawowa Łobudzice 54 – <5 µg/l, Mauryców 1A - <5 µg/l, SUW Zelów, ul. Dzielna – 50 µg/l.
+25   W pobranych próbkach wody zawartość manganu wynosiła: Szkoła Podstawowa w Zelowie ul. Żeromskiego 51 – <5 µg/l,
+Szkoła Podstawowa Łobudzice 54 – <5 µg/l, Mauryców 1A - <5 µg/l, SUW Zelów, ul. Dzielna – 19 µg/l.
+26   W pobranych próbkach wody zawartość manganu wynosiła: Szkoła Podstawowa w Zelowie ul. Żeromskiego 51 – <5 µg/l,
+Szkoła Podstawowa Łobudzice 54 – <5 µg/l, Mauryców 1A - <5 µg/l, SUW Zelów, ul. Dzielna – 11 µg/l.
+
+
+                                                     strona 9 z 16
+       -    przekazanie komunikatu do Urzędu Miasta i Gminy Zelów,
+       -    wywieszanie komunikatu na drzwiach wejściowych do siedziby Spółki,
+       -    powiadamianie telefonicznie i przekazałem e-mailem komunikat: sołtysom, placówkom
+            oświatowym, przedszkolom, bibliotekom, ośrodkom zdrowia, przychodniom, Domowi
+            Pomocy          Społecznej,   Domowi   Seniora,    restauracjom,   punktom    gastronomicznym
+            i piekarniom.
+                                                                                (akta kontroli str. 448 - 463)
+
+b)          W dniu 25.11.2024 r. w SUW Zelów PPIS stwierdził27 warunkową przydatność wody
+do spożycia w wodociągu Zelów ze względu na obecność bakterii grupy coli i określił termin trwania
+przekroczenia oraz przywrócenia należytej jakości wody do dnia 11.12.2024 r., oraz określił
+dopuszczalną wartość parametryczną dla bakterii grupy coli < 10jtk/100 ml. PPIS wydał Spółce
+zalecenia:
+- podjęcie działań naprawczych,
+- poinformowanie odbiorców o zaistniałej sytuacji,
+- prowadzenie stałego monitoringu chloru wodnego w wodzie wodociągowej,
+- wykonanie badań jakości w wodzie,
+- przedłożenie sprawozdania z badań jakości wody do 11.12.2024 r.
+PPIS w Bełchatowie w dniu 27.11.2024 r. wydał komunikat skierowany do użytkowników wody
+z wodociągu w Zelowie. „Woda warunkowo przydatna do spożycia po przegotowaniu przez min. 2
+minuty a następnie bez gwałtownego schłodzenia pozostawiona do ostudzenia. Przegotowania wymaga
+też woda do: przygotowania posiłków, mycia spożywanych na surowo owoców warzyw, mycia zębów,
+mycia naczyń, kąpieli noworodków i niemowląt. Woda bez przegotowania może być stosowana
+do codziennego mycia, prania odzieży, prac porządkowych (np. mycia podłóg) spłukiwania toalet”. PPIS
+zobowiązał Spółkę do powiadomienia odbiorców wody w sposób zapewniający dotarcie informacji
+do wszystkich użytkowników.
+
+
+28.11.2024 r. Spółka poinformowała PPIS o tym, „iż sieć wodociągowa jest płukana i dezynfekowana
+z użyciem polichlorku sodu oraz że odbiorcy wody zostali poinformowani o zaistniałej sytuacji. Zostały
+pobrane próbki wody do badań laboratoryjnych z 4 punktów zgodności oraz ze stuni 13A, 13B i 14A.
+Działania naprawcze będą prowadzone do uzyskania pozytywnych wyników jakości mikrobiologicznej
+wody we wszystkich punktach monitoringowych”. W dniach 2 i 3 grudnia 2024 r. Spółka dokonała
+sprawdzenia jakości wody odpowiednio przed i po przeprowadzonych działaniach naprawczych
+i wyniki badań przesłała do PPIS. PPIS w dniu 2.12.2024 r. wydał komunikat „Woda warunkowo
+przydatna do spożycia po przegotowaniu przez min. 2 minuty a następnie bez gwałtownego schłodzenia
+pozostawiona do ostudzenia. Przegotowanie wymaga też woda do: przygotowania posiłków, mycia
+spożywanych na surowo owoców warzyw, mycia zębów, mycia naczyń, kąpieli noworodków i niemowląt.
+Woda bez przegotowania może być stosowana do codziennego mycia, prania odzieży, prac
+porządkowych (np. mycia podłóg) spłukiwania toalet”. PPIS zobowiązał Spółkę do powiadomienia
+odbiorców wody w sposób zapewniający dotarcie informacji do wszystkich użytkowników.
+
+
+PPIS w dniu 2.12.2024 r. ponownie dokonał kontroli zdatności wody z SUW Zelów do spożycia
+i w dniu 5.12.2024 r. wydał komunikat: „PPIS w Bełchatowie informuje, że woda w próbkach pobranych
+
+
+
+27   Protokół nr 93/K/24.
+
+                                                    strona 10 z 16
+w ramach kontroli urzędowej i wewnętrznej w dniu 2.12.2024 r. z wodociągu Zelów nie stwierdzono
+przekroczeń parametrów mikrobiologicznych. PPIS w Bełchatowie przy prowadzonej dezynfekcji
+stwierdza przydatność wody do spożycia”. PPIS zobowiązał Spółkę do powiadomienia odbiorców
+wody w sposób zapewniający dotarcie informacji do wszystkich użytkowników
+                                                                        (akta kontroli str. 404 - 433 )
+
+c)          Pismem z 5.12.2024 r. PPIS Bełchatów zobowiązał Spółkę do niezwłocznego wykonania
+badania wody w ramach kontroli wewnętrznej w SUW Zelów – woda wychodząca do sieci i w trzech
+punktach monitorujących na sieci. Badanie należało wykonać w zakresie smaku, zapachu. PPIS
+otrzymał prośbę o interwencję dotyczącą złej jakości wody z wodociągu Zelów (zły smak i zapach).
+11.12.2024 r. Spółka przesyła sprawozdanie do PPIS z badania jakości wody z wodociągu Zelów
+w zakresie smaku i zapachu. Próbki wody pobrane zostały w dniu 6.12.2024 r. z 4 punktów
+zgodności. Faktycznie badanie zostało wykonane w zakresie smaku i barwy zamiast smaku
+i zapachu. 13.12.2024 r. Spółka przesyła sprawozdanie do PPIS z badania jakości wody z wodociągu
+Zelów w zakresie smaku i zapachu próbek pobranych 9.12.2024 r. Pismem 19.12.2024 r. PPIS
+w Bełchatowie zawiadomił Spółkę, iż na podstawie próbek z wodociągu Zelów w ramach kontroli
+wewnętrznej próbek pobranych w dniach 3.12.2024 r. oraz w ramach kontroli urzędowej próbek
+pobranych w dniach 02.12.2024 r., że w zakresie przebadanych parametrów woda spełnia
+wymagania określone w rozporządzeniu.
+                                                                        (akta kontroli str. 404 – 433)
+
+d)          W dniu 28.11.2024 PPIS w Bełchatowie przeprowadził kontrolę28 w budynku SUW w hali
+filtrów. W wyniku stwierdzonych nieprawidłowości wydano następujące zalecenia:
+- uporządkować pomieszczenie hali filtrów oraz teren wokół budynku SUW,
+- naprawić opaskę wokół studni 138 na terenie SUW Zelów,
+- zabezpieczyć końcówki rurociągów tłocznych przed zanieczyszczeniami,
+- usunąć zbędne przedmioty z hali filtrów.
+Nałożono grzywnę na Prokurenta spółki w wysokości 200,00 zł. W dniu 16.12.2024 r. PPIS dokonał
+ponownej kontroli29 hali filtrów. Kontrola sanitarna ujęcia wody wodociągu Zelów w związku
+z zastosowanym karaniem mandatowym, sprawdzenie wykonania zaleceń wydanych w dniu
+28.11.2024 r. W protokole z kontroli nie stwierdzono nieprawidłowości. Zalecenia zostały
+wykonane.
+                                                                         (akta kontroli str. 404 - 433)
+
+1.10.       Prezes Zarządu Spółki wyjaśnił, iż z uwagi na niezakończone prace nad zmianami w ustawie
+o zbiorowym zaopatrzeniu w wodę i zbiorowym odprowadzaniu ścieków w celu wdrożenia
+wymogów dyrektywy w sprawie jakości wody przeznaczonej do spożycia przez ludzi niełatwo zająć
+stanowisko w sprawie trudności i problemów w związku z procedowanymi obecnie zmianami.
+Niemniej jednak wdrożenie nowych przepisów, zwłaszcza dla mniejszych przedsiębiorstw
+wodociągowo-kanalizacyjnych, może wiązać się z dużymi nakładami finansowymi na modernizację,
+monitoring i nowe procedury.
+
+                                                                         (akta kontroli str. 436 - 443)
+
+
+
+
+28   Protokół z kontroli Nr HK/68/95/24.
+29   Protokół kontroli nr HK/68/100/24.
+
+                                              strona 11 z 16
+Stwierdzone nieprawidłowości
+
+W działalności kontrolowanej jednostki w przedstawionym wyżej zakresie stwierdzono następujące
+nieprawidłowości:
+
+1.         W całym okresie objętym kontrolą Spółka nie prowadziła kontroli jakości odprowadzanych
+ścieków bytowych i przemysłowych oraz warunków wprowadzania ścieków do urządzeń
+kanalizacyjnych, do czego zobowiązywał Spółkę art. 9 ust. 3 ustawy o zzw.
+
+Prezes wyjaśnił, iż dostawcy ścieków przemysłowych zobligowani byli do wykonywania nie rzadziej
+niż dwa razy w roku badania jakości ścieków przemysłowych zawierających substancje
+zanieczyszczające zawarte w załączniku do zarządzenia Prezesa Zarządu Spółki w sprawie
+dopuszczalnych wartości wskaźników zanieczyszczeń w ściekach przemysłowych wprowadzanych
+do oczyszczalni ścieków w Zelowie. Dostawcy ścieków zobowiązani byli do udostępniania Spółce
+wyników tych badań. Prezes nie odniósł się natomiast do braku kontroli ścieków bytowych.
+
+                                                                                   (akta kontroli str. 441 - 447)
+
+NIK również wskazuje, iż obowiązek prowadzenia przez Spółkę kontroli jakości odprowadzanych
+ścieków bytowych i przemysłowych oraz warunków wprowadzania ścieków do urządzeń
+kanalizacyjnych wynikał z art. 9 ust. 3 ustawy o zzw i Spółka powinna ten obowiązek wypełnić, a go
+nie wypełniała. Badania wykonywane przez dostawców ścieków były prowadzone w ramach
+kontroli wewnętrznej zgodnie z art. 10 pkt 4 ustawy o zzw i przekazywane następnie
+przedsiębiorstwu w myśl art. 10 pkt 5 ustawy tej ustawy. Nie można jednak uznać, że było to
+równoznaczne z prowadzeniem regularnej kontroli, do której spółkę obligował art. 9 ust. 3 ustawy
+o zzw.
+
+2.         Paragraf 12 ust. 1 rozporządzenia w sprawie sposobu realizacji obowiązków dostawców
+ścieków stanowił: „Zakres wskaźników zanieczyszczeń i ich dopuszczalne wartości oraz maksymalną
+wartość strumienia objętości ścieków przemysłowych, w zależności od specyfiki tych ścieków, ustala
+przedsiębiorstwo wodociągowo-kanalizacyjne, uwzględniając warunki pozwoleń wodnoprawnych,
+o których mowa w § 8 pkt 1 i 2”. Poniżej przedstawione warunki z umów zawartych przez Spółkę
+z dostawcami ścieków przemysłowych nie wypełniały ww. przepisu, ponieważ:
+
+-          w umowie30 z przedsiębiorcą Spółka określiła dopuszczalne wartości odpowiednio dla
+           fosforu ogólnego 15 mgP/l dla miedzi 0,25 mgCr/l. Natomiast w pozwoleniu
+           wodnoprawnym31 określono je w ilości dla fosforu ogólnego do 3 mgP/l, dla miedzi 0,10
+           mgCr/l. Jak z tego wynika w umowie ww. dopuszczalne zawartości fosforu i miedzi były
+           wyższe niż określone w pozwoleniu wodnoprawnym.
+
+                                                                                   (akta kontroli str. 239 - 362)
+
+           Prezes Zarządu Spółki wyjaśnił m.in. „umowa zawarta była 7 sierpnia 2015 r., a pozwolenie
+           wydano 22 czerwca 2023 r. – umowa zawarta znacznie wcześniej niż aktualne pozwolenie
+           wodnoprawne – w dacie zawarcia umowy obowiązywały uprzednie uwarunkowania
+           wodnoprawne oraz wzorcowe parametry dla ścieków przemysłowych, które były stosowane dla
+
+
+
+
+30   Umowa nr 2764/2015 z 07.08.2015 r.
+31   Pozwolenie wodnoprawne wydane w dniu 22.06.2023 r. decyzja PO.ZUZ.5.4210.360.2023.MK.
+
+                                                    strona 12 z 16
+         grupy odbiorców. Rozbieżność wynikała zatem z braku aktualizacji dokumentu umownego
+         po zmianie pozwolenia”.
+
+                                                                                       (akta kontroli str. 441 - 447)
+
+-        w umowie z przedsiębiorcą32 Spółka określiła dopuszczalne wartości odpowiednio
+         dla fosforu ogólnego 15 mgP/l dla azotu amonowego 40 mgN/NH4/l. Natomiast
+         w pozwoleniu wodnoprawnym33 określono je w ilości dla fosforu ogólnego do 3 mgP/l, dla
+         azotu amonowego 30 mgN/NH4/l. Jak z tego wynika w umowie ww. dopuszczalne
+         zawartości fosforu ogólnego i azotu amonowego były wyższe niż określone w pozwoleniu
+         wodnoprawnym.
+
+                                                                                       (akta kontroli str. 239 - 362)
+
+         Prezes Zarządu Spółki wyjaśnił m.in. „przy zawieraniu umowy w 2022 r. posłużono się
+         wzorcową tabelą parametrów dopuszczalnych dla ścieków przemysłowych, opracowaną
+         wcześniej jako ogólny standard dla odbiorców przemysłowych (w oparciu o ówczesne przepisy
+         i warunki techniczne), bez pełnego przepisywania do umowy indywidualnych wartości
+         z pozwolenia wodnoprawnego. Po stronie Spółki funkcjonowało przekonanie, że z punktu
+         widzenia zgodności z prawem decydujące znaczenie mają warunki pozwolenia wodnoprawnego
+         przedsiębiorstwa oraz przepisy wykonawcze, a umowa z odbiorcą nie może ich derogować”.
+
+                                                                                       (akta kontroli str. 441 - 447)
+
+         - w umowie z przedsiębiorcą34 Spółka nie określiła dopuszczalnej wartości surfaktantów
+         niejonowych. Dopuszczalna wartość wg pozwolenia wodnoprawnego35 wynosiła dla
+         surfaktantów niejonowych 15 mg/l.
+
+                                                                                       (akta kontroli str. 441 - 447)
+
+         Prezes Zarządu Spółki wyjaśnił m.in. „nie doszło do wpisania w umowie wartości wyższych
+         niż w pozwoleniu, lecz do pominięcia jednego wskaźnika (surfakanty niejonowe) w tabeli
+         umownej, przy istniejącym parametrze w pozwoleniu wodnoprawnym (15 mg/l) oraz
+         dopuszczalnej wartości wynikającej z rozporządzenia (20 mg/l). Przy sporządzaniu
+         załącznika do umowy z 31.05.2022 r. opracowano tabelę wskaźników w oparciu
+         o standardowy zestaw parametrów monitorowanych w ściekach przemysłowych dla tego
+         rodzaju działalności, przy czym surfakanty niejonowe – jako parametr nieprzekraczający
+         w dotychczasowych badaniach wartości granicznych – został pominięty w tabeli umownej.
+         Uznano, że wystarczające jest stosowanie w praktyce eksploatacyjnej wartości wynikającej
+         z pozwolenia wodnoprawnego oraz rozporządzenia, a brak odrębnego wiersza w tabeli
+         umowy nie zwalnia dostawcy ścieków z obowiązku dochowania tych wartości”.
+
+                                                                                       (akta kontroli str. 441 - 447)
+
+3.       W czterech umowach z dostawcami ścieków przemysłowych36 nie określono ilości i rodzaju
+wprowadzanych ścieków. Powyższe było wbrew dyspozycji art. 6 ust. 3 pkt 1 i 3 ustawy zzw,, który
+
+
+
+32 Umowa nr 4006/2022 z 05.04.2022 r.
+33 Decyzja z dnia 15.05.2019 r. PO.ZUZ.5.421.184.219.PŁ podpisana przez Dyrektora PGW WD Zarząd Zlewni w Sieradzu
+oraz z dnia 13.03.2023 r. decyzją nr PO.ZUZ.5.54210.18.2023.PŁ Dyrektor PGW WD Zarząd Zlewni w Sieradzu
+34 Umowa nr 4018/2022 z 31.05.2022 r.
+
+35 Decyzja z dnia 21.04.2022 r. nr O.ZUZ.5.152.2022.TS wydana przez Dyrektora PGW WD Zarząd Zlewni w Sieradzu
+
+36 Umowy nr: 1814/2023 z 18.10.2023 r., 3414/2019 z 01.04.2019 r., 4018/2022 z 31.05.2022 r., 4006/2022 z 05.04.2022 r.
+
+
+                                                     strona 13 z 16
+stanowił, iż umowa z dostawcami ścieków przemysłowych powinna zawierać warunki
+ich świadczenia oraz obowiązki stron. Zgodnie z § 12 ust. 1 rozporządzenia w sprawie sposobu
+realizacji obowiązków dostawców ścieków, zakres wskaźników zanieczyszczeń i ich dopuszczalne
+wartości oraz maksymalną wartość strumienia objętości ścieków przemysłowych ustala
+przedsiębiorstwo wodociągowo-kanalizacyjne, zatem warunki w tym zakresie oraz prawa
+i obowiązki stron powinny zostać wskazane w umowach.
+
+                                                                        (akta kontroli str. 284 – 362, 441 - 447)
+
+Prezes Zarządu Spółki wyjaśnił m.in. „W dacie zawierania umów z dostawcami ścieków przemysłowych
+przyjęto rozwiązanie, w którym ilość ścieków nie była określona z góry w postaci sztywnej wartości, lecz
+była ustalana w oparciu o rzeczywisty pomiar dokonany przez urządzenia pomiarowe (wodomierze).
+W praktyce oznaczało to, że ilość ścieków była wskazywana i dokumentowana w comiesięcznych
+rozliczeniach (fakturach i zestawieniach). Z perspektywy stron kluczowe było bieżące, mierzone
+faktycznie zużycie, a nie deklaracja ilości o charakterze szacunkowym. (…) W konsekwencji, na etapie
+zawierania umów Spółka przyjmowała interpretację, że wymóg art. 6 ust. 3 pkt 1 ustawy zzw jest
+spełniony poprzez wskazanie sposobu ustalania ilości ścieków (pomiar i rozliczenia okresowe),
+oznaczenie ścieków jako „przemysłowych”.
+
+                                                                                   (akta kontroli str. 441 - 447)
+
+NIK wskazuje, iż zgodnie z art. 6 ust. 3 ustawy zzw oraz § 12 ust. 1 rozporządzenia w sprawie sposobu
+realizacji obowiązków dostawców ścieków umowa zawierana z dostawcami ścieków powinna
+określać m.in. maksymalną wartość strumienia objętości ścieków przemysłowych.
+
+4.         Zgodnie z art. 391 ustawy z dnia 20 lipca 2017 r. prawo wodne37 obowiązek posiadania
+pozwolenia wodnoprawnego na szczególne korzystanie z wód na wprowadzanie do urządzeń
+kanalizacyjnych będących własnością innych podmiotów ścieków przemysłowych zawierających
+substancje szczególnie szkodliwe dla środowiska wodnego określone w przepisach wydanych
+na podstawie art. 100 ust. 1 dotyczy wytwórcy ścieków przemysłowych. Tymczasem w okresie
+co najmniej od 07.08.2024 r. do 27.08.2025 r. Spółka świadczyła usługę odbioru ścieków
+przemysłowych          pomimo,      że   ich   dostawca38      nie    posiadał   obowiązującego     pozwolenia
+wodnoprawnego na ich wprowadzanie do urządzeń kanalizacyjnych, a tym samym nie był
+spełniony warunek, o którym mowa w par. 8 pkt 2 rozporządzenia w sprawie jakości ścieków, który
+stanowił, iż ścieki przemysłowe mogą być wprowadzane do urządzeń kanalizacyjnych, jeżeli
+spełnione są przez dostawcę ścieków przemysłowych warunki posiadanego pozwolenia
+wodnoprawnego, gdy takie pozwolenie jest wymagane na podstawie przepisów Prawa wodnego.
+
+                                                                        (akta kontroli str. 239 – 362, 441 - 447)
+
+Prezes Zarządu Spółki wyjaśnił: Spółka świadczyła usługi firmie na podstawie umowy nr 3414/2019
+w zakresie odbioru ścieków w okresie od 07.08.2024 r. do 27.08.2025 r. tj. w okresie, w którym ww. firma
+nie dysponowała pozwoleniem wodnoprawnym, ponieważ umowa zawarta dnia 01.04.2019 r., została
+zawarta na czas określony, a sprawozdanie z badań ścieków przemysłowych, zawierające substancje
+szczególnie szkodliwe dla środowiska wodnego charakterystyczne dla prowadzonej działalności (myjnia
+samochodowa), z dnia 03.08.2024 r. oraz 21.02.2025 r. nie zawierały tych substancji w ilościach
+
+
+
+37   Dz. U. z 2017 r. poz. 1566.
+38   Dostawca ścieków z którym zawarto umowę nr 3414/2019 z 01.04.2019 r.
+
+                                                     strona 14 z 16
+przekraczających dopuszczalne wartości wskaźników zanieczyszczeń określonych w przepisach prawa,
+jak również nie stanowiło to zagrożenia dla bezpieczeństwa i zdrowia osób obsługujących urządzenia
+kanalizacyjne, stanu konstrukcji budowlanych i prawidłowego działania tych urządzeń oraz oczyszczalni
+ścieków, a także dla spełnienia przez przedsiębiorstwo wodociągowo-kanalizacyjne warunków
+pozwolenia wodnoprawnego na wprowadzanie ścieków do wód lub ziemi i stosowania osadów
+ściekowych”.
+
+                                                                        (akta kontroli str. 441 - 447)
+
+NIK wskazuje, iż świadczenie usługi odbioru ścieków przemysłowych od ich dostawcy bez
+posiadania przez niego pozwolenia wodnoprawnego było działaniem nierzetelnym.
+
+
+
+
+IV.Uwaga i wniosek
+W związku ze stwierdzonymi nieprawidłowościami, a także działaniami podjętymi w trakcie kontroli
+przez Spółkę Najwyższa Izba Kontroli, na podstawie art. 53 ust. 1 pkt 5 ustawy o NIK, przedstawia
+następującą uwagę i wniosek:
+
+Uwaga
+
+NIK zwraca uwagę na konieczność prowadzenia regularnej kontroli jakości odprowadzanych
+ścieków bytowych oraz warunków ich wprowadzania do urządzeń kanalizacyjnych, zgodnie z art. 9
+ust. 3 ustawy o zzw.
+
+Wniosek
+
+Skorygowanie umów z dostawcami ścieków przemysłowych w celu uwzględnienia warunków
+określonych w pozwoleniach wodnoprawnych.
+
+V. Pozostałe informacje i pouczenia
+Zgodnie z art. 54 ustawy o NIK kierownikowi jednostki kontrolowanej przysługuje prawo zgłoszenia
+na piśmie umotywowanych zastrzeżeń do wystąpienia pokontrolnego, w terminie 21 dni od dnia
+jego przekazania. Zastrzeżenia zgłasza się do dyrektora Łódzkiej Delegatury NIK w Łodzi Najwyższej
+Izby Kontroli. Prawo zgłaszania zastrzeżeń, zgodnie z art. 61b ust. 2 ustawy o NIK, nie przysługuje
+do wystąpienia pokontrolnego zmienionego zgodnie z treścią uchwały w sprawie zastrzeżeń.
+
+Zgodnie z art. 62 ustawy o NIK, należy poinformować Najwyższą Izbę Kontroli, w terminie 21 dni od
+otrzymania wystąpienia pokontrolnego, o sposobie wykorzystania uwagi i wykonaniu wniosku
+oraz o podjętych działaniach lub przyczynach niepodjęcia tych działań. Zgodnie z art. 98 ustawy
+o NIK, kto nie informuje bądź niezgodnie z prawdą informuje o wykonaniu wniosków
+pokontrolnych, podlega grzywnie, karze ograniczenia wolności albo pozbawienia wolności do lat 3.
+
+W przypadku wniesienia zastrzeżeń do wystąpienia pokontrolnego, termin przedstawienia
+informacji liczy się od dnia otrzymania uchwały o oddaleniu zastrzeżeń w całości lub zmienionego
+wystąpienia pokontrolnego.
+
+Wystąpienie pokontrolne sporządzono w postaci elektronicznej z użyciem kwalifikowanych
+podpisów elektronicznych.
+
+                                            strona 15 z 16
+Łódź, dnia 03.02.2026 r.
+
+
+
+
+                   Kontroler                                 Najwyższa Izba Kontroli
+
+                                                               Delegatura w Łodzi
+              Ryszard Lewiński
+                                                                  p.o. Dyrektor
+             Gł. specjalista k.p.
+                                                                 Piotr Walczak
+
+               /podpisano elektronicznie/
+
+                                                                 /podpisano elektronicznie/
+
+
+
+
+                                            strona 16 z 16
+

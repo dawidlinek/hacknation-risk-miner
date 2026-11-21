@@ -1,0 +1,33 @@
+# Sector pack wod-kan: edit in the panel or here; loaded by `riskminer seed-catalogue`.
+# Source: docs/research/03_domain_methodology.md (+ expert materials). status: approved | proposed.
+subsectors:
+- code: WOD
+  name: Sieć wodociągowa
+  status: approved
+- code: SAN
+  name: Kanalizacja sanitarna
+  status: approved
+- code: OCZ
+  name: Oczyszczalnia ścieków
+  status: approved
+- code: SUW
+  name: Uzdatnianie i zaopatrzenie w wodę
+  status: approved
+- code: DESZ
+  name: Kanalizacja deszczowa i retencja
+  status: approved
+- code: INNE
+  name: Inne obiekty wod-kan
+  status: approved
+works_types:
+- code: build
+  name: budowa / rozbudowa
+- code: renovation
+  name: przebudowa / renowacja
+- code: mixed
+  name: mieszany
+delivery_models:
+- code: build
+  name: buduj (projekt zamawiającego)
+- code: design_build
+  name: zaprojektuj i wybuduj

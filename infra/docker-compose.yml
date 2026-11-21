@@ -1,0 +1,75 @@
+# Risk Miner local stack.
+#   docker compose -f infra/docker-compose.yml up -d db          # Postgres only (dev)
+#   docker compose -f infra/docker-compose.yml --profile app up  # + api + worker
+# Postgres 18 + pgvector; pg_trgm and unaccent ship with the image (contrib).
+name: riskminer
+services:
+  db:
+    image: pgvector/pgvector:pg18
+    container_name: riskminer-db
+    shm_size: 2gb          # default 64 MB breaks parallel hash joins (DiskFullError on /dev/shm)
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-riskminer}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-riskminer}
+      POSTGRES_DB: ${POSTGRES_DB:-riskminer}
+    command: >
+      postgres
+      -c shared_buffers=2GB
+      -c work_mem=64MB
+      -c maintenance_work_mem=1GB
+      -c max_wal_size=8GB
+      -c default_toast_compression=lz4
+      -c max_connections=100
+    ports:
+      - "${RISKMINER_DB_PORT:-5434}:5432"
+    volumes:
+      - riskminer_pg:/var/lib/postgresql
+      - ./initdb:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER:-riskminer} -d $${POSTGRES_DB:-riskminer}"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+
+  api:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile.backend
+    profiles: ["app"]
+    environment:
+      DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER:-riskminer}:${POSTGRES_PASSWORD:-riskminer}@db:5432/${POSTGRES_DB:-riskminer}
+      RISKMINER_CONFIG: /app/config/config.yaml
+      RISKMINER_ROOT: /app
+    command: ["uv", "run", "--no-sync", "uvicorn", "riskminer.api.main:app", "--host", "0.0.0.0", "--port", "8000"]
+    ports: ["${RISKMINER_API_PORT:-8000}:8000"]
+    volumes:
+      - ../data:/app/data
+      - ../exports:/app/exports
+      - ../materials:/app/materials:ro
+      - ../config:/app/config:ro
+      - ../catalogue:/app/catalogue:ro
+    depends_on:
+      db: {condition: service_healthy}
+
+  worker:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile.backend
+    profiles: ["app"]
+    environment:
+      DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER:-riskminer}:${POSTGRES_PASSWORD:-riskminer}@db:5432/${POSTGRES_DB:-riskminer}
+      RISKMINER_CONFIG: /app/config/config.yaml
+      RISKMINER_ROOT: /app
+    command: ["uv", "run", "--no-sync", "riskminer", "worker"]
+    volumes:
+      - ../data:/app/data
+      - ../exports:/app/exports
+      - ../materials:/app/materials:ro
+      - ../config:/app/config:ro
+      - ../catalogue:/app/catalogue:ro
+    depends_on:
+      db: {condition: service_healthy}
+
+volumes:
+  riskminer_pg:

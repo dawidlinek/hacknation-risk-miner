@@ -1,0 +1,155 @@
+"""Risk Miner CLI.
+
+  riskminer scrape <source> [--since D] [--until D] [--limit N] [--only a,b] [--no-db] [--opt k=v ...]
+  riskminer parse <source>                 # raw -> data/derived/<source>/records.jsonl (no network)
+  riskminer load <source>                  # manifest -> source rows, derived records -> DB
+  riskminer load-all                       # XLSX + BZP copy + derive + link 22/22 (+ scraped sources)
+  riskminer import-xlsx | import-bzp-copy [--limit N] | derive-bzp | link-pilot
+  riskminer worker                         # job loop (SELECT ... FOR UPDATE SKIP LOCKED)
+  riskminer enqueue <kind> [--payload JSON]
+  riskminer report                         # docs/test_report_sources.md + exports/sources_summary.csv
+  riskminer sources                        # list connectors
+"""
+from __future__ import annotations
+
+import argparse
+import asyncio
+import json
+import logging
+import sys
+
+
+def _opts(pairs: list[str] | None) -> dict:
+    out = {}
+    for p in pairs or []:
+        k, _, v = p.partition("=")
+        try:
+            out[k] = json.loads(v)
+        except json.JSONDecodeError:
+            out[k] = v
+    return out
+
+
+def main(argv: list[str] | None = None) -> int:
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
+    ap = argparse.ArgumentParser(prog="riskminer")
+    sub = ap.add_subparsers(dest="cmd", required=True)
+
+    s = sub.add_parser("scrape")
+    s.add_argument("source")
+    s.add_argument("--since")
+    s.add_argument("--until")
+    s.add_argument("--limit", type=int)
+    s.add_argument("--only", help="comma-separated ids")
+    s.add_argument("--no-db", action="store_true", help="do not record ingestion_run / load into DB")
+    s.add_argument("--opt", action="append", help="extra connector option k=v (JSON value)")
+
+    p = sub.add_parser("parse")
+    p.add_argument("source")
+
+    ld = sub.add_parser("load")
+    ld.add_argument("source")
+
+    la = sub.add_parser("load-all")
+    la.add_argument("--limit", type=int, help="BZP copy: only first N lines (smoke test)")
+    la.add_argument("--skip-bzp", action="store_true")
+
+    sub.add_parser("import-xlsx")
+    ib = sub.add_parser("import-bzp-copy")
+    ib.add_argument("--limit", type=int)
+    ib.add_argument("--path")
+    sub.add_parser("derive-bzp")
+    sub.add_parser("link-pilot")
+    sub.add_parser("derive-events")
+    sub.add_parser("make-doc-sample")
+    sub.add_parser("link-national")
+    dt = sub.add_parser("doc-text")
+    dt.add_argument("--force", action="store_true", help="rebuild chunks even if the text is unchanged")
+    io_ = sub.add_parser("import-ocr")
+    io_.add_argument("job_dir", help="local copy of a WCSS OCR run dir (results.jsonl + text/)")
+    sub.add_parser("worker")
+    eq = sub.add_parser("enqueue")
+    eq.add_argument("kind")
+    eq.add_argument("--payload", default="{}")
+    sub.add_parser("report")
+    sub.add_parser("sources")
+    sub.add_parser("seed-catalogue")
+
+    a = ap.parse_args(argv)
+
+    if a.cmd == "sources":
+        from riskminer import connectors
+        print("\n".join(connectors.available()))
+        return 0
+    if a.cmd == "parse":
+        from riskminer.connectors import runner
+        print(json.dumps(runner.parse(a.source), ensure_ascii=False, indent=1))
+        return 0
+    if a.cmd == "scrape":
+        opts = dict(since=a.since, until=a.until, limit=a.limit,
+                    only=a.only.split(",") if a.only else None, **_opts(a.opt))
+        if a.no_db:
+            from riskminer.connectors import runner
+            stats = runner.scrape(a.source, **opts)
+            stats["parse"] = runner.parse(a.source)
+            print(json.dumps(stats, ensure_ascii=False, indent=1, default=str))
+            return 0
+        from riskminer.ingest import pipeline
+        print(json.dumps(asyncio.run(pipeline.scrape_and_load(a.source, **opts)), ensure_ascii=False, indent=1, default=str))
+        return 0
+
+    from riskminer.ingest import pipeline  # DB-backed commands
+
+    if a.cmd == "load":
+        res = asyncio.run(pipeline.load_source(a.source))
+    elif a.cmd == "load-all":
+        res = asyncio.run(pipeline.load_all(limit=a.limit, skip_bzp=a.skip_bzp))
+    elif a.cmd == "import-xlsx":
+        res = asyncio.run(pipeline.import_xlsx())
+    elif a.cmd == "import-bzp-copy":
+        res = asyncio.run(pipeline.import_bzp_copy(limit=a.limit, path=a.path))
+    elif a.cmd == "derive-bzp":
+        res = asyncio.run(pipeline.derive_bzp())
+    elif a.cmd == "link-pilot":
+        res = asyncio.run(pipeline.link_pilot())
+    elif a.cmd == "derive-events":
+        res = asyncio.run(pipeline.derive_events())
+    elif a.cmd == "import-ocr":
+        from riskminer.db.session import raw_conn
+        from riskminer.ingest import ocr_load
+
+        async def _ocr():
+            res = ocr_load.import_run(a.job_dir)
+            async with raw_conn() as conn:
+                res["documents_updated"] = await ocr_load.apply(conn)
+            res["doctext"] = await pipeline.doc_text()
+            return res
+        res = asyncio.run(_ocr())
+    elif a.cmd == "link-national":
+        res = asyncio.run(pipeline.link_national())
+    elif a.cmd == "doc-text":
+        res = asyncio.run(pipeline.doc_text(force=a.force))
+    elif a.cmd == "make-doc-sample":
+        from riskminer.ingest import sample
+        res = asyncio.run(pipeline._stage("doc_sample", "derive", {}, sample.run))
+    elif a.cmd == "seed-catalogue":
+        res = asyncio.run(pipeline.seed_catalogue())
+    elif a.cmd == "report":
+        from riskminer.ingest import report
+        res = asyncio.run(report.generate())
+    elif a.cmd == "worker":
+        from riskminer.jobs import worker
+        asyncio.run(worker.run_forever())
+        return 0
+    elif a.cmd == "enqueue":
+        from riskminer.jobs import worker
+        res = asyncio.run(worker.enqueue(a.kind, json.loads(a.payload)))
+    else:
+        ap.print_help()
+        return 2
+    print(json.dumps(res, ensure_ascii=False, indent=1, default=str))
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

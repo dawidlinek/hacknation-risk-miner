@@ -1,0 +1,94 @@
+subsector_name,value_bucket,work_type,n
+Inne obiekty wod-kan,<0.5 mln,renovation,1
+Inne obiekty wod-kan,1-2.5 mln,build,1
+Inne obiekty wod-kan,2.5-5 mln,mixed,1
+Kanalizacja deszczowa i retencja,<0.5 mln,build,236
+Kanalizacja deszczowa i retencja,<0.5 mln,mixed,53
+Kanalizacja deszczowa i retencja,<0.5 mln,renovation,226
+Kanalizacja deszczowa i retencja,0.5-1 mln,build,90
+Kanalizacja deszczowa i retencja,0.5-1 mln,mixed,22
+Kanalizacja deszczowa i retencja,0.5-1 mln,renovation,60
+Kanalizacja deszczowa i retencja,1-2.5 mln,build,73
+Kanalizacja deszczowa i retencja,1-2.5 mln,mixed,30
+Kanalizacja deszczowa i retencja,1-2.5 mln,renovation,41
+Kanalizacja deszczowa i retencja,2.5-5 mln,build,18
+Kanalizacja deszczowa i retencja,2.5-5 mln,mixed,7
+Kanalizacja deszczowa i retencja,2.5-5 mln,renovation,18
+Kanalizacja deszczowa i retencja,5-10 mln,build,13
+Kanalizacja deszczowa i retencja,5-10 mln,mixed,13
+Kanalizacja deszczowa i retencja,5-10 mln,renovation,6
+Kanalizacja deszczowa i retencja,>10 mln,build,10
+Kanalizacja deszczowa i retencja,>10 mln,mixed,3
+Kanalizacja deszczowa i retencja,>10 mln,renovation,8
+Kanalizacja sanitarna,<0.5 mln,build,1062
+Kanalizacja sanitarna,<0.5 mln,mixed,85
+Kanalizacja sanitarna,<0.5 mln,renovation,186
+Kanalizacja sanitarna,0.5-1 mln,build,480
+Kanalizacja sanitarna,0.5-1 mln,mixed,46
+Kanalizacja sanitarna,0.5-1 mln,renovation,87
+Kanalizacja sanitarna,1-2.5 mln,build,657
+Kanalizacja sanitarna,1-2.5 mln,mixed,68
+Kanalizacja sanitarna,1-2.5 mln,renovation,41
+Kanalizacja sanitarna,2.5-5 mln,build,508
+Kanalizacja sanitarna,2.5-5 mln,mixed,61
+Kanalizacja sanitarna,2.5-5 mln,renovation,15
+Kanalizacja sanitarna,5-10 mln,build,282
+Kanalizacja sanitarna,5-10 mln,mixed,45
+Kanalizacja sanitarna,5-10 mln,renovation,14
+Kanalizacja sanitarna,>10 mln,build,89
+Kanalizacja sanitarna,>10 mln,mixed,9
+Kanalizacja sanitarna,>10 mln,renovation,4
+Oczyszczalnia ścieków,<0.5 mln,build,90
+Oczyszczalnia ścieków,<0.5 mln,mixed,22
+Oczyszczalnia ścieków,<0.5 mln,renovation,40
+Oczyszczalnia ścieków,0.5-1 mln,build,63
+Oczyszczalnia ścieków,0.5-1 mln,mixed,14
+Oczyszczalnia ścieków,0.5-1 mln,renovation,24
+Oczyszczalnia ścieków,1-2.5 mln,build,94
+Oczyszczalnia ścieków,1-2.5 mln,mixed,32
+Oczyszczalnia ścieków,1-2.5 mln,renovation,51
+Oczyszczalnia ścieków,2.5-5 mln,build,48
+Oczyszczalnia ścieków,2.5-5 mln,mixed,31
+Oczyszczalnia ścieków,2.5-5 mln,renovation,38
+Oczyszczalnia ścieków,5-10 mln,build,45
+Oczyszczalnia ścieków,5-10 mln,mixed,64
+Oczyszczalnia ścieków,5-10 mln,renovation,26
+Oczyszczalnia ścieków,>10 mln,build,37
+Oczyszczalnia ścieków,>10 mln,mixed,64
+Oczyszczalnia ścieków,>10 mln,renovation,20
+Sieć wodociągowa,<0.5 mln,build,1971
+Sieć wodociągowa,<0.5 mln,mixed,138
+Sieć wodociągowa,<0.5 mln,renovation,171
+Sieć wodociągowa,0.5-1 mln,build,435
+Sieć wodociągowa,0.5-1 mln,mixed,70
+Sieć wodociągowa,0.5-1 mln,renovation,61
+Sieć wodociągowa,1-2.5 mln,build,348
+Sieć wodociągowa,1-2.5 mln,mixed,113
+Sieć wodociągowa,1-2.5 mln,renovation,64
+Sieć wodociągowa,2.5-5 mln,build,185
+Sieć wodociągowa,2.5-5 mln,mixed,70
+Sieć wodociągowa,2.5-5 mln,renovation,44
+Sieć wodociągowa,5-10 mln,build,79
+Sieć wodociągowa,5-10 mln,mixed,46
+Sieć wodociągowa,5-10 mln,renovation,16
+Sieć wodociągowa,>10 mln,build,18
+Sieć wodociągowa,>10 mln,mixed,11
+Sieć wodociągowa,>10 mln,renovation,5
+Uzdatnianie i zaopatrzenie w wodę,<0.5 mln,build,75
+Uzdatnianie i zaopatrzenie w wodę,<0.5 mln,mixed,35
+Uzdatnianie i zaopatrzenie w wodę,<0.5 mln,renovation,73
+Uzdatnianie i zaopatrzenie w wodę,0.5-1 mln,build,46
+Uzdatnianie i zaopatrzenie w wodę,0.5-1 mln,mixed,27
+Uzdatnianie i zaopatrzenie w wodę,0.5-1 mln,renovation,55
+Uzdatnianie i zaopatrzenie w wodę,1-2.5 mln,build,60
+Uzdatnianie i zaopatrzenie w wodę,1-2.5 mln,mixed,51
+Uzdatnianie i zaopatrzenie w wodę,1-2.5 mln,renovation,96
+Uzdatnianie i zaopatrzenie w wodę,2.5-5 mln,build,75
+Uzdatnianie i zaopatrzenie w wodę,2.5-5 mln,mixed,86
+Uzdatnianie i zaopatrzenie w wodę,2.5-5 mln,renovation,98
+Uzdatnianie i zaopatrzenie w wodę,5-10 mln,build,38
+Uzdatnianie i zaopatrzenie w wodę,5-10 mln,mixed,50
+Uzdatnianie i zaopatrzenie w wodę,5-10 mln,renovation,40
+Uzdatnianie i zaopatrzenie w wodę,>10 mln,build,10
+Uzdatnianie i zaopatrzenie w wodę,>10 mln,mixed,5
+Uzdatnianie i zaopatrzenie w wodę,>10 mln,renovation,2

@@ -1,0 +1,2377 @@
+LSZ.411.1.2.2024
+
+
+                                                 Pan
+                                                 Rafał Zając
+                                                 Prezydent Stargardu
+
+                                                 Urząd Miejski w Stargardzie
+                                                 ul. Hetmana Stefana Czarnieckiego 17
+                                                 73-110 Stargard
+
+
+
+
+                    WYSTĄPIENIE
+                   POKONTROLNE
+S/23/003 Realizacja zadań w zakresie gospodarki ściekowej na terenie Gminy Miasto Stargard
+                        I. Dane identyfikacyjne
+          Jednostka     Urząd Miejski w Stargardzie1, ul. Hetmana Stefana Czarnieckiego 17,
+       kontrolowana     73-110 Stargard
+
+  Kierownik jednostki   Rafał Zając, Prezydent Miasta Stargard, od 20 listopada 2018 r.2
+       kontrolowanej
+Zakres przedmiotowy     Realizacja zadań w zakresie kanalizacji, usuwania i oczyszczania ścieków
+             kontroli
+Okres objęty kontrolą   Lata 2021-2023 z wykorzystaniem dowodów sporządzonych przed i po tym okresie,
+                        mających znaczenie dla badanej działalności
+   Podstawa prawna      Artykuł 2 ust. 2 ustawy z dnia 23 grudnia 1994 r. o Najwyższej Izbie Kontroli3
+    podjęcia kontroli
+
+          Jednostka     Najwyższa Izba Kontroli
+   przeprowadzająca     Delegatura w Szczecinie
+            kontrolę
+         Kontrolerzy          Marzanna Wierzbicka, doradca techniczny, upoważnienie do kontroli
+                              nr LSZ/3/2024 z 5 stycznia 2024 r.
+                              Anna Jończyk, starszy inspektor kontroli państwowej, upoważnienie do kontroli
+                              nr LSZ/4/2024 z 5 stycznia 2024 r.
+                                                                                  (akta kontroli str. 1-2, 5-6)
+
+                        II. Ocena ogólna4 kontrolowanej działalności
+      OCENA OGÓLNA      Gmina Miasto Stargard5 nie zapewniła prawidłowej i rzetelnej organizacji oraz
+                        realizacji zadań w zakresie gospodarki ściekowej, a podejmowane działania nie
+                        zapewniły      skutecznego     wyeliminowania        przypadków        odprowadzania
+                        nieoczyszczonych ścieków do rzeki Iny poprzez przelewy burzowe.
+                        Gmina prowadziła ewidencję zbiorników bezodpływowych i przydomowych
+                        oczyszczalni, jednak dane w niej zawarte nie były kompletne i aktualne. Wskutek tego
+                        opracowany na jej podstawie pierwotny plan kontroli nie uwzględniał części
+                        nieruchomości wyposażonych w takie obiekty. W Urzędzie nie była także prowadzona
+                        w formie umożliwiającej przekazywanie informacji w postaci elektronicznej ewidencja
+                        aktualnych informacji wskazanych w art. 3 ust 3 pkt 4 w zw. z ust. 5 pkt 5, 7 i 9 ustawy
+                        z 13 września 1996 r. o utrzymaniu czystości i porządku w gminach6. W latach 2021-
+                        2023 (do grudnia) zaniechano prowadzenia kontroli dotyczących funkcjonowania
+                        przydomowych oczyszczalni ścieków oraz utrzymania i opróżniania zbiorników
+                        bezodpływowych. W tym czasie nie funkcjonował skuteczny nadzór nad
+                        postępowaniem z nieczystościami ciekłymi. Plan kontroli opróżniania zbiorników
+                        bezodpływowych oraz osadników w instalacjach przydomowych oczyszczalni
+                        ścieków, o którym mowa art. 6 ust. 5aa ucpg, został opracowany dopiero w grudniu
+                        2023 r. W konsekwencji w latach 2021-2023 nie podejmowano działań dotyczących
+                        organizacji opróżniania zbiorników bezodpływowych i osadników w instalacjach
+                        przydomowych oczyszczalni ścieków w przypadku właścicieli nieruchomości, którzy
+                        nie zawarli wymaganych w tym zakresie umów i nie opróżniali zbiorników. W Mieście
+                        w niewystarczający sposób realizowano także nadzór nad obowiązkiem podłączenia
+                        nieruchomości do kanalizacji sanitarnej.
+
+                        1Dalej: Urząd lub UM.
+                        2 Dalej: Prezydent lub Prezydent Miasta.
+                        3 Dz. U. z 2022 r. poz. 623, dalej: ustawa o NIK.
+                        4 Najwyższa Izba Kontroli formułuje ocenę ogólną jako ocenę pozytywną, ocenę negatywną albo ocenę w formie
+
+                         opisowej.
+                        5 Dalej: Miasto.
+                        6 Dz. U. z 2024 r. poz. 399, dalej: ucpg.
+
+                                                                            2
+Prezydent Miasta wydał z zachowaniem wymaganej formy i treści Spółce Wody
+Miejskie Stargard Spółka z o.o.7 zezwolenie na zbiorowe odprowadzanie ścieków
+oraz zezwolenia przedsiębiorcom na prowadzenie działalności w zakresie
+opróżniania zbiorników bezodpływowych lub osadników w instalacjach
+przydomowych oczyszczalni ścieków i transportu nieczystości ciekłych. Podjął
+działania w celu uchwalenia regulaminu dostarczania wody i odprowadzania ścieków
+zgodnie z procedurą i wymaganiami określonymi w art. 19 ustawy z 7 czerwca 2001 r.
+o zbiorowym zaopatrzeniu w wodę i zbiorowym odprowadzaniu ścieków8 oraz
+wieloletnich planów rozwoju oraz modernizacji urządzeń wodociągowych
+i kanalizacyjnych9, zgodnie z wymogami określonymi w art. 21 ww. ustawy.
+W obowiązującym regulaminie utrzymania czystości i porządku na terenie gminy
+określono warunki dotyczące gospodarki ściekowej. Nie korzystano z określonego
+w art. 18e ustawy o odprowadzaniu ścieków uprawnienia do kontroli działalności
+gospodarczej Spółki w zakresie zgodności wykonywanej działalności z udzielonym
+zezwoleniem, ani nie były prowadzone audyty i kontrole Spółki w ramach nadzoru
+właścicielskiego, pomimo otrzymywanych od organów i instytucji informacji
+o nieprawidłowościach związanych z uruchamianiem przelewów burzowych
+i prowadzonymi w związku z tym postępowaniami. Nadzór opierał się przede
+wszystkim na analizie otrzymywanych sprawozdań oraz bezpośrednich kontaktach
+z władzami Spółki.
+Miasto diagnozowało potrzeby związane z obszarem zbiorowego odprowadzania
+ścieków oraz ochrony rzeki Iny i podejmowało działania w tym zakresie. Polegały one
+głównie na rozbudowie sieci kanalizacji deszczowej i zwiększeniu retencji wód w celu
+ograniczenia ilości wód opadowych i roztopowych odprowadzanych do kanalizacji
+ogólnospławnej. Dwukrotnie w 2021 r. i 2023 r. wystąpiono o dofinansowanie
+inwestycji mającej na celu ograniczenie zrzutów nieoczyszczonych ścieków do rzeki
+Iny poprzez przelewy burzowe. Działania podjęte w 2023 r. były skuteczne
+i rozpoczęto przygotowania do realizacji inwestycji „Budowa przepompowni
+nadmiarowej ścieków wraz z adaptacją obiektów kubaturowych i wykonaniem
+niezbędnych urządzeń na terenie oczyszczalni ścieków w Stargardzie”. W 2023 r.
+Miasto przystąpiło także do opracowania i wdrożenia miejskiego planu adaptacji
+do zmian klimatu.
+Prezydent Miasta sporządził i terminowo przedłożył Państwowemu Gospodarstwu
+Wodnemu Wody Polskie10 Regionalny Zarząd Gospodarki Wodnej11 w Szczecinie
+sprawozdania z realizacji krajowego programu oczyszczania ścieków komunalnych12
+za lata 2021-2023, jednak zawarte w nich dane dotyczące niestosowania metod
+ograniczających zanieczyszczenia związane z przelewem wód burzowych zawierały
+rozbieżne informacje.
+Ponadto stwierdzono nieprawidłowości dotyczące:
+- niezapewnienia przestrzegania w pełni warunków określonych w pozwoleniach
+wodnoprawnych dotyczących odprowadzania wód opadowych i roztopowych oraz
+niewystarczającego nadzoru nad wykonaniem przez Spółkę obsługi sieci kanalizacji
+deszczowej na terenie Miasta;
+- braku od 11 kwietnia 2023 r. wymaganego pozwolenia wodnoprawnego
+na odprowadzanie wód opadowych lub roztopowych z ul. Spółdzielczej;
+- nieterminowej realizacji obowiązku zgłoszenia dwóch wylotów wód opadowych lub
+roztopowych Wodom Polskim (z trzech skontrolowanych);
+- niezapewnienia (poza jednym przypadkiem) przeprowadzenia pięcioletnich
+okresowych kontroli budowlanych odcinków sieci kanalizacji deszczowej oraz
+nieokreślenia w protokołach z kontroli rocznych przeprowadzonych w latach 2021-
+
+7 Dalej: Wody Miejskie lub Spółka.
+8 Dz. U. z 2023 r., poz. 537, ze zm. dalej ustawa o odprowadzaniu ścieków.
+9 Dalej: wieloletnie plany.
+10 Dalej: Wody Polskie lub PGW WP.
+11 Dalej: PGW WP RZGW lub RZGW.
+12 Dalej: KPOŚK.
+
+
+                                                      3
+               2023 kontrolowanych obiektów budowlanych w sposób umożliwiający ich
+               identyfikację;
+               - niezaktualizowania ewidencji środków trwałych prowadzonej w Urzędzie w zakresie
+               sprzedanych wraz z gruntem lub przebudowanych obiektów kanalizacyjnych;
+               - niezapewnienia przeprowadzenia w 2023 r. przeglądu aglomeracji Stargard
+               z wymaganą częstotliwością co dwa lata;
+               - nieudzielenia pisemnej informacji Zachodniopomorskiemu Wojewódzkiemu
+               Inspektorowi Ochrony Środowiska w Szczecinie13 po otrzymaniu 28 lipca 2023 r.
+               wniosku, o którym mowa w art. 16 ust. 1 ustawy z 20 lipca 1991 r. o Inspekcji Ochrony
+               Środowiska14;
+               - niesporządzenia dla dwóch pracowników niezwłocznie po ich zatrudnieniu w formie
+               pisemnej kart uprawnień, obowiązków i odpowiedzialności.
+               Zadania związane z kanalizacją, usuwaniem i oczyszczaniem ścieków - poza
+               zapewnieniem okresowych kontroli budowlanych sieci kanalizacji deszczowej -
+               określono w Regulaminie organizacyjnym Urzędu oraz wewnętrznych regulaminach
+               organizacyjnych poszczególnych Wydziałów UM odpowiedzialnych za ich realizację,
+               a także powierzono do realizacji pracownikom. Zidentyfikowane w toku kontroli
+               przypadki nieprawidłowych i/lub nierzetelnych działań wskazują jednak na potrzebę
+               wzmocnienia mechanizmów kontroli zarządczej w obszarze gospodarki ściekowej.
+
+               III. Opis ustalonego stanu faktycznego
+     OBSZAR
+               Realizacja zadań w zakresie kanalizacji, usuwania
+               i oczyszczania ścieków
+  Opis stanu   1. Zadania z zakresu kanalizacji, usuwania i oczyszczania ścieków komunalnych
+faktycznego    były realizowane w latach 2021-2023 zarówno w UM - w Wydziale Gospodarki
+               Komunalnej i Ochrony Środowiska15 oraz Wydziale Inżynierii16, jak i powierzane
+               do realizacji Wodom Miejskim17. Spółce powierzono18 w szczególności: prowadzenie
+               inwestycji w zakresie kanalizacji ściekowej; inwestycji w zakresie usuwania
+               i oczyszczania ścieków komunalnych; utrzymanie i eksploatację urządzeń
+               kanalizacyjnych ściekowych; sporządzanie sprawozdań z zakresu gospodarki wodno-
+               ściekowej, w tym z realizacji KPOŚK i nadzór nad realizacją zadań z zakresu
+               kanalizacji. Ponadto Miasto corocznie zawierało ze Spółką umowy na wykonanie
+               obsługi sieci kanalizacji deszczowej19, na podstawie których powierzano
+               wykonywanie prac związanych z konserwacją i eksploatacją całej sieci kanalizacji
+               deszczowej, w tym m.in. bieżące monitorowanie sieci oraz związanego z nią
+               uzbrojenia, czyszczenie wpustów, kanałów deszczowych, studni rewizyjnych,
+               separatorów i osadników, wykonywanie zgodnie z wydanymi pozwoleniami
+
+               13 Dalej: ZWIOŚ.
+               14 Dz. U. z 2024 r. poz. 425 dalej: ustawa o Inspekcji Ochrony Środowiska.
+               15 Dalej: WGKiOŚ. Do zadań tego Wydziału należało w szczególności: wydawanie zezwoleń na zbiorowe
+
+               odprowadzanie ścieków oraz na opróżnianie zbiorników bezodpływowych lub osadników w instalacjach
+               przydomowych oczyszczalni ścieków i transport nieczystości ciekłych; prowadzenie ewidencji zbiorników
+               bezodpływowych oraz przydomowych oczyszczalni ścieków; kontrola gromadzenia nieczystości ciekłych
+               w zbiornikach bezodpływowych oraz częstotliwości ich opróżniania; sporządzanie sprawozdań z zakresu
+               gospodarki wodno-ściekowej, w tym z realizacji KPOŚK; nadzór w zakresie zbierania i oczyszczania ścieków
+               komunalnych; nadzór nad realizacją zadań z zakresu kanalizacji, usuwania i oczyszczania ścieków przez Wody
+               Miejskie oraz inne podmioty; nadzór właścicielski nad spółkami miejskimi.
+               16 Dalej: WI lub MI, któremu powierzono m.in. prowadzenie inwestycji w zakresie kanalizacji deszczowej i nadzór
+
+               nad realizacją zadań z zakresu kanalizacji.
+               17 Przed 1 lipca 2022 r. Miejskie Przedsiębiorstwo Gospodarki Komunalnej Sp. z o.o., dalej: MPGK.
+               18 W oparciu o udzielone zezwolenie na prowadzenie zbiorowego dostarczania wody i odprowadzania ścieków
+
+               oraz na podstawie Regulaminu dostarczania wody i odprowadzania ścieków, stanowiącego załącznik do uchwały
+               Rady Miejskiej w Stargardzie nr XXX/320/2021 z 31 sierpnia 2021 r. (zmieniającej uchwałę nr VIII/105/2019
+               z 25 czerwca 2019 r.). Dalej: Regulamin odprowadzania ścieków.
+               19 Umowy: nr 6/MI.I.1/2021 z 18 lutego 2021 r., nr 6/MI.II.4/2022 z 3 lutego 2022 r. i nr 4/MI.I.4/2023 z 2 lutego
+
+               2023 r.
+                                                                       4
+wodnoprawnymi analizy ścieków/wód w zakresie zawiesiny ogólnej i substancji
+ropopochodnych przy wskazanych odbiornikach. Zakres zadań ujęty w umowach oraz
+niewystarczający nadzór Miasta nad ich realizacją nie zapewniały przestrzegania
+w pełni warunków określonych w pozwoleniach wodnoprawnych. Zagadnienie
+to opisano w sekcji Stwierdzone nieprawidłowości. Od 11 kwietnia 2023 r. Miasto nie
+posiadało ważnego pozwolenia wodnoprawnego na odprowadzanie wód opadowych
+i roztopowych z ul. Spółdzielczej. Zagadnienie to opisano w sekcji Stwierdzone
+nieprawidłowości.
+                              (akta kontroli str.78-82, 226-228, 841-857, 1519-1525)
+Zadania komórek organizacyjnych określono w Regulaminie organizacyjnym UM20
+oraz wewnętrznych regulaminach organizacyjnych WGKiOŚ oraz MI, a także
+w kartach uprawnień, obowiązków i odpowiedzialności pracowników zatrudnionych
+w latach 2021-2023 na stanowisku ds. ochrony wód, gospodarki wodno-ściekowej
+i ochrony przez odpadami w WGKiOŚ i stanowisku ds. przygotowywania
+inwestycji/kierownika Referatu Inwestycji i Remontów w MI. W UM wystąpiła w latach
+2021-2023 fluktuacja kadr na ww. stanowiskach. Zadania te realizowane były kolejno
+przez pięciu pracowników w WGKiOŚ oraz dwóch w MI. Dla dwóch pracowników
+WGKiOŚ21 nie sporządzono w formie pisemnej i nie przedstawiono do podpisania
+niezwłocznie po rozpoczęciu zatrudnienia kart uprawnień, obowiązków
+i odpowiedzialności. Zagadnienie to przedstawiono w sekcji Stwierdzone
+nieprawidłowości. Pracownicy zajmujący się zagadnieniami gospodarki ściekowej
+posiadali wykształcenie22, umiejętności lub doświadczenie pozwalające im
+wykonywać powierzone zadania. Część pracowników odbyła szkolenia związane
+z realizacją powierzonych im zadań23.
+(akta kontroli str. 84-182, 233-240, 862-864, 930-932, 1352-1357, 1375-1380, 1513-
+1518, 1839-1840)
+Prezydent nie upoważniał pracowników, na podstawie art. 268a ustawy z 14 czerwca
+1960 r. Kodeks postępowania administracyjnego24, do wydawania w swoim imieniu
+decyzji administracyjnych z zakresu gospodarki ściekowej, w tym m.in.: nakazujących
+przyłączenie nieruchomości do istniejącej i nowo wybudowanej sieci kanalizacji
+sanitarnej na terenie gminy oraz w sprawie zastępczego opróżniania zbiorników
+bezodpływowych. Zastępca Dyrektora WGKiOŚ wyjaśniła, że decyzje takie nie były
+wydawane w latach 2021-2023, tym niemniej planowane jest uzupełnienie
+upoważnień Zastępcy Prezydenta Miasta, Dyrektora i Zastępcy Dyrektora WGKiOŚ
+o wskazany zakres tematyczny.
+                                                     (akta kontroli str. 78-82, 1135)
+Komórkom organizacyjnym UM, ani ich pracownikom nie powierzono zadań
+związanych z zapewnieniem okresowych kontroli budowlanych sieci kanalizacji
+deszczowej. Mogło to przyczynić się do nieprzeprowadzania okresowych
+pięcioletnich kontroli budowlanych sieci kanalizacji deszczowej, co opisano w sekcji
+Stwierdzone nieprawidłowości.
+                              (akta kontroli str. 84-145, 876-878, 930-932, 991-1007)
+
+
+
+
+20 Przyjętym Zarządzeniem Prezydenta Miasta nr 15/2018 z 30 listopada 2018 r. zmienionym Zarządzeniem
+
+nr 64/2019 z 1 lutego 2019 r., 391/2019 z 20 listopada 2019 r., nr 62/2020 z 4 marca 2020 r., 398/2022 z 29 grudnia
+2022 r., 65/2023 z 15 marca 2023 r. i 121/2023 z 10 maja 2023 r.
+21 K. Z.-S. i K. J.-P.
+22 Ukończone kierunki studiów wyższych II stopnia pracowników WGKiOŚ: inżynieria środowiska, gospodarka
+
+przestrzenna, prawo, gospodarka odpadami i rekultywacja terenów zdegradowanych, studia podyplomowe
+zarządzanie ekologiczne. Ukończone kierunki studiów wyższych II stopnia pracowników WI: inżynieria środowiska.
+23 Trzech pracowników WGKiOŚ odbyło szkolenia (została nimi objęta również dyrekcja WGKiOŚ).
+24 Dz. U. z 2024 r. poz. 572.
+
+
+                                                        5
+2. Długość sieci kanalizacji deszczowej, która była własnością Miasta wynosiła
+według stanu na koniec roku: 2021 - 31,61 km, 2022 - 33,01 km, 2023 - 34,74 km25.
+Długość sieci kanalizacji sanitarnej rozdzielczej i ogólnospławnej tj. łączącej ścieki
+komunalne oraz wody opadowe lub roztopowe, będącej własnością Wód Miejskich.
+wynosiła według stanu na koniec roku odpowiednio: 2021: 74,5 km, 2022: 76,5 km,
+2023: 78,1 km, sieci ogólnospławnej w latach 2021-2023P 105,3 km, natomiast
+przyłączy kanalizacyjnych: w 2021 r.: 57,2 km, 2022 r.: 57,4 km, 2023: 57,6 km.
+                                                    (akta kontroli str. 78-82, 228-229)
+W sprawie liczby przelewów burzowych26 eksploatowanych na terenie Miasta
+w poszczególnych latach objętych kontrolą, ich lokalizacji oraz wyposażenia
+w przepływomierze lub inne urządzenia pozwalające na monitorowanie liczby
+dokonanych zrzutów oraz ilości odprowadzonej mieszaniny ścieków i wód opadowych
+Dyrektor WGKiOŚ wyjaśnił: w zakresie przelewów burzowych odpowiedzialna jest
+Spółka Wody Miejskie (decyzja Dyrektora Zarządu Zlewni w Stargardzie
+Państwowego Gospodarstwa Wodnego Wody Polskie27 z 4 sierpnia 2022 r.).
+                                                    (akta kontroli str. 78-82, 229)
+W kontrolowanym okresie ważne zezwolenie na zbiorowe odprowadzanie ścieków
+na terenie Miasta posiadał tylko jeden podmiot - Wody Miejskie. Prezydent 19 grudnia
+2002 r. udzielił zezwolenia Spółce na prowadzenie zbiorowego zaopatrzenia w wodę
+i odprowadzania ścieków na terenie Miasta z zachowaniem wymaganej przepisami
+art. 16 ust. 1 ustawy o odprowadzaniu ścieków formy decyzji i o treści określonej
+w art. 18 tej ustawy.
+                                           (akta kontroli str. 78-82, 229, 1153-1158)
+Liczba przedsiębiorstw posiadających ważne zezwolenia na prowadzenie działalności
+w zakresie opróżniania zbiorników bezodpływowych lub osadników w instalacjach
+przydomowych oczyszczalni ścieków i transportu nieczystości ciekłych wynosiła:
+w 2021 r. dziewięć, 2022 r. dziesięć i w 2023 r. 13. Nie wystąpiły przypadki odmowy
+wydania zezwoleń ani ich cofnięcie przez Prezydenta. Poddane szczegółowemu
+badaniu trzy zezwolenia28 wydano prawidłowo, w odpowiedniej formie (decyzji)29
+z uwzględnieniem elementów wymaganych przepisami art. 9 ucpg.
+                                            (akta kontroli str. 78-82, 229, 1161-1249)
+W kontrolowanym okresie Spółka ujawniła pięć przypadków dokonania zrzutu
+nieczystości ciekłych z terenu Miasta do stacji zlewnej przez firmy asenizacyjne, które
+nie przedłożyły wymaganego zezwolenia na prowadzenie tego rodzaju działalności
+na terenie Miasta, o czym każdorazowo powiadomiła Urząd30. Zastępca Dyrektora
+WGKiOŚ wyjaśniła, że telefonicznie skontaktowano się z tymi przedsiębiorcami,
+którzy świadczyli usługi na podstawie decyzji Wójta Gminy Stargard. Poinformowano
+ich, że w przypadku odbioru nieczystości z nieruchomości zlokalizowanych na terenie
+miasta Stargard winni posiadać zezwolenie Prezydenta Miasta oraz pouczono
+o konsekwencjach za prowadzenie działalności bez wymaganego zezwolenia. Jeden
+z przedsiębiorców zakończył działalność w sierpniu 2023 r. W wyjaśnieniach podała:
+Dla wielu osób, w tym niektórych przedsiębiorców, podział administracyjny
+w przypadku Gminy Miasto Stargard i Gminy Stargard (mających swoje siedziby
+
+25 Zbiorniki wód opadowych będące na stanie majątkowym Miasta znajdowały się przy: rondzie 15 Południk;
+
+ul. Skandynawskiej; ul. Nasiennej; ul. Przedwiośnie; ul. Skarbowej; ul. Krzemowej; trzy zbiorniki retencyjno-
+rozsączające znajdujące się przy ul. Spokojnej oraz przy rondzie Golczewo; sześć zbiorników podziemnych
+znajdujących się na rondzie im. Sławomira Pajora; trzy zbiorniki retencyjne znajdujące się na terenie Parku
+Przemysłowego Nowoczesnych Technologii w Stargardzie; zbiornik retencyjno-rozsączający
+przy ul. Orzeszkowej; dwa zbiorniki retencyjno–rozsączające przy ul. Chełmońskiego.
+26 Urządzeń samoczynnie odprowadzających do odbiornika np. rzeki nadmiar wody deszczowej, zmieszanej
+
+ze ściekami.
+27 Dalej: PGW WP lub Wody Polskie.
+28 Decyzje z: 10 marca 2021 r. TK-II.6221.1.2021.5; 7 października 2022 r. TK-II.6221.12.2022.5; 15 czerwca
+
+2023 r. TK-II.6221.17.2023.5.
+29 Artykuł 7 ust. 1 pkt 2 ucpg.
+30 27 października 2022 r., 30 stycznia, 1 kwietnia, 23 maja i 20 czerwca 2023 r.
+
+
+                                                     6
+w Stargardzie) jest niejednoznaczny. Bardzo mylące jest np.: to, że Wydział, który
+wydaje zezwolenia na odbiór nieczystości ciekłych dla obszaru Gminy Miasto
+Stargard zlokalizowany jest na ul. Rynek Staromiejski 1 w Stargardzie, a Gmina
+Stargard zlokalizowana jest na ul. Rynek Staromiejski 5 w Stargardzie, czy fakt, że
+obszar o nazwie Gmina Miasto Stargard, jest innym obszarem terytorialnie niż obszar
+o nazwie Gmina Stargard. Powyższe miało decydujące znaczenie, dla
+niepodejmowania dalszych czynności przez Urząd, tym bardziej, że przedmiotowe
+nieczystości z obu gmin trafiają do jednej i tej samej stacji zlewnej.
+NIK wskazuje, iż w dwóch przypadkach działalność nie miała charakteru
+incydentalnego, gdyż Wody Miejskie informowały dwukrotnie Urząd o dokonywaniu
+zrzutów ścieków z terenu Miasta przez tych samych przedsiębiorców31, co wskazuje
+iż przyjęta w WGKiOŚ formuła kontaktu telefonicznego z ustnym pouczeniem nie była
+w pełni skuteczna. Fakt, iż nieczystości z obu gmin trafiają do jednej stacji zlewnej na
+terenie oczyszczalni w Stargardzie nie zwalnia przedsiębiorcy z obowiązku uzyskania
+zezwolenia na prowadzenie działalności na terenie każdej z gmin.
+        (akta kontroli str. 1704-1707, 1832-1844, 1960-1961, 2015-2026, 2052-2061)
+W sprawie weryfikacji sprawozdań przekazywanych przez przedsiębiorców
+prowadzących na terenie Miasta działalność w zakresie opróżniania zbiorników
+bezodpływowych i transportu nieczystości ciekłych (o których mowa w art. 9o ucpg)
+Zastępca Dyrektora WGKiOŚ wyjaśniła, że były weryfikowane w tym Wydziale, ale
+bez wykonania dodatkowej notatki służbowej32. Wyjaśniając, czy w ramach ww.
+weryfikacji porównywano łączną ilość odbieranych i przekazanych do oczyszczenia
+ścieków (na stacje zlewne), Dyrektor WGiOŚ podał: W związku z tym, że druki
+sprawozdań kwartalnych (…) nie wykazywały ilości odebranych nieczystości nie było
+możliwości konfrontacji danych. Natomiast ci przedsiębiorcy, którzy wskazywali dane
+na temat ilości odebranych nieczystości wykazywali m.in., iż nie mają możliwości
+technicznych dokonywania pomiarów ilości odebranych nieczystości ciekłych. (…)
+własną ewidencję realizowanych usług wykorzystywaną w sprawozdaniach prowadzili
+wpisując dane przybliżone (…). Na terenie oczyszczalni ścieków w Stargardzie,
+w celu przyjmowania nieczystości ciekłych z nieruchomości nieskanalizowanych
+została uruchomiona automatyczna stacja zlewna z rejestracją dostawców
+i komputerowym pomiarem danych. Stacja umożliwia określenie m.in. identyfikacji
+podmiotu dokonującego zrzutu, ilości i parametrów dostarczanych ścieków oraz (…)
+nieruchomości – jednakże na podstawie danych wprowadzanych przez danego
+dostawcę. Wobec powyższego dane wprowadzane przez podmiot dokonujący zrzutu
+wymagają odrębnej weryfikacji, czy to w zakresie wprowadzanych danych
+adresowych, czy dotyczące miejsca pochodzenia nieczystości. Kontrole rozpoczęte
+w grudniu 2023 r. przez WGKiOŚ mają m.in. to na celu. (…) Przedsiębiorcy zostali
+poinformowani o obowiązku: podpisywania umów na usługę; odbioru i gromadzenia
+dokumentów księgowych (zawierających m.in. następujące dane: kto, kiedy, komu
+i jakiej dokonano usługi), informowani są również właściciele nieruchomości.
+Dotychczas mieszkańcy odmawiali zawierania umów uzasadniając, że zlecenie usługi
+nastąpi dla tego, kto akurat jest tańszy, czy ma krótszy termin oczekiwania. (…).
+W okresie 2021-2023 nie stwierdzono przypadku nieprzekazania przez
+przedsiębiorców wymaganych sprawozdań.
+                                          (akta kontroli str. 1808, 1813, 1832, 1837)
+Badanie sprawozdań przekazanych za IV kwartał 2023 r. przez przedsiębiorców
+prowadzących na terenie Miasta działalność w zakresie opróżniania zbiorników
+bezodpływowych i transportu nieczystości ciekłych wykazało, iż łączna ilość ścieków
+odebranych i przekazanych do oczyszczenia (na stacje zlewne) była tożsama z ilością
+nieczystości ciekłych odebranych od właścicieli nieruchomości.
+                                                       (akta kontroli str. 1414-1485)
+
+31 27 października 2022 r. i 30 stycznia 2023 r. oraz 23 maja i 20 czerwca 2023 r.
+32 Spośród poddanych szczegółowemu badaniu ww. sprawozdań za IV kwartał 2023 r., w dwóch przypadkach
+
+stwierdzono, iż przedsiębiorcy składali korektę sprawozdania, jak wyjaśniono na telefoniczne wezwanie.
+                                                        7
+Prezydent – na wniosek Wód Miejskich z 21 maja 2019 r. - podjął działania w celu
+uchwalenia Regulaminu odprowadzania ścieków zgodnie z procedurą i wymaganiami
+określonymi w art. 19 ustawy o odprowadzaniu ścieków. Po uzyskaniu pozytywnej
+opinii Dyrektora PGW WP RZGW w Szczecinie33, Regulamin przyjęto uchwałą
+nr VIII/105/2019 Rady Miejskiej w Stargardzie34 z 25 czerwca 2019 r. Regulamin
+określał prawa i obowiązki przedsiębiorstwa wodociągowo-kanalizacyjnego, w tym
+w szczególności sposób postępowania w przypadku niedotrzymania odpowiednich
+parametrów ścieków wprowadzanych do sieci kanalizacyjnych. Pismem z 17 maja
+2021 r. Spółka wniosła o wprowadzenie zmian w Regulaminie na skutek dodania
+w ustawie o odprowadzaniu ścieków artykułu 19a, szczegółowo określającego
+procedurę wydawania warunków przyłączenia do sieci, odbiór przyłącza
+wodociągowego lub kanalizacyjnego. Regulamin – po wymaganym opiniowaniu
+organu regulacyjnego35 - zmieniono w ww. zakresie uchwałą Rady Miejskiej
+nr XXX/320/2021 z 31 sierpnia 2021 r.
+                                                       (akta kontroli str. 195-214)
+W okresie objętym kontrolą obowiązywał Regulamin utrzymania czystości i porządku
+na terenie Miasta przyjęty przez Radę Miejską uchwałą nr XX/232/2020 z 29 września
+2020 r.36 i zmieniony uchwałą nr XXXIV/362/2021 z 21 grudnia 2021 r.37 Określono
+w nim warunki dotyczące gospodarki ściekowej m.in. częstotliwość i sposób
+pozbywania się nieczystości ciekłych z terenu nieruchomości. Zgodnie z zapisami ww.
+Regulaminu, usuwanie nieczystości ciekłych z nieruchomości wyposażonych
+w zbiorniki bezodpływowe, powinno się odbywać systematycznie, z częstotliwością
+zapewniającą nieprzepełnianie zbiorników. Ilość odbieranych nieczystości ciekłych
+powinna stanowić, co najmniej 80% ilości pobieranej wody. Osady z przydomowych
+oczyszczalni ścieków należało usuwać z częstotliwością wynikającą z instrukcji
+eksploatacji oczyszczalni.
+                                                          (akta kontroli str. 183-193)
+W WGKiOŚ prowadzona była w formie umożliwiającej przekazywanie informacji
+w postaci elektronicznej ewidencja zbiorników bezodpływowych i przydomowych
+oczyszczalni ścieków, o której mowa w art. 3 ust. 3 pkt 1-2 ucpg. W latach 2021-2023
+odnotowano w niej 54 zbiorniki bezodpływowe oraz osiem przydomowych
+oczyszczalni ścieków. Dane zawarte w ww. ewidencji według stanu na koniec roku
+2021, 2022 i 2023 nie były pełne i aktualne. Nie pozyskiwano lub nie poddawano
+bieżącej weryfikacji informacji, które mogły mieć wpływ na dane zawarte w ewidencji.
+Zagadnienie przedstawiono w sekcji Stwierdzone nieprawidłowości.
+(akta kontroli str. 822-826, 858, 861, 1008-1012, 1122, 1138-1152, 1369-1371, 1376,
+1380, 1414-1486, 1717-1719, 1809-1810, 1813, 1921-1925, 1957-1959, 2035-2051)
+Spośród informacji, o których mowa w art. 3 ust. 3 pkt 4 w zw. z ust. 5 ucpg, w UM
+nie gromadzono w formie umożliwiającej przekazywanie informacji w postaci
+elektronicznej ewidencji38 aktualnych informacji wskazanych w art. 3 ust. 3 pkt 4
+w zw. z ust. 5 pkt 5 ucpg tj. dot. częstotliwości opróżniania zbiornika bezodpływowego
+lub osadnika w instalacji przydomowej oczyszczalni ścieków, o której mowa w art. 4
+ust. 2 pkt 3 ucpg. Gromadzono karty informacyjne składane przez właścicieli
+nieruchomości, które zawierały m.in. rubrykę Częstotliwość opróżniania
+
+33 Postanowienie Dyrektora PGW WP RZGW w Szczecinie z 30 lipca 2018 r. o wydaniu opinii do projektu
+
+Regulaminu odprowadzania ścieków.
+34 Dalej: Rada Miejska.
+35 Postanowienie Dyrektora RZGW PGW WP z 13 sierpnia 2021 r. o wydaniu opinii do projektu Regulaminu
+
+odprowadzania ścieków.
+36 Uchwała weszła w życie 1 stycznia 2021 r.
+37 Uchwała weszła w życie 14 dni od ogłoszenia w Dzienniku Urzędowym Województwa Zachodniopomorskiego,
+
+które miało miejsce 27 grudnia 2021 r., tj. 10 stycznia 2022 r.
+38 Według stanu na 11 marca 2024 r. (data złożenia wyjaśnień przez jednostkę kontrolowaną). Ewidencji takiej nie
+
+przedstawiono także w trakcie oględzin przeprowadzonych 19 lutego 2024 r. mimo prośby o pokazanie wszystkich
+prowadzonych w WGKiOŚ Ewidencji związanych z realizacją zadań w zakresie kanalizacji, usuwania
+i oczyszczania ścieków, w tym: Ewidencji, o których mowa w art. 3 ust. 3 ucpg.
+                                                       8
+zbiornika/usuwania osadu w ciągu roku, zawierającą deklarowane przez właścicieli
+wartości. Ponadto UM nie okazał w trakcie kontroli NIK danych39 o Ilości wody
+pobranej przez użytkowników niepodłączonych do sieci kanalizacyjnej, które również
+powinny być gromadzone w formie ewidencji (art. 3 ust. 3 pkt 4 w zw. z art. 3 ust. 5
+pkt 7 ucpg). Z kolei wykaz obejmujący liczbę przeprowadzonych kontroli dokumentów,
+o których mowa w art. 6 ust. 5a ucpg (art. 3 ust. 3 pkt 4 w zw. z art. 3 ust. 5 pkt 9
+ucpg) sporządzony w toku kontroli prowadzonej przez NIK40, nie zawierał informacji
+o wynikach tych kontroli. Zagadnienia te przedstawiono w sekcji Stwierdzone
+nieprawidłowości.
+(akta kontroli str. 1009, 1138-1152, 1370, 1375-1413, 1832-1833, 1838, 1845, 1921-
+1923)
+Ilość nieczystości ciekłych41 odebranych z obszaru Miasta wynosiła: nieczystości
+ciekłe bytowe: 2021 r. 2 788,20 m³, 2022 r. 2 697,28 m³ i 2023 r. 2 822,27 m³ oraz
+nieczystości przemysłowe: w latach 2021-2022: 0 m³ i w 2023 r. 122,8 m³: Według
+wyjaśnień Dyrektora WGKiOŚ nie organizowano w latach 2021-2023 opróżniania
+zbiorników bezodpływowych w przypadku, gdy właściciel nieruchomości nie zawarł
+umowy na pozbywanie się nieczystości ciekłych, a Prezydent Miasta nie wydawał
+z urzędu decyzji, o których mowa w art. 6 ust. 7 ucpg. Brak identyfikacji nie zawarcia
+takich umów wynikał z przyjętego w UM w latach 2021-2023 sposobu prowadzenia
+nadzoru nad funkcjonowaniem przydomowych oczyszczalni ścieków oraz
+utrzymaniem i opróżnianiem zbiorników bezodpływowych, który był niewystarczający,
+co opisano w sekcji Stwierdzone nieprawidłowości.
+(akta kontroli str. 12, 19, 26-72, 78-82, 215-222, 230, 533, 568-570, 1014, 1141-1143,
+1369-1371, 1378, 1381-1391, 1393-1413, 1486, 1832-1836, 1838, 1841-1843, 2035-
+2037, 2041, 2047)
+W sprawie ustalenia liczby nieruchomości podłączonych do istniejącej sieci
+kanalizacji sanitarnej i sposobu ustalenia zobowiązanych do podłączenia do sieci
+kanalizacyjnej Dyrektor WGKiOŚ wyjaśnił: (…) na podstawie Wieloletnich Planów
+Rozwoju Sieci czy informacji z Wód Miejskich ustalane są ulice, na których
+zrealizowane czy planowane są do realizacji sieci kanalizacyjne. Liczba
+nieruchomości podłączonych do istniejącej sieci kanalizacji sanitarnej ustalana jest
+na podstawie danych uzyskanych ze Spółki (…) (wykaz zawartych umów na dostawę
+wody i wykaz podpisanych umów na odbiór ścieków komunalnych) oraz weryfikacji
+danych z posiadaną Ewidencją w UM. Istnieją jednak sytuacje, gdy z uwagi na
+obowiązek wynikający z art. 5 ust. 1 pkt 2 ucpg właściciel nieruchomości jest
+zobowiązany do dokonania podłączenia do istniejącej sieci kanalizacyjnej, jednak gdy
+nie ma technicznych możliwości podłączenia lub podłączenie to jest ekonomicznie
+nieuzasadnione – do takich podłączeń nie dochodzi. Nieruchomości podłączane są
+na podstawie warunków wydawanych przez Spółkę (…) i umowy Spółki na dostawę
+wody i odbiór ścieków komunalnych.
+Na koniec lat 2021-2023 liczba budynków z przyłączeniem do sieci kanalizacyjnej
+wynosiła odpowiednio: 3 900, 3 995 i 4 028. W sprawie działań na rzecz zwiększenia
+liczby użytkowników kanalizacji sanitarnej, Dyrektor WGKiOŚ wyjaśnił, że
+w aglomeracji Stargard stopień skanalizowania aglomeracji liczony jako stosunek
+liczby mieszkańców/osób korzystających z systemu kanalizacyjnego, łącznie z RLM
+przemysłu do rzeczywistej równoważnej liczby mieszkańców aglomeracji wynosi
+99%. W związku z powyższym Miasto nie prowadziło działań informacyjno-
+edukacyjnych dla zwiększenia liczby użytkowników kanalizacji sanitarnej. Miasto
+
+
+39 Według stanu na 11 marca 2024 r. (data złożenia wyjaśnień przez jednostkę kontrolowaną).
+40 Przedłożono pismem z 11 marca 2024 r.
+41 Dane wykazane przez UM w oparciu o Sprawozdania przedstawiane przez podmioty prowadzące działalność
+
+w zakresie opróżniania zbiorników bezodpływowych lub osadników w instalacjach przydomowych oczyszczalni
+ścieków i transportu nieczystości ciekłych oraz ujęte w załącznikach do sprawozdań SG-01 Statystyka gminy
+(gospodarka mieszkaniowa i komunalna) za lata 2021-2023.
+                                                     9
+realizuje zadania w zakresie budowy sieci kanalizacyjnej, aby egzekwować
+od mieszkańców obowiązek przyłączenia się do kanalizacji.
+W Mieście w niewystarczający sposób realizowano nadzór nad obowiązkiem
+podłączenia nieruchomości do kanalizacji sanitarnej, określonym w art. 5 ust. 1 pkt 2
+ucpg. Wskutek tego w okresie objętym kontrolą nie były wszczynane postępowania
+administracyjne zmierzające do wydania decyzji nakazującej właścicielowi
+nieruchomości wykonanie obowiązku z art. 5 ust. 7 ucpg. Zagadnienie to opisano
+w sekcji Stwierdzone nieprawidłowości.
+         (akta kontroli str. 7, 14, 20a, 78-82, 245, 569, 1119, 1372, 1964, 2119-2122)
+Prezydent Miasta sporządził i terminowo przedłożył PGW WP RZGW w Szczecinie
+sprawozdania z realizacji KPOŚK za lata 2021-2023. Sprawozdania zostały
+sporządzone zgodnie z obowiązującymi wzorami, i po wezwaniach ww. organu do
+uzupełnienia/weryfikacji podanych danych, zawierały wymagane informacje. Jednak
+informacje te były częściowo nierzetelne lub rozbieżne, co opisano w sekcji
+Stwierdzone nieprawidłowości.
+Według przedstawionych w sprawozdaniach za okres 2021-2023 informacji, ilość
+ścieków nieoczyszczonych odprowadzonych do odbiornika bezpośrednio
+z przelewów burzowych wyniosła ogółem 152 tys. m³ w 2021 r., 39,4 tys. m³ w 2022 r.
+i 101,40 tys. m³ w 2023 r. Ze sprawozdań wynikało także, iż nie wszystkie punkty
+przelewowe, z których dokonywano w danym roku zrzutu ścieków posiadały
+pozwolenia wodnoprawne na szczególne korzystanie z wód42. Ponadto jak podano,
+w okresach sprawozdawczych kanalizacja nie posiadała też systemu wykrywania
+przecieków rur kanalizacyjnych. Nadmieniono również, że na terenie Miasta
+przeprowadzano działania zmierzające do wyeliminowania infiltracji/eksfiltracji z/do
+sieci kanalizacyjnej, tj. miała miejsce renowacja kanałów.
+        (akta kontroli str. 1805-1807, 1811-1812, 1968-1992, 2028-2034, 2123-2129)
+3. Nadzór nad realizacją zadań związanych ze zbiorowym odprowadzaniem ścieków
+przez Spółkę polegał na kontroli jej działalności w zakresie zgodności wykonywanej
+działalności z udzielonym zezwoleniem oraz regulaminem odprowadzania ścieków,
+poprzez weryfikację składanych przez Wody Miejskie do 31 stycznia każdego roku
+pisemnych informacji o realizacji zezwolenia na prowadzenie zbiorowego
+
+
+42  W sprawozdaniu z realizacji KPOŚK za 2021 r. podano: liczbę przelewów burzowych jakie wystąpiły
+na kanalizacji ogólnospławnej – dziewięć; liczbę aktywnych punktów przelewowych, z których w roku
+sprawozdawczym nastąpił zrzut: osiem, liczbę punktów, z których w roku sprawozdawczym dokonywano zrzutu
+a nie posiadają pozwolenia wodnoprawnego oraz liczbę zrzutów: ul. Brzozowa (dwa zrzuty), ul. Drzymały (jeden
+zrzut), ul. Szewska (jeden zrzut), ul. Strażnicza (jeden zrzut), ul. Bydgoska (jeden zrzut), ul. Skłodowskiej (jeden
+zrzut), ul. Świętopełka (jeden zrzut); pozwolenia dla aktywnych punktów, z których w roku sprawozdawczym
+dokonywano zrzutu: teren oczyszczalni ścieków na terenie miasta Stargard – decyzja PGW WP RZGW
+w Szczecinie z 10 maja 2019 r.; nazwy punktów posiadających pozwolenia, z których w roku sprawozdawczym
+dokonywano zrzutu oraz liczbę zrzutów: teren oczyszczalni ścieków w mieście Stargard, jeden zrzut. Dane
+widniejące w ww. sprawozdaniu za 2022 r.: liczba punktów przelewowych, z których w danym roku
+sprawozdawczym były zrzucane ścieki: dwa; liczba zrzutów ze wszystkich przelewów burzowych: jedenaście;
+punkty nieposiadające pozwolenia wodnoprawnego: ul. Brzozowa (przy mostku i pod mostkiem), ul. Skłodowskiej,
+ul. Drzymały, ul. Krzywoustego, ul. Basztowa, ul. Świętopełka, ul. Bydgoska, ul. Krzywoustego (mostek),
+ul. Basztowa (archiwum), ul. Popiela, ul. Portowa, ul. Limanowskiego, ul. Krzywoustego (mostek 2); nazwy
+punktów posiadających pozwolenia wodnoprawne z których w roku sprawozdawczym dokonywano zrzutu oraz
+liczba zrzutów: teren oczyszczalni ścieków w mieście Stargard, pięć zrzutów; pozwolenia dla aktywnych punktów,
+z których w roku sprawozdawczym dokonywano zrzutu: teren oczyszczalni ścieków na terenie miasta Stargard –
+decyzja PGW WP RZGW w Szczecinie z 10 maja 2019 r. W ww. sprawozdaniu za 2023 r. podano, że z trzech
+punktów przelewowych w danym roku sprawozdawczym były zrzucane ścieki, a liczba zrzutów ze wszystkich
+przelewów burzowych to 15. W rubryce punkt nieposiadający pozwolenia wodnoprawnego, z którego w roku
+sprawozdawczym dokonywano zrzutu oraz liczba zrzutów, wskazano: teren oczyszczalni ścieków w mieście
+Stargard, cztery zrzuty. Jako punkty nieposiadające pozwoleń w 2023 r wskazano.: ul. Brzozowa (przy mostku
+i pod mostkiem), ul. Skłodowskiej, ul. Drzymały, ul. Krzywoustego, ul. Basztowa, ul. Świętopełka, ul. Bydgoska,
+ul. Krzywoustego (mostek), ul. Basztowa (archiwum), ul. Popiela, ul. Portowa, ul. Limanowskiego,
+ul. Krzywoustego (mostek 2). Pozwolenia dla aktywnych punktów, z których w roku sprawozdawczym dokonywano
+zrzutu: teren oczyszczalni ścieków na terenie miasta Stargard – decyzja PGW WP RZGW w Szczecinie z 10 maja
+2019 r. Nazwy punktów posiadających pozwolenia wodnoprawne z których w roku sprawozdawczym dokonywano
+zrzutu oraz liczba zrzutów: teren oczyszczalni ścieków w mieście Stargard, cztery zrzuty.
+                                                        10
+zaopatrzenia w wodę i odprowadzania ścieków za rok ubiegły43. Dokonanie
+weryfikacji informacji dokumentowano w formie formularza.
+W kwestii korzystania z uprawnienia określonego w art. 18e ust. 1 ustawy
+o zbiorowym odprowadzaniu ścieków, do kontroli działalności gospodarczej
+przedsiębiorstwa wodociągowo-kanalizacyjnego w zakresie zgodności wykonywanej
+działalności z udzielonym zezwoleniem, Dyrektor WGKiOŚ wyjaśnił, iż prowadził
+kontrole działalności Wód Miejskich (…) poprzez weryfikację składanych przez
+przedsiębiorstwo (…) pisemnych informacji o realizacji zezwolenia na prowadzenie
+zbiorowego zaopatrzenia w wodę i odprowadzanie ścieków za ubiegły rok. (…)
+W wyjaśnieniach podał także, że: (…) poza wskazanymi czynnościami
+sprawdzającymi, Prezydent Miasta sprawował stały nadzór nad bieżącą działalnością
+Spółki. Nie stwierdzono przesłanek do wszczęcia dodatkowych czynności.
+                                                    (akta kontroli str. 80, 231, 569)
+Wyjaśniając czy Prezydent Miasta podejmował w ramach sprawowanego nadzoru
+działania dotyczące dokonywania przez Wody Miejskie zrzutów ścieków poprzez
+przelewy burzowe, pomimo nieposiadania pozwolenia wodnoprawnego i/albo decyzji
+z art. 80 ustawy z 20 lipca 2017 r. Prawo wodne44, Dyrektor WGKiOŚ podał: Zadania
+w zakresie gospodarki ściekowej realizuje miejska spółka Wody Miejskie. Spółka jest
+właścicielem sieci kanalizacyjnej z przelewami burzowymi w mieście. Zrzuty
+z przelewów burzowych dokonywane są w ramach działalności Spółki, na podstawie
+posiadanych przez nią decyzji. Ponadto Spółka podejmuje wszelkie możliwe działania
+techniczne, organizacyjne i finansowe mające wpływ na ograniczenie ilości i na jakość
+zrzutów burzowych. Zrzuty burzowe dokonywane są tylko w sporadycznych
+sytuacjach i tylko po to, by uchronić mieszkańców miasta (…) przed zalaniem ich
+nieruchomości w wyniku nawalnych, gwałtownych deszczy. (…) Spółka (…) uzyskała
+decyzję PGW WP RZGW w Szczecinie (…) z 4 sierpnia 2022 r. Biorąc pod uwagę
+specyfikę systemu kanalizacji ogólnospławnej na terenie miasta (…), „ścieki”
+wprowadzane przelewami burzowymi do rzeki Iny są w znacznym stopniu (nawet
+kilkanaście razy) rozcieńczone wodami opadowymi. Temat otwierania przelewów
+burzowych był m.in. przedmiotem wielu bezpośrednich rozmów Prezydenta (…)
+z Prezesem Wód Miejskich. Poruszany był również w trakcie posiedzeń Rady
+Nadzorczej. Prezydent (…) na bieżąco był informowany zarówno o planach
+inwestycyjnych, realizacyjnych Spółki, również o kontrolach realizowanych przez
+zewnętrze organy, ich wynikach, a także zaleceniach i ew. potrzebach finansowych
+na realizację niektórych działań wykraczających poza możliwości Spółki, zwłaszcza,
+że ze względu na politykę zatwierdzania taryf prowadzoną przez PGW WP, Spółka
+ma ograniczone możliwości dochodu za usługi (…) świadczone na rzecz
+użytkowników sieci. Nie stwierdzono, aby z obowiązujących przepisów albo
+udzielonego       zezwolenia     wynikały       kompetencje       Prezydenta       Miasta
+do przeprowadzenia odrębnych kontroli wykraczających swym zakresem poza
+kontrole, jakie przeprowadzał np.: WIOŚ.
+                                                           (akta kontroli str. 1805-1813)
+W latach 2021-2023 nie przeprowadzano audytów wewnętrznych i kontroli, których
+przedmiotem była realizacja przez WGKiOŚ oraz MI zadań związanych z kanalizacją,
+usuwaniem i oczyszczaniem ścieków. W prowadzonej w UM ewidencji skarg nie
+odnotowano w latach 2021-2023 skarg dotyczących nieprawidłowego wprowadzania
+przez przedsiębiorstwa ścieków, mieszaniny ścieków, wód opadowych i roztopowych
+do wód oraz zanieczyszczenia rzeki Ina.
+                           (akta kontroli str. 78-82, 480, 194, 1009, 1013, 1373-1374)
+
+
+43 Zakres informacji obejmował: liczbę, przyczyny i sposób załatwienia skarg, wniosków wniesionych przez
+
+odbiorców usług; częstotliwość, przyczyny i czas usuwania awarii; wnioski pokontrolne z przeprowadzanych
+kontroli zewnętrznych. Do informacji załączano raporty z badań wody uzdatnionej oraz raporty z badań ścieków
+surowych i oczyszczonych, opracowanych przez certyfikowane laboratoria zewnętrzne.
+44 Dz. U. z 2023 r. poz. 1478, ze zm., dalej: ustawa Prawo wodne.
+
+
+                                                    11
+Zastępca Dyrektora WGKiOŚ wyjaśniła, że: do Prezydenta (…) wpływały pisma
+zawiadamiające o wszczęciu postępowań administracyjnych i karnych
+m.in. z Zachodniopomorskiego Wojewódzkiego Inspektoratu Ochrony Środowiska,
+Regionalnej Dyrekcji Ochrony Środowiska w Szczecinie, Prokuratury w Goleniowie
+czy Komendy Powiatowej Policji dotyczące zagadnień bezpośredniego zagrożenia
+szkodą w środowisku na odcinku Gminy Goleniów czy Gminy Stargard. Każdorazowo
+proszona była Spółka Wody Miejskie o wyjaśnienia w sprawie i temu zagadnieniu
+poświęcone były spotkania z różnymi organami ochrony środowiska, w tym to, które
+odbyło się na terenie Spółki Wody Miejskie 18 sierpnia 2023 r. Nie było wszczynanych
+przez Prezydenta Miasta postępowań w tej sprawie, gdyż tematycznie i obszarowo
+znajdowały się poza kompetencjami Prezydenta Miasta. (…) właściwość rzeczowa
+Prezydenta dotyczy działań kontrolnych tylko dla zwykłego korzystania ze środowiska
+przez osoby fizyczne nie będące przedsiębiorcami (zgodnie z zapisami art. 378 ust.
+3 ustawy Prawo ochrony środowiska). Kompetencje Prezydenta (…) zamykają się
+w granicach administracyjnych Miasta (…)
+                                                               (akta kontroli str. 1121)
+Do UM wpływały wnioski o podjęcie działań w związku z zanieczyszczaniem wód
+znajdujących się na terenie Miasta, w tym rzeki Iny, w szczególności od ZWIOŚ.
+Organ ten skierował do Prezydenta 7 września 2020 r. wystąpienie z informacją
+o ustaleniach z oględzin i wynikach badań próbek wody powierzchniowej z rzeki Ina,
+a 15 września 2022 r. wniosek o podjęcie natychmiastowych działań skutkujących
+rozwiązaniem pojawiającego się w okresie nawalnych deszczy problemu, tj. zrzutu
+przez przelewy burzowe m.in. przy ul. Brzozowej w Stargardzie bezpośrednio do rzeki
+Iny mieszaniny ścieków komunalnych z oczyszczalni w Stargardzie. Następnie
+26 lipca 2023 r. organ ten przekazał Prezydentowi informację o ustaleniach z oględzin
+w związku ze zgłoszeniami zanieczyszczenia rzeki Iny oraz o wynikach badań
+pobranych próbek wody, a także wnoszące o podjęcie przez władze miasta
+natychmiastowych działań mających na celu rozwiązanie problemu zanieczyszczenia
+rzeki Iny nieoczyszczonymi ściekami z przelewów burzowych na terenie miasta
+Stargard oraz 28 lipca 2023 r. wystąpienie informujące o ustaleniach kontroli
+w zakresie w zakresie eksploatowania przez Spółkę 16 przelewów burzowych
+na terenie miasta Stargard bez właściwych uregulowań formalnoprawnych oraz
+wnoszące o podjęcie działań w ramach posiadanych kompetencji w celu rozwiązania
+problemu zanieczyszczenia wód rzeki Iny, związanego z użytkowaniem przelewów
+burzowych. Prezydent Miasta nie udzielił ZWIOŚ pisemnej informacji o podjętych
+działaniach, o udzielenie której ZWIOŚ wnosił, na podstawie art. 16 ust. 1 ustawy
+o Inspekcji Ochrony Środowiska, w piśmie z 28 lipca 2023 r. Zagadnienie to opisano
+w sekcji Stwierdzone nieprawidłowości.
+                   (akta kontroli str. 683-684, 753-757, 759-762, 782-787, 2130-2135)
+Wyjaśniając - jakie działania podjęto, po otrzymaniu przez Prezydenta informacji
+ZWIOŚ z 28 lipca 2023 r.45, w szczególności w zakresie odprowadzania ścieków
+
+45 ZWOŚ przekazał Prezydentowi 28 lipca 2023 r. na podstawie art. 17 ust. 2 pkt 2 ustawy o Inspekcji Ochrony
+
+Środowiska, tj. informację o ustaleniach kontroli planowej Wód Miejskich, przeprowadzonej w związku z cyklem
+kontrolnym pn. „Kontrola podmiotów odprowadzających ścieki przelewami burzowymi komunalnej kanalizacji
+ogólnospławnej do śródlądowych wód powierzchniowych. W piśmie tym wskazano m.in., iż odprowadzanie
+ścieków komunalnych zmieszanych z wodami opadowymi za pośrednictwem przelewów burzowych bez
+uregulowania formalno-prawnego w obecnym kształcie zastosowanych rozwiązań technicznych, wypełnia
+w szczególności znamiona naruszenia art. 6 ust. 1 i 2 ustawy z 27 kwietnia 2001 r. Prawo ochrony środowiska
+(Dz. U. z 2024 r. poz. 54).
+ZWIOŚ wniósł także o podjęcie działań zgodnie z kompetencjami wynikającymi z ustawy o odprowadzaniu
+ścieków, a także ucpg, mających na celu skuteczne zabezpieczenie przed zanieczyszczeniem ściekami
+komunalnymi rzeki Iny w obrębie Miasta. Zwrócił również uwagę na konieczność utrzymania urządzeń służących
+oczyszczaniu ścieków, w tym urządzeń, którymi są wprowadzane do wód lub do ziemi wody opadowe lub
+roztopowe w należytym stanie technicznym, regularne wykonywanie przeglądów eksploatacyjnych urządzeń
+oczyszczających oraz wystąpił o niezwłoczne informowanie ZWIOŚ, odpowiednich terenowo jednostek Wód
+Polskich oraz Wojewódzkiego Centrum Zarządzania Kryzysowego w Szczecinie w przypadku wystąpienia awarii
+urządzeń służących oczyszczaniu ścieków. Jednocześnie, na podstawie art. 16 ust. 1 ustawy o Inspekcji Ochrony
+Środowiska, poprosił o przekazanie informacji o podjętych działaniach w przedmiotowej sprawie.
+                                                     12
+komunalnych zmieszanych z wodami opadowymi za pośrednictwem przelewów
+burzowych bez uregulowania formalno-prawnego oraz jakie podjęto czynności
+zapobiegawcze w celu ograniczenia działalności związanej z uruchamianiem
+przelewów burzowych mogącej negatywnie oddziaływać na środowisko – Zastępca
+Dyrektora WGKiOŚ wskazała: Zadania w zakresie kanalizacji sanitarnej
+i oczyszczania ścieków, Gmina Miasto Stargard w całości powierzyła utworzonej
+w tym celu Spółce (…). Spółkę wyposażono m.in. w niezbędny majątek,
+w szczególności w sieć kanalizacyjną i oczyszczalnię ścieków. (…) W przypadku
+wystąpienia gwałtownych, nawalnych deszczy – w celu zabezpieczenia ulic i domów
+przed zalaniem – wody deszczowe zmieszane ze ściekiem sanitarnym wprowadzane
+są przelewem burzowym do Iny. Jest to działanie incydentalne, znajdujące się pod
+kontrolą w ramach posiadanej przez Spółkę decyzji Dyrektora Zarządu Zlewni PGW
+WP w Stargardzie z 4 sierpnia 2022 r. (…). Po otrzymaniu pisma (…) z 28 lipca 2023 r.
+ZWIOŚ informującego o przeprowadzonej kontroli m.in.:
+1) przeprowadzono rozmowy z Dyrektorem PGW WP RZGW w Szczecinie
+     o wsparcie Miasta przy procedowaniu o uzyskanie dofinansowania i realizację
+     wstrzymanych do tej pory inwestycji w zakresie zwiększenia retencji na
+     oczyszczalni;
+2) przeanalizowano wyniki kontroli przeprowadzonej na oczyszczalni (…);
+3) Wody Miejskie zobowiązały się do zintensyfikowania działań w celu opracowania
+     optymalnej koncepcji modernizacji oczyszczalni, dostosowania ich do możliwości
+     budżetowych Miasta i Spółki oraz uzyskania finansowania zewnętrznego;
+4) Wody Miejskie oraz Wydziały UM (Biuro Funduszy, WI) w ramach realizowanych
+     działań inwestycyjnych ponowiły bieżące analizy możliwości uzyskania
+     finansowania ich realizacji;
+5) zapewniono uczestnictwo przedstawicieli Miasta Stargard i Spółki (…)
+     w spotkaniu w Urzędzie Marszałkowskim w Szczecinie, zorganizowanym 31 lipca
+     2023 r.;
+6) zorganizowano 18 sierpnia 2023 r. spotkanie na oczyszczalni ścieków (…)
+                                                 (akta kontroli str. 683-684, 782-787)
+Po otrzymaniu informacji od ZWIOŚ o wynikach przeprowadzonej kontroli
+nie przeprowadzono kontroli działalności Wód Miejskich ani audytu tej jednostki
+w zakresie zagadnień wskazywanych przez Wojewódzkiego Inspektora. Wyjaśniając
+powody braku działań w ww. zakresie, Zastępca Dyrektora WGKiOŚ podała, że:
+W WGKiOŚ:
+   1) po analizie dokumentów związanych z informacją o kontroli WIOŚ w Szczecinie
+   (…) stwierdzono, że w całości (…) wyczerpuje ona zakres ochrony przed
+   zanieczyszczeniem wód rzeki Iny. Kontrola WIOŚ była kompleksowa.
+   Z obowiązujących przepisów i udzielonego zezwolenia na zbiorowe zaopatrzenie
+   w wodę i zbiorowe odprowadzanie ścieków nie wynikają kompetencje Prezydenta
+   Miasta do przeprowadzenia kontroli w zakresie innym niż kontrola
+   przeprowadzona przez WIOŚ;
+   2) przeanalizowano sytuację zatrucia ryb w rzece Inie (m.in. przedstawioną przez
+   Wody Miejskie ekspertyzę). (…) Z analizy chemicznej zrzutu wynikało, że
+   przyczyną śnięcia ryb nie mogło być otwarcie przelewów burzowych
+   w Stargardzie. Wykluczał to skład chemiczny zanieczyszczeń. (…).
+   3) ponadto ustalono, że wpływ na stan ekosystemu rzeki Iny mogą mieć m.in:
+     zanieczyszczenia        wprowadzane        w     sposób       niekontrolowany
+        w miejscowościach na całym odcinku rzeki Iny, nie tylko na obszarze Miasta,
+        ale także z obszaru m.in. Gminy Stargard (gminy wiejskiej), Gminy Goleniów,
+     stopień skanalizowania obszarów gmin obejmujących bieg rzeki Iny;
+   4) stan utrzymania koryta rzeki – w kompetencjach poszczególnych Nadzorów
+   Wodnych (m.in.: NW Stargard, NW Goleniów) RZGW Szczecin PGW Wody
+   Polskie.
+                                                          (akta kontroli str. 782-787)
+
+                                          13
+Przewodniczący Rady Miejskiej wyjaśnił, że Rada i jej komisje nie zajmowały się
+w latach 2021-2024 zanieczyszczeniem rzeki Iny wskutek uruchamiania przelewów
+burzowych komunalnej sieci kanalizacji ogólnospławnej i odprowadzania poprzez te
+przelewy nieoczyszczonych ścieków komunalnych. Ponadto wyjaśnił, że Komisja
+Rewizyjna Rady Miejskiej nie kontrolowała w ww. latach działalności Spółki w zakresie
+gospodarki ściekowej.
+                                                               (akta kontroli str. 769)
+4. Miasto diagnozowało potrzeby związane z obszarem zbiorowego odprowadzania
+ścieków oraz ochrony rzeki Iny i podejmowało działania w tym zakresie. Rada Miejska
+dla zachowania bioróżnorodności oraz ostoi i miejsc sezonowego przebywania
+ichtiofauny, uchwałą nr XXIII/238/2016 z 25 października 2016 r. utworzyła użytek
+ekologiczny „Niebieski korytarz ekologiczny koryta rzeki Iny i jej dopływów – III”46.
+Obszar użytku ekologicznego obejmował obszar o łącznej powierzchni 22,9751 ha
+położony na terenie Miasta. Szczególnym celem ochrony użytku było zachowanie
+w odpowiednim stanie wód płynących, jako korytarza ekologicznego, stanowiącego
+ważny szlak wędrówek i rozrodu ryb łososiowatych.
+                                                          (akta kontroli str. 255-256)
+W Programie Ochrony Środowiska dla Gminy Miasto Stargard na lata 2018-2021
+z perspektywą na lata 2022-2025”47 sformułowano cele do realizacji związane
+z obszarem gospodarki wodami oraz gospodarki wodno-ściekowej, w tym ze stanem
+jakości rzeki Iny. W ramach gospodarowania wodami celem średniookresowym było
+osiągnięcie dobrego stanu ekologicznego wód pod względem jakościowym
+i ilościowym na terenie Miasta, a celem krótkookresowym była poprawa jakości wód
+na terenie Miasta48. Cele te miały być realizowane poprzez następujące zadania
+własne: prowadzenie ewidencji przydomowych oczyszczalni ścieków i zbiorników
+bezodpływowych oraz wspieranie finansowe budowy indywidualnych systemów
+oczyszczania ścieków (głównie na terenach zabudowy rozproszonej i obszarach
+trudnych do skanalizowania, gdzie jest to prawnie dozwolone) i zadania
+koordynowane: bieżącą konserwację i utrzymanie cieków wodnych oraz konserwację
+rowów melioracyjnych. W ramach gospodarki wodno-ściekowej celem
+średniookresowym był rozwój gospodarki wodno-ściekowej na terenie Miasta,
+a celem krótkookresowym pełne skanalizowanie oraz zwodociągowanie obszaru
+Miasta49. Cele te miały być realizowane poprzez następujące zadania własne:
+budowę i modernizację sieci kanalizacji sanitarnej i deszczowej oraz budowę
+i modernizację sieci wodociągowej na terenie Miasta, a także przebudowę
+istniejącego kolektora deszczowego na terenie Kluczewo Lotnisko wraz
+z modernizacją oczyszczalni. Ustalone cele były monitorowane przez raporty
+z POŚ50.
+                                      (akta kontroli str.244-246, 257-264a, 544-545)
+Zagadnienia dotyczące odprowadzania ścieków i wód deszczowych były ujmowane
+w dokumentach planistycznych51. W Studium uwzględnione zostały zagadnienia
+
+46 Dz. Urz. Woj. Zachodniopomorskiego z 2016 r., poz. 4556.
+47 Przyjętego uchwałą Rady Miejskiej Nr II/19/2018 z 18 grudnia 2018 r., dalej: POŚ.
+48 W POŚ określono wartości bazowe i docelowe mierników oraz źródła danych.
+49 W POŚ określono wartości bazowe i docelowe mierników oraz źródła danych.
+50 Według raportu z realizacji POŚ w latach 2020-2021, który został przedstawiony Radzie Miejskiej 20 czerwca
+
+2023 r. w obszarze gospodarowania wodami zostało zrealizowane zadanie dotyczące prowadzenia ewidencji
+przydomowych oczyszczalni ścieków i zbiorników bezodpływowych nie zostało zrealizowane zadanie dotyczące
+wspierania finansowego budowy indywidualnych systemów oczyszczania ścieków. Miasto nie udzielało
+mieszkańcom dotacji w tym zakresie. Preferowanym rozwiązaniem była rozbudowa sieci kanalizacyjnej oraz
+przyłączanie do niej kolejnych zabudowań. W obszarze gospodarki wodno-ściekowej zrealizowano wszystkie
+zadania
+51 Studium uwarunkowań i kierunków zagospodarowania przestrzennego Miasta Stargard, przyjęte uchwałą Rady
+
+Miejskiej Nr XXVII/263/2000 z 26 października 2000 r., ze zm.; dalej: Studium oraz miejscowych planach
+zagospodarowania przestrzennego Miasta (uchwała Nr XXV/279/2021 z 23 lutego 2021 r., XXVIII/299/2021
+i XXVIII/299/2021 z 25 maja 2021 r., XLVIII/489/2023 z 31 stycznia 2023 r., Nr LI/517/2023 z 25 kwietnia 2023 r.,
+
+
+                                                       14
+dotyczące przeciwdziałania niekorzystnym zmianom klimatycznym poprzez m.in.
+tworzenie spójnego systemu zieleni miejskiej i zwiększenie retencji wód
+powierzchniowych na terenach zabudowanych oraz przewidzianych do zabudowy
+w miejscowych planach zagospodarowania przestrzennego52. W zakresie
+oczyszczania ścieków podano, że odbiornikiem oczyszczonych ścieków jest rzeka
+Ina, posiadająca na wysokości Stargardu II klasę czystości, pomimo zakazu
+wprowadzania nieoczyszczonych lub źle oczyszczonych ścieków do rzeki.
+Kanalizacja typu ogólnospławnego przy ulewnych deszczach powoduje zakłócenia
+w pracy oczyszczalni oraz zmusza do jej przewymiarowania. Według Studium
+w trakcie realizowania kanalizacji na nowych terenach należy projektować sieć
+rozdzielczą. Jako zasadę w odprowadzaniu wód deszczowych należy przyjąć zasadę
+prowadzenia ich po podczyszczeniu, po powierzchni terenu oraz gromadzenia
+w naturalnych i sztucznych zbiornikach wody, co wpłynie dodatnio na topoklimat
+miasta i odciąży komunalną oczyszczalnię ścieków. W miejscowych planach
+zagospodarowania przestrzennego zawarto m.in. regulacje dotyczące
+odprowadzania ścieków sanitarnych oraz wód opadowych i roztopowych.
+                                             (akta kontroli str. 291-334, 387-410)
+Dyrektor WGKiOŚ wyjaśnił, że Miasto wydając decyzje o środowiskowych
+uwarunkowaniach dla przedsięwzięć każdorazowo analizuje i formułuje zapisy
+dotyczące sytuacji w zakresie wód miejscowych, w tym związanych
+z zanieczyszczeniem rzeki Iny53.
+                                                               (akta kontroli str. 244-246, 265-290)
+Miasto przystąpiło w 2023 r. do opracowania i wdrożenia miejskiego planu adaptacji
+do zmian klimatu54. Jego celem było zwiększenie zdolności adaptacyjnych Miasta
+wobec możliwości zagrożeń wynikających ze zmian klimatu. Dyrektor WGKiOŚ
+wyjaśnił: obecnie przygotowany jest projekt pierwszej części, tj. diagnoza zagrożenia
+i przygotowania Stargardu do zmian klimatu. W projekcie określono analizę
+hydrologiczną miasta, w tym gospodarkę wodną, infrastrukturę wodociągową
+i kanalizacyjno-ściekową, diagnozę wrażliwości gmin na opad, ocenę systemu
+kanalizacji deszczowej i zdolności retencyjne w mieście oraz sformułowano wnioski
+i zalecenia. W następnym etapie wykonawca opracowania przedstawi propozycje
+działań, ich opis, określi szacunkowe koszty wdrożenia oraz harmonogram realizacji
+zadań, określi wskaźniki monitorowania i wyliczenia przewidywanego efektu
+ekologicznego. Ponadto Dyrektor wyjaśnił, że MPGK w 2021 r. opracowało koncepcję
+dla zadania Oczyszczalnia ścieków w Stargardzie – budowa zamkniętych komór
+fermentacyjnych oraz budowa przepompowni nadmiarowej ścieków z obiektami
+towarzyszącymi, jednakże Wydział nie dysponował ww. koncepcją.
+                                                 (akta kontroli str. 244-248, 249-254)
+Rada Miejska uchwałą Nr XLI/441/2018 z 24 kwietnia 2018 r. przyjęła wieloletni plan
+rozwoju oraz modernizacji urządzeń wodociągowych i kanalizacyjnych MPGK na lata
+2018-202155 oraz uchwałą Nr XXX/321/2021 z 31 sierpnia 2021 r. wieloletni plan
+
+LIII/527/2023 z 20 czerwca 2023 r.; LIV/535/2023 i LIV/536/2023 z 29 sierpnia 2023 r., Nr LVII/560/2023
+z 28 listopada 2023 r. oraz LVIII/574/2023 z 19 grudnia 2023 r.).
+52 Zachowanie i odtworzenie bogatego systemu hydrologicznego Miasta, właściwe kształtowanie zieleni miejskiej,
+
+retencjonowanie wód deszczowych, oszczędzanie zużycia wody do celów bytowych i gospodarczych poprzez
+wprowadzenie systemów wtórnego jej wykorzystania.
+53 W szczególności określano warunki i wymagania dotyczące planowanego przedsięwzięcia w zakresie
+
+prowadzenia inwestycji w fazie budowy jak i realizacji w sposób wykluczający pogorszenie stanu wód,
+przy zastosowaniu środków (procedur i technologii) zapobiegających rozprzestrzenianiu się i likwidujących
+ewentualne zanieczyszczenia powstałe w trakcie jej realizacji, organizacji zaplecza budowy sposób zapewniający
+ochronę środowiska gruntowo-wodnego przed zanieczyszczeniem, prowadzenia prac ziemnych oraz prac
+w korycie rzeki w sposób zapewniający ochronę gruntu i wody przed zanieczyszczeniami w szczególności
+substancjami ropopochodnymi.
+54 Dalej: MPA. Uchwała Nr L/510/2023 Rady Miejskiej z 28 marca 2023 r. w sprawie przystąpienia Gminy Miasto
+
+Stargard do opracowania i wdrożenia Miejskiego Planu Adaptacji do zmian klimatu.
+55 Dalej: wieloletni plan na lata 2018-2021.
+
+
+                                                     15
+rozwoju oraz modernizacji urządzeń wodociągowych i kanalizacyjnych MPGK na lata
+2022-202456. Plany te zawierały elementy wymienione w art. 21 ust. 2 ustawy
+o zbiorowym odprowadzaniu ścieków (w dniu podjęcia tych uchwał). Przed
+skierowaniem projektów uchwał pod obrady Rady Miejskiej w Urzędzie
+zweryfikowano, że wieloletnie plany są zgodne z kierunkami gminy określonymi
+w Studium oraz miejscowymi planami zagospodarowania przestrzennego Miasta,
+a także z decyzją udzielającą zezwolenia na prowadzenie zbiorowego zaopatrzenia
+w wodę i zbiorowego odprowadzania ścieków. Plany zostały uchwalone przed
+upływem trzech miesięcy od ich przedłożenia Prezydentowi, co było zgodne z art. 21
+ust. 5 ww. ustawy. Po uchwaleniu plany nie były zmieniane.
+W wieloletnim planie na lata 2018-2021 ujęto 10 przedsięwzięć57 których łączny koszt
+oszacowano na kwotę 3 540 000 zł58. W jego treści wskazano, że jest to plan
+minimum jaki Spółka musi wykonać, wynikający z powierzonego jej zadania. Plan nie
+obejmował zadań dotyczących budowy lub adaptacji istniejących obiektów na cele
+retencyjne w celu gromadzenia wód dopływających w okresie intensywnych opadów
+deszczu do oczyszczalni ścieków. W treści planu wskazano jednak, że Spółka
+ok. 600 000 zł przeznaczy na dokumentacje projektowe, w tym na projekt retencji na
+oczyszczalni ścieków, która jest konsekwencją już wykonanych działań, tj. renowacji
+istniejącego syfonu wraz z budową kanału ulgi.
+W wieloletnim planie na lata 2022-2024 ujęto pięć przedsięwzięć dotyczących budowy
+sieci kanalizacyjnej oraz modernizacji przepompowni59, których koszty oszacowano
+na 3 900 000 zł i dwa przedsięwzięcia dotyczące oczyszczalni ścieków60, których
+koszty oszacowano na 26 200 000 zł. Realizacja przedsięwzięcia „Przebudowa
+i rozbudowa oczyszczalni ścieków w Stargardzie poprzez rozbudowę układu
+doprowadzania ścieków do oczyszczalni w rejonie rzeki Iny wraz z budową
+przepompowni ścieków – wód deszczowych dopływających w pogodzie deszczowej
+do oczyszczalni oraz adaptacją istniejących obiektów na cele retencyjne i budową
+instalacji do odbioru, unieszkodliwiania i odzysku osadów z czyszczenia kanalizacji
+placów i ulic” zaplanowana została na 2023 r. i na ten cel zamierzano przeznaczyć
+200 000 zł na opracowanie dokumentacji projektowej niezbędnej do uzyskania
+pozwolenia na budowę przepompowni ścieków komunalnych dopływających przy
+pogodzie deszczowej do oczyszczalni ścieków wraz z adaptacją istniejących
+obiektów kubaturowych do gromadzenia nadmiaru wód deszczowych. Miał to być
+kolejny etap poprawiania i minimalizowania zalewania terenów oraz uruchamiania się
+
+
+
+
+56 Dalej: wieloletni plan na lata 2022-2024.
+57 Budowa sieci kanalizacji sanitarnej DN250L-405 m, tłoczny DN90 L – 2x75 m wraz z przepompownią PPNT;
+
+budowa dwóch odcinków sieci kanalizacji tłocznej w ul. Sadowej wraz z modernizacją przepompowni P8 i P9;
+budowa sieci kanalizacyjnej DN300 L-950 m na terenie PSSE, budowa sieci kanalizacyjnej DN200
+w ul. Tańskiego-Śniadeckiego; modernizacja przepompowni P1 – ul. Warszawska; przebudowa włączenia
+kolektora DN1000 w układ kanalizacji w ul. Piłsudskiego-Konopnickiej; rozbudowa sieci kanalizacyjnych na terenie
+miasta; budowa sieci kanalizacyjnej w ul. Nowowiejskiej wraz z przepompownią, kanalizacja grawitacyjna DN200
+L-674 m i kanalizacja tłoczna DN90 L-453 m; budowa sieci kanalizacyjnej DN200 w ul. Morskiej, Szosie
+Maszewskiej i w ul. Wiśniowej (skrzyżowanie); budowa sieci kanalizacyjnej DN200 w ul. Grudządzkiej.
+58 W planie zostały ujęte zadania do kwoty pokrywającej środki, jakimi dysponowała Spółka, tj. w 2018 r.
+
+1 010 000 zł, w 2019 r. 1 100 000 zł, w 2020 r. 935 000 zł i w 2021 r. 495 000 zł.
+59 Budowa sieci kanalizacyjnej na osiedlu Pyrzyckim (I etap DN 200 L-900 m, II etap DN 200 L -700 m); budowa
+
+sieci kanalizacyjnej w ul. Śniadeckiego DN 200, L-200 m; budowa sieci kanalizacyjnej w ul. Nowowiejskiej DN 200,
+L-200 m; modernizacja przepompowni przy ul. Warszawskiej oraz budowa sieci kanalizacyjnej w ul. Aleja Dębowa
+DN 200 L-320 m, DN 90L-170 m wraz z przepompownią.
+60 Budowa instalacji oczyszczania osadów ściekowych w oparciu o proces fermentacji metanowej w zamkniętych
+
+komorach fermentacyjnych z wykorzystaniem biogazu, układem kogeneracji oraz instalacją przetwarzania
+przefermentowanych osadów ściekowych w nawóz na terenie oczyszczalni ścieków w Stargardzie i przebudowa
+i rozbudowa oczyszczalni ścieków w Stargardzie poprzez rozbudowę układu doprowadzania ścieków do
+oczyszczalni w rejonie rzeki Iny wraz z budową przepompowni ścieków – wód deszczowych dopływających
+w pogodzie deszczowej do oczyszczalni oraz adaptacją istniejących obiektów na cele retencyjne i budową
+instalacji do odbioru, unieszkodliwiania i odzysku osadów z czyszczenia kanalizacji placów i ulic.
+                                                      16
+przelewów burzowych zlokalizowanych na terenie miasta Stargard podczas ulewnych
+i intensywnych deszczy61.
+                                      (akta kontroli str. 26-74, 481-543, 575-576)
+Realizując obowiązek określony w art. 92 ustawy Prawo wodne, Prezydent
+w pierwszym kwartale 2021 r.62 zapewnił przeprowadzenie przeglądu obszarów
+i granic aglomeracji wyznaczonych na podstawie art. 87 ust. 1 tej ustawy,
+z uwzględnieniem kryterium ich utworzenia oraz zaistniałych zmian równoważnej
+liczby mieszkańców w aglomeracji. Po przeprowadzeniu przeglądu zalecono
+przeprowadzenie wyznaczenia aglomeracji Stargard63 i Rada Miejska uchwałą
+Nr XXX/325/2021 z 31 sierpnia 2021 r. dokonała zmiany uchwały w sprawie
+wyznaczenia obszaru i granic aglomeracji Stargard. Uchwała weszła w życie
+15 września 2021 r. Kolejnego przeglądu aglomeracji nie przeprowadzono
+z zachowaniem wymaganego terminu, co opisano w sekcji Stwierdzone
+nieprawidłowości.
+                                               (akta kontroli str. 75-76, 335-384)
+5. W latach 2021-2023 Miasto nie planowało i nie realizowało zadań w zakresie
+gospodarki ściekowej dotyczące budowy lub przebudowy oraz remontów sieci
+kanalizacji sanitarnej, a także oczyszczania ścieków. Zadania te realizowały Wody
+Miejskie64. Miasto planowało i realizowało przedsięwzięcia obejmujące m.in. budowę
+kanalizacji sanitarnej i deszczowej głównie wraz z budową i przebudową ulic oraz
+przygotowaniem terenów pod inwestycje65. W 2021 r. zaplanowano dwie takie
+inwestycje66, na które zabezpieczono ogółem 8 735 069 zł, a wydatkowano
+8 375 974,28 zł67 (95,9% planu), w 2022 r. zaplanowano pięć inwestycji68, na które
+zabezpieczono ogółem 33 662 122,33 zł, a wydatkowano 19 622 148,21 zł (58,3%69),
+w 2023 r. zaplanowano pięć inwestycji70, na które zabezpieczono ogółem
+21 576 842,00 zł, a wydatkowano 19 263 963,96 zł (89,3%).
+W kontrolowanym okresie Miasto wybudowało sieć kanalizacji deszczowej o łącznej
+długości 10 098,67 m, z tego: w 2021 r. 6 964,03 m, w 2022 r. 1 401,29 m i w 2023 r.
+1 733,35 m. Zakończono budowę sześciu zbiorników retencyjnych i retencyjno-
+rozsączających o pojemności ogółem 2 660,5 m3. W trakcie realizacji były trzy kolejne
+
+
+
+
+61 Pierwszym etapem była renowacja syfonu pod rzeką Iną, jak również budowa nowej sieci kanalizacyjnej
+
+odprowadzającej ścieki komunalne do oczyszczalni ścieków. Dzięki tej inwestycji doprowadzana była większa
+ilość ścieków (głównie opadowych), maksymalnie wykorzystując wydajność pompowni na oczyszczalni, która
+wynosiła 3 800 m3/h. Część trafiała bezpośrednio do oczyszczenia, a pozostała była retencjonowana
+w zbiornikach o pojemności 4 400 m3 celem późniejszego oczyszczenia.
+62 Protokół dotyczący przekazania ostatecznej wersji przeglądu aglomeracji Stargard sporządzono 13 kwietnia
+
+2021 r.
+63 W związku ze zmianą liczby RLM ( o ponad 5%), a także ze względu na zwiększenie granic aglomeracji.
+64 Sieć kanalizacji sanitarnej na terenie Miasta była własnością tej Spółki. Zgodnie z § 7 ust. 1 aktu założycielskiego
+
+Spółki, przedmiotem jej przeważającej działalności było świadczenie usług w zakresie poboru, uzdatniania
+i dostarczania wody (PKD36.00.Z) oraz odprowadzania i oczyszczania ścieków (PKD37.00.Z).
+65 Wyjątek stanowiła budowa odcinka kanalizacji deszczowej w rejonie ul. K. Wielkiego.
+66 Budowę ul. Metalowej oraz wzmocnienie atrakcyjności inwestycyjnej Województwa Zachodniopomorskiego
+
+poprzez kompleksowe przygotowanie terenów PPNT w Stargardzie - odwodnienie.
+67 Przedstawione kwoty stanowią łączne wydatki całych zadań majątkowych.
+68 Przebudowę ulic na terenie dzielnicy Kluczewo w Stargardzie (ul. Kosmonautów, ul. Lotników i fragment
+
+ul. Lelewela), przebudowę sięgacza ul. Rzemieśliczej, budowę obwodnicy Północnej miasta Stargard, budowę
+Szczecińskiej Kolei Metropolitalnej z wykorzystaniem istniejących odcinków linii kolejowej nr 406,273,351 –
+(budowa parkingu Park&Ride przy ul. Barnima oraz przebudowa ul. Księcia Barnima I w Stargardzie) oraz budowę
+odcinka kanalizacji deszczowej w rejonie ul. K. Wielkiego.
+69 Niski procent wykonania dotyczył przebudowy ulic na terenie dzielnicy Kluczewo w Stargardzie i wynikał
+
+z wykonania w 2022 r. dokumentacji i realizacji zadania w kolejnych latach (planowane zakończenie w 2024 r.).
+70 Przebudowę drogi w popegeerowskiej części miasta Stargard – Giżynek, budowę ul. J. Chełmońskiego, budowę
+
+Obwodnicy Północnej w Stargardzie od ul. Wieniawskiego do wiaduktu przy ul. Składowej wraz z odcinkiem
+kanalizacji deszczowej wzdłuż ul. E. Orzeszkowej; przebudowę ulic: B. Chrobrego, Kuśnierzy, Włókienniczej
+i Szewskiej na terenie Starego Miasta w Stargardzie oraz kontynuowana była przebudowa ulic na terenie dzielnicy
+Kluczewo w Stargardzie (ul. Kosmonautów, ul. Lotników i fragment ul. Lelewela).
+                                                          17
+zbiorniki retencyjne o pojemności ogółem 1 071 m371. Na koniec 2023 r., na terenie
+Stargardu zlokalizowanych było ogółem 21 zbiorników wód opadowych będących
+własnością Miasta72.
+Dyrektor MI wyjaśniła, że celem ww. inwestycji było odwodnienie pasów drogowych,
+uporządkowanie gospodarki wodami opadowymi oraz zmniejszenie ilości wód
+opadowych wprowadzanych do sieci kanalizacji ogólnospławnej. Dyrektor WGKiOŚ
+wyjaśnił, że Miasto prowadziło działania dotyczące ograniczenia negatywnych
+skutków odprowadzania wód opadowych z nawalnych deszczy i ograniczenia
+zanieczyszczenia rzeki Iny w różnych obszarach. Działania te miały bezpośredni
+wpływ na zwiększenie ilości zagospodarowanych wód deszczowych, jednak nie
+wszystkie mogły być zrealizowane natychmiast, a część z nich wymaga zaplanowania
+procesów wieloletnich.
+  (akta kontroli str. 83, 228-229, 385-386, 419-423, 580, 700-702, 718-735, 750-751,
+                                                                            832-839)
+W wyniku sprawdzenia realizacji obowiązku zgłoszenia wylotów wód opadowych lub
+roztopowych Wodom Polskim, w celu wpisania do systemu informacyjnego
+gospodarowania wodami w odniesieniu do trzech inwestycji zakończonych w latach
+2021-202373, w związku z którymi Miasto uzyskało pozwolenia wodnoprawne na
+usługę polegającą na odprowadzeniu wód opadowych lub roztopowych do rzeki
+Gowienica, zbiorników retencyjno-rozsączających oraz rowu74 ustalono, że
+z zachowaniem określonego w decyzjach terminu 60 dni dokonano zgłoszenia
+rozpoczęcia użytkowania urządzeń objętych jedną decyzją75, a z opóźnieniem
+poinformowano o wykonaniu i użytkowaniu urządzeń określonych w dwóch
+decyzjach76. Zagadnienie to opisano w sekcji Stwierdzone nieprawidłowości.
+                                             (akta kontroli str. 177-714, 1796-1804)
+Miasto prowadziło działania edukacyjno-informacyjne (poprzez stronę internetową
+Urzędu) skierowane do mieszkańców, w celu zachęcenia do zagospodarowania wód
+opadowych na własnej nieruchomości m.in. w ramach realizowanego przez
+Wojewódzki Fundusz Ochrony Środowiska i Gospodarki Wodnej w Szczecinie
+programu „Moja Woda”.
+                                                   (akta kontroli str. 83, 556-567)
+Miasto podejmowało działania w celu zapewnienia środków finansowych na realizację
+zadań z zakresu gospodarki ściekowej, w tym ze źródeł zewnętrznych77. Dotyczyły
+one głównie pozyskania środków na budowę, rozbudowę lub przebudowę dróg oraz
+uzbrojenie terenów, w ramach których wykonywana była m.in. sieć kanalizacji
+deszczowej78. 6 sierpnia 2021 r. Miasto skierowało wniosek o udzielenie
+
+71 Na lata 2024-2025 w zakresie projektowania, budowy lub rozbudowy układu drogowego wraz z kanalizacją
+
+deszczową zaplanowano następujące zadania: przebudowę ulic: Niepodległości, Dworcowej, Polskiej, Kardynała
+Stefana Wyszyńskiego i Placu Wolności, przebudowę drogi na terenach PPNT, komunikującej Miasto z Gminą
+Warnice, a także budowę drogi ul. Miedzianej do skrzyżowania z ul. Jana Śniadeckiego na terenie PPNT.
+72 Rondo 15 Południk, ul. Skandynawska, ul. Nasienna, ul. Przedwiośnie, ul. Skarbowa, ul. Krzemowa,
+
+ul. Spokojna i rondo Golczewo (trzy zbiorniki), rondo im. Sławomira Pajora (sześć zbiorników), teren PPNT (trzy
+zbiorniki), ul. Orzeszkowej, ul. Chełmońskiego (dwa zbiorniki). W latach 2018-2020 długość wybudowanej
+kanalizacji deszczowej wyniosła ogółem 6 075,16 m oraz w 2018 r. wybudowano sześć zbiorników podziemnych
+o pojemności 52 m3 każdy.
+73 Uzbrojenie terenów w PPNT w Stargardzie w zakresie kanalizacji deszczowej, kanalizacji sanitarnej i sieci
+
+drogowej wraz z rozbudową układu drogowego, budowa odcinka obwodnicy północnej Stargardu od ul. Składowej
+do ul. Orzeszkowej oraz budowa ul. Chełmońskiego w Stargardzie.
+74 Decyzje SZ.ZUZ.3.421.43.4.2019.JM5 z 26 września 2019 r., SZ.ZUZ.3.4210.72.5.2020.ŻS z 14 lipca 2020 r.
+
+oraz SZ.ZUZ.3.4210.193.4.2020.JM z 20 grudnia 2020 r. ze zm.
+75 SZ.ZUZ.3.4210.193.4.2020.JM.
+76 SZ.ZUZ.3.421.43.4.2019.JM5 oraz SZ.ZUZ.3.4210.72.5.2020.ŻS.
+77 Z Narodowego Funduszu Ochrony Środowiska i Gospodarki Wodnej, z Rządowego Programu Polski Ład,
+
+z Rządowego Funduszu Rozwoju Dróg i z Funduszu Dróg Samorządowych z Regionalnego Programu
+Operacyjnego Województwa Zachodniopomorskiego na lata 2014-2020.
+78 Kwota dofinansowania na realizację tych projektów ogółem (w tym na budowę sieci kanalizacji) uzyskanego
+
+przez Miasto w 2021 r. wyniosła 44 804 883,00 zł, w 2022 r. 27 096 938,11 zł i w 2023 r. 35 414 .256,42 zł.
+
+
+                                                      18
+dofinansowania w ramach Rządowego Programu Polski Ład: Program Inwestycji
+Strategicznych – edycja pierwsza w kwocie 88 350 000 zł na projekt „Modernizacja
+Oczyszczalni Ścieków w Stargardzie wraz ze zwiększeniem ilości dopływających
+ścieków nadmiarowych”. Inwestycja miała obejmować budowę zamkniętych komór
+fermentacyjnych wraz z budową zbiornika gazu i instalacji do odzysku energii,
+budowę instalacji stabilizacji osadów wapnem wysokoreaktywnym, budowę
+przepompowni nadmiarowej ścieków dopływających w pogodzie deszczowej
+do oczyszczalni ścieków wraz z adaptacją istniejących obiektów kubaturowych
+do gromadzenia nadmiaru tych ścieków i niezbędnymi urządzeniami oraz
+z wykonaniem syfonu, a także budowę instalacji do odbioru, unieszkodliwiania
+i odzysku osadów z czyszczenia kanalizacji. Wniosek o dofinansowanie został
+odrzucony. Miasto nie otrzymało informacji o przyczynach odrzucenia wniosku.
+                                                           (akta kontroli str. 21-25)
+Dyrektor Biura Funduszy wyjaśniła, że w związku z odrzuceniem w 2021 r.
+ww. wniosku Biuro na bieżąco monitorowało istniejące mechanizmy finansowe
+przewidujące możliwości finansowania ww. zamierzeń inwestycyjnych, w tym nabory
+wniosków o dofinansowanie projektów wpisujących się w zakres (całościowy lub
+częściowy) ww. projektu. Z uwagi na brak dedykowanych naborów wniosków we
+wskazanym okresie w ramach programów krajowych i Regionalnego Programu
+Operacyjnego Województwa Zachodniopomorskiego 2014- 2020, nie było możliwości
+złożenia dokumentacji aplikacyjnej dla zadania. Biorąc pod uwagę znaczące koszty
+realizacji przedsięwzięcia nie przewidywano jej finansowania wyłącznie ze środków
+własnych Miasta. Dyrektor WGKiOŚ wyjaśnił: Lata 2021-2023 były wyjątkowo trudne
+dla Miasta organizacyjnie i finansowo. Był to okres nowych wyzwań spowodowanych
+pandemią COVID, wybuchem wojny na Ukrainie, wzrostem cen na rynku, wysoką
+inflacją i koniecznością ponoszenia coraz to nowych nieprzewidzianych wydatków.
+Zarówno Miasto, jak i Spółka nie uchylały się od działań i wydatków inwestycyjnych,
+pomimo ograniczonych możliwości finansowych tych jednostek i ograniczonego
+dostępu do środków zewnętrznych. Dodatkowo, jednym z najistotniejszych utrudnień
+w podejmowaniu inwestycji generujących wysokie nakłady był brak możliwości
+wpisania tych zadań do Wieloletniego Planu Rozwoju i Modernizacji Urządzeń
+Wodociągowych i Urządzeń Kanalizacyjnych dla miasta Stargard. Koszty
+zaplanowane w tym dokumencie podlegają uwzględnieniu w taryfach za zbiorowe
+zaopatrzenie w wodę i zbiorowe odprowadzanie ścieków dla Miasta (…) oraz
+poddawane są ocenie przez regulatora (…). Ujęcie w taryfie znacznych nakładów
+inwestycyjnych wpływa bezpośrednio na zwiększenie opłat taryfowych, na co nie było
+zgody regulatora. (…) Niezależnie od powyższego, w grudniu 2021 r. opracowano
+koncepcję dalszego zwiększenia retencji na oczyszczalni, która uwzględnia
+wybudowanie nowych obiektów oraz wykorzystanie istniejących. Ze względu
+na przywołane wcześniej trudności taryfowe, dalsze działania wstrzymano.
+                                                      (akta kontroli str. 579, 773-779)
+Miasto podjęło kolejną próbę aplikowania o środki na ten cel 16 sierpnia 2023 r.
+Złożono wówczas wniosek o dofinansowanie w ramach Rządowego Programu Polski
+Ład: Programu Inwestycji Strategicznych (edycja ósma) na inwestycję „Budowa
+przepompowni nadmiarowej ścieków wraz z adaptacją obiektów kubaturowych
+i wykonaniem niezbędnych urządzeń na terenie oczyszczalni ścieków
+w Stargardzie”79. Zadanie obejmowało budowę przepompowni nadmiarowej ścieków
+dopływających w pogodzie deszczowej do oczyszczalni ścieków, adaptację obiektów
+kubaturowych do gromadzenia tych ścieków wraz z niezbędnymi urządzeniami.
+
+Ponadto w 2016 r. i 2019 r. Miasto uzyskano dofinansowanie odpowiednio: 897 417,56 zł na realizację projektu
+„Budowa sieci kanalizacji deszczowej grawitacyjno-tłocznej wraz z przepompownią wód deszczowych od ul.
+Lotników do rzeki Małej Iny przez ul. Główną w Stargardzie” i 799 999,99 zł na realizację projektu „Budowa
+kanalizacji deszczowej na odcinku od wiaduktu kolejowego, zlokalizowanego przy ul. Księcia Bogusława IV
+do odbiornika rzeki Iny w Stargardzie.
+79 Zakres projektu został dostosowany do aktualnych warunków naboru i możliwości finansowych wnioskodawcy.
+
+Kwota wniosku nie mogła przekroczyć 30 mln zł.
+                                                    19
+Celem zadania była dodatkowa ochrona wód rzeki Iny przed zanieczyszczeniami.
+Realizacja inwestycji przyczynić się miała do zminimalizowania zrzutów ścieków
+komunalnych do rzeki Iny podczas nawalnych lub długotrwałych opadów
+atmosferycznych. Bezpośrednim efektem zaplanowanego zadania miała być
+minimalizacja zanieczyszczania rzeki Iny, co miało przyczynić się do ochrony fauny
+i flory, jak również poprawić bezpieczeństwo mieszkańców. Wniosek w zakresie
+inwestycji dotyczącej retencji został przyjęty do realizacji i 12 października 2023 r.
+została udostępniona promesa wstępna do 20 mln zł (podpisana 11 października
+2023 r.80). Prezydent 4 marca 2024 r. udzielił Spółce pełnomocnictwa do
+przygotowania i przeprowadzenia postępowania o udzielenie zamówienia w ramach
+pomocniczych działań zakupowych na zadanie „Budowa przepompowni
+nadwymiarowej ścieków wraz z adaptacją obiektów kubaturowych i wykonaniem
+niezbędnych urządzeń na terenie oczyszczalni ścieków w Stargardzie”. Spółka
+przygotowała Program Funkcjonalno-Użytkowy.
+                                        (akta kontroli str. 413-418, 776-778, 827-830)
+6. Według przedłożonego w trakcie kontroli protokołu z okresowej kontroli pięcioletniej
+stanu technicznego obiektu budowlanego, w kontrolowanym okresie Miasto
+zapewniło przeprowadzenie 12 czerwca 2023 r. jednej kontroli, o której mowa w art.
+62 ust. 1 pkt 2 ustawy dnia 7 lipca 1994 r. Prawo budowlane81 sieci kanalizacji
+deszczowej wraz z przepompownią od ul. Lotników przez ul. Główną do rzeki Ina
+w Stargardzie. Kontrola została przeprowadzona przez osoby posiadające
+uprawnienia budowlane wymaganej specjalności, przed upływem pięciu lat od
+oddania sieci kanalizacji do użytkowania. Sporządzony protokół z okresowej kontroli
+pięcioletniej zawierał dane wymagane przepisami art. 62a ust. 2 ustawy Prawo
+budowlane. W protokole tym nie podano daty oddania obiektu budowlanego do użytku
+oraz rodzaju konstrukcji. Nie przeprowadzono pięcioletnich okresowych kontroli
+budowlanych pozostałych odcinków sieci kanalizacji deszczowej, co opisano w sekcji
+Stwierdzone nieprawidłowości.
+W protokole stwierdzono, że stan techniczny sieci jest dobry i we wnioskach
+końcowych wskazano, że instalacja kanalizacji deszczowej nadaje się do dalszego
+użytkowania. Nie wskazano nieprawidłowości ani robót remontowych do wykonania.
+Przeprowadzająca kontrolę zeznała: W celu sporządzenia okresowej kontroli
+pięcioletniej, korzystałam z wiedzy, przy sporządzaniu protokołu rocznego oraz
+dodatkowo sprawdzałam przepompownię, pod kątem ewentualnego wystąpienia
+awarii na podstawie aparatury zamontowanej przy przepompowni. Dodatkowo
+przyjechałam sprawdzić stan wpustów, stan włazów i ewentualnych zapadlisk
+nawierzchni przy wpustach. Przy okresowych przeglądach dokonywałam
+wyrywkowego sprawdzenia stanu czystości wpustów ulicznych i studni rewizyjnej przy
+użyciu dźwigienki, która pomagała mi podnieść klapę lub właz. Po otwarciu
+sprawdzałam czystość osadnika wpustu. Jeżeli nie było zanieczyszczeń w postaci
+piasku i mułu świadczyło to, że będzie prawidłowo pracował przy opadach deszczu
+(odbierał wodę). Jeżeli w studni rewizyjnej dno było czyste, to świadczyło to o tym, że
+kanał deszczowy jest drożny i odprowadza wody deszczowe. Po przejrzeniu sieci
+i przepompowni nie stwierdziłam zanieczyszczeń na sieci, to znaczy w studniach
+i wpustach, co świadczyło o drożności sieci i jej gotowości do prawidłowej pracy.
+Nie zauważyłam braków wpustów oraz płyt nastudziennych, które stanowiłyby
+zagrożenie dla użytkowników drogi, przepompownia w momencie kontroli pracowała
+prawidłowo. (…) sieć była sprawna.
+                                                  (akta kontroli str. 884-897, 926-929)
+
+
+
+80 Zgodnie   z zasadami naboru, w terminie dziewięciu miesięcy od dnia udostępnienia wstępnej promesy
+w Aplikacji Polski Ład, jednostka zobowiązana jest ogłosić „skuteczne” postępowanie (skutkujące wyborem
+wykonawcy), co oznacza, że do 12 lipca 2024 r. Miasto zobowiązane jest złożyć oświadczenie o ogłoszeniu
+postępowania zakupowego.
+81 Dz. U. z 2023 r. poz. 682, ze zm.; dalej: ustawa Prawo budowlane.
+
+
+                                                  20
+Okresową kontrolę pięcioletnią 12 czerwca 2023 r. wraz z Kierownikiem Referatu
+Inwestycji i Remontów przeprowadziła osoba pełniąca funkcję kierownika tej komórki
+organizacyjnej do 31 grudnia 2022 r., która od 1 stycznia 2023 r. nie była już
+zatrudniona w Urzędzie. Kierownik Referatu Inwestycji i Remontów zeznał: (…)
+Kontrole budowlane są przeprowadzane przez osoby posiadające wymagane
+uprawnienia w danej specjalności. Ja mam uprawnienia ogólnobudowlane
+w specjalności konstrukcyjno-budowlanej i w tym zakresie brałem udział
+w przeprowadzeniu pięcioletniej kontroli budowlanej sieci kanalizacji deszczowej od
+ul. Lotników przez ul. Główną do rzeki Mała Ina w Stargardzie. Pani (…,) która była
+wieloletnim pracownikiem Urzędu z dużym doświadczeniem w zakresie sieci
+kanalizacji deszczowej, uczestniczyła w tej kontroli w ramach pomocy przy tej
+inwestycji, gdyż miała najlepszą wiedzę o jej realizacji i w ramach pomocy mi we
+wdrożeniu w obowiązki kierownika referatu inwestycji i remontów (…) Nie była w tym
+zakresie zawierana z Panią (…) umowa cywilnoprawna.
+G.CH. w zeznaniach potwierdziła, że przeprowadziła ww. kontrolę oraz kontrolę
+roczną sieci kanalizacji deszczowej w 2023 r. Zeznała: (…) znałam tę substancję
+budowlaną i posiadałam uprawnienia budowlane. Odchodząc z Urzędu wiedziałam,
+że osoba obejmująca moje miejsce pracy nie posiada jeszcze uprawnień. Przy
+pożegnaniu zadeklarowałam, że w 2023 r. wykonam jeszcze te przeglądy, pomimo
+zakończenia pracy w Urzędzie. To była moja dobra wola. Przeglądy wykonałam
+w ramach dobrej współpracy. Przeprowadzenie ich nie stanowiło dla mnie dużego
+obciążenia.
+                                         (akta kontroli str. 926-928, 930, 1647-1650)
+W sprawie zabezpieczenia interesów Miasta przy wykonywaniu prac przez byłego
+pracownika Urzędu Dyrektor MI wyjaśniła, że osoba ta posiada uprawnienia
+budowlane, które wiążą się z prawami i obowiązkami wynikającymi z ich przyznania,
+które zostały opisane w ustawie z dnia 15 grudnia 2000 r. o samorządach
+zawodowych architektów oraz inżynierów budownictwa82. W myśl art. 41 pkt 1 i 2 tej
+ustawy, członek izby jest obowiązany przestrzegać przy wykonywaniu czynności
+zawodowych obowiązujących przepisów oraz zasad wiedzy technicznej
+i przestrzegać zasad etyki zawodowej. Osoba ta była zrzeszona w samorządzie
+zawodowym i pełniła zawód zaufania publicznego. Powyższe okoliczności pozwoliły
+stwierdzić, że interes Miasta został zabezpieczony w sposób rzetelny i prawidłowy.
+                                                         (akta kontroli str. 960-961)
+Kontrole, o których mowa w art. 62 ust. 1 ustawy Prawo budowlane (z zastrzeżeniem
+ust. 5–6a), przeprowadzają osoby posiadające uprawnienia budowlane
+w odpowiedniej specjalności (art. 62 ust. 4). Oznacza to, że zobowiązany
+do zapewnienia przeprowadzenia kontroli podmiot określony w art. 61 ustawy Prawo
+budowlane, jeżeli nie dysponuje pracownikami posiadającymi takie uprawnienia
+w odpowiedniej specjalności83, którym może powierzyć wykonywanie kontroli
+w ramach stosunku pracy, powinien zawrzeć odpowiednią umowę cywilnoprawną
+z osobą posiadającą wymagane kwalifikacje zawodowe, określającą m.in. zakres
+zleconych prac i odpowiedzialności za ich należyte wykonanie oraz uprawniającą
+do wykonywania prac na sieciach i innych obiektach kanalizacji deszczowej będących
+jego własnością. Możliwe jest również rozważenie rozszerzenia zakresu prac
+związanych z utrzymaniem sieci kanalizacji deszczowej, powierzonych do realizacji
+Wodom Miejskim.
+                                            (akta kontroli str. 885-897, 916-924, 930)
+
+
+
+
+82 Dz. U. z 2023 r. poz. 551.
+83 W tym przypadku w specjalności instalacyjno-inżynieryjnej w zakresie sieci i instalacji sanitarnych.
+
+
+                                                        21
+                   W czasie kontroli NIK przedłożono siedem protokołów z okresowej kontroli rocznej
+                   stanu technicznego instalacji kanalizacji deszczowej na terenie Miasta84.
+                   We wszystkich protokołach wskazano, że stan techniczny kanalizacji deszczowej,
+                   separatorów ropopochodnych i zbiorników retencyjnych jest dobry i nie formułowano
+                   zaleceń do realizacji. W protokołach dotyczących kontroli przeprowadzonych w latach
+                   2021-2023, tj. po wejściu w życie art. 62a ustawy Prawo budowlane nie określono
+                   kontrolowanych obiektów budowlanych w sposób umożliwiający ich identyfikację,
+                   co opisano w sekcji Stwierdzone nieprawidłowości.
+                                                        (akta kontroli str. 898-924, 937-956, 1646-1650)
+                   Nie dokonano aktualizacji ewidencji środków trwałych prowadzonej w Urzędzie
+                   w zakresie sprzedanych wraz z gruntem lub przebudowanych obiektów
+                   kanalizacyjnych. Zagadnienie to opisano w sekcji Stwierdzone nieprawidłowości.
+                                     (akta kontroli str. 865-867, 935-936, 1526-1535-1573, 1652-1658)
+                   Czynności związane z utrzymaniem urządzeń wodnych oraz wykonywanie badań
+                   wód opadowych Miasto powierzało Spółce w umowach opisanych w punkcie 1
+                   niniejszego wystąpienia. Dyrektor MI wyjaśniła, że: Spółka (…) wykonywała badania
+                   w zakresie zawiesiny ogólnej i substancji ropopochodnych przy wskazanych
+                   odbiornikach oraz czyszczenie i bieżącą konserwację sieci kanalizacji deszczowej,
+                   zgodnie ze wskazaniami w umowach na obsługę tej sieci. Czynności te wynikały
+                   z zobowiązań udzielonych Gminie Miasto Stargard w pozwoleniach wodnoprawnych.
+                   Kopie pozwoleń wodnoprawnych WI przekazywał Spółce (…) drogą elektroniczną lub
+                   osobiście. Skany decyzji w latach 2016-2018 zostały przesłane (…) drogą
+                   elektroniczną. Spółka miała przeprowadzać raz do roku analizy wód opadowych lub
+                   roztopowych w zakresie zawiesiny ogólnej i substancji ropopochodnych, zgodnie
+                   z wytycznymi wskazanymi w pozwoleniach wodnoprawnych (…). Wyniki badań były
+                   przesyłane drogą elektroniczną lub dostarczane osobiście do Urzędu (…) w roku 2023
+                   Spółka (…) przekazała wyniki badań wód opadowych lub roztopowych, w których było
+                   przekroczenie parametru zawiesiny ogólnej w pobranych próbkach. Zostało zalecone
+                   Spółce czyszczenie separatorów na sieci kanalizacji deszczowej oraz ponowne
+                   przeprowadzenie badań wód opadowych. Powtórne badania wykazały spełnienie
+                   warunku wartości zanieczyszczeń w odprowadzanych wodach (…).
+                                                                          (akta kontroli str. 1711-1712)
+     Stwierdzone   W działalności kontrolowanej jednostki w przedstawionym wyżej zakresie stwierdzono
+nieprawidłowości   następujące nieprawidłowości:
+                   1. Prowadzona w WGKiOŚ w latach 2021-2023 ewidencja zbiorników
+                   bezodpływowych i przydomowych oczyszczalni ścieków nie zawierała kompletnych
+                   i aktualnych danych. W Urzędzie nie prowadzono bieżącej analizy oraz nie
+                   weryfikowano posiadanych informacji, co mogło mieć wpływ na rzetelność tej
+                   ewidencji.
+                   Zgodnie z art. 3 ust. 3 pkt 1-2 ucpg, gminy zobowiązane są do prowadzenia ewidencji
+                   zbiorników bezodpływowych i przydomowych oczyszczalni ścieków w celu kontroli
+                   częstotliwości ich opróżniania oraz kontroli częstotliwości i sposobu pozbywania się
+                   komunalnych osadów ściekowych. Według art. 3 ust. 3 pkt 4 ww. ustawy, który wszedł
+                   w życie 1 stycznia 2023 r. 85 , gminy zobowiązane zostały do prowadzenia ewidencji,
+                   w formie umożliwiającej przekazywanie informacji w postaci elektronicznej aktualnych
+                   informacji wskazanych w ust. 5 tego artykułu, tj. m.in. o liczbie zbiorników
+                   bezodpływowych i przydomowych oczyszczalni ścieków na terenie gmin.
+
+                   84 Z 29 maja 2017 r., 28 maja 2018 r., 27 maja 2019 r., 25 maja 2020 r., 25 maja 2021 r., 24 maja 2022 r. oraz
+
+                   24 maja 2023 r. Kontrole przeprowadziła osoba posiadająca uprawnienia budowlane wymaganej specjalności.
+                   Artykuł 62 ust. 2 pkt 2 lit. b ustawy Prawo budowlane zwalnia z obowiązku wykonywania kontroli, o której mowa
+                   w art. 62 ust. 1 pkt 1 lit. a (kontrole coroczne) właścicieli i zarządców obiektów budowlanych wymienionych
+                   w art. 29 ust. 1 i ust. 2, m.in. sieci kanalizacyjnych, pomimo tego kontrole zostały przeprowadzone.
+                   85 Dodany przez art. 2 pkt 2 lit. a ustawy z dnia 7 lipca 2022 r. o zmianie ustawy - Prawo wodne oraz niektórych
+
+                   innych ustaw (Dz. U. poz. 1549, ze zm.), dalej: ustawa z dnia 7 lipca 2022 r. o zmianie ustawy - Prawo wodne.
+                                                                         22
+W ewidencji prowadzonej przez WGKiOŚ w latach 2021-2023 ujęte były 54 zbiorniki
+bezodpływowe oraz osiem przydomowych oczyszczalni ścieków, natomiast według
+informacji otrzymanych w trakcie kontroli NIK od Wód Miejskich86 liczba zbiorników
+bezodpływowych lub przydomowych oczyszczalni ścieków z terenu Miasta, z których
+przyjęto nieczystości ciekłe do punktu zlewnego wynosiła: 108 w 2021 r., 183
+w 2022 r. i 133 w 2023 r. Ponadto wg ww. informacji 16 nieruchomości położonych
+przy ulicach: Dalekiej (1), Juliana Ursyna Niemcewicza (2), Nowowiejskiej (6),
+Marszałka Józefa Piłsudskiego (1), Władysława Reymonta (2), Spółdzielczej (1), Jana
+Śniadeckiego (2) oraz Wiejskiej (1), pomimo że zostały podłączone do kanalizacji
+sanitarnej, nadal znajdowały się w ewidencji zbiorników bezodpływowych
+i przydomowych oczyszczalni ścieków Urzędu.
+W latach 2021-2023 w ww. ewidencji nie wykazano ponadto bezodpływowego
+zbiornika na nieczystości ciekłe na nowozabudowanej nieruchomości przy
+ul. Morskiej.
+Do aktualizacji prowadzonej ewidencji nie wykorzystano danych zawartych
+w kwartalnych sprawozdaniach przekazywanych przez podmioty posiadające
+zezwolenia na opróżnianie zbiorników bezodpływowych i transport nieczystości
+ciekłych. Analiza sprawozdań za IV kwartał 2023 r. wykazała że w ewidencji nie ujęto
+ośmiu zbiorników bezodpływowych zlokalizowanych przy ulicach: Morskiej (3);
+Podleśnej (1); Zakole (2); Sikorskiego (1)87; Klonowej (1).
+          (akta kontroli str. 822-826, 1138-1152, 1414-1486, 1921-1925, 2035-2051)
+Dyrektor WGKiOŚ wyjaśnił, że sprawozdania nie były poddawane szczegółowej
+weryfikacji. Oceniane były przez pracownika w zakresie: terminu ich złożenia
+i ewentualnych braków formalnych. Część wskazanych przez przedsiębiorców
+adresów nieruchomości została uwzględniona w ewidencji zaktualizowanej 6 marca
+2024 r. Pozostałe adresy nieruchomości w ewidencji nadal wymagają weryfikacji
+i aktualizacji, ponieważ jak wykazały przeprowadzone analizy dane podawane przez
+przedsiębiorców, informacje uzyskiwane od właścicieli nieruchomości, dane Spółki
+oraz będące w dyspozycji Urzędu nie są spójne m.in. ze względu na pomyłki
+w adresach, czy podawanie lokalizacji przenośnych toalet typu Toi-Toi. Ujednoliceniu
+danych nie sprzyjają również: brak zintegrowanego systemu wymiany danych
+pomiędzy urzędami gmin, Spółką zarządzającą stacją zlewną i przedsiębiorstwami
+asenizacyjnymi; brak przepisów ustawowych normujących i ujednolicających
+formularze danych sprawozdawczych przedsiębiorstw oraz regulujących zasady
+przekazywania danych ze stacji zlewnej do gmin, a także ograniczone możliwości
+organizacyjne, w zakresie zebrania danych od różnych podmiotów, ich weryfikacja,
+porównanie i wprowadzenie do danej ewidencji. W miarę możliwości organizacyjnych
+(rotacja pracowników i działania bieżące Urzędu) pozostałe adresy zostaną
+zweryfikowane podczas zaplanowanych kontroli, a nieruchomość przy ul. Klonowej,
+jak i inne brakujące zostaną wprowadzone do ewidencji zbiorników bezodpływowych
+i przydomowych oczyszczalni ścieków w momencie jej aktualizacji.
+                                                      (akta kontroli str. 1717-1719)
+Zastępca Dyrektora WGKiOŚ w sprawie sposobu zapewniania w latach 2021-2023
+kompletności ewidencji zbiorników bezodpływowych i przydomowych oczyszczalni
+ścieków wyjaśniła: na stronie internetowej, BIP i w aktualnościach proszono
+mieszkańców o składanie kart informacyjnych na temat sposobu
+zagospodarowywania ścieków komunalnych. Wykaz poddawany jest weryfikacji przy
+okazji realizacji Przeglądów Aglomeracji, na podstawie przyjmowanych Kart
+Informacyjnych od mieszkańców czy uzyskiwanych sprawozdań od podmiotów
+opróżniających nieczystości ciekłe czy osady z przydomowych oczyszczalni.
+Opracowaliśmy karty weryfikacyjne „przypisane” danej osobie fizycznej wpisanej
+do ewidencji. (…) Przyjęta forma informacji sprawdziła się przy innych w ten sposób
+
+86 Na podstawie art. 29 ust. 1 pkt 2 lit f. ustawy o NIK.
+87 Zbiorniki przy ul. Morskiej; Podleśnej; Zakole i Sikorskiego ujęto w ewidencji zaktualizowanej 6 marca 2024 r.
+
+w trakcie kontroli NIK.
+                                                            23
+przekazywanych informacjach w latach 2020-2023, w tym np. przekazywanych
+mieszkańcom formularzach wypełnienia zgłoszeń do CEEB, czy skorzystania
+z Programu Antysmogowego. Panująca w latach 2020-2021 Pandemia nie sprzyjała
+bezpośrednim kontaktom. Szereg informacji przekazywanych było właśnie w wersji
+elektronicznej. (…) Dodatkowo papierowe wersje dokumentów do wypełnienia są
+stale dostępne w Punkcie Obsługi Klienta. (…).
+                                           (akta kontroli str. 1008-1012, 1369-1371)
+W ewidencji zaktualizowanej 6 marca 2024 r. w trakcie kontroli NIK ujęte były 54
+zbiorniki bezodpływowe i osiem przydomowych oczyszczalni ścieków88.
+                                             (akta kontroli str. 1376, 1380, 1486)
+
+W ocenie NIK przyjęty w latach 2021-2023 sposób aktualizacji ewidencji w oparciu
+o zgłoszenia mieszkańców, co wykazały przeprowadzone badania, nie był skuteczny.
+Jednocześnie należy zwrócić uwagę, że uwzględniając cel prowadzenia
+ww. ewidencji, którym jest m.in. kontrola częstotliwości ich opróżniania oraz kontrola
+częstotliwości i sposobu pozbywania się komunalnych osadów ściekowych, istnieje
+ryzyko, że mieszkańcy oraz inne podmioty nie będą zainteresowane informowaniem
+Miasta o posiadanych zbiornikach bezodpływowych lub przydomowych
+oczyszczalniach ścieków. Natomiast ostatni przegląd aglomeracji zakończono
+13 kwietnia 2021 r. Niekompletna ewidencja skutkowała także brakiem możliwości
+rzetelnej realizacji celu, dla jakiego winna być prowadzona, tj. objęcia kontrolami
+wszystkich zbiorników bezodpływowych i przydomowych oczyszczalni ścieków na
+terenie Miasta.
+W celu weryfikacji i aktualizacji ewidencji zbiorników bezodpływowych
+i przydomowych oczyszczalni ścieków nie wykorzystywano także w pełni
+posiadanych informacji. Pismem z 9 lipca 2021 r. znak: TK-II.7021.65.2021.3
+w odpowiedzi na zapytanie H.B dot. możliwości podłączenia do sieci kanalizacyjnej
+oraz gazowej nieruchomości położonej przy ul. Na Grobli w Stargardzie, UM
+poinformował, iż Wody Miejskie nie przewidują w latach 2022-2024 rozbudowy sieci
+kanalizacji sanitarnej w ulicy Na Grobli, pouczając jednocześnie o treści art. 5 ust. 1
+pkt 2 ucpg. Jednocześnie budynek przy ul. Grobli nie widniał w latach 2021-2023
+w ewidencji zbiorników bezodpływowych i przydomowych oczyszczalni ścieków.
+Według wyjaśnień Zastępcy Dyrektora WGKiOŚ właściciel nieruchomości został
+wezwany do przedłożenia dokumentów w zakresie umowy oraz potwierdzenia
+opróżniania zbiornika 30 stycznia 2024 r.
+                                     (akta kontroli str. 1122, 1138-1152, 1376, 1380)
+W ewidencji przydomowych oczyszczalni ścieków prowadzonej w Urzędzie nie były
+ujęte dwie przydomowe oczyszczalnie ścieków przy ul. Grunwaldzkiej
+i ul. Władysława Reymonta, wskazane w informacji uzyskanej przez NIK89 ze Spółki,
+na podstawie oświadczeń firm asenizacyjnych, a pod adresem ul. Szosa Maszewska
+w ewidencji Urzędu widniał zbiornik bezodpływowy.
+                                            (akta kontroli str. 858-861, 1141, 1486)
+Zastępca Dyrektora WGKiOŚ wyjaśniając rozbieżności pomiędzy liczbą ujętych
+w prowadzonej w UM w latach 2021-2023 ewidencji zbiorników bezodpływowych oraz
+przydomowych oczyszczalni ścieków a przekazanymi NIK przez Wody Miejskie
+w toku kontroli danymi o zbiornikach bezodpływowych i przydomowych
+oczyszczalniach z terenu Miasta, z których odebrano ścieki na stacji zlewnej
+wskazała: (…) UM nie dysponował danymi, jakie otrzymał NIK od Wód Miejskich,
+natomiast dane wpisywane przez podmioty w sprawozdaniach były niepełne lub
+błędne. Od grudnia 2023 r. rozpoczęto procedury kontrolne i weryfikacji danych.
+
+88 Po usunięciu w ramach      aktualizacji części danych i dodaniu nowych, nie uległa zmianie ogółem liczba
+zbiorników bezodpływowych i przydomowych oczyszczalni ścieków ujęta w ewidencji.
+89 Na podstawie art. 29 ust. 1 pkt 2 lit f ustawy o NIK.
+
+
+                                                    24
+Wyniki weryfikacji lub ewentualnej kontroli służą do aktualizacji danych prowadzonych
+przez Miasto (wykaz prowadzony przez WGKiOŚ). (…) Nieruchomość przy
+ul. Podmiejskiej (…) została omyłkowo pominięta. (…) zostanie wprowadzona
+do ewidencji zbiorników bezodpływowych i przydomowych oczyszczalni ścieków
+w momencie jej aktualizacji.
+                                              (akta kontroli str. 1924-1925, 1957-1959)
+Dyrektor WGKiOŚ wyjaśnił: Analiza sprawozdań czy ewidencji będących
+w posiadaniu UM oraz otrzymanych od Spółki (…) (np. dot. nieruchomości
+podłączonych do sieci wodnej) dokonana na potrzeby opracowania wyjaśnień
+do kontroli NIK realizowanej od stycznia br. pokazuje, że najlepszymi danymi
+i najbardziej wiarygodnymi na dzień dzisiejszy to są dane pozyskane od samych
+mieszkańców. Punktem wyjścia są posiadane ewidencje, jednak wymagają one
+szczegółowej weryfikacji (…). Na terenie oczyszczalni (…) w celu przyjmowania
+nieczystości ciekłych z nieruchomości nieskanalizowanych została uruchomiona
+automatyczna stacja zlewna z rejestracją dostawców i komputerowym pomiarem
+danych. Stacja umożliwia określenie m.in. identyfikacji podmiotu dokonującego
+zrzutu, ilości i parametrów dostarczanych ścieków oraz z jakiej nieruchomości.
+Prowadzona przez Wody Miejskie ewidencja powstała na podstawie wydruku
+z danych wprowadzanych przez przedsiębiorców dokonujących zrzutu. Jak wykazano
+wyżej zdarzają się tu błędy. Na podstawie prowadzonych od końca 2023 r. kontroli,
+następuje weryfikacja i bieżąca aktualizacja ewidencji bezodpływowych zbiorników
+czy przydomowych oczyszczalni ścieków. (…) Wymienione adresy nieruchomości nie
+widnieją w sprawozdaniach przedsiębiorców odbierających ścieki (…) Wobec
+powyższego niezwłocznie zaktualizowano plan kontroli i 29 marca 2024 r., wezwano
+właścicieli wskazanych nieruchomości do przedłożenia w UM stosownych
+dokumentów i informacji w sprawie. Tak więc przedmiotowe adresy są w trakcie
+weryfikacji.
+                                                (akta kontroli str. 1809-1810, 1813)
+NIK wskazuje, iż zadaniem Miasta jest prowadzenie aktualnej i pełnej ewidencji oraz
+jej weryfikacja. Czynności te powinny mieć charakter ciągły i bieżący oraz być
+prowadzone z wykorzystaniem wszystkich dostępnych źródeł informacji, a nie
+ograniczać się do okresowych przeglądów aglomeracji lub działań kontrolnych, które
+powinny być prowadzone co najmniej raz na dwa lata.
+2. Miasto nie prowadziło w formie umożliwiającej przekazywanie informacji w postaci
+elektronicznej, ewidencji aktualnych informacji, o których mowa w art. 3 ust. 3 pkt 4
+z związku z ust. 5 pkt 5, 7 i 9 ucpg, pomimo takiego obowiązku określonego w art. 3
+ust. 3 pkt 4 ucpg, który wszedł w życie 1 stycznia 2023 r.90
+W Urzędzie w ww. formie nie gromadzono:
+a) informacji wskazanych w art. 3 ust. 5 pkt 5 ucpg tj. dot. częstotliwości opróżniania
+zbiornika bezodpływowego lub osadnika w instalacji przydomowej oczyszczalni
+ścieków, o której mowa w art. 4 ust. 2 pkt 3 tej ustawy.
+Karty informacyjne składane przez właścicieli nieruchomości z terenu Miasta1,
+do WGKIOŚ miały ograniczony walor informacyjny. W trakcie kontroli NIK
+przedłożono jedynie osiem takich kart, w tym dwie dot. przydomowych oczyszczalni
+ścieków i sześć dot. zbiorników bezodpływowych. Urząd nie dysponował
+informacjami dotyczącymi częstotliwości opróżniania zbiornika bezodpływowego lub
+osadnika w instalacji przydomowej oczyszczalni ścieków dla pozostałych 54
+zbiorników i oczyszczalni1 (w tym sześciu osadników oczyszczalni przydomowych i 48
+zbiorników). Stworzona 20 marca 2024 r. ewidencja zawierała jedynie szczątkowe
+dane (dla siedmiu podmiotów) dot. częstotliwości opróżniania zbiornika
+bezodpływowego lub osadnika w instalacji przydomowej oczyszczalni ścieków.
+b) danych wskazanych w art. 3 ust. 3 pkt 4 w zw. z art. 3 ust. 5 pkt 7 ucpg dotyczących
+ilości wody pobranej przez użytkowników niepodłączonych do sieci kanalizacyjnej.
+
+90 Dodany przez art. 2 pkt 2 lit. a ustawy z dnia 7 lipca 2022 r. o zmianie ustawy - Prawo wodne.
+
+
+                                                       25
+Ewidencji takiej nie przedstawiono w trakcie oględzin przeprowadzonych 19 lutego
+2024 r.
+Ponadto wykaz obejmujący liczbę przeprowadzonych kontroli dokumentów, o których
+mowa w art. 6 ust. 5a ucpg, wymagany przepisami art. 3 ust. 3 pkt 4 w zw. z art. 3
+ust. 5 pkt 9 ucpg sporządzono dopiero w czasie kontroli NIK, nie zawierał on jednak
+informacji o wynikach tych kontroli.
+(akta kontroli str. 1009, 1138-1152, 1370, 1375-1413, 1832-1833, 1838, 1845, 1921-
+                                                                              1923)
+Wyjaśniając przyczyny braku przyjęcia formy ewidencji wskazanej przez
+ustawodawcę i zastąpienie jej gromadzeniem opisanych wyżej kart, braku zebrania
+pełnych danych, oraz czy zebrane dane były poddawane weryfikacji przez UM,
+Dyrektor WGKiOŚ podał: Pierwsze karty informacyjne zostały wypełnione w 2024 r.
+Na podstawie zapisów ustawy została stworzona 20 marca 2024 r. przedmiotowa
+ewidencja. Będzie ona przedmiotem weryfikacji i uzupełnień na podstawie
+otrzymywanych danych, w tym prowadzonych kontroli. Dane z ewidencji
+wykorzystane zostaną do przedmiotowego sprawozdania (termin jego wysłania
+do 30 kwietnia br.). Tak więc uzupełnienie danych i stworzenie ewidencji nastąpi
+niezwłocznie po zebraniu danych od pozostałych właścicieli przydomowych
+oczyszczalni i zbiorników bezodpływowych. Ze względów organizacyjnych
+i konieczności załatwiania terminowych spraw będących w kompetencjach Wydziału
+nie było możliwości organizacyjnych sporządzenia przedmiotowej ewidencji
+niezwłocznie po uzupełnieniu danych w kartach informacyjnych.
+                                                (akta kontroli str. 1832-1833, 1838)
+Dyrektor WGKiOŚ odnosząc się91 do kwestii braku przedstawienia w toku oględzin
+19 lutego 2024 r. ewidencji zawierającej dane: o ilości wody pobranej przez
+użytkowników niepodłączonych do sieci kanalizacyjnej oraz liczbę przeprowadzonych
+kontroli dokumentów, o których mowa w art. 6 ust. 5a ucpg wraz z wynikami tych
+kontroli wyjaśnił, iż dane dot. ilości wody uzyskiwane są od Wód Miejskich na wniosek
+Gminy. Zgodnie z art. 3 ust. 5 ucpg dane za 2023 r. zostaną pozyskane i wykazane
+w sprawozdaniu w terminie do 30 kwietnia 2024 r. Ponadto Dyrektor przedłożył wraz
+z wyjaśnieniami wykaz obejmujący liczbę przeprowadzonych kontroli dokumentów,
+o których mowa w art. 6 ust. 5a ucpg, nie zawierał on jednak informacji o wynikach
+tych kontroli.
+                                                    (akta kontroli str. 1375-1378, 1393)
+
+NIK wskazuje, że art. 3 ust. 3 pkt 4 ucpg wszedł w życie 1 stycznia 2023 r. i termin
+dotyczący obowiązku prowadzenia ewidencji zawierających aktualne informacje,
+o których mowa w art. 3 ust. 5 tej ustawy nie jest zbieżny z terminem na złożenie
+sprawozdania, o którym mowa w art. 3 ust. 6 ucpg.
+W odpowiedzi na wezwanie NIK do przedłożenia protokołów z kontroli lub innej
+dokumentacji potwierdzającej wyniki kontroli w zakresie opróżniania zbiorników
+bezodpływowych i przydomowych oczyszczalni ścieków, Zastępca Dyrektora
+WGKiOŚ wyjaśniła92: nie ma jeszcze końcowych protokołów kontroli będących
+wynikiem wezwań opracowanych w grudniu 2023 r. Ze względów organizacyjnych,
+w tym fakt, że miesiąc styczeń jest miesiącem sprawozdań, rozliczeń itp. nie było
+możliwe odłożenie spraw wymagających terminowości czy zobowiązań finansowych
+na później. Aktualnie zatrudniona osoba na stanowisku dot. zagadnień wodnych – nie
+ma długiego stażu, a w szczególności w Urzędzie Miejskim. Bazuje na doświadczeniu
+z poprzedniego miejsca zatrudnienia i wymaga więcej czasu na pozyskiwanie
+dokumentów, zapoznanie się z zagadnieniami, których sama nie stworzyła. Trwają
+wyjaśnienia telefoniczne. Wysłane zostały dalsze wezwania do przedłożenia
+
+
+91 Pismo z 11 marca 2024 r.
+92 Pismo z 8 lutego 2024 r. Żądanych dokumentów nie przedstawiono do zakończenia czynności kontrolnych.
+
+
+                                                   26
+dokumentów oraz w sytuacjach wątpliwych poproszona Straż Miejska o kontrolę
+w terenie. Nie ma jeszcze wyników, bo przedmiotowa kontrola jest w toku.
+                                                    (akta kontroli str. 1009, 1370)
+3. W latach 2021-2023 (do grudnia) nie był sprawowany rzetelny i skuteczny nadzór
+nad opróżnianiem zbiorników bezodpływowych oraz osadników w instalacjach
+przydomowych oczyszczalni ścieków.
+Według art. 9u ust.1 ucpg prezydent sprawuje kontrolę przestrzegania i stosowania
+przepisów tej ustawy. Zgodnie z art. 5 ust. 6 ww. ustawy prezydent sprawuje nadzór
+nad m.in. gromadzeniem nieczystości ciekłych w zbiornikach bezodpływowych lub
+osadnikach w instalacjach przydomowych oczyszczalni ścieków (art. 5 ust. 1 pkt 3a)
+oraz pozbywaniem się zebranych na terenie nieruchomości odpadów komunalnych
+oraz nieczystości ciekłych w sposób zgodny z przepisami ustawy i przepisami
+odrębnymi (art. 5 ust. 1 pkt 3b). W myśl przepisów art. 6 ust. 5 aa93 ucpg prezydent
+jest obowiązany prowadzić kontrolę, o której mowa w ust. 5a tej ustawy94, co najmniej
+raz na dwa lata zgodnie z planem kontroli, określającym co najmniej wykaz
+podmiotów podlegających kontroli w okresie kontrolowanym. Zgodnie z treścią art. 6
+ust. 6 ucpg, gmina jest obowiązana zorganizować odbieranie odpadów komunalnych
+oraz opróżnianie zbiorników bezodpływowych i osadników w instalacjach
+przydomowych oczyszczalni ścieków w przypadku właścicieli nieruchomości, którzy
+nie zawarli umów, o których mowa w ust. 1.
+Stwierdzono, że w latach 2021-2023 nie prowadzono kontroli w zakresie
+funkcjonowania przydomowych oczyszczalni ścieków oraz utrzymania i opróżniania
+zbiorników bezodpływowych. Dopiero w grudniu 2023 r. Miasto opracowało plan
+kontroli opróżniania zbiorników bezodpływowych oraz osadników w instalacjach
+przydomowych oczyszczalni ścieków, o którym mowa art. 6 ust. 5aa ucpg, Plan ten
+26 stycznia 2024 r został zaktualizowany
+Rozpoczęcie czynności kontrolnych dopiero w grudniu 2023 r. przyczyniło się
+do nieorganizowania przez Miasto w latach 2021-2023 opróżniania zbiorników
+bezodpływowych i osadników w instalacjach przydomowych oczyszczalni ścieków
+w przypadku właścicieli nieruchomości, którzy nie zawarli stosownych umów i nie
+udokumentowali opróżniania szamb i osadników przydomowych oczyszczalni
+ścieków. Dokumentacja z części przeprowadzonych kontroli wykazała, że właściciele
+nieruchomości nie realizowali obowiązków dotyczących zawarcia umów
+na opróżnianie zbiorników bezodpływowych oraz ich należytego utrzymania
+i opróżniania.
+          (akta kontroli str. 78-82, 568-570, 1393-1413, 1832-1836, 1838, 1841-1843)
+Dyrektor WGKiOŚ w przedmiocie nadzoru nad funkcjonowaniem przydomowych
+oczyszczalni ścieków oraz utrzymaniem i opróżnianiem zbiorników bezodpływowych
+wyjaśnił: W latach 2021-2023 brak było interwencji w zakresie niekontrolowanego
+pozbywania się nieczystości ciekłych gromadzonych w zbiornikach bezodpływowych.
+W przypadku, gdyby wystąpiły interwencje związane z zapobieganiem
+niekontrolowanemu pozbywaniu się nieczystości ciekłych gromadzonych
+w zbiornikach bezodpływowych, w pierwszej kolejności kierowani są funkcjonariusze
+Straży Miejskiej (…) W kontrolowanym okresie Straż Miejska nie odnotowała
+interwencji dot. nieruchomości i nie podejmowała kontroli w tym zakresie. W 2023
+roku WGKiOŚ rozpoczął kontrolę nieruchomości w zakresie opróżniania zbiorników
+bezodpływowych i przydomowych oczyszczalni ścieków. Kontrola jest w trakcie
+realizacji. W przypadku ujawnienia nieprawidłowości zostanie przeprowadzona
+kontrola przy udziale Straży Miejskiej wobec właściciela danej nieruchomości. Wyniki
+kontroli będą podstawą do wszczęcia postępowania administracyjnego. (…)
+
+93 Wejście w życie 9 sierpnia 2022 r.
+94 Prezydent kontroluje: 1) posiadanie umów, o których mowa w ust. 1; 2) zgodność postanowień umów, o których
+
+mowa w ust. 1 pkt 2, z wymaganiami określonymi w regulaminie oraz ze sposobem określonym w przepisach
+wydanych na podstawie art. 4a ust. 1; 3) dowody uiszczania opłat za usługi, o których mowa w ust. 1, lub inny
+sposób udokumentowania wykonania obowiązków, o których mowa w art. 5 ust. 1 pkt 3b.
+                                                     27
+Dodatkowo kilkukrotnie informowano mieszkańców w aktualnościach na stronie
+miasta BIP i innych źródłach o prowadzonej weryfikacji kontrolnej z prośbą o złożenie
+karty informacyjnej w ramach funkcjonowania i opróżniania przydomowych
+oczyszczalni i zbiorników bezodpływowych. (…)
+                                        (akta kontroli str. 78-82, 215-216, 568-570)
+W latach 2021-2023 Urząd tylko trzykrotnie (1 grudnia 2022 r., 6 marca 2023 r. oraz
+12 grudnia 2023 r.) poinformował mieszkańców za pomocą kanałów internetowych
+(np. w aktualnościach na stronie internetowej Miasta BIP) o prowadzonej weryfikacji
+kontrolnej i konieczności złożenia w związku z tym karty informacyjnej dotyczącej
+funkcjonowania i opróżniania przydomowych oczyszczalni i zbiorników
+bezodpływowych. Za okres od stycznia 2021 r. do 30 listopada 2022 r. nie
+przedstawiono żadnej dokumentacji potwierdzającej prowadzenie takich działań.
+                                                         (akta kontroli str. 215-222)
+Zastępca Dyrektora WGKiOŚ wyjaśniła: Prowadzone były wstępne założenia
+organizacyjne do kontroli, jednak od 2022 r. Następnie zmiany personalne na tym
+stanowisku oraz inne obowiązki uniemożliwiły ich kontynuację. Mając jednak
+na względzie obowiązek sprawozdawczy Miasta do końca kwietnia 2024 r. – pierwsze
+działania kontrolne rozpoczęto w grudniu 2023 r. Kontrole są w toku. Co najmniej
+do końca maja 2024 r. nie zakładamy zmian personalnych na stanowisku z zakresu
+gospodarki wodnej – co gwarantuje płynność i systematyczność kontroli, bez względu
+na ostateczną jego formę, czy korespondencyjną (jak to zostało rozpoczęte), czy
+indywidualną (zapraszając dane osoby do urzędu), czy poprzez wsparcie w postaci
+spotkań. (…). Ponadto wskazała, iż nie ma jeszcze końcowych protokołów kontroli
+będących wynikiem wezwań opracowanych w grudniu 2023 r. Trwają wyjaśnienia
+telefoniczne. Wysłane zostały dalsze wezwania do przedłożenia dokumentów oraz
+w sytuacjach wątpliwych poproszona jest Straż Miejska o kontrolę w terenie. Nie ma
+jeszcze ostatecznych wyników, bo kontrole są w toku.
+                                                      (akta kontroli str. 1369-1371)
+Ustalenia kontroli przeprowadzonych w I kwartale 2024 r. świadczą o potrzebie
+wzmocnienia i intensyfikacji nadzoru nad funkcjonowaniem przydomowych
+oczyszczalni ścieków oraz utrzymaniem i opróżnianiem zbiorników bezodpływowych.
+Analiza ośmiu zebranych przez WGKiOŚ kart informacyjnych95 wypełnionych przez
+mieszkańców nieruchomości położonych na terenie Miasta (w tym dwóch dot.
+przydomowych oczyszczalni ścieków i sześciu dot. zbiorników bezodpływowych)
+wykazała m.in., iż:
+ na skutek czynności kontrolnych ujawniono dwie przydomowe oczyszczalnie
+    ścieków (przy ul. Dębowej i Dalekiej96) oraz jeden zbiornik bezodpływowy (ul.
+    Dębowa), które nie były ujęte w ewidencji zbiorników bezodpływowych
+    i przydomowych oczyszczalni ścieków w latach 2021-2023 (zbiornik
+    bezodpływowy został ujęty dopiero w ewidencji zaktualizowanej 6 marca 2024 r.
+    chociaż w latach 2021-2023 odbiór nieczystości ciekłych z nieruchomości
+    wyposażonej w zbiornik przez firmę asenizacyjną miał miejsce - wg informacji
+    Wód Miejskich - osiem razy tj.: 4 listopada 2022 r., 23 grudnia 2022 r., 6 kwietnia
+    2023 r., 1 czerwca 2023 r., 28 lipca 2023 r., 6 września 2023 r., 19 października
+    2023 r., 19 grudnia 2023 r.);
+ WGKiOŚ nie miał wiedzy97 co do sposobu pozbywania się ścieków przez jednego
+    z właścicieli nieruchomości położonej przy ul. Gdyńskiej, tj. przed podpisaniem
+    przez niego w 2024 r. umowy z Wodami Miejskimi na ich odprowadzanie. Z karty
+    weryfikacji Nr 10/2024 wynikało, iż nieruchomość podłączona jest do sieci
+    kanalizacyjnej, a umowa na odprowadzanie ścieków została podpisana z Wodami
+    Miejskimi w 2024 r. Dyrektor WGKiOŚ wyjaśnił: Właściciel nieruchomości
+95 Przedłożonych NIK pismem z 11 marca 2024 r.
+96 Według informacji Wód Miejskich udzielonej w trybie art. 29 ustawy o NIK, nieruchomość dysponuje możliwością
+
+podłączenia do sieci kanalizacyjnej.
+97 Na 20 marca 2024 r., tj. dzień udzielenia wyjaśnień.
+
+
+                                                          28
+  poinformował, że od kilkunastu lat podłączony był do sieci kanalizacyjnej. Sprawa
+  weryfikowana jest w Spółce Wody Miejskie;
+ z protokołu kontroli98 nr z 6 lutego 2024 r. dot. nieruchomości przy ul. Drzymały
+  wynikało, iż nieruchomość ta od grudnia 2023 r. podłączona jest do sieci
+  kanalizacyjnej (formalności z tym związane są w toku). Wyjaśniając, dlaczego -
+  skoro na moment kontroli nie podpisano umowy na odprowadzanie ścieków - nie
+  ustalono w jaki sposób podmiot pozbywał się ścieków od grudnia 2023 r.
+  do 6 lutego 2024 r. oraz w jaki sposób czynił to przed przyłączeniem
+  nieruchomości do sieci, Dyrektor WGKiOŚ podał: Do dnia pisania wyjaśnień99 nie
+  ustalono w jaki sposób podmiot pozbywał się ścieków przed przyłączeniem
+  nieruchomości do sieci. (akta kontroli str. 1141-1143, 1378, 1381-1391, 1486,
+  1832-1836, 1842, 2035-2037, 2041, 2047)
+4. W Mieście nieskutecznie sprawowano nadzór nad realizacją przez właścicieli
+nieruchomości obowiązku podłączenia do kanalizacji sanitarnej.
+Zgodnie z art. 5 ust. 1 pkt 2 ucpg właściciele nieruchomości mają obowiązek
+przyłączenia nieruchomości do istniejącej sieci kanalizacyjnej. Nadzór nad realizacją
+obowiązku określonego w ust. 1 sprawuje prezydent (art. 5 ust. 6 ucpg). W przypadku
+stwierdzenia niewykonania ww. obowiązku prezydent, zgodnie z dyspozycją
+określoną w art. 5 ust. 7 ucpg powinien wydać decyzję nakazującą wykonanie tego
+obowiązku. W myśl przepisów art. 5 ust. 9 ucpg wykonywanie decyzji, o której mowa
+w ust. 7, podlega egzekucji w trybie przepisów ustawy z 17 czerwca 1966 r.
+o postępowaniu egzekucyjnym w administracji100. Według informacji przekazanych
+w trakcie kontroli przez Wody Miejskie w trybie art. 29 ust. 1 pkt 2 lit. f ustawy o NIK,
+właściciele 53 nieruchomości z terenu Miasta nie podłączyli się do wybudowanej sieci
+kanalizacji sanitarnej, pomimo istnienia technicznych możliwości takiego podłączenia.
+                                                         (akta kontroli str. 2119-2122)
+Dyrektor WGKiOŚ wyjaśnił: Nie stwierdzono przypadków niepodłączenia
+nieruchomości wyposażonej w zbiornik bezodpływowy do kanalizacji sanitarnej
+w omawianym okresie. Jeżeli zostaną stwierdzone takie przypadki, zostaną podjęte
+działania w celu zobowiązania właściciela nieruchomości do przyłączenia
+nieruchomości do sieci kanalizacyjnej. (…) Dla terenu Miasta w ok. 40%-50%
+obowiązują plany zagospodarowania przestrzennego, w których stosowane są zapisy
+nakazujące obowiązek podłączenia do sieci. Wynikają one m.in. z obowiązujących
+stref ochrony pośredniej i bezpośredniej wód. W sprawie skonkretyzowania na czym
+polegały działania podejmowane przez WGKiOŚ w latach 2021-2023 w celu
+weryfikacji obowiązku podłączenia nieruchomości do kanalizacji sanitarnej, a jeśli
+działań takich nie podejmowano – wyjaśnienie przyczyn, Zastępca Dyrektora
+WGKiOŚ wyjaśniła: (…) W przedmiotowym okresie zakres realizowanych zadań,
+zmiany personalne na stanowisku ds. wodnych, z jednoczesnym brakiem zgłoszeń
+był powodem braku dodatkowych działań, w tym w celu weryfikacji podłączenia
+nieruchomości do kanalizacji sanitarnej. (…)
+Dyrektor WGKiOŚ w sprawie nadzoru sprawowanego przez Prezydenta Miasta nad
+obowiązkiem podłączenia nieruchomości do kanalizacji sanitarnej określonym w art.
+5 ust. 1 pkt 2 ucpg wyjaśnił: Pozyskany z Wód Miejskich wykaz jest materiałem
+roboczym, niezbędnym do wykorzystania przy kolejnych planach kontroli właścicieli
+nieruchomości w zakresie sposobu pozbywania się nieczystości ciekłych. (…)
+Materiał roboczy nie został jeszcze w całości zweryfikowany, jest w trakcie. Wyniki
+weryfikacji lub ewentualnej kontroli służą do aktualizacji danych (…). W przypadku
+ujawnienia nieruchomości, dla których właściciel zobowiązany jest do przyłączenia
+nieruchomości do sieci kanalizacyjnej – zostaną podjęte stosowne działania.
+                                                   (akta kontroli str. 569, 1119, 1964)
+
+
+98 Realizowana przez Straż Miejską.
+99 Tj. 20 marca 2024 r.
+100 Dz. U. z 2023 r. poz. 2505, ze zm.
+
+
+                                           29
+NIK zwraca uwagę, iż czynności weryfikacyjne powinny być wykonywane na bieżąco
+w oparciu o dostępne zasoby informacyjne. Nadzór nad obowiązkiem podłączenia
+nieruchomości do kanalizacji sanitarnej jest odrębnym zadaniem i nie może być
+uzależniany wyłącznie od wyników prowadzonych obecnie lub w przyszłości kontroli
+w oparciu o plan, o którym mowa w art. 6 ust. 5aa ucpg. Brak działań na rzecz
+podłączenia nieruchomości do sieci kanalizacji sanitarnej wybudowanej przez Spółkę,
+wpływa na efektywność jej wykorzystania.
+5. Miasto nie udzieliło ZWIOŚ pisemnej odpowiedzi o podjętych działaniach
+w związku z otrzymaną informacją o wynikach kontroli przeprowadzonej przez WIOŚ
+w Spółce. O informację taką ZWIOŚ wystąpił na podstawie art. 16 ust. 1 ustawy
+o Inspekcji Ochrony Środowiska w piśmie z 28 lipca 2023 r. 101
+Udzielający wyjaśnień z upoważnienia Prezydenta Dyrektor WGKiOŚ stwierdził, że
+nie udzielono odpowiedzi, ponieważ nie stwierdzono, aby z obowiązujących
+przepisów albo udzielonego zezwolenia wynikały kompetencje Prezydenta
+do przeprowadzenia odrębnych kontroli wykraczających swoim zakresem poza
+kontrole jakie przeprowadzał WIOŚ. Także analizy sprawozdań do udzielonego
+zezwolenia na zbiorowe zaopatrzenie w wodę oraz zbiorowe odprowadzanie ścieków
+przez Prezydenta nie wykazywały takich potrzeb. Wyjaśnił także, że: Dodatkowo,
+analizując odstęp czasowy między wpływem do Urzędu (…) pisma WIOŚ (28 lipca
+2023 r.), a zorganizowanym na dzień 18 sierpnia 2023 r. spotkaniem z udziałem m.in.
+przedstawicieli WIOŚ w Szczecinie i Spółki (…) wszelkie zagadnienia i wątpliwości
+zawarte w piśmie WIOŚ zostały omówione na tym spotkaniu. W szczególności, na
+spotkaniu była możliwość podzielenia się wszystkimi informacjami i ustaleniami.
+Informacje te omówiono w trakcie prezentacji i dyskusji. W wyniku spotkania Wody
+Miejskie Stargard Sp. z o. o. udostępniły organom wykonaną ekspertyzę i prezentację.
+                                                          (akta kontroli str. 782-787)
+NIK nie może uwzględnić argumentacji wskazanej w złożonych wyjaśnieniach.
+Według art. 16 ust. 1 ustawy o Inspekcji Ochrony Środowiska organy tej inspekcji
+mogą zwrócić się do każdego organu administracji publicznej lub Policji z wnioskiem
+o udzielenie informacji lub udostępnienie dokumentów i danych związanych z ochroną
+środowiska, a w myśl art. 16 ust 2 tej ustawy organy, o których mowa w ust. 1 są
+obowiązane przekazać informacje, dokumenty i dane niezwłocznie, nie później jednak
+niż w terminie 14 dni od dnia złożenia wniosku. Ponadto informacja w tym samym
+trybie była już wcześniej udzielana ZWIOŚ pismem nr TK-II.7021.123.2022.5
+z 20 września 2022 r. w związku z informacją z 7 września 2022 r.102 o ustaleniach
+z przeprowadzonych oględzin w sprawie zanieczyszczenia rzeki Iny.
+                                                (akta kontroli str. 753-757, 759-762)
+Sprawozdania z realizacji KPOŚK za lata 2021-2023, przekazywane do PGW WP
+RZGW w Szczecinie zawierały niezgodne ze stanem faktycznym dane w zakresie
+niestosowania metod ograniczających zanieczyszczenia związane z przelewem wód
+burzowych.     Ponadto sprawozdania zawierały rozbieżne              informacje.
+W sprawozdaniach za lata 2021-2022 zapisano, że nie wykonywano monitoringu
+zrzutów z przelewów burzowych i jednocześnie w rubryce sposób monitorowania
+zrzutów z przelewów burzowych wskazano: wizualny wykonywany przez
+pracowników Spółki. W sprawozdaniu za 2023 r. wskazano, iż monitoring był
+wykonywany (sposób: wizualnie przez pracowników Spółki). Działania podejmowane
+w celu ograniczenia zrzutów nieoczyszczonych ścieków poprzez przelewy burzowe
+opisano w punkcie 4 i 5 niniejszego wystąpienia.
+Dyrektor WGKiOŚ wyjaśnił: Zadania w zakresie gospodarki ściekowej realizuje
+miejska spółka Wody Miejskie. Jako podmiot posiadający dane w pełnym zakresie,
+Spółka weryfikuje i przygotowuje sprawozdania z realizacji KPOŚK. Spółka dysponuje
+m.in. danymi z ewidencji ścieków wprowadzanych do oczyszczalni ścieków, w tym do
+
+101 WI.7023.1.90.2023.IR.
+102 Pismo nr WI.7024.105.2022.JRP.
+
+
+                                          30
+stacji zlewnej, weryfikuje je i wprowadza do sprawozdania. Uzgodnienia treści
+sprawozdań dokonywane są między pracownikami Spółki i pracownikami WGKiOŚ.
+Natomiast ostateczne sprawozdanie (po uzupełnieniu informacji z obszaru całej
+Aglomeracji, tj. o dane pozyskane z Gminy Stargard i Gminy Kobylanka) oraz ich
+weryfikacja następują przez pracownika Spółki Wody Miejskie. Ankiety sprawozdań
+po zatwierdzeniu przez Prezesa Spółki przekazywane są do podpisu Prezydentowi
+Miasta, a następnie przekazywane do RZGW. Treść ankiety nie podlegała dalszej
+weryfikacji w UM. W sprawie zapisów sprawozdania wskazujących na brak
+stosowania metod ograniczających zanieczyszczenia związane z przelewem wód
+burzowych wyjaśnił: Brak wyszczególnienia w sprawozdaniu konkretnych działań, nie
+oznacza, ze nie były one realizowane. W przedmiotowych sprawozdaniach podano
+m.in. wartość poniesionych nakładów finansowych w roku sprawozdawczym na
+zbiorcze systemy kanalizacyjne w okresie sprawozdawczym i ich źródła
+finansowania. Zadania w zakresie gospodarki ściekowej realizuje miejska spółka
+Wody Miejskie. (…) W celu zmniejszenia ilości wód opadowych odprowadzanych
+do kanalizacji ogólnospławnej realizowane były m.in.: następujące działania:
+1) prace koncepcyjne i przygotowawcze do realizacji modernizacji oczyszczalni
+     ścieków w celu zwiększenia retencji wód opadowych, z wykorzystaniem
+     istniejących obiektów;
+2) budowa nowych i modernizacja istniejących odcinków rozdzielczej sieci
+     kanalizacyjnej, tj. osobno sieć kanalizacyjna i osobno sieć deszczowa;
+3) systematyczne renowacje syfonu pod rzeką Iną;
+4) systematyczne renowacje sieci kanalizacyjnych zwiększające ich retencję;
+5) montaż punktów pomiarowych monitorujących wypełnienie kanałów na sieci,
+     celem ich kontroli;
+6) systematyczne coroczne renowacje kanałów ogólnospławnych.
+Wymienione inwestycje pozwalają na doprowadzenie większej ilości ścieków
+do oczyszczalni, celem ich retencjonowania i późniejszego oczyszczenia, a tym
+samym umożliwiają ograniczanie bezpośrednich zrzutów do rzeki Iny i zmniejszenie
+częstotliwości uruchamiania przelewów burzowych.
+Odnośnie ujęcia w sprawozdaniach za lata 2021-2023 kwestii monitoringu zrzutów
+z przelewów burzowych, Dyrektor WGKiOŚ wyjaśnił: Pomimo wpisania „NIE”
+w sprawozdania z KPOŚK za rok 2021 i 2022 zgodnie z ustaleniami ze Spółką Wody
+Miejskie Stargard, kontrola wizualna stanu technicznego przelewów burzowych
+i stanu technicznego klap zwrotnych, a w szczególności zamknięcie klap, była
+realizowana przez pracowników w ramach bieżącej pracy. Było to o tyle oczywiste, że
+trudno powiedzieć, czemu nie zostało opisane w sprawozdaniu. W każdym razie
+czynności kontrolne przez pracowników były realizowane.
+                     (akta kontroli str. 1805-1807, 1811-1812, 2028-2034, 2123-2129)
+Zastępca Dyrektora WGKiOŚ wyjaśniła: Dane do sprawozdań z KPOŚK wpisywane
+były przez pracownika Wody Miejskie. Zgodnie z informacją od Wód Miejskich
+wytypowany pracownik brał udział w szkoleniach z zakresu wypełniania
+sprawozdania z KPOŚK. Monitoring był realizowany przez pracowników, wizualnie
+przez cały okres sprawozdawczy. W sprawozdaniu za rok 2021 i 2022 w rubryce
+Sposób monitorowania zrzutów z przelewów burzowych wskazano: „NIE”, gdyż
+zgodnie z informacjami pozyskanymi na szkoleniach, przy stosowanym sposobie
+monitoringu należało zastosować ten zapis. Od 2023 r. zmieniła się zarówno
+interpretacja wypełniania tych rubryk, jak i jej kolumny. (…) Jednocześnie informuję,
+że PGW WP RZGW w Szczecinie potwierdził, że wpisanie w kolumnie „Czy są
+monitorowane zrzuty z przelewów burzowych” – NIE, zamiast TAK, nie zostało
+potraktowane jako błąd, gdyż z dalszych danych, wynika jasno, że wymagany
+w sprawozdaniu KPOŚK monitoring był realizowany, gdyż szczegółowo wpisano
+dane np.: dot. liczby punktów przelewowych, liczby zrzutów, ilości ścieków
+odprowadzonych do odbiornika itp. (…)
+                                                          (akta kontroli str. 1968-1992)
+
+                                           31
+Zdaniem NIK, informacje ze szkoleń nie mogą stanowić uzasadnienia dla podania
+w sprawozdaniach z KPOŚK informacji niezgodnych ze stanem faktycznym. NIK
+wskazuje, iż instrukcje wypełnienia sprawozdań z 2022 r. i 2023 r. nie uzasadniają
+zastosowanej przez Miasto interpretacji i sposobu wypełnienia sprawozdań w ww.
+zakresie. Brak zgłoszenia uwag przez PGW WP RZGW w Szczecinie nie oznacza,
+iż nie wystąpiła sprzeczność pomiędzy wskazanymi zapisami.
+                         (akta kontroli str. 1972, 1977, 1985, 2028-2034, 2123-2129)
+6. Nie zapewniono przeprowadzenia przeglądu aglomeracji Stargard co dwa lata.
+Rada Miejska uchwałą Nr XXIII/259/220 z 22 grudnia 2020 r. wyznaczyła obszar
+i granice aglomeracji Stargard103. Ostatniego przeglądu dokonano w 2021 r.104
+Według art. 92 ustawy Prawo wodne prezydent miasta co dwa lata dokonuje
+przeglądu obszarów i granic aglomeracji wyznaczonych na podstawie art. 87 ust. 1
+ww. ustawy, z uwzględnieniem kryterium ich utworzenia, o którym mowa w art. 86 ust.
+1 tej ustawy, oraz zaistniałych zmian równoważnej liczby mieszkańców w aglomeracji
+i w razie potrzeby informuje radę gminy o konieczności zmiany obszarów i granic
+aglomeracji. Pomimo zakończenia przeprowadzenia poprzedniego przeglądu
+13 kwietnia 2021 r. i wejścia w życie uchwały Rady Miejskiej nr XXX/325/2021
+zmieniającej uchwałę w sprawie wyznaczenia obszaru granic aglomeracji Stargard
+15 września 2021 r., do dnia kontroli NIK, tj. 15 stycznia 2024 r. kolejny przegląd
+aglomeracji nie został przeprowadzony. Wprawdzie 17 października 2023 r. Miasto
+zawarło umowę nr 49/TK-II.5/2023 na wykonanie opracowania pn. „Przegląd
+obszarów i granic aglomeracji, wymagany zgodnie z art. 92 ustawy Prawo wodne”,
+jednak prace nie zostały zakończone przed upływem dwóch lat od poprzedniego
+przeglądu aglomeracji105.
+                                                       (akta kontroli str. 75, 335-384)
+Dyrektor WGKIOŚ wyjaśnił: (…) Uznano, że skoro zapisy art. 92 ustawy Prawo wodne
+wskazują, iż przeglądu obszarów i granic aglomeracji dokonuje się co dwa lata,
+z uwzględnieniem zaistniałych zmian RLM, to termin dokonania przeglądu dla całego
+aktualnego po zmianie obszaru aglomeracji biegnie od daty wejścia w życie tych
+zmian. Przed przystąpieniem do przeglądu aglomeracji zbierano niezbędne materiały
+do jego przeprowadzenia, w tym od Wód Miejskich Stargard Sp. z o.o. W miesiącu
+czerwcu 2023 roku, na podstawie przesunięć środków finansowych Wydziału
+w budżecie zostały wprowadzone zmiany i wprowadzone środki finansowe na ten cel.
+Obszar aglomeracji dotyczy trzech sąsiadujących gmin przystąpiono do uzgodnień
+treści porozumienia w sprawie opracowania przeglądu aglomeracji z: Gminą Stargard
+i Gminą Kobylanka. (…) Miesiąc lipiec – jest miesiącem „wakacyjnym” dla Rad
+Miejskich/Gminnych, stąd Gminy przyjmując treść porozumienia na podstawie zgody
+Rad Gmin w formie podejmowanych uchwał, czekały na okres powakacyjny.
+Ostatecznie przedmiotowe uchwały zostały przyjęte we wrześniu, a porozumienie
+międzygminne ze względu na trudność w pozyskaniu jednocześnie podpisów
+elektronicznych poszczególnych osób (reprezentanci gmin wraz ze skarbnikami)
+zostało podpisane dnia 07 grudnia 2023 roku i ogłoszone (…) 19 grudnia 2023 r. (…).
+                                                           (akta kontroli str. 76-77)
+Najwyższa Izba Kontroli wskazuje, że działania organizacyjne oraz związane
+z finansowaniem przeglądu aglomeracji powinny być podejmowane
+z wyprzedzeniem, umożliwiającym zapewnienie przeprowadzenia przeglądu,
+z zachowaniem terminu określonego w art. 92 ustawy Prawo wodne.
+
+
+103 Niniejsza uchwała była poprzedzona uchwałą Nr XXXIII/386/09 Sejmiku Województwa Zachodniopomorskiego
+
+z 17 listopada 2009 r. w sprawie wyznaczenia aglomeracji Stargard (Dz. Urz. Woj. Zachodniopomorskiego
+z 2020 r. nr 10 poz. 1519 oraz z 216 r. poz. 3636).
+104 Protokół zdawczo odbiorczy dotyczący przekazania ostatecznej wersji przeglądu aglomeracji Stargard
+
+sporządzony został 13 kwietnia 2021 r.
+105 Przedmiot umowy zleceniobiorca zobowiązał się wykonać w terminie 60 dni od otrzymania kompletu
+
+dokumentów.
+                                                  32
+7. Poza okresową kontrolą pięcioletnią sieci kanalizacji deszczowej wraz
+z przepompownią od ul. Lotników przez ul. Główną do rzeki Mała Ina w Stargardzie,
+Miasto nie zapewniło przeprowadzenia okresowych kontroli, co najmniej raz na pięć
+lat pozostałych odcinków sieci kanalizacji deszczowej, wymaganych przepisami
+art. 62 ust. 1 pkt 2 ustawy Prawo budowlane.
+Dyrektor MI wyjaśniła, że: zgodnie z umowami zawartymi ze Spółką (…)
+na wykonanie obsługi sieci kanalizacji deszczowej na terenie miasta Stargard, była
+ona dwa razy w roku poddawana kontrolom w ramach odbiorów technicznych.
+Charakter wykonywanych robót przez Spółkę przy udziale Pani (…) wpisywał się
+w znamiona przeglądu okresowego obiektu. Co więcej, część elementów naziemnych
+występujących w jezdni lub innych nawierzchniach pasa drogowego, tj. stan pokryw
+wpustów czy studni kanalizacji deszczowej są realizowane w ramach kontroli
+okresowych w książkach dróg.
+                                                            (akta kontroli str. 934-935)
+NIK zwraca uwagę, że według § 1 umów nr: 6/MI.I/1/2021 z 18 lutego 2021 r,
+6/MI.II.4.2022 z 3 lutego 2022 r. oraz 4/MI.I.4/2023 z 2 lutego 2023 r., określającego
+zakres prac związanych z konserwacją i eksploatacją sieci kanalizacji deszczowej
+na terenie miasta Stargard, powierzonych do wykonania ww. Spółce, zlecone prace
+obejmowały m.in. bieżące monitorowanie sieci kanalizacji deszczowej. W umowach
+tych nie ujęto w powierzonych Spółce zadaniach przeprowadzania okresowych
+kontroli budowlanych sieci kanalizacji deszczowej. Według informacji uzyskanych
+w trakcie kontroli od Prezesa Wód Miejskich106, w ramach ww. umów Spółka nie była
+zobligowana do przeprowadzania okresowych kontroli budowlanych sieci kanalizacji
+deszczowej i związanych z nią obiektów budowlanych i takich kontroli nie
+wykonywała. Zdaniem NIK bieżące kontrole sieci kanalizacji deszczowej przez
+pracowników Spółki nie mogą być traktowane, jako kontrole, o których mowa w art.
+62 ust. 1 pkt 1 ustawy Prawo budowlane, ponieważ takie kontrole powinny być
+wykonywane przez osoby posiadające uprawnienia budowlane odpowiedniej
+specjalności (art. 62 ust. 6 pkt 2) i udokumentowane w protokołach kontroli,
+wskazanych w art. 62a ww. ustawy.
+                                                          (akta kontroli str. 4, 841-857)
+Do powstania powyższej nieprawidłowości mogło przyczynić się niepowierzenie
+zapewnienia przeprowadzania okresowych kontroli żadnej komórce organizacyjnej
+w Regulaminie organizacyjnym, żadnemu stanowisku pracy w Wewnętrznym
+Regulaminie Organizacyjnym MI, ani w zakresach czynności pracowników tego
+Wydziału.
+                              (akta kontroli str. 84-145, 876-878, 930-932, 991-1007)
+Dyrektor MI wyjaśniła, że: przy najbliższej zmianie regulaminu doprecyzowany
+zostanie zapis o konieczności zapewnienia okresowych kontroli sieci kanalizacyjnej.
+                                                            (akta kontroli str. 960-961)
+8. W protokołach z okresowej kontroli rocznej stanu technicznego obiektów
+budowlanych z 24 maja 2021 r., 24 maja 2022 r. oraz 24 maja 2023 r. nie określono
+kontrolowanych obiektów budowlanych w sposób umożliwiający ich identyfikację,
+pomimo takiego wymogu określonego w art. 62a ust. 2 pkt 4 ustawy Prawo
+budowlane107, który wszedł w życie z dniem 19 września 2020 r. W protokołach tych,
+w informacji o obiekcie budowlanym podano, że była to instalacja kanalizacji
+deszczowej na terenie miasta Stargard, bez wskazania skontrolowanych obiektów
+i ich lokalizacji.
+                                                        (akta kontroli str. 898-924)
+Sporządzająca protokoły była Kierownik Referatu Inwestycji i Remontów w MI
+zeznała: Sprawdziłam wszystkie odcinki sieci kanalizacji deszczowej, należące
+
+106 Na podstawie art. 29 ust. 1 pkt 2 lit. f ustawy o NIK.
+107 Dodany przez art. 1 pkt 50 ustawy z dnia 13 lutego 2020 r. o zmianie ustawy - Prawo budowlane oraz niektórych
+
+innych ustaw (Dz. U. poz. 471, ze zm.).
+                                                             33
+do Miasta. Co trwało 2-3 miesiące. Sukcesywnie sprawdzałam sieć
+w poszczególnych drogach. (…) Ze względu na obszerność kontroli zastosowałam
+uproszczenie, skrót myślowy w postaci zapisu, że kontrola objęła instalację sieci
+kanalizacji deszczowej na terenie miasta Stargard. Taki zapis zastosowałam,
+ze względu na fakt, iż wyliczenie wszystkich skontrolowanych odcinków sieci
+i zbiorników byłoby bardzo obszerne. Dla czystości sprawy doszłam do wniosku, że
+można by było zrobić załącznik do protokołu z wyspecyfikowanymi sprawdzonymi
+obiektami, aby spełnić wymogi ww. przepisu.
+                                                      (akta kontroli str. 1647-1650)
+9. Przedmiot zamówienia określony w umowach zawartych ze Spółką na wykonanie
+obsługi sieci kanalizacji deszczowej na terenie Miasta w latach 2021-2023, nie
+zapewniał pełnej realizacji obowiązków nałożonych na Miasto w pozwoleniach
+wodnoprawnych dotyczących odprowadzania do wód lub do ziemi oczyszczonych
+wód opadowych lub roztopowych, a załącznik do ww. umów nie obejmował części ulic
+znajdujących się na stanie majątkowym Miasta. W sposób niewystarczający
+sprawowany był również nadzór nad realizacją przez Spółkę powierzonych
+do realizacji zadań w zakresie przeprowadzania badań wód opadowych zgodnie
+z wydanymi Miastu pozwoleniami wodnoprawnymi.
+Analiza obowiązków nałożonych na Miasto w pięciu pozwoleniach wodnoprawnych108
+wykazała, że:
+ w czterech pozwoleniach109 Miasto zostało zobowiązane do przeprowadzania
+     co najmniej dwa razy w roku przeglądów eksploatacyjnych sieci i urządzeń
+     kanalizacji deszczowej oraz odnotowywania powyższych czynności w zeszycie
+     eksploatacji;
+ w dwóch pozwoleniach110 Miasto zostało zobowiązane do wykonywania
+     co najmniej dwa razy do roku (wiosną i jesienią) analiz oczyszczonych ścieków
+     deszczowych, w tym pozwoleniem CS.6341.91.3.2016.SW3, także w zakresie
+     odczynu pH;
+ w jednym pozwoleniu111 zobowiązano Miasto do wykonywania badań wód
+     w odbiorniku pośrednim – rzece Gowienica Miedwiańska z częstotliwością raz na
+     dwa lata w zakresie zawiesina ogólna, węglowodory ropopochodne i odczyn pH.
+Obowiązków w ww. zakresie nie zlecono Spółce w umowach na wykonanie obsługi
+sieci kanalizacji deszczowej na terenie Miasta w latach 2021-2023.
+W myśl przepisów § 17 ust 7 rozporządzenia Ministra Gospodarki Morskiej i Żeglugi
+Śródlądowej z dnia 12 lipca 2019 r. w sprawie substancji szczególnie szkodliwych dla
+środowiska wodnego oraz warunków, jakie należy spełnić przy wprowadzaniu do wód
+lub do ziemi ścieków, a także przy odprowadzaniu wód opadowych lub roztopowych
+do wód lub do urządzeń wodnych112. spełnienie warunków, o których mowa w ust. 1,
+w stosunku do wód opadowych lub roztopowych wprowadzanych do wód lub
+do urządzeń wodnych z urządzeń oczyszczających o przepustowości nominalnej
+większej niż 300 l/s ocenia się na podstawie przeglądów, o których mowa w ust. 5,
+oraz na podstawie badań, w zakresie normowanych substancji zanieczyszczających,
+wykonanych w czasie trwania opadu, co najmniej dwa razy w roku, w okresie wiosny
+i jesieni.
+  (akta kontroli str. 1711-1712, 1723-1741, 1768-1772, 1751-1755, 2071-2024, 2100-
+                                                                              2101)
+
+
+108 Decyzje:  CS.6341.11.4.2013.LG1 z 10 kwietnia 2013 r.; CS.6341.20.3.2016.LG1 z 23 maja 2016 r.;
+CS.6341.91.3.2016.SW3 z 9 stycznia 2017 r., SZ.ZUZ.3.421.43.4.219.JMS z 26 września 2019 r.
+SZ.ZUZ.3.4210.72.5.2020.ŻŚ z 14 lipca 2020 r.; SZ.ZUZ.3.4210.193.4.2020.JM z 30 grudnia 2020 r., ze zm.
+109 Decyzje: CS.6341.11.4.2013.LG1 z 10 kwietnia 2013 r., CS.6341.20.3.2016.LG1 z 23 maja 2016 r.;
+
+CS.6341.91.3.2016.SW3 z 9 stycznia 2017 r., SZ.ZUZ.3.421.43.4.219.JMS z 26 września 2019 r.
+110 Decyzje: CS.6341.11.4.2013.LG1 z 10 kwietnia 2013 r.; CS.6341.91.3.2016.SW3 z 9 stycznia 2017 r.
+111 CS.6341.91.3.2016.SW3 z 9 stycznia 2017 r.
+112 Dz. U. poz. 1311; dalej: rozporządzenie w sprawie substancji szczególnie szkodliwych.
+
+
+                                                  34
+Dyrektor MI wyjaśniła: W umowie nr 2/MI.I.4/2024 z dnia 12 stycznia 2024 r. zostały
+doprecyzowane: sposób raportowania wykonywanych czynności eksploatacyjnych
+oraz częstotliwość wykonywanych przeglądów eksploatacyjnych, które to zadania
+były przeprowadzane przez Spółkę na podstawie wydanych pozwoleń
+wodnoprawnych. Inwestycja „Budowa ulicy Józefa Chełmońskiego” została odebrana
+8 grudnia 2023 r. Pierwsze badania w zakresie zanieczyszczeń wód opadowych lub
+roztopowych są zaplanowane przez spółkę w roku 2024. (…) Miasto (…) uzupełni
+zakres umowy nr 2/MI.I.4/2024 z dnia 12 stycznia 2024 r. o wykonanie dodatkowych
+pomiarów w zakresie odczynu pH. W wyjaśnieniach podała, że wskazane obowiązki
+zostaną w trybie pilnym uzupełnione w umowie ze Spółką.
+                                          (akta kontroli str. 1519-1525, 2100-2101)
+W załączniku do umów na wykonanie przez Spółkę obsługi sieci kanalizacji
+deszczowej na terenie miasta Stargard w 2021 r., 2022 r. i 2023 r. zawierającym
+wykaz kanalizacji deszczowej znajdującej się na stanie majątkowym Miasta ze
+wskazaniem ulic i ilością studzienek oraz wpustów nie uwzględniono ulic:
+Sienkiewicza, Gdańskiej, Klonowej, Skarżyńskiego, Żwirki i Wigury, Słowackiego
+i Hubala oraz kanalizacji od ul. Bogusława do rzeki Ina.
+                                                 (akta kontroli str. 841-857, 865-866)
+Dyrektor MI wyjaśniła: Zgodnie z zapisami umowy „Zamawiający powierza,
+a Wykonawca przyjmuje do wykonania prace związane z konserwacją i eksploatacją
+całej sieci kanalizacji deszczowej na terenie miasta Stargard”. (…) Miasto (…)
+uzupełni zakres umowy nr 2/MI.I.4/2024 z dnia 12 stycznia 2024 r. o ulice ujęte
+w ewidencji środków trwałych, które przez przeoczenie nie zostały wpisane
+do załącznika.
+                                                          (akta kontroli str. 1791)
+Jakkolwiek w treści umów wskazano, że Miasto powierza Spółce prace związane
+z konserwacją i eksploatacją całej sieci deszczowej na terenie Miasta, to jednak
+przedmiot zamówienia określony w umowach wskazywał na czyszczenie wpustów
+deszczowych znajdujących się na stanie Miasta wymienionych w załączniku
+do umowy. W informacji uzyskanej przez NIK w trakcie kontroli113 ze Spółki Prezes
+wskazał, że czyszczenie wpustów było wykonywane w razie potrzeb, ze względu na
+konieczność utrzymania ich pełnej drożności. Według przedłożonych arkuszy
+czyszczenia i przeglądu wpustów w 2023 r. przeglądami nie objęto wpustów
+znajdujących się na sześciu114 z ww. ulic, a latach 2021 i 2022 na jednej115.
+                                                (akta kontroli str. 843-857, 2075-2096)
+Według przedłożonych w trakcie kontroli wyników badań wód opadowych
+wykonanych przez Spółkę w latach 2021-2023, pomimo wymogu wynikającego
+z pozwoleń wodnoprawnych nr CS.6341.11.4.2013.LG1 z 10 kwietnia 2013 r.
+(dotyczy ul. Spółdzielczej) oraz CS.6341.91.3.2016.SW3 z 9 stycznia 2017 r. (dotyczy
+wylotu do rowu przy zbiorniku wód opadowych w Kluczewie), w latach 2021-2022
+Spółka nie wykonywała dwukrotnie wiosną i jesienią badań wód opadowych. Według
+§ 1 pkt 5 umowy nr 6/MI.I.1/2021 i § 1 ust. 2 pkt 5 umowy nr 6/MI.II.4/2022 przedmiot
+zamówienia obejmował wykonanie analiz ścieków w zakresie zawiesiny ogólnej
+i substancji ropopochodnych zgodnie z wydanymi pozwoleniami wodnoprawnymi.
+Mimo otrzymywania wyników badań przeprowadzanych przez Spółkę raz w roku
+Miasto nie egzekwowało obowiązku wykonywania badań zgodnie
+z ww. pozwoleniami.
+                                                        (akta kontroli str. 1792-1793)
+
+
+113 Na podstawie art. 29 ust. 1 pkt 2 lit f ustawy o NIK.
+114 Klonowej, Skarżyńskiego, Żwirki i Wigury, Hubala, Bogusława IV i Słowackiego.
+115 Odpowiednio ul. Hubala i Słowackiego.
+
+
+                                                            35
+Dyrektor MI wyjaśniła, że Spółka miała przeprowadzać raz do roku analizy wód
+opadowych lub roztopowych w zakresie zawiesiny ogólnej i substancji
+ropopochodnych, zgodnie z wytycznymi zawartymi w pozwoleniach wodnoprawnych.
+Spółka jest wyspecjalizowana, przygotowana technicznie oraz merytorycznie
+do prawidłowego realizowania określonych w umowie zadań. Posiada też niezbędną
+w tym zakresie specjalistyczną wiedze techniczną oraz doświadczenie. W sprawie
+sposobu sprawowania nadzoru nad realizacją umów na wykonywanie przez Spółkę
+obsługi sieci kanalizacji deszczowej wyjaśniła, że nadzór odbywał się poprzez
+oględziny sieci (sprawdzanie stanu technicznego wpustów deszczowych i studni
+rewizyjnych, ich czystości i drożności, sprawdzanie separatorów i osadników,
+zbiorników retencyjnych, w tym stanu wody w tych zbiornikach oraz stanu utrzymania
+rowów i kanałów odpływowych).
+                                          (akta kontroli str. 1711-1712, 2100-2101)
+10. Od 11 kwietnia 2023 r. Miasto nie posiadało ważnego pozwolenia
+wodnoprawnego na usługę wodną polegającą na odprowadzaniu wód opadowych lub
+roztopowych z ul. Spółdzielczej.
+Decyzją nr CS.6341.11.4.2013.LG1 z 10 kwietnia 2013 r. udzielone zostało Miastu
+pozwolenie wodnoprawne m.in. na wprowadzanie do ziemi – zbiornika położonego
+w działce nr ewid. 180 obręb 16 miasto Stargard oczyszczonych wód opadowych
+i roztopowych z ul. Spółdzielczej. Ważność pozwolenia ustalono do 10 kwietnia
+2023 r. Do czasu kontroli NIK tj. 19 kwietnia 2024 r. Miasto nie wystąpiło
+o przedłużenie ważności ww. pozwolenia lub wydanie nowego pozwolenia
+wodnoprawnego na usługę wodną polegającą na odprowadzaniu wód opadowych lub
+roztopowych z ul. Spółdzielczej.
+Zgodnie z art. 389 pkt 1 ustawy Prawo wodne, pozwolenie wodnoprawne jest
+wymagane na usługi wodne. W myśl art. 35 ust. 3 pkt 7 ww. ustawy, usługi wodne
+obejmują odprowadzanie do wód lub do urządzeń wodnych - wód opadowych lub
+roztopowych, ujętych w otwarte lub zamknięte systemy kanalizacji deszczowej
+służące do odprowadzania opadów atmosferycznych albo w systemy kanalizacji
+zbiorczej w granicach administracyjnych miast.
+                                          (akta kontroli str. 1792-1793, 2071-2074)
+Dyrektor MI wyjaśniła, że Miasto nie wystąpiło o przedłużenie ww. pozwolenia, gdyż
+w tym czasie nastąpiły zmiany kadrowe w Wydziale w związku z przejściem na
+emeryturę pracownika zajmującego się sprawami związanymi z siecią kanalizacji
+deszczowej i wystąpi o wydanie nowego pozwolenia na wprowadzanie
+oczyszczonych wód opadowych i roztopowych do ziemi – zbiornika położonego na
+działce nr 180 obręb nr 16 Stargard.
+                                                             (akta kontroli str. 2104)
+11. Z opóźnieniem poinformowano Wody Polskie o wykonaniu i użytkowaniu
+urządzeń określonych w dwóch decyzjach o udzieleniu pozwoleń wodnoprawnych
+(z trzech skontrolowanych).
+W decyzjach SZ.ZUZ.3.421.43.4.2019.JM5 z 26 września 2019 r.,
+SZ.ZUZ.3.4210.72.5.2020.ŻS z 14 lipca 2020 r. Miasto zostało zobowiązane
+do zgłoszenia urządzeń wodnych Wodom Polskim w celu wpisania do systemu
+informacyjnego gospodarowania wodami w terminie odpowiednio 60 dni od ich
+wykonania lub przystąpienia do użytkowania.
+Inwestycja pn. „Uzbrojenie terenów w Parku Przemysłowym Nowoczesnych
+Technologii w Stargardzie w zakresie kanalizacji deszczowej, kanalizacji sanitarnej
+i sieci wodociągowej wraz z rozbudową układu drogowego”, w ramach której
+wykonany został wylot wód opadowych i roztopowych określony w decyzji
+SZ.ZUZ.3.421.43.4.2019.JM5 została odebrana 30 lipca 2021 r., a inwestycja
+pn. „ Budowa odcinka obwodnicy północnej Stargardu od ul. Składowej
+do ul. Orzeszkowej”, w ramach której zostały wykonane zbiornik retencyjno-
+
+                                          36
+rozsączający ZR1 oraz wyloty kanalizacji deszczowej określone w decyzji
+SZ.ZUZ.3.4210.72.5.2020.ŻS została odebrana 24 stycznia 2023 r. Zgłoszenia
+ww. urządzeń wodnych Wodom Polskim dokonano 12 kwietnia 2024 r., tj. w trakcie
+kontroli NIK. Opóźnienie w przekazaniu zgłoszenia wyniosło odpowiednio: 927dni
+i 384 dni.
+                              (akta kontroli str. 1711-1713, 1723-1734, 1796-1804)
+Dyrektor MI wyjaśniła, że zgłoszenie przekazano z opóźnieniem z powodu
+przeoczenia wynikającego ze zmian kadrowych w Wydziale oraz mnogości
+realizowanych inwestycji.
+                                                    (akta kontroli str. 1795)
+12. Nie dokonano aktualizacji ewidencji środków trwałych prowadzonej w Urzędzie
+w zakresie obiektów kanalizacyjnych.
+Stwierdzono, że:
+a) w ewidencji środków trwałych ujęty był w latach 2021-2023 zbiornik kanalizacyjny
+Kluczbud (nr inw. 00465 o wartości początkowej 22 180,97 zł, umorzenie
+22 180,97 zł), pomimo, że działka nr 6 obręb ewidencyjny nr 20 przy ul. Lotników 51-
+51a, na której był usytuowany, po jej podziale została sprzedana 30 września 1997 r.
+(działka 6/1) oraz 28 czerwca 2006 r. (działka 6/2).
+                                     (akta kontroli str. 865-867, 935-936, 1526-1535)
+Dyrektor Wydziału Gospodarki Nieruchomościami116 wyjaśnił, że: akty notarialne
+dotyczące zbycia ww. nieruchomości nie zostały przekazane na stanowisko osoby,
+która w zakresie obowiązków miała dokonać zmian w ewidencji mienia komunalnego.
+Obecnie akty notarialne niezwłocznie zostały przekazane do Wydziału Finansowego,
+celem dokonania zmian w ewidencji.
+Do powstania ww. nieprawidłowości przyczyniło się wykazywanie przez Stargardzkie
+Towarzystwo Budownictwa Społecznego Spółka z o.o117. ww. zbiornika w zestawieniu
+środków trwałych według grup i podgrup, na podstawie, którego podczas prowadzonej
+inwentaryzacji w protokołach z 15 listopada 2021 r. 2022 r. i 2023 r. porównania
+danych ksiąg rachunkowych z dokumentami potwierdzono, że saldo konta grupy II
+jest prawidłowe.
+W trakcie kontroli NIK Dyrektor Wydziału Gospodarki Nieruchomościami wystąpił
+o zdjęcie z ewidencji mienia komunalnego ogółem pięciu środków trwałych po byłym
+Przedsiębiorstwie Produkcyjno-Usługowym „KLUCZBUD” S.A. (w tym zbiornika
+kanalizacyjnego Kluczbud) o wartości ogółem 131 893,46 zł i dokonano ww. zmian
+w ewidencji środków trwałych.
+                               (akta kontroli str. 1540-1573, 1652-1658, 2105-2116)
+b) nie dokonano zmian w ewidencji środków trwałych w związku z wykonaną
+w 2018 r. przebudową na terenie obiektu byłej oczyszczalni mechaniczno-
+biologicznej w Kluczewie.
+W ewidencji środków trwałych prowadzonej w Urzędzie pod nr inw. 00574 ujęta była
+przyjęta na podstawie OT nr TI/79/98 z 31 grudnia 1998 r. oczyszczalnia
+mechaniczno-biologiczna wód deszczowych (w Kluczewie) o wartości początkowej
+557 671,50 zł. (umorzenie 557 671,50 zł), pomimo że w ramach inwestycji
+„Przebudowa i modernizacja sieci kanalizacji deszczowej oraz przebudowa
+i modernizacja oczyszczalni ścieków deszczowych” m.in. zastąpiono istniejące
+urządzenia ww. oczyszczalni zbiornikiem retencyjnym i na podstawie OT nr MI/9/2018
+z 4 czerwca 2018 r. ujęto w ewidencji środków trwałych kanalizację deszczową
+na terenie PPNT „od ul. Metalowej do zbiornika retencyjnego (dawnej biologicznej
+oczyszczalni ścieków)” o wartości początkowej 1 788 635,07 zł nr inw. 00528.
+                               (akta kontroli str. 865-866, 868, 973-976, 1659-1703)
+
+
+116 Dalej: Wydział TG.
+117 Dalej: STBS.
+
+
+                                         37
+Dyrektor MI wyjaśniła, że kanalizacja deszczowa na terenie PPNT od ul. Metalowej
+do zbiornika retencyjnego (dawnej biologicznej oczyszczalni ścieków), która została
+ujęta w ewidencji środków trwałych w poz. 00528 zastąpiła oczyszczalnię
+mechaniczno-biologiczną, która widnieje w kartotece środków trwałych pod poz.
+00574. Po zakończeniu inwestycji osobie prowadzącej wówczas kartotekę środków
+trwałych nie została przekazana informacja o konieczności likwidacji środka trwałego,
+tj. oczyszczalni mechaniczno-biologicznej (nr inw. 574). Natomiast pracownik
+przeprowadzający inwentaryzację omyłkowo uznał, że są to dwa odrębne środki
+trwałe. Obecnie wystąpiono z wnioskiem o likwidację składnika majątkowego
+tj. oczyszczalni mechaniczno-biologicznej (nr inw.574).
+                                                  (akta kontroli str. 1711-1715, 1795)
+W myśl art. 24 ust.1 i 2 ustawy o rachunkowości księgi rachunkowe powinny być
+prowadzone rzetelnie, bezbłędnie, sprawdzalnie i bieżąco. Księgi rachunkowe uznaje
+się za rzetelne, jeżeli dokonane w nich zapisy odzwierciedlają stan rzeczywisty.
+13. Dla dwóch pracowników WGKiOŚ118 nie sporządzono niezwłocznie
+po rozpoczęciu przez nich pracy w tym Wydziale w formie pisemnej i nie przekazano
+im do zapoznania oraz potwierdzenia przyjęcia do stosowania kart uprawnień,
+obowiązków i odpowiedzialności tych pracowników. K.Z.-S. zatrudniona od 21 maja
+2021 r. – 6 sierpnia 2022 r. w WGKiOŚ na stanowisku ds. ochrony wód, gospodarki
+wodno-ściekowej oraz ochrony przed odpadami, potwierdziła zapoznanie się z kartą
+uprawnień, obowiązków i odpowiedzialności pracownika 6 maja 2022 r. K.J.
+zatrudniona na czas zastępstwa w okresie od 1 września 2022 r. do 31 lipca 2023 r.
+na stanowisku ds. ochrony wód, gospodarki wodno-ściekowej oraz ochrony przed
+odpadami w WGKiOŚ potwierdziła otrzymanie oraz zapoznanie się z kartą
+uprawnień, obowiązków i odpowiedzialności pracownika 12 stycznia 2024 r.
+(tj. po zakończeniu zatrudnienia w WGKiOŚ w trakcie kontroli NIK). Na kartach nie
+umieszczono dat ich sporządzenia. Według § 20 pkt 3 lit a Regulaminu
+organizacyjnego do zadań i obowiązków dyrektorów wydziałów należało ustalanie
+szczegółowego zakresu czynności pracowników.
+                     (akta kontroli str. 89, 169-172, 233-237, 1375-1380, 1513-1518)
+Dyrektor WGKiOŚ wyjaśnił, że pracownicy zostali niezwłocznie po zatrudnieniu ustnie
+zapoznani z zakresem obowiązków119. W wyjaśnieniach podał: Ze względów
+organizacyjnych120 i konieczności załatwiania terminowych spraw będących
+w kompetencjach Wydziału, forma pisemna zakresu obowiązków nie została
+przygotowana i przedłożona do podpisu niezwłocznie po rozpoczęciu zatrudnienia
+na stanowisku. (…) Zakres obowiązków na stanowisku TK-II.5 został określony w § 3
+ust. 4 i 12, natomiast zakres podległości pracowników – w § 4 wewnętrznego
+Regulaminu organizacyjnego WGKiOŚ z 5 lipca 2018 r. – który został okazany
+p. K. J.-P. w pierwszym dniu zatrudnienia; w okresie zatrudnienia na stanowisku TK.II,
+tj. od 1 września 2022 r. do 31 lipca 2023 r. zakres obowiązków został przedstawiony
+p. K.J.-P. w formie ustnych poleceń, wydawanych przez Dyrektora WGKiOŚ, co jest
+zgodne z art. 25 ust. 1 ustawy z 21 listopada 2008 r. o pracownikach samorządowych;
+pracownik nie wnosił informacji, o których mowa w ust. 2 i 3 przywołanego artykułu.
+Analogicznych wyjaśnień udzielono odnośnie drugiego z pracowników tj. K.Z.-S.
+                                              (akta kontroli str. 1375-1380, 1839-1840)
+
+
+
+
+118 K.J.-P. i K.Z.-S.
+119 K. J.-P.: po uzgodnieniu przez pracownika przejścia z jednego stanowiska zastępczego w Biurze Funduszy
+
+UM na stanowisko zastępcze w WGKiOŚ; przy instruktażu stanowiskowym; przy przedstawieniu do zapoznania
+się z Regulaminem Organizacyjnym WGKiOŚ. K. Z.-S.: w trakcie rozmowy kwalifikacyjnej; przy instruktażu
+stanowiskowym; przy przedstawieniu do zapoznania się z Regulaminem Organizacyjnym UM.
+120 W przypadku pracownika K.Z.-S. wyjaśniający wskazał, iż poprzez względy organizacyjne należy rozumieć:
+
+pracę zdalną, hybrydową na poszczególnych stanowiskach, nieobecności spowodowane m.in. covid.
+                                                   38
+          Z zeznań byłego pracownika WGKiOŚ K. J.-P.121 wynikało, iż została ona zapoznana
+          przez Dyrektora WGKiOŚ podczas rozmowy przed podjęciem pracy ustnie
+          z zakresem obowiązków na stanowisku i rodzajem spraw, którymi będzie się
+          zajmować, jak również odesłana do Regulaminu organizacyjnego UM. Zeznała:
+          W momencie zatrudnienia nie przekazano mi w formie pisemnej karty uprawnień,
+          obowiązków i odpowiedzialności pracownika, ale wszystkie polecenia przekazywano
+          mi w formie mailowej i poprzez elektroniczny wewnętrzny system obiegu
+          dokumentacji. (…) Po upływie okresu zastępstwa i zakończeniu pracy w WGKiOŚ
+          została mi przedstawiona przez Dyrektora WGKiOŚ do podpisu karta uprawnień,
+          obowiązków i odpowiedzialności.
+                                                              (akta kontroli str. 1513-1517)
+          Zastępca Dyrektora Biura Prezydenta Miasta w sprawie stosowanej w UM praktyki
+          ustalania zakresów obowiązków, odpowiedzialności i uprawnień, wyjaśniła: w UM
+          w podstawowych procedurach zakresy obowiązków przygotowywane są w formie
+          pisemnej w ciągu 14 dni od dnia zatrudnienia nowego pracownika bądź wprowadzenia
+          zmian w dotychczasowym zakresie obowiązków, Wydziały przekazują je do Biura
+          Prezydenta Miasta do akt osobowych. Jednakże zdarzają się szczególne sytuacje,
+          które wymagają podjęcia natychmiastowych decyzji, lub kiedy Wydział kształtuje
+          ostateczną organizację wewnętrzną, wtedy bezpośredni przełożony do czasu
+          określenia zakresu na piśmie może wydać polecenia służbowe zgodnie z art. 25
+          ustawy o pracownikach samorządowych.
+                                                                   (akta kontroli str. 862-864)
+          Według Komunikatu nr 23 Ministra Finansów z 16 grudnia 2009 r. w sprawie
+          standardów kontroli zarządczej dla sektora finansów publicznych122 (standard A3)
+          zakres zadań, uprawnień i odpowiedzialności jednostek, poszczególnych komórek
+          organizacyjnych jednostki oraz zakres podległości pracowników powinien być
+          określony w formie pisemnej w sposób przejrzysty i spójny. Aktualny zakres
+          obowiązków, uprawnień i odpowiedzialności powinien być określony dla każdego
+          pracownika. Ponadto według § 60 Regulaminu organizacyjnego UM dyrektorzy
+          wydziałów podpisują dokumenty w sprawie zadań pracowników, co wskazuje na
+          pisemny charakter ustalenia zadań dla pracowników. Zdaniem NIK określenie
+          zakresu czynności w formie pisemnej ogranicza ponadto ewentualne rozbieżności lub
+          spory co do zakresu powierzonych pracownikowi do realizacji zadań, a ponadto
+          w kartach uprawnień, obowiązków i odpowiedzialności pracownika wskazywany był
+          również zakres odpowiedzialności pracownika, zakres uprawnień pracownika
+          i zasady zastępstw. Z powyższych względów pisemne zakresy czynności powinny
+          być określane niezwłocznie po zatrudnieniu pracownika lub zmianie stanowiska
+          pracy.
+                                                                     (akta kontroli str. 119)
+          IV. Uwagi i wnioski
+          W związku ze stwierdzonymi nieprawidłowościami, Najwyższa Izba Kontroli,
+          na podstawie art. 53 ust. 1 pkt 5 ustawy o NIK, przedstawia następujące wnioski:
+Wnioski       Zapewnienie gromadzenia rzetelnych, kompletnych i aktualnych danych
+              w ewidencji zbiorników bezodpływowych i przydomowych oczyszczalni ścieków,
+              o której mowa w art. 3 ust. 3 pkt 1-2 ucpg.
+              Prowadzenie w formie umożliwiającej przekazywanie informacji w postaci
+              elektronicznej ewidencji aktualnych informacji wskazanych w art. 3 ust 3 pkt 4
+              w zw. z ust. 5 pkt 5, 7 i 9 ucpg, tj. dotyczących: częstotliwości opróżniania zbiornika
+              bezodpływowego lub osadnika w instalacji przydomowej oczyszczalni ścieków,
+
+          121 Drugi pracownik tj. Pani K. Z.-S., według informacji przekazanej przez zastępcę Dyrektora Biura Prezydenta
+
+          Miasta, przebywa na urlopie wychowawczym do 30 kwietnia 2024 r., który na jej wniosek będzie przedłużony
+          do 31 sierpnia 2024 r.
+          122 Dz. Urz. MF z 2009 r. Nr 15, poz. 84, dalej: Standardy kontroli zarządczej.
+
+
+                                                               39
+           o której mowa w art. 4 ust. 2 pkt 3 ww. ustawy; ilości wody pobranej przez
+           użytkowników niepodłączonych do sieci kanalizacyjnej oraz wyników
+           przeprowadzonych kontroli dokumentów, o których mowa w art. 6 ust. 5a ucpg.
+           Podjęcie działań organizacyjnych w celu zapewnienia rzetelnego i skutecznego
+           nadzoru nad opróżnianiem zbiorników bezodpływowych oraz osadników
+           w instalacjach przydomowych oczyszczalni ścieków.
+           Zapewnienie prowadzenia rzetelnego i skutecznego nadzoru nad realizacją przez
+           właścicieli nieruchomości obowiązku podłączenia do sieci kanalizacji sanitarnej,
+           określonego w art. 5 ust. 6 w zw. z ust. 1 pkt 2 ucpg.
+           Wprowadzenie rozwiązań organizacyjnych w celu zapewnienia realizacji
+           obowiązku udzielania organom Inspekcji Ochrony Środowiska informacji lub
+           udostępnienia dokumentów i danych związanych z ochroną środowiska,
+           w przypadku otrzymania wniosku, o którym mowa w art. 16 ust. 1 ustawy
+           o Inspekcji Ochrony Środowiska.
+           Zapewnienie podawania rzetelnych informacji i danych w sprawozdaniach
+           z realizacji KPOŚK przekazywanych do PGW WP RZGW w Szczecinie.
+           Podejmowanie działań organizacyjnych oraz związanych z finansowaniem
+           przeglądu aglomeracji z wyprzedzeniem umożliwiającym zapewnienie
+           przeprowadzenia przeglądu z zachowaniem terminu określonego w art. 92 ustawy
+           Prawo wodne.
+           Zapewnienie przeprowadzania co najmniej raz na pięć lat okresowych kontroli
+           budowlanych, o których mowa w art. 62 ust. 1 pkt 2 ustawy Prawo budowlane,
+           obejmujących sieć kanalizacji deszczowej i związane z nią obiekty budowlane.
+           Zapewnienie nadzoru nad prawidłowością sporządzanych protokołów
+           z okresowych kontroli obiektów budowlanych związanych z systemem kanalizacji
+           deszczowej.
+           Przeanalizowanie treści umowy na wykonanie obsługi sieci kanalizacji deszczowej
+           na terenie Miasta w zakresie zadań przewidzianych do realizacji przez Spółkę oraz
+           sposobu ich wykonania, w szczególności w odniesieniu do wymogów
+           wynikających z udzielonych Miastu pozwoleń wodnoprawnych.
+           Zapewnienie rzetelnego nadzoru nad realizacją umowy na wykonanie obsługi sieci
+           kanalizacji deszczowej na terenie Miasta.
+           Przeprowadzenie analizy ważności posiadanych pozwoleń wodnoprawnych
+           na odprowadzanie wód opadowych lub roztopowych.
+           Dokonanie weryfikacji ewidencji środków trwałych prowadzonej w Urzędzie
+           w zakresie prawidłowości ujęcia składników majątku dotyczących kanalizacji.
+           Podjęcie działań organizacyjnych zapewniających terminowe przekazywanie
+           Wodom Polskim informacji o wykonaniu i użytkowaniu urządzeń określonych
+           w decyzjach o udzieleniu pozwoleń wodnoprawnych.
+           Ujęcie w dokumentacji dotyczącej organizacji wewnętrznej Urzędu oraz
+           w zakresach czynności pracowników zadań związanych z zapewnieniem
+           okresowych kontroli budowlanych sieci kanalizacji deszczowej.
+           Zapewnienie ustalania pisemnych zakresów obowiązków, uprawnień
+           i odpowiedzialności pracowników niezwłocznie po rozpoczęciu przez nich
+           zatrudnienia.
+Uwagi   Najwyższa Izba Kontroli nie formułuje uwag.
+
+
+
+
+                                                40
+                        V. Pozostałe informacje i pouczenia
+                        Wystąpienie pokontrolne zostało sporządzone w dwóch egzemplarzach; jeden dla
+                        kierownika jednostki kontrolowanej, drugi do akt kontroli.
+    Prawo zgłoszenia    Zgodnie z art. 54 ust. 1 i 2 ustawy o NIK kierownikowi jednostki kontrolowanej
+          zastrzeżeń    przysługuje prawo zgłoszenia na piśmie umotywowanych zastrzeżeń do wystąpienia
+                        pokontrolnego, w terminie 21 dni od dnia jego przekazania. Zastrzeżenia zgłasza się
+                        do dyrektora Delegatury NIK w Szczecinie. Prawo zgłaszania zastrzeżeń, zgodnie
+                        z art. 61b ust. 2 ustawy o NIK, nie przysługuje do wystąpienia pokontrolnego
+                        zmienionego zgodnie z treścią uchwały w sprawie zastrzeżeń.
+           Obowiązek    Zgodnie z art. 62 ustawy o NIK należy poinformować Najwyższą Izbę Kontroli,
+      poinformowania    w terminie 30 dni od otrzymania wystąpienia pokontrolnego, o sposobie wykonania
+       NIK o sposobie   wniosków pokontrolnych oraz o podjętych działaniach lub przyczynach niepodjęcia
+   wykorzystania uwag
+                        tych działań.
+i wykonania wniosków
+                        W przypadku wniesienia zastrzeżeń do wystąpienia pokontrolnego, termin
+                        przedstawienia informacji liczy się od dnia otrzymania uchwały o oddaleniu
+                        zastrzeżeń w całości lub zmienionego wystąpienia pokontrolnego.
+
+                        Szczecin, 16 maja 2024 r.
+
+                                             Kontrolerzy                                        Najwyższa Izba Kontroli
+                                                                                                Delegatura w Szczecinie
+                                   Marzanna Wierzbicka                                              z up. Dyrektora
+                                    doradca techniczny                                             p.o. Wicedyrektor
+                                                                                                   Bogusław Wójcik
+                            ........................................................
+                                                   podpis
+
+                                                                                            ........................................................
+                                                                                                                   podpis
+
+
+                                    Anna Jończyk
+                        starszy inspektor kontroli państwowej
+                                                                                                   Dokument podpisany elektronicznie
+                            ........................................................
+                                                   podpis
+
+
+
+
+                                                                                       41
+
