@@ -120,7 +120,6 @@ export function SimulationBody({
             onMetric={onMetric}
           />
           <Drivers sim={sim} metric={metric} checked={checked} />
-          <MethodNote sim={sim} />
         </>
       }
     />
@@ -369,7 +368,8 @@ function WhatIfPanel({
 function Drivers({ sim, metric, checked }: { sim: SimulationOut; metric: Metric; checked: string[] }) {
   const m = sim.metrics[metric]
   const d = m.drivers[subsetKey(sim.options, checked)] ?? m.drivers['']
-  if (!d) return null
+  // competition view: no offers-vs-delay panel (user decision, 22.11.2026); time and cost keep their drivers
+  if (!d || metric === 'comp') return null
   return (
     <Panel aria-labelledby="sim-drivers">
       <h2 id="sim-drivers" className="t-h3 m-0">
@@ -406,20 +406,3 @@ export function HBarList({ rows }: { rows: { label: string; value: number; displ
   )
 }
 
-function MethodNote({ sim }: { sim: SimulationResponse }) {
-  return (
-    <Panel aria-labelledby="sim-method">
-      <h2 id="sim-method" className="t-h3 m-0">
-        Skąd te linie
-      </h2>
-      <p className="t-small m-0 text-text-body-muted">
-        {fmtInt(sim.runs)} losowań całych umów z grupy porównawczej (n = {fmtInt(sim.n)}), więc opóźnienie,
-        koszt i przyczyny zmian pozostają powiązane. Wpływ każdej zmiany to założenie eksperta z Katalogu.
-      </p>
-      {sim.honesty_note ? <p className="t-caption m-0 text-muted">{sim.honesty_note}</p> : null}
-      <a href="/katalog?czesc=zalozenia" className="t-small text-text underline underline-offset-4">
-        Założenia w Katalogu
-      </a>
-    </Panel>
-  )
-}

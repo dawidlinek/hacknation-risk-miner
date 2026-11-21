@@ -33,6 +33,14 @@ describe('SimulationBody', () => {
     expect(onChecked).toHaveBeenCalledWith(['geo'])
   })
 
+  it('competition view has no offers panel and no method note', () => {
+    wrap(
+      <SimulationBody sim={sim} id="AN-2026-0001" metric="comp" checked={[]} onMetric={() => {}} onChecked={() => {}} />,
+    )
+    expect(screen.queryByText('Więcej ofert, mniej opóźnień')).not.toBeInTheDocument()
+    expect(screen.queryByText('Skąd te linie')).not.toBeInTheDocument()
+  })
+
   it('switches the metric through the tab list', () => {
     const onMetric = vi.fn()
     wrap(
