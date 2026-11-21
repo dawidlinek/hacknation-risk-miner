@@ -345,10 +345,6 @@ export function ContractPanel({ woj, pow, id }: { woj: string; pow: string; id: 
           </div>
         ))}
       </section>
-      <p className="t-caption m-0 text-text-body-muted">
-        Karta powstaje sama z ogłoszeń BZP i jest niezweryfikowana. Do bazy przypadków trafia dopiero po
-        przeglądzie eksperta.
-      </p>
     </div>
   )
 }

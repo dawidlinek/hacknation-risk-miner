@@ -41,7 +41,7 @@ features:
   allocation: true                 # 1.5 tab "Podział ryzyk i pakiet" (on: A wired GET/PUT /allocation)
   pack_export: true                # export buttons, "Pakiet do akt" (on: pack.{docx,pdf,csv,json} verified)
   radar_drill: true                # monitoring drill-down 4.1a–c (on: F2 wired /regions/{terc}, /contracts/{id}, watches)
-  monitoring_replay: true          # Wehikuł czasu (on: A + F2 TimeMachine; as_of verified, data settles correctly)
+  monitoring_replay: false         # Wehikuł czasu: off at the user request (the year filter on the map covers it)
   review_queue: true               # 3.1 Przegląd + nav count (on: F2 wired /review-items*, decision/undo/skip)
   catalogue_edit: true             # 3.2 edit inputs (on: F2 wired; PATCH/weights/proposals verified by S0 flag smoke)
   import_agent: true               # 2.1 agent thread (on: F2 wired /zrodla to /imports*; D's flow test green)
