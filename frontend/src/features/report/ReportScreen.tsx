@@ -155,11 +155,6 @@ export function QuestionCardView({ id, q }: { id: string; q: ReportQuestion }) {
       ) : (
         <RangeBar g={g} q={q} />
       )}
-      <ProvenanceTag
-        origin={q.provenance.origin}
-        reviewStatus={q.provenance.review_status}
-        text={q.provenance.text.replace(/^obliczenie, /, '')}
-      />
     </a>
   )
 }

@@ -38,10 +38,13 @@ describe('adaptAnswer', () => {
   it('keeps known actions only', () => {
     expect(a.actions.map((x) => x.kind)).toEqual(['save', 'export_csv'])
   })
-  it('AI answers get the long role label', () => {
-    expect(adaptAnswer({ ...raw, role: 'ai', role_label: 'wniosek AI' }, 'q').role_label).toBe(
-      'wniosek AI z zatwierdzonych zdarzeń',
-    )
+  it('AI answers keep the label the backend sends (a report chat is not built from approved events)', () => {
+    expect(adaptAnswer({ ...raw, role: 'ai', role_label: 'wniosek AI' }, 'q').role_label).toBe('wniosek AI')
+  })
+  it('repeated sources become one chip each', () => {
+    const src = { kind: 'query', id: 'x', label: 'klasa: kanalizacja sanitarna (82 umowy z BZP)' }
+    const dup = adaptAnswer({ ...raw, n: null, sources: [src, src, { ...src, label: 'Katalog: czerwone flagi' }, src] }, 'q')
+    expect(dup.sources).toEqual(['klasa: kanalizacja sanitarna (82 umowy z BZP)', 'Katalog: czerwone flagi'])
   })
 })
 
