@@ -1,0 +1,33 @@
+{
+  "fetchedAt": "2026-11-21T23:20:21.423Z",
+  "dataAsOf": "2026-11-20",
+  "sentence": "Od 2021 r. 30% z 11 222 wykonanych umów wodno-kanalizacyjnych skończyło się po terminie, łącznie 265 tys. dni opóźnień. Ponad wartość umów zapłacono 586 mln zł.",
+  "completed": {
+    "value": 11222,
+    "display": "11 222",
+    "n": 11222
+  },
+  "lateShare": {
+    "value": 0.3028,
+    "display": "30,3%",
+    "n": 11198
+  },
+  "delayDays": {
+    "value": 264971,
+    "display": "265 tys. dni",
+    "n": 3025
+  },
+  "overpaidMln": {
+    "value": 586,
+    "n": 11112,
+    "vat": "gross"
+  },
+  "designBuild": {
+    "late_share": 0.4525,
+    "n": 1443
+  },
+  "buildOnly": {
+    "late_share": 0.2807,
+    "n": 9755
+  }
+}

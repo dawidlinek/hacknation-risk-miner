@@ -1,0 +1,13 @@
+# Records created on live (exante.linek.dev) by the demo video captures
+
+All captures ran logged in as "Ekspert (demo)" from `docs/submission/video/remotion/scripts/capture.ts`
+on 22.11.2026 (night, Warsaw time). Reset these when restoring the demo baseline.
+
+| When (UTC) | Shot | What was written | Notes |
+|---|---|---|---|
+| 2026-11-21 23:2x | `new` (first take, discarded) | analysis **AN-2026-0016**: example description ("Wypełnij przykładem") + uploaded document `PFU_Kaniow.pdf` (public, copy of `data/raw/docs_22/.../9cdc085eedd413b1_PFU_Kaniów.pdf`) | Not used in the video: the PFU values (4,1 km, 22 mies.) overrode the typed example, so the screens contradicted each other. |
+| 2026-11-22 00:1x | `docs` (first take) | document **33499** `protokol_koniecznosci_zagrodno_kopia.pdf` uploaded to **RM-2026-002** (Zagrodno): copy of `materials/organizer_cases/Risk_Miner_protokol_koniecznosci_aneksowania_zagrodno.pdf` with one byte appended (new sha256). Processing added +1 proposed contract change and +3 proposed risk events (all `proposed`, waiting in Przegląd) and a "Co się zmieniło" diff (planned end 05.05.2026 → 05.06.2026). | The retake only opens this document, no second upload. |
+| 2026-11-22 00:2x | `przeglad` | **one review decision**: "Zapisz i dalej" on the first item of Przegląd (Zdarzenia ryzyka, sorted "Najpierw gotowe do akceptacji"): RM-2026-020 Nowogard/Konarzewo, contract change of 01.12.2025, model proposal **R02 Niedostateczne rozpoznanie stanu istniejącego** approved (toast "Zapisano: R02"). | The only approval made for the video. It can be undone with "Cofnij" or reset with the baseline. |
+| 2026-11-22 00:1x | `new` (second take, discarded) | analysis **AN-2026-0021** via "Wypełnij przykładem": the example PFU failed to attach under the recorder's virtual clock ("Nie udało się wczytać pliku"), so the analysis has the example text only and no document. | Not used. The app works at normal speed (checked: AN-2026-0022); the recorder now runs that step on the real clock. |
+| 2026-11-22 01:1x | probe | draft analysis **AN-2026-0022** (status draft, never run) from a real-time check of "Wypełnij przykładem"; the example PFU was deduplicated to existing document **33497**. | Not used. |
+| 2026-11-22 01:2x | `new` (final take, **used**) | analysis **AN-2026-0023** via "Wypełnij przykładem" (example text + example PFU `PFU_Kaniow_przyklad.pdf`, deduplicated to document 33497), run to the report. Czerwony długopis, Symulacja and Podział ryzyk were only viewed (scenario checkboxes toggled in the browser; no notes approved). | Used in all versions. |

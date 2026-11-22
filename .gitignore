@@ -43,3 +43,7 @@ exports/packs/
 
 # TanStack router generator scratch
 frontend/.tanstack/
+
+# demo video renders (published by link, too big for git)
+docs/submission/video/**/*.mp4
+docs/submission/video/qa/

@@ -80,8 +80,16 @@ def build(cb: CaseBase, cat: dict, ft: RC.Features, code: str, version: int, tod
     for o in opts_cat:
         metrics = [m if m != "competition" else "comp" for m in (o.get("metrics") or ["time", "cost", "comp"])]
         risk = (o.get("effects") or [{}])[0].get("risk") or ""
-        options.append({"key": o["key"], "code": o["code"], "short": o.get("short") or o.get("label"),
-                        "label": o.get("label"), "detail": o.get("description") or "", "risk_code": risk,
+        short, label = o.get("short") or o.get("label"), o.get("label")
+        if (o.get("plan") or {}).get("set") == "class_median":
+            # the label must follow this analysis: the class median plan vs the plan read from the description
+            med_m = round(med_plan / DAYS_PER_MONTH)
+            own_m = round(ft.plan_days / DAYS_PER_MONTH) if ft.plan_days else None
+            short = f"Plan {med_m} mies."
+            label = (f"Termin {med_m} miesięcy (mediana grupy) zamiast {own_m}" if own_m and own_m != med_m
+                     else f"Termin jak mediana grupy: {med_m} miesięcy")
+        options.append({"key": o["key"], "code": o["code"], "short": short,
+                        "label": label, "detail": o.get("description") or "", "risk_code": risk,
                         "affects": metrics, "effect_label": {}, "default_on": False, "assumption": True,
                         "status": o.get("status", "proposed"), "clause_refs": o.get("clause_refs") or [],
                         "plan_override": bool(o.get("plan")),

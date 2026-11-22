@@ -1,0 +1,29 @@
+{
+  "name": "ex-ante-demo-video",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "capture": "tsx scripts/capture.ts",
+    "data": "tsx scripts/fetch-data.ts",
+    "render": "tsx scripts/render-all.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.532",
+    "@remotion/fonts": "4.0.532",
+    "@remotion/media": "4.0.532",
+    "@remotion/transitions": "4.0.532",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "remotion": "4.0.532"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "@types/react": "^19.2.17",
+    "playwright": "^1.63.0",
+    "tsx": "^4.23.0",
+    "typescript": "^5.9.3"
+  }
+}
