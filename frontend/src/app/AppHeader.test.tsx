@@ -14,7 +14,7 @@ describe('AppHeader', () => {
     expect(screen.getByRole('link', { name: 'Zaloguj się' })).toBeInTheDocument()
     expect(screen.queryByText('Więcej')).not.toBeInTheDocument()
   })
-  it('expert: 6 items with counts and Więcej', async () => {
+  it('expert: 7 items with counts, no Więcej', async () => {
     localStorage.setItem('rm.mockRole', 'expert')
     await renderRoute('/zaloguj')
     const nav = await screen.findByRole('navigation', { name: 'Moduły' })
@@ -27,9 +27,10 @@ describe('AppHeader', () => {
       'Projekty',
       'Przegląd',
       'Katalog',
+      'Import i źródła',
     ])
     expect(within(nav).queryByText('12')).toBeNull() // no count next to Monitoring (user request)
-    expect(within(nav).getByRole('button', { name: /Więcej/ })).toBeInTheDocument()
+    expect(within(nav).queryByRole('button', { name: /Więcej/ })).toBeNull()
     expect(screen.getByRole('button', { name: /konto/i })).toBeInTheDocument()
   })
 })

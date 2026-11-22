@@ -28,11 +28,11 @@ export const NAV: NavItem[] = [
     count: 'review_open',
   },
   { label: 'Katalog', to: '/katalog', match: ['/katalog'], expertOnly: true },
-]
-
-export const MORE: NavItem[] = [
   { label: 'Import i źródła', to: '/zrodla', match: ['/zrodla'], expertOnly: true },
 ]
+
+/** "Więcej" menu: empty, so it is not rendered (the user wanted Import i źródła as its own tab). */
+export const MORE: NavItem[] = []
 
 export function isActive(item: NavItem, pathname: string) {
   if (item.exact) return pathname === item.to
