@@ -1,0 +1,532 @@
+{
+ "gold_sha256": "3ec113a625316525edd4b10803cff4e5fce9d05c5b2e39ba5ae1c07bad410f14",
+ "prompt_version": "classify_causes@v1+be62e5e4",
+ "results": [
+  {
+   "alias": "wcss_bielik:bielik-11b",
+   "provider": "wcss_bielik",
+   "model": "bielik-11b",
+   "variant": "packed25",
+   "n": 150,
+   "metrics": {
+    "accuracy": 0.587,
+    "accuracy_ci95": [
+     0.507,
+     0.667
+    ],
+    "accuracy_primary_or_secondary": 0.68,
+    "accuracy_ps_ci95": [
+     0.6,
+     0.753
+    ],
+    "macro_f1_support3": 0.498,
+    "macro_f1_all": 0.437,
+    "kappa": 0.5388,
+    "quotes_verified": 0.987,
+    "json_missing": 0,
+    "latency_p50_ms": 23182,
+    "latency_p95_ms": 23325,
+    "wall_s": 26.3,
+    "cost_usd": 0.0,
+    "cost_per_1000_usd": 0.0,
+    "calls": 6
+   },
+   "per_class": {
+    "N-CLIENT": {
+     "support": 6,
+     "tp": 0,
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0
+    },
+    "N-COVID": {
+     "support": 5,
+     "tp": 5,
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0
+    },
+    "N-FORMAL": {
+     "support": 5,
+     "tp": 2,
+     "precision": 0.667,
+     "recall": 0.4,
+     "f1": 0.5
+    },
+    "N-LAW": {
+     "support": 0,
+     "tp": 0,
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0
+    },
+    "N-PRICE": {
+     "support": 2,
+     "tp": 1,
+     "precision": 0.143,
+     "recall": 0.5,
+     "f1": 0.222
+    },
+    "N-SCOPE-RED": {
+     "support": 2,
+     "tp": 2,
+     "precision": 0.133,
+     "recall": 1.0,
+     "f1": 0.235
+    },
+    "N-UNSPEC": {
+     "support": 16,
+     "tp": 12,
+     "precision": 0.522,
+     "recall": 0.75,
+     "f1": 0.615
+    },
+    "R01": {
+     "support": 11,
+     "tp": 0,
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0
+    },
+    "R02": {
+     "support": 19,
+     "tp": 13,
+     "precision": 0.722,
+     "recall": 0.684,
+     "f1": 0.703
+    },
+    "R03": {
+     "support": 11,
+     "tp": 6,
+     "precision": 1.0,
+     "recall": 0.545,
+     "f1": 0.706
+    },
+    "R04": {
+     "support": 9,
+     "tp": 9,
+     "precision": 0.75,
+     "recall": 1.0,
+     "f1": 0.857
+    },
+    "R05": {
+     "support": 0,
+     "tp": 0,
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0
+    },
+    "R06": {
+     "support": 0,
+     "tp": 0,
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0
+    },
+    "R07": {
+     "support": 33,
+     "tp": 24,
+     "precision": 0.649,
+     "recall": 0.727,
+     "f1": 0.686
+    },
+    "R08": {
+     "support": 5,
+     "tp": 0,
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0
+    },
+    "R09": {
+     "support": 5,
+     "tp": 1,
+     "precision": 0.2,
+     "recall": 0.2,
+     "f1": 0.2
+    },
+    "R10": {
+     "support": 2,
+     "tp": 0,
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0
+    },
+    "R12": {
+     "support": 6,
+     "tp": 4,
+     "precision": 1.0,
+     "recall": 0.667,
+     "f1": 0.8
+    },
+    "R13": {
+     "support": 4,
+     "tp": 0,
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0
+    },
+    "R16": {
+     "support": 9,
+     "tp": 9,
+     "precision": 0.818,
+     "recall": 1.0,
+     "f1": 0.9
+    }
+   },
+   "confusion": {
+    "R16": {
+     "R16": 9
+    },
+    "R07": {
+     "R07": 24,
+     "N-UNSPEC": 4,
+     "N-SCOPE-RED": 5
+    },
+    "N-COVID": {
+     "N-COVID": 5
+    },
+    "R02": {
+     "R02": 13,
+     "N-UNSPEC": 1,
+     "R09": 2,
+     "N-SCOPE-RED": 1,
+     "R07": 2
+    },
+    "R12": {
+     "N-PRICE": 2,
+     "R12": 4
+    },
+    "R03": {
+     "R03": 6,
+     "R02": 3,
+     "R04": 1,
+     "N-SCOPE-RED": 1
+    },
+    "N-UNSPEC": {
+     "N-UNSPEC": 12,
+     "R05": 1,
+     "R16": 2,
+     "R07": 1
+    },
+    "R01": {
+     "R07": 6,
+     "N-PRICE": 1,
+     "R09": 1,
+     "N-SCOPE-RED": 2,
+     "R02": 1
+    },
+    "R04": {
+     "R04": 9
+    },
+    "R10": {
+     "R07": 1,
+     "R04": 1
+    },
+    "N-SCOPE-RED": {
+     "N-SCOPE-RED": 2
+    },
+    "R09": {
+     "N-SCOPE-RED": 1,
+     "N-UNSPEC": 1,
+     "R09": 1,
+     "R07": 1,
+     "R02": 1
+    },
+    "R13": {
+     "R04": 1,
+     "N-LAW": 1,
+     "N-PRICE": 2
+    },
+    "R08": {
+     "N-UNSPEC": 3,
+     "N-PRICE": 1,
+     "N-FORMAL": 1
+    },
+    "N-PRICE": {
+     "N-UNSPEC": 1,
+     "N-PRICE": 1
+    },
+    "N-CLIENT": {
+     "N-SCOPE-RED": 2,
+     "R09": 1,
+     "R07": 2,
+     "R06": 1
+    },
+    "N-FORMAL": {
+     "R05": 1,
+     "N-FORMAL": 2,
+     "N-SCOPE-RED": 1,
+     "N-UNSPEC": 1
+    }
+   },
+   "run": "eval:wcss_bielik_bielik-11b:packed25:1795321364",
+   "data_location": "PL (WCSS Wrocław)"
+  },
+  {
+   "alias": "wcss_pllum:pllum-12b",
+   "provider": "wcss_pllum",
+   "model": "pllum-12b",
+   "variant": "packed25",
+   "n": 150,
+   "metrics": {
+    "accuracy": 0.473,
+    "accuracy_ci95": [
+     0.393,
+     0.553
+    ],
+    "accuracy_primary_or_secondary": 0.533,
+    "accuracy_ps_ci95": [
+     0.447,
+     0.613
+    ],
+    "macro_f1_support3": 0.407,
+    "macro_f1_all": 0.404,
+    "kappa": 0.3988,
+    "quotes_verified": 0.847,
+    "json_missing": 0,
+    "latency_p50_ms": 38470,
+    "latency_p95_ms": 43832,
+    "wall_s": 53.3,
+    "cost_usd": 0.0,
+    "cost_per_1000_usd": 0.0,
+    "calls": 7
+   },
+   "per_class": {
+    "N-CLIENT": {
+     "support": 6,
+     "tp": 0,
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0
+    },
+    "N-COVID": {
+     "support": 5,
+     "tp": 1,
+     "precision": 0.5,
+     "recall": 0.2,
+     "f1": 0.286
+    },
+    "N-FORMAL": {
+     "support": 5,
+     "tp": 1,
+     "precision": 1.0,
+     "recall": 0.2,
+     "f1": 0.333
+    },
+    "N-LAW": {
+     "support": 0,
+     "tp": 0,
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0
+    },
+    "N-PRICE": {
+     "support": 2,
+     "tp": 1,
+     "precision": 0.5,
+     "recall": 0.5,
+     "f1": 0.5
+    },
+    "N-SCOPE-RED": {
+     "support": 2,
+     "tp": 1,
+     "precision": 1.0,
+     "recall": 0.5,
+     "f1": 0.667
+    },
+    "N-UNSPEC": {
+     "support": 16,
+     "tp": 5,
+     "precision": 0.294,
+     "recall": 0.312,
+     "f1": 0.303
+    },
+    "R01": {
+     "support": 11,
+     "tp": 0,
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0
+    },
+    "R02": {
+     "support": 19,
+     "tp": 10,
+     "precision": 0.769,
+     "recall": 0.526,
+     "f1": 0.625
+    },
+    "R03": {
+     "support": 11,
+     "tp": 4,
+     "precision": 0.267,
+     "recall": 0.364,
+     "f1": 0.308
+    },
+    "R04": {
+     "support": 9,
+     "tp": 5,
+     "precision": 0.833,
+     "recall": 0.556,
+     "f1": 0.667
+    },
+    "R06": {
+     "support": 0,
+     "tp": 0,
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0
+    },
+    "R07": {
+     "support": 33,
+     "tp": 26,
+     "precision": 0.473,
+     "recall": 0.788,
+     "f1": 0.591
+    },
+    "R08": {
+     "support": 5,
+     "tp": 1,
+     "precision": 0.5,
+     "recall": 0.2,
+     "f1": 0.286
+    },
+    "R09": {
+     "support": 5,
+     "tp": 3,
+     "precision": 0.6,
+     "recall": 0.6,
+     "f1": 0.6
+    },
+    "R10": {
+     "support": 2,
+     "tp": 0,
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0
+    },
+    "R11": {
+     "support": 0,
+     "tp": 0,
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0
+    },
+    "R12": {
+     "support": 6,
+     "tp": 3,
+     "precision": 0.6,
+     "recall": 0.5,
+     "f1": 0.545
+    },
+    "R13": {
+     "support": 4,
+     "tp": 1,
+     "precision": 0.5,
+     "recall": 0.25,
+     "f1": 0.333
+    },
+    "R16": {
+     "support": 9,
+     "tp": 9,
+     "precision": 0.692,
+     "recall": 1.0,
+     "f1": 0.818
+    }
+   },
+   "confusion": {
+    "R16": {
+     "R16": 9
+    },
+    "R07": {
+     "R08": 1,
+     "R07": 26,
+     "N-UNSPEC": 3,
+     "R03": 2,
+     "R02": 1
+    },
+    "N-COVID": {
+     "N-CLIENT": 3,
+     "R12": 1,
+     "N-COVID": 1
+    },
+    "R02": {
+     "R02": 10,
+     "R03": 4,
+     "R07": 5
+    },
+    "R12": {
+     "N-PRICE": 1,
+     "N-UNSPEC": 1,
+     "R12": 3,
+     "R13": 1
+    },
+    "R03": {
+     "R03": 4,
+     "N-UNSPEC": 2,
+     "R07": 2,
+     "R02": 1,
+     "N-CLIENT": 1,
+     "R09": 1
+    },
+    "N-UNSPEC": {
+     "N-LAW": 1,
+     "R02": 1,
+     "N-UNSPEC": 5,
+     "N-COVID": 1,
+     "R12": 1,
+     "R16": 3,
+     "R07": 2,
+     "R06": 2
+    },
+    "R01": {
+     "R07": 10,
+     "R09": 1
+    },
+    "R04": {
+     "R04": 5,
+     "R11": 1,
+     "R03": 1,
+     "R07": 1,
+     "R16": 1
+    },
+    "R10": {
+     "R07": 1,
+     "R04": 1
+    },
+    "N-SCOPE-RED": {
+     "N-SCOPE-RED": 1,
+     "R07": 1
+    },
+    "R09": {
+     "R09": 3,
+     "R07": 2
+    },
+    "R13": {
+     "N-LAW": 2,
+     "R03": 1,
+     "R13": 1
+    },
+    "R08": {
+     "R10": 1,
+     "R08": 1,
+     "N-UNSPEC": 3
+    },
+    "N-PRICE": {
+     "R07": 1,
+     "N-PRICE": 1
+    },
+    "N-CLIENT": {
+     "R03": 2,
+     "R07": 4
+    },
+    "N-FORMAL": {
+     "N-FORMAL": 1,
+     "N-UNSPEC": 3,
+     "R03": 1
+    }
+   },
+   "run": "eval:wcss_pllum_pllum-12b:packed25:1795321392",
+   "data_location": "PL (WCSS Wrocław)"
+  }
+ ]
+}

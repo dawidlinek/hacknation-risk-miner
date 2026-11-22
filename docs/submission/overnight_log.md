@@ -88,3 +88,5 @@
 - 04:57: check-in: data-db is running (activity 03:56); no final dump path yet. Waiting.
 - 05:18: be-llm: WCSS job 6385732 running since 05:15 (ends 17:15); Bielik 11B up, PLLuM loading. Lead: run the known-answer and routing tests plus the gold-150 Bielik/PLLuM rows locally, results into test_report.md and technical.md; no prod or UI change (live uploads are public at the user request). FOR MORNING: cancel with ssh wcss scancel 6385732 if not needed.
 - 05:24: sovereign path verified live on WCSS: known-answer Bielik 3/3, PLLuM 3/3; routing 9/9 confidential calls to wcss_bielik, 0 cloud calls; gold-150 Bielik 58.7% (kappa 0.54, quotes 98.7%), PLLuM 47.3% (kappa 0.40, quotes 84.7%) vs flash-lite 80.0%. Docs updated and pushed.
+- 05:57: check-in: still blocked on data-db, which is waiting for the user (no new dump). Live on 51d2c33; docs pushed (bea5087). The morning brief cron fires at 07:37.
+- 06:57: check-in: no new dump; data-db still waiting for the user.

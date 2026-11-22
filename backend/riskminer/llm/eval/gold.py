@@ -69,7 +69,12 @@ async def eval_alias(alias: str, rows: list[dict], variant: str = "packed25") ->
 
     cfg = llm_config()
     prov, model = cfg.resolve(alias)
-    run = f"eval:{alias}:{variant}:{int(time.time())}"
+    if prov.sovereign:                     # health lives in process memory: the known-answer test gates the provider
+        from riskminer.llm.eval.kat import run_kat
+        k = await run_kat(prov.id, model)
+        if not k.get("kat_passed"):
+            raise RuntimeError(f"known-answer test failed for {prov.id}")
+    run = f"eval:{alias.replace(':', '_')}:{variant}:{int(time.time())}"
     items = [{"id": r["sample_id"], "text": item_text(r["reason"], r["description"])} for r in rows]
     t0 = time.time()
     done, failed = await classify_items(items, alias=alias, subject=run, pack=25 if variant == "packed25" else 1,
