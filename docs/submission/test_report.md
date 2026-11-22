@@ -219,11 +219,26 @@ Uwagi z próby: (1) data zawarcia umowy w ogłoszeniu wieloczęściowym wskazywa
 | fast (produkcja, masowo) | gemini-3.5-flash-lite | **80,0%** (73,3–86,0%) | 89,3% | 0,775 | 99,3% | 0,036 USD |
 | strong | gemini-3.8-flash | 82,7% (76,0–88,7%) | 88,7% | 0,807 | 98,7% | 0,064 USD |
 | emergency (zapas publiczny) | mistralai/mistral-medium-3-5 | 78,0% (70,7–84,0%) | 85,3% | 0,755 | 86,0% | 0,120 USD |
+| sovereign (WCSS, 22.11.2026) | bielik-11b (Bielik-11B-v3.1-Instruct-FP8) | 58,7% (50,7–66,7%) | 68,0% | 0,539 | 98,7% | 0 (GPU WCSS) |
+| sovereign_alt (WCSS, 22.11.2026) | pllum-12b (PLLuM-12B-instruct-2512) | 47,3% (39,3–55,3%) | 53,3% | 0,399 | 84,7% | 0 (GPU WCSS) |
 | reguły słownikowe (bez AI) | keyword rules | 37,3% (29,3–45,3%) | nie dotyczy | 0,329 | nie dotyczy | 0 |
 
 Na bazie krajowej pracuje wariant fast: niemal ta sama trafność co strong przy około połowie kosztu i trzykrotnie krótszym czasie. Benchmark czerwonego długopisu i cech na 4 publicznych dokumentach (PFU, PPU, SWZ, 26–31 stron): 43 z 43 cytatów potwierdzonych na stronie (39 dokładnie, 4 w przybliżeniu), 16 z 16 cytatów cech.
 
-Źródło: `docs/submission/test_source_sample.md`; `select verification, count(*), sum(n_changes) from change_cause_ai group by 1`; `select * from model_eval` (wiersze 3–6); `exports/eval/classify_causes_20261121_2027.json`; notatki sesji LLM (benchmark czerwonego długopisu).
+Źródło: `docs/submission/test_source_sample.md`; `select verification, count(*), sum(n_changes) from change_cause_ai group by 1`; `select * from model_eval` (wiersze 3–6); `exports/eval/classify_causes_20261121_2027.json`, `exports/eval/classify_causes_20261122_0524.json` (Bielik, PLLuM); notatki sesji LLM (benchmark czerwonego długopisu).
+
+### Tryb suwerenny na WCSS: test na żywo (22.11.2026, 05:15 do 05:30)
+
+Zadanie SLURM `rm-sovereign` (nr 6385732) na partycji `lem-gpu-short` WCSS (1 karta H100, vLLM 0.34), węzeł r18-12, start 05:15, limit 12 h. Modele: `bielik-11b` (wagi `speakleash/Bielik-11B-v3.1-Instruct-FP8-Dynamic`, Apache-2.0) i `pllum-12b` (`CYFRAGOVPL/PLLuM-12B-instruct-2512`, Apache-2.0) na jednej karcie. Dostęp z serwera aplikacji przez przekaźnik `srun --overlap` (węzły obliczeniowe nie przyjmują połączeń z węzła logowania).
+
+| Test | Wynik |
+|---|---|
+| Test znanych odpowiedzi (bez wymuszania JSON): stolica Polski, 17 × 3, przyczyna „intensywne opady deszczu” → kod | Bielik 3 z 3 (372 ms do listy modeli), PLLuM 3 z 3 (272 ms); obie odpowiedzi kodu: R16 (pogoda) |
+| Trasowanie poufnych danych przez bramkę aplikacji: cechy z opisu i PFU Steklin, czerwony długopis (26 stron), fakty z protokołu Zagrodno, wszystko oznaczone jako poufne | 9 z 9 wywołań do `wcss_bielik`, lokalizacja „PL (WCSS Wrocław)”, 0 wywołań Gemini i OpenRouter w `llm_call`; ok. 104 tys. tokenów wejścia, średnio 6,7 s na wywołanie |
+| Jakość na poufnej ścieżce | czerwony długopis: 9 uwag, 8 z cytatem potwierdzonym na stronie; fakty Zagrodno: przyczyny R03 i R02 zgodne z regułami, plus zależność R18 od oczyszczalni w Modlikowicach; cechy: 4 z 9 z potwierdzonym cytatem, pozostałe (np. „ok. 555 km”, budżet 0) nie przeszły weryfikatora i są oznaczone jako niepewne do poprawy |
+| Trafność kodów przyczyn, próba wzorcowa 150 (paczki po 25, bez przykładów) | Bielik 58,7% (50,7–66,7%), κ 0,54, cytaty 98,7%, mediana 23 s na paczkę; PLLuM 47,3% (39,3–55,3%), κ 0,40, cytaty 84,7%, mediana 38 s na paczkę |
+
+Wniosek: ścieżka suwerenna działa od początku do końca i nie wysyła poufnych danych poza Polskę. Modele polskie są dziś wyraźnie słabsze od Gemini w klasyfikacji przyczyn (58,7% i 47,3% wobec 80,0%), dlatego weryfikator cytatów i liczb oraz decyzja eksperta są w tym trybie szczególnie ważne. Na serwerze demonstracyjnym, na prośbę użytkownika, wgrywane dokumenty są przetwarzane jako publiczne, a przełącznik `sovereign_switch` jest wyłączony; tryb suwerenny pokazujemy na tym zapisie testu i w konfiguracji.
 
 ## Wyniki analizy nowej inwestycji
 

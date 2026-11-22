@@ -680,8 +680,9 @@ maksimum z deklaracji i wrażliwości wszystkich dokumentów wejściowych (wywo�
 `confidential` lista celów jest filtrowana do dostawców z `sovereign: true` i lokalizacją zaczynającą się od „PL”,
 także w łańcuchu awaryjnym, w odtwarzaniu nagrań i w przesyłaniu PDF (modele suwerenne dostają tylko tekst ze
 znacznikami stron). Uploady dokumentów przed przetargiem są domyślnie `confidential`. Gdy żaden model suwerenny nie
-odpowiada, API zwraca 503 `sovereign_unavailable` („Model w Polsce jest niedostępny, dokument czeka w kolejce”),
-zadanie czeka w kolejce, a część regułowa (analityka, flagi) działa dalej. Każda odpowiedź niesie
+odpowiada, API zwraca 503 `sovereign_unavailable` („Model w Polsce jest teraz niedostępny. Poufnych danych nie
+wysyłamy do chmury, więc ta część analizy AI jest wstrzymana. Spróbuj ponownie później.”), a część regułowa (analityka,
+flagi, fakty z reguł w nowych dokumentach) działa dalej. Każda odpowiedź niesie
 `processing: {provider, model, data_location}`, a każde wywołanie jest zapisane w `llm_call`.
 
 | Ścieżka | Dostawca i model (z `config/config.example.yaml`) | Gdzie | Jakie dane |
@@ -696,8 +697,16 @@ zadanie czeka w kolejce, a część regułowa (analityka, flagi) działa dalej. 
 
 Stan na bazie demonstracyjnej: 1 003 wywołania w `llm_call`, wszystkie `public`: Gemini 977 (w tym 6 odtworzeń
 nagrań), OpenRouter 24 (23 modele Mistral: `mistral-medium-3-5`, `mistral-large-4-0`, `mistral-large-2512`; 1
-wywołanie modelu spoza konfiguracji). Wywołań suwerennych w logu nie ma; w
-produkcji tryb suwerenny jest opcjonalny (`docs/DEPLOY.md` §9) `[do sprawdzenia: czy WCSS działa w czasie oceny]`.
+wywołanie modelu spoza konfiguracji). W produkcji tryb suwerenny jest opcjonalny (`docs/DEPLOY.md` §9).
+
+**Ścieżka suwerenna sprawdzona na żywo na WCSS (22.11.2026).** Zadanie SLURM `rm-sovereign` (nr 6385732, 1 karta H100,
+vLLM 0.34, węzeł r18-12, start 05:15, limit 12 h) serwowało `bielik-11b` (Bielik-11B-v3.1-Instruct-FP8) i `pllum-12b`
+(PLLuM-12B-instruct-2512). Test znanych odpowiedzi: 3 z 3 dla obu modeli. Trasowanie: cechy, czerwony długopis i fakty z
+dokumentu oznaczone jako poufne poszły w 9 z 9 wywołań do `wcss_bielik` („PL (WCSS Wrocław)”), bez żadnego wywołania
+Gemini ani OpenRouter w `llm_call`. Trafność kodów przyczyn na próbie wzorcowej 150: Bielik 58,7% (przedział 50,7 do
+66,7%), PLLuM 47,3% (39,3 do 55,3%), wobec 80,0% dla Gemini flash-lite; cytaty potwierdzone 98,7% i 84,7%. Szczegóły:
+`docs/submission/test_report.md`, część „Tryb suwerenny na WCSS”. Na serwerze demonstracyjnym, na prośbę użytkownika,
+wgrywane dokumenty są przetwarzane jako publiczne, a przełącznik `sovereign_switch` jest wyłączony.
 Klucz `OPENROUTER_API_KEY` nie jest jeszcze wymieniony w `.env.example` ani przekazywany w
 `infra/docker-compose.prod.yml`, więc bez dopisania go ścieżka awaryjna w produkcji jest nieaktywna.
 
