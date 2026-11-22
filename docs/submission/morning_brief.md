@@ -26,13 +26,13 @@
 - Tonight's test records were deleted from the local DB with your OK. The live DB is still the older rehearsal copy until the final restore.
 
 ## Known issues
-- **The final DB restore has NOT happened.** data-db is waiting for your answer in its session. Until then the live site lacks the 1 363 AI proposals and the new sectors, and record PDFs are 9 pages instead of 13.
+- **Final DB is live** (restored 08:09 UTC, baseline recorded): 1 460 AI risk events, the national tab with 18 689 procedures, 1 517 items in Przegląd.
 - There is no "Nowe ryzyko" button: no API exists for it.
 - On 1440 px screens the map filter row wraps.
 - The Grodzisko scan also gets a REGON checksum item (690581210). It is either an OCR misread or a second planted error.
 
 ## Your to-do, in order
-1. **Answer data-db** in its session, so the final dump can be made. deploy-coolify then restores it, records the baseline and smoke-tests, all automatically.
+1. Done: the final database is restored, the baseline is recorded and the live check passes.
 2. **Pick the video:** A (recommended, 1:56), B, C or D, in `docs/submission/video/`. Upload it with an open link.
 3. **Review the deck and description:** the deck is `docs/submission/deck/ex-ante-pitch.pdf` (deck D) and the description is `docs/submission/description.md`. Optionally decide whether unapproved AI notes go into an appendix of the analysis PDF.
 4. **Decide the licence** (`morning_decisions.md`), then make the repo public around 10:15.

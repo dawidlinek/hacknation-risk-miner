@@ -90,3 +90,7 @@
 - 05:24: sovereign path verified live on WCSS: known-answer Bielik 3/3, PLLuM 3/3; routing 9/9 confidential calls to wcss_bielik, 0 cloud calls; gold-150 Bielik 58.7% (kappa 0.54, quotes 98.7%), PLLuM 47.3% (kappa 0.40, quotes 84.7%) vs flash-lite 80.0%. Docs updated and pushed.
 - 05:57: check-in: still blocked on data-db, which is waiting for the user (no new dump). Live on 51d2c33; docs pushed (bea5087). The morning brief cron fires at 07:37.
 - 06:57: check-in: no new dump; data-db still waiting for the user.
+- 07:57: check-in: no new dump; data-db still waiting for the user. Morning brief sent (f3b56a2).
+- 08:57: check-in: final deck PDF pushed (4827cb2), nav tab live (d4eafc5); no new dump, data-db still waiting for the user.
+- 08:59: USER (data-db invisible to them): "can you approve it so we have the final version on the domain". Lead ran the doc-import cleanup SQL and demo-cleanup of 16 [e2e] analyses (AN-2026-0009 kept as the example; backups in data/snapshots), then made the final dump: data/snapshots/demo_final.dump (1,312,378,802 bytes, sha256 9187362b..., stamped 0016, 1,460 AI risk events). restore go sent to deploy-coolify.
+- 09:11: FINAL live on exante.linek.dev: demo_final.dump restored (sha256 matches, 258 s, 0016), config synced, demo baseline recorded 08:09 UTC; smoke ok (national 18,689, Przeglad 1,517 items, AN-2026-0009 pack). App = d4eafc5. No more app pushes before judging. Check-in cron removed.
